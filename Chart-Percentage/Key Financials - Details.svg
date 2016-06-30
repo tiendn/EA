@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="640px" height="1136px" viewBox="0 0 640 1136" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.6.1 (26313) - http://www.bohemiancoding.com/sketch -->
+    <title>Key Financials - Details</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="640" height="1136"></rect>
+        <rect id="path-3" x="0" y="512" width="640" height="627"></rect>
+    </defs>
+    <g id="Key-Financials---Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="Background" fill="#EFEFF4" xlink:href="#path-1"></use>
+            <g id="Friends-List-alt" mask="url(#mask-2)">
+                <rect id="BG" fill="#4D4D4D" x="0" y="0" width="640" height="1133"></rect>
+                <g id="Status-Bar" transform="translate(13.000000, 3.000000)">
+                    <g id="Battery-Icon" transform="translate(560.000000, 7.000000)">
+                        <rect id="Rectangle-58" stroke="#FFFFFF" x="0" y="0" width="45" height="20" rx="3"></rect>
+                        <rect id="Rectangle-58" fill="#FFFFFF" x="2" y="2" width="41" height="16" rx="1"></rect>
+                        <path d="M46,13.75 C47.6568543,13.75 49,11.9591391 49,9.75 C49,7.54086089 47.0963572,5.75 46,5.75 C46.0064015,5.75994128 46.0320471,13.6929651 46,13.75 Z" id="Oval-18" fill="#FFFFFF"></path>
+                    </g>
+                    <text id="100%" fill="#FFFFFF" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal">
+                        <tspan x="488.968" y="25.5">100%</tspan>
+                    </text>
+                    <text id="9:23-PM" fill="#FFFFFF" font-family="HelveticaNeue, Helvetica Neue" font-size="28" font-weight="normal">
+                        <tspan x="254.598" y="27">9:23 PM</tspan>
+                    </text>
+                    <path d="M113,20 C114.47896,20 115.832941,20.5351032 116.87891,21.4222764 L112.93017,25.3710157 L109.046101,21.4869468 C110.101955,20.5611716 111.485443,20 113,20 Z M113,17 C110.656965,17 108.52305,17.8953454 106.921722,19.3625675 L104.798874,17.2397196 C106.944361,15.2303363 109.8285,14 113,14 C116.135954,14 118.990952,15.2029118 121.128722,17.1724638 L119.005014,19.2961716 C117.412144,17.8683804 115.307482,17 113,17 Z M113,11 C109.000105,11 105.365876,12.5656032 102.676638,15.1174832 L100.554707,12.9955522 C103.787383,9.90105466 108.171684,8 113,8 C117.889826,8 122.324252,9.94979999 125.568154,13.1142783 L123.446637,15.2357955 C120.745789,12.6141149 117.061393,11 113,11 Z" id="Wifi-Icon" fill="#FFFFFF"></path>
+                    <text id="3" fill="#FFFFFF" font-family="HelveticaNeue, Helvetica Neue" font-size="24" font-weight="normal">
+                        <tspan x="78" y="25.5">3</tspan>
+                    </text>
+                    <g id="Signal-Dots" transform="translate(0.000000, 11.000000)">
+                        <path d="M5.878357,11.5 C8.91592327,11.5 11.378357,9.03756627 11.378357,6 C11.378357,2.96243373 8.91592327,0.5 5.878357,0.5 C2.84079073,0.5 0.378357,2.96243373 0.378357,6 C0.378357,9.03756627 2.84079073,11.5 5.878357,11.5 Z" id="Oval-19" fill="#FFFFFF"></path>
+                        <path d="M19.878357,11.5 C22.9159233,11.5 25.378357,9.03756627 25.378357,6 C25.378357,2.96243373 22.9159233,0.5 19.878357,0.5 C16.8407907,0.5 14.378357,2.96243373 14.378357,6 C14.378357,9.03756627 16.8407907,11.5 19.878357,11.5 Z" id="Oval-19-copy" fill="#FFFFFF"></path>
+                        <path d="M33.878357,11.5 C36.9159233,11.5 39.378357,9.03756627 39.378357,6 C39.378357,2.96243373 36.9159233,0.5 33.878357,0.5 C30.8407907,0.5 28.378357,2.96243373 28.378357,6 C28.378357,9.03756627 30.8407907,11.5 33.878357,11.5 Z" id="Oval-19-copy-2" fill="#FFFFFF"></path>
+                        <path d="M47.878357,11.5 C50.9159233,11.5 53.378357,9.03756627 53.378357,6 C53.378357,2.96243373 50.9159233,0.5 47.878357,0.5 C44.8407907,0.5 42.378357,2.96243373 42.378357,6 C42.378357,9.03756627 44.8407907,11.5 47.878357,11.5 Z" id="Oval-19-copy-3" stroke="#FFFFFF"></path>
+                        <path d="M61.878357,11.5 C64.9159233,11.5 67.378357,9.03756627 67.378357,6 C67.378357,2.96243373 64.9159233,0.5 61.878357,0.5 C58.8407907,0.5 56.378357,2.96243373 56.378357,6 C56.378357,9.03756627 58.8407907,11.5 61.878357,11.5 Z" id="Oval-19-copy-4" stroke="#FFFFFF"></path>
+                    </g>
+                </g>
+                <text id="Key-Financials" fill="#FFFFFF" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="36" font-weight="300">
+                    <tspan x="205.984" y="99">Key Financials</tspan>
+                </text>
+                <g id="Back-Button" transform="translate(24.000000, 65.000000)" fill="#FFFFFF">
+                    <text id="Back" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="34" font-weight="300">
+                        <tspan x="38" y="33">Back</tspan>
+                    </text>
+                    <path d="M9.19489252,20.5236186 L24.593,4.51938648 C24.984,4.12938648 24.973,3.48538648 24.571,3.08238648 L21.797,0.30938648 C21.394,-0.0936135198 20.75,-0.10461352 20.36,0.28638648 L4.70794344,16.5526832 C4.49193945,16.5847723 4.282215,16.6851715 4.114,16.8533865 L1.312,19.6553865 C0.905,20.0623865 0.895,20.7123865 1.289,21.1063865 L20.431,40.5813865 C20.825,40.9753865 21.475,40.9653865 21.882,40.5583865 L24.683,37.7563865 C25.091,37.3493865 25.101,36.6993865 24.706,36.3053865 L9.19489252,20.5236186 Z" id="Back-Icon"></path>
+                </g>
+                <mask id="mask-4" fill="white">
+                    <use xlink:href="#path-3"></use>
+                </mask>
+                <use id="Img-BG" fill="#FFFFFF" xlink:href="#path-3"></use>
+                <g id="Navigation-Bar" mask="url(#mask-4)">
+                    <g transform="translate(82.000000, 126.000000)">
+                        <g id="QUARTERLY-+-Shape" stroke-width="1" fill-rule="evenodd" transform="translate(27.000000, 12.000000)">
+                            <text id="QUARTERLY" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="24" font-weight="300" letter-spacing="1.5" fill="#FFFFFF">
+                                <tspan x="19" y="35">QUARTERL</tspan>
+                                <tspan x="152.968" y="35">Y</tspan>
+                            </text>
+                            <path d="M5.4135,0 L174.5865,0 C177.5772,0 180,2.23916667 180,5 L180,45 C180,47.7608333 177.5763,50 174.5865,50 L5.4135,50 C2.4237,50 0,47.7616667 0,45 L0,5 C0.0009,2.23916667 2.4237,0 5.4135,0 L5.4135,0 Z" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                        </g>
+                        <text id="ANNUAL" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="24" font-weight="300" letter-spacing="1.5">
+                            <tspan x="327" y="46" fill="#FFFFFF">ANNUAL</tspan>
+                        </text>
+                    </g>
+                </g>
+            </g>
+            <g id="User-Stats---Day" mask="url(#mask-2)">
+                <g transform="translate(0.000000, 129.000000)">
+                    <g id="Graph" stroke-width="1" fill-rule="evenodd" transform="translate(29.000000, 498.000000)">
+                        <g id="Group-1">
+                            <path d="M0.5,41 L578.69458,41 L579.19458,41 L579.19458,40 L578.69458,40 L0.5,40 L0,40 L0,41 L0.5,41 L0.5,41 Z" id="Divider" fill="#D8D8D8"></path>
+                            <rect id="Rectangle-64" fill="#87AF3F" x="1" y="0" width="363" height="40"></rect>
+                            <text id="Q1-2015" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="12" y="27">Q1 2015</tspan>
+                            </text>
+                            <text id="273-000" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" letter-spacing="0.5" fill="#343434">
+                                <tspan x="500.22" y="27">273 000</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-2" transform="translate(0.000000, 70.000000)">
+                            <path d="M0.5,41 L578.69458,41 L579.19458,41 L579.19458,40 L578.69458,40 L0.5,40 L0,40 L0,41 L0.5,41" id="Line-2" fill="#D8D8D8"></path>
+                            <rect id="Rectangle-65" fill="#9B9B9B" x="1" y="0" width="163" height="40"></rect>
+                            <text id="Q4-2014" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="15" y="27">Q4 2014</tspan>
+                            </text>
+                            <text id="189-000" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" letter-spacing="0.5" fill="#343434">
+                                <tspan x="503.22" y="27">189 000</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-3" transform="translate(0.000000, 140.000000)">
+                            <path d="M0.5,41 L578.69458,41 L579.19458,41 L579.19458,40 L578.69458,40 L0.5,40 L0,40 L0,41 L0.5,41" id="Line-3" fill="#D8D8D8"></path>
+                            <rect id="Rectangle-66" fill="#9B9B9B" x="1" y="0" width="478" height="40"></rect>
+                            <text id="Q3-2014" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="14" y="27">Q3 2014</tspan>
+                            </text>
+                            <text id="325-000" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" letter-spacing="0.5" fill="#343434">
+                                <tspan x="502.22" y="27">325 000</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-4" transform="translate(0.000000, 210.000000)">
+                            <path d="M0.5,41 L578.69458,41 L579.19458,41 L579.19458,40 L578.69458,40 L0.5,40 L0,40 L0,41 L0.5,41" id="Line-4" fill="#D8D8D8"></path>
+                            <rect id="Rectangle-67" fill="#9B9B9B" x="1" y="0" width="424" height="40"></rect>
+                            <text id="Q2-2014" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="14" y="27">Q2 2014</tspan>
+                            </text>
+                            <text id="279-500" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" letter-spacing="0.5" fill="#343434">
+                                <tspan x="502.22" y="27">279 500</tspan>
+                            </text>
+                        </g>
+                        <g id="Group-5" transform="translate(0.000000, 280.000000)">
+                            <path d="M0.5,41 L578.69458,41 L579.19458,41 L579.19458,40 L578.69458,40 L0.5,40 L0,40 L0,41 L0.5,41" id="Line-5" fill="#D8D8D8"></path>
+                            <rect id="Rectangle-68" fill="#9B9B9B" x="1" y="0" width="234" height="40"></rect>
+                            <text id="Q1-2014" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" fill="#FFFFFF">
+                                <tspan x="12" y="27">Q1 2014</tspan>
+                            </text>
+                            <text id="201-000" font-family="HelveticaNeue, Helvetica Neue" font-size="20" font-weight="normal" letter-spacing="0.5" fill="#343434">
+                                <tspan x="499.22" y="27">201 000</tspan>
+                            </text>
+                        </g>
+                    </g>
+                    <g id="Top-Bar" stroke-width="1" fill-rule="evenodd" font-family="HelveticaNeue-Light, Helvetica Neue" font-weight="300">
+                        <text id="Net-sales" font-size="40" fill="#FFFFFF">
+                            <tspan x="240.36" y="148">Net sales</tspan>
+                        </text>
+                        <text id="MSEK" font-size="24" letter-spacing="1.5" fill="#FFFFFF">
+                            <tspan x="287.196" y="329">MSEK</tspan>
+                        </text>
+                        <text id="Q1-2015" font-size="24" letter-spacing="1.5" fill="#FFFFFF">
+                            <tspan x="271.662" y="185">Q1 2015</tspan>
+                        </text>
+                        <text id="273-000" font-size="70" letter-spacing="0.636363804" fill="#FFFFFF">
+                            <tspan x="191.782727" y="289">273 000</tspan>
+                        </text>
+                    </g>
+                    <g id="QUARTERLY-+-Shape-Copy" stroke-width="1" fill-rule="evenodd" transform="translate(119.000000, 9.000000)">
+                        <text id="QUARTERLY" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="24" font-weight="300" letter-spacing="1.5" fill="#FFFFFF">
+                            <tspan x="19" y="35">QUARTERL</tspan>
+                            <tspan x="152.968" y="35">Y</tspan>
+                        </text>
+                        <path d="M5.4135,0 L174.5865,0 C177.5772,0 180,2.23916667 180,5 L180,45 C180,47.7608333 177.5763,50 174.5865,50 L5.4135,50 C2.4237,50 0,47.7616667 0,45 L0,5 C0.0009,2.23916667 2.4237,0 5.4135,0 L5.4135,0 Z" id="Shape" stroke="#FFFFFF" stroke-width="2"></path>
+                    </g>
+                    <text id="ANNUAL-Copy" font-family="HelveticaNeue-Light, Helvetica Neue" font-size="24" font-weight="300" letter-spacing="1.5">
+                        <tspan x="418.5" y="43" fill="#FFFFFF">ANNUAL</tspan>
+                    </text>
+                </g>
+            </g>
+            <image id="Forward-50" mask="url(#mask-2)" x="527" y="258" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAA1teXP8meAAAANpJREFUaAXtmEEKwzAMBJO+IE/Mz9ofNT9y1RJDD3vZgxqpjMEYBFJ2d5JDvCysP0pgjLG1txMm7rGfrc2cJuL4rL5mQv5+mpgHZkp8Y5ApgUGIgIwIpUQJMiUwCBGQEaGUKEGmBAYhAjIilBIlyJTAIERARoRSogQZgeEmaleX1qsF2M8Xr9YRtV53ZZiwuSc1QCIpWHssJOzIkhogkRSsPRYSdmRJDZBICtYeCwk7sqQGSCQFa4+FhB1ZYkPQeMSeq9/v6Xc24eJtpreJaSiM9LoomMI5f5DACyhZoIy1yDS5AAAAAElFTkSuQmCC"></image>
+            <image id="Forward-50-Copy" mask="url(#mask-2)" x="66" y="258" width="50" height="50" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAA1teXP8meAAAANpJREFUaAXtmEEKwzAMBJO+IE/Mz9ofNT9y1RJDD3vZgxqpjMEYBFJ2d5JDvCysP0pgjLG1txMm7rGfrc2cJuL4rL5mQv5+mpgHZkp8Y5ApgUGIgIwIpUQJMiUwCBGQEaGUKEGmBAYhAjIilBIlyJTAIERARoRSogQZgeEmaleX1qsF2M8Xr9YRtV53ZZiwuSc1QCIpWHssJOzIkhogkRSsPRYSdmRJDZBICtYeCwk7sqQGSCQFa4+FhB1ZYkPQeMSeq9/v6Xc24eJtpreJaSiM9LoomMI5f5DACyhZoIy1yDS5AAAAAElFTkSuQmCC">
+                <g transform="translate(91.000000, 283.000000) rotate(-180.000000) translate(-91.000000, -283.000000) "></g>
+            </image>
+            <text id="Financial-reporting-" mask="url(#mask-2)" font-family="HelveticaNeue, Helvetica Neue" font-size="28" font-weight="normal" letter-spacing="0.3" fill="#808080">
+                <tspan x="32" y="1034">Financial reporting figures is presented ‘AS </tspan>
+                <tspan x="32" y="1067.784">IS’, and will not be converted to your </tspan>
+                <tspan x="32" y="1101.56799">currency settings.</tspan>
+            </text>
+            <text id="HISTORICAL-DATA" mask="url(#mask-2)" font-family="HelveticaNeue, Helvetica Neue" font-size="28" font-weight="normal" letter-spacing="0.3" fill="#808080">
+                <tspan x="32" y="583">HISTORICAL DATA</tspan>
+            </text>
+        </g>
+    </g>
+</svg>

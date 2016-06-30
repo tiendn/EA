@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Key Financials - Details</title>
+	<style type="text/css">
+		body{
+			margin:10px 30px 10px 30px;
+			font-family: HelveticaNeue, "Helvetica Neue";
+			font-size: 20px; ;
+			font-weight : normal ;
+			letter-spacing: 0.3;
+			color:#808080;
+		}
+		@media screen and (min-width: 1280px) {
+  			body{
+  				width: 60%;
+  				margin : 25px 20% 0 20%;
+			}	
+			.chart{
+				width: 90% !important;
+			}
+			
+		}
+		@media screen and (min-width: 960px) and (max-width: 1280px){
+  			body{
+  				width: 60%;
+  				margin : 25px 20% 0 20%;
+			}	
+			.chart{
+				width: 85% !important;
+			}
+			
+		}
+		@media screen and (min-width: 800px) and (max-width: 960px){
+  			body{
+  				width: 60%;
+  				margin : 25px 20% 0 20%;
+			}	
+			.chart{
+				width: 85% !important;
+			}
+			
+		}
+		@media screen and (min-width: 600px) and (max-width: 800px){
+			.chart{
+				width: 85% !important;
+			}
+		}
+		@media screen and (min-width: 360px) and (max-width: 600px){
+			.chart{
+				width: 77% !important;
+			}
+		}
+		@media screen and (max-width: 360px) {
+  			.chart{
+  				width: 70% !important; 
+			}	
+			
+		}
+		#box{
+			border-bottom: 1px solid #D8D8D8;
+			margin-bottom: 30px;
+		}
+		.chart{
+			height: 40px;
+		}
+		.chart-current{
+			background-color:#87AF3F;
+			width: 84%;
+			height: 40px;
+		}
+		.chart-last{
+			height: 40px;
+			background-color:#9B9B9B;
+		}
+		.chart-current:hover{
+			background-color: #42a521;
+		}
+		.chart-last:hover{
+			background-color: #8e8383;
+		}
+		#time{
+			margin:9px 0 0 9px;
+			color:white;
+			display: inline-block; 
+		}
+		#index{
+			float:right;
+			margin-top: -30px;
+			color:#343434;
+		}
+	</style>
+</head>
+<body>
+	<span style ="font-size: 26px;">HISTORICAL DATA</span> 
+	<br><br>
+	<div id = "box">
+		<div class= "chart">
+			<div class=" chart-current">
+				<span id = "time"> Q1 2015 </span>
+			</div> 
+		</div>
+		<span id="index"> 273 000 </span>
+	</div>
+	<div id = "box">
+		<div class= "chart">
+		<div class="chart-last" style="width: 58.153846%;">
+			<span id = "time"> Q4 2014 </span>
+		</div> 
+		</div>
+		<span id="index"> 189 000 </span>
+	</div>
+	<div id = "box">
+	<div class= "chart">
+		<div class="chart-last" style="width: 100%">
+			<span id = "time"> Q3 2014 </span>
+		</div> 
+		</div>
+		<span id="index"> 325 000 </span>
+	</div>
+
+	<div id = "box">
+	<div class= "chart">
+		<div class="chart-last" style="width: 86%">
+			<span id = "time"> Q2 2014 </span>
+		</div> 
+		</div>
+		<span id="index"> 279 500 </span>
+	</div>
+	<div id = "box">
+	<div class= "chart">
+		<div class="chart-last" style="width: 61.846153%">
+			<span id = "time"> Q1 2014 </span>
+		</div> 
+		</div>
+		<span id="index"> 201 000 </span>
+	</div>
+</div>
+</body>
+</html>
