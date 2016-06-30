@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<title>Stock</title>
+	<style type="text/css">
+		body{
+			margin:0;
+			font-family: HelveticaNeue, "Helvetica Neue";
+			font-weight : normal ;
+			color:#808080;
+			background-color: #3a3535;
+		}
+		.box{
+			float: left;
+			border-left: 1px solid;
+			border-top: 1px solid;
+		}
+		.up{
+			background: linear-gradient(#00E16A, #1d9956);
+		}
+		.down{
+			background: linear-gradient(#ea2c58, #ea2c58);
+		}
+		
+		.infor{
+			color: white;
+			text-align: justify;
+			padding: 30% 3% 16% 10%;
+			position: relative;
+		}
+		.typeMoney{
+			position: absolute;
+			bottom: 18%;
+			right: 14%;
+		}
+	</style>
+</head>
+<body>
+	<h4> TODAY </h4>
+	<div id = "content">
+		<div class="box up">
+			<div class = "infor">
+				<span>SHR1 </span><br>
+				<span>58.23</span><br>
+				<span> (+3.5%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>SHR2 </span><br>
+				<span>12823</span><br>
+				<span> (+5.5%)</span> 
+				<div class="typeMoney">
+					YEN
+				</div>
+			</div>
+		</div>
+		<div class="box down">
+			<div class = "infor">
+				<span>SHR3 </span><br>
+				<span>8.71</span><br>
+				<span> (-3.5%)</span> 
+				<div class="typeMoney">
+					USD
+				</div>
+			</div>
+		</div>
+		
+		<div class="box down">
+			<div class = "infor">
+				<span>TICR1 </span><br>
+				<span>418.23</span><br>
+				<span> (-1.8%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>TICR2 </span><br>
+				<span>1028.23</span><br>
+				<span> (+15.5%)</span> 
+				<div class="typeMoney">
+					INR
+				</div>
+			</div>
+		</div>
+		<div class="box down">
+			<div class = "infor">
+				<span>TICR3 </span><br>
+				<span>18.19</span><br>
+				<span> (-1.5%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div><div class="box up">
+			<div class = "infor">
+				<span>TICR4 </span><br>
+				<span>418.23</span><br>
+				<span> (+1.8%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>TICR5 </span><br>
+				<span>1028.23</span><br>
+				<span> (+15.5%)</span> 
+				<div class="typeMoney">
+					INR
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>TICR6 </span><br>
+				<span>18.19</span><br>
+				<span> (+1.5%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>TICR7 </span><br>
+				<span>418.23</span><br>
+				<span> (+1.8%)</span> 
+				<div class="typeMoney">
+					SEK
+				</div>
+			</div>
+		</div>
+		<div class="box up">
+			<div class = "infor">
+				<span>TICR8 </span><br>
+				<span>1028.23</span><br>
+				<span>(+15.5%)</span> 
+				<div class="typeMoney">
+					INR
+				</div>
+			</div>
+		</div>
+	</div> <!-- end #content -->
+	<script type="text/javascript">
+		function responsive() {
+   			var width = window.innerWidth;
+   			console.log(width);
+   			if (window.matchMedia("(min-width: 600px)").matches) {
+				$(".box").css({"width":"150px","height":"150px"});
+				var space = (width-604)/2/width*100;
+				var style = {"width":"604px","margin-left":space+'%',"margin-right":space+'%'};
+				console.log(style);
+				$('body').css(style);
+				$('.infor').css({"font-size": "16px"});
+				$('.typeMoney').css({"font-size": "12px"});
+				$('.infor span:nth-of-type(3)').css({
+					"font-size": "12px"});
+				
+			} else {
+				var space = (width-3)/3;
+				console.log(space);
+				$('.box').css({"width":space+'px',"height":space+'px'});
+				$('.infor').css({"font-size": "12px"});
+				$('.typeMoney').css({"font-size": "9px"});
+				$('.infor span:nth-of-type(3)').css({
+					"font-size": "9px"});
+			}
+		}	
+		responsive();
+		window.onresize = responsive;
+	</script>
+</body>
+</html>
