@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style type="text/css">
+		body{
+			margin:20px 20% 0 20%;
+			font-family: HelveticaNeue, "Helvetica Neue";
+			font-weight : normal ;
+			color: #b5afaf;
+			background-color: #3a3535;
+		}
+		
+		.title{
+			margin: ;
+			display: flex;
+			flex-flow: row;
+			list-style: none;
+			border : 1px solid #797979;
+			justify-content: flex-end; 
+		}
+		.title li{
+			align: center;
+			border : 1px solid;
+			margin-left : 12%;
+			/*margin: 20px 10px 20px 70px;*/
+		}
+		.infor{
+			position: relative;
+			justify-content: flex-end; 
+			margin: 0;
+			display: flex;
+			flex-flow: row;
+			list-style: none;
+			border : 1px solid #797979;
+		}
+		
+		.infor li{
+			border : 1px solid;
+		}
+		.infor li:nth-of-type(1){
+			position: absolute;
+			left: 0;
+			height: 30px;
+			border-radius:5px;
+			width: 80px;
+			top: 20%;
+			bottom: 20%;
+		}
+		.box li{
+			text-align: center;
+		}
+		.up{
+			background-color: #11700c;
+		}
+		.down{
+			background-color: #ff3535;
+		}
+		.box{
+			margin: 20px 10px 20px 0;
+			/*line-height: 30px;*/
+			font-size: 14px;
+			font-weight: bold;
+			text-align : center;
+			height: 30px;
+			border-radius:5px;
+			width: 80px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="title">
+			<li> 6M </li>
+			<li> 52W% </li>
+			<li> YTD% </li>
+		</ul>
+		<ul class=" infor">
+			<li> SHR1 </li>
+			<li class="box up"> +3.5% </li>
+			<li class="box up"> +13.2%</li>
+			<li class="box down"> -3.5% </li>
+		</ul>
+		<!-- <ul class=" infor">
+			<li> SHR1 </li>
+			<li class="box up"> +3.5% </li>
+			<li class="box up"> +13.2%</li>
+			<li class="box down"> -3.5% </li>
+		</ul> -->
+	</div>
+</body>
+</html>
