@@ -4,69 +4,156 @@
 	<title></title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">
-		body{
-			margin:20px 20% 0 20%;
-			font-weight : bold ;
-			color: white;
-			background-color: #3a3535;
+	/** Responsive  */
+		@media screen and (max-width: 414px){
+			body{
+				margin:20px 5% 0 5%;
+				font-size: 12px;
+			}
+			.box{
+				width: 90%;
+				height: 30px;
+			}
+			table td{
+				width: 20%;
+				height: 50px;
+			}
 		}
+		@media screen and (min-width: 414px) and (max-width: 768px){
+			body{
+				margin:20px 15% 0 15%;
+				font-size: 14px;
+			}
+			table td{
+				width: 20%;
+				height: 50px;
+			}
+			.box{
+				width: 70%;
+				height: 40px;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			body{
+				margin:20px 20% 0 20%;
+				font-size: 16px;
+			}
+			table td{
+				width: 20%;
+				height: 70px;
+			}
+			.box{
+				width: 70%;
+				height: 50px;
+			}
+		}
+	/** CSS style **/	
+		body{
+				font-weight : bold ;
+				color: white;
+				background-color: #3a3535;
+			}
 		table{
+			padding-left: 20px;
 			width:100%;
 			border-collapse: collapse;
 			border-top : 2px solid #797979;
 		}
 		table tr{
-			margin-top: 5px;
-			border-top : 1px solid #797979;
+			border-top : 1px solid #777777;
 		}
 		table tr:nth-of-type(1){
 			text-align: right;
 		}
-		table td{
-			text-align: center;
-			height: 80px;
+		table tr:nth-last-of-type(1){
+			border-bottom : 2px solid #777777;
 		}
-		.infor{
-			/*margin-top : 2%;*/
+		table th{
+			height: 40px;
 		}
-		.up{
+	/* The end of head table*/
+		.up{ /* Color: green ;.*/
 			background-color: #11700c;
 		}
-		.down{
+		.down{ /* Color: red; */
 			background-color: #ff3535;
 		}
-		
-		 /*Box ~~ li */
 		.box{
+			position: relative;
+			float: right;
 			text-align: center;
-			font-size: 15px;
 			font-weight: bold;
-			height: 40px;
 			border-radius:5px;
-			width: 30%;
 		}
 	</style>
 </head>
 <body>
 	<table >
-		<tr class="title">
+		<tr>
 			<th></th>
 			<th> 6M </th>
 			<th> 52W% </th>
 			<th> YTD% </th>
 		</tr>
-	
-		<tr class=" infor">
+		<tr>
 			<td>  SHR1 </td>
-			<td>+3.5% <div class="box up"> </div></td>
-			<td><div class="box up"> +13.2%</div></td>
-			<td><div class="box down"> -3.5% </div></td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box up"><p> +13.2%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
 		</tr>
-		<tr class=" infor">
-			<td>  SHR1 </td>
-			<td class="box up"> +3.5% </td>
-			<td class="box up"> +13.2%</td>
-			<td class="box down"> -3.5% </td>
+		<tr>
+			<td>  SHR2 </td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box down"><p> -13.2%</p></div></td>
+			<td><div class="box up"><p> +3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  SHR3 </td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box down"><p> -13.2%</p></div></td>
+			<td><div class="box up"><p> +3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR1 </td>
+			<td><div class="box down"><p> -3.5%</p></div></td>
+			<td><div class="box up"><p> +13.2%</p></div></td>
+			<td><div class="box up"><p> +3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR2 </td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box down"><p> -9.3%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR3 </td>
+			<td><div class="box up"><p> +23.5%</p></div></td>
+			<td><div class="box down"><p> -1.2%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR4 </td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box up"><p> +13.2%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR5 </td>
+			<td><div class="box up"><p> +3.5%</p></div></td>
+			<td><div class="box down"><p> -0.02%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR6 </td>
+			<td><div class="box up"><p> +9.1%</p></div></td>
+			<td><div class="box down"><p> -1.2%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
+		</tr>
+		<tr>
+			<td>  TICR7 </td>
+			<td><div class="box up"><p> +2.6%</p></div></td>
+			<td><div class="box up"><p> +13.2%</p></div></td>
+			<td><div class="box down"><p> -3.5% </p></div></td>
 		</tr>
 	</table>
 </body>
