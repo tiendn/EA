@@ -6,50 +6,28 @@
 	<style type="text/css">
 		body{
 			margin:20px 20% 0 20%;
-			font-family: HelveticaNeue, "Helvetica Neue";
-			font-weight : normal ;
-			color: #b5afaf;
+			font-weight : bold ;
+			color: white;
 			background-color: #3a3535;
 		}
-		
-		.title{
-			margin: ;
-			display: flex;
-			flex-flow: row;
-			list-style: none;
-			border : 1px solid #797979;
-			justify-content: flex-end; 
+		table{
+			width:100%;
+			border-collapse: collapse;
+			border-top : 2px solid #797979;
 		}
-		.title li{
-			align: center;
-			border : 1px solid;
-			margin-left : 12%;
-			/*margin: 20px 10px 20px 70px;*/
+		table tr{
+			margin-top: 5px;
+			border-top : 1px solid #797979;
+		}
+		table tr:nth-of-type(1){
+			text-align: right;
+		}
+		table td{
+			text-align: center;
+			height: 80px;
 		}
 		.infor{
-			position: relative;
-			justify-content: flex-end; 
-			margin: 0;
-			display: flex;
-			flex-flow: row;
-			list-style: none;
-			border : 1px solid #797979;
-		}
-		
-		.infor li{
-			border : 1px solid;
-		}
-		.infor li:nth-of-type(1){
-			position: absolute;
-			left: 0;
-			height: 30px;
-			border-radius:5px;
-			width: 80px;
-			top: 20%;
-			bottom: 20%;
-		}
-		.box li{
-			text-align: center;
+			/*margin-top : 2%;*/
 		}
 		.up{
 			background-color: #11700c;
@@ -57,37 +35,39 @@
 		.down{
 			background-color: #ff3535;
 		}
+		
+		 /*Box ~~ li */
 		.box{
-			margin: 20px 10px 20px 0;
-			/*line-height: 30px;*/
-			font-size: 14px;
+			text-align: center;
+			font-size: 15px;
 			font-weight: bold;
-			text-align : center;
-			height: 30px;
+			height: 40px;
 			border-radius:5px;
-			width: 80px;
+			width: 30%;
 		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<ul class="title">
-			<li> 6M </li>
-			<li> 52W% </li>
-			<li> YTD% </li>
-		</ul>
-		<ul class=" infor">
-			<li> SHR1 </li>
-			<li class="box up"> +3.5% </li>
-			<li class="box up"> +13.2%</li>
-			<li class="box down"> -3.5% </li>
-		</ul>
-		<!-- <ul class=" infor">
-			<li> SHR1 </li>
-			<li class="box up"> +3.5% </li>
-			<li class="box up"> +13.2%</li>
-			<li class="box down"> -3.5% </li>
-		</ul> -->
-	</div>
+	<table >
+		<tr class="title">
+			<th></th>
+			<th> 6M </th>
+			<th> 52W% </th>
+			<th> YTD% </th>
+		</tr>
+	
+		<tr class=" infor">
+			<td>  SHR1 </td>
+			<td>+3.5% <div class="box up"> </div></td>
+			<td><div class="box up"> +13.2%</div></td>
+			<td><div class="box down"> -3.5% </div></td>
+		</tr>
+		<tr class=" infor">
+			<td>  SHR1 </td>
+			<td class="box up"> +3.5% </td>
+			<td class="box up"> +13.2%</td>
+			<td class="box down"> -3.5% </td>
+		</tr>
+	</table>
 </body>
 </html>
