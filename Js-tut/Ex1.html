@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// const SPENDING_THRESHOLD = prompt(" Input SPENDING_THRESHOLD: ");
+		// console.log(SPENDING_THRESHOLD);
+		// const TAX_RATE = 0.1;
+		// const PHONE_PRICE = 99.99;
+		// const ACCESSORY_PRICE = 9.99;
+
+		// var bank_balance = prompt(" Input your bank balance: ");
+		// console.log(bank_balance);
+		// var amount = 0;
+
+		// function calculateTax(amount){
+		// 	return amount*TAX_RATE;
+		// }
+
+		// function formatAmount(amount){
+		// 	return "$" + amount.toFixed(2);
+		// }
+
+		// if ( amount > bank_balance )
+		// 	console.log(" You can't purchase this item.");
+		// while( amount < bank_balance){
+		// 	// if ( amount + PHONE_PRICE < bank_balance)
+		// 	// Don't exist because it make this loop unlimited, amount always < bank_balance.
+		// 		amount += PHONE_PRICE;
+
+		// 	if ( amount + ACCESSORY_PRICE < SPENDING_THRESHOLD )
+		// 		amount += ACCESSORY_PRICE;
+		// }
+
+		// amount = amount + calculateTax(amount);
+
+		// console.log(" Your purchase : " + formatAmount(amount) );
+		// var a = null;
+		// console.log(typeof a);
+		// var a = 2;
+
+		// foo();                  // works because `foo()`
+		//                         // declaration is "hoisted"
+
+		// function foo() {
+		//     a = 3;
+
+		//     console.log( a );   // 3
+
+		//     var a;              // declaration is "hoisted"
+		//                         // to the top of `foo()`
+		// }
+
+		// console.log( a );   // 2
+		// function foo(){
+		// 	a = 1;
+		// }
+		// foo();
+		// alert(a*5);
+		function foo() {
+		    var a = 1;
+
+		    if (a >= 1) {
+		        let b = 2;
+
+		        while (b < 5) {
+		            let c = b * 2;
+		            b++;
+
+		            console.log( a + c );
+		        }
+		    }
+		}
+
+		foo();
+		alert(b);
+	</script>
+</body>
+</html>
