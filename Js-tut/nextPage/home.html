@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<style type="text/css">
+		body{
+			background-color: #a9d8d7;
+			margin: 10px 30% 0 30%;
+		}
+		.list-menu{
+			height: 50px;
+			width: 100%;
+			text-align: left;
+			margin: 5px 0 5px 0;
+		}
+		.slide-content{
+			height: 40px;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+	<div class ="home">
+		<div class = "logo" style="margin-bottom: 50px;">
+			<center><img src="Carlsberg_Group_Logo.png" ></center>
+		</div>
+		<div id = "menu">
+			<!-- <ul id = "menu" >
+			</ul> -->
+		</div>
+	</div>
+	<script type="text/javascript">
+
+		// Data 
+		var menu = [];
+		menu.push({id:"0",name:"About",displayName:"About",content:"213u213y21u"});
+		menu.push({id:"1",name:"ShareGraph",displayName:"Share Graph",content:"213u213y21u"});
+		menu.push({id:"2",name:"ShareInformation",displayName:"Share Information",content:"213u213y21u"});
+		menu.push({id:"3",name:"HistoricalPrice",displayName:"Historical Price",content:"213u213y21u"});
+		menu.push({id:"4",name:"Investment",displayName:"Investment",content:"213u213y21u"});
+		menu.push({id:"5",name:"PressReleases",displayName:"Press Releases",content:"213u213y21u"});
+		menu.push({id:"6",name:"Contact",displayName:"Contact",content:"213u213y21u"});
+		menu.push({id:"7",name:"Calendar",displayName:"Calendar",content:"213u213y21u"});
+		menu.push({id:"8",name:"KeyFinancials",displayName:"Key Financials",content:"213u213y21u"});
+		menu.push({id:"9",name:"Audiocast",displayName:"Audiocast",content:"213u213y21u"});
+
+		// Create button
+		var listMenu = document.getElementById("menu");
+		(function(){
+			for (let i = 0 ; i < menu.length ; i++){
+				var btn = document.createElement('button');
+				$(btn).addClass('list-menu');
+				$(btn).appendTo(listMenu);
+				$(btn).text(menu[i].displayName );
+				$(btn).off('click').on("click",function(){show(menu[i].id)});
+			}
+		})();
+
+		// Button event
+		function show(id){
+			console.log(id);
+			var divContent = document.createElement('div');
+			$(divContent).appendTo('list-menu');
+			$(divContent).addClass('slide-content');
+			$(divContent).text(menu[id].content);
+		}		
+	</script>
+</body>
+</html>

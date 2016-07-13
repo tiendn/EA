@@ -286,31 +286,213 @@
 		//         }, i*1000 );
 		//     })();
 		// }
-		for (var i=1; i<=5; i++) {
-		    (function(i){
-		        setTimeout( function timer(){
-		            console.log( i );
-		        }, i*1000 );
-		    })( i );
-		}
-		for (var i=1; i<=5; i++) {
-		    (function(i){
-		        setTimeout( function timer(){
-		            console.log( i );
-		        }, i*1000 );
-		    })( i );
-		}
-		for (var i=1; i<=5; i++) {
-    let j = i; // yay, block-scope for closure!
-    setTimeout( function timer(){
-        console.log( j );
-    }, j*1000 );
-}
-		for (let i=1; i<=5; i++) {
-		    setTimeout( function timer(){
-		        console.log( i );
-		    }, i*1000 );
-		}
+// 		for (var i=1; i<=5; i++) {
+// 		    (function(i){
+// 		        setTimeout( function timer(){
+// 		            console.log( i );
+// 		        }, i*1000 );
+// 		    })( i );
+// 		}
+// 		for (var i=1; i<=5; i++) {
+// 		    (function(i){
+// 		        setTimeout( function timer(){
+// 		            console.log( i );
+// 		        }, i*1000 );
+// 		    })( i );
+// 		}
+// 		for (var i=1; i<=5; i++) {
+//     let j = i; // yay, block-scope for closure!
+//     setTimeout( function timer(){
+//         console.log( j );
+//     }, j*1000 );
+// }
+// 		for (let i=1; i<=5; i++) {
+// 		    setTimeout( function timer(){
+// 		        console.log( i );
+// 		    }, i*1000 );
+// 		}
+// 		function foo() {
+//     console.log( a ); // 2
+// }
+
+// function bar() {
+//     var a = 3;
+//     foo();
+// }
+
+// var a = 2;
+
+// bar();
+// 		{
+//     try {
+//         throw undefined;
+//     } catch (a) {
+//         a = 2;
+//         console.log( a );
+//     }
+// }
+
+// console.log( a );
+// 	var foo = a => {
+//     console.log( a );
+// };
+
+// foo( 2 ); // 2
+// 		var obj = {
+//     id: "awesome",
+//     cool: function coolFn() {
+//         console.log( this.id );
+//     }
+// };
+
+// var id = "not awesome";
+
+// obj.cool(); // awesome
+
+// setTimeout( obj.cool, 100 ); // not awesome
+// 		var obj = {
+//     count: 0,
+//     cool: function coolFn() {
+//         // var self = this;
+
+//         if (this.count < 1) {
+//             setTimeout( function timer(){
+//                 this.count++;
+//                 console.log( "awesome?" );
+//             }, 100 );
+//         }
+//     }
+// };
+
+// obj.cool(); // awesome?
+// 		var obj = {
+//     count: 0,
+//     cool: function coolFn() {
+//         if (this.count < 1) {
+//             setTimeout( () => { // arrow-function ftw?
+//                 this.count++;
+//                 console.log( "awesome?" );
+//             }, 100 );
+//         }
+//     }
+// };
+
+// obj.cool(); // awesome?
+// var obj = {
+//     count: 0,
+//     cool: function coolFn() {
+//         if (this.count < 1) {
+//             setTimeout( function timer(){
+//                 this.count++; // `this` is safe because of `bind(..)`
+//                 console.log( "more awesome" );
+//             }.bind( this ), 100 ); // look, `bind()`!
+//         }
+//     }
+// };
+
+// obj.cool(); // more awesome
+// 		function foo(num) {
+//     console.log( "foo: " + num );
+//     // keep track of how many times `foo` is called
+//     this.count++;
+// }
+// var data = {
+//     count: 0
+// };
+
+// var i;
+
+// for (i=0; i<10; i++) {
+//     if (i > 5) {
+//         foo( i );
+//     }
+// }
+// // foo: 6
+// // foo: 7
+// // foo: 8
+// // foo: 9
+
+// // how many times was `foo` called?
+// console.log( foo.count ); // 0 -- WTF?
+// // foo.call(data);
+// console.log( this.count );
+// 		function foo(num) {
+//     console.log( "foo: " + num );
+
+//     // keep track of how many times `foo` is called
+//     foo.count++;
+// }
+
+// foo.count = 0;
+
+// var i;
+
+// for (i=0; i<10; i++) {
+//     if (i > 5) {
+//         foo( i );
+//     }
+// }
+// foo: 6
+// foo: 7
+// foo: 8
+// foo: 9
+
+// how many times was `foo` called?
+// console.log( foo.count ); // 4
+// 	console.log(foo);
+// 		function baz() {
+//     // call-stack is: `baz`
+//     // so, our call-site is in the global scope
+//     console.log( "baz" );
+//     bar(); // <-- call-site for `bar`
+
+// }
+
+// function bar() {
+//     // call-stack is: `baz` -> `bar`
+//     // so, our call-site is in `baz`
+
+//     console.log( "bar" );
+//     foo(); // <-- call-site for `foo`
+// }
+
+// function foo() {
+//     // call-stack is: `baz` -> `bar` -> `foo`
+//     // so, our call-site is in `bar`
+
+//     console.log( "foo" );
+// }
+
+// baz(); // <-- call-site for `baz`
+
+// 		function foo() {
+//     console.log( this.a );
+// }
+
+// var obj1 = {
+//     a: 2,
+//     foo: foo
+// };
+
+// var obj2 = {
+//     a: 3,
+//     foo: foo
+// };
+
+// obj1.foo(); // 2
+// obj2.foo(); // 3
+
+// obj1.foo.call( obj2 ); // 3
+// obj2.foo.call( obj1 ); // 2
+		var myObject = { };
+
+		myObject[true] = "foo";
+		myObject[3] = "bar";
+		myObject[myObject] = "baz";
+
+		console.log(myObject["true"]);               // "foo"
+		console.log(myObject["3"]);                  // "bar"
+		console.log(myObject["[object Object]"]);    // "baz"
 	</script>
 </body>
 </html>
