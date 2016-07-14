@@ -18,6 +18,12 @@
 			height: 40px;
 			width: 100%;
 		}
+		button:first-of-type{
+			background-color: red;
+		}
+		button:nth-of-type(7){
+			background-color: green;
+		}
 	</style>
 </head>
 <body>
@@ -26,8 +32,6 @@
 			<center><img src="Carlsberg_Group_Logo.png" ></center>
 		</div>
 		<div id = "menu">
-			<!-- <ul id = "menu" >
-			</ul> -->
 		</div>
 	</div>
 	<script type="text/javascript">
@@ -46,24 +50,30 @@
 		menu.push({id:"9",name:"Audiocast",displayName:"Audiocast",content:"213u213y21u"});
 
 		// Create button
-		var listMenu = document.getElementById("menu");
-		(function(){
-			for (let i = 0 ; i < menu.length ; i++){
-				var btn = document.createElement('button');
-				$(btn).addClass('list-menu');
-				$(btn).appendTo(listMenu);
-				$(btn).text(menu[i].displayName );
-				$(btn).off('click').on("click",function(){show(menu[i].id)});
-			}
-		})();
+		// var listMenu = document.getElementById("menu");
+		// (function(){
+		// 	for (let i = 0 ; i < menu.length ; i++){
+		// 		var btn = document.createElement('button');
+		// 		$(btn).addClass('list-menu');
+		// 		$(btn).appendTo(listMenu);
+		// 		$(btn).text(menu[i].displayName );
+		// 		// $(btn).off('click').on("click",function(){show(menu[i].id)});
+		// 		$(btn).prop("value",menu[i].id);
+		// 		$(btn).prop("name",menu[i].name);
+		// 		// $(btn).prop("onclick",show(menu[i].id));
 
-		// Button event
+		// 		// console.log($(btn).value);
+		// 	}
+		// })();
+		// Sử dụng add trực tiếp html này tăng hiệu năng và dễ sử dụng hơn.
+		var lstViewHtml = "";
+		for (let i = 0 ; i < menu.length ; i++){
+			lstViewHtml += "<button class='list-menu' onclick='show("+menu[i].id+")'>"+menu[i].displayName+"</button>";
+		}
+		$("#menu").html(lstViewHtml);
 		function show(id){
 			console.log(id);
-			var divContent = document.createElement('div');
-			$(divContent).appendTo('list-menu');
-			$(divContent).addClass('slide-content');
-			$(divContent).text(menu[id].content);
+			window.location.href=menu[id].name +'.html';
 		}		
 	</script>
 </body>
