@@ -1,4 +1,4 @@
-// var data = [];
+﻿// var data = [];
 // data.push({id:0,content:"abcd"});
 // data.push({id:1,content:"abcd"});
 // data.push({id:2,content:"abcd"});
@@ -48,62 +48,44 @@
 // data.push({id:46,content:"abcd"});
 // data.push({id:47,content:"abcdefg"});
 // data.push({id:48,content:"abcd"});
-
+ // {
+ //    "prId": 3200086,
+ //    "prDateNumeric": 20160329121757,
+ //    "prTitle": "Major shareholder announcement – BlackRock, Inc.",
+ //    "prAttachment": true
+ //  },
 var myArr = [];    
 var count = 0 ;
 var listView = "";
+function convertTime(time){
+  var month = time.slice(4,6);
+  var day = time.slice(6,8);
+  var year = time.slice(0,4);
+  return day+"/"+month+"/"+year;
+}
 
-function loadJSON(){
-
-	$.getJSON('prdata.json', function (result) {
-      console.log(result[2].prTitle);
+function load(){
+  $.getJSON('prdata.json', function (result) {
       myArr = result.slice(count,20+count);
       for (let i = 0 ; i < myArr.length; i++){
-         // myArr.push(myArr.prId,myArr.prDateNumeric,myArr.prTitle,myArr.prAttachment);
-            listView += "<li class = 'content-list-item'>"+myArr[i].prTitle+"</li>";
+        var icon = "" ;
+        var time = convertTime(myArr[i].prDateNumeric.toString());
+        // console.log(time);
+        if (myArr[i].prAttachment === true)    
+          icon = "<img src=\"pr_attachment_icon_iphone_3x.png\" height=\"10px\" width =\"10px\">";
+        // console.log(myArr[i].prTitle.indexOf('-'));
+        var x = myArr[i].prTitle.indexOf('-');
+        if(x !== -1){
+          myArr[i].prTitle[x] = '&oline;';
+        }
+        listView += "<li class = 'content-list-item'>"+icon+"<b>"+time+"</b><br>"+myArr[i].prTitle+"</li>";
       }
       count+=20;
-      // $.each(result, function(i, data){
-            // var object = JSON.parse
-            // myArr.push(data.prId,data.prDateNumeric,data.prTitle,data.prAttachment);
-            // count++;
-            // listView += "<li class = 'content-list-item'>"+data.prTitle+"</li>";
-            
-           // if (count % 20 == 0 ) break;
-      // });
+     
       $('.content-list').html(listView);
        console.log(count);
-      // var items = data.items.map(function (item) {
-      //   return item.prTitle + ': ' + item.prId;
-      // });
-
-      // showData.empty();
-
-      // if (items.length) {
-      //   var content = '<li>' + items.join('</li><li>') + '</li>';
-      //   var list = $('<ul />').html(content);
-      //   showData.append(list);
-      // }
+      
     });
-
-	// do{
-	// 	if (count >= data.length ) break;
-	// 	listView += "<li class = 'content-list-item'>"+data[count].content+"</li>";
-	// 	count++;
-	// }
-	// while (count % 20 !== 0 );
-};
-function load(){
-  // let arr = [];
-  loadJSON();
-  console.log(count);
-  // do{
-  //   // if (count >= myArr.length ) break;
-  //   // listView += "<li class = 'content-list-item'>"+myArr[count].content+"</li>";
-  //   count++;
-  // }
-  // while (count % 20 !== 0 );
-  // $('.content-list').html(listView);
 }
 $(window).scroll(function(){
     if ($(window).scrollTop() + $(window).height() == $(document).height() ) {
