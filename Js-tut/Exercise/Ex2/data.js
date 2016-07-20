@@ -69,23 +69,55 @@
     return convertTime(time);
   }
   function load(){
-    $.getJSON('prdata.json', function (result) {
-      // Get data.
-      data = result;
-      // Get length
-      maxLength = result.length;
-      // Set first date.
-      index30 = data[0].prDateNumeric;
-      //  Filter 
-      myArr = jQuery.grep(data,checkTime);
-      // Change last date.
-      if (maxLength >= NUMBER_PER_LOAD)
-        index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
-      else 
-        index30 = myArr[maxLength-1].prDateNumeric;
-      // Load into HTML page/
-      loadMore();
+   // JSONP..
+    $.ajax({
+      url: "http://10.10.15.234/pr/prData.json",
+      dataType: "jsonp",
+      jsonp: "callback",
+      jsonpCallback: "callbackFn",
+      method: "GET",
+      success: function(result){
+        console.log("dsfdsf");
+        // Get data.
+        data = result;
+        // Get length
+        maxLength = result.length;
+        // Set first date.
+        index30 = data[0].prDateNumeric;
+        //  Filter 
+        myArr = jQuery.grep(data,checkTime);
+        // Change last date.
+        if (maxLength >= NUMBER_PER_LOAD)
+          index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
+        else 
+          index30 = myArr[maxLength-1].prDateNumeric;
+        // Load into HTML page/
+        loadMore();
+      },
+      error: function(a,b){
+        console.log("error");
+      }
     });
+
+
+    //  JSON.
+    $.getJSON('prdata.json',function(result){
+      data = result;
+        // Get length
+        maxLength = result.length;
+        // Set first date.
+        index30 = data[0].prDateNumeric;
+        //  Filter 
+        myArr = jQuery.grep(data,checkTime);
+        // Change last date.
+        if (maxLength >= NUMBER_PER_LOAD)
+          index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
+        else 
+          index30 = myArr[maxLength-1].prDateNumeric;
+        // Load into HTML page/
+        loadMore();
+      });
+ 
   }
   // Filter date ..
   function checkTime(n,i){
