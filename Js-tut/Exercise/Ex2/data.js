@@ -57,16 +57,12 @@
   var isFirstLoad = true;
   const NUMBER_PER_LOAD = 30;
 
-  var today = new Date();
   //  Convert number time into string time.
   function convertTime(time){
     var month = time.slice(4,6);
     var day = time.slice(6,8);
     var year = time.slice(0,4);
     return day+"/"+month+"/"+year;
-  }
-  Date.prototype.format = function(time){
-    return convertTime(time);
   }
   function load(){
    // JSONP..
@@ -141,6 +137,7 @@
     // Loop for print to html page
     for (let i = 0 ; i < length; i++){
       let icon = "" ;
+      console.log(myArr[i].prDateNumeric);
       let time = convertTime(myArr[i].prDateNumeric.toString());
       if (myArr[i].prAttachment === true)    
         icon = "<img src=\"pr_attachment_icon_iphone_3x.png\" height=\"20px\" width =\"20px\">";

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+	<meta charset="UTF-8">
+	<style type="text/css">
+		body{
+			margin: 0 10% 0 10%;
+			background-color: #e8e1e1;
+		}
+		ul{
+			padding-left: 0px;
+		}
+		input[type=search] {
+		    width: 30%;
+		    box-sizing: border-box;
+		    border: 2px solid #ccc;
+		    border-radius: 4px;
+		    font-size: 16px;
+		    background-color: white;
+		    background-position: 10px 10px;
+		    background-repeat: no-repeat;
+		    padding: 12px 20px 12px 40px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		}
+
+		input[type=search]:focus {
+		    width: 100%;
+		}
+		.list-group-item{
+			padding-left: 5%;
+		}
+		.list-more{
+			background-color: #2ef2b4;
+			padding-left: 3%;
+		}
+		li:hover{
+			background-color: #fc7e7e;
+		}
+		::-webkit-input-placeholder {
+		   text-align: center;
+		}
+		::-moz-placeholder {  /* Firefox 19+ */
+		   text-align: center;  
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div style="margin-bottom: 5px; margin-top: 5px;">
+			<input class="form-control" id ="searchBox" placeholder="&#128269 Search" type="search" >
+		</div>
+		<div class="content" >
+			<ul class = "content-list">
+			</ul>
+		</div>
+	</div>
+
+	<script type="text/javascript" language="javascript" src="data.js"></script>
+	<script type="text/javascript" language="javascript" src="datePrototype.js"></script>
+</body>
+</html>
