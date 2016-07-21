@@ -57,7 +57,6 @@ $(document).ready(function(){
       let listViewMore="";
       let currentMonth = getMonth(myArr[i].prDateNumeric);
       let currentYear = getYear(myArr[i].prDateNumeric);
-
       //  time -> Add new li
       if (currentYear != lastYear)
         listViewMore =  "<li class = 'list-group-item list-more'>"+getNameMonth(currentMonth)+" "+currentYear+"</li>";
@@ -116,14 +115,19 @@ $(document).ready(function(){
         }
       }
   });
-
+  function reinit(){
+    count = 0;
+    lastYear="";
+    lastMonth="";
+    isFirstLoad = true;
+  }
  //  Search 
   function search(data){
     let content = data.prTitle;
     content = content.toLowerCase();
-    // console.log(content);
     return content.indexOf(contentSearch) >= 0 ;
   }
+  // Enter event
   $( "#searchBox" ).keypress(function(e) {
     if(e.keyCode === 13)
     {
@@ -131,20 +135,20 @@ $(document).ready(function(){
       contentSearch = contentSearch.toLowerCase();
       // Fitler
       var searchResults = data.filter(search);
-      // console.log(searchResults);
       if (searchResults.length === 0) {
        // If users not typed anything at here or this value is not existed on data
         alert(" No result! ");
         isSearch = false;
-        isFirstLoad = true;
+        // Reinit value
+        reinit();
         $('.content-list').html("");
         load();
       }
       else {
         // Reinit value
-        count = 0;
+        reinit();
         maxLength = searchResults.length;
-        isFirstLoad = true;
+        isSearch = true;
       // Set first date.
         index30 = searchResults[0].prDateNumeric;
         //  Filter 
