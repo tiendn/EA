@@ -45,7 +45,7 @@ function getNameMonth(month){
              break;
      case 9 : month = "September";
              break;
-     case 10 : month = "Octorber";
+     case 10 : month = "October";
              break;
      case 11 : month = "November";
              break;        

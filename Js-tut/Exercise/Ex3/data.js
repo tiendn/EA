@@ -22,7 +22,6 @@ $(document).ready(function(){
       index30 = data[0].prDateNumeric;
       //  Filter 
       myArr = jQuery.grep(data,checkTime);
-      console.log(myArr);
       // Change last date.
       if (maxLength >= NUMBER_PER_LOAD)
         index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
@@ -51,7 +50,7 @@ $(document).ready(function(){
   function loadMore(){
     let length = myArr.length;
     var listView = "";
-
+    //  Bug ???? Search lai mat group
     // Loop for print to html page
     for (let i = 0 ; i < length; i++){
       let dateClass="";
@@ -119,22 +118,26 @@ $(document).ready(function(){
   });
 
  //  Search 
-  function search(data,value){
+  function search(data){
     let content = data.prTitle;
-    return content.startsWith(contentSearch);
+    content = content.toLowerCase();
+    // console.log(content);
+    return content.indexOf(contentSearch) >= 0 ;
   }
   $( "#searchBox" ).keypress(function(e) {
     if(e.keyCode === 13)
     {
       contentSearch = e.currentTarget.value;
+      contentSearch = contentSearch.toLowerCase();
       // Fitler
       var searchResults = data.filter(search);
-      console.log(searchResults);
+      // console.log(searchResults);
       if (searchResults.length === 0) {
        // If users not typed anything at here or this value is not existed on data
         alert(" No result! ");
         isSearch = false;
         isFirstLoad = true;
+        $('.content-list').html("");
         load();
       }
       else {
