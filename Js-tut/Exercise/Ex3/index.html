@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>PR Search</title>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
 	<meta charset="UTF-8">
 	<style type="text/css">
 		body{
@@ -22,7 +21,6 @@
 		    -webkit-transition: width 0.4s ease-in-out;
 		    transition: width 0.4s ease-in-out;
 		}
-
 		input[type=search]:focus {
 		    width: 100%;
 		}
@@ -42,12 +40,21 @@
 		::-moz-placeholder {  /* Firefox 19+ */
 		   text-align: center;  
 		}
-		
+		.content{
+			margin-top: 45px;
+		}
+		.search-bar{
+			position: fixed;
+			top:5px;
+			width:80%;
+   			height: auto;
+    		z-index: 100;
+		}
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div style="margin-bottom: 5px; margin-top: 5px;">
+	<div class="header">
+		<div class="search-bar" >
 			<input class="form-control" id ="searchBox" placeholder="&#128269 Search" type="search" >
 		</div>
 		<div class="content" >
@@ -55,7 +62,6 @@
 			</ul>
 		</div>
 	</div>
-
 	<script type="text/javascript" language="javascript" src="data.js"></script>
 	<script type="text/javascript" language="javascript" src="datePrototype.js"></script>
 </body>
