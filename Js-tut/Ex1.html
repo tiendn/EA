@@ -3,9 +3,24 @@
 <html>
 <head>
 	<title></title>
+	<style type="text/css" media ="screen">
+		.person { background-color: green; }
+		son {background-color: pink;}
+		daughter {background-color: blue;}
+	</style>
 </head>
+
 <body>
-	
+	<h1> My custom Element </h1>
+	<p data-age = "13">
+		Hi my name is <span class="person"> Scott </span>.
+	</p>
+	<p>
+		My son's name is <son age="13">Chris</son>
+	</p>
+	<p>
+		My daughter's name is <daughter>Libby</daughter>
+	</p>
 	<script type="text/javascript">
 		/*<dnt.gm.c>
 		godlike*@^*/
@@ -484,15 +499,51 @@
 
 // obj1.foo.call( obj2 ); // 3
 // obj2.foo.call( obj1 ); // 2
-		var myObject = { };
+		// var myObject = { };
 
-		myObject[true] = "foo";
-		myObject[3] = "bar";
-		myObject[myObject] = "baz";
+		// myObject[true] = "foo";
+		// myObject[3] = "bar";
+		// myObject[myObject] = "baz";
 
-		console.log(myObject["true"]);               // "foo"
-		console.log(myObject["3"]);                  // "bar"
-		console.log(myObject["[object Object]"]);    // "baz"
+		// console.log(myObject["true"]);               // "foo"
+		// console.log(myObject["3"]);                  // "bar"
+		// console.log(myObject["[object Object]"]);    // "baz"
+		// const MY_OBJECT = {"key":"value"};
+		// MY_OBJECT = {"OTHER_KEY":"value"};
+		// console.log(MY_OBJECT);
+		// (function a(){
+		// 	console.log(foo);
+		// 	let foo = 2;
+		// 	let x = 0;
+		// 	switch(x){
+		// 		case 0 :
+		// 			let foo1;
+		// 			break;
+		// 		case 1: 
+		// 			var foo1;
+		// 			break;
+		// 	}
+		// })();
+		// var a = [
+		// 	"Hydrogen",
+		// 	"Helium",
+		// 	"Lithium",
+		// 	"Beryllium"
+		// ];
+
+		// var a2 = a.map(function(s){ return s.length});
+		// var a3 = a.map( s => s.length);
+		// console.log(a2);
+		// console.log(a3);
+		function Person(){
+			this.age = 0 ;
+			setInterval(function growUp(){
+				this.age++;
+			},1000);
+		}
+		var p = new Person();
+		console.log(p.growUp);
+		
 	</script>
 </body>
 </html>
