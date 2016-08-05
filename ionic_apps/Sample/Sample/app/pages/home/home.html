@@ -1,0 +1,43 @@
+<ion-navbar *navbar>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Hello Ionic</ion-title>
+</ion-navbar>
+
+
+<ion-content padding class="getting-started">
+
+  <h3>Welcome to your first Ionic app!</h3>
+
+  <p>
+    This starter project is our way of helping you get a functional app running in record time.
+  </p>
+  <p>
+    Follow along on the tutorial section of the Ionic docs!
+  </p>
+  <button>
+  <ion-icon name="home"></ion-icon>
+  Left Icon
+</button>
+  <p>
+    <button primary  (click)="doRadio()">Toggle Menu</button>
+  </p>
+  <ion-list>
+  <ion-checkbox ng-model="filter.red">Red</ion-checkbox>
+  <ion-checkbox ng-model="filter.yellow">Yellow</ion-checkbox>
+  <ion-checkbox ng-model="filter.pink">Pink</ion-checkbox>
+  </ion-list>
+  <ion-card>
+
+  <ion-card-header>
+    Card Header
+  </ion-card-header>
+
+  <ion-card-content>
+    Card Content
+    <!-- Add card content here! -->
+  </ion-card-content>
+
+</ion-card>
+</ion-content>

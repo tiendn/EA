@@ -1,0 +1,10 @@
+.toolbar-background
+{
+    background-color: #B3D749;
+}
+#irapp-leftmenu{
+  background-image: url("left-menu.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,16 @@
+<ion-menu [content]="content" id="irapp-leftmenu" side="left" type="push">
+  <ion-content>
+    <div class="company-logo"></div>
+    <ion-list class="list-modules">
+      <ion-item menuClose *ngFor="let module of leftMenuModules" (click)="goToModule(module.moduleName)" [class]="module.moduleName">
+        {{module.displayName}}
+      </ion-item>
+      <ion-item menuClose (click)="goToModule('settings')" class="settings">
+        {{settingsText}}
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- main navigation -->
+<ion-nav id="nav" [root]="root" #content swipe-back-enabled="false">
+</ion-nav>

@@ -1,0 +1,239 @@
+﻿{
+  "companycode": "dk-nzmb",
+  "common": {
+    "appname": {
+      "en-gb": "Novozymes Investor Relations"
+    },
+    "companyname": {
+      "en-gb": "Novozymes"
+    },
+    "website": {
+      "en-gb": {
+        "name": "www.novozymes.com",
+        "url": "http://www.novozymes.com"
+      }
+    },
+    "primarymarketname": {
+      "en-gb": "Copenhagen Stock Exchange"
+    },
+    "modules": {
+      "sharegraph": {
+        "phone": true,
+        "landscape": true,
+        "portrait": true
+      },
+      "shareinformation": {
+        "phone": true,
+        "landscape": true,
+        "portrait": true
+      },
+      "historicalprice": {
+        "phone": false,
+        "landscape": true,
+        "portrait": true
+      },
+      "investmentcalculator": {
+        "phone": true,
+        "landscape": false,
+        "portrait": true
+      },
+      "keyfinancials": {
+        "phone": false,
+        "landscape": false,
+        "portrait": false
+      },
+      "pressreleases": {
+        "phone": true,
+        "landscape": true,
+        "portrait": true
+      },
+      "calendar": {
+        "phone": false,
+        "landscape": false,
+        "portrait": true
+      },
+      "report": {
+        "phone": true,
+        "landscape": true,
+        "portrait": true
+      }
+    },
+    "currencies": [
+      {
+        "code": "DKK",
+        "decimaldigits": 2
+      }
+    ],
+    "customcss": false,
+    "sharetypes": [
+      {
+        "instrumentid": 32940,
+        "name": {
+          "en-gb": "Novozymes B"
+        }
+      },
+      {
+        "instrumentid": 100980,
+        "name": {
+          "en-gb": "Novozymes ADR"
+        }
+      }
+    ],
+    "markets": [
+      {
+        "id": 19,
+        "name": {
+          "en-gb": "COP"
+        },
+        "opentimelocal": "09:00:00",
+        "closetimelocal": "17:00:00",
+        "baseutcoffset": "GMT+02:00",
+        "businessdaystot": false
+      },
+      {
+        "id": 33,
+        "name": {
+          "en-gb": "CHIX"
+        },
+        "opentimelocal": "09:00:00",
+        "closetimelocal": "17:30:00",
+        "baseutcoffset": "GMT+02:00",
+        "businessdaystot": false
+      },
+      {
+        "id": 34,
+        "name": {
+          "en-gb": "BATS"
+        },
+        "opentimelocal": "09:00:00",
+        "closetimelocal": "17:30:00",
+        "baseutcoffset": "GMT+02:00",
+        "businessdaystot": false
+      },
+      {
+        "id": 42,
+        "name": {
+          "en-gb": "OTC US"
+        },
+        "opentimelocal": "09:30:00",
+        "closetimelocal": "16:00:00",
+        "baseutcoffset": "GMT-04:00",
+        "businessdaystot": false
+      }
+    ],
+    "instruments": [
+      {
+        "instrumentid": 32940,
+        "name": {
+          "en-gb": "Novozymes B (COP)"
+        },
+        "sharetypecode": 32940,
+        "marketid": 19,
+        "isprimarymarket": 1,
+        "currencycode": "DKK"
+      },
+      {
+        "instrumentid": 70003,
+        "name": {
+          "en-gb": "Novozymes B (CHIX)"
+        },
+        "sharetypecode": 32940,
+        "marketid": 33,
+        "isprimarymarket": 0,
+        "currencycode": "DKK"
+      },
+      {
+        "instrumentid": 71957,
+        "name": {
+          "en-gb": "Novozymes B (BATS)"
+        },
+        "sharetypecode": 32940,
+        "marketid": 34,
+        "isprimarymarket": 0,
+        "currencycode": "DKK"
+      },
+      {
+        "instrumentid": 100980,
+        "name": {
+          "en-gb": "Novozymes ADR (OTC)"
+        },
+        "sharetypecode": 100980,
+        "marketid": 42,
+        "isprimarymarket": 1,
+        "currencycode": "USD"
+      }
+    ],
+    "bloburl": "http://asia.cdn.euroland.com/",
+    "attachmentsblobcontainer": "press-releases-attachments",
+    "pdfreportsblobcontainer": "pdf",
+    "pdfthumbnailblobcontainer": "mobiletools/pdfthumbnails"
+  },
+  "home": {},
+  "sharegraph": {
+    "noofshares": "millions",
+    "marketcap": "millions",
+    "defaultperiod": "6m"
+  },
+  "shareinformation": [
+    {
+      "instrumentid": 32940,
+      "symbol": "NZYM B",
+      "isin": "DK0060336014",
+      "marketname": {
+        "en-gb": "Copenhagen"
+      }
+    },
+    {
+      "instrumentid": 100980,
+      "symbol": "NVZMY",
+      "isin": "US6701081092",
+      "marketname": {
+        "en-gb": "USOTC"
+      }
+    }
+  ],
+  "shareviaemail": {
+    "itunesappurl": "https://itunes.apple.com/app/id966414693",
+    "androidappurl": "https://play.google.com/store/apps/details?id=com.euroland.mobiletools.dk_nzmb"
+  },
+  "calendar": {
+    "languages": "en-gb"
+  },
+  "pressreleases": {
+    "languages": "en-gb,da-dk"
+  },
+  "report": [
+    {
+      "module": "report",
+      "languages": "en-GB,da-DK",
+      "phraseid": null,
+      "limitinyearold": 0,
+      "tabs": [
+        {
+          "tabid": "id_1",
+          "phraseid": "Report/AnnualReport",
+          "nameprefix": "AR_",
+          "orientation": null
+        },
+        {
+          "tabid": "id_2",
+          "phraseid": "Report/QuarterlyReport",
+          "nameprefix": "Q?_",
+          "orientation": null
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "en-gb": {
+      "common": {
+        "pressreleases": "Company Announcements"
+      }
+    },
+    "da-dk": {
+      "common": {
+        "pressreleases": "Børsmeddelelser"
+      }
+    }
+  }
+}

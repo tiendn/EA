@@ -8,12 +8,7 @@
 
   app.controller('RedditCtrl',function($http, $scope){
     $scope.stories = [];
-    // $http.get('https://www.reddit.com/r/android/new/.json')
-    // .success(function(response){
-    //   angular.forEach(response.data.children,function(child){
-    //     $scope.stories.push(child.data); 
-    //   });
-    // });
+   
     function loadStories(params, callback){
       var stories = [];
       $http.get('https://www.reddit.com/r/android/new/.json',{params:params})

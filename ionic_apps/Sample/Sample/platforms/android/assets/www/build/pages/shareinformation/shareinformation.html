@@ -1,0 +1,62 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar *ngIf="!hideTab" no-border no-padding>
+        <!--[hidden]="hideTab"-->
+        <!--<ion-segment>
+          <ion-segment-button *ngFor="let sharetype of sharetypes; let i=index" value="{{sharetype.instrumentid}}" (select)="selectedSharetype(sharetype.instrumentid)" [class]="i == 0 ? 'segment-button segment-activated' : 'segment-button'">
+            <span>{{sharetype.displayName}}</span>
+          </ion-segment-button>
+        </ion-segment>-->
+        <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+            <button *ngFor="let sharetype of sharetypes; let i=index" (click)="selectedSharetype(sharetype.instrumentid)" [class]="currentInstrumentId == sharetype.instrumentid ? 'button btn-active' : 'button'">
+                {{sharetype.displayName}}
+            </button>
+        </ion-scroll>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content></ion-refresher-content>
+    </ion-refresher>
+    <ion-note class="shareinfo-note" [innerHTML]="shareinfoListText.shareinfoNote"></ion-note>
+    <ion-list no-border>
+        <ion-list-header>{{shareinfoListText.marketHeader}}</ion-list-header>
+        <ion-item>
+            <ion-label>{{shareinfoListText.currency}}</ion-label>
+            <ion-note item-right>{{shareinfoData.currency}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.market}}</ion-label>
+            <ion-note item-right>{{shareinfoData.market}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.isin}}</ion-label>
+            <ion-note item-right>{{shareinfoData.isin}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.symbol}}</ion-label>
+            <ion-note item-right>{{shareinfoData.Symbol}}</ion-note>
+        </ion-item>
+    </ion-list>
+    <ion-list no-border>
+        <ion-list-header>{{shareinfoListText.performanceHeader}}</ion-list-header>
+        <ion-item>
+            <ion-label>{{shareinfoListText.ytd}}</ion-label>
+            <ion-note item-right><span [class]="shareinfoData.tYTD > 0 ? 'plus' : shareinfoData.tYTD < 0 ? 'minus' : ''">{{shareinfoData.tYTD | formatNumber:2}}{{shareinfoData.tYTD != 0 ? "%" : ""}}</span></ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.week}}</ion-label>
+            <ion-note item-right><span [class]="shareinfoData.t52wChange > 0 ? 'plus' : shareinfoData.t52wChange < 0 ? 'minus' : ''">{{shareinfoData.t52wChange | formatNumber:2}}{{shareinfoData.t52wChange != 0 ? "%" : ""}}</span></ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.mHigh}}</ion-label>
+            <ion-note item-right>{{shareinfoData.t3mHigh | formatNumber:decimalDigits}}</ion-note>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{shareinfoListText.mLow}}</ion-label>
+            <ion-note item-right>{{shareinfoData.t3mLow | formatNumber:decimalDigits}}</ion-note>
+        </ion-item>
+    </ion-list>
+</ion-content>
