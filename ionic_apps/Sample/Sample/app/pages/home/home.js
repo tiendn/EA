@@ -12,39 +12,22 @@ export class HomePage {
 
   static get parameters() {
       return[
-        [ToastController],
-        [GetData]
+        [ToastController]
       ];
   }
   // var data;
-    constructor(toastController,data){
-      // this.data = data.getData();
-      console.log(data.getData());
+    constructor(){
+
+      this.data = GetData;
+      console.log(this.data.getData());
       // var stories = [];
-      // http.get('./prdata.json').map(res => res.json()).subscribe(
-      //   data => {
-      //     this.stories = data;
-      //     console.log(this.stories);
-      //   },
-      //     err => {
-      //     console.log("Oops!");
-      //   }
-      // );
-      // console.log(this.stories);
+
       this.dateOfBirthday = new Date(1988, 4, 15);
-      this.toastController = toastController;
+      this.toastController = ToastController;
       // retrieveData();
     }
 
-    // retrieveData(){
-    //   this.http.get('./prdata.json').subscribe(data => {
-    //     this.data = data;
-    //   });
-    // }
-    // getData(){
-    //   console.log(this.data);
-    //   return this.data;
-    // }
+
     presentToast() {
      let toast = this.toastController.create({
        message: 'User was added successfully',

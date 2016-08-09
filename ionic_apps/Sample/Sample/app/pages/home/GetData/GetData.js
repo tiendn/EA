@@ -10,8 +10,9 @@ export class GetData {
       ];
   }
   constructor(http){
+    this.http = Http;
     var stories = [];
-    http.get('./prdata.json').map(res => res.json()).subscribe(
+    this.http.get('./prdata.json').map(res => res.json()).subscribe(
       data => {
         this.stories = data;
         console.log(this.stories);
