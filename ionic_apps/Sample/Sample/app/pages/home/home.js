@@ -1,72 +1,57 @@
 import {Component} from '@angular/core';
-import {Alert, NavController} from 'ionic-angular';
+import { ToastController } from 'ionic-angular';
+import {JsonPipe} from '@angular/common';
+import {Http} from "@angular/http";
+import {GetData} from './GetData/GetData';
 @Component({
-  templateUrl: 'build/pages/home/home.html'
+  templateUrl: 'build/pages/home/home.html',
+  providers: [GetData]
 })
-export class HomePage{
-    static get parameters() {
+
+export class HomePage {
+
+  static get parameters() {
+      return[
+        [ToastController],
+        [GetData]
+      ];
+  }
+  // var data;
+    constructor(toastController,data){
+      // this.data = data.getData();
+      console.log(data.getData());
+      // var stories = [];
+      // http.get('./prdata.json').map(res => res.json()).subscribe(
+      //   data => {
+      //     this.stories = data;
+      //     console.log(this.stories);
+      //   },
+      //     err => {
+      //     console.log("Oops!");
+      //   }
+      // );
+      // console.log(this.stories);
+      this.dateOfBirthday = new Date(1988, 4, 15);
+      this.toastController = toastController;
+      // retrieveData();
     }
 
-    constructor() {}
-    doRadio() {
-    let alert = Alert.create();
-    alert.setTitle('Lightsaber color');
+    // retrieveData(){
+    //   this.http.get('./prdata.json').subscribe(data => {
+    //     this.data = data;
+    //   });
+    // }
+    // getData(){
+    //   console.log(this.data);
+    //   return this.data;
+    // }
+    presentToast() {
+     let toast = this.toastController.create({
+       message: 'User was added successfully',
+       duration: 3000
+     });
+     toast.present();
+ }
 
-    alert.addInput({
-      type: 'radio',
-      label: 'Blue',
-      value: 'blue',
-      checked: true
-    });
 
-    alert.addInput({
-      type: 'radio',
-      label: 'Green',
-      value: 'green'
-    });
-
-    alert.addInput({
-      type: 'radio',
-      label: 'Red',
-      value: 'red'
-    });
-
-    alert.addInput({
-      type: 'radio',
-      label: 'Yellow',
-      value: 'yellow'
-    });
-
-    alert.addInput({
-      type: 'radio',
-      label: 'Purple',
-      value: 'purple'
-    });
-
-    alert.addInput({
-      type: 'radio',
-      label: 'White',
-      value: 'white'
-    });
-
-    alert.addInput({
-      type: 'radio',
-      label: 'Black',
-      value: 'black'
-    });
-
-    alert.addButton('Cancel');
-    alert.addButton({
-      text: 'Ok',
-      handler: data => {
-        console.log('Radio data:', data);
-        this.testRadioOpen = false;
-        this.testRadioResult = data;
-      }
-    });
-
-    this.nav.present(alert).then(() => {
-      this.testRadioOpen = true;
-    });
-  }
 }
