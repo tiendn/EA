@@ -26,8 +26,6 @@ export class DataService {
       );
     });
 
-    //console.log(this.stories);
-    // /return this.stories;
   }
 
 }

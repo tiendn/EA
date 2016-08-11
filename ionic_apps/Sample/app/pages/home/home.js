@@ -1,26 +1,11 @@
 import {Component} from '@angular/core';
-import { ToastController } from 'ionic-angular';
-import {JsonPipe} from '@angular/common';
-import {Http} from "@angular/http";
-import {DataService} from '../DataService/DataService';
-import {StartedPipe} from '../PipeService/myPipe';
+import {NavController} from 'ionic-angular';
+import {ToastController } from 'ionic-angular';
+import {TestProviderPage} from '../test-provider/test-provider';
+import {TestPipePage} from '../test-pipe/test-pipe';
+import {TestDirectivePage} from '../test-directive/test-directive';
 @Component({
-  // If use pipes, don't load templateUrl
   templateUrl: 'build/pages/home/home.html',
-  providers: [DataService],
-  // Directive
-    // selector: 'list-prItem',
-  // Pipe
-  // template: `
-  // <ion-content padding class="getting-started">
-  //   <ion-list>
-  //     <ion-item text-wrap *ngFor="let story of stories ">
-  //       <h2> {{story.prTitle | myPipe}}</h2>
-  //     </ion-item>
-  //   </ion-list>
-  // </ion-content>
-  // `,
-  // pipes:[StartedPipe]
 })
 
 export class HomePage {
@@ -28,31 +13,27 @@ export class HomePage {
   static get parameters() {
       return[
         [ToastController],
-        [DataService]
+        [NavController]
       ];
   }
-  // var data;
-    constructor(toastController, dataService){
-      var stories = [];
-      let self = this;
-      dataService.getData().then(function(data){
-        self.stories = data;
-      });
-      // console.log(this.stories);
-      this.dateOfBirthday = new Date(1988, 4, 15);
-      this.toastController = toastController;
-      // retrieveData();
-    }
+  constructor(toastController,navController){
+    this.nav = navController;
+    this.toastController = toastController;
+  }
+  // presentToast() {
+  //  let toast = this.toastController.create({
+  //    message: 'User was added successfully',
+  //    duration: 3000
+  //  });
+  //  toast.present();
+  // }
 
-
-
-    presentToast() {
-     let toast = this.toastController.create({
-       message: 'User was added successfully',
-       duration: 3000
-     });
-     toast.present();
- }
-
-
+  myFunction(type){
+    if (type == 1)
+      this.nav.push(TestProviderPage);
+    if (type == 2)
+      this.nav.push(TestPipePage);
+    if (type == 3)
+      this.nav.push(TestDirectivePage);
+  }
 }

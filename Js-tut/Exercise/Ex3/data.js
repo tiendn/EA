@@ -1,12 +1,13 @@
 $(document).ready(function(){
+  
   load();
   // init value
   var count = 0 ;
   var lastMonth ="";
   var lastYear ="";
   var isFirstLoad = true; // If the first load.
-  // 
-  var myArr = []; 
+  //
+  var myArr = [];
   var maxLength = 0;
   var data = [];
   var onScrollProcess = false;
@@ -23,17 +24,17 @@ $(document).ready(function(){
       // Set first date.
 
       index30 = data[0].prDateNumeric;
-      //  Filter 
+      //  Filter
       myArr = jQuery.grep(data,checkTime);
       // Change last date.
       if (maxLength >= NUMBER_PER_LOAD)
         index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
-      else 
+      else
         index30 = myArr[maxLength-1].prDateNumeric;
       // Load into HTML page/
       loadMore();
     });
- 
+
   }
   // Filter date ..
   function checkTime(n,i){
@@ -43,7 +44,7 @@ $(document).ready(function(){
         isFirstLoad = false;
         return n.prDateNumeric <= index30;
       }
-      else 
+      else
         return n.prDateNumeric < index30;
     }
     else
@@ -67,7 +68,7 @@ $(document).ready(function(){
       else if (currentYear == lastYear){
         if (currentMonth == lastMonth)
           dateClass = currentMonth+currentYear;
-        else 
+        else
           listViewMore =  "<li class = 'list-group-item list-more'>"+getNameMonth(currentMonth)+" "+currentYear+"</li>";
       }
 
@@ -77,9 +78,9 @@ $(document).ready(function(){
       // Print html
       listView += listViewMore+"<li class = 'list-group-item "+ dateClass+"'>"+myArr[i].prTitle+"<br>"+time+"</li>";
       lastMonth = currentMonth;
-      lastYear = currentYear;  
+      lastYear = currentYear;
     }
-    
+
     // Count the number of results print into html page
     count += length;
 
@@ -92,10 +93,10 @@ $(document).ready(function(){
         isFirstLoad = false;
         $('.content-list').html(listView);
       }
-      else 
+      else
         $('.content-list').append(listView);
     }
-      
+
   }
 
   // Scroll
@@ -106,12 +107,12 @@ $(document).ready(function(){
         // Filter and get only 30 elements
         if (!isSearch)
           myArr = jQuery.grep(data.slice(count,data.length),checkTime);
-        else 
+        else
           myArr = jQuery.grep(contentSearch.slice(count,contentSearch.length),checkTime);
         //  Update index30
         if (maxLength-count >= NUMBER_PER_LOAD)
           index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
-        else 
+        else
           index30 = myArr[maxLength-count-1].prDateNumeric;
         //  Print html page.
         onScrollProcess = true;
@@ -140,7 +141,7 @@ $(document).ready(function(){
     lastMonth="";
     isFirstLoad = true;
   }
- //  Search 
+ //  Search
   function search(data){
     let content = data.prTitle;
     content = content.toLowerCase();
@@ -174,24 +175,24 @@ $(document).ready(function(){
           // Reinit value
           reinit();
           maxLength = searchResults.length;
-          // Don't need this line, because when enter, 
+          // Don't need this line, because when enter,
           // this search engine will be started without isSearch variable
           isSearch = true;
         // Set first date.
           index30 = searchResults[0].prDateNumeric;
-          //  Filter 
+          //  Filter
           myArr = jQuery.grep(searchResults,checkTime);
           // Change last date.
           if (maxLength >= NUMBER_PER_LOAD)
             index30 = myArr[NUMBER_PER_LOAD-1].prDateNumeric;
-          else 
+          else
             index30 = myArr[maxLength-1].prDateNumeric;
           // Load into HTML page/
           $('.content-list').html("Search result");
           loadMore();
         }
       }
-      
+
     }
   });
 
