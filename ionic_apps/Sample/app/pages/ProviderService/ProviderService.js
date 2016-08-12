@@ -1,7 +1,6 @@
 // import {Component} from '@angular/core';
 import {Http} from "@angular/http";
 import {Injectable} from '@angular/core';
-
 @Injectable()
 export class DataService {
   static get parameters() {
@@ -25,7 +24,6 @@ export class DataService {
         }
       );
     });
-
   }
 
 }
