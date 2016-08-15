@@ -6,7 +6,8 @@ $(document).ready(function(){
     console.log(strings.raw[1]) ;
     console.log(values[0] );
 }
-quux `foo\n${ 42 }bar`)
+quux `foo\n${ 42 }bar`
+console.log("Đào Nam Tiến".length)
   load();
   // init value
   var count = 0 ;
