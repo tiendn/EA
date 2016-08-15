@@ -1,59 +1,18 @@
+
 <ion-header>
-    <ion-navbar hideBackButton>
-        <ion-buttons start>
-            <button menuToggle="irapp-leftmenu">
-                <ion-icon name="menu"></ion-icon>
-            </button>
-        </ion-buttons>
-        <ion-title>{{homePageTitle}}</ion-title>
-        <ion-buttons end>
-            <button (click)="showSharePopup($event)">
-                <ion-icon name="share"></ion-icon>
-            </button>
-        </ion-buttons>
-    </ion-navbar>
+
+  <ion-navbar primary>
+    <ion-title  >Hello Ionic</ion-title>
+  </ion-navbar>
 </ion-header>
-<ion-content class="cards-bg" #homepageContent>
-    <ion-card class="cards-ticker">
-        <ion-card-content>
-            <ion-slides [pager]="tickers.length == 0 ? 'true' : 'false'">
-                <ion-slide *ngFor="let ticker of tickers">
-                    <div class="ticker-content">
-                        <div class="ticker-name"><bdo dir="auto">{{ticker.Name}}</bdo></div>
-                        <div class="ticker-lastvalue">{{ticker.Last | formatNumber:ticker.decimalDigits}}</div>
-                        <div class="ticker-currency">{{ticker.Currency}}</div>
-                        <div class="ticker-datacontent">
-                            <span class="label openlabel">{{tickerPhrases.open}}</span>
-                            <span class="openvalue">{{ticker.Open | formatNumber:ticker.decimalDigits}}</span>
-                            <span class="label volumelabel">{{tickerPhrases.volume}}</span>
-                            <span class="volumevalue">{{ticker.Volume | formatNumber:0}}</span>
-                            <span class="change">{{ticker.Change > 0 ? "+" : ""}}{{ticker.Change | formatNumber:ticker.decimalDigits}}</span>
-                            <span class="label highlabel">{{tickerPhrases.hight}}</span>
-                            <span class="hightvalue">{{ticker.High | formatNumber:ticker.decimalDigits}}</span>
-                            <span class="label lowlabel">{{tickerPhrases.low}}</span>
-                            <span class="lowvalue">{{ticker.Low | formatNumber:ticker.decimalDigits}}</span>
-                            <span class="changepercent">({{ticker.changePercent | formatNumber:2}}{{ticker.changePercent != 0 ? "%" : ""}})</span>
-                            <ion-icon class="arrowIcon" [name]="ticker.Change > 0 ? 'plus' : ticker.Change < 0 ? 'minus' : ''"></ion-icon>
-                        </div>
-                        <div class="ticker-date {{ticker.marketStatus}}" [innerHTML]="ticker.date"></div>
-                        <div class="ticker-desc">{{tickerPhrases.note}}</div>
-                    </div>
-                    <div class="ticker-chart" *ngIf="isTablet"></div>
-                </ion-slide>
-            </ion-slides>
-        </ion-card-content>
+  <ion-content padding class="getting-started">
+    <button secondary block (click)="infiniteScrollPage()"> Click here to open inifinite scroll page </button>
+    <button twitter block (click)="scrollHorizontal()"> Click here to open scroll hoziontal page </button>
+    <!-- <ion-card>
+      <button danger (click)="showCard()" [hidden] = isLandscape> Click me </button>
     </ion-card>
-    <ion-note class="menu-note" [innerHTML]="moduleNote"></ion-note>
-    <ion-card class="cards-list-module">
-        <button *ngFor="let module of modules" (click)="goToModule(module.moduleName)">
-            {{module.displayName}}
-        </button>
-        <button (click)="goToModule('settings')">
-            <ion-icon name="ios-apps"></ion-icon>
-        </button>
-    </ion-card>
-    <!--<ion-toolbar position="bottom">
-      <ion-title>Footer</ion-title>
-    </ion-toolbar>-->
-    <ion-note class="irapp-footer" [innerHTML]="appFooter"></ion-note>
-</ion-content>
+    <ion-card  [hidden] = isHide >
+      <p> Hello world ! </p>
+      <p> This is a example about hidden card. </p>
+    </ion-card> -->
+  </ion-content>
