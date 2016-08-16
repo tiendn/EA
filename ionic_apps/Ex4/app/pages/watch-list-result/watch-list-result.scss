@@ -1,9 +1,39 @@
-.watch-list-result {
-
+@media screen and (max-width: 414px){
+  ion-content{
+    .footer{
+      margin-left:4%;
+    }
+  }
 }
+@media screen and (min-width: 414px) and (max-width: 768px){
+  body{
+    margin:0% 1% 0 1% ;
+  }
+}
+@media screen and (min-width: 768px) {
+  scroll-content{
+      margin: 0% 5% 0 5% ;
+  }
+}
+body{
+  background-color: #000;
+  opacity: 0.7;
+  color:white;
+}
+ion-item span,p,h6{
+  color:white;
+}
+
 span .unit{
   font-size: 11px;
 }
-item-mid{
-  margin-right: 25%;
+
+div .item-right{
+  width: 37%;
+  text-align: right;
+}
+
+ion-item .footer{
+  border: 0px;
+  white-space: nowrap;
 }
