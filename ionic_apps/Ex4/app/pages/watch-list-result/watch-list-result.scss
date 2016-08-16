@@ -3,37 +3,54 @@
     .footer{
       margin-left:4%;
     }
+    .btn{
+      margin-bottom: 0;
+    }
   }
 }
-@media screen and (min-width: 414px) and (max-width: 768px){
-  body{
-    margin:0% 1% 0 1% ;
-  }
-}
+// @media screen and (min-width: 414px)
+// and (max-width: 768px){
+//   body{
+//     margin:0% 0% 0 0% ;
+//   }
+// }
 @media screen and (min-width: 768px) {
   scroll-content{
-      margin: 0% 5% 0 5% ;
+      margin: 1% 5% 0 5% ;
   }
 }
 body{
-  background-color: #000;
-  opacity: 0.7;
-  color:white;
+  // background-color: #000;
+  // opacity: 0.3;
+  font-size: 16px;
 }
-ion-item span,p,h6{
-  color:white;
+.btn{
+  margin-bottom: 1%;
+  margin-top: 2%;
 }
 
+ion-item span,p,h6{
+  // color:#ffffff;
+}
+ion-list{
+  margin-bottom: 1%;
+}
+ion-icon {
+  font-size: 50px;
+}
+center p {
+  height: 40px;
+}
+p div:nth-child(1){
+  display: inline;
+}
+p div:nth-child(2){
+display: inline;
+}
 span .unit{
   font-size: 11px;
 }
-
 div .item-right{
   width: 37%;
   text-align: right;
-}
-
-ion-item .footer{
-  border: 0px;
-  white-space: nowrap;
 }

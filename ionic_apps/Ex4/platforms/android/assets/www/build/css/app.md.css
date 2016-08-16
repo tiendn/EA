@@ -10943,3 +10943,32 @@ ion-scroll {
 
 body {
   overflow: hidden; }
+
+@media screen and (max-width: 414px) {
+  ion-content .footer {
+    margin-left: 4%; } }
+
+@media screen and (min-width: 414px) and (max-width: 768px) {
+  body {
+    margin: 0% 1% 0 1%; } }
+
+@media screen and (min-width: 768px) {
+  scroll-content {
+    margin: 0% 5% 0 5%; } }
+
+body {
+  font-size: 16px; }
+
+ion-item {
+  font-size: 16px; }
+
+span .unit {
+  font-size: 11px; }
+
+div .item-right {
+  width: 37%;
+  text-align: right; }
+
+ion-item .footer {
+  border: 0px;
+  white-space: nowrap; }
