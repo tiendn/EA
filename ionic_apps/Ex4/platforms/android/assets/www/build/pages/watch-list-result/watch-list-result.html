@@ -1,70 +1,42 @@
+<ion-content class="watch-list-result">
+  <center >
+    <button light class="btn-watch" style="display:flex;
+    flex-direction:column;">
+      Watchlist
+      <ion-icon name ="list" style="color:black;"></ion-icon>
+    </button>
 
-
-<ion-content >
-
-  <center>
-    <button light style="margin-bottom: 2%;margin-top: 5%;"> Watchlist <ion-icon name ="list"></ion-icon></button>
-    <p style="margin-bottom:5%;">
-      <ion-icon large name="ios-calendar-outline" > </ion-icon>
-       Date
-       <br>
-       27/02/2016
-    </p>
   </center>
-
+  <button small light class="close" (click)="closeModal()">
+    X<!-- <ion-icon name="close"> </ion-icon> -->
+  </button>
+  <div class="date-content">
+      <ion-icon name="ios-calendar-outline"> </ion-icon>
+    <div class="current-date">
+      <span style="text-align:left;">
+        Date
+      </span>
+      <span style="text-align:left;">
+        27/02/2016
+      </span>
+    </div>
+  </div>
+  <!-- List results -->
   <ion-list >
     <ion-item>
-      <span class="item-left"> 	 </span>
-      <span item-content class="item-mid" > Close </span>
+      <span class="item-left"> 	</span>
+      <span item-content  > Close </span>
       <span item-right class="item-right"> Volume </span>
     </ion-item>
 
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span  item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 456323576 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content class="item-mid"> 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span  item-content class="item-mid"> 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 456323576 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content class="item-mid"> 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content class="item-mid"> 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
+    <ion-item *ngFor ="let item of data">
+      <span > {{item.Ticker}} </span>
+      <span item-content > {{item.Close }}  <span class="unit">{{item.Currency}}</span></span>
+      <span item-right class="item-right"> {{item.Volume }} </span>
     </ion-item>
   </ion-list>
+  <!-- Phan ben duoi -->
+
   <h6 class="footer"> All share data is presented in currency of your choice.
     Configure via <a href = "">settings </a>. </h6>
 </ion-content>

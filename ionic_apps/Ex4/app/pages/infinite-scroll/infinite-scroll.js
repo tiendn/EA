@@ -23,7 +23,7 @@ export class InfiniteScrollPage {
     providerService.getData().then(function(data){
       // Save all data into this.stories variable
       self.stories = data;
-      for (self.index = 0 ; self.index < 30 ; self.index++ ){
+      for (self.index = 0 ; self.index < 3 ; self.index++ ){
         self.items.push(data[self.index]);
       }
     });

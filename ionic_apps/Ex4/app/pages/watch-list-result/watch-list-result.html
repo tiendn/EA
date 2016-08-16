@@ -1,16 +1,25 @@
-<ion-content >
-  <center>
-    <button light class="btn" > Watchlist <ion-icon name ="list"></ion-icon></button>
-    <p style="margin-bottom:5%; margin-top:1%;" >
-      <span>
-        <ion-icon  name="ios-calendar-outline" style="position: relative;"> </ion-icon>
-      </span>
-      <span >
+<ion-content class="watch-list-result">
+  <center >
+    <button light class="btn-watch" >
+      Watchlist
+      <ion-icon name ="list" style="color:black;font-size: 40px;" ></ion-icon>
+    </button>
+
+  </center>
+  <button small light class="close" (click)="closeModal()">
+    X<!-- <ion-icon name="close"> </ion-icon> -->
+  </button>
+  <div class="date-content">
+      <ion-icon name="ios-calendar-outline" style="font-size: 60px;"> </ion-icon>
+    <div class="current-date">
+      <span style="text-align:left;">
         Date
+      </span>
+      <span style="text-align:left;">
         27/02/2016
       </span>
-    </p>
-  </center>
+    </div>
+  </div>
   <!-- List results -->
   <ion-list >
     <ion-item>
@@ -19,50 +28,10 @@
       <span item-right class="item-right"> Volume </span>
     </ion-item>
 
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span  item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 456323576 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content > 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 431823 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>SHR1</b> </span>
-      <span  item-content > 101.23 <span class="unit">SEK</span></span>
-      <span item-right class="item-right"> 456323576 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content > 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
-    </ion-item>
-    <ion-item >
-      <span > <b>TICR3</b> </span>
-      <span  item-content > 7021.50 <span class="unit">INR</span></span>
-      <span item-right class="item-right"> 68789 </span>
+    <ion-item *ngFor ="let item of data">
+      <span > {{item.Ticker}} </span>
+      <span item-content > {{item.Close }}  <span class="unit">{{item.Currency}}</span></span>
+      <span item-right class="item-right"> {{item.Volume }} </span>
     </ion-item>
   </ion-list>
   <!-- Phan ben duoi -->

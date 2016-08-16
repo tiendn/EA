@@ -1,22 +1,25 @@
 import { Component } from '@angular/core';
-import {  } from 'ionic-angular';
+import {MyProvider} from '../ProviderService/ProviderService';
+import {ViewController} from 'ionic-angular';
 
-/*
-  Generated class for the WatchListResultPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
+  providers :[MyProvider],
   templateUrl: 'build/pages/watch-list-result/watch-list-result.html',
 })
 export class WatchListResultPage {
   static get parameters() {
-    return [];
+    return [[MyProvider],[ViewController]];
   }
 
-  constructor() {
-
+  constructor(provider,viewCtrl) {
+    this.viewCtrl = viewCtrl;
+    this.data = [];
+    let self = this;
+    provider.getData().then(function(stories){
+      self.data = stories;
+    });
   }
-
+  closeModal(){
+    this.viewCtrl.dismiss();
+  }
 }
