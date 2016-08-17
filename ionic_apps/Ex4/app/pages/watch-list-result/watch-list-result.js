@@ -4,7 +4,7 @@ import {ViewController} from 'ionic-angular';
 
 @Component({
   providers :[MyProvider],
-  templateUrl: 'build/pages/watch-list-result/watch-list-result.html',
+  templateUrl: 'build/pages/watch-list-result/watch-list-result.html'
 })
 export class WatchListResultPage {
   static get parameters() {

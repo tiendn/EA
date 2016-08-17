@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {NavController, ModalController,NavParams} from 'ionic-angular';
+import {NavController, ModalController} from 'ionic-angular';
 import { Platform } from 'ionic-angular';
 import {InfiniteScrollPage} from '../infinite-scroll/infinite-scroll';
 import {ScrollHorizontalPage} from '../scroll-horizontal/scroll-horizontal';
@@ -12,8 +12,7 @@ export class HomePage {
       return[
         [Platform],
         [NavController],
-        [ModalController],
-        [NavParams]
+        [ModalController]
       ];
   }
   constructor(platform,nav,modal){
