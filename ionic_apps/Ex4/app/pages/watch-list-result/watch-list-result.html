@@ -1,5 +1,6 @@
 <ion-content class="watch-list-result">
     <!-- Button watch-list- -->
+
     <center>
       <button light class="btn-watch" >
         Watchlist
@@ -17,7 +18,7 @@
         <span style="text-align:left;margin-bottom:10%;">
           Date
         </span>
-        <span style="text-align:left;">
+        <span style="text-align:left;width:auto;">
           27/02/2016
         </span>
       </div>
@@ -34,16 +35,23 @@
     <ion-list class="item-content">
       <ion-item *ngFor ="let item of data">
         <span > {{item.Ticker}} </span>
-        <span item-content > {{item.Close }}  <span class="unit">{{item.Currency}}</span></span>
+        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
       <ion-item *ngFor ="let item of data">
         <span > {{item.Ticker}} </span>
-        <span item-content > {{item.Close }}  <span class="unit">{{item.Currency}}</span></span>
+        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
     </ion-list>
   <!-- Phan ben duoi -->
-  <h6 class="footer"> All share data is presented in the currency of your choice.
-    Configure via <a href = "" style="text-decoration: none;">settings</a>. </h6>
+
+  <h6 *ngIf="isEmpty" [hidden] = !loadDone class="footer" [style.bottom]="space+'px'" >
+      All share data is presented in the currency of your choice.
+      Configure via <a href = "" style="text-decoration: none;">settings</a>.
+  </h6>
+  <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= 0 >
+      All share data is presented in the currency of your choice.
+      Configure via <a href = "" style="text-decoration: none;">settings</a>.
+  </h6>
 </ion-content>

@@ -19,6 +19,14 @@ export class HomePage {
   constructor(toastController,navController){
     this.nav = navController;
     this.toastController = toastController;
+    this.timeLeft = 2;
+    var timer = setInterval(() => {
+      if(this.timeLeft != 0) {
+        this.timeLeft -=  1;
+      } else {
+        clearInterval(timer);
+      }
+     }, 1000);
   }
   // presentToast() {
   //  let toast = this.toastController.create({

@@ -8,12 +8,16 @@
       margin-bottom: 1%;
       margin-top: 2%;
     }
+    .item-content{
+      top: 180px;
+      margin-top: 0px;
+    }
 }
 @media screen and (min-width:361px)
 and(max-width: 640px)
 {
     .footer{
-      margin-left:2.4%;
+      margin-left:4.4%;
     }
     .btn-watch{
       margin-bottom: 1%;
@@ -91,7 +95,7 @@ ion-item span,h6,ion-icon{
   position: absolute;;
   top: 189px;
   right: 0;
-  bottom: 35px;
+  bottom: 32px;
   left: 0;
   z-index: 1;
   display: block;
@@ -124,6 +128,5 @@ div .item-right{
 }
 .footer{
   position: absolute;
-  bottom: 0;
   color: #c9c9c9;
 }

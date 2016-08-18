@@ -1,7 +1,7 @@
 import {Component} from '@angular/core';
 import {NavController, ModalController} from 'ionic-angular';
 import { Platform } from 'ionic-angular';
-import {InfiniteScrollPage} from '../infinite-scroll/infinite-scroll';
+// import {InfiniteScrollPage} from '../infinite-scroll/infinite-scroll';
 import {ScrollHorizontalPage} from '../scroll-horizontal/scroll-horizontal';
 import {WatchListResultPage} from '../watch-list-result/watch-list-result';
 @Component({
@@ -33,9 +33,9 @@ export class HomePage {
   showCard(){
     this.isHide = false;
   }
-  infiniteScrollPage(){
-    this.nav.push(InfiniteScrollPage);
-  }
+  // infiniteScrollPage(){
+  //   this.nav.push(InfiniteScrollPage);
+  // }
   scrollHorizontal(){
     this.nav.push(ScrollHorizontalPage);
   }
