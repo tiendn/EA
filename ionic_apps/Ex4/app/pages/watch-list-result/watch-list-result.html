@@ -32,6 +32,7 @@
       </ion-item>
     </ion-list>
   <!-- List results -->
+  <div class="myModal">
     <ion-list class="item-content">
       <ion-item *ngFor ="let item of data">
         <span > {{item.Ticker}} </span>
@@ -42,12 +43,14 @@
     </ion-list>
   <!-- Phan ben duoi -->
 
-  <h6 *ngIf="isEmpty" [hidden] = !loadDone class="footer" [style.bottom]="space-5+'px'" >
+  <h6  [hidden] = !loadDone class="footer"  >
       All share data is presented in the currency of your choice.
       Configure via <a href = "" style="text-decoration: none;">settings</a>.
   </h6>
-  <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= 0 >
-      All share data is presented in the currency of your choice.
+  <!-- Van de la khi load lai js , html k load theo -->
+  <!-- <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= "0+'px'" >
+      FAll share data is presented in the currency of your choice.
       Configure via <a href = "" style="text-decoration: none;">settings</a>.
-  </h6>
+  </h6> -->
+</div>
 </ion-content>
