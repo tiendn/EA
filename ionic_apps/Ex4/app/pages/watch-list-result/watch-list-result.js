@@ -20,29 +20,51 @@ export class WatchListResultPage {
     this.isEmpty = false;
     this.data = [];
     this.loadDone = false;
-    let self = this;
-    var top = 189;
-    var bottom = 32;
-    var something = 23;
-    provider.getData().then(function(stories){
-      self.data = stories;
-      self.space = window.innerHeight -top-bottom-something - self.data.length*44 ;
-      if (self.space > 0 ) self.isEmpty = true;
-      // console.log(self.space);
-      // console.log(self.data.length);
-      self.loadDone = true;
-    });
-    // console.log(window.innerHeight);
-    // When rotate window
-    window.addEventListener("orientationchange", function() {
-      self.space = window.innerWidth -top-bottom-something - self.data.length*44*2 ;
-      if (self.space > 0 ) self.isEmpty = true;
-      // console.log(self.space);
-      // console.log(self.data.length);
-      self.loadDone = true;
-    }, false);
+    this.provider = provider;
+
   }
   closeModal(){
     this.viewCtrl.dismiss();
+  }
+
+  ionViewLoaded(){
+    var elm = document.getElementsByClassName("item-content")[0];
+    let self = this;
+    var top = 189;
+    var bottom = 32;
+    var something = 2 + 10;
+
+    this.provider.getData().then(function(stories){
+      console.log(window.innerHeight);
+      self.data = stories;
+      self.space = window.innerHeight -top-bottom-something - self.data.length*46 ;
+      if (self.space > 0 ) {
+        self.isEmpty = true;
+        elm.style.bottom = self.space + 40 + 'px';
+      }
+      else{
+        elm.style.bottom = 20;
+      }
+      console.log(self.space);
+      console.log(self.data.length);
+      self.loadDone = true;
+    });
+
+    // When rotate window
+    window.addEventListener("orientationchange", function() {
+      self.isEmpty = false;
+      console.log(window.innerHeight);
+      self.space = window.innerWidth -top-bottom-something - self.data.length*46 ;
+      if (self.space > 0 ) {
+        self.isEmpty = true;
+        elm.style.bottom = self.space+50;
+      }
+      else{
+        elm.style.bottom = 20;
+      }
+      console.log(self.space);
+      console.log(self.data.length);
+      self.loadDone = true;
+    }, false);
   }
 }

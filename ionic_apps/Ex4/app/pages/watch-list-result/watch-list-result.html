@@ -38,15 +38,11 @@
         <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
-      <ion-item *ngFor ="let item of data">
-        <span > {{item.Ticker}} </span>
-        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
-        <span item-right class="item-right"> {{item.Volume }} </span>
-      </ion-item>
+
     </ion-list>
   <!-- Phan ben duoi -->
 
-  <h6 *ngIf="isEmpty" [hidden] = !loadDone class="footer" [style.bottom]="space+'px'" >
+  <h6 *ngIf="isEmpty" [hidden] = !loadDone class="footer" [style.bottom]="space-5+'px'" >
       All share data is presented in the currency of your choice.
       Configure via <a href = "" style="text-decoration: none;">settings</a>.
   </h6>
