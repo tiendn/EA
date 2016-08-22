@@ -9261,8 +9261,7 @@ scroll-content {
   background-color: #484849;
   background: transparent;
   position: absolute;
-  right: 0;
-  top: 0; }
+  right: 0; }
 
 .date-content {
   width: auto;
@@ -9339,10 +9338,23 @@ div .item-right {
   text-align: right; }
 
 .div-item-content {
-  position: relative;
-  max-height: calc(100% - 50px - 190px);
-  -webkit-max-height: calc(100% - 50px - 190px);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  position: relative; }
+
+.platform-ios .div-item-content {
+  max-height: calc(100% - 50px - 210px); }
+
+.platform-ios .header {
+  margin-top: 5%; }
+
+.platform-ios .close {
+  top: 30px; }
+
+.platform-android .close {
+  top: 0px; }
+
+.platform-android .div-item-content {
+  max-height: calc(100% - 50px - 190px); }
 
 .footer {
   border-top: 1px solid #c8c7cc;

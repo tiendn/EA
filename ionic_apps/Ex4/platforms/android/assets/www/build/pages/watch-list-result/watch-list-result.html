@@ -1,6 +1,6 @@
 <ion-content class="watch-list-result">
     <!-- Button watch-list- -->
-
+    <div class="header">
     <center>
       <button light class="btn-watch" >
         Watchlist
@@ -11,6 +11,7 @@
     <button small light class="close" (click)="closeModal()">
       <ion-icon name="close"> </ion-icon>
     </button>
+  </div>
     <!-- Date content -->
     <div class="date-content">
       <ion-icon name="ios-calendar-outline" style="font-size: 60px;"> </ion-icon>
@@ -34,11 +35,6 @@
   <!-- List results -->
   <div class="div-item-content">
     <ion-list class="item-content">
-      <ion-item *ngFor ="let item of data">
-        <span > {{item.Ticker}} </span>
-        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
-        <span item-right class="item-right"> {{item.Volume }} </span>
-      </ion-item>
       <ion-item *ngFor ="let item of data">
         <span > {{item.Ticker}} </span>
         <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
