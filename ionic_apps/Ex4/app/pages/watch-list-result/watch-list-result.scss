@@ -1,34 +1,18 @@
 
-@media screen and (max-width: 360px)
+@media screen and (max-width: 640px)
 {
     .footer{
       margin-left:4.4%;
     }
-    .btn-watch{
-      margin-bottom: 1%;
-      margin-top: 2%;
-    }
-    .item-content{
-      top: 180px;
-      margin-top: 0px;
-    }
-}
-@media screen and (min-width:361px)
-and(max-width: 640px)
-{
-    .footer{
-      margin-left:4.4%;
-    }
-    .btn-watch{
-      margin-bottom: 1%;
-      margin-top: 2%;
+    scroll-content{
+      margin-top: 5%;
     }
 }
 @media screen and (min-width: 768px)
  {
-    .modal-wrapper{
-      left: 0 !important;
-      top: 0 !important;
+  .modal-wrapper{
+    left: 0 !important;
+    top: 0 !important;
   }
   scroll-content{
     margin: 0 20% 0 20%;
@@ -45,13 +29,10 @@ scroll-content{
     height: 100%;
 }
 .watch-list-result {
-
   background-color: #484849 !important;
   opacity: .9;
 }
-// scroll-content{
-//     // position: relative;
-// }
+
 .btn-watch{
   margin-top: 3%;
   background-color:#ffffff;
@@ -63,11 +44,9 @@ scroll-content{
   background: transparent;
   position: absolute;
   right: 0;
-
 }
 .date-content {
-  width: auto;
-  height: auto;
+  margin-top: 3%;
   margin-bottom: 3%;
   color:white;
   display: flex;
@@ -81,19 +60,23 @@ scroll-content{
   flex-direction:column;
   padding-left:4%;
 }
-ion-item span,h6,ion-icon{
+.current-date{
+  text-align:left;
+}
+ion-item span, h6, ion-icon{
   color:#ffffff;
 }
 .item-header-content{
   border-top: 1px solid #c8c7cc ;
   margin-bottom: 0px;
-
 }
+
 .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
   border-bottom : 1px solid #6b6b6c ;
 }
 .item-content{
   margin-bottom: 0px;
+  margin-top : 0px;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -127,7 +110,7 @@ div .item-right{
   position: relative;
 }
 .platform-ios .div-item-content{
-  max-height: calc(100% - 50px - 210px );
+  max-height: calc(100% - 270px );
 }
 .platform-ios .header{
   margin-top: 4%;
@@ -139,9 +122,13 @@ div .item-right{
   top: 0px;
 }
 .platform-android .div-item-content{
-  max-height: calc(100% - 50px - 190px );
+  max-height: calc(100% - 240px );
 }
 .footer{
+  padding-top :5px;
   border-top: 1px solid #c8c7cc;
   color: #c9c9c9;
+}
+.footer a {
+  text-decoration: none;
 }

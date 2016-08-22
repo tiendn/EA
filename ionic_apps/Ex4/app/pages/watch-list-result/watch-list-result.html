@@ -1,32 +1,30 @@
 <ion-content class="watch-list-result">
     <!-- Button watch-list- -->
-    <div class="header">
     <center>
       <button light class="btn-watch" >
-        Watchlist
-        <ion-icon name ="list" style="color:black;font-size: 40px;" ></ion-icon>
+        Watchlist &nbsp;
+        <img src = "./img/Watchlist_ViewIcon.png" height="30px;">
       </button>
     </center>
     <!-- Button close -->
     <button small light class="close" (click)="closeModal()">
       <ion-icon name="close"> </ion-icon>
     </button>
-    </d
     <!-- Date content -->
     <div class="date-content">
-      <ion-icon name="ios-calendar-outline" style="font-size: 60px;"> </ion-icon>
+      <img src = "./img/Watchlist_DateIcon.png" height="40px;">
       <div class="current-date">
-        <span style="text-align:left;margin-bottom:10%;">
+        <span style="margin-bottom:10%;">
           Date
         </span>
-        <span style="text-align:left;width:auto;white-space:nowrap;">
+        <span style="white-space:nowrap;">
           27/02/2016
         </span>
       </div>
     </div>
     <!-- Header of table -->
     <ion-list class="item-header-content">
-      <ion-item inset style="border-top: 0px; border-bottom: 0px;">
+      <ion-item style="border-top: 0px; border-bottom: 0px;">
         <span class="item-left"> 	</span>
         <span item-content  > Close </span>
         <span item-right class="item-right"> Volume </span>
@@ -40,21 +38,11 @@
         <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
-
     </ion-list>
-  <!-- Phan ben duoi -->
   </div>
-  <div >
-    <h6  [hidden] = !loadDone class="footer">
-        All share data is presented in the currency of your choice.
-        Configure via <a href = "" style="text-decoration: none;">settings</a>.
-    </h6>
-  </div>
-  <!-- Van de la khi load lai js , html k load theo -->
-  <!-- <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= "0+'px'" >
-      FAll share data is presented in the currency of your choice.
-      Configure via <a href = "" style="text-decoration: none;">settings</a>.
-  </h6> -->
-<!-- </div> -->
-
+  <!-- Footer -->
+  <h6 [hidden] = !loadDone class="footer">
+      All share data is presented in the currency of your choice.
+      Configure via <a href = "">settings</a>.
+  </h6>
 </ion-content>
