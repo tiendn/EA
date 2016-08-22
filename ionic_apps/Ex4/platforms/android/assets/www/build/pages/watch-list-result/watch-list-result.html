@@ -1,44 +1,63 @@
 <ion-content class="watch-list-result">
-  <!-- Button watch-list- -->
-  <center>
-    <button light class="btn-watch" >
-      Watchlist
-      <ion-icon name ="list" style="color:black;font-size: 40px;" ></ion-icon>
+    <!-- Button watch-list- -->
+
+    <center>
+      <button light class="btn-watch" >
+        Watchlist
+        <ion-icon name ="list" style="color:black;font-size: 40px;" ></ion-icon>
+      </button>
+    </center>
+    <!-- Button close -->
+    <button small light class="close" (click)="closeModal()">
+      <ion-icon name="close"> </ion-icon>
     </button>
-  </center>
-  <!-- Button close -->
-  <button small light class="close" (click)="closeModal()">
-    <ion-icon name="close"> </ion-icon>
-  </button>
-  <!-- Date content -->
-  <div class="date-content">
-    <ion-icon name="ios-calendar-outline" style="font-size: 60px;"> </ion-icon>
-    <div class="current-date">
+    <!-- Date content -->
+    <div class="date-content">
+      <ion-icon name="ios-calendar-outline" style="font-size: 60px;"> </ion-icon>
+      <div class="current-date">
         <span style="text-align:left;margin-bottom:10%;">
           Date
         </span>
-        <span style="text-align:left;">
+        <span style="text-align:left;width:auto;white-space:nowrap;">
           27/02/2016
         </span>
+      </div>
     </div>
-  </div>
-  <!-- Header of table -->
-  <ion-list class="item-header-content">
-    <ion-item inset style="border-top: 0px; border-bottom: 0px;">
-      <span class="item-left"> 	</span>
-      <span item-content  > Close </span>
-      <span item-right class="item-right"> Volume </span>
-    </ion-item>
-  </ion-list>
+    <!-- Header of table -->
+    <ion-list class="item-header-content">
+      <ion-item inset style="border-top: 0px; border-bottom: 0px;">
+        <span class="item-left"> 	</span>
+        <span item-content  > Close </span>
+        <span item-right class="item-right"> Volume </span>
+      </ion-item>
+    </ion-list>
   <!-- List results -->
-  <ion-list class="item-content">
-    <ion-item *ngFor ="let item of data">
-      <span > {{item.Ticker}} </span>
-      <span item-content  style="display:inline-block;"> {{item.Close }}  <span class="unit" >{{item.Currency}}</span></span>
-      <span item-right class="item-right"> {{item.Volume }} </span>
-    </ion-item>
-  </ion-list>
+  <div class="div-item-content">
+    <ion-list class="item-content">
+      <ion-item *ngFor ="let item of data">
+        <span > {{item.Ticker}} </span>
+        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
+        <span item-right class="item-right"> {{item.Volume }} </span>
+      </ion-item>
+      <ion-item *ngFor ="let item of data">
+        <span > {{item.Ticker}} </span>
+        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
+        <span item-right class="item-right"> {{item.Volume }} </span>
+      </ion-item>
+    </ion-list>
   <!-- Phan ben duoi -->
-  <h6 class="footer"> All share data is presented in the currency of your choice.
-    Configure via <a href = "" style="text-decoration: none;">settings</a>. </h6>
+  </div>
+  <div >
+    <h6  [hidden] = !loadDone class="footer">
+        All share data is presented in the currency of your choice.
+        Configure via <a href = "" style="text-decoration: none;">settings</a>.
+    </h6>
+  </div>
+  <!-- Van de la khi load lai js , html k load theo -->
+  <!-- <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= "0+'px'" >
+      FAll share data is presented in the currency of your choice.
+      Configure via <a href = "" style="text-decoration: none;">settings</a>.
+  </h6> -->
+<!-- </div> -->
+
 </ion-content>

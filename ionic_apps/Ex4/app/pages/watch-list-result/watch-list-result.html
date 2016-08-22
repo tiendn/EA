@@ -18,7 +18,7 @@
         <span style="text-align:left;margin-bottom:10%;">
           Date
         </span>
-        <span style="text-align:left;width:auto;">
+        <span style="text-align:left;width:auto;white-space:nowrap;">
           27/02/2016
         </span>
       </div>
@@ -32,25 +32,32 @@
       </ion-item>
     </ion-list>
   <!-- List results -->
-  <div class="myModal">
+  <div class="div-item-content">
     <ion-list class="item-content">
       <ion-item *ngFor ="let item of data">
         <span > {{item.Ticker}} </span>
         <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
-
+      <ion-item *ngFor ="let item of data">
+        <span > {{item.Ticker}} </span>
+        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
+        <span item-right class="item-right"> {{item.Volume }} </span>
+      </ion-item>
     </ion-list>
   <!-- Phan ben duoi -->
-
-  <h6  [hidden] = !loadDone class="footer"  >
-      All share data is presented in the currency of your choice.
-      Configure via <a href = "" style="text-decoration: none;">settings</a>.
-  </h6>
+  </div>
+  <div >
+    <h6  [hidden] = !loadDone class="footer">
+        All share data is presented in the currency of your choice.
+        Configure via <a href = "" style="text-decoration: none;">settings</a>.
+    </h6>
+  </div>
   <!-- Van de la khi load lai js , html k load theo -->
   <!-- <h6 *ngIf="!isEmpty" [hidden] = !loadDone class="footer" [style.bottom]= "0+'px'" >
       FAll share data is presented in the currency of your choice.
       Configure via <a href = "" style="text-decoration: none;">settings</a>.
   </h6> -->
-</div>
+<!-- </div> -->
+
 </ion-content>
