@@ -20,8 +20,7 @@ export class MyProvider{
   }
   getData(){
     return new Promise(resolve => {
-      // this.http.get(this.linkURL,this.httpRequestHeader).map(res => res.json())
-      this.http.get('./data.json').map(res => res.json())
+      this.http.get(this.linkURL,this.httpRequestHeader).map(res => res.json())
       .subscribe(
         data => {
           this.stories = data;
