@@ -1,0 +1,62 @@
+[
+  {
+    "InstrumentId": 16569,
+    "Name": "CBGA",
+    "Change": -13.013,
+    "ChangePro": -17.68
+  },
+  {
+    "InstrumentId": 16570,
+    "Name": "CBGB",
+    "Change": -11.197,
+    "ChangePro": -15.48
+  },
+  {
+    "InstrumentId": 32864,
+    "Name": "CARL A",
+    "Change": -83,
+    "ChangePro": -14.87
+  },
+  {
+    "InstrumentId": 32865,
+    "Name": "CARL B",
+    "Change": -92.2,
+    "ChangePro": -16.97
+  },
+  {
+    "InstrumentId": 39083,
+    "Name": "CBGA",
+    "Change": 9.05,
+    "ChangePro": 11.93
+  },
+  {
+    "InstrumentId": 39084,
+    "Name": "CBGB",
+    "Change": 4.81,
+    "ChangePro": 6.38
+  },
+  {
+    "InstrumentId": 69291,
+    "Name": "CARLAc",
+    "Change": 0,
+    "ChangePro": 0
+  },
+  {
+    "InstrumentId": 69292,
+    "Name": "CARLBc",
+    "Change": -90.9,
+    "ChangePro": -16.75
+  },
+  {
+    "InstrumentId": 71163,
+    "Name": "CARLAc",
+    "Change": 65.5,
+    "ChangePro": 11.87
+  },
+  {
+    "InstrumentId": 71164,
+    "Name": "CARLBc",
+    "Change": -90.8,
+    "ChangePro": -16.73
+  }
+]
