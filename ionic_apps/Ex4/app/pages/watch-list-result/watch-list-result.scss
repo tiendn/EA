@@ -121,7 +121,10 @@ ion-item:last-child{
 
 // Android
 .platform-android .div-item-content{
-  max-height: calc(100% - 230px );
+  max-height: calc(100% - 250px );
+}
+.platform-android .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
+  border-bottom : 1px solid #6b6b6c ;
 }
 // IOS Platform - IPhone && IPad
 .platform-ipad .div-item-content{
@@ -213,6 +216,48 @@ ion-item:last-child{
   font-size: 15px;
 }
 .platform-iphone .item-content,.platform-iphone .item-header-content span{
+  font-size: 17px ;
+}
+.platform-iphone .item-content .currency{
+  font-size: 12px;
+}
+.platform-iphone .footer{
+  font-size: 14px;
+}
+// Android
+.platform-android .btn-watch{
+  font-size: 12px;
+  font-weight: medium;
+  margin-left: calc(50% - 57.869px);
+}
+.platform-android .btn-watch img{
+  height: 20px;
+  width: 20px;
+}
+.platform-android .close {
+  margin-top: 6.35px;
+}
+.platform-android .close img{
+  height: 20px;
+  width: 20px;
+}
+.platform-android .date-content img{
+  height: 42px;
+  width: 40px;
+}
+.platform-android .item-content .item-center{
+  font-size: 15px;
+}
+.platform-android .item-content .item-right{
+  font-size: 15px;
+}
+.platform-android .item-content .item-left{
+  font-size: 15px;
+}
+.platform-android .current-date span{
+  font-size: 15px;
+}
+.platform-android .item-content,.platform-iphone .item-header-content span{
   font-size: 17px ;
 }
 .platform-iphone .item-content .currency{

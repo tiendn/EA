@@ -25,9 +25,6 @@ export class WatchListResultPage {
 
   ionViewLoaded(){
     let self = this;
-    let header = document.getElementsByClassName("header")[0];
-    let itemContent = document.getElementsByClassName(".div-item-content")[0];
-
     this.provider.getData().then(function(stories){
       self.data = stories;
       self.loadDone = true;

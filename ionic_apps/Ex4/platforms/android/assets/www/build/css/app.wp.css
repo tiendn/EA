@@ -10561,32 +10561,22 @@ ion-scroll {
 body {
   overflow: hidden; }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 640px) {
   .footer {
-    margin-left: 4.4%; }
-  .btn-watch {
-    margin-bottom: 1%;
-    margin-top: 2%; }
-  .item-content {
-    top: 180px;
-    margin-top: 0px; } }
-
-@media screen and (min-width: 361px) and (max-width: 640px) {
-  .footer {
-    margin-left: 4.4%; }
-  .btn-watch {
-    margin-bottom: 1%;
-    margin-top: 2%; } }
+    padding-left: 4.4%; }
+  scroll-content {
+    margin-top: 5%; } }
 
 @media screen and (min-width: 768px) {
   .modal-wrapper {
     left: 0 !important;
     top: 0 !important; }
   scroll-content {
-    margin: 0 20% 0 20%; } }
+    margin: 2.5% 20% 0 20%; } }
 
 ion-content {
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  font-name: Helvetica Neue; }
 
 scroll-content {
   overflow-y: hidden; }
@@ -10599,21 +10589,20 @@ scroll-content {
   background-color: #484849 !important;
   opacity: .9; }
 
+.header {
+  position: relative; }
+
 .btn-watch {
-  margin-top: 3%;
-  background-color: #ffffff;
-  text-align: center; }
+  background-color: #ffffff; }
 
 .close {
   color: white;
   background-color: #484849;
   background: transparent;
-  position: absolute;
-  right: 0; }
+  float: right; }
 
 .date-content {
-  width: auto;
-  height: auto;
+  margin-top: 3%;
   margin-bottom: 3%;
   color: white;
   display: -webkit-box;
@@ -10647,6 +10636,9 @@ scroll-content {
   flex-direction: column;
   padding-left: 4%; }
 
+.current-date {
+  text-align: left; }
+
 ion-item span, h6, ion-icon {
   color: #ffffff; }
 
@@ -10654,11 +10646,9 @@ ion-item span, h6, ion-icon {
   border-top: 1px solid #c8c7cc;
   margin-bottom: 0px; }
 
-.item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-  border-bottom: 1px solid #6b6b6c; }
-
 .item-content {
   margin-bottom: 0px;
+  margin-top: 0px;
   -webkit-overflow-scrolling: touch; }
 
 .item-content > .item:first-child {
@@ -10678,10 +10668,7 @@ ion-item {
 ion-item:last-child {
   border-bottom: 1px solid #c8c7cc; }
 
-span .unit {
-  font-size: 11px; }
-
-div .item-right {
+.item-right {
   width: 37%;
   text-align: right; }
 
@@ -10689,21 +10676,152 @@ div .item-right {
   overflow-y: scroll;
   position: relative; }
 
-.platform-ios .div-item-content {
-  max-height: calc(100% - 50px - 210px); }
-
-.platform-ios .header {
-  margin-top: 5%; }
-
-.platform-ios .close {
-  top: 30px; }
-
-.platform-android .close {
-  top: 0px; }
-
-.platform-android .div-item-content {
-  max-height: calc(100% - 50px - 190px); }
-
 .footer {
+  margin-top: 0;
+  padding-top: 5%;
   border-top: 1px solid #c8c7cc;
   color: #c9c9c9; }
+
+.footer a {
+  text-decoration: none; }
+
+.platform-android .div-item-content {
+  max-height: calc(100% - 250px); }
+
+.platform-android .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c; }
+
+.platform-ipad .div-item-content {
+  max-height: calc(100% - 290px); }
+
+.platform-iphone .div-item-content {
+  max-height: calc(100% - 9% - 181px); }
+
+.platform-iphone .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c; }
+
+.platform-ipad .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 1px solid #6b6b6c; }
+
+.platform-ipad .btn-watch {
+  font-size: 17px;
+  font-weight: medium;
+  margin-left: calc(50% - 71.735px); }
+
+.platform-ipad .btn-watch img {
+  height: 29px;
+  width: 29px; }
+
+.platform-ipad .close {
+  margin-top: 13.35px; }
+
+.platform-ipad .close img {
+  height: 25px;
+  width: 25px; }
+
+.platform-ipad .date-content img {
+  height: 64px;
+  width: 61px; }
+
+.platform-ipad .item-content .item-center {
+  font-size: 15px; }
+
+.platform-ipad .item-content .item-right {
+  font-size: 17px; }
+
+.platform-ipad .item-content .item-left {
+  font-size: 20px; }
+
+.platform-ipad .current-date span {
+  font-size: 24px; }
+
+.platform-ipad .item-content, .platform-ipad .item-header-content span {
+  font-size: 20px; }
+
+.platform-ipad .item-content .currency {
+  font-size: 13px; }
+
+.platform-ipad .footer {
+  font-size: 13px; }
+
+.platform-iphone .btn-watch {
+  font-size: 12px;
+  font-weight: medium;
+  margin-left: calc(50% - 51.915px); }
+
+.platform-iphone .btn-watch img {
+  height: 20px;
+  width: 20px; }
+
+.platform-iphone .close {
+  margin-top: 6.35px; }
+
+.platform-iphone .close img {
+  height: 20px;
+  width: 20px; }
+
+.platform-iphone .date-content img {
+  height: 42px;
+  width: 40px; }
+
+.platform-iphone .item-content .item-center {
+  font-size: 15px; }
+
+.platform-iphone .item-content .item-right {
+  font-size: 15px; }
+
+.platform-iphone .item-content .item-left {
+  font-size: 15px; }
+
+.platform-iphone .current-date span {
+  font-size: 15px; }
+
+.platform-iphone .item-content, .platform-iphone .item-header-content span {
+  font-size: 17px; }
+
+.platform-iphone .item-content .currency {
+  font-size: 12px; }
+
+.platform-iphone .footer {
+  font-size: 14px; }
+
+.platform-android .btn-watch {
+  font-size: 12px;
+  font-weight: medium;
+  margin-left: calc(50% - 57.869px); }
+
+.platform-android .btn-watch img {
+  height: 20px;
+  width: 20px; }
+
+.platform-android .close {
+  margin-top: 6.35px; }
+
+.platform-android .close img {
+  height: 20px;
+  width: 20px; }
+
+.platform-android .date-content img {
+  height: 42px;
+  width: 40px; }
+
+.platform-android .item-content .item-center {
+  font-size: 15px; }
+
+.platform-android .item-content .item-right {
+  font-size: 15px; }
+
+.platform-android .item-content .item-left {
+  font-size: 15px; }
+
+.platform-android .current-date span {
+  font-size: 15px; }
+
+.platform-android .item-content, .platform-iphone .item-header-content span {
+  font-size: 17px; }
+
+.platform-iphone .item-content .currency {
+  font-size: 12px; }
+
+.platform-iphone .footer {
+  font-size: 14px; }
