@@ -15,7 +15,7 @@
     top: 0 !important;
   }
   scroll-content{
-    margin: 0 20% 0 20%;
+    margin: 5% 20% 0 20%;
   }
 }
 ion-content{
@@ -28,22 +28,24 @@ scroll-content{
     width: 100%;
     height: 100%;
 }
+
 .watch-list-result {
   background-color: #484849 !important;
   opacity: .9;
 }
-
+.header{
+  position: relative;
+}
 .btn-watch{
-  margin-top: 3%;
   background-color:#ffffff;
-  text-align: center;
+  margin-left: calc(50% - 60px);
 }
 .close{
   color:white;
   background-color:#484849;
   background: transparent;
-  position: absolute;
-  right: 0;
+  float:right;
+  margin-top: 11.5px;
 }
 .date-content {
   margin-top: 3%;
@@ -111,15 +113,6 @@ div .item-right{
 }
 .platform-ios .div-item-content{
   max-height: calc(100% - 270px );
-}
-.platform-ios .header{
-  margin-top: 4%;
-}
-.platform-ios .close{
-  top: 30px;
-}
-.platform-android .close{
-  top: 0px;
 }
 .platform-android .div-item-content{
   max-height: calc(100% - 240px );
