@@ -3,16 +3,16 @@
   <div class="header">
     <button light class="btn-watch" >
       Watchlist &nbsp;
-      <img src = "./img/Watchlist_ViewIcon.png" height="30px;">
+      <img src = "./img/Watchlist_ViewIcon.png" >
     </button>
     <!-- Button close -->
     <button small light class="close" (click)="closeModal()">
-      <ion-icon name="close"> </ion-icon>
+      <img src = "./img/Fill 1.png" >
     </button>
   </div>
     <!-- Date content -->
     <div class="date-content">
-      <img src = "./img/Watchlist_DateIcon.png" height="40px;">
+      <img src = "./img/Watchlist_DateIcon.png" >
       <div class="current-date">
         <span style="margin-bottom:10%;">
           Date
@@ -34,8 +34,8 @@
   <div class="div-item-content">
     <ion-list class="item-content">
       <ion-item *ngFor ="let item of data">
-        <span > {{item.Ticker}} </span>
-        <span item-content> <span>{{item.Close }} </span> <span class="unit">{{item.Currency}}</span></span>
+        <span class="item-left"> {{item.Ticker}} </span>
+        <span item-content class="item-center"> <span>{{item.Close }} </span> <span class="currency">{{item.Currency}}</span></span>
         <span item-right class="item-right"> {{item.Volume }} </span>
       </ion-item>
     </ion-list>
