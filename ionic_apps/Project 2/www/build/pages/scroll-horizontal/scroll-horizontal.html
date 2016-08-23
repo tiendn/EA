@@ -1,0 +1,25 @@
+<!--
+  Generated template for the ScrollHorizontalPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar favorite>
+    <ion-title>Scroll Horizontal</ion-title>
+  </ion-navbar>
+    <ion-scroll scrollX="true"  >
+      <button (click)="active(1)" class="button button-clear {{currentId == 1 ? 'btn-active' : ''}}"> Aaaaa </button>
+      <button (click)="active(2)" class="button button-clear {{currentId == 2 ? 'btn-active' : ''}}"> Bbbbb </button>
+      <button (click)="active(3)" class="button button-clear {{currentId == 3 ? 'btn-active' : ''}}"> Ccccc </button>
+      <button (click)="active(4)" class="button button-clear {{currentId == 4 ? 'btn-active' : ''}}"> Ddddd </button>
+      <button (click)="active(5)" class="button button-clear {{currentId == 5 ? 'btn-active' : ''}}"> Fffff </button>
+      <button (click)="active(6)" class="button button-clear {{currentId == 6 ? 'btn-active' : ''}}"> Ggggg </button>
+      <button (click)="active(7)" class="button button-clear {{currentId == 7 ? 'btn-active' : ''}}"> Hhhhh </button>
+    </ion-scroll>
+</ion-header>
+
+<ion-content padding>
+
+</ion-content>
