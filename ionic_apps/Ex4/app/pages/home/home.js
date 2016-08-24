@@ -1,8 +1,6 @@
 import {Component} from '@angular/core';
 import {NavController, ModalController} from 'ionic-angular';
 import { Platform } from 'ionic-angular';
-// import {InfiniteScrollPage} from '../infinite-scroll/infinite-scroll';
-import {ScrollHorizontalPage} from '../scroll-horizontal/scroll-horizontal';
 import {WatchListResultPage} from '../watch-list-result/watch-list-result';
 @Component({
   templateUrl: 'build/pages/home/home.html',

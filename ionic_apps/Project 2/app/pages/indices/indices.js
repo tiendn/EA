@@ -1,21 +1,30 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { ViewController } from 'ionic-angular';
+import {IndicesProvider} from '../ProviderService/ProviderService';
 
-/*
-  Generated class for the IndicesPage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
+  Providers: [IndicesProvider],
   templateUrl: 'build/pages/indices/indices.html',
 })
 export class IndicesPage {
   static get parameters() {
-    return [[NavController]];
+    return [
+      [ViewController],
+      [IndicesProvider]
+    ];
   }
 
-  constructor(nav) {
-    this.nav = nav;
+  constructor(viewCtrl,provider) {
+    this.viewCtrl = viewCtrl;
+    this.provider = provider;
+  }
+  ionViewLoaded(){
+    let self = this;
+    this.provider.getIndicesData().then(stories => {
+      self.data = stories;
+    });
+  };
+  dismiss(){
+    this.viewCtrl.dismiss();
   }
 }

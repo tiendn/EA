@@ -1,3 +1,124 @@
 .indices {
+  .watch-list-modal{
+    opacity: 0.98;
+    background-color: #484849;
+    // background: transparent;
+  }
+  ion-content{
+    overflow-y: hidden;
+    font-name: Helvetica Neue;
+  }
+  scroll-content{
+    overflow-y: hidden;
+  }
+  .header{
+    margin-top: 25px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .btn-header-watch{
+    background-color: white;
+    color: black;
+  }
+  .btn-header-close{
+    float:right;
+    opacity: 0.98;
+    background-color: #484849;
+    background: transparent;
+    margin:0;
+  }
+  .div-date-content{
+    margin-bottom: 150px;
+  }
+  .last-date-content{
+    margin-left: 16px;
+    float: left;
+  }
+  .current-date-content{
+    margin-right: 16px;
+    float: right;
+  }
+  .flex-date{
+    color: white;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .date-info{
+    display: flex;
+    flex-direction: column;
+    white-space:nowrap;
+  }
+  .date-info span:first-child{
+    margin-bottom: 8px;
+  }
+  .date-left{
+      padding-left: 8%;
+  }
+  .date-right{
+    padding-right: 8%;
+  }
+
+  .div-item-content{
+    overflow-y: scroll;
+    position: relative;
+  }
+  .item-header-content{
+    // border-top: 1px solid #c8c7cc ;
+    // margin-bottom : 1px;
+  }
+  .item-header-content .item:last-child {
+    border-bottom : 0px;
+  }
+
+  ion-list {
+    margin-top: 0px;
+    margin-bottom : 0px;
+  }
+  ion-item {
+    background: transparent;
+    background-color: #484849 !important;
+    opacity: .9;
+    color: white;
+  }
+  ion-list .item .item-inner{
+    border-bottom : 1px solid #6b6b6c ;
+  }
+  .item-content .item:first-child{
+    border-top: 0px ;
+  }
+  .item-content .item:last-child{
+    border-bottom:  0px;
+  }
+  .item-right{
+    width: 37%;
+    text-align: right;
+  }
+  .item-right div{
+    display: flex;
+    float: right;
+    align-items: center;
+    text-align : center;
+    justify-content: center;
+    width: 80px;
+    border-radius:5px;
+    height: 35px;
+  }
+  .up{
+    background-color: #43a047;
+  }
+  .down{
+    background-color: #ff3a2d;
+  }
+  .footer{
+    margin-top: 0;
+    padding-top :3%;
+    border-top: 1px solid #c8c7cc;
+    color: #c9c9c9;
+  }
+  .footer a {
+    text-decoration: none;
+  }
 
 }

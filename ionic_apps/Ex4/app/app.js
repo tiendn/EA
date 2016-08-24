@@ -2,7 +2,6 @@ import {Component} from "@angular/core";
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
-import {TestPage} from './pages/test/test';
 @Component({
   templateUrl: 'build/app.html'
 })

@@ -2,7 +2,7 @@ import {Http} from "@angular/http";
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class MyProvider{
+export class WatchlistProvider{
   static get parameters(){
     return [
       [Http]
@@ -11,16 +11,27 @@ export class MyProvider{
   constructor(http){
     var stories = [];
     this.http = http;
-    this.linkURL = 'http://10.10.15.8/myirappapi2/api/v1/historicalprice/watchlist/52434/20150303/DKK';
-    this.httpRequestHeader = {
-            headers: {
-                'Authorization': "Basic bm9ybWFsdXNlcjpwNmVqYVByRQ=="
-            }
-        };
-  }
-  getData(){
+
+  };
+  getWatchListData(){
     return new Promise(resolve => {
-      this.http.get(this.linkURL,this.httpRequestHeader).map(res => res.json())
+      this.http.get('../watchlist.json')
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          this.stories = data;
+          resolve(this.stories);
+        },
+        err => {
+          alert("Oops! St bad happened.");
+        }
+      );
+    });
+  }
+  getIndicesData(){
+    return new Promise(resolve => {
+      this.http.get('../indices.json')
+      .map(res => res.json())
       .subscribe(
         data => {
           this.stories = data;
