@@ -11063,6 +11063,142 @@ body {
 .watch-list-page .footer a {
   text-decoration: none; }
 
+.indices .watch-list-modal {
+  opacity: 0.98;
+  background-color: #484849; }
+
+.indices ion-content {
+  overflow-y: hidden;
+  font-name: Helvetica Neue; }
+
+.indices scroll-content {
+  overflow-y: hidden; }
+
+.indices .header {
+  margin-top: 25px;
+  position: relative;
+  margin-bottom: 30px; }
+
+.indices .btn-header-watch {
+  background-color: white;
+  color: black; }
+
+.indices .btn-header-close {
+  float: right;
+  opacity: 0.98;
+  background-color: #484849;
+  background: transparent;
+  margin: 0; }
+
+.indices .div-date-content {
+  margin-bottom: 150px; }
+
+.indices .last-date-content {
+  margin-left: 16px;
+  float: left; }
+
+.indices .current-date-content {
+  margin-right: 16px;
+  float: right; }
+
+.indices .flex-date {
+  color: white;
+  height: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
+
+.indices .date-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap; }
+
+.indices .date-info span:first-child {
+  margin-bottom: 8px; }
+
+.indices .date-left {
+  padding-left: 8%; }
+
+.indices .date-right {
+  padding-right: 8%; }
+
+.indices .div-item-content {
+  overflow-y: scroll;
+  position: relative; }
+
+.indices .item-header-content .item:last-child {
+  border-bottom: 0px; }
+
+.indices ion-list {
+  margin-top: 0px;
+  margin-bottom: 0px; }
+
+.indices ion-item {
+  background: transparent;
+  background-color: #484849 !important;
+  opacity: .9;
+  color: white; }
+
+.indices ion-list .item .item-inner {
+  border-bottom: 1px solid #6b6b6c; }
+
+.indices .item-content .item:first-child {
+  border-top: 0px; }
+
+.indices .item-content .item:last-child {
+  border-bottom: 0px; }
+
+.indices .item-right {
+  width: 37%;
+  text-align: right; }
+
+.indices .item-right div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 80px;
+  border-radius: 5px;
+  height: 35px; }
+
+.indices .up {
+  background-color: #43a047; }
+
+.indices .down {
+  background-color: #ff3a2d; }
+
+.indices .footer {
+  margin-top: 0;
+  padding-top: 3%;
+  border-top: 1px solid #c8c7cc;
+  color: #c9c9c9; }
+
+.indices .footer a {
+  text-decoration: none; }
+
 .watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c; }
 

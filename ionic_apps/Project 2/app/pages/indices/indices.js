@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
-import {IndicesProvider} from '../ProviderService/ProviderService';
+import {MyProvider} from '../ProviderService/ProviderService';
 
 @Component({
-  Providers: [IndicesProvider],
+  providers: [MyProvider],
   templateUrl: 'build/pages/indices/indices.html',
 })
 export class IndicesPage {
   static get parameters() {
     return [
       [ViewController],
-      [IndicesProvider]
+      [MyProvider]
     ];
   }
 

@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { ViewController } from 'ionic-angular';
-import {WatchlistProvider} from '../ProviderService/ProviderService';
+import {MyProvider} from '../ProviderService/ProviderService';
 @Component({
-  providers : [WatchlistProvider],
+  providers : [MyProvider],
   templateUrl: 'build/pages/watch-list/watch-list.html',
 })
 export class WatchListPage {
 
   static get parameters(){
     return [
-      [WatchlistProvider],
+      [MyProvider],
       [ViewController]
     ]
   }
-  constructor(WatchlistProvider,viewCtrl) {
+  constructor(provider,viewCtrl) {
     this.viewCtrl = viewCtrl;
-    this.provider = WatchlistProvider ;
+    this.provider = provider ;
     this.data = [];
     this.loadDone = false;
 

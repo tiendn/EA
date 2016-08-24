@@ -2,7 +2,7 @@ import {Http} from "@angular/http";
 import {Injectable} from '@angular/core';
 
 @Injectable()
-export class WatchlistProvider{
+export class MyProvider{
   static get parameters(){
     return [
       [Http]
@@ -11,7 +11,6 @@ export class WatchlistProvider{
   constructor(http){
     var stories = [];
     this.http = http;
-
   };
   getWatchListData(){
     return new Promise(resolve => {
