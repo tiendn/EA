@@ -1,7 +1,8 @@
 import {Component} from '@angular/core';
 import {NavController, ModalController} from 'ionic-angular';
-import {WatchListPage} from '../watch-list/watch-list';
-import{IndicesPage} from '../indices/indices';
+import {WatchListPage} from '../watch-list/watch-list-Investment-Calculator/watch-list';
+import{IndicesPage} from '../indices/Indices-Investment-Calculator/indices';
+import {WatchListShareGraphChartsPage} from '../watch-list/watch-list-share-graph-charts/watch-list-share-graph-charts';
 @Component({
   templateUrl: 'build/pages/home/home.html',
 })
@@ -18,7 +19,7 @@ export class HomePage {
 
   }
   openWatchList(){
-    let watchListModal = this.modalCtrl.create(WatchListPage);
+    let watchListModal = this.modalCtrl.create(WatchListShareGraphChartsPage);
     watchListModal.present();
   }
   openIndices(){
