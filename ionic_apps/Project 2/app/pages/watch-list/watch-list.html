@@ -2,7 +2,7 @@
   <!-- header -->
   <div class= "header">
     <button class="btn-header-watch">
-      Watchlist &nbsp;
+      {{HTMLContent[0]}} &nbsp;
       <img src="./img/Watchlist_ViewIcon.png">
     </button>
     <button class="btn-header-close" (click)="dismiss()">
@@ -12,33 +12,35 @@
   <!-- Date information -->
   <div class ="div-date-content">
     <div class="last-date-content flex-date">
-      <img src="../img/DateFrom.png">
+      <img src="./img/DateFrom.png">
       <div class="date-info date-left">
         <span>  <!-- fix dong tu` -->
-          From
+          {{HTMLContent[1]}}
         </span>
         <span>
-          02/04/2015
+          {{lastDate}}
         </span>
       </div>
     </div>
     <div class="current-date-content flex-date">
       <div class="date-info date-right">
-        <span style="text-align: right;">
-          To
-        </span>
         <span>
-          02/04/2016
+          {{HTMLContent[2]}}
+        </span>
+        <span >
+          {{currentDate}}
         </span>
       </div>
-      <img src="../img/DateTo.png">
+      <div class="img-right">
+        <img src="./img/DateTo.png">
+      </div>
     </div>
   </div>
   <!-- Data Content -->
   <ion-list class="item-header-content" >
     <ion-item >
-      <span item-content class="item-center"> Change </span>
-      <span item-right class="item-right"> Change % </span>
+      <span item-content class="item-center"> {{HTMLContent[3]}} </span>
+      <span item-right class="item-right"> {{HTMLContent[4]}} </span>
     </ion-item>
   </ion-list>
   <div class="div-item-content">
@@ -57,39 +59,20 @@
             {{item.Currency}}
           </span>
         </span>
-        <div *ngIf = "item.ChangePro <= 0"  item-right class="item-right">
+        <div *ngIf = "item.ChangePro < 0"  item-right class="item-right">
           <div class="down"> {{item.ChangePro}}% </div>
         </div>
         <div *ngIf = "item.ChangePro > 0"  item-right class="item-right">
           <div class="up">+{{item.ChangePro}}%</div>
         </div>
-      </ion-item>
-      <ion-item *ngFor = "let item of data">
-        <span class ="item-left"> {{item.Name}} </span>
-        <span *ngIf = "item.Change <= 0" item-content class="item-center" >
-          {{item.Change}}
-          <span class="currency">
-            {{item.Currency}}
-          </span>
-        </span>
-        <span *ngIf = "item.Change > 0" item-content class="item-center" >
-          +{{item.Change}}
-          <span class="currency">
-            {{item.Currency}}
-          </span>
-        </span>
-        <div *ngIf = "item.ChangePro <= 0"  item-right class="item-right">
-          <div class="down"> {{item.ChangePro}}% </div>
-        </div>
-        <div *ngIf = "item.ChangePro > 0"  item-right class="item-right">
-          <div class="up">+{{item.ChangePro}}%</div>
+        <div *ngIf = "item.ChangePro == 0"  item-right class="item-right">
+          <div class="up">{{item.ChangePro}}%</div>
         </div>
       </ion-item>
     </ion-list>
   </div>
   <!-- Footer -->
   <h6 [hidden] = !loadDone class="footer">
-    All share data is presented in the currency of your choice.
-    Configure via <a href = "">settings</a>.
+    {{HTMLContent[5]}} <a href = "">{{HTMLContent[6]}}</a>.
   </h6>
 </ion-content>

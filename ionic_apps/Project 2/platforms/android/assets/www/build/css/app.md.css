@@ -10955,7 +10955,7 @@ body {
   margin: 0; }
 
 .watch-list-page .div-date-content {
-  margin-bottom: 150px; }
+  margin-bottom: 100px; }
 
 .watch-list-page .last-date-content {
   margin-left: 16px;
@@ -10994,17 +10994,17 @@ body {
   margin-bottom: 8px; }
 
 .watch-list-page .date-left {
-  padding-left: 8%; }
+  padding-left: 20px; }
 
-.watch-list-page .date-right {
-  padding-right: 8%; }
+.watch-list-page .img-right {
+  margin-left: 20px; }
+
+.watch-list-page .date-right span {
+  text-align: right; }
 
 .watch-list-page .div-item-content {
   overflow-y: scroll;
   position: relative; }
-
-.watch-list-page .item-header-content .item:last-child {
-  border-bottom: 0px; }
 
 .watch-list-page ion-list {
   margin-top: 0px;
@@ -11019,11 +11019,17 @@ body {
 .watch-list-page ion-list .item .item-inner {
   border-bottom: 1px solid #6b6b6c; }
 
+.watch-list-page .item-content {
+  margin-bottom: 1px; }
+
 .watch-list-page .item-content .item:first-child {
   border-top: 0px; }
 
-.watch-list-page .item-content .item:last-child {
+.watch-list-page .item-content .item:last-child .item-inner {
   border-bottom: 0px; }
+
+.watch-list-page ion-list > .item:last-child {
+  border-bottom: 0px !important; }
 
 .watch-list-page .item-right {
   width: 37%;
@@ -11049,13 +11055,13 @@ body {
   height: 35px; }
 
 .watch-list-page .up {
-  background-color: #43a047; }
+  background-color: #43A047; }
 
 .watch-list-page .down {
-  background-color: #ff3a2d; }
+  background-color: #FF3A2D; }
 
 .watch-list-page .footer {
-  margin-top: 0;
+  margin-top: 1px;
   padding-top: 3%;
   border-top: 1px solid #c8c7cc;
   color: #c9c9c9; }
@@ -11063,45 +11069,45 @@ body {
 .watch-list-page .footer a {
   text-decoration: none; }
 
-.indices .watch-list-modal {
+.indices-page .indices-list-modal {
   opacity: 0.98;
   background-color: #484849; }
 
-.indices ion-content {
+.indices-page ion-content {
   overflow-y: hidden;
   font-name: Helvetica Neue; }
 
-.indices scroll-content {
+.indices-page scroll-content {
   overflow-y: hidden; }
 
-.indices .header {
+.indices-page .header {
   margin-top: 25px;
   position: relative;
   margin-bottom: 30px; }
 
-.indices .btn-header-watch {
+.indices-page .btn-header-watch {
   background-color: white;
   color: black; }
 
-.indices .btn-header-close {
+.indices-page .btn-header-close {
   float: right;
   opacity: 0.98;
   background-color: #484849;
   background: transparent;
   margin: 0; }
 
-.indices .div-date-content {
-  margin-bottom: 150px; }
+.indices-page .div-date-content {
+  margin-bottom: 100px; }
 
-.indices .last-date-content {
+.indices-page .last-date-content {
   margin-left: 16px;
   float: left; }
 
-.indices .current-date-content {
+.indices-page .current-date-content {
   margin-right: 16px;
   float: right; }
 
-.indices .flex-date {
+.indices-page .flex-date {
   color: white;
   height: auto;
   display: -webkit-box;
@@ -11114,7 +11120,7 @@ body {
   -ms-flex-direction: row;
   flex-direction: row; }
 
-.indices .date-info {
+.indices-page .date-info {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11126,46 +11132,52 @@ body {
   flex-direction: column;
   white-space: nowrap; }
 
-.indices .date-info span:first-child {
+.indices-page .date-info span:first-child {
   margin-bottom: 8px; }
 
-.indices .date-left {
-  padding-left: 8%; }
+.indices-page .date-left {
+  padding-left: 20px; }
 
-.indices .date-right {
-  padding-right: 8%; }
+.indices-page .img-right {
+  margin-left: 20px; }
 
-.indices .div-item-content {
+.indices-page .date-right span {
+  text-align: right; }
+
+.indices-page .div-item-content {
   overflow-y: scroll;
   position: relative; }
 
-.indices .item-header-content .item:last-child {
+.indices-page .item-header-content .item:last-child {
   border-bottom: 0px; }
 
-.indices ion-list {
+.indices-page ion-list {
   margin-top: 0px;
   margin-bottom: 0px; }
 
-.indices ion-item {
+.indices-page ion-item {
   background: transparent;
   background-color: #484849 !important;
   opacity: .9;
   color: white; }
 
-.indices ion-list .item .item-inner {
+.indices-page ion-list .item .item-inner {
   border-bottom: 1px solid #6b6b6c; }
 
-.indices .item-content .item:first-child {
+.indices-page .item-content .item:first-child {
   border-top: 0px; }
 
-.indices .item-content .item:last-child {
+.indices-page .item-content .item:last-child .item-inner {
   border-bottom: 0px; }
 
-.indices .item-right {
+.indices-page ion-list > .item:last-child {
+  border-bottom: 0px !important; }
+
+.indices-page .item-right {
   width: 37%;
   text-align: right; }
 
-.indices .item-right div {
+.indices-page .item-right div {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -11184,108 +11196,162 @@ body {
   border-radius: 5px;
   height: 35px; }
 
-.indices .up {
+.indices-page .up {
   background-color: #43a047; }
 
-.indices .down {
+.indices-page .down {
   background-color: #ff3a2d; }
 
-.indices .footer {
-  margin-top: 0;
-  padding-top: 3%;
-  border-top: 1px solid #c8c7cc;
-  color: #c9c9c9; }
+.indices-page .footer {
+  margin-top: 1px;
+  border-top: 1px solid #c8c7cc; }
 
-.indices .footer a {
-  text-decoration: none; }
-
-.watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner {
+.platform-android .watch-list-page .item-header-content > .item:last-child .item-inner, .platform-android .watch-list-page ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c; }
 
-.watch-list-page .div-item-content {
-  max-height: calc(100% - 9% - 198.25px); }
+.platform-android .watch-list-page .platform-android .item-content > .item:last-child {
+  border-bottom: 0px; }
 
-.watch-list-page .btn-header-watch {
+.platform-android .watch-list-page ion-list > .item:last-child {
+  border-bottom: 0px; }
+
+.platform-android .watch-list-page .div-item-content {
+  max-height: calc(100% - 9% - 267px); }
+
+.platform-android .watch-list-page .btn-header-watch {
   font-size: 12px;
   font-weight: medium;
   margin-left: calc(50% - 43.5px); }
 
-.watch-list-page .btn-header-watch img {
+.platform-android .watch-list-page .btn-header-watch img {
   height: 20px;
   width: 20px; }
 
-.watch-list-page .btn-header-close img {
+.platform-android .watch-list-page .btn-header-close img {
   height: 20px;
   width: 20px; }
 
-.watch-list-page .flex-date img {
+.platform-android .watch-list-page .flex-date img {
   height: 40px;
   width: 40px; }
 
-.watch-list-page .item-content .item-center {
+.platform-android .watch-list-page .item-content .item-center {
   font-size: 15px; }
 
-.watch-list-page .item-content .item-right {
+.platform-android .watch-list-page .item-content .item-right {
   font-size: 15px; }
 
-.watch-list-page .item-content .item-left {
+.platform-android .watch-list-page .item-content .item-left {
   font-size: 15px; }
 
-.watch-list-page .date-info span {
+.platform-android .watch-list-page .date-info span {
   font-size: 15px; }
 
-.watch-list-page .item-content, .watch-list-page .item-header-content span {
+.platform-android .watch-list-page .item-content, .platform-android .watch-list-page .item-header-content span {
   font-size: 17px; }
 
-.watch-list-page .item-content .currency {
+.platform-android .watch-list-page .item-content .currency {
   font-size: 12px; }
 
-.watch-list-page .footer {
+.platform-android .watch-list-page .footer {
+  margin-top: 1px;
   padding-left: 16px;
   font-size: 14px; }
 
-.watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner {
+.platform-android .indices-page .item-header-content > .item:last-child .item-inner, .platform-android .indices-page ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c; }
 
-.watch-list-page .div-item-content {
-  max-height: calc(100% - 9% - 198.25px); }
+.platform-android .indices-page .platform-android .item-content > .item:last-child {
+  border-bottom: 0px; }
 
-.watch-list-page .btn-header-watch {
+.platform-android .indices-page ion-list > .item:last-child {
+  border-bottom: 0px; }
+
+.platform-android .indices-page .div-item-content {
+  max-height: calc(100% - 9% - 267px); }
+
+.platform-android .indices-page .btn-header-watch {
   font-size: 12px;
   font-weight: medium;
   margin-left: calc(50% - 43.5px); }
 
-.watch-list-page .btn-header-watch img {
+.platform-android .indices-page .btn-header-watch img {
   height: 20px;
   width: 20px; }
 
-.watch-list-page .btn-header-close img {
+.platform-android .indices-page .btn-header-close img {
   height: 20px;
   width: 20px; }
 
-.watch-list-page .flex-date img {
+.platform-android .indices-page .flex-date img {
   height: 40px;
   width: 40px; }
 
-.watch-list-page .item-content .item-center {
+.platform-android .indices-page .item-content .item-center {
   font-size: 15px; }
 
-.watch-list-page .item-content .item-right {
+.platform-android .indices-page .item-content .item-right {
   font-size: 15px; }
 
-.watch-list-page .item-content .item-left {
+.platform-android .indices-page .item-content .item-left {
   font-size: 15px; }
 
-.watch-list-page .date-info span {
+.platform-android .indices-page .date-info span {
   font-size: 15px; }
 
-.watch-list-page .item-content, .watch-list-page .item-header-content span {
+.platform-android .indices-page .item-content, .platform-android .indices-page .item-header-content span {
   font-size: 17px; }
 
-.watch-list-page .item-content .currency {
+.platform-android .indices-page .item-content .currency {
   font-size: 12px; }
 
-.watch-list-page .footer {
+.platform-android .indices-page .footer {
+  margin-top: 1px;
+  padding-left: 16px;
+  font-size: 14px; }
+
+.watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner, .indices-page .item-header-content > .item:last-child .item-inner, .indices-page ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c; }
+
+.watch-list-page .div-item-content, .indices-page .div-item-content {
+  max-height: calc(100% - 15px - 267px); }
+
+.watch-list-page .btn-header-watch, .indices-page .btn-header-watch {
+  font-size: 12px;
+  font-weight: medium;
+  margin-left: calc(50% - 43.5px); }
+
+.watch-list-page .btn-header-watch img, .indices-page .btn-header-watch img {
+  height: 20px;
+  width: 20px; }
+
+.watch-list-page .btn-header-close img, .indices-page .btn-header-close img {
+  height: 20px;
+  width: 20px; }
+
+.watch-list-page .flex-date img, .indices-page .flex-date img {
+  height: 40px;
+  width: 40px; }
+
+.watch-list-page .item-content .item-center, .indices-page .item-content .item-center {
+  font-size: 15px; }
+
+.watch-list-page .item-content .item-right, .indices-page .item-content .item-right {
+  font-size: 15px; }
+
+.watch-list-page .item-content .item-left, .indices-page .item-content .item-left {
+  font-size: 15px; }
+
+.watch-list-page .date-info span, .indices-page .date-info span {
+  font-size: 15px; }
+
+.watch-list-page .item-content, .watch-list-page .item-header-content span, .indices-page .item-content, .indices-page .item-header-content span {
+  font-size: 17px; }
+
+.watch-list-page .item-content .currency, .indices-page .item-content .currency {
+  font-size: 12px; }
+
+.watch-list-page .footer, .indices-page .footer {
   padding-left: 16px;
   font-size: 14px; }
 
@@ -11296,36 +11362,38 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
-  .watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner {
+  .watch-list-page .item-header-content > .item:last-child .item-inner, .watch-list-page ion-list > .item-wrapper:last-child .item-inner, .indices-page .item-header-content > .item:last-child .item-inner, .indices-page ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 1px solid #6b6b6c; }
-  .watch-list-page .div-item-content {
-    max-height: calc(100% - 10% - 281px); }
-  .watch-list-page scroll-content {
+  .watch-list-page .div-item-content, .indices-page .div-item-content {
+    max-height: calc(100% - 15% - 281px); }
+  .watch-list-page scroll-content, .indices-page scroll-content {
     margin: 0 15% 0 15%; }
-  .watch-list-page .btn-header-watch {
+  .watch-list-page .btn-header-watch, .indices-page .btn-header-watch {
     font-size: 17px;
     font-weight: medium;
     margin-left: calc(50% - 62.1955px); }
-  .watch-list-page .btn-header-watch img {
+  .watch-list-page .btn-header-watch img, .indices-page .btn-header-watch img {
     height: 29px;
     width: 29px; }
-  .watch-list-page .btn-header-close img {
+  .watch-list-page .div-date-content, .indices-page .div-date-content {
+    margin-bottom: 150px; }
+  .watch-list-page .btn-header-close img, .indices-page .btn-header-close img {
     height: 25px;
     width: 25px; }
-  .watch-list-page .flex-date img {
+  .watch-list-page .flex-date img, .indices-page .flex-date img {
     height: 64px;
     width: 61px; }
-  .watch-list-page .item-content .item-center {
+  .watch-list-page .item-content .item-center, .indices-page .item-content .item-center {
     font-size: 15px; }
-  .watch-list-page .item-content .item-right {
+  .watch-list-page .item-content .item-right, .indices-page .item-content .item-right {
     font-size: 17px; }
-  .watch-list-page .item-content .item-left {
+  .watch-list-page .item-content .item-left, .indices-page .item-content .item-left {
     font-size: 20px; }
-  .watch-list-page .date-info span {
+  .watch-list-page .date-info span, .indices-page .date-info span {
     font-size: 24px; }
-  .watch-list-page .item-content, .watch-list-page .item-header-content span {
+  .watch-list-page .item-content, .watch-list-page .item-header-content span, .indices-page .item-content, .indices-page .item-header-content span {
     font-size: 20px; }
-  .watch-list-page .item-content .currency {
+  .watch-list-page .item-content .currency, .indices-page .item-content .currency {
     font-size: 13px; }
-  .watch-list-page .footer {
+  .watch-list-page .footer, .indices-page .footer {
     font-size: 13px; } }

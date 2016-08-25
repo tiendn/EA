@@ -3,7 +3,6 @@
   .watch-list-modal{
     opacity: 0.98;
     background-color: #484849;
-    // background: transparent;
   }
   ion-content{
     overflow-y: hidden;
@@ -29,7 +28,7 @@
     margin:0;
   }
   .div-date-content{
-    margin-bottom: 150px;
+    margin-bottom: 100px;
   }
   .last-date-content{
     margin-left: 16px;
@@ -55,24 +54,19 @@
     margin-bottom: 8px;
   }
   .date-left{
-      padding-left: 8%;
+      padding-left: 20px;
   }
-  .date-right{
-    padding-right: 8%;
+  .img-right{
+    margin-left: 20px;;
+  }
+  .date-right span{
+    text-align: right;
   }
 
   .div-item-content{
     overflow-y: scroll;
     position: relative;
   }
-  .item-header-content{
-    // border-top: 1px solid #c8c7cc ;
-    // margin-bottom : 1px;
-  }
-  .item-header-content .item:last-child {
-    border-bottom : 0px;
-  }
-
   ion-list {
     margin-top: 0px;
     margin-bottom : 0px;
@@ -86,11 +80,17 @@
   ion-list .item .item-inner{
     border-bottom : 1px solid #6b6b6c ;
   }
+  .item-content {
+    margin-bottom: 1px;
+  }
   .item-content .item:first-child{
     border-top: 0px ;
   }
-  .item-content .item:last-child{
+  .item-content .item:last-child .item-inner{
     border-bottom:  0px;
+  }
+  ion-list > .item:last-child{
+    border-bottom: 0px !important;
   }
   .item-right{
     width: 37%;
@@ -107,13 +107,13 @@
     height: 35px;
   }
   .up{
-    background-color: #43a047;
+    background-color: #43A047;
   }
   .down{
-    background-color: #ff3a2d;
+    background-color: #FF3A2D;
   }
   .footer{
-    margin-top: 0;
+    margin-top: 1px;
     padding-top :3%;
     border-top: 1px solid #c8c7cc;
     color: #c9c9c9;

@@ -18,6 +18,10 @@ export class WatchListPage {
     this.provider = provider ;
     this.data = [];
     this.loadDone = false;
+    this.HTMLContent = ['Watchlist ','From','To','Change','Change %',
+    'All share data is presented in the currency of your choice. Configure via ','setting'];
+    this.lastDate = '02/04/2015';
+    this.currentDate = '02/04/2016';
 
   }
   ionViewLoaded(){

@@ -17,6 +17,9 @@ export class IndicesPage {
   constructor(viewCtrl,provider) {
     this.viewCtrl = viewCtrl;
     this.provider = provider;
+    this.HTMLContent = ['Watchlist ','From','To','Change','Change %'];
+    this.lastDate = '02/04/2015';
+    this.currentDate = '02/04/2016';
   }
   ionViewLoaded(){
     let self = this;
