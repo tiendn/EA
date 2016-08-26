@@ -90,6 +90,9 @@
   .item-content .item:last-child .item-inner{
     border-bottom:  0px;
   }
+  .div-item-content{
+    border-bottom : 1px solid #c8c7cc;
+  }
   ion-list > .item:last-child{
     border-bottom: 0px !important;
   }
@@ -113,9 +116,6 @@
   .down{
     background-color: #ff3a2d;
   }
-  .footer{
-    margin-top: 1px;
-    border-top: 1px solid #c8c7cc;
-  }
+  
 
 }

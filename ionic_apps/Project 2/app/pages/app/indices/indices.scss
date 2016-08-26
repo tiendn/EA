@@ -1,0 +1,121 @@
+.indices-page {
+  .indices-list-modal{
+    opacity: 0.98;
+    background-color: #484849;
+  }
+  ion-content{
+    overflow-y: hidden;
+    font-name: Helvetica Neue;
+  }
+  scroll-content{
+    overflow-y: hidden;
+  }
+  .header{
+    margin-top: 25px;
+    position: relative;
+    margin-bottom: 30px;
+  }
+  .btn-header-watch{
+    background-color: white;
+    color: black;
+  }
+  .btn-header-close{
+    float:right;
+    opacity: 0.98;
+    background-color: #484849;
+    background: transparent;
+    margin:0;
+  }
+  .div-date-content{
+    margin-bottom: 100px;
+  }
+  .last-date-content{
+    margin-left: 16px;
+    float: left;
+  }
+  .current-date-content{
+    margin-right: 16px;
+    float: right;
+  }
+  .flex-date{
+    color: white;
+    height:auto;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .date-info{
+    display: flex;
+    flex-direction: column;
+    white-space:nowrap;
+  }
+  .date-info span:first-child{
+    margin-bottom: 8px;
+  }
+  .date-left{
+      padding-left: 20px;
+  }
+  .img-right{
+    margin-left: 20px;;
+  }
+  .date-right span{
+    text-align: right;
+  }
+  .div-item-content{
+    overflow-y: scroll;
+    position: relative;
+  }
+
+  .item-header-content .item:last-child {
+    border-bottom : 0px;
+  }
+
+  ion-list {
+    margin-top: 0px;
+    margin-bottom : 0px;
+  }
+  ion-item {
+    background: transparent;
+    background-color: #484849 !important;
+    opacity: .9;
+    color: white;
+  }
+  ion-list .item .item-inner{
+    border-bottom : 1px solid #6b6b6c ;
+  }
+  .item-content .item:first-child{
+    border-top: 0px ;
+  }
+
+  .item-content .item:last-child .item-inner{
+    border-bottom:  0px;
+  }
+  ion-list > .item:last-child{
+    border-bottom: 0px !important;
+  }
+  .item-right{
+    width: 37%;
+    text-align: right;
+  }
+  .item-right div{
+    display: flex;
+    float: right;
+    align-items: center;
+    text-align : center;
+    justify-content: center;
+    width: 80px;
+    border-radius:5px;
+    height: 35px;
+  }
+  .up{
+    background-color: #43a047;
+  }
+  .down{
+    background-color: #ff3a2d;
+  }
+  .footer{
+    margin-top: 1px;
+    border-top: 1px solid #c8c7cc;
+  }
+
+}
