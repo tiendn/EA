@@ -1,4 +1,4 @@
-<!--
+
 <ion-header>
 
   <div class= "header">
@@ -11,14 +11,25 @@
     </button>
   </div>
 
-</ion-header> -->
+</ion-header> 
 
 <ion-content >
-
-  <ion-tabs>
-    <ion-tab  tabTitle="Charts" [root]="chartsTab"></ion-tab>
-    <ion-tab  tabTitle="Compare"[root]="compareTab"></ion-tab>
-    <ion-tab  tabTitle="Performance"[root]="performanceTab"></ion-tab>
-  </ion-tabs>
+  <ion-list class="item-header-content">
+    <ion-item>
+      <span item-content class=""> 6M</span>
+      <span item-content class=""> 52W <span> % </span> </span>
+      <span item-right class=""> YTD%</span>
+    </ion-item>
+  </ion-list>
+  <div class="div-item-content">
+    <ion-list class="item-content">
+      <ion-item *ngFor = "let item of data">
+        <span class ="item-left"> {{item.Ticker}} </span>
+        <span item-content class ="">{{item.Change3M}} </span>
+        <span item-content class ="">{{item.Change52W}} </span>
+        <div item-right class="item-right">{{item.ChangeYTD}}</div>
+      </ion-item>
+    </ion-list>
+  </div>
 
 </ion-content>

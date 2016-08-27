@@ -9196,149 +9196,7 @@ body {
   font-size: 1.4rem;
   background-color: #fff; }
 
-.watch-list-page .watch-list-modal {
-  opacity: 0.98;
-  background-color: #484849; }
-
-.watch-list-page ion-content {
-  overflow-y: hidden;
-  font-name: Helvetica Neue; }
-
-.watch-list-page scroll-content {
-  overflow-y: hidden; }
-
-.watch-list-page .header {
-  margin-top: 25px;
-  position: relative;
-  margin-bottom: 30px; }
-
-.watch-list-page .btn-header-watch {
-  background-color: white;
-  color: black; }
-
-.watch-list-page .btn-header-close {
-  float: right;
-  opacity: 0.98;
-  background-color: #484849;
-  background: transparent;
-  margin: 0; }
-
-.watch-list-page .div-date-content {
-  margin-bottom: 100px; }
-
-.watch-list-page .last-date-content {
-  margin-left: 16px;
-  float: left; }
-
-.watch-list-page .current-date-content {
-  margin-right: 16px;
-  float: right; }
-
-.watch-list-page .flex-date {
-  color: white;
-  height: auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row; }
-
-.watch-list-page .date-info {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  white-space: nowrap; }
-
-.watch-list-page .date-info span:first-child {
-  margin-bottom: 8px; }
-
-.watch-list-page .date-left {
-  padding-left: 20px; }
-
-.watch-list-page .img-right {
-  margin-left: 20px; }
-
-.watch-list-page .date-right span {
-  text-align: right; }
-
-.watch-list-page .div-item-content {
-  overflow-y: scroll;
-  position: relative; }
-
-.watch-list-page ion-list {
-  margin-top: 0px;
-  margin-bottom: 0px; }
-
-.watch-list-page ion-item {
-  background: transparent;
-  background-color: #484849 !important;
-  opacity: .9;
-  color: white; }
-
-.watch-list-page ion-list .item .item-inner {
-  border-bottom: 1px solid #6b6b6c; }
-
-.watch-list-page .item-content {
-  margin-bottom: 1px; }
-
-.watch-list-page .item-content .item:first-child {
-  border-top: 0px; }
-
-.watch-list-page .item-content .item:last-child .item-inner {
-  border-bottom: 0px; }
-
-.watch-list-page ion-list > .item:last-child {
-  border-bottom: 0px !important; }
-
-.watch-list-page .item-right {
-  width: 37%;
-  text-align: right; }
-
-.watch-list-page .item-right div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  float: right;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  width: 80px;
-  border-radius: 5px;
-  height: 35px; }
-
-.watch-list-page .up {
-  background-color: #43A047; }
-
-.watch-list-page .down {
-  background-color: #FF3A2D; }
-
-.watch-list-page .footer {
-  margin-top: 1px;
-  padding-top: 3%;
-  border-top: 1px solid #c8c7cc;
-  color: #c9c9c9; }
-
-.watch-list-page .footer a {
-  text-decoration: none; }
-
-.charts-tab ion-content {
+.charts-page ion-content {
   opacity: 0.98;
   background-color: #484849; }
 
@@ -9346,6 +9204,23 @@ body {
   margin-top: 25px;
   position: relative;
   margin-bottom: 30px; }
+
+.show-tabbar {
+  bottom: 75% !important;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border-radius: 5%; }
+
+.tab-button {
+  border-right: 1px solid; }
+
+.performance-page ion-content {
+  opacity: 0.98;
+  background-color: #484849; }
+
+.performance-page .item-header-content {
+  margin-top: 20%; }
 
 .indices-page .indices-list-modal {
   opacity: 0.98;

@@ -1,0 +1,62 @@
+[
+  {
+    "InstrumentId": 16569,
+    "Ticker": "CBGA",
+    "Price": 85.311,
+    "ChangePro": 1.7145
+  },
+  {
+    "InstrumentId": 16570,
+    "Ticker": "CBGB",
+    "Price": 84.178,
+    "ChangePro": -0.0036
+  },
+  {
+    "InstrumentId": 32864,
+    "Ticker": "CARL A",
+    "Price": 647.5,
+    "ChangePro": 1.7282
+  },
+  {
+    "InstrumentId": 32865,
+    "Ticker": "CARL B",
+    "Price": 625.5,
+    "ChangePro": 0.08
+  },
+  {
+    "InstrumentId": 39083,
+    "Ticker": "CBGA",
+    "Price": 80.597,
+    "ChangePro": 0
+  },
+  {
+    "InstrumentId": 39084,
+    "Ticker": "CBGB",
+    "Price": 83.235,
+    "ChangePro": 0
+  },
+  {
+    "InstrumentId": 69291,
+    "Ticker": "CARLAc",
+    "Price": 647.5,
+    "ChangePro": 0
+  },
+  {
+    "InstrumentId": 69292,
+    "Ticker": "CARLBc",
+    "Price": 627.5,
+    "ChangePro": 0.4
+  },
+  {
+    "InstrumentId": 71163,
+    "Ticker": "CARLAc",
+    "Price": 642.5,
+    "ChangePro": 0
+  },
+  {
+    "InstrumentId": 71164,
+    "Ticker": "CARLBc",
+    "Price": 625.5,
+    "ChangePro": 0.08
+  }
+]

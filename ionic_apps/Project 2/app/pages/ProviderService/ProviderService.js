@@ -1,5 +1,5 @@
 import {Http} from "@angular/http";
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable()
 export class MyProvider{
@@ -12,9 +12,24 @@ export class MyProvider{
     var stories = [];
     this.http = http;
   };
-  getWatchListData(){
+  // getWatchListData(){
+  //   return new Promise(resolve => {
+  //     this.http.get('./watchlist.json')
+  //     .map(res => res.json())
+  //     .subscribe(
+  //       data => {
+  //         this.stories = data;
+  //         resolve(this.stories);
+  //       },
+  //       err => {
+  //         alert("Oops! St bad happened.");
+  //       }
+  //     );
+  //   });
+  // }
+  getIndicesData(){
     return new Promise(resolve => {
-      this.http.get('./watchlist.json')
+      this.http.get('./indices.json')
       .map(res => res.json())
       .subscribe(
         data => {
@@ -27,9 +42,9 @@ export class MyProvider{
       );
     });
   }
-  getIndicesData(){
+  getWatchListPerformanceData(){
     return new Promise(resolve => {
-      this.http.get('./indices.json')
+      this.http.get('./watchlist-performance.json')
       .map(res => res.json())
       .subscribe(
         data => {
@@ -37,7 +52,7 @@ export class MyProvider{
           resolve(this.stories);
         },
         err => {
-          alert("Oops! St bad happened.");
+          alert("Oops! St bad happends.");
         }
       );
     });
