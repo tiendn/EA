@@ -1,0 +1,35 @@
+
+<ion-header>
+
+  <div class= "header">
+    <button class="btn-header-watch">
+      {{HTMLContent[0]}} &nbsp;
+      <img src="./img/Watchlist_ViewIcon.png">
+    </button>
+    <button class="btn-header-close" (click)="dismiss()">
+      <img src = "./img/Fill 1.png" >
+    </button>
+  </div>
+
+</ion-header> 
+
+<ion-content >
+  <ion-list class="item-header-content">
+    <ion-item>
+      <span item-content class=""> 6M</span>
+      <span item-content class=""> 52W <span> % </span> </span>
+      <span item-right class=""> YTD%</span>
+    </ion-item>
+  </ion-list>
+  <div class="div-item-content">
+    <ion-list class="item-content">
+      <ion-item *ngFor = "let item of data">
+        <span class ="item-left"> {{item.Ticker}} </span>
+        <span item-content class ="">{{item.Change3M}} </span>
+        <span item-content class ="">{{item.Change52W}} </span>
+        <div item-right class="item-right">{{item.ChangeYTD}}</div>
+      </ion-item>
+    </ion-list>
+  </div>
+
+</ion-content>
