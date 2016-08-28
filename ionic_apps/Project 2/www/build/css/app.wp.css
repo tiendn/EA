@@ -10573,7 +10573,7 @@ body {
   width: 20px; }
 
 .watch-list-page .show-tabbar {
-  bottom: 75% !important;
+  bottom: 77% !important;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
@@ -10581,6 +10581,24 @@ body {
 
 .watch-list-page .tab-button {
   border-right: 1px solid; }
+
+.compare-page ion-header {
+  height: 25%; }
+
+.compare-page ion-content {
+  opacity: 0.98;
+  background-color: #484849;
+  overflow-y: hidden;
+  font-family: Helvetica Neue; }
+
+.compare-page scroll-content {
+  overflow-y: hidden; }
+
+.compare-page .item-box {
+  background: -webkit-linear-gradient(#00E16A, #1d9956);
+  background: linear-gradient(#00E16A, #1d9956);
+  height: 60px;
+  width: 60px; }
 
 .performance-page ion-content {
   opacity: 0.98;
@@ -10624,7 +10642,7 @@ body {
   border-bottom: 0px; }
 
 .performance-page .item-box div {
-  width: 50px;
+  width: 65px;
   height: 30px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10639,18 +10657,10 @@ body {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 5px; }
+  border-radius: 5%; }
 
-.performance-page .item-right {
-  width: 20%;
-  text-align: right; }
-
-.performance-page .item-mid-2 {
-  width: 30%;
-  text-align: right; }
-
-.performance-page .item-mid-1 {
-  width: 30%;
+.performance-page .item-header {
+  width: 65px;
   text-align: right; }
 
 .performance-page .down {

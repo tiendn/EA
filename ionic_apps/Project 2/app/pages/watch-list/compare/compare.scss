@@ -1,3 +1,19 @@
-.watch-list-share-graph-compare {
-
+.compare-page {
+  ion-header{
+      height: 25%;
+  }  
+  ion-content{
+    opacity: 0.98;
+    background-color: #484849;
+    overflow-y: hidden;
+    font-family: Helvetica Neue;
+  }
+  scroll-content{
+    overflow-y: hidden;
+  }
+  .item-box{
+      background: linear-gradient(#00E16A, #1d9956);
+      height: 60px;
+      width:  60px;
+  }
 }

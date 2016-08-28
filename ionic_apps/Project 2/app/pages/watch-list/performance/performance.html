@@ -1,32 +1,40 @@
- <ion-header>
- </ion-header>
+<ion-header>
+    
+  <div class= "header">
+    <button class="btn-header-watch">
+      {{HTMLContent[0]}} &nbsp;
+      <img src="./img/Watchlist_ViewIcon.png">
+    </button>
+    
+  </div>
+</ion-header>
 
 <ion-content >
   <ion-list class="item-header-content">
     <ion-item>
-      <div item-content class="item-mid-1"> 6M</div>
-      <div item-content class="item-mid-2"> 52W <span> % </span> </div>
-      <div item-right class="item-right"> YTD%</div>
+      <div item-right class="item-header"> 6M</div>
+      <div item-right class="item-header"> 52W <span> % </span> </div>
+      <div item-right class="item-header"> YTD%</div>
     </ion-item>
   </ion-list>
   <div class="div-item-content">
     <ion-list class="item-content">
       <ion-item *ngFor = "let item of data">
         <span class ="item-left"> {{item.Ticker}} </span>
-        <div item-content class ="item-box item-mid-1">
+        <div item-right class ="item-box item-mid-1">
           <div [class] = "item.Change3M < 0 ? 'down' :'up'"> 
             {{item.Change3M > 0 ? '+' : ''}}{{item.Change3M | formatNumber:2}}%
           </div> 
         </div>
-        <div item-content class ="item-box item-mid-2">
+        <div item-right class ="item-box item-mid-2">
           <div [class] = "item.Change52W < 0 ? 'down' :'up'"> 
-           {{item.Change52W}} 
+           {{item.Change52W > 0 ? '+' : ''}}{{item.Change52W | formatNumber:2}}%
           </div>
         </div>
           
         <div item-right class="item-box item-right">
           <div [class] = "item.ChangeYTD < 0 ? 'down' :'up'"> 
-            {{item.ChangeYTD}}
+            {{item.ChangeYTD > 0 ? '+' : ''}}{{item.ChangeYTD | formatNumber:2}}%
           </div>
         </div>
       </ion-item>

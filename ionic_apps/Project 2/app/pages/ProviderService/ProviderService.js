@@ -52,7 +52,22 @@ export class MyProvider{
           resolve(this.stories);
         },
         err => {
-          alert("Oops! St bad happends.");
+          alert("Oops! St bad happend.");
+        }
+      );
+    });
+  }
+  getWatchListCompareData(){
+    return new Promise(resolve => {
+      this.http.get('./watchlist-compare.json')
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          this.stories = data; 
+          resolve(this.stories);
+        },
+        err => {
+          alert("Oops! St bad happend.");
         }
       );
     });

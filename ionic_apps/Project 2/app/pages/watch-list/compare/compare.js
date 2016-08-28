@@ -1,21 +1,26 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
-
-/*
-  Generated class for the WatchListShareGraphComparePage page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
+import {  } from 'ionic-angular';
+import {MyProvider } from '../../ProviderService/ProviderService';
+import {FormatNumber} from '../../PipeService/formatnumber';
 @Component({
+  providers: [MyProvider],
+  pipes: [FormatNumber],
   templateUrl: 'build/pages/watch-list/compare/compare.html',
 })
 export class ComparePage {
   static get parameters() {
-    return [[NavController]];
+    return [[MyProvider]];
   }
 
-  constructor(nav) {
-    this.nav = nav;
+  constructor(provider) {
+    this.data = [];
+    this.provider = provider;
+  }
+  ionViewLoaded(){
+    let self = this;
+    this.provider.getWatchListCompareData()
+    .then(data => {
+      self.data = data;
+    })
   }
 }

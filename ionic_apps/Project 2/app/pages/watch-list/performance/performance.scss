@@ -42,25 +42,17 @@
     border-bottom: 0px;
   }
   .item-box div{
-    width: 50px;
+    width: 65px;
     height: 30px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 5%;
 
   }
-  .item-right{
-    width: 20%;
-    text-align: right;
-  }
-  .item-mid-2{
-    width: 30%;
-    text-align: right;
-  }
-  .item-mid-1{
-    width: 30%;
+  .item-header{    
+    width: 65px;
     text-align: right;
   }
   .down{
