@@ -1,20 +1,42 @@
 .watch-list-page {
+	// scroll-content {
+	// 	padding: 0;
+	// }
+	.header{
+	margin-top: 25px;
+	position: relative;
+	margin-bottom: 30px;
+	}
 
-}
-.header{
-  margin-top: 25px;
-  position: relative;
-  margin-bottom: 30px;
-}
-.show-tabbar {
-	bottom: 75% !important;
-	width : 90%;
-	margin-left: 5%;
-	margin-right: 5%;
-	border-radius: 5%;
-	//padding-left: 5% !important;
-	//padding-right : 5% !important;
-}
-.tab-button{
-	border-right : 1px solid;
+	.btn-header-watch{
+		background-color: white;
+		color: black;
+	}
+	.btn-header-close{
+		float:right;
+		opacity: 0.98;
+		background-color: #484849;
+		background: transparent;
+		margin:0;
+	}
+	.btn-header-watch img{
+		height: 20px;
+		width: 20px;
+	}
+		
+	.btn-header-close img, {
+		height: 20px;
+		width: 20px;
+	}
+	.show-tabbar {
+		bottom: 75% !important;
+		width : 90%;
+		margin-left: 5%;
+		margin-right: 5%;
+		border-radius: 5%;
+	}
+
+	.tab-button{
+		border-right : 1px solid;
+	}
 }

@@ -1,9 +1,72 @@
 .performance-page {
   ion-content{
-  opacity: 0.98;
-  background-color: #484849;
+    opacity: 0.98;
+    background-color: #484849;
+    overflow-y: hidden;
+    font-family: Helvetica Neue;
+  }
+  scroll-content{
+    overflow-y: hidden;
+  }
+  
+  ion-list{
+    margin-bottom: 0;
+  }
+  ion-item {
+    background: transparent;
+    background-color: #484849;
+    opacity: 0.98;
+    color: white;
+  }
+  ion-list .item .item-inner{
+    border-bottom: 1px solid #6b6b6c;
+  }
+  ion-list > .item:last-child{
+    border-bottom: 0px;
   }
   .item-header-content{
     margin-top: 20%;
+  }
+  .div-item-content {
+    overflow-y: scroll;
+    position: relative;
+    border-bottom: 1px solid #c8c7cc;
+  }
+  .item-content {
+    margin-bottom : 1px;
+  }
+  .item-content .item:first-child{
+    border-top: 0;
+  }
+  .item-content .item:last-child .item-inner{
+    border-bottom: 0px;
+  }
+  .item-box div{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    border-radius: 5px;
+
+  }
+  .item-right{
+    width: 20%;
+    text-align: right;
+  }
+  .item-mid-2{
+    width: 30%;
+    text-align: right;
+  }
+  .item-mid-1{
+    width: 30%;
+    text-align: right;
+  }
+  .down{
+    background-color: #ff3a2d;  
+  }
+  .up{
+    background-color: #43a047;
   }
 }
