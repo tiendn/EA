@@ -1,26 +1,26 @@
-
+.watch-list-page{
+  .btn-header-watch{
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: calc(50% - 43.5px);
+  }
+  .btn-header-watch img{
+   height: 20px;
+   width: 20px;
+ }
+ .btn-header-close img, {
+   height: 20px;
+   width: 20px;
+ }
+}
  .performance-page {
       .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
       border-bottom : 0.55px solid #6b6b6c ;
     }
     .div-item-content{
-      max-height: calc(100% - 15px - 267px );
-    }
-    .btn-header-watch{
-      font-size: 12px;
-      font-weight: medium;
-      margin-left: calc(50% - 43.5px);
-    }
-     .btn-header-watch img{
-      height: 20px;
-      width: 20px;
+      max-height: calc(100% - 130px );
     }
 
-    .btn-header-close img, {
-      height: 20px;
-      width: 20px;
-    }
-    
      .item-content .item-center{
       font-size: 15px;
     }
@@ -39,7 +39,7 @@
      .item-content .currency{
       font-size: 12px;
     }
-     
+
  }
   // IPad
 @media only screen and ( min-width : 768px){
@@ -60,26 +60,7 @@
     scroll-content{
       margin: 0 15% 0 15%;
     }
-    .btn-header-watch{
-    font-size: 17px;
-    font-weight: medium;
-    margin-left: calc(50% - 62.1955px);
-    }
-    .btn-header-watch img{
-      height: 29px;
-      width: 29px;
-    }
-    .div-date-content{
-      margin-bottom: 150px;
-    }
-    .btn-header-close img, {
-      height: 25px;
-      width: 25px;
-    }
-    .flex-date img{
-       height: 64px;
-       width: 61px;
-    }
+    
     .item-content .item-center{
       font-size: 15px;
     }

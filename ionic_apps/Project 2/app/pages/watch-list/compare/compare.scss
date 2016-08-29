@@ -1,7 +1,8 @@
 .compare-page {
+
   ion-header{
       height: 25%;
-  }  
+  }
   ion-content{
     opacity: 0.98;
     background-color: #484849;
@@ -11,9 +12,47 @@
   scroll-content{
     overflow-y: hidden;
   }
-  .item-box{
-      background: linear-gradient(#00E16A, #1d9956);
-      height: 60px;
-      width:  60px;
+  h1{
+    color :#787878;
+    margin-left: 6%;
   }
+  .item-box{
+    float:left;
+    color: white;
+    height: 0;
+    padding-bottom: (100%/3);
+    width: (100%/3);
+    border-right: 1px solid #787878;
+    border-bottom: 1px solid #787878;
+  }
+  .down {
+    background: linear-gradient(#bf3335, #c8583e);
+  }
+  .up {
+    background: linear-gradient(#95bc4f, #447d2d);
+  }
+  .item-box:nth-child(3n+1){
+    // color: red;
+    border-right: 0;
+  }
+  .content {
+    position: relative;
+    height: 100%;
+    margin: 20% 2% 40% 10%;
+  }
+  .price {
+    margin-bottom : 20%;
+  }
+  .change-pro{
+    // margin-right: 20%;
+    // position: absolute;
+    // bottom: 0;
+  }
+  .currency {
+    position: absolute;
+    // margin-left :50%;
+    right : 10%;
+  }
+
+
 }

@@ -1,19 +1,25 @@
 
  <ion-header>
 
-  
 
-</ion-header> 
+
+</ion-header>
 
 
 <ion-content >
   <h1> TODAY </h1>
-  <div *ngFor ="let item of data" class = "item-box"> 
-				<span>{{item.Ticker}} </span><br>
-				<span>{{item.Price}}</span><br>
-				<span> {{item.ChangePro}}</span> 
-				<div class="typeMoney">
+  <div *ngFor ="let item of data"
+  [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
+    <div class = "content">
+				<div class = "ticker">{{item.Ticker}} </div>
+				<div class = "price">{{item.Price | formatNumber:3}}</div>
+				<span class = "change-pro"> (
+          {{item.ChangePro > 0 ? '+' : '' }}{{item.ChangePro | formatNumber:3 }}
+          %)
+        </span>
+				<span class="currency">
 					{{item.Currency}}
-				</div>
+				</span>
+    </div>
   </div>
 </ion-content>

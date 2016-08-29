@@ -1,12 +1,12 @@
 <ion-header>
-    
+    <!--
   <div class= "header">
     <button class="btn-header-watch">
       {{HTMLContent[0]}} &nbsp;
       <img src="./img/Watchlist_ViewIcon.png">
     </button>
-    
-  </div>
+
+  </div> -->
 </ion-header>
 
 <ion-content >
@@ -22,18 +22,18 @@
       <ion-item *ngFor = "let item of data">
         <span class ="item-left"> {{item.Ticker}} </span>
         <div item-right class ="item-box item-mid-1">
-          <div [class] = "item.Change3M < 0 ? 'down' :'up'"> 
+          <div [class] = "item.Change3M < 0 ? 'down' :'up'">
             {{item.Change3M > 0 ? '+' : ''}}{{item.Change3M | formatNumber:2}}%
-          </div> 
+          </div>
         </div>
         <div item-right class ="item-box item-mid-2">
-          <div [class] = "item.Change52W < 0 ? 'down' :'up'"> 
+          <div [class] = "item.Change52W < 0 ? 'down' :'up'">
            {{item.Change52W > 0 ? '+' : ''}}{{item.Change52W | formatNumber:2}}%
           </div>
         </div>
-          
+
         <div item-right class="item-box item-right">
-          <div [class] = "item.ChangeYTD < 0 ? 'down' :'up'"> 
+          <div [class] = "item.ChangeYTD < 0 ? 'down' :'up'">
             {{item.ChangeYTD > 0 ? '+' : ''}}{{item.ChangeYTD | formatNumber:2}}%
           </div>
         </div>

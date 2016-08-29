@@ -1,4 +1,7 @@
 .performance-page {
+  ion-header{
+    height: 17%;
+  }
   ion-content{
     opacity: 0.98;
     background-color: #484849;
@@ -8,7 +11,7 @@
   scroll-content{
     overflow-y: hidden;
   }
-  
+
   ion-list{
     margin-bottom: 0;
   }
@@ -51,12 +54,12 @@
     border-radius: 5%;
 
   }
-  .item-header{    
+  .item-header{
     width: 65px;
     text-align: right;
   }
   .down{
-    background-color: #ff3a2d;  
+    background-color: #ff3a2d;
   }
   .up{
     background-color: #43a047;

@@ -2,6 +2,14 @@
 	// scroll-content {
 	// 	padding: 0;
 	// }
+	#tab-t0-1{
+		background-color: #848484;
+		color: white;
+	}
+	#tab-t0-0, #tab-t0-2{
+		color: white;
+		background: linear-gradient(#1e1e1e, #404041);
+	}
 	.header{
 	margin-top: 25px;
 	position: relative;
@@ -23,7 +31,7 @@
 		height: 20px;
 		width: 20px;
 	}
-		
+
 	.btn-header-close img, {
 		height: 20px;
 		width: 20px;
@@ -34,9 +42,10 @@
 		margin-left: 5%;
 		margin-right: 5%;
 		border-radius: 5%;
+		border: 2px solid #787878;
 	}
 
 	.tab-button{
-		border-right : 1px solid;
+		border-right : 0;
 	}
 }
