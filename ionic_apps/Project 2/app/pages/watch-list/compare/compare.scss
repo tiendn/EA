@@ -1,20 +1,26 @@
-.compare-page {
 
+.compare-page {
   ion-header{
       height: 25%;
   }
   ion-content{
-    opacity: 0.98;
-    background-color: #484849;
-    overflow-y: hidden;
-    font-family: Helvetica Neue;
+    // opacity: 0.98;
+    // background-color: #484849;
+    // overflow-y: hidden;
+    // font-family: Helvetica Neue;
   }
   scroll-content{
-    overflow-y: hidden;
+    // overflow-y: hidden;
   }
   h1{
+    margin-top : 0 ;
     color :#787878;
     margin-left: 6%;
+  }
+  .scroll-content{
+    overflow-y: scroll;
+    position: relative;
+    border-bottom: 1px solid #787878;
   }
   .item-box{
     float:left;
@@ -31,7 +37,7 @@
   .up {
     background: linear-gradient(#95bc4f, #447d2d);
   }
-  .item-box:nth-child(3n+1){
+  .item-box:nth-child(3n){
     // color: red;
     border-right: 0;
   }

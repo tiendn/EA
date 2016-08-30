@@ -1,15 +1,19 @@
 .watch-list-page {
-	// scroll-content {
-	// 	padding: 0;
-	// }
-	#tab-t0-1{
-		background-color: #848484;
-		color: white;
-	}
-	#tab-t0-0, #tab-t0-2{
-		color: white;
+	
+	#tab-t0-0, #tab-t0-2,#tab-t0-1{
+		color: #848484;
 		background: linear-gradient(#1e1e1e, #404041);
 	}
+	.tab-button[aria-selected=true] {
+    color: white !important;
+    background: #848484 !important;
+  }
+   ion-content{
+    opacity: 0.95;
+    background-color: #484849;
+	// Font .................
+    // font-family: Helvetica Neue;
+  }
 	.header{
 	margin-top: 25px;
 	position: relative;
@@ -37,15 +41,19 @@
 		width: 20px;
 	}
 	.show-tabbar {
-		bottom: 77% !important;
+		// bottom: 80% !important;
+		top: 90px;
+		height: 45px;
 		width : 90%;
 		margin-left: 5%;
 		margin-right: 5%;
 		border-radius: 5%;
-		border: 2px solid #787878;
+		border: 2px  solid #848484;
+
 	}
 
-	.tab-button{
-		border-right : 0;
+	.tab-button:nth-child(2){
+		border-right : 1px solid #848484;
+		border-left: 1px solid #848484;
 	}
 }

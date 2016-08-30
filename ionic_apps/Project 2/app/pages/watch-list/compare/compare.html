@@ -8,18 +8,19 @@
 
 <ion-content >
   <h1> TODAY </h1>
-  <div *ngFor ="let item of data"
-  [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
-    <div class = "content">
-				<div class = "ticker">{{item.Ticker}} </div>
-				<div class = "price">{{item.Price | formatNumber:3}}</div>
-				<span class = "change-pro"> (
-          {{item.ChangePro > 0 ? '+' : '' }}{{item.ChangePro | formatNumber:3 }}
-          %)
-        </span>
-				<span class="currency">
-					{{item.Currency}}
-				</span>
+  <div class = "scroll-content">
+    <div *ngFor ="let item of data"
+    [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
+      <div class = "content">
+          <div class = "ticker">{{item.Ticker}} </div>
+          <div class = "price">{{item.Price | formatNumber:1}}</div>
+          <span class = "change-pro"> 
+            ({{item.ChangePro > 0 ? '+' : '' }}{{item.ChangePro|formatNumber:1}}%)
+          </span>
+          <span class="currency">
+            {{item.Currency}}
+          </span>
+      </div>
     </div>
   </div>
 </ion-content>

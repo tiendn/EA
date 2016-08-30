@@ -1,3 +1,5 @@
+
+
 .watch-list-page{
   .btn-header-watch{
     font-size: 12px;
@@ -13,7 +15,7 @@
    width: 20px;
  }
 }
- .performance-page {
+.performance-page {
       .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
       border-bottom : 0.55px solid #6b6b6c ;
     }
@@ -39,8 +41,18 @@
      .item-content .currency{
       font-size: 12px;
     }
-
+    // .item-box,.item-header{
+    //   margin-right:  0;
+    // }
  }
+.compare-page{
+  
+    .scroll-content{
+      max-height: calc(100% - 100px);
+      // clear: both;
+    }
+
+}
   // IPad
 @media only screen and ( min-width : 768px){
   .modal-wrapper {

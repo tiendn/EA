@@ -9196,18 +9196,21 @@ body {
   font-size: 1.4rem;
   background-color: #fff; }
 
-.charts-page ion-content {
-  opacity: 0.98;
-  background-color: #484849; }
+.charts-page ion-header {
+  height: 20%; }
 
-.watch-list-page #tab-t0-1 {
-  background-color: #848484;
-  color: white; }
-
-.watch-list-page #tab-t0-0, .watch-list-page #tab-t0-2 {
-  color: white;
+.watch-list-page #tab-t0-0, .watch-list-page #tab-t0-2, .watch-list-page #tab-t0-1 {
+  color: #848484;
   background: -webkit-linear-gradient(#1e1e1e, #404041);
   background: linear-gradient(#1e1e1e, #404041); }
+
+.watch-list-page .tab-button[aria-selected=true] {
+  color: white !important;
+  background: #848484 !important; }
+
+.watch-list-page ion-content {
+  opacity: 0.95;
+  background-color: #484849; }
 
 .watch-list-page .header {
   margin-top: 25px;
@@ -9234,31 +9237,30 @@ body {
   width: 20px; }
 
 .watch-list-page .show-tabbar {
-  bottom: 77% !important;
+  top: 90px;
+  height: 45px;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 5%;
-  border: 2px solid #787878; }
+  border: 2px  solid #848484; }
 
-.watch-list-page .tab-button {
-  border-right: 0; }
+.watch-list-page .tab-button:nth-child(2) {
+  border-right: 1px solid #848484;
+  border-left: 1px solid #848484; }
 
 .compare-page ion-header {
   height: 25%; }
 
-.compare-page ion-content {
-  opacity: 0.98;
-  background-color: #484849;
-  overflow-y: hidden;
-  font-family: Helvetica Neue; }
-
-.compare-page scroll-content {
-  overflow-y: hidden; }
-
 .compare-page h1 {
+  margin-top: 0;
   color: #787878;
   margin-left: 6%; }
+
+.compare-page .scroll-content {
+  overflow-y: scroll;
+  position: relative;
+  border-bottom: 1px solid #787878; }
 
 .compare-page .item-box {
   float: left;
@@ -9277,7 +9279,7 @@ body {
   background: -webkit-linear-gradient(#95bc4f, #447d2d);
   background: linear-gradient(#95bc4f, #447d2d); }
 
-.compare-page .item-box:nth-child(3n+1) {
+.compare-page .item-box:nth-child(3n) {
   border-right: 0; }
 
 .compare-page .content {
@@ -9294,15 +9296,6 @@ body {
 
 .performance-page ion-header {
   height: 17%; }
-
-.performance-page ion-content {
-  opacity: 0.98;
-  background-color: #484849;
-  overflow-y: hidden;
-  font-family: Helvetica Neue; }
-
-.performance-page scroll-content {
-  overflow-y: hidden; }
 
 .performance-page ion-list {
   margin-bottom: 0; }
@@ -9588,6 +9581,9 @@ body {
 
 .performance-page .item-content .currency {
   font-size: 12px; }
+
+.compare-page .scroll-content {
+  max-height: calc(100% - 100px); }
 
 @media only screen and (min-width: 768px) {
   .modal-wrapper {
