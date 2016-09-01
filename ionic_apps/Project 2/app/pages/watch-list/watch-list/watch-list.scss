@@ -1,6 +1,6 @@
 .watch-list-page {
 	
-	#tab-t0-0, #tab-t0-2,#tab-t0-1{
+	.tab-button{
 		color: #848484;
 		background: linear-gradient(#1e1e1e, #404041);
 	}
@@ -43,15 +43,18 @@
 	.show-tabbar {
 		// bottom: 80% !important;
 		top: 90px;
-		height: 45px;
+		height: 30px;
 		width : 90%;
 		margin-left: 5%;
 		margin-right: 5%;
 		border-radius: 5%;
-		border: 2px  solid #848484;
+		border: 1px  solid #848484;
 
 	}
-
+	.show-tabbar a {
+		height: 28px !important;
+		min-height: 25px !important;
+	}
 	.tab-button:nth-child(2){
 		border-right : 1px solid #848484;
 		border-left: 1px solid #848484;

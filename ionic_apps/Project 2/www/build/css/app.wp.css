@@ -10547,7 +10547,21 @@ body {
 .charts-page ion-header {
   height: 20%; }
 
-.watch-list-page #tab-t0-0, .watch-list-page #tab-t0-2, .watch-list-page #tab-t0-1 {
+.charts-page #charts {
+  width: 100%;
+  height: 250px;
+  margin-top: 20px;
+  border-top: 2px solid #848484;
+  border-bottom: 2px solid #848484; }
+
+.charts-page ion-footer {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.charts-page ion-footer p, .charts-page ion-footer h2 {
+  color: #848484; }
+
+.watch-list-page .tab-button {
   color: #848484;
   background: -webkit-linear-gradient(#1e1e1e, #404041);
   background: linear-gradient(#1e1e1e, #404041); }
@@ -10586,12 +10600,16 @@ body {
 
 .watch-list-page .show-tabbar {
   top: 90px;
-  height: 45px;
+  height: 30px;
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
   border-radius: 5%;
-  border: 2px  solid #848484; }
+  border: 1px  solid #848484; }
+
+.watch-list-page .show-tabbar a {
+  height: 28px !important;
+  min-height: 25px !important; }
 
 .watch-list-page .tab-button:nth-child(2) {
   border-right: 1px solid #848484;

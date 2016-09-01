@@ -3,4 +3,18 @@
   ion-header{
     height: 20%;
   }
+  #charts{
+    width: 100%;
+    height: 250px; 
+    margin-top : 20px;
+    border-top : 2px solid #848484;
+    border-bottom : 2px solid #848484;
+  }
+  ion-footer{
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  ion-footer p,ion-footer h2 {
+    color: #848484;
+  }
 }
