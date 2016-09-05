@@ -1,13 +1,21 @@
 <ion-header> </ion-header>
 <ion-content> 
-    <div id="charts" style=""></div>
-    
-    
+    <div class="period" > 
+        <button outline (click)="changePeriod(1)">1D</button>
+        <button outline (click)="changePeriod(3)">3M</button>
+        <button outline (click)="changePeriod(6)">6M</button>
+        <button outline (click)="changePeriod(12)">1Y</button>
+        <button outline (click)="changePeriod(36)">3Y</button>
+    </div>
+    <div id="charts" style="">
+        
+    </div>
 </ion-content>
 <ion-footer>
     <p> Tap on the ticker codes below to 
         compare them. We limit the charting to five tickers
     </p>
+    <button (click)="click()" > Hello </button>
     <h2> OWN SHARES </h2>
     <h2> WATCHLIST SHARES </h2>
 </ion-footer>

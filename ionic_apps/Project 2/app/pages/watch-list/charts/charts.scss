@@ -3,6 +3,14 @@
   ion-header{
     height: 20%;
   }
+  .period button{
+      // height: 
+      border : 0;
+      padding: 0;
+  }
+  .period {
+    margin: 0;
+  }
   #charts{
     width: 100%;
     height: 250px; 
@@ -10,6 +18,7 @@
     border-top : 2px solid #848484;
     border-bottom : 2px solid #848484;
   }
+  
   ion-footer{
     padding-left: 16px;
     padding-right: 16px;

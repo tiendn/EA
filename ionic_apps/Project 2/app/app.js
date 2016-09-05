@@ -2,7 +2,9 @@ import {Component} from "@angular/core";
 import {Platform, ionicBootstrap} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
+import {Helper} from './pages/ProviderService/helper';
 @Component({
+  providers : [Helper],
   templateUrl: 'build/app.html'
 })
 export class MyIRApp {
@@ -20,4 +22,4 @@ export class MyIRApp {
   }
 }
 
-ionicBootstrap(MyIRApp)
+ionicBootstrap(MyIRApp,[Helper])
