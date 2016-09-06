@@ -16,6 +16,8 @@ export class ChartsPage {
   constructor(viewCtrl,chartServices) {
     this.viewCtrl = viewCtrl;
     this.chartCtrl = chartServices;
+    this.currentID = 1;
+    this.shares = ['SHR1'];
     // Mot bien de luu cac ma dang duoc show ra.
 
     // this.chart = ;
@@ -26,9 +28,12 @@ export class ChartsPage {
     this.viewCtrl.dismiss();
   }
   ionViewLoaded(){
+      // mỗi một nút sẽ sử dụng update để fix chát.
+      
     this.chart = new Highcharts.Chart({
         // colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', 
         // '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
+        colors: ['white','blue','green','orange','yellow'],
         chart : {
             backgroundColor: '#484849',
             renderTo : 'charts',
@@ -43,9 +48,12 @@ export class ChartsPage {
             }
         },
         xAxis: {
-                gridLineWidth: 0,
-                tickInterval : 0,
-            // categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas']
+            gridLineWidth: 1,
+            // tickPixelInterval : 120,
+            type: 'datetime',
+            dateTimeLabelFormats: {
+                day: '%b of %y'
+            },
         },
         yAxis:{
             title : '',
@@ -65,15 +73,22 @@ export class ChartsPage {
         },
         
     });
+    this.chartCtrl.theme = {
+        
+    }
+    // this.chartCtrl.setOptions(Highcharts.theme);
     this.chartCtrl.getHistoryData(16569,3,true).then(data=>{
+        // console.log(data);
         this.chart.addSeries({   
-            id : 'SHR1',                     
-            name: 'Monkey',
+            id : 'SHR1',    
+            name: 'SHR1',              
             data: data
         }, true);
     });
     // this.chart.redraw();
+
   }
+//   End ionViewLoaded
 //   Update 
 // http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-update/
     click(){
@@ -87,5 +102,33 @@ export class ChartsPage {
     }
     changePeriod(period){
         alert(period);
+    }
+    getSharesData(id){
+        this.currentID = id;
+    }
+    getChartData(id,share){
+        if (!this.shares.includes(share)){
+            if (this.shares.length < 5){
+                this.shares.push(share);
+                console.log(this.shares);
+                this.chartCtrl.getHistoryData(id,3,true).then(data=>{
+                    this.chart.addSeries({   
+                        id: share,
+                        data: data,
+                        name: share
+                    }, true);
+                });
+            }
+            else {
+                alert("Full choose");
+            }
+        }
+        else {
+            this.chart.get(share).remove();
+            // Xoa phan tu trong shares...
+        }    
+           
+        
+        
     }
 }

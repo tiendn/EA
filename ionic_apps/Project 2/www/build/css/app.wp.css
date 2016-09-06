@@ -10548,11 +10548,18 @@ body {
   height: 20%; }
 
 .charts-page .period button {
-  border: 0;
-  padding: 0; }
+  z-index: 99;
+  padding: 0;
+  padding-right: 8px;
+  padding-left: 8px;
+  width: 15%; }
 
 .charts-page .period {
-  margin: 0; }
+  display: inline;
+  left: 50px;
+  position: absolute;
+  top: 15px;
+  right: 0; }
 
 .charts-page #charts {
   width: 100%;
@@ -10561,12 +10568,47 @@ body {
   border-top: 2px solid #848484;
   border-bottom: 2px solid #848484; }
 
+.charts-page #charts .highcharts-container svg {
+  border-top: 1px solid #848484;
+  margin-top: 30px; }
+
+.charts-page .share-item:nth-of-type(1) {
+  color: white; }
+
+.charts-page .share-item:nth-of-type(2) {
+  color: blue; }
+
+.charts-page .share-item:nth-of-type(3) {
+  color: green; }
+
+.charts-page .share-item:nth-of-type(4) {
+  color: orange; }
+
+.charts-page .share-item:nth-of-type(5) {
+  color: yellow; }
+
 .charts-page ion-footer {
   padding-left: 16px;
   padding-right: 16px; }
 
-.charts-page ion-footer p, .charts-page ion-footer h2 {
+.charts-page .own-shares p {
+  margin: 0; }
+
+.charts-page .own-shares button {
+  margin: 0;
+  padding: 0 8px 0 8px; }
+
+.charts-page ion-footer p, .charts-page ion-footer h2, .charts-page ion-content p, .charts-page ion-content h2 {
+  margin-left: 16px;
+  margin-right: 16px;
   color: #848484; }
+
+.charts-page button {
+  border: 0;
+  color: white !important; }
+
+.charts-page .btn-click {
+  border: 1px solid white; }
 
 .watch-list-page .tab-button {
   color: #848484;

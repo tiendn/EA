@@ -8,14 +8,33 @@
         <button outline (click)="changePeriod(36)">3Y</button>
     </div>
     <div id="charts" style="">
-        
     </div>
-</ion-content>
-<ion-footer>
+
+    <span class = "share-item" *ngFor = "let share of shares "> {{share}} </span>
     <p> Tap on the ticker codes below to 
         compare them. We limit the charting to five tickers
     </p>
-    <button (click)="click()" > Hello </button>
-    <h2> OWN SHARES </h2>
-    <h2> WATCHLIST SHARES </h2>
+    <div class ="own-shares">
+        <p id ="own-shares-title"> OWN SHARES </p>
+        <button (click)="getSharesData(1)" class="button button-clear {{currentID == 1 ? 'btn-click' : ''}}" > SHARE1 </button>
+        <button (click)="getSharesData(2)" class="button button-clear {{currentID == 2 ? 'btn-click' : ''}}" > SHARE2 </button>
+        <button (click)="getSharesData(3)" class="button button-clear {{currentID == 3 ? 'btn-click' : ''}}" > LONG SHARE </button>
+    </div>
+    <div class="watch-list-shares">
+        <p id = "watch-list-shares-title"> WATCHLIST SHARES </p>
+        <button  outline class="btn-click" >TICR1</button>
+        <button  (click)="getChartData(32864,'TICR2')" class="button button-clear {{currentID == 2 ? 'btn-click' : ''}}">TICR2</button>
+        <button  (click)="getChartData(39083,'TICR3')" class="button button-clear {{currentID == 3 ? 'btn-click' : ''}}">TICR3</button>
+        <button  (click)="getChartData(39084,'TICR4')" class="button button-clear {{currentID == 4 ? 'btn-click' : ''}}">TICR4</button>
+        <button  (click)="getChartData(16570,'TICR5')" class="button button-clear {{currentID == 5 ? 'btn-click' : ''}}">TICR5</button>
+        <button  (click)="getChartData(39084,'TICR6')" class="button button-clear {{currentID == 6 ? 'btn-click' : ''}}">TICR6</button>
+        <button outline (click)="changePeriod(1)">TICR1</button>
+        <button outline (click)="changePeriod(1)">TICR1</button>
+        <button outline (click)="changePeriod(1)">TICR1</button>
+        <button outline (click)="changePeriod(1)">TICR1</button>
+    </div>
+    
+</ion-content>
+<ion-footer>
+    
 </ion-footer>
