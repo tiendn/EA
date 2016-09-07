@@ -10558,7 +10558,7 @@ body {
   display: inline;
   left: 50px;
   position: absolute;
-  top: 15px;
+  top: 12px;
   right: 0; }
 
 .charts-page #charts {
@@ -10609,6 +10609,9 @@ body {
 
 .charts-page .btn-click {
   border: 1px solid white; }
+
+.charts-page .btn-period-click {
+  font-weight: bold; }
 
 .watch-list-page .tab-button {
   color: #848484;

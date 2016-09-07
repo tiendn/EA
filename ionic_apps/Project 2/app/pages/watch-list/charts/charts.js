@@ -17,7 +17,11 @@ export class ChartsPage {
     this.viewCtrl = viewCtrl;
     this.chartCtrl = chartServices;
     this.currentID = 1;
-    this.shares = ['SHR1'];
+    this.currentPeriod = 1;
+    // this.shares  = [{id:16569,name:'SHR1'}];
+    this.instrumentID = [16569];
+    this.shareName = ['SHR1'];
+    // this.
     // Mot bien de luu cac ma dang duoc show ra.
 
     // this.chart = ;
@@ -73,49 +77,46 @@ export class ChartsPage {
         },
         
     });
-    this.chartCtrl.theme = {
-        
-    }
     // this.chartCtrl.setOptions(Highcharts.theme);
-    this.chartCtrl.getHistoryData(16569,3,true).then(data=>{
+    this.chartCtrl.getHistoryData(16569,this.currentPeriod,true).then(data=>{
         // console.log(data);
         this.chart.addSeries({   
-            id : 'SHR1',    
+            id : 16569,    
             name: 'SHR1',              
             data: data
         }, true);
     });
     // this.chart.redraw();
-
   }
-//   End ionViewLoaded
+
 //   Update 
-// http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/members/series-update/
-    click(){
-        this.chartCtrl.getHistoryData(16569,6,true).then(data=>{
-            // Set new data. 
-            this.chart.series[0].setData(data);
-            //  Push more
-        //    this.chart.series[0].data.push(data);
-        });
-        // this.chart.redraw();
-    }
     changePeriod(period){
-        alert(period);
+        console.log(period);
+        this.currentPeriod = period;
+        console.log(this.currentPeriod);
+        // console.log(this.chart.get(this.instrumentID[0]).data);
+        for (let i = 0 ; i < this.instrumentID.length ; i++){
+            this.chartCtrl.getHistoryData(this.instrumentID[i],period,true).then(data=>{
+                this.chart.series[i].update({data : data});   
+            });
+        }
+        // this.chart.redraw();
     }
     getSharesData(id){
         this.currentID = id;
     }
-    getChartData(id,share){
-        if (!this.shares.includes(share)){
-            if (this.shares.length < 5){
-                this.shares.push(share);
-                console.log(this.shares);
-                this.chartCtrl.getHistoryData(id,3,true).then(data=>{
+    getChartData(id,name){
+        if (!this.instrumentID.includes(id)){
+            if (this.instrumentID.length < 5){
+                //  add Share Name
+                this.shareName.push(name);
+                //  Add instrumentID
+                this.instrumentID.push(id);    
+                this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                     this.chart.addSeries({   
-                        id: share,
+                        id: id,
                         data: data,
-                        name: share
+                        name: name
                     }, true);
                 });
             }
@@ -124,10 +125,13 @@ export class ChartsPage {
             }
         }
         else {
-            this.chart.get(share).remove();
+            this.chart.get(id).remove();
+            this.shareName.splice([this.shareName.indexOf(name)],1);
+            this.instrumentID.splice([this.instrumentID.indexOf(id)],1);
             // Xoa phan tu trong shares...
         }    
-           
+      console.log(this.shareName + ' ' + this.shareName.length);
+      console.log(this.instrumentID+ ' ' + this.instrumentID.length);     
         
         
     }
