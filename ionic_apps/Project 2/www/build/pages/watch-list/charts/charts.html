@@ -7,10 +7,11 @@
         <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod == 12 ? 'btn-period-click' : ''}}">1Y</button>
         <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod == 36 ? 'btn-period-click' : ''}}">3Y</button>
     </div>
+    <!---->
     <div id="charts" style="">
     </div>
-
-    <span class = "share-item" *ngFor = "let share of shareName "> {{share}} </span>
+    <!---->
+    <span  *ngFor = "let share of shareNames"> {{share}} </span>
     <p> Tap on the ticker codes below to 
         compare them. We limit the charting to five tickers
     </p>
@@ -22,14 +23,14 @@
     </div>
     <div class="watch-list-shares">
         <p id = "watch-list-shares-title"> WATCHLIST SHARES </p>
-        <button  outline class="btn-click" >TICR1</button>
-        <button  (click)="getChartData(32864,'TICR2')" class="button button-clear {{instrumentID.indexOf(32864) > 0 ? 'btn-click' : ''}}"> 
-            TICR2
+        <!--<button  (click)="getChartData(listShare[0].instrumentID,listShare[0]..shareName)" class="button button-clear {{instrumentID.indexOf(listShare[0].instrumentID) > 0 ? 'btn-click' : ''}}"> 
+            {{listShare[0].shareName}
+        </button>-->
+        <button *ngFor = "let share of listShare" 
+            (click)="getChartData(share.instrumentID,share.shareName,share.color)"
+            class="button button-clear {{instrumentIDs.indexOf(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
+            {{share.shareName}}
         </button>
-        <button  (click)="getChartData(39083,'TICR3')" class="button button-clear {{instrumentID.indexOf(39083) > 0 ? 'btn-click' : ''}}">TICR3</button>
-        <button  (click)="getChartData(69291,'TICR4')" class="button button-clear {{instrumentID.indexOf(69291) > 0 ? 'btn-click' : ''}}">TICR4</button>
-        <button  (click)="getChartData(16570,'TICR5')" class="button button-clear {{instrumentID.indexOf(16570) > 0 ? 'btn-click' : ''}}">TICR5</button>
-        <button  (click)="getChartData(39084,'TICR6')" class="button button-clear {{instrumentID.indexOf(39084) > 0 ? 'btn-click' : ''}}">TICR6</button>
     </div>
     
 </ion-content>

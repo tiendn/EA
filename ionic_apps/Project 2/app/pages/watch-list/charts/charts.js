@@ -19,8 +19,43 @@ export class ChartsPage {
     this.currentID = 1;
     this.currentPeriod = 1;
     // this.shares  = [{id:16569,name:'SHR1'}];
-    this.instrumentID = [16569];
-    this.shareName = ['SHR1'];
+    
+    this.listShare = [
+        {
+            "instrumentID" : 16569,
+            "shareName" : 'SHR1',
+            "color": 'white'
+        },
+        {
+            "instrumentID" : 32864,
+            "shareName" : 'TICR2',
+            "color": 'blue'
+        },
+        {
+            "instrumentID" : 39083,
+            "shareName" : 'TICR3',
+            "color": 'green'
+        },
+        {
+            "instrumentID" : 69291,
+            "shareName" : 'TICR4',
+            "color": 'orange'
+        },
+        {
+            "instrumentID" : 16570,
+            "shareName" : 'TICR5',
+            "color": 'yellow'
+        },
+        {
+            "instrumentID" : 39084,
+            "shareName" : 'TICR6',
+            "color": 'red'
+        }
+    ]
+    this.instrumentIDs = [16569];
+    this.shareNames = ['SHR1'];
+    this.colors = ['white'];
+    // console.log(this.listShare);
     // this.
     // Mot bien de luu cac ma dang duoc show ra.
 
@@ -37,7 +72,7 @@ export class ChartsPage {
     this.chart = new Highcharts.Chart({
         // colors: ['#2f7ed8', '#0d233a', '#8bbc21', '#910000', '#1aadce', 
         // '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
-        colors: ['white','blue','green','orange','yellow'],
+        //colors: ['white','blue','green','orange','yellow'],
         chart : {
             backgroundColor: '#484849',
             renderTo : 'charts',
@@ -53,11 +88,25 @@ export class ChartsPage {
         },
         xAxis: {
             gridLineWidth: 1,
-            // tickPixelInterval : 120,
+            
             type: 'datetime',
-            dateTimeLabelFormats: {
-                day: '%b of %y'
-            },
+            labels: {
+                formatter: function() {
+                    let first = this.chart.xAxis[0].getExtremes().dataMax;
+                    let last = this.chart.xAxis[0].getExtremes().dataMin;
+                    let mid = (first + last)/2;
+                    // console.log(mid);
+                    // console.log((this.chart.xAxis[0].getExtremes().dataMax + this.chart.xAxis[0].getExtremes().dataMin)/2);
+                    if (this.value === first )
+                        return (this.value);
+                    }
+                },
+                // format: '{value:%Y-%m-%d}',
+            // },
+            // categories : [(this.chart.xAxis[0].getExtremes().dataMax + this.chart.xAxis[0].getExtremes().dataMin)/2]
+            // dateTimeLabelFormats: {
+            //     day: '%e of %b'
+            // },
         },
         yAxis:{
             title : '',
@@ -69,6 +118,9 @@ export class ChartsPage {
                 }
             }
         },
+        marker: {
+            enabled: false
+        },
         legend:{
             enabled: false
         },
@@ -78,12 +130,13 @@ export class ChartsPage {
         
     });
     // this.chartCtrl.setOptions(Highcharts.theme);
-    this.chartCtrl.getHistoryData(16569,this.currentPeriod,true).then(data=>{
-        // console.log(data);
+    this.chartCtrl.getHistoryData(this.listShare[0].instrumentID,this.currentPeriod,true).then(data=>{
+        console.log(data);
         this.chart.addSeries({   
-            id : 16569,    
-            name: 'SHR1',              
-            data: data
+            id : this.listShare[0].instrumentID,    
+            name: this.listShare[0].shareName,              
+            data: data,
+            color: this.listShare[0].color
         }, true);
     });
     // this.chart.redraw();
@@ -91,32 +144,47 @@ export class ChartsPage {
 
 //   Update 
     changePeriod(period){
-        console.log(period);
+        // console.log(period);
         this.currentPeriod = period;
-        console.log(this.currentPeriod);
+        // console.log(this.currentPeriod);
         // console.log(this.chart.get(this.instrumentID[0]).data);
-        for (let i = 0 ; i < this.instrumentID.length ; i++){
-            this.chartCtrl.getHistoryData(this.instrumentID[i],period,true).then(data=>{
+        for (let i = 0 ; i < this.instrumentIDs.length ; i++){
+            this.chartCtrl.getHistoryData(this.instrumentIDs[i],period,true).then(data=>{
                 this.chart.series[i].update({data : data});   
             });
         }
+        // this.chart.xAxis.update({
+        //     xAxis:{
+        //         categories: 
+        //     }
+        // });
+        // this.chart.xAxis.update({
+        //     xAxis: {
+        //     dateTimeLabelFormats: {
+        //         day: '%b of %y'
+        //     },
+        //  },
+        // })
+        
         // this.chart.redraw();
     }
     getSharesData(id){
         this.currentID = id;
     }
-    getChartData(id,name){
-        if (!this.instrumentID.includes(id)){
-            if (this.instrumentID.length < 5){
+    getChartData(id,name,color){
+        console.log(color);
+        if (!this.instrumentIDs.includes(id)){
+            if (this.instrumentIDs.length < 5){
                 //  add Share Name
-                this.shareName.push(name);
+                this.shareNames.push(name);
                 //  Add instrumentID
-                this.instrumentID.push(id);    
+                this.instrumentIDs.push(id);    
                 this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                     this.chart.addSeries({   
                         id: id,
                         data: data,
-                        name: name
+                        name: name,
+                        color: color
                     }, true);
                 });
             }
@@ -126,12 +194,14 @@ export class ChartsPage {
         }
         else {
             this.chart.get(id).remove();
-            this.shareName.splice([this.shareName.indexOf(name)],1);
-            this.instrumentID.splice([this.instrumentID.indexOf(id)],1);
+            this.shareNames.splice([this.shareNames.indexOf(name)],1);
+            this.instrumentIDs.splice([this.instrumentIDs.indexOf(id)],1);
+            this.colors.splice([this.colors.indexOf(color)],1);
             // Xoa phan tu trong shares...
         }    
-      console.log(this.shareName + ' ' + this.shareName.length);
-      console.log(this.instrumentID+ ' ' + this.instrumentID.length);     
+      console.log(this.shareNames + ' ' + this.shareNames.length);
+      console.log(this.instrumentIDs+ ' ' + this.instrumentIDs.length);  
+         
         
         
     }
