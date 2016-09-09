@@ -10545,7 +10545,7 @@ body {
   background-color: #fff; }
 
 .charts-page ion-header {
-  height: 20%; }
+  height: 23%; }
 
 .charts-page .period button {
   z-index: 99;
@@ -10558,39 +10558,27 @@ body {
   display: inline;
   left: 50px;
   position: absolute;
-  top: 6px;
+  top: -17px;
   right: 0; }
 
-.charts-page #charts {
-  width: 100%;
-  height: 250px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-bottom: -15px;
+.charts-page #charts-container {
+  position: relative;
   border-top: 2px solid #848484;
   border-bottom: 2px solid #848484; }
+
+.charts-page #charts {
+  width: 90%;
+  height: 250px;
+  margin-left: 5%;
+  margin-bottom: 25px;
+  padding-bottom: -15px; }
 
 .charts-page #charts .highcharts-container svg {
   border-top: 1px solid #848484;
   margin-top: 30px; }
 
 .charts-page #charts .highcharts-container {
-  height: 260px !important; }
-
-.charts-page .share-item:nth-of-type(1) {
-  color: white; }
-
-.charts-page .share-item:nth-of-type(2) {
-  color: blue; }
-
-.charts-page .share-item:nth-of-type(3) {
-  color: green; }
-
-.charts-page .share-item:nth-of-type(4) {
-  color: orange; }
-
-.charts-page .share-item:nth-of-type(5) {
-  color: yellow; }
+  height: 265px !important; }
 
 .charts-page ion-footer {
   padding-left: 16px;

@@ -168,62 +168,64 @@ export class ChartServices {
         });
     }
 
-    // getDailyDataFromServices(resolve, instrumentId, fDate = null, currentStorageData, isAppend = false){
-    //     let storageData = currentStorageData;
-    //     if(irApp.isOnline){
-    //         let $scope = this;
-    //         var sDate = "";
-    //         if(fDate != null){
-    //             // sDate = $scope.helper.dateFormat(fDate, $scope.defaultDailyDateFormat);
-    //             sDate = sDate.replace(" ", "T") + "/";
-    //         }
-    //         var params = instrumentId + "/" + sDate + irApp.companyCode;
-    //         if (!irApp.appSettingsData.currency.isDefault)
-    //             params += "/" + irApp.appSettingsData.currency.value;
-    //         this.http.get(this.servicesUrl + params, irApp.httpRequestHeader)
-    //             .timeout(irApp.defaultSettings.common.requestTimeout)
-    //             .retry(irApp.defaultSettings.common.retry)
-    //             .subscribe(
-    //                 res => {
-    //                     if(res != undefined && res != null){
-    //                         var data = res.json();
-    //                         if(data.length > 0){
-    //                             if(storageData == null){
-    //                                 storageData = {cacheTime: new Date().getTime()};
-    //                             }
-    //                             if(!isAppend){
-    //                                 storageData[instrumentId] = data;
-    //                                 $scope.processData(data);
-    //                             }
-    //                             else{
-    //                                 var sDate = new Date(storageData[instrumentId][0].Date).toDateString();
-    //                                 var nDate = new Date(data[0].Date).toDateString();
-    //                                 if(sDate == nDate)
-    //                                     storageData[instrumentId] = storageData[instrumentId].concat(data);
-    //                                 else
-    //                                     storageData[instrumentId] = data;
-    //                                 $scope.processData(storageData[instrumentId]);
-    //                             }
-    //                             $scope.localStorage.set(this.dailyStorageKey, JSON.stringify(storageData));
-    //                             resolve($scope.chartData);
-    //                         }
-    //                         else{
-    //                             $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
-    //                         }
-    //                     }
-    //                     else{
-    //                         $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
-    //                     }
-    //                 },
-    //                 error => {
-    //                     console.log(error);
-    //                     $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
-    //                 }
-    //         );
-    //     }
-    //     else
-    //         $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
-    // }
+    getDailyDataFromServices(resolve, instrumentId, fDate = null, currentStorageData, isAppend = false){
+        let storageData = currentStorageData;
+        // if(irApp.isOnline){
+            let $scope = this;
+            var sDate = "";
+            if(fDate != null){
+                console.log(fDate);
+                sDate = $scope.helper.dateFormat(fDate, $scope.defaultDailyDateFormat);
+                console.log(sDate);
+                sDate = sDate.replace(" ", "T") + "/";
+            }
+            var params = instrumentId + "/" + sDate;
+            // if (!irApp.appSettingsData.currency.isDefault)
+                // params += "/" + irApp.appSettingsData.currency.value;
+            this.http.get(this.servicesUrl + params, this.httpRequestHeader)
+                // .timeout(irApp.defaultSettings.common.requestTimeout)
+                // .retry(irApp.defaultSettings.common.retry)
+                .subscribe(
+                    res => {
+                        if(res != undefined && res != null){
+                            var data = res.json();
+                            if(data.length > 0){
+                                if(storageData == null){
+                                    storageData = {cacheTime: new Date().getTime()};
+                                }
+                                if(!isAppend){
+                                    storageData[instrumentId] = data;
+                                    $scope.processData(data);
+                                }
+                                else{
+                                    var sDate = new Date(storageData[instrumentId][0].Date).toDateString();
+                                    var nDate = new Date(data[0].Date).toDateString();
+                                    if(sDate == nDate)
+                                        storageData[instrumentId] = storageData[instrumentId].concat(data);
+                                    else
+                                        storageData[instrumentId] = data;
+                                    $scope.processData(storageData[instrumentId]);
+                                }
+                                $scope.localStorage.set(this.dailyStorageKey, JSON.stringify(storageData));
+                                resolve($scope.chartData);
+                            }
+                            else{
+                                $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
+                            }
+                        }
+                        else{
+                            $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
+                        }
+                    },
+                    error => {
+                        console.log(error);
+                        $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
+                    }
+            );
+        // }
+        // else
+            // $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
+    }
 
     getDailyDataFromStorage(resolve, instrumentId, data){
         if(data != null && data[instrumentId] && data[instrumentId].length > 0){

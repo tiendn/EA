@@ -1,14 +1,16 @@
 <ion-header> </ion-header>
 <ion-content> 
-    <div class="period" > 
-        <button  (click)="changePeriod(1)" class="button button-clear {{currentPeriod == 1 ? 'btn-period-click' : ''}}">1D</button>
-        <button  (click)="changePeriod(3)" class="button button-clear {{currentPeriod == 3 ? 'btn-period-click' : ''}}">3M</button>
-        <button  (click)="changePeriod(6)" class="button button-clear {{currentPeriod == 6 ? 'btn-period-click' : ''}}">6M</button>
-        <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod == 12 ? 'btn-period-click' : ''}}">1Y</button>
-        <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod == 36 ? 'btn-period-click' : ''}}">3Y</button>
-    </div>
     <!---->
-    <div id="charts" style="">
+    <div id = "charts-container">
+        <div class="period" > 
+            <button  (click)="changePeriod(1)" class="button button-clear {{currentPeriod == 1 ? 'btn-period-click' : ''}}">1D</button>
+            <button  (click)="changePeriod(3)" class="button button-clear {{currentPeriod == 3 ? 'btn-period-click' : ''}}">3M</button>
+            <button  (click)="changePeriod(6)" class="button button-clear {{currentPeriod == 6 ? 'btn-period-click' : ''}}">6M</button>
+            <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod == 12 ? 'btn-period-click' : ''}}">1Y</button>
+            <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod == 36 ? 'btn-period-click' : ''}}">3Y</button>
+        </div>
+        <div id="charts" style="">
+        </div>
     </div>
     <!---->
     <span  *ngFor = "let share of shareNames"> {{share}} </span>
@@ -23,9 +25,6 @@
     </div>
     <div class="watch-list-shares">
         <p id = "watch-list-shares-title"> WATCHLIST SHARES </p>
-        <!--<button  (click)="getChartData(listShare[0].instrumentID,listShare[0]..shareName)" class="button button-clear {{instrumentID.indexOf(listShare[0].instrumentID) > 0 ? 'btn-click' : ''}}"> 
-            {{listShare[0].shareName}
-        </button>-->
         <button *ngFor = "let share of listShare" 
             (click)="getChartData(share.instrumentID,share.shareName,share.color)"
             class="button button-clear {{instrumentIDs.indexOf(share.instrumentID) >= 0 ? 'btn-click' : ''}}">

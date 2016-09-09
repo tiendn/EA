@@ -2,7 +2,7 @@
 .charts-page {
   
   ion-header{
-    height: 20%;
+    height: 23%;
   }
 
   .period button{
@@ -22,17 +22,25 @@
     display: inline;
     left : 50px;
     position: absolute;
-    top: 6px;
+    top: -17px;
     right: 0;
   }
+  #charts-container{
+    position: relative;
+    // margin-top :5%;
+    border-top: 2px solid #848484;
+    border-bottom: 2px solid #848484;
+  }      
   #charts{
-    width: 100%;
+    width: 90%;
     height: 250px;
-    margin-top : 20px;
-    margin-bottom : 20px;
+    margin-left: 5%;
+    // margin-right:-5%;
+    // margin-top : 20px;
+    margin-bottom : 25px;
     padding-bottom : -15px;
-    border-top : 2px solid #848484;
-    border-bottom : 2px solid #848484;
+    // border-top : 2px solid #848484;
+    // border-bottom : 2px solid #848484;
   }
   #charts .highcharts-container svg{
     border-top: 1px solid #848484;
@@ -40,24 +48,24 @@
     
   }
   #charts .highcharts-container{
-      height: 260px !important;
+      height: 265px !important;
   }
   
-  .share-item:nth-of-type(1){
-    color: white;
-  }
-  .share-item:nth-of-type(2){
-    color: blue;
-  }
-  .share-item:nth-of-type(3){
-    color: green;
-  }
-  .share-item:nth-of-type(4){
-    color: orange;
-  }
-  .share-item:nth-of-type(5){
-    color: yellow;
-  }
+  // .share-item:nth-of-type(1){
+  //   color: white;
+  // }
+  // .share-item:nth-of-type(2){
+  //   color: blue;
+  // }
+  // .share-item:nth-of-type(3){
+  //   color: green;
+  // }
+  // .share-item:nth-of-type(4){
+  //   color: orange;
+  // }
+  // .share-item:nth-of-type(5){
+  //   color: yellow;
+  // }
 
   ion-footer{
     // max-height: 330px;
