@@ -168,25 +168,26 @@ export class ChartsPage {
     getChartData(id,name,color){
         console.log(color);
         // 
-        let object = [
-            {
-                "instrumentID" : id,
-                "shareName" : name,
-                "color" : color
-            }
-        ]
+        // let object = [
+        //     {
+        //         "instrumentID" : id,
+        //         "shareName" : name,
+        //         "color" : color
+        //     }
+        // ]
         let length = this.sharesChart.length;
-        if (this.getIndexShare(id) > -1){
+        if (this.getIndexShare(id) === -1){
             if (this.sharesChart.length < 5){
                 //  add Share Name
-                // this.sharesChart[length].instrumentID = id;
+                this.sharesChart.length++;
+                this.sharesChart[length].instrumentID = id;
                 //  Add instrumentID
-                // this.sharesChart[length].shareName = name;    
-                // this.sharesChart[length].color = color;  
+                this.sharesChart[length].shareName = name;    
+                this.sharesChart[length].color = color;  
 
 
                 //// Add them mot phan tu vao object.
-                this.sharesChart.push(object);  
+                // this.sharesChart.push(object);  
                 this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                     this.chart.addSeries({   
                         id: id,
