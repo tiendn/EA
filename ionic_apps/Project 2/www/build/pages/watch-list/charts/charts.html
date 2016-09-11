@@ -3,35 +3,36 @@
     <!---->
     <div id = "charts-container">
         <div class="period" > 
-            <button  (click)="changePeriod(1)" class="button button-clear {{currentPeriod == 1 ? 'btn-period-click' : ''}}">1D</button>
-            <button  (click)="changePeriod(3)" class="button button-clear {{currentPeriod == 3 ? 'btn-period-click' : ''}}">3M</button>
-            <button  (click)="changePeriod(6)" class="button button-clear {{currentPeriod == 6 ? 'btn-period-click' : ''}}">6M</button>
-            <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod == 12 ? 'btn-period-click' : ''}}">1Y</button>
-            <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod == 36 ? 'btn-period-click' : ''}}">3Y</button>
+            <button  (click)="changePeriod(1)" class="button button-clear {{currentPeriod === 1 ? 'btn-period-click' : ''}}">1D</button>
+            <button  (click)="changePeriod(3)" class="button button-clear {{currentPeriod === 3 ? 'btn-period-click' : ''}}">3M</button>
+            <button  (click)="changePeriod(6)" class="button button-clear {{currentPeriod === 6 ? 'btn-period-click' : ''}}">6M</button>
+            <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod === 12 ? 'btn-period-click' : ''}}">1Y</button>
+            <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod === 36 ? 'btn-period-click' : ''}}">3Y</button>
         </div>
         <div id="charts" style="">
         </div>
     </div>
     <!---->
-    <span  *ngFor = "let share of shareNames"> {{share}} </span>
-    <p> Tap on the ticker codes below to 
-        compare them. We limit the charting to five tickers
-    </p>
-    <div class ="own-shares">
-        <p id ="own-shares-title"> OWN SHARES </p>
-        <button (click)="getSharesData(1)" class="button button-clear {{currentID == 1 ? 'btn-click' : ''}}" > SHARE1 </button>
-        <button (click)="getSharesData(2)" class="button button-clear {{currentID == 2 ? 'btn-click' : ''}}" > SHARE2 </button>
-        <button (click)="getSharesData(3)" class="button button-clear {{currentID == 3 ? 'btn-click' : ''}}" > LONG SHARE </button>
+    <div class = "footer">
+        <span  *ngFor = "let share of sharesChart" [style.color]= "share.color" class = "sharesName"> {{share.shareName}} </span>
+        <p class="tooltip" > Tap on the ticker codes below to 
+            compare them. We limit the charting to five tickers.
+        </p>
+        <div class ="own-shares">
+            <p class ="own-shares-title"> OWN SHARES </p>
+            <button (click)="getSharesData(1)" class="button button-clear {{currentID == 1 ? 'btn-click' : ''}}" > SHARE1 </button>
+            <button (click)="getSharesData(2)" class="button button-clear {{currentID == 2 ? 'btn-click' : ''}}" > SHARE2 </button>
+            <button (click)="getSharesData(3)" class="button button-clear {{currentID == 3 ? 'btn-click' : ''}}" > LONG SHARE </button>
+        </div>
+        <div class="watch-list-shares">
+            <p class = "watch-list-shares-title"> WATCHLIST SHARES </p>
+            <button *ngFor = "let share of listShare" 
+                (click)="getChartData(share.instrumentID,share.shareName,share.color)"
+                class="button button-clear {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
+                {{share.shareName}}
+            </button>
+        </div>
     </div>
-    <div class="watch-list-shares">
-        <p id = "watch-list-shares-title"> WATCHLIST SHARES </p>
-        <button *ngFor = "let share of listShare" 
-            (click)="getChartData(share.instrumentID,share.shareName,share.color)"
-            class="button button-clear {{instrumentIDs.indexOf(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
-            {{share.shareName}}
-        </button>
-    </div>
-    
 </ion-content>
 <ion-footer>
     

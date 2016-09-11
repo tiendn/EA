@@ -10547,6 +10547,9 @@ body {
 .charts-page ion-header {
   height: 23%; }
 
+.charts-page ion-content {
+  color: #848484; }
+
 .charts-page .period button {
   z-index: 99;
   padding: 0;
@@ -10564,7 +10567,8 @@ body {
 .charts-page #charts-container {
   position: relative;
   border-top: 2px solid #848484;
-  border-bottom: 2px solid #848484; }
+  border-bottom: 2px solid #848484;
+  margin-bottom: 10px; }
 
 .charts-page #charts {
   width: 90%;
@@ -10580,21 +10584,19 @@ body {
 .charts-page #charts .highcharts-container {
   height: 265px !important; }
 
-.charts-page ion-footer {
-  padding-left: 16px;
-  padding-right: 16px; }
+.charts-page .sharesName {
+  margin-top: 10px;
+  margin-right: 10px; }
 
-.charts-page .own-shares p {
-  margin: 0; }
+.charts-page .footer {
+  margin-left: 16px !important; }
+
+.charts-page .tooltip, .charts-page .own-shares-title, .charts-page .watch-list-shares-title {
+  color: #848484 !important; }
 
 .charts-page .own-shares button {
   margin: 0;
   padding: 0 8px 0 8px; }
-
-.charts-page ion-footer p, .charts-page ion-footer h2, .charts-page ion-content p, .charts-page ion-content h2 {
-  margin-left: 16px;
-  margin-right: 16px;
-  color: #848484; }
 
 .charts-page button {
   border: 0;

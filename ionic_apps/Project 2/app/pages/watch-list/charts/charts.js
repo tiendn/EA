@@ -22,7 +22,7 @@ export class ChartsPage {
     this.sharesChart  = [
         {
             "instrumentID":16569,
-            "name":'SHR1',
+            "shareName":'SHR1',
             "color" : 'white'
         }
     ];
@@ -59,16 +59,10 @@ export class ChartsPage {
             "color": 'red'
         }
     ]
-    this.instrumentIDs = [16569];
-    this.shareNames = ['SHR1'];
-    this.colors = ['white'];
-    // console.log(this.listShare);
-    // this.
-    // Mot bien de luu cac ma dang duoc show ra.
-
-    // this.chart = ;
-    // chartServices.getHistoryData(16569,'3M',true);
-    // this.provider = provider;
+    // this.instrumentIDs = [16569];
+    // this.shareNames = ['SHR1'];
+    // this.colors = ['white'];
+    
   }
   dismiss(){
     this.viewCtrl.dismiss();
@@ -138,21 +132,37 @@ export class ChartsPage {
 //   Update 
     changePeriod(period){
         this.currentPeriod = period;
-    
-        for (let i = 0 ; i < this.instrumentIDs.length ; i++){
-            if (this.currentPeriod == 1 ){
-                this.chartCtrl.getDailyData(this.instrumentIDs[i],true).then(data=>{
+        console.log(this.currentPeriod);
+        var dateTimeFormat = [
+            {
+                1 : '%b\' %e',
+                3 : '%b\' %y',
+                6 : '%b\' %y',
+                12 : '%y',
+                36 : '%y'
+            }
+        ]
+        for (let i = 0 ; i < this.sharesChart.length ; i++){
+            if (this.currentPeriod === 1 ){
+                this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
                     this.chart.series[i].update({data : data});   
                 });
             } 
             else {
-                this.chartCtrl.getHistoryData(this.instrumentIDs[i],this.currentPeriod,true).then(data=>{
+                console.log(dateTimeFormat[0][this.currentPeriod]);
+                this.chartCtrl.getHistoryData(this.sharesChart[i].instrumentID,this.currentPeriod,true).then(data=>{
                     this.chart.series[i].update({data : data});   
                 });
             }
-            
         }
-      
+        this.chart.xAxis[0].update({
+            xAxis:{
+                tickInterval: this.currentPeriod * 30 * 24 * 60 * 60 * 1000,
+                dateTimeLabelFormats: {
+                        month: dateTimeFormat[0][this.currentPeriod]
+                }, 
+            }
+        });
     }
     getSharesData(id){
         this.currentID = id;
@@ -162,7 +172,7 @@ export class ChartsPage {
         for (let i = 0 ; i < this.sharesChart.length; i++ )
             if (this.sharesChart[i].instrumentID == id)
                 index = i;
-        console.log(index);
+        // console.log(index);
         return index;
     }
     getChartData(id,name,color){
@@ -179,11 +189,12 @@ export class ChartsPage {
         if (this.getIndexShare(id) === -1){
             if (this.sharesChart.length < 5){
                 //  add Share Name
-                this.sharesChart.length++;
-                this.sharesChart[length].instrumentID = id;
-                //  Add instrumentID
-                this.sharesChart[length].shareName = name;    
-                this.sharesChart[length].color = color;  
+                this.sharesChart.push({instrumentID: id, shareName : name, color : color});
+                // this.sharesChart.length++;
+                // this.sharesChart[length].instrumentID = id;
+                // //  Add instrumentID
+                // this.sharesChart[length].shareName = name;    
+                // this.sharesChart[length].color = color;  
 
 
                 //// Add them mot phan tu vao object.
