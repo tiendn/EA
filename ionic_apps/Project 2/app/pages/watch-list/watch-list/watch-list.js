@@ -20,7 +20,7 @@ export class WatchListPage {
     this.compareTab = ComparePage;
     this.performanceTab = PerformancePage;
     this.HTMLContent = ['Watchlist ','From','To','Change','Change %',
-    'All share data is presented in the currency of your choice. Configure via ','setting'];
+    ];
   }
   dismiss(){
     this.viewCtrl.dismiss();

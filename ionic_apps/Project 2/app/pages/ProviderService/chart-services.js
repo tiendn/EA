@@ -75,8 +75,8 @@ export class ChartServices {
             var params = instrumentId + "/" +
                         $scope.helper.dateFormat(fDate, $scope.defaultHisoryDateFormat) + "/" +
                         $scope.helper.dateFormat(tDate, $scope.defaultHisoryDateFormat); //+ "/" + irApp.companyCode;
-            // this.http.get(this.servicesUrl + params, this.httpRequestHeader)
-            this.http.get('./charts.json')
+            this.http.get(this.servicesUrl + params, this.httpRequestHeader)
+            // this.http.get('./charts.json')
                 // .timeout(irApp.defaultSettings.common.requestTimeout)
                 // .retry(irApp.defaultSettings.common.retry)
                 .subscribe(
@@ -183,8 +183,8 @@ export class ChartServices {
             var params = instrumentId + "/" + sDate;
             // if (!irApp.appSettingsData.currency.isDefault)
                 // params += "/" + irApp.appSettingsData.currency.value;
-            // this.http.get(this.servicesUrl + params, this.httpRequestHeader)
-            this.http.get('./charts.json')
+            this.http.get(this.servicesUrl + params, this.httpRequestHeader)
+            // this.http.get('./charts.json')
                 // .timeout(irApp.defaultSettings.common.requestTimeout)
                 // .retry(irApp.defaultSettings.common.retry)
                 .subscribe(

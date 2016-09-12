@@ -23,7 +23,7 @@ export class HomePage {
     watchListModal.present();
   }
   openIndices(){
-    let watchListModal = this.modalCtrl.create(IndicesPage);
-    watchListModal.present();
+    let watchListModal = this.modalCtrl.create(WatchListPage {type: "indices"});
+    watchListModal.present(1);
   }
 }

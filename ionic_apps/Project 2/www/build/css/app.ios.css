@@ -9246,6 +9246,9 @@ body {
 .charts-page .tooltip, .charts-page .own-shares-title, .charts-page .watch-list-shares-title {
   color: #848484 !important; }
 
+.charts-page .tooltip {
+  margin-bottom: 20px !important; }
+
 .charts-page .own-shares button {
   margin: 0;
   padding: 0 8px 0 8px; }
