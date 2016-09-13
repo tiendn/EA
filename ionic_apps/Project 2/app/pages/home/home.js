@@ -19,11 +19,11 @@ export class HomePage {
 
   }
   openWatchList(){
-    let watchListModal = this.modalCtrl.create(WatchListPage);
+    let watchListModal = this.modalCtrl.create(WatchListPage,{type: "Watchlist"});
     watchListModal.present();
   }
   openIndices(){
-    let watchListModal = this.modalCtrl.create(WatchListPage {type: "indices"});
-    watchListModal.present(1);
+    let indicesModal = this.modalCtrl.create(WatchListPage ,{type: "Indices"}); //
+    indicesModal.present();
   }
 }

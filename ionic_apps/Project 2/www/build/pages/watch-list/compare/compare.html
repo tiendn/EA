@@ -7,7 +7,7 @@
 
 
 <ion-content >
-  <h1> TODAY </h1>
+  <h1> {{dateTitle}} </h1>
   <div class = "scroll-content">
     <div *ngFor ="let item of data"
     [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
@@ -17,7 +17,7 @@
           <span class = "change-pro"> 
             ({{item.ChangePro > 0 ? '+' : '' }}{{item.ChangePro|formatNumber:1}}%)
           </span>
-          <span class="currency">
+          <span *ngIf="currency" class="currency">
             {{item.Currency}}
           </span>
       </div>

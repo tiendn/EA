@@ -7,7 +7,7 @@
   ion-content{
     color: #848484;
   }
-  .period button{
+  .watchlist-period button{
       z-index:  99;
       // border : 0;
       padding: 0;
@@ -15,10 +15,25 @@
       padding-left: 8px; 
       width: 15%;
   }
-  
-  .period {
+  .watchlist-period {
     display: inline;
     left : 50px;
+    position: absolute;
+    top: -17px;
+    right: 0;
+  }
+  .indices-period button{
+      z-index:  99;
+      // border : 0;
+      padding: 0;
+      padding-right: 12%;
+      padding-left: 10%; 
+      width: 15%;
+  }
+  
+  .indices-period {
+    display: inline;
+    left : 40px;
     position: absolute;
     top: -17px;
     right: 0;

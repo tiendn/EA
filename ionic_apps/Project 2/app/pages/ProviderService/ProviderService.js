@@ -13,9 +13,9 @@ export class MyProvider{
     this.http = http;
   };
   
-  getIndicesData(){
+  getIndicesCompareData(){
     return new Promise(resolve => {
-      this.http.get('./indices.json')
+      this.http.get('./indices-compare.json')
       .map(res => res.json())
       .subscribe(
         data => {
@@ -24,6 +24,21 @@ export class MyProvider{
         },
         err => {
           alert("Oops! St bad happened.");
+        }
+      );
+    });
+  }
+  getIndicesPerformanceData(){
+    return new Promise(resolve => {
+      this.http.get('./indices-performance.json')
+      .map(res => res.json())
+      .subscribe(
+        data => {
+          this.stories = data;
+          resolve(this.stories);
+        },
+        err => {
+          alert("Oops! St bad happend.");
         }
       );
     });

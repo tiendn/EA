@@ -10550,16 +10550,30 @@ body {
 .charts-page ion-content {
   color: #848484; }
 
-.charts-page .period button {
+.charts-page .watchlist-period button {
   z-index: 99;
   padding: 0;
   padding-right: 8px;
   padding-left: 8px;
   width: 15%; }
 
-.charts-page .period {
+.charts-page .watchlist-period {
   display: inline;
   left: 50px;
+  position: absolute;
+  top: -17px;
+  right: 0; }
+
+.charts-page .indices-period button {
+  z-index: 99;
+  padding: 0;
+  padding-right: 12%;
+  padding-left: 10%;
+  width: 15%; }
+
+.charts-page .indices-period {
+  display: inline;
+  left: 40px;
   position: absolute;
   top: -17px;
   right: 0; }
@@ -10630,7 +10644,7 @@ body {
   position: relative;
   margin-bottom: 30px; }
 
-.watch-list-page .btn-header-watch {
+.watch-list-page .btn-header-title {
   background-color: white;
   color: black; }
 
@@ -10641,7 +10655,7 @@ body {
   background: transparent;
   margin: 0; }
 
-.watch-list-page .btn-header-watch img {
+.watch-list-page .btn-header-titlewatch img {
   height: 20px;
   width: 20px; }
 
@@ -10962,12 +10976,12 @@ body {
   padding-left: 16px;
   font-size: 14px; }
 
-.watch-list-page .btn-header-watch {
+.watch-list-page .btn-header-title {
   font-size: 12px;
   font-weight: medium;
   margin-left: calc(50% - 43.5px); }
 
-.watch-list-page .btn-header-watch img {
+.watch-list-page .btn-header-title img {
   height: 20px;
   width: 20px; }
 

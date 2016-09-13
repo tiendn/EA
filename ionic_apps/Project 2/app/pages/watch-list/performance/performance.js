@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ViewController } from 'ionic-angular';
+import {  NavParams} from 'ionic-angular';
 import {MyProvider} from '../../ProviderService/ProviderService';
 import {FormatNumber} from '../../PipeService/formatnumber';
 @Component({
@@ -10,23 +10,31 @@ import {FormatNumber} from '../../PipeService/formatnumber';
 export class PerformancePage {
   static get parameters(){
     return [
-      [ViewController],
+      [NavParams],
       [MyProvider]
     ]
   }
-  constructor(viewCtrl,provider) {
+  constructor(NavParams,provider) {
     this.data = [];
-    this.viewCtrl = viewCtrl;
+    this.navParam = NavParams;
     this.provider = provider;
-    this.HTMLContent = ['Watchlist ','From','To','Change','Change %',
-    'All share data is presented in the currency of your choice. Configure via ','setting'];
+    this.itemHeader = ['6M','52W','YTD'];
   }
   
   ionViewLoaded(){
     let self = this;
-    this.provider.getWatchListPerformanceData()
-    .then(data => {
-      self.data = data;
-    });
+    if (this.navParam.data === "Watchlist"){
+        this.provider.getWatchListPerformanceData()
+          .then(data => {
+            self.data = data;
+          });
+    }
+    else if (this.navParam.data === "Indices"){
+        this.provider.getIndicesPerformanceData()
+          .then(data => {
+            self.data = data;
+          });
+    }
+    
   }
 }

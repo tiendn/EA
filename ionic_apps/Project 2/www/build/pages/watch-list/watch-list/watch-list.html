@@ -2,10 +2,13 @@
 <ion-header>
 
   <div class= "header">
-    <button class="btn-header-watch">
-      {{HTMLContent[0]}} &nbsp;
-      <img src="./img/Watchlist_ViewIcon.png">
+    <button class="btn-header-title">
+        {{type}}
+        <ion-icon class="irapp-icon" name="irapp-watchlist"></ion-icon>
     </button>
+    <!--<button class="btn-header-close" (click)="closeModal()">
+        <ion-icon class="irapp-icon" name="irapp-closemodal"></ion-icon>
+    </button>-->
     <button class="btn-header-close" (click)="dismiss()">
       <img src = "./img/Fill 1.png" >
     </button>
@@ -15,9 +18,9 @@
 
 <ion-content >
   <ion-tabs>
-    <ion-tab  tabTitle="Charts" [root]="chartsTab"></ion-tab>
-    <ion-tab  tabTitle="Compare" [root]="compareTab"></ion-tab>
-    <ion-tab  tabTitle="Performance" [root]="performanceTab"></ion-tab>
+    <ion-tab  tabTitle="Charts" [root]="chartsTab" [rootParams]="type"></ion-tab>
+    <ion-tab  tabTitle="Compare" [root]="compareTab" [rootParams]="type"></ion-tab>
+    <ion-tab  tabTitle="Performance" [root]="performanceTab" [rootParams]="type"></ion-tab>
   </ion-tabs>
 
 
