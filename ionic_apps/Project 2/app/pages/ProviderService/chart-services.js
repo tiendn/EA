@@ -137,6 +137,7 @@ export class ChartServices {
 
     /*---------------------------INTRADAY---------------------------------*/
     getDailyData(instrumentId, isPercentData = false){
+        // alert(1);
         this.isPercentData = isPercentData;
         let $scope = this;
         this.dailyStorageKey = this.apiName + "_" + this.dailyKey;
@@ -159,7 +160,9 @@ export class ChartServices {
             // console.log(this.servicesUrl + params);
             // if (!irApp.appSettingsData.currency.isDefault)
                 // params += "/" + irApp.appSettingsData.currency.value;
+            // console.log(this.servicesUrl + params);    
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
+            // console.log("http://10.10.15.8/myirappapi2/api/v1/chartdata/"+instrumentId+"/20160912T000000");
             // this.http.get("http://10.10.15.8/myirappapi2/api/v1/chartdata/"+instrumentId+"/20160912T000000", this.httpRequestHeader)
             // this.http.get('./charts.json')
                 // .timeout(irApp.defaultSettings.common.requestTimeout)
@@ -247,8 +250,10 @@ export class ChartServices {
             // console.log(this.servicesUrl + params);
             // if (!irApp.appSettingsData.currency.isDefault)
                 // params += "/" + irApp.appSettingsData.currency.value;
-            // this.http.get(this.servicesUrl + params, this.httpRequestHeader)
-            this.http.get("http://10.10.15.8/myirappapi2/api/v1/chartdata/"+instrumentId+"/20160912T000000", this.httpRequestHeader)
+            this.http.get(this.servicesUrl + params, this.httpRequestHeader)
+            // console.log(this.servicesUrl + params);
+            // this.http.get("http://10.10.15.8/myirappapi2/api/v1/chartdata/"+instrumentId+"/20160911T000000", this.httpRequestHeader)
+            
             // this.http.get('./charts.json')
                 // .timeout(irApp.defaultSettings.common.requestTimeout)
                 // .retry(irApp.defaultSettings.common.retry)
@@ -333,6 +338,6 @@ export class ChartServices {
                 $scope.chartData.volume.push([date, parseFloat(obj.Volume)]);
             });
         }
-        console.log($scope.chartData.length);
+        // console.log($scope.chartData.length);
     }
 }

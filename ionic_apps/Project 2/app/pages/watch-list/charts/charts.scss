@@ -59,11 +59,15 @@
   #charts .highcharts-container{
       height: 265px !important;
   }
-  .sharesName {
-    margin-top : 10px;
-    margin-right: 10px;
+  .share-item{
+    height: 10px;
+    width: 100%;
   }
-
+  .sharesName {
+    // height: 20px;
+    margin-top : 10px;
+    margin-right: 20px;
+  }
   .footer{
     margin-left: 16px !important;
   }
@@ -74,8 +78,8 @@
     margin-bottom: 20px !important;
   }
   .own-shares button{
-    margin: 0;
-    padding: 0 8px 0 8px;
+    // margin-right: 8px;
+    // padding: 0 8px 0 8px;
   }
    button{
     border: 0;

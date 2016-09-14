@@ -75,42 +75,64 @@ export class ChartsPage {
         this.dateTimeArr = [];
         this.sharesChart = [
             {
-                "instrumentID":32940,
+                "instrumentID":16569,
                 "shareName":'SHR1',
                 "color" : 'white'
             }
+           
         ];
+        this.color = ["white","blue","green","orange","yellow"];
         // console.log(this.sharesChart);
-        this.listShare = [
+        this.listOwnShares = [
+            {
+                "instrumentID":16569,
+                "shareName":'SHR1',
+                // "name" : "SHARE1",
+                // "color" : '#e27a8d'
+            },
+            {
+                "instrumentID":16570,
+                "shareName":'SHR2',
+                //  "name" : "SHARE2",
+                // "color" : 'pink'
+            },
+            {
+                "instrumentID":39083,
+                "shareName":'LSHR',
+                //  "name" : "LONGSHARE",
+                // "color" : '#388733'
+            }
+        ]
+        this.watchListShare = [
             {
                 "instrumentID" : 32940,
-                "shareName" : 'SHR1',
-                "color": 'white'
+                "shareName" : 'TICR1',
+                // "color": 'white'
             },
             {
                 "instrumentID" : 70003,
                 "shareName" : 'TICR2',
-                "color": 'blue'
+                // "color": 'blue'
             },
             {
                 "instrumentID" : 71957,
                 "shareName" : 'TICR3',
-                "color": 'green'
+                // "color": 'green'
             },
             {
                 "instrumentID" : 100980,
                 "shareName" : 'TICR4',
-                "color": 'orange'
+                // "color": 'orange'
             },
             {
                 "instrumentID" : 32864,
                 "shareName" : 'TICR5',
-                "color": 'yellow'
+                // "color": 'yellow'
             },
             {
                 "instrumentID" : 32865,
                 "shareName" : 'TICR6',
-                "color": 'red'
+                // "color": 'red'
             }
         ]
     }
@@ -123,25 +145,6 @@ export class ChartsPage {
                 backgroundColor: '#484849',
                 renderTo : 'charts',
                 type     : 'line',
-                events: {
-                    redraw: function () {
-                        var label = this.renderer.label('The chart was just redrawn', 100, 120)
-                            .attr({
-                                fill: Highcharts.getOptions().colors[0],
-                                padding: 10,
-                                r: 5,
-                                zIndex: 8
-                            })
-                            .css({
-                                color: '#FFFFFF'
-                            })
-                            .add();
-
-                        setTimeout(function () {
-                            label.fadeOut();
-                        }, 1000);
-                    }
-                }
             },
             title: {
                 text: '',
@@ -149,6 +152,11 @@ export class ChartsPage {
                     color: 'white',
                     font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
                 }
+            },
+            tooltip: {
+                valueDecimals: 2,
+                // valuePrefix: '$',
+                valueSuffix: ' %'
             },
             xAxis: {
                 gridLineWidth: 1,
@@ -185,12 +193,12 @@ export class ChartsPage {
             },
             
         });
-        this.chartCtrl.getHistoryData(this.listShare[0].instrumentID,this.currentPeriod,true).then(data=>{
+        this.chartCtrl.getHistoryData(this.sharesChart[0].instrumentID,this.currentPeriod,true).then(data=>{
             this.chart.addSeries({   
-                id : this.listShare[0].instrumentID,    
-                name: this.listShare[0].shareName,              
+                id : this.sharesChart[0].instrumentID,    
+                name: this.sharesChart[0].shareName,              
                 data: data,
-                color: this.listShare[0].color
+                color: this.color[0]
             }, true);
         });
     }
@@ -221,6 +229,11 @@ export class ChartsPage {
                     year:"%Y"
                 },
             },
+            tooltip: {
+                valueDecimals: 2,
+                // valuePrefix: '$',
+                valueSuffix: ' %'
+            },
             yAxis:{
                 title : '',
                 gridLineWidth: 0,
@@ -246,10 +259,10 @@ export class ChartsPage {
             this.chartCtrl.getHistoryData(this.sharesChart[i].instrumentID,this.currentPeriod,true).then(data=>{
                 // console.log(data);
                 this.chart.addSeries({   
-                    id : this.listShare[i].instrumentID,    
-                    name: this.listShare[i].shareName,              
+                    id : this.watchListShare[i].instrumentID,    
+                    name: this.watchListShare[i].shareName,              
                     data: data,
-                    color: this.listShare[i].color
+                    color: this.color[this.sharesChart.length]
                 }, true); 
             });
         }
@@ -267,6 +280,11 @@ export class ChartsPage {
                     color: 'white',
                     font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
                 }
+            },
+            tooltip: {
+                valueDecimals: 2,
+                // valuePrefix: '$',
+                valueSuffix: ' %'
             },
             xAxis: {
                 gridLineWidth: 1,
@@ -307,10 +325,10 @@ export class ChartsPage {
                 console.log(this.sharesChart[i].instrumentID);
                 console.log(data.length);
                 this.chart.addSeries({   
-                    id : this.listShare[i].instrumentID,    
-                    name: this.listShare[i].shareName,              
+                    id : this.watchListShare[i].instrumentID,    
+                    name: this.watchListShare[i].shareName,              
                     data: data,
-                    color: this.listShare[i].color
+                    color: this.color[this.sharesChart.length]
                 }, true);
             });
         }
@@ -340,32 +358,43 @@ export class ChartsPage {
                 index = i;
         return index;    
     }
+    // transform(number, decimalPlaces){
+    //     var c = decimalPlaces;
+    //     var d = ",";
+    //     var t = ".";
+    //     var n = number, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+    //     var number = s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+    //     return number;
+    // }
     getChartData(id,name,color){
-        let length = this.sharesChart.length;
         if (this.getIndexShare(id) === -1){
             if (this.sharesChart.length < 5){
-                this.sharesChart.push({instrumentID: id, shareName : name, color : color});
+                this.sharesChart.push({instrumentID: id, shareName : name, color : this.color[this.sharesChart.length]});
                 if (this.currentPeriod !== 1){
                     this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
+                        
                         if (data.length > 0){
+                            // data = data.map((n) => parseInt(n).toFixed(2));
+                            // console.log(data);
                             this.chart.addSeries({   
                                 id: id,
                                 data: data,
                                 name: name,
-                                color: color
+                                color: this.color[this.sharesChart.length-1]
                             }, true);
                         }
                         
                     });
                 }
-                else {
+                else if (this.currentPeriod === 1) {
                     this.chartCtrl.getDailyData(id,true).then(data=>{
+                        console.log(data.length);
                         if (data.length > 0){
                             this.chart.addSeries({   
                                 id: id,
                                 data: data,
                                 name: name,
-                                color: color
+                                color: this.color[this.sharesChart.length-1]
                             }, true);
                         }
                     });
@@ -380,7 +409,8 @@ export class ChartsPage {
             this.sharesChart = this.sharesChart.filter(function(el) {
                 return el.instrumentID !== id;
             });
-            this.chart.get(id).remove();
+            if (this.chart.get(id) !== null)
+                this.chart.get(id).remove();
         }    
     }
 }

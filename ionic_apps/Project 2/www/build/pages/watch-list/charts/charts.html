@@ -3,34 +3,33 @@
     <!---->
     <div id = "charts-container">
         <div class="{{type == 0 ? 'watchlist-period' : type == 1 ? 'indices-period' :''  }} "> 
-            <button  *ngFor="let period of listPeriod" (click)="changePeriod(period.Value)" class="button button-clear {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">{{period.Name}}</button>
-            <!--<button  (click)="changePeriod(3)" class="button button-clear {{currentPeriod === 3 ? 'btn-period-click' : ''}}">3M</button>
-            <button  (click)="changePeriod(6)" class="button button-clear {{currentPeriod === 6 ? 'btn-period-click' : ''}}">6M</button>
-            <button  (click)="changePeriod(12)" class="button button-clear {{currentPeriod === 12 ? 'btn-period-click' : ''}}">1Y</button>
-            <button  (click)="changePeriod(36)" class="button button-clear {{currentPeriod === 36 ? 'btn-period-click' : ''}}">3Y</button>-->
+            <button  *ngFor="let period of listPeriod" 
+                (click)="changePeriod(period.Value)" 
+                class="button button-clear {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
+            {{period.Name}}
+            </button>
         </div>
         <div id="charts" style="">
         </div>
     </div>
     <!---->
     <div class = "footer">
-        <span  *ngFor = "let share of sharesChart" [style.color]= "share.color" class = "sharesName"> {{share.shareName}} </span>
+        <div class="share-item">
+            <span  *ngFor = "let share of sharesChart" [style.color]= "share.color" class = "sharesName"> {{share.shareName}} </span>
+        </div>
         <p class="tooltip" > {{tooltip}}
         </p>
         <div class ="own-shares">
             <p class ="own-shares-title"> {{ownShareTitle}}  </p>
-            <button *ngFor = "let share of listShare" 
-                (click)="getChartData(share.instrumentID,share.shareName,share.color)"
-                class="button button-clear {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
-                {{share.shareName}}
-            </button>
-            <!--<button (click)="getSharesData(1)" class="button button-clear {{currentID == 1 ? 'btn-click' : ''}}" > SHARE1 </button>
-            <button (click)="getSharesData(2)" class="button button-clear {{currentID == 2 ? 'btn-click' : ''}}" > SHARE2 </button>
-            <button (click)="getSharesData(3)" class="button button-clear {{currentID == 3 ? 'btn-click' : ''}}" > LONG SHARE </button>-->
+            <button *ngFor = "let ownShare of listOwnShares" 
+                (click)="getChartData(ownShare.instrumentID,ownShare.shareName,ownShare.color)"
+                class="button button-clear {{getIndexShare(ownShare.instrumentID) >= 0 ? 'btn-click' : ''}}">
+                {{ownShare.shareName}}
+            </button>          
         </div>
         <div class="watch-list-shares">
             <p class = "watch-list-shares-title"> {{watchListSharesTitle}} </p>
-            <button *ngFor = "let share of listShare" 
+            <button *ngFor = "let share of watchListShare" 
                 (click)="getChartData(share.instrumentID,share.shareName,share.color)"
                 class="button button-clear {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
                 {{share.shareName}}

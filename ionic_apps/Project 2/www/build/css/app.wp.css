@@ -10598,9 +10598,13 @@ body {
 .charts-page #charts .highcharts-container {
   height: 265px !important; }
 
+.charts-page .share-item {
+  height: 10px;
+  width: 100%; }
+
 .charts-page .sharesName {
   margin-top: 10px;
-  margin-right: 10px; }
+  margin-right: 20px; }
 
 .charts-page .footer {
   margin-left: 16px !important; }
@@ -10610,10 +10614,6 @@ body {
 
 .charts-page .tooltip {
   margin-bottom: 20px !important; }
-
-.charts-page .own-shares button {
-  margin: 0;
-  padding: 0 8px 0 8px; }
 
 .charts-page button {
   border: 0;
