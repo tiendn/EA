@@ -96,7 +96,7 @@ export class ChartsPage {
                 "color" : '#e27a8d'
             },
             {
-                "instrumentID":16570,
+                "instrumentID": 32864,
                 "shareName":'SHR2',
                 //  "name" : "SHARE2",
                 "color" : 'pink'
@@ -130,7 +130,7 @@ export class ChartsPage {
                 "color": 'orange'
             },
             {
-                "instrumentID" : 32864,
+                "instrumentID" : 16570,
                 "shareName" : 'TICR5',
                 "color": 'yellow'
             },
@@ -227,13 +227,20 @@ export class ChartsPage {
             });
         }
         this.chartCtrl.getHistoryData(this.sharesChart[0].instrumentID,this.currentPeriod,true).then(data=>{
-            this.recentDay = data[0][0];
-            this.chart.addSeries({   
-                id : this.sharesChart[0].instrumentID,    
-                name: this.sharesChart[0].shareName,              
-                data: data,
-                color: this.sharesChart[0].color
-            }, true);
+            if (data.length > 0){
+                if (this.currentPeriod === 1 )
+                    this.recentDay = data[0][0];
+                console.log(data);
+                this.chart.addSeries({   
+                    id : this.sharesChart[0].instrumentID,    
+                    name: this.sharesChart[0].shareName,              
+                    data: data,
+                    color: this.sharesChart[0].color
+                }, true);
+            }
+            else {
+                console.log("This day have no data");
+            }
         });
     }
     loadHistoryChart(){
@@ -297,7 +304,6 @@ export class ChartsPage {
             
         });
         for (let i = 0 ; i < this.sharesChart.length ; i++){
-            
             this.chartCtrl.getHistoryData(this.sharesChart[i].instrumentID,this.currentPeriod,true).then(data=>{
                 this.chart.addSeries({   
                     id : this.watchListShare[i].instrumentID,    
@@ -366,20 +372,26 @@ export class ChartsPage {
             },
             
         });
+        let choose = false;
         for (let i = 0 ; i < this.sharesChart.length ; i++){
             console.log(this.sharesChart[i].isOwnShare);    
             if (this.sharesChart[i].isOwnShare === true){
                 this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
                 // console.log(this.sharesChart[i].instrumentID);
-                    console.log(data[0][0]);
-                    this.recentDay = data[0][0];
-                    this.chart.addSeries({   
-                        id : this.watchListShare[i].instrumentID,    
-                        name: this.watchListShare[i].shareName,              
-                        data: data,
-                        // color: this.color[this.sharesChart.length]
-                        color:  this.watchListShare[i].color
-                    }, true);
+                    if (data.length > 0 ){
+                        console.log(data[0][0]);
+                        this.recentDay = data[0][0];
+                        this.chart.addSeries({   
+                            id : this.watchListShare[i].instrumentID,    
+                            name: this.watchListShare[i].shareName,              
+                            data: data,
+                            // color: this.color[this.sharesChart.length]
+                            color:  this.watchListShare[i].color
+                        }, true);
+                        choose = true;
+                    }
+                    // break;
+                    if (choose ) break;
                 });
                 // console.log(recentDay);
             }
@@ -389,14 +401,17 @@ export class ChartsPage {
                 this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentDay,true).then(data=>{
                 // console.log(this.sharesChart[i].instrumentID);
                     // console.log(data[0][0]);
+                    // console.log(data);
                     // recentDay = data[0][0];
-                    this.chart.addSeries({   
-                        id : this.watchListShare[i].instrumentID,    
-                        name: this.watchListShare[i].shareName,              
-                        data: data,
-                        // color: this.color[this.sharesChart.length]
-                        color:  this.watchListShare[i].color
-                    }, true);
+                    if (data.length > 0 ){
+                        this.chart.addSeries({   
+                            id : this.watchListShare[i].instrumentID,    
+                            name: this.watchListShare[i].shareName,              
+                            data: data,
+                            // color: this.color[this.sharesChart.length]
+                            color:  this.watchListShare[i].color
+                        }, true);
+                    }
                 });
             }
         }   
@@ -451,7 +466,7 @@ export class ChartsPage {
                 if (bool === true ) this.countOwnShare += 1;
                 if (this.currentPeriod !== 1){
                     this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
-                        
+                        // console.log(data);
                         if (data.length > 0){
                             this.chart.addSeries({   
                                 id: id,
@@ -471,9 +486,10 @@ export class ChartsPage {
                     //     if (this.sharesChart[i].isOwnShare === true)
 
                     // }
+                    console.log(this.recentDay);
                     if (this.recentDay !== 0){
                         this.chartCtrl.getDailyData(id,this.recentDay,true).then(data=>{
-                            console.log(data.length);
+                            // console.log(data.length);
                             if (data.length > 0){
                                 this.chart.addSeries({   
                                     id: id,
@@ -486,9 +502,11 @@ export class ChartsPage {
                         });
                     }
                     else {
-                        this.chartCtrl.getDailyData(id,true).then(data=>{
-                            console.log(data.length);
+                        this.chartCtrl.getLastDailyData(id,true).then(data=>{
+                            // console.log(data.length);
                             if (data.length > 0){
+                                // console.log(data[0][0]);
+                                this.recentDay = data[0][0];
                                 this.chart.addSeries({   
                                     id: id,
                                     data: data,
@@ -522,20 +540,59 @@ export class ChartsPage {
                 }
             }
             else{
-                console.log(id);
+                // Xóa một own share .
+                //  cần cập nhật lại day mới
+                
+                // console.log(id);
+                // Giam count ownshare có trong charts
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     this.countOwnShare--;
                 }
+                // Lọc danh sách item được chọn
                 this.sharesChart = this.sharesChart.filter(function(el) {
                     return el.instrumentID !== id;
                 });
+                // Xóa line được chọn
                 if (this.chart.get(id) !== null)
                     this.chart.get(id).remove();
+                // Vẽ lại đồ thị lấy cái mới. 
+                // Phải lấy đúng ownshare đầu tiên đang được chọn
+                console.log(this.sharesChart);
+                let choose = false;
+                for (let i = 0 ; i < this.sharesChart.length ; i++){
+                // console.log(this.sharesChart[i].isOwnShare);    
+                    if (this.sharesChart[i].isOwnShare === true){
+                        this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true)
+                        .then(data=>{
+                    // console.log(this.sharesChart[i].instrumentID);
+                        console.log(this.chartCtrl.getDay(this.recentDay));
+                        // console.log(data);
+                            if (data.length > 0 ){
+                               console.log(this.chartCtrl.getDay(data[0][0]));
+                               if (this.chartCtrl.getDay(this.recentDay) === this.chartCtrl.getDay(data[0][0]))
+                                   {}
+                               else{
+                                   this.recentDay = data[0][0];
+                                   changePeriod(this.currentPeriod);
+                                   
+                                }
+                                choose = true;
+                                // Cần break khi chọn được ownshare thứ 2 .
+                                // Nếu k sẽ lặp tới ownshare cuối cùng và lấy giá trị đó
+                                // break;
+                            }
+                            // else break;
+                        }, true);
+                        if (choose) break;
+                    // });
+                    }
+              }
+                
             }
+        } 
             
-            
-        }    
+    }    
         // console.log(this.sharesChart);
         // console.log(this.chart);
-    }
+    // }
 }

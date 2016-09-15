@@ -45,6 +45,9 @@
   }
 }
 .watch-list-page{
+  scroll-content{
+    overflow-y: scroll;
+  }
   .tab-button-text{
       font-size: 15px !important;
     }
@@ -267,7 +270,8 @@
         font-size: 17px;
       }
       .div-item-content {
-      border-bottom: 3px solid #c8c7cc;
+      border-bottom: 2px solid #c8c7cc;
+      max-height:  calc(100%  - 220px);
     }
       // .item-box,.item-header{
       //   margin-right:  0;

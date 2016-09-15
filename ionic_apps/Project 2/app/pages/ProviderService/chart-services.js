@@ -14,7 +14,7 @@ export class ChartServices {
         this.localStorage = new Storage(LocalStorage);
         this.helper = helper;
         this.apiName = "chartdata";
-        this.servicesUrl = "http://113.190.248.146/myirappapi2/api/v1/" + this.apiName + "/";
+        this.servicesUrl = "http://10.10.15.8/myirappapi2/api/v1/" + this.apiName + "/";
         this.httpRequestHeader = {
             headers: {
                 'Authorization': "Basic bm9ybWFsdXNlcjpwNmVqYVByRQ=="
@@ -149,10 +149,12 @@ export class ChartServices {
             // fDate = $scope.helper.dateFormat(fDate, $scope.defaultDailyDateFormat);
             // fDate = helper.dateFormat(recentDay, "yyyymmdd");
             var fDate = $scope.helper.dateFormat(recentDay, $scope.defaultHisoryDateFormat);
+            // console.log(fDate);
             fDate = fDate + "T000000";
             // console.log(fDate);
             fDate = fDate.replace(" ", "T") + "/";
             var params = instrumentId + "/" + fDate;
+            console.log(this.servicesUrl + params);
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
                 .subscribe(
                     res => {
@@ -186,7 +188,10 @@ export class ChartServices {
         return new Promise(resolve => {
             let $scope = this;
             var fDate = new Date(new Date().setHours(0,0,0,0));
-            fDate = "20160916T000000";
+            fDate = $scope.helper.dateFormat(fDate, $scope.defaultHisoryDateFormat);
+            fDate = fDate + "T000000";
+            fDate = fDate.replace(" ", "T") + "/";
+            // fDate = "20160916T000000";
             var params = instrumentId + "/" + fDate;
             console.log(this.servicesUrl + params);    
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
@@ -274,7 +279,7 @@ export class ChartServices {
         // else
             // $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
     }
-
+    
     getDailyDataFromStorage(resolve, instrumentId, data){
         if(data != null && data[instrumentId] && data[instrumentId].length > 0){
             this.processData(data[instrumentId]);
@@ -314,5 +319,8 @@ export class ChartServices {
             });
         }
         // console.log($scope.chartData.length);
+    }
+    getDay(recentDay){
+        return this.helper.dateFormat(recentDay, this.defaultHisoryDateFormat);
     }
 }
