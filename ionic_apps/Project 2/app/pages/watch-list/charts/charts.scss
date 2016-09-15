@@ -19,14 +19,14 @@ $thin-font: "HelveticaNeue-Thin";
     display: inline;
     left : 50px;
     position: absolute;
-    top: -10px;
+    top: -14px;
     right: 0;
   }
   .indices-period {
     display: inline;
     left : 40px;
     position: absolute;
-    top: -12px;
+    top: -15px;
     right: 0;
   }
   #charts-container{
@@ -84,7 +84,7 @@ $thin-font: "HelveticaNeue-Thin";
   }
   .btn-period-click{
     font-family: $medium-font;
-    // font-size: 40px;
+    font-size: 18px !important;
   }
   .btn-share{
     font-family: $light-font;

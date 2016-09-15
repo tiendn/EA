@@ -9212,14 +9212,14 @@ body {
   display: inline;
   left: 50px;
   position: absolute;
-  top: -10px;
+  top: -14px;
   right: 0; }
 
 .charts-page .indices-period {
   display: inline;
   left: 40px;
   position: absolute;
-  top: -12px;
+  top: -15px;
   right: 0; }
 
 .charts-page #charts-container {
@@ -9270,7 +9270,8 @@ body {
   font-family: "HelveticaNeue-Light"; }
 
 .charts-page .btn-period-click {
-  font-family: "HelveticaNeue-Medium"; }
+  font-family: "HelveticaNeue-Medium";
+  font-size: 18px !important; }
 
 .charts-page .btn-share {
   font-family: "HelveticaNeue-Light"; }
