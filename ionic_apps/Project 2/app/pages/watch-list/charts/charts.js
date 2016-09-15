@@ -88,51 +88,51 @@ export class ChartsPage {
                 "instrumentID":16569,
                 "shareName":'SHR1',
                 // "name" : "SHARE1",
-                // "color" : '#e27a8d'
+                "color" : '#e27a8d'
             },
             {
                 "instrumentID":16570,
                 "shareName":'SHR2',
                 //  "name" : "SHARE2",
-                // "color" : 'pink'
+                "color" : 'pink'
             },
             {
                 "instrumentID":39083,
                 "shareName":'LSHR',
                 //  "name" : "LONGSHARE",
-                // "color" : '#388733'
+                "color" : '#388733'
             }
         ]
         this.watchListShare = [
             {
                 "instrumentID" : 32940,
                 "shareName" : 'TICR1',
-                // "color": 'white'
+                "color": 'white'
             },
             {
                 "instrumentID" : 70003,
                 "shareName" : 'TICR2',
-                // "color": 'blue'
+                "color": 'blue'
             },
             {
                 "instrumentID" : 71957,
                 "shareName" : 'TICR3',
-                // "color": 'green'
+                "color": 'green'
             },
             {
                 "instrumentID" : 100980,
                 "shareName" : 'TICR4',
-                // "color": 'orange'
+                "color": 'orange'
             },
             {
                 "instrumentID" : 32864,
                 "shareName" : 'TICR5',
-                // "color": 'yellow'
+                "color": 'yellow'
             },
             {
                 "instrumentID" : 32865,
                 "shareName" : 'TICR6',
-                // "color": 'red'
+                "color": 'red'
             }
         ]
     }
@@ -148,14 +148,9 @@ export class ChartsPage {
             },
             title: {
                 text: '',
-                style: {
-                    color: 'white',
-                    font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
-                }
             },
             tooltip: {
                 valueDecimals: 2,
-                // valuePrefix: '$',
                 valueSuffix: ' %'
             },
             xAxis: {
@@ -171,6 +166,12 @@ export class ChartsPage {
                     month: '%b\' %e',
                     year:"%Y"
                 },
+                labels:{
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
+                    }
+                }
             },
             yAxis:{
                 title : '',
@@ -198,7 +199,7 @@ export class ChartsPage {
                 id : this.sharesChart[0].instrumentID,    
                 name: this.sharesChart[0].shareName,              
                 data: data,
-                color: this.color[0]
+                color: this.sharesChart[0].color
             }, true);
         });
     }
@@ -211,11 +212,8 @@ export class ChartsPage {
             },
             title: {
                 text: '',
-                style: {
-                    color: 'white',
-                    font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
-                }
             },
+            
             xAxis: {
                 gridLineWidth: 1,
                 tickInterval: (this.currentPeriod / 3) * 30 * 24 * 60 * 60 * 1000,            
@@ -231,7 +229,6 @@ export class ChartsPage {
             },
             tooltip: {
                 valueDecimals: 2,
-                // valuePrefix: '$',
                 valueSuffix: ' %'
             },
             yAxis:{
@@ -257,12 +254,11 @@ export class ChartsPage {
         });
         for (let i = 0 ; i < this.sharesChart.length ; i++){
             this.chartCtrl.getHistoryData(this.sharesChart[i].instrumentID,this.currentPeriod,true).then(data=>{
-                // console.log(data);
                 this.chart.addSeries({   
                     id : this.watchListShare[i].instrumentID,    
                     name: this.watchListShare[i].shareName,              
                     data: data,
-                    color: this.color[this.sharesChart.length]
+                    color: this.watchListShare[i].color
                 }, true); 
             });
         }
@@ -276,10 +272,6 @@ export class ChartsPage {
             },
             title: {
                 text: '',
-                style: {
-                    color: 'white',
-                    font: 'bold 16px "Trebuchet MS", Verdana, sans-serif'
-                }
             },
             tooltip: {
                 valueDecimals: 2,
@@ -328,7 +320,8 @@ export class ChartsPage {
                     id : this.watchListShare[i].instrumentID,    
                     name: this.watchListShare[i].shareName,              
                     data: data,
-                    color: this.color[this.sharesChart.length]
+                    // color: this.color[this.sharesChart.length]
+                    color:  this.watchListShare[i].color
                 }, true);
             });
         }
@@ -358,18 +351,11 @@ export class ChartsPage {
                 index = i;
         return index;    
     }
-    // transform(number, decimalPlaces){
-    //     var c = decimalPlaces;
-    //     var d = ",";
-    //     var t = ".";
-    //     var n = number, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
-    //     var number = s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
-    //     return number;
-    // }
+    
     getChartData(id,name,color){
         if (this.getIndexShare(id) === -1){
             if (this.sharesChart.length < 5){
-                this.sharesChart.push({instrumentID: id, shareName : name, color : this.color[this.sharesChart.length]});
+                this.sharesChart.push({instrumentID: id, shareName : name, color : color});
                 if (this.currentPeriod !== 1){
                     this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                         
@@ -380,7 +366,8 @@ export class ChartsPage {
                                 id: id,
                                 data: data,
                                 name: name,
-                                color: this.color[this.sharesChart.length-1]
+                                // color: this.color[this.sharesChart.length-1]
+                                color: color,
                             }, true);
                         }
                         
@@ -394,12 +381,12 @@ export class ChartsPage {
                                 id: id,
                                 data: data,
                                 name: name,
-                                color: this.color[this.sharesChart.length-1]
+                                // color: this.color[this.sharesChart.length-1]
+                                color: color,
                             }, true);
                         }
                     });
                 }
-                
             }
             else {
                 alert("Full choose");

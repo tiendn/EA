@@ -10550,32 +10550,24 @@ body {
 .charts-page ion-content {
   color: #848484; }
 
-.charts-page .watchlist-period button {
+.charts-page .btn-period {
   z-index: 99;
   padding: 0;
   padding-right: 8px;
-  padding-left: 8px;
-  width: 15%; }
+  padding-left: 8px; }
 
 .charts-page .watchlist-period {
   display: inline;
   left: 50px;
   position: absolute;
-  top: -17px;
+  top: -10px;
   right: 0; }
-
-.charts-page .indices-period button {
-  z-index: 99;
-  padding: 0;
-  padding-right: 12%;
-  padding-left: 10%;
-  width: 15%; }
 
 .charts-page .indices-period {
   display: inline;
   left: 40px;
   position: absolute;
-  top: -17px;
+  top: -12px;
   right: 0; }
 
 .charts-page #charts-container {
@@ -10609,7 +10601,7 @@ body {
 .charts-page .footer {
   margin-left: 16px !important; }
 
-.charts-page .tooltip, .charts-page .own-shares-title, .charts-page .watch-list-shares-title {
+.charts-page .tooltip, .charts-page .own-shares-title, .charts-page .sharegraph-title {
   color: #848484 !important; }
 
 .charts-page .tooltip {
@@ -10622,9 +10614,14 @@ body {
 .charts-page .btn-click {
   border: 1px solid white; }
 
+.charts-page .btn-period {
+  font-family: "HelveticaNeue-Light"; }
+
 .charts-page .btn-period-click {
-  font-weight: bold;
-  font-size: 20px; }
+  font-family: "HelveticaNeue-Medium"; }
+
+.charts-page .btn-share {
+  font-family: "HelveticaNeue-Light"; }
 
 .watch-list-page .tab-button {
   color: #848484;
@@ -10636,7 +10633,6 @@ body {
   background: #848484 !important; }
 
 .watch-list-page ion-content {
-  opacity: 0.95;
   background-color: #484849; }
 
 .watch-list-page .header {
@@ -10663,12 +10659,13 @@ body {
   height: 20px;
   width: 20px; }
 
+.watch-list-page ion-tab.show-tab {
+  transform: none;
+  -webkit-transform: none; }
+
 .watch-list-page .show-tabbar {
   top: 90px;
   height: 30px;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
   border-radius: 5%;
   border: 1px  solid #848484; }
 
@@ -10680,18 +10677,25 @@ body {
   border-right: 1px solid #848484;
   border-left: 1px solid #848484; }
 
+.watch-list-page .tab-button .tab-button-text, .watch-list-page .tab-button.has-title-only .tab-button-text {
+  font-size: 13px; }
+
 .compare-page ion-header {
-  height: 25%; }
+  height: 20%; }
+
+.compare-page scroll-content {
+  margin-top: 150px !important;
+  margin-bottom: 0 !important; }
 
 .compare-page h1 {
   margin-top: 0;
-  color: #787878;
-  margin-left: 6%; }
+  color: #808080;
+  margin-left: 16px;
+  font-size: 14px; }
 
 .compare-page .scroll-content {
   overflow-y: scroll;
-  position: relative;
-  border-bottom: 1px solid #787878; }
+  position: relative; }
 
 .compare-page .item-box {
   float: left;
@@ -10718,15 +10722,39 @@ body {
   height: 100%;
   margin: 20% 2% 40% 10%; }
 
+.compare-page .ticker, .compare-page .price {
+  font-size: 18px !important;
+  color: #fff; }
+
 .compare-page .price {
   margin-bottom: 20%; }
+
+.compare-page .change-pro, .compare-page .currency {
+  font-size: 12px; }
+
+.compare-page .change-pro {
+  position: absolute; }
 
 .compare-page .currency {
   position: absolute;
   right: 10%; }
 
+.compare-page ion-footer {
+  bottom: 15px !important; }
+
+.compare-page .footer {
+  font-size: 14px;
+  color: #fff; }
+
+.compare-page .footer a {
+  text-decoration: none;
+  color: #0091ff; }
+
 .performance-page ion-header {
   height: 17%; }
+
+.performance-page scroll-content {
+  margin-top: 80px !important; }
 
 .performance-page ion-list {
   margin-bottom: 0; }
@@ -10761,8 +10789,8 @@ body {
   border-bottom: 0px; }
 
 .performance-page .item-box div {
-  width: 65px;
-  height: 30px;
+  padding-top: 8px;
+  padding-bottom: 8px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10779,8 +10807,8 @@ body {
   border-radius: 5%; }
 
 .performance-page .item-header {
-  width: 65px;
-  text-align: right; }
+  text-align: right;
+  font-family: "HelveticaNeue-Light"; }
 
 .performance-page .down {
   background-color: #ff3a2d; }
@@ -10976,6 +11004,29 @@ body {
   padding-left: 16px;
   font-size: 14px; }
 
+.charts-page .btn-period {
+  font-size: 15px;
+  font-family: "HelveticaNeue-Light"; }
+
+.charts-page .watchlist-period .btn-period {
+  width: 15%; }
+
+.charts-page .indices-period .btn-period {
+  width: 20%; }
+
+.charts-page .share-item {
+  font-size: 12px; }
+
+.charts-page .tooltip, .charts-page .own-shares-title {
+  font-size: 14px; }
+
+.charts-page .btn-share {
+  font-size: 12px;
+  font-family: "HelveticaNeue-Light"; }
+
+.charts-page .sharegraph-title {
+  font-size: 14px; }
+
 .watch-list-page .btn-header-title {
   font-size: 12px;
   font-weight: medium;
@@ -10989,32 +11040,44 @@ body {
   height: 20px;
   width: 20px; }
 
+.watch-list-page .show-tabbar {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%; }
+
 .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c; }
 
 .performance-page .div-item-content {
   max-height: calc(100% - 130px); }
 
-.performance-page .item-content .item-center {
-  font-size: 15px; }
+.performance-page .item-box {
+  width: 19%; }
 
-.performance-page .item-content .item-right {
-  font-size: 15px; }
+.performance-page .item-header {
+  width: 20%;
+  font-size: 15px !important; }
 
-.performance-page .item-content .item-left {
-  font-size: 15px; }
+.performance-page .item-header span {
+  font-size: 12px !important; }
 
-.performance-page .date-info span {
-  font-size: 15px; }
-
-.performance-page .item-content, .performance-page .item-header-content span {
+.performance-page .item-col-1 {
   font-size: 17px; }
 
-.performance-page .item-content .currency {
+.performance-page .item-data {
   font-size: 12px; }
 
 .compare-page .scroll-content {
   max-height: calc(100% - 100px); }
+
+.compare-page .ticker, .compare-page .price {
+  font-size: 18px !important; }
+
+.compare-page .change-pro, .compare-page .currency {
+  font-size: 12px; }
+
+.compare-page .footer {
+  font-size: 14px; }
 
 @media only screen and (min-width: 768px) {
   .modal-wrapper {
@@ -11023,23 +11086,56 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
+  .charts-page .btn-period {
+    font-size: 15px;
+    font-family: "HelveticaNeue-Light"; }
+  .charts-page .watchlist-period .btn-period {
+    width: 18%; }
+  .charts-page .indices-period .btn-period {
+    width: 23%; }
+  .charts-page .share-item {
+    font-size: 12px; }
+  .charts-page .tooltip, .charts-page .own-shares-title {
+    font-size: 14px; }
+  .charts-page .btn-share {
+    font-size: 12px;
+    font-family: "HelveticaNeue-Light"; }
+  .charts-page .sharegraph-title {
+    font-size: 14px; }
+  .watch-list-page .show-tabbar {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%; }
+  .watch-list-page .btn-header-title {
+    font-size: 12px;
+    font-weight: medium;
+    margin-left: calc(50% - 43.5px); }
+  .watch-list-page .btn-header-title img {
+    height: 20px;
+    width: 20px; }
+  .watch-list-page .btn-header-close img {
+    height: 20px;
+    width: 20px; }
   .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
-    border-bottom: 1px solid #6b6b6c; }
+    border-bottom: 0.55px solid #6b6b6c; }
   .performance-page .div-item-content {
-    max-height: calc(100% - 15% - 281px); }
-  .performance-page scroll-content {
-    margin: 0 15% 0 15%; }
-  .performance-page .item-content .item-center {
-    font-size: 15px; }
-  .performance-page .item-content .item-right {
+    max-height: calc(100% - 130px); }
+  .performance-page .item-box {
+    width: 19%; }
+  .performance-page .item-header {
+    width: 20%;
+    font-size: 15px !important; }
+  .performance-page .item-header span {
+    font-size: 12px !important; }
+  .performance-page .item-col-1 {
     font-size: 17px; }
-  .performance-page .item-content .item-left {
-    font-size: 20px; }
-  .performance-page .date-info span {
-    font-size: 24px; }
-  .performance-page .item-content, .performance-page .item-header-content span {
-    font-size: 20px; }
-  .performance-page .item-content .currency {
-    font-size: 13px; }
-  .performance-page .footer {
-    font-size: 13px; } }
+  .performance-page .item-data {
+    font-size: 12px; }
+  .compare-page .scroll-content {
+    max-height: calc(100% - 100px); }
+  .compare-page .ticker, .compare-page .price {
+    font-size: 18px !important; }
+  .compare-page .change-pro, .compare-page .currency {
+    font-size: 12px; }
+  .compare-page .footer {
+    font-size: 14px; } }

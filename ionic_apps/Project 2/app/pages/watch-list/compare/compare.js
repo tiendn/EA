@@ -20,6 +20,7 @@ export class ComparePage {
     this.navParam = NavParams;
     this.type = this.navParam.data;
     this.provider = provider;
+    this.footerContent = ['All share data is presented in the currency of your choice. Configure via ','setting'];
     if (this.type === "Watchlist"){
         this.dateTitle = "TODAY";
     }

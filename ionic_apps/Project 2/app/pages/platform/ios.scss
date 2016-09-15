@@ -1,5 +1,33 @@
 
-
+.charts-page{
+  .btn-period{
+    font-size: 15px;
+    font-family: $light-font;
+  }
+  .watchlist-period .btn-period{ 
+    width: 15%;
+  }
+  .indices-period .btn-period{ 
+    width: 20%;
+  }
+  .share-item{
+    font-size: 12px;
+  }
+  
+  // .btn-period  {
+  //     width: 15% !important;
+  // }
+  .tooltip , .own-shares-title{
+    font-size: 14px;
+  }
+  .btn-share{
+    font-size: 12px; 
+    font-family: $light-font;
+  }
+  .sharegraph-title{
+    font-size: 14px;
+  }
+}
 .watch-list-page{
   .btn-header-title{
     font-size: 12px;
@@ -14,6 +42,12 @@
    height: 20px;
    width: 20px;
  }
+ .show-tabbar {
+   width : 90%;
+   margin-left: 5%;
+	 margin-right: 5%;
+ }
+
 }
 .performance-page {
       .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
@@ -22,36 +56,41 @@
     .div-item-content{
       max-height: calc(100% - 130px );
     }
-
-     .item-content .item-center{
-      font-size: 15px;
+    .item-box{
+      width: 19%;
     }
-     .item-content .item-right{
-      font-size: 15px;
+    .item-header {
+      width: 20%;
+      font-size: 15px !important;
     }
-     .item-content .item-left{
-      font-size: 15px;
+    .item-header span {
+      font-size : 12px !important;
+    } 
+    .item-col-1{
+      font-size: 17px;
     }
-     .date-info span{
-      font-size: 15px;
-    }
-     .item-content, .item-header-content span{
-      font-size: 17px ;
-    }
-     .item-content .currency{
+    .item-data{
       font-size: 12px;
     }
+    
     // .item-box,.item-header{
     //   margin-right:  0;
     // }
  }
 .compare-page{
-  
     .scroll-content{
       max-height: calc(100% - 100px);
       // clear: both;
     }
-
+    .ticker, .price{
+      font-size: 18px !important; 
+    }
+    .change-pro, .currency{
+      font-size: 12px;
+    }
+    .footer{
+      font-size: 14px;
+    }
 }
   // IPad
 @media only screen and ( min-width : 768px){
@@ -62,37 +101,94 @@
      width: 100% ;
      height: 100% ;
      }
-  .performance-page {
-    .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
-      border-bottom : 1px solid #6b6b6c ;
-    }
-    .div-item-content{
-      max-height: calc(100% - 15% - 281px );
-    }
-    scroll-content{
-      margin: 0 15% 0 15%;
-    }
-    
-    .item-content .item-center{
+  
+  .charts-page{
+    .btn-period{
       font-size: 15px;
+      font-family: $light-font;
+      
     }
-    .item-content .item-right{
-      font-size: 17px;
+    .watchlist-period .btn-period{ 
+      width: 18%;
     }
-    .item-content .item-left{
-      font-size: 20px;
+    .indices-period .btn-period{ 
+      width: 23%;
     }
-    .date-info span{
-      font-size: 24px;
+    .share-item{
+      font-size: 12px;
     }
-    .item-content, .item-header-content span{
-      font-size: 20px ;
+    .tooltip , .own-shares-title{
+      font-size: 14px;
     }
-    .item-content .currency{
-      font-size: 13px;
+    .btn-share{
+      font-size: 12px; 
+      font-family: $light-font;
     }
-    .footer{
-      font-size: 13px;
+    .sharegraph-title{
+      font-size: 14px;
     }
   }
+  .watch-list-page{
+    .show-tabbar {
+      width : 60%;
+      margin-left: 20%;
+		  margin-right: 20%;
+    }
+    
+    .btn-header-title{
+      font-size: 12px;
+      font-weight: medium;
+      margin-left: calc(50% - 43.5px);
+    }
+    .btn-header-title img{
+    height: 20px;
+    width: 20px;
+  }
+  .btn-header-close img, {
+    height: 20px;
+    width: 20px;
+  }
+  }
+  .performance-page {
+        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
+        border-bottom : 0.55px solid #6b6b6c ;
+      }
+      .div-item-content{
+        max-height: calc(100% - 130px );
+      }
+      .item-box{
+        width: 19%;
+      }
+      .item-header {
+        width: 20%;
+        font-size: 15px !important;
+      }
+      .item-header span {
+        font-size : 12px !important;
+      } 
+      .item-col-1{
+        font-size: 17px;
+      }
+      .item-data{
+        font-size: 12px;
+      }
+      
+      // .item-box,.item-header{
+      //   margin-right:  0;
+      // }
+  }
+  .compare-page{
+      .scroll-content{
+        max-height: calc(100% - 100px);
+      }
+      .ticker, .price{
+        font-size: 18px !important; 
+      }
+      .change-pro, .currency{
+        font-size: 12px;
+      }
+      .footer{
+        font-size: 14px;
+      }
+    }
 }

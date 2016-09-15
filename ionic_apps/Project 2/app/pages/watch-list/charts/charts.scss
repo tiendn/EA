@@ -1,4 +1,6 @@
-
+$light-font: "HelveticaNeue-Light";
+$medium-font: "HelveticaNeue-Medium";
+$thin-font: "HelveticaNeue-Thin";
 .charts-page {
   
   ion-header{
@@ -7,35 +9,24 @@
   ion-content{
     color: #848484;
   }
-  .watchlist-period button{
+  .btn-period{
       z-index:  99;
-      // border : 0;
       padding: 0;
       padding-right: 8px;
       padding-left: 8px; 
-      width: 15%;
   }
   .watchlist-period {
     display: inline;
     left : 50px;
     position: absolute;
-    top: -17px;
+    top: -10px;
     right: 0;
   }
-  .indices-period button{
-      z-index:  99;
-      // border : 0;
-      padding: 0;
-      padding-right: 12%;
-      padding-left: 10%; 
-      width: 15%;
-  }
-  
   .indices-period {
     display: inline;
     left : 40px;
     position: absolute;
-    top: -17px;
+    top: -12px;
     right: 0;
   }
   #charts-container{
@@ -71,7 +62,7 @@
   .footer{
     margin-left: 16px !important;
   }
-  .tooltip, .own-shares-title, .watch-list-shares-title {
+  .tooltip, .own-shares-title, .sharegraph-title {
     color: #848484 !important;
   }
   .tooltip{
@@ -88,8 +79,14 @@
   .btn-click{
     border: 1px solid white;
   }
+  .btn-period{
+    font-family: $light-font;
+  }
   .btn-period-click{
-    font-weight  : bold;
-    font-size: 20px;
+    font-family: $medium-font;
+    // font-size: 40px;
+  }
+  .btn-share{
+    font-family: $light-font;
   }
 }
