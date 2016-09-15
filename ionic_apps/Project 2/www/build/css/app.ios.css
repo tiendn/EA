@@ -9756,6 +9756,10 @@ body {
 .compare-page .scroll-content {
   max-height: calc(100% - 100px); }
 
+.compare-page .item-box {
+  padding-bottom: 25%;
+  width: 25%; }
+
 .compare-page .ticker, .compare-page .price {
   font-size: 18px !important; }
 

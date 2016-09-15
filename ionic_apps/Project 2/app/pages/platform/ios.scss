@@ -108,6 +108,10 @@
       max-height: calc(100% - 100px);
       // clear: both;
     }
+    .item-box{
+      padding-bottom: (100%/4);
+      width: (100%/4);
+    }
     .ticker, .price{
       font-size: 18px !important; 
     }
