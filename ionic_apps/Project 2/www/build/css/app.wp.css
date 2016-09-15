@@ -10545,7 +10545,7 @@ body {
   background-color: #fff; }
 
 .charts-page ion-header {
-  height: 23%; }
+  height: 16%; }
 
 .charts-page ion-content {
   color: #848484; }
@@ -10594,7 +10594,7 @@ body {
   height: 10px;
   width: 100%; }
 
-.charts-page .sharesName {
+.charts-page .share-name {
   margin-top: 10px;
   margin-right: 20px; }
 
@@ -10618,8 +10618,7 @@ body {
   font-family: "HelveticaNeue-Light"; }
 
 .charts-page .btn-period-click {
-  font-family: "HelveticaNeue-Medium";
-  font-size: 18px !important; }
+  font-family: "HelveticaNeue-Medium"; }
 
 .charts-page .btn-share {
   font-family: "HelveticaNeue-Light"; }
@@ -10690,9 +10689,7 @@ body {
 
 .compare-page h1 {
   margin-top: 0;
-  color: #808080;
-  margin-left: 16px;
-  font-size: 14px; }
+  color: #808080; }
 
 .compare-page .scroll-content {
   overflow-y: scroll;
@@ -10778,7 +10775,7 @@ body {
 .performance-page .div-item-content {
   overflow-y: scroll;
   position: relative;
-  border-bottom: 1px solid #c8c7cc; }
+  border-bottom: 0.55px solid #c8c7cc; }
 
 .performance-page .item-content {
   margin-bottom: 1px; }
@@ -10810,6 +10807,17 @@ body {
 .performance-page .item-header {
   text-align: right;
   font-family: "HelveticaNeue-Light"; }
+
+.performance-page .item-inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row; }
 
 .performance-page .down {
   background-color: #ff3a2d; }
@@ -11005,28 +11013,46 @@ body {
   padding-left: 16px;
   font-size: 14px; }
 
+@media only screen and (max-width: 320px) {
+  .charts-page #charts-container {
+    margin-top: 10%; } }
+
 .charts-page .btn-period {
   font-size: 15px;
   font-family: "HelveticaNeue-Light"; }
+
+.charts-page .watchlist-period {
+  top: -14px; }
+
+.charts-page .indices-period {
+  top: -15px; }
 
 .charts-page .watchlist-period .btn-period {
   width: 15%; }
 
 .charts-page .indices-period .btn-period {
-  width: 20%; }
+  width: 21%; }
 
-.charts-page .share-item {
+.charts-page .btn-period-click {
+  font-size: 18px !important; }
+
+.charts-page .share-name {
   font-size: 12px; }
+
+.charts-page #charts-container {
+  margin-top: 14%; }
 
 .charts-page .tooltip, .charts-page .own-shares-title {
   font-size: 14px; }
 
 .charts-page .btn-share {
-  font-size: 12px;
-  font-family: "HelveticaNeue-Light"; }
+  font-size: 12px; }
 
 .charts-page .sharegraph-title {
   font-size: 14px; }
+
+.watch-list-page .tab-button-text, .watch-list-page .button-inner {
+  font-size: 15px !important; }
 
 .watch-list-page .btn-header-title {
   font-size: 12px;
@@ -11053,7 +11079,7 @@ body {
   max-height: calc(100% - 130px); }
 
 .performance-page .item-box {
-  width: 19%; }
+  width: 20%; }
 
 .performance-page .item-header {
   width: 20%;
@@ -11067,6 +11093,13 @@ body {
 
 .performance-page .item-data {
   font-size: 12px; }
+
+.performance-page .div-item-content {
+  border-bottom: 0.55px solid #c8c7cc; }
+
+.compare-page scroll-content h1 {
+  margin-left: 16px;
+  font-size: 14px; }
 
 .compare-page .scroll-content {
   max-height: calc(100% - 100px); }
@@ -11087,28 +11120,35 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
-  .charts-page .btn-period {
-    font-size: 15px;
-    font-family: "HelveticaNeue-Light"; }
+  .charts-page .btn-period span {
+    font-size: 17px; }
+  .charts-page .watchlist-period {
+    top: -18px; }
+  .charts-page .indices-period {
+    top: -19px; }
   .charts-page .watchlist-period .btn-period {
     width: 18%; }
   .charts-page .indices-period .btn-period {
     width: 23%; }
-  .charts-page .share-item {
-    font-size: 12px; }
-  .charts-page .tooltip, .charts-page .own-shares-title {
-    font-size: 14px; }
-  .charts-page .btn-share {
-    font-size: 12px;
-    font-family: "HelveticaNeue-Light"; }
+  .charts-page .btn-period-click {
+    font-size: 20px !important; }
+  .charts-page #charts-container {
+    margin-top: 0; }
+  .charts-page .tooltip, .charts-page .btn-share span, .charts-page .share-name, .charts-page .btn-period span {
+    font-size: 17px !important; }
+  .charts-page .own-shares-title {
+    font-size: 15px; }
+  .charts-page .tooltip {
+    margin-left: 17px !important; }
   .charts-page .sharegraph-title {
-    font-size: 14px; }
+    font-size: 15px; }
   .watch-list-page .show-tabbar {
-    width: 60%;
-    margin-left: 20%;
-    margin-right: 20%; }
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%; }
+  .watch-list-page .tab-button-text, .watch-list-page .btn-header-title span {
+    font-size: 17px !important; }
   .watch-list-page .btn-header-title {
-    font-size: 12px;
     font-weight: medium;
     margin-left: calc(50% - 43.5px); }
   .watch-list-page .btn-header-title img {
@@ -11117,12 +11157,15 @@ body {
   .watch-list-page .btn-header-close img {
     height: 20px;
     width: 20px; }
+  .performance-page scroll-content {
+    width: 70%;
+    margin-left: 15%; }
   .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 0.55px solid #6b6b6c; }
   .performance-page .div-item-content {
     max-height: calc(100% - 130px); }
   .performance-page .item-box {
-    width: 19%; }
+    width: 20%; }
   .performance-page .item-header {
     width: 20%;
     font-size: 15px !important; }
@@ -11132,6 +11175,16 @@ body {
     font-size: 17px; }
   .performance-page .item-data {
     font-size: 12px; }
+  .performance-page .div-item-content {
+    border-bottom: 1px solid #c8c7cc; }
+  .compare-page scroll-content, .compare-page ion-footer {
+    width: 70%;
+    margin-left: 15%; }
+  .compare-page ion-footer {
+    bottom: 5% !important; }
+  .compare-page scroll-content h1 {
+    margin-left: 0;
+    font-size: 14px; }
   .compare-page .scroll-content {
     max-height: calc(100% - 100px); }
   .compare-page .ticker, .compare-page .price {

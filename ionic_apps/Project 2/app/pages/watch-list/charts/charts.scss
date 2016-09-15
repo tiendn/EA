@@ -4,7 +4,7 @@ $thin-font: "HelveticaNeue-Thin";
 .charts-page {
   
   ion-header{
-    height: 23%;
+    height: 16%;
   }
   ion-content{
     color: #848484;
@@ -31,7 +31,7 @@ $thin-font: "HelveticaNeue-Thin";
   }
   #charts-container{
     position: relative;
-    // margin-top :5%;
+    // margin-top: 4%;
     border-top: 2px solid #848484;
     border-bottom: 2px solid #848484;
     margin-bottom: 10px;
@@ -54,7 +54,7 @@ $thin-font: "HelveticaNeue-Thin";
     height: 10px;
     width: 100%;
   }
-  .sharesName {
+  .share-name {
     // height: 20px;
     margin-top : 10px;
     margin-right: 20px;
@@ -84,7 +84,6 @@ $thin-font: "HelveticaNeue-Thin";
   }
   .btn-period-click{
     font-family: $medium-font;
-    font-size: 18px !important;
   }
   .btn-share{
     font-family: $light-font;

@@ -71,8 +71,8 @@ export class ChartsPage {
         this.tooltip = "Tap on the ticker codes below to compare them. We limit the charting to five tickers." ;
         
         this.currentID = 1;
-        this.currentPeriod = 3;
-        this.dateTimeArr = [];
+        this.currentPeriod = 3; 
+        // this.dateTimeArr = [];
         this.sharesChart = [
             {
                 "instrumentID":16569,
@@ -81,7 +81,7 @@ export class ChartsPage {
             }
            
         ];
-        this.color = ["white","blue","green","orange","yellow"];
+        // this.color = ["white","blue","green","orange","yellow"];
         // console.log(this.sharesChart);
         this.listOwnShares = [
             {
@@ -180,6 +180,10 @@ export class ChartsPage {
                 labels: {
                     formatter: function() {
                         return this.value + ' %';
+                    },
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
                     }
                 }
             },

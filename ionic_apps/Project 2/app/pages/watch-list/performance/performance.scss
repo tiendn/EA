@@ -37,7 +37,7 @@ $thin-font: "HelveticaNeue-Thin";
   .div-item-content {
     overflow-y: scroll;
     position: relative;
-    border-bottom: 1px solid #c8c7cc;
+    border-bottom: 0.55px solid #c8c7cc;
   }
   .item-content {
     margin-bottom : 1px;
@@ -49,6 +49,7 @@ $thin-font: "HelveticaNeue-Thin";
     border-bottom: 0px;
   }
   .item-box div{
+    // width: 20%;
     padding-top: 8px;
     padding-bottom: 8px;
     display: flex;
@@ -60,13 +61,14 @@ $thin-font: "HelveticaNeue-Thin";
   }
   
   .item-header{
+    // margin-right: 0 !important;
     text-align: right;
     font-family: $light-font;
   }
-  // .item-inner{
-  //   display: flex;
-  //   flex-direction: row;
-  // }
+  .item-inner{
+    display: flex;
+    flex-direction: row;
+  }
   .down{
     background-color: #ff3a2d;
   }

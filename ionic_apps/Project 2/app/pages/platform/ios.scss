@@ -1,19 +1,36 @@
-
+@media only screen and ( max-width : 320px){
+  .charts-page{
+    #charts-container{
+      margin-top: 10%;
+    }
+  }
+}
 .charts-page{
   .btn-period{
     font-size: 15px;
     font-family: $light-font;
   }
+  .watchlist-period{
+    top: -14px;
+  }
+  .indices-period {
+    top: -15px;
+  }
   .watchlist-period .btn-period{ 
     width: 15%;
   }
   .indices-period .btn-period{ 
-    width: 20%;
+    width: 21%;
   }
-  .share-item{
+  .btn-period-click{
+      font-size: 18px !important;
+  }
+  .share-name{
     font-size: 12px;
   }
-  
+  #charts-container{
+      margin-top: 14%;
+  }
   // .btn-period  {
   //     width: 15% !important;
   // }
@@ -22,13 +39,15 @@
   }
   .btn-share{
     font-size: 12px; 
-    font-family: $light-font;
   }
   .sharegraph-title{
     font-size: 14px;
   }
 }
 .watch-list-page{
+  .tab-button-text, .button-inner{
+      font-size: 15px !important;
+    }
   .btn-header-title{
     font-size: 12px;
     font-weight: medium;
@@ -50,6 +69,7 @@
 
 }
 .performance-page {
+    
       .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
       border-bottom : 0.55px solid #6b6b6c ;
     }
@@ -57,7 +77,7 @@
       max-height: calc(100% - 130px );
     }
     .item-box{
-      width: 19%;
+      width: 20%;
     }
     .item-header {
       width: 20%;
@@ -72,12 +92,18 @@
     .item-data{
       font-size: 12px;
     }
-    
+    .div-item-content {
+      border-bottom: 0.55px solid #c8c7cc;
+    }
     // .item-box,.item-header{
     //   margin-right:  0;
     // }
  }
 .compare-page{
+      scroll-content h1{
+        margin-left: 16px;
+        font-size: 14px;
+      }
     .scroll-content{
       max-height: calc(100% - 100px);
       // clear: both;
@@ -101,55 +127,97 @@
      width: 100% ;
      height: 100% ;
      }
-  
+
+
+  // Chart Page
+
+
+
   .charts-page{
-    .btn-period{
-      font-size: 15px;
-      font-family: $light-font;
+    .btn-period span{
+      font-size: 17px;
       
     }
-    .watchlist-period .btn-period{ 
+    .watchlist-period{
+      top: -18px;
+    }
+    .indices-period {
+      top: -19px;
+    }
+    .watchlist-period .btn-period, { 
       width: 18%;
     }
     .indices-period .btn-period{ 
       width: 23%;
     }
-    .share-item{
-      font-size: 12px;
+    .btn-period-click{
+      font-size: 20px !important;
     }
-    .tooltip , .own-shares-title{
-      font-size: 14px;
+    #charts-container{
+      margin-top: 0;
+    }
+    // .share-name{
+    //   font-size: 12px;
+    // }
+    .tooltip , .btn-share span, .share-name, .btn-period span{
+      font-size: 17px !important;
+    }
+    .own-shares-title{
+      font-size: 15px;
+    }
+    .tooltip{
+      margin-left : 17px !important;
     }
     .btn-share{
-      font-size: 12px; 
-      font-family: $light-font;
+      // font-size: 12px; 
+      // font-family: $light-font;
     }
     .sharegraph-title{
-      font-size: 14px;
-    }
-  }
-  .watch-list-page{
-    .show-tabbar {
-      width : 60%;
-      margin-left: 20%;
-		  margin-right: 20%;
+      font-size: 15px;
     }
     
-    .btn-header-title{
-      font-size: 12px;
+  }
+
+  // Watchlist Page 
+
+
+
+  .watch-list-page{
+    .show-tabbar {
+      width : 70%;
+      margin-left: 15%;
+		  margin-right: 15%;
+    }
+    // .button-inner{
+    //   font-size: 17px !important;
+    // }
+    .tab-button-text, .btn-header-title span{
+      font-size: 17px !important;
+    }
+    .btn-header-title {
+      // font-size: 17px !important;
       font-weight: medium;
       margin-left: calc(50% - 43.5px);
     }
     .btn-header-title img{
     height: 20px;
     width: 20px;
+    }
+    .btn-header-close img, {
+      height: 20px;
+      width: 20px;
+    }
   }
-  .btn-header-close img, {
-    height: 20px;
-    width: 20px;
-  }
-  }
+
+  //  Performance Page 
+
+
+
   .performance-page {
+       scroll-content{
+        width: 70%;
+        margin-left: 15%;
+      }
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
         border-bottom : 0.55px solid #6b6b6c ;
       }
@@ -157,7 +225,7 @@
         max-height: calc(100% - 130px );
       }
       .item-box{
-        width: 19%;
+        width: 20%;
       }
       .item-header {
         width: 20%;
@@ -172,13 +240,33 @@
       .item-data{
         font-size: 12px;
       }
-      
+      .div-item-content {
+      border-bottom: 1px solid #c8c7cc;
+    }
       // .item-box,.item-header{
       //   margin-right:  0;
       // }
   }
+
+  //  compare Page 
+
+
   .compare-page{
+      scroll-content, ion-footer{
+        width: 70%;
+        margin-left: 15%;
+      }
+      ion-footer{
+        bottom: 5% !important;
+      }
+      scroll-content h1{
+        margin-left: 0;
+        font-size: 14px;
+      }
       .scroll-content{
+        
+        // width: 70%;
+        // margin-left: 15%;
         max-height: calc(100% - 100px);
       }
       .ticker, .price{
