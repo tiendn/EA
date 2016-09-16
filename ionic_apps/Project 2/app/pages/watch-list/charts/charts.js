@@ -230,6 +230,13 @@ export class ChartsPage {
                     month: '%b\' %e',
                     year:"%Y"
                 },
+                labels:{
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
+                    }
+                }
+                
             },
             tooltip: {
                 valueDecimals: 2,
@@ -242,6 +249,10 @@ export class ChartsPage {
                 labels: {
                     formatter: function() {
                         return this.value + ' %';
+                    },
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
                     }
                 }
             },
@@ -292,7 +303,12 @@ export class ChartsPage {
                 lineWidth: 1,
                 dateTimeLabelFormats: {
                     day:"%H:%M"
-                    
+                },
+                labels:{
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
+                    }
                 }
             },
             yAxis:{
@@ -302,6 +318,10 @@ export class ChartsPage {
                 labels: {
                     formatter: function() {
                         return this.value + ' %';
+                    },
+                    style:{
+                        color: '#808080',
+                        fontSize : '10px'
                     }
                 }
             },
@@ -318,8 +338,8 @@ export class ChartsPage {
         });
         for (let i = 0 ; i < this.sharesChart.length ; i++){
             this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
-                console.log(this.sharesChart[i].instrumentID);
-                console.log(data.length);
+                // console.log(this.sharesChart[i].instrumentID);
+                // console.log(data.length);
                 this.chart.addSeries({   
                     id : this.watchListShare[i].instrumentID,    
                     name: this.watchListShare[i].shareName,              
@@ -345,9 +365,9 @@ export class ChartsPage {
         
         
     }
-    getSharesData(id){
-        this.currentID = id;
-    }
+    // getSharesData(id){
+    //     this.currentID = id;
+    // }
     getIndexShare(id){
         let index = -1;
         for (let i = 0 ; i < this.sharesChart.length; i++ )
@@ -364,8 +384,6 @@ export class ChartsPage {
                     this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                         
                         if (data.length > 0){
-                            // data = data.map((n) => parseInt(n).toFixed(2));
-                            // console.log(data);
                             this.chart.addSeries({   
                                 id: id,
                                 data: data,

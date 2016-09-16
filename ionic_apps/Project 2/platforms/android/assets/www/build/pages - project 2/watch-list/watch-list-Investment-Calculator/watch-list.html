@@ -1,0 +1,68 @@
+<ion-content class="watch-list-modal">
+  <!-- header -->
+  <div class= "header">
+    <button class="btn-header-watch">
+      {{HTMLContent[0]}} &nbsp;
+      <img src="./img/Watchlist_ViewIcon.png">
+    </button>
+    <button class="btn-header-close" (click)="dismiss()">
+      <img src = "./img/Fill 1.png" >
+    </button>
+  </div>
+  <!-- Date information -->
+  <div class ="div-date-content">
+    <div class="last-date-content flex-date">
+      <img src="./img/DateFrom.png">
+      <div class="date-info date-left">
+        <span>  <!-- fix dong tu` -->
+          {{HTMLContent[1]}}
+        </span>
+        <span>
+          {{lastDate}}
+        </span>
+      </div>
+    </div>
+    <div class="current-date-content flex-date">
+      <div class="date-info date-right">
+        <span>
+          {{HTMLContent[2]}}
+        </span>
+        <span >
+          {{currentDate}}
+        </span>
+      </div>
+      <div class="img-right">
+        <img src="./img/DateTo.png">
+      </div>
+    </div>
+  </div>
+  <!-- Data Content -->
+  <ion-list class="item-header-content" >
+    <ion-item >
+      <span item-content class="item-center"> {{HTMLContent[3]}} </span>
+      <span item-right class="item-right"> {{HTMLContent[4]}} </span>
+    </ion-item>
+  </ion-list>
+  <div class="div-item-content">
+    <ion-list class="item-content">
+      <ion-item *ngFor = "let item of data">
+        <span class ="item-left"> {{item.Name}} </span>
+        <span item-content class="item-center" >
+          {{item.Change > 0 ? '+' : ''}}{{item.Change | formatNumber:2}}
+          <span class="currency">
+            {{item.Currency}}
+          </span>
+        </span>
+        <div item-right class="item-right">
+          <div [class] = "item.ChangePro < 0 ? 'down': 'up'">
+            {{item.ChangePro > 0 ? '+' : ''}}{{item.ChangePro | formatNumber:2}}%
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+  </div>
+  <!-- Footer -->
+  <h6 [hidden] = !loadDone class="footer">
+    {{HTMLContent[5]}} <a href = "">{{HTMLContent[6]}}</a>.
+  </h6>
+</ion-content>

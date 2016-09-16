@@ -1,0 +1,27 @@
+
+<ion-header>
+
+  <div class= "header">
+    <button class="btn-header-title">
+        {{type}}
+        <ion-icon class="irapp-icon" name="irapp-watchlist"></ion-icon>
+    </button>
+    <!--<button class="btn-header-close" (click)="closeModal()">
+        <ion-icon class="irapp-icon" name="irapp-closemodal"></ion-icon>
+    </button>-->
+    <button class="btn-header-close" (click)="dismiss()">
+      <img src = "./img/Fill 1.png" >
+    </button>
+  </div>
+  
+</ion-header>
+
+<ion-content >
+  <ion-tabs>
+    <ion-tab  tabTitle="Charts" [root]="chartsTab" [rootParams]="type"></ion-tab>
+    <ion-tab  tabTitle="Compare" [root]="compareTab" [rootParams]="type"></ion-tab>
+    <ion-tab  tabTitle="Performance" [root]="performanceTab" [rootParams]="type"></ion-tab>
+  </ion-tabs>
+
+
+</ion-content>

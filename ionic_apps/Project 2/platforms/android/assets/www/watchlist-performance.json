@@ -1,0 +1,142 @@
+[
+   {
+    "InstrumentId": 16569,
+    "Ticker": "CBGA",
+    "Change3M": 1.56,
+    "Change52W": 20.98,
+    "ChangeYTD": 2.49
+  },
+  {
+    "InstrumentId": 16570,
+    "Ticker": "CBGB",
+    "Change3M": -3.28,
+    "Change52W": 25.1,
+    "ChangeYTD": 2.22
+  },
+  {
+    "InstrumentId": 32864,
+    "Ticker": "CARL A",
+    "Change3M": 2.77,
+    "Change52W": 19.9,
+    "ChangeYTD": 3.02
+  },
+  {
+    "InstrumentId": 32865,
+    "Ticker": "CARL B",
+    "Change3M": -2.35,
+    "Change52W": 23.73,
+    "ChangeYTD": 2.12
+  },
+  {
+    "InstrumentId": 39083,
+    "Ticker": "CBGA",
+    "Change3M": 0,
+    "Change52W": -5.02,
+    "ChangeYTD": -5.02
+  },
+  {
+    "InstrumentId": 39084,
+    "Ticker": "CBGB",
+    "Change3M": 0,
+    "Change52W": 3.78,
+    "ChangeYTD": 3.78
+  },
+  {
+    "InstrumentId": 69291,
+    "Ticker": "CARLAc",
+    "Change3M": 2.94,
+    "Change52W": 19.9,
+    "ChangeYTD": 2.53
+  },
+  {
+    "InstrumentId": 69292,
+    "Ticker": "CARLBc",
+    "Change3M": -2.11,
+    "Change52W": 24.31,
+    "ChangeYTD": 2.36
+  },
+  {
+    "InstrumentId": 71163,
+    "Ticker": "CARLAc",
+    "Change3M": 0,
+    "Change52W": 15.35,
+    "ChangeYTD": 0
+  },
+  {
+    "InstrumentId": 71164,
+    "Ticker": "CARLBc",
+    "Change3M": -2.42,
+    "Change52W": 23.86,
+    "ChangeYTD": 2.03
+  },
+  {
+    "InstrumentId": 16569,
+    "Ticker": "CBGA",
+    "Change3M": 1.56,
+    "Change52W": 20.98,
+    "ChangeYTD": 2.49
+  },
+  {
+    "InstrumentId": 16570,
+    "Ticker": "CBGB",
+    "Change3M": -3.28,
+    "Change52W": 25.1,
+    "ChangeYTD": 2.22
+  },
+  {
+    "InstrumentId": 32864,
+    "Ticker": "CARL A",
+    "Change3M": 2.77,
+    "Change52W": 19.9,
+    "ChangeYTD": 3.02
+  },
+  {
+    "InstrumentId": 32865,
+    "Ticker": "CARL B",
+    "Change3M": -2.35,
+    "Change52W": 23.73,
+    "ChangeYTD": 2.12
+  },
+  {
+    "InstrumentId": 39083,
+    "Ticker": "CBGA",
+    "Change3M": 0,
+    "Change52W": -5.02,
+    "ChangeYTD": -5.02
+  },
+  {
+    "InstrumentId": 39084,
+    "Ticker": "CBGB",
+    "Change3M": 0,
+    "Change52W": 3.78,
+    "ChangeYTD": 3.78
+  },
+  {
+    "InstrumentId": 69291,
+    "Ticker": "CARLAc",
+    "Change3M": 2.94,
+    "Change52W": 19.9,
+    "ChangeYTD": 2.53
+  },
+  {
+    "InstrumentId": 69292,
+    "Ticker": "CARLBc",
+    "Change3M": -2.11,
+    "Change52W": 24.31,
+    "ChangeYTD": 2.36
+  },
+  {
+    "InstrumentId": 71163,
+    "Ticker": "CARLAc",
+    "Change3M": 0,
+    "Change52W": 15.35,
+    "ChangeYTD": 0
+  },
+  {
+    "InstrumentId": 71164,
+    "Ticker": "CARLBc",
+    "Change3M": -2.42,
+    "Change52W": 23.86,
+    "ChangeYTD": 2.03
+  }
+]

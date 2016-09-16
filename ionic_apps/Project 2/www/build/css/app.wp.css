@@ -10547,9 +10547,6 @@ body {
 .charts-page ion-header {
   height: 16%; }
 
-.charts-page ion-content {
-  color: #848484; }
-
 .charts-page .btn-period {
   z-index: 99;
   padding: 0;
@@ -10625,15 +10622,18 @@ body {
 
 .watch-list-page .tab-button {
   color: #848484;
-  background: -webkit-linear-gradient(#1e1e1e, #404041);
-  background: linear-gradient(#1e1e1e, #404041); }
+  background: #484849; }
 
 .watch-list-page .tab-button[aria-selected=true] {
   color: white !important;
   background: #848484 !important; }
 
 .watch-list-page ion-content {
+  overflow-y: hidden;
   background-color: #484849; }
+
+.watch-list-page scroll-content {
+  overflow-y: hidden; }
 
 .watch-list-page .header {
   margin-top: 25px;
@@ -10665,13 +10665,22 @@ body {
 
 .watch-list-page .show-tabbar {
   top: 90px;
-  height: 30px;
-  border-radius: 5%;
+  height: 40px;
+  background-color: #484849;
+  border-radius: 8px;
   border: 1px  solid #848484; }
 
 .watch-list-page .show-tabbar a {
-  height: 28px !important;
+  height: 38px !important;
   min-height: 25px !important; }
+
+.watch-list-page .show-tabbar a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px; }
+
+.watch-list-page .show-tabbar a:nth-child(3) {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px; }
 
 .watch-list-page .tab-button:nth-child(2) {
   border-right: 1px solid #848484;
@@ -10683,9 +10692,13 @@ body {
 .compare-page ion-header {
   height: 20%; }
 
+.compare-page ion-content {
+  overflow-y: hidden; }
+
 .compare-page scroll-content {
   margin-top: 150px !important;
-  margin-bottom: 0 !important; }
+  margin-bottom: 0 !important;
+  overflow-y: hidden; }
 
 .compare-page h1 {
   margin-top: 0;
@@ -10699,8 +10712,6 @@ body {
   float: left;
   color: white;
   height: 0;
-  padding-bottom: 33.33333%;
-  width: 33.33333%;
   border-right: 1px solid #787878;
   border-bottom: 1px solid #787878; }
 
@@ -10711,9 +10722,6 @@ body {
 .compare-page .up {
   background: -webkit-linear-gradient(#95bc4f, #447d2d);
   background: linear-gradient(#95bc4f, #447d2d); }
-
-.compare-page .item-box:nth-child(3n) {
-  border-right: 0; }
 
 .compare-page .content {
   position: relative;
@@ -11079,10 +11087,12 @@ body {
   max-height: calc(100% - 130px); }
 
 .performance-page .item-box {
-  width: 20%; }
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 19%; }
 
 .performance-page .item-header {
-  width: 20%;
+  width: 19%;
   font-size: 15px !important; }
 
 .performance-page .item-header span {
@@ -11105,8 +11115,8 @@ body {
   max-height: calc(100% - 100px); }
 
 .compare-page .item-box {
-  padding-bottom: 25%;
-  width: 25%; }
+  padding-bottom: 33.33333%;
+  width: 33.33333%; }
 
 .compare-page .ticker, .compare-page .price {
   font-size: 18px !important; }
@@ -11127,23 +11137,30 @@ body {
   .charts-page .btn-period span {
     font-size: 17px; }
   .charts-page .watchlist-period {
-    top: -18px; }
+    top: -14px; }
   .charts-page .indices-period {
-    top: -19px; }
+    top: -15px; }
   .charts-page .watchlist-period .btn-period {
     width: 18%; }
   .charts-page .indices-period .btn-period {
     width: 23%; }
-  .charts-page .btn-period-click {
+  .charts-page .btn-period-click .button-inner {
     font-size: 20px !important; }
   .charts-page #charts-container {
     margin-top: 0; }
-  .charts-page .tooltip, .charts-page .btn-share span, .charts-page .share-name, .charts-page .btn-period span {
+  .charts-page .tooltip, .charts-page .share-name {
     font-size: 17px !important; }
-  .charts-page .own-shares-title {
-    font-size: 15px; }
+  .charts-page .btn-share span {
+    font-size: 14px !important;
+    font-family: "HelveticaNeue-Medium";
+    padding-left: 16px;
+    padding-right: 16px; }
   .charts-page .tooltip {
     margin-left: 17px !important; }
+  .charts-page .btn-share {
+    margin-right: 16px; }
+  .charts-page .own-shares-title {
+    font-size: 15px; }
   .charts-page .sharegraph-title {
     font-size: 15px; }
   .watch-list-page .show-tabbar {
@@ -11151,7 +11168,8 @@ body {
     margin-left: 15%;
     margin-right: 15%; }
   .watch-list-page .tab-button-text, .watch-list-page .btn-header-title span {
-    font-size: 17px !important; }
+    font-size: 17px !important;
+    font-family: "HelveticaNeue-Medium"; }
   .watch-list-page .btn-header-title {
     font-weight: medium;
     margin-left: calc(50% - 43.5px); }
@@ -11165,35 +11183,51 @@ body {
     width: 70%;
     margin-left: 15%; }
   .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
-    border-bottom: 0.55px solid #6b6b6c; }
+    border-bottom: 1px solid #6b6b6c; }
   .performance-page .div-item-content {
     max-height: calc(100% - 130px); }
   .performance-page .item-box {
-    width: 20%; }
+    width: 18%; }
+  .performance-page [item-right] {
+    margin: 16px; }
   .performance-page .item-header {
-    width: 20%;
-    font-size: 15px !important; }
+    width: 18%;
+    font-size: 20px !important; }
   .performance-page .item-header span {
-    font-size: 12px !important; }
+    font-size: 17px !important; }
   .performance-page .item-col-1 {
-    font-size: 17px; }
+    font-size: 20px; }
   .performance-page .item-data {
-    font-size: 12px; }
+    font-size: 17px; }
   .performance-page .div-item-content {
-    border-bottom: 1px solid #c8c7cc; }
+    border-bottom: 3px solid #c8c7cc; }
   .compare-page scroll-content, .compare-page ion-footer {
     width: 70%;
     margin-left: 15%; }
   .compare-page ion-footer {
-    bottom: 5% !important; }
+    bottom: 25% !important; }
   .compare-page scroll-content h1 {
     margin-left: 0;
-    font-size: 14px; }
+    font-size: 19px; }
   .compare-page .scroll-content {
     max-height: calc(100% - 100px); }
+    .compare-page .scroll-content .item-box {
+      padding-bottom: 25%;
+      width: 25%; }
   .compare-page .ticker, .compare-page .price {
-    font-size: 18px !important; }
+    font-size: 20px !important; }
   .compare-page .change-pro, .compare-page .currency {
-    font-size: 12px; }
+    font-size: 15px; }
   .compare-page .footer {
-    font-size: 14px; } }
+    font-size: 17px; } }
+
+@media only screen and (min-width: 1024px) {
+  .charts-page #charts-container {
+    margin-top: 50px; }
+  .compare-page ion-footer {
+    bottom: 5px !important; }
+  .performance-page scroll-content {
+    margin-top: 30px !important; }
+  .performance-page .item-box div {
+    padding-bottom: 16px;
+    padding-top: 16px; } }
