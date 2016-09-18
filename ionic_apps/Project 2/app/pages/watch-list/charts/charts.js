@@ -503,11 +503,11 @@ export class ChartsPage {
                 }
             }
             else {
-                alert("Full choose");
+                console.log("Full choose");
             }
         }
         else {
-            console.log(this.countOwnShare);
+            // console.log(this.countOwnShare);
             if (this.countOwnShare <= 1 ){
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     alert("Cannot delete this own share");
@@ -522,6 +522,7 @@ export class ChartsPage {
                 }
             }
             else{
+                console.log(id);
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     this.countOwnShare--;
                 }
@@ -534,7 +535,7 @@ export class ChartsPage {
             
             
         }    
-        console.log(this.sharesChart);
-        console.log(this.chart);
+        // console.log(this.sharesChart);
+        // console.log(this.chart);
     }
 }

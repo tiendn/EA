@@ -9717,11 +9717,12 @@ body {
 .charts-page .sharegraph-title {
   font-size: 14px; }
 
-.watch-list-page .tab-button-text, .watch-list-page .button-inner {
+.watch-list-page .tab-button-text {
   font-size: 15px !important; }
 
 .watch-list-page .btn-header-title {
-  font-size: 12px;
+  font-size: 15px;
+  height: 35px;
   font-weight: medium;
   margin-left: calc(50% - 43.5px); }
 
