@@ -10930,6 +10930,12 @@ body {
 .charts-page ion-header {
   height: 16%; }
 
+.charts-page ion-content {
+  overflow-y: hidden; }
+
+.charts-page scroll-content {
+  overflow-y: scroll; }
+
 .charts-page .btn-period {
   z-index: 99;
   padding: 0;
@@ -11012,11 +11018,7 @@ body {
   background: #848484 !important; }
 
 .watch-list-page ion-content {
-  overflow-y: hidden;
   background-color: #484849; }
-
-.watch-list-page scroll-content {
-  overflow-y: hidden; }
 
 .watch-list-page .header {
   margin-top: 25px;
@@ -11048,14 +11050,14 @@ body {
 
 .watch-list-page .show-tabbar {
   top: 90px;
-  height: 40px;
+  height: 25px;
   background-color: #484849;
   border-radius: 8px;
   border: 1px  solid #848484; }
 
 .watch-list-page .show-tabbar a {
-  height: 38px !important;
-  min-height: 25px !important; }
+  height: 23px !important;
+  min-height: 20px !important; }
 
 .watch-list-page .show-tabbar a:first-child {
   border-top-left-radius: 5px;
@@ -11142,8 +11144,12 @@ body {
 .performance-page ion-header {
   height: 17%; }
 
+.performance-page ion-content {
+  overflow-y: hidden; }
+
 .performance-page scroll-content {
-  margin-top: 80px !important; }
+  margin-top: 80px !important;
+  overflow-y: hidden; }
 
 .performance-page ion-list {
   margin-bottom: 0; }

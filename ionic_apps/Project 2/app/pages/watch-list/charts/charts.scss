@@ -8,10 +8,10 @@ $thin-font: "HelveticaNeue-Thin";
   }
   ion-content{
     // color: #848484;
-    // overflow-y: hidden;
+    overflow-y: hidden;
   }
   scroll-content{
-    // overflow-y: hidden;
+    overflow-y: scroll;
   }
   .btn-period{
       z-index:  99;

@@ -10,14 +10,14 @@
   }
   
    ion-content{
-	 overflow-y: hidden;
+	//  overflow-y: hidden;
     // opacity: 0.95;
      background-color: #484849;
 	// Font .................
     // font-family: Helvetica Neue;
   }
   scroll-content{
-	 overflow-y: hidden;
+	//  overflow-y: hidden;
   }
 	.header{
 	margin-top: 25px;
@@ -55,14 +55,14 @@
 	.show-tabbar {
 		// bottom: 80% !important;
 		top: 90px;
-		height: 40px;
+		height: 25px;
 		background-color: #484849;
 		border-radius: 8px;
 		border: 1px  solid #848484;
 	}
 	.show-tabbar a {
-		height: 38px !important;
-		min-height: 25px !important;
+		height: 23px !important;
+		min-height: 20px !important;
 	}
 	.show-tabbar a:first-child{
 		border-top-left-radius : 5px;
