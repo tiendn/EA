@@ -93,7 +93,7 @@ $thin-font: "HelveticaNeue-Thin";
     font-family: $light-font;
   }
   .btn-period-click{
-    font-family: $medium-font;
+    font-family: $medium-font !important;
   }
   .btn-share{
     font-family: $light-font;

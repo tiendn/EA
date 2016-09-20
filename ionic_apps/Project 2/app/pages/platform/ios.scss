@@ -152,6 +152,12 @@
 
 
   .charts-page{
+    ion-content{
+      overflow-y: hidden;
+    }
+    scroll-content{
+      overflow-y: hidden;
+    }
     .btn-period span{
       font-size: 17px;
       
@@ -210,6 +216,12 @@
 
 
   .watch-list-page{
+    ion-content{
+      overflow-y: hidden;
+    }
+    scroll-content{
+      overflow-y: hidden;
+    }
     .show-tabbar {
       width : 70%;
       margin-left: 15%;
@@ -242,6 +254,12 @@
 
 
   .performance-page {
+      ion-content{
+        overflow-y: hidden;
+      }
+      scroll-content{
+        overflow-y: hidden;
+      }
        scroll-content{
         width: 70%;
         margin-left: 15%;
@@ -275,7 +293,7 @@
         font-size: 17px;
       }
       .div-item-content {
-      border-bottom: 2px solid #c8c7cc;
+      border-bottom: 1px solid #c8c7cc;
       max-height:  calc(100%  - 220px);
     }
       // .item-box,.item-header{
@@ -287,6 +305,12 @@
 
 
   .compare-page{
+      ion-content{
+        overflow-y: hidden;
+      }
+      scroll-content{
+        overflow-y: hidden;
+      }
       scroll-content, ion-footer{
         width: 70%;
         margin-left: 15%;
@@ -320,6 +344,10 @@
 }
 @media only screen and ( min-width : 1024px){
   .charts-page{
+    .chart-page-content{
+      max-height: calc(100% );
+      margin-top: 0;
+    }
     #charts-container{
       margin-top: 50px;
     }

@@ -9277,7 +9277,7 @@ body {
   font-family: "HelveticaNeue-Light"; }
 
 .charts-page .btn-period-click {
-  font-family: "HelveticaNeue-Medium"; }
+  font-family: "HelveticaNeue-Medium" !important; }
 
 .charts-page .btn-share {
   font-family: "HelveticaNeue-Light"; }
@@ -9445,6 +9445,9 @@ body {
 
 .performance-page .item-header-content {
   margin-top: 20%; }
+
+.performance-page .item-header-content div.item-inner {
+  margin-bottom: 1px !important; }
 
 .performance-page .div-item-content {
   overflow-y: scroll;
@@ -9805,6 +9808,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
+  .charts-page ion-content {
+    overflow-y: hidden; }
+  .charts-page scroll-content {
+    overflow-y: hidden; }
   .charts-page .btn-period span {
     font-size: 17px; }
   .charts-page .watchlist-period {
@@ -9835,6 +9842,10 @@ body {
     font-size: 15px; }
   .charts-page .sharegraph-title {
     font-size: 15px; }
+  .watch-list-page ion-content {
+    overflow-y: hidden; }
+  .watch-list-page scroll-content {
+    overflow-y: hidden; }
   .watch-list-page .show-tabbar {
     width: 70%;
     margin-left: 15%;
@@ -9851,6 +9862,10 @@ body {
   .watch-list-page .btn-header-close img {
     height: 20px;
     width: 20px; }
+  .performance-page ion-content {
+    overflow-y: hidden; }
+  .performance-page scroll-content {
+    overflow-y: hidden; }
   .performance-page scroll-content {
     width: 70%;
     margin-left: 15%; }
@@ -9872,8 +9887,12 @@ body {
   .performance-page .item-data {
     font-size: 17px; }
   .performance-page .div-item-content {
-    border-bottom: 2px solid #c8c7cc;
+    border-bottom: 1px solid #c8c7cc;
     max-height: calc(100%  - 220px); }
+  .compare-page ion-content {
+    overflow-y: hidden; }
+  .compare-page scroll-content {
+    overflow-y: hidden; }
   .compare-page scroll-content, .compare-page ion-footer {
     width: 70%;
     margin-left: 15%; }
@@ -9895,6 +9914,9 @@ body {
     font-size: 17px; } }
 
 @media only screen and (min-width: 1024px) {
+  .charts-page .chart-page-content {
+    max-height: calc(100%);
+    margin-top: 0; }
   .charts-page #charts-container {
     margin-top: 50px; }
   .compare-page ion-footer {

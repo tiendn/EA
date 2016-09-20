@@ -36,6 +36,9 @@ $thin-font: "HelveticaNeue-Thin";
   .item-header-content{
     margin-top: 20%;
   }
+  .item-header-content div.item-inner{
+    margin-bottom: 1px !important;
+  }
   .div-item-content {
     overflow-y: scroll;
     position: relative;

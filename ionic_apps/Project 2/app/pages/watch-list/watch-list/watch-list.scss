@@ -8,10 +8,13 @@
     color: white !important;
     background: #848484 !important;
   }
-  
+  	ion-header{
+		//   z-index: 1000;
+	  }
    ion-content{
 	 overflow-y: hidden;
     // opacity: 0.95;
+	// z-index: 1000;
      background-color: #484849;
 	// Font .................
     // font-family: Helvetica Neue;
