@@ -1,39 +1,41 @@
 <ion-header> </ion-header>
 <ion-content> 
     <!---->
-    <div id = "charts-container">
-        <div class="{{type == 0 ? 'watchlist-period' : type == 1 ? 'indices-period' :''  }} "> 
-            <button  *ngFor="let period of listPeriod" 
-                (click)="changePeriod(period.Value)" 
-                class="button button-clear btn-period {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
-            {{period.Name}}
-            </button>
+    <div class = "chart-page-content">
+        <div id = "charts-container">
+            <div class="{{type == 0 ? 'watchlist-period' : type == 1 ? 'indices-period' :''  }} "> 
+                <button  *ngFor="let period of listPeriod" 
+                    (click)="changePeriod(period.Value)" 
+                    class="button button-clear btn-period {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
+                {{period.Name}}
+                </button>
+            </div>
+            <div id="charts" style="">
+            </div>
         </div>
-        <div id="charts" style="">
-        </div>
-    </div>
-    <!---->
-    <div class = "footer">
-        <div class="share-item">
-            <span  *ngFor = "let share of sharesChart" [style.color]= "share.color" class = "share-name"> {{share.shareName}} </span>
-        </div>
-        <p class="tooltip" > {{tooltip}}
-        </p>
-        <div class ="own-shares">
-            <p class ="own-shares-title"> {{ownShareTitle}}  </p>
-            <button *ngFor = "let ownShare of listOwnShares" 
-                (click)="getChartData(ownShare.instrumentID,ownShare.shareName,ownShare.color,true)"
-                class="button button-clear btn-share {{getIndexShare(ownShare.instrumentID) >= 0 ? 'btn-click' : ''}}">
-                {{ownShare.shareName}}
-            </button>          
-        </div>
-        <div class="watch-list-shares">
-            <p class = "sharegraph-title"> {{watchListSharesTitle}} </p>
-            <button *ngFor = "let share of watchListShare" 
-                (click)="getChartData(share.instrumentID,share.shareName,share.color,false)"
-                class="button button-clear btn-share {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
-                {{share.shareName}}
-            </button>
+        <!---->
+        <div class = "footer">
+            <div class="share-item">
+                <span  *ngFor = "let share of sharesChart" [style.color]= "share.color" class = "share-name"> {{share.shareName}} </span>
+            </div>
+            <p class="tooltip" > {{tooltip}}
+            </p>
+            <div class ="own-shares">
+                <p class ="own-shares-title"> {{ownShareTitle}}  </p>
+                <button *ngFor = "let ownShare of listOwnShares" 
+                    (click)="getChartData(ownShare.instrumentID,ownShare.shareName,ownShare.color,true)"
+                    class="button button-clear btn-share {{getIndexShare(ownShare.instrumentID) >= 0 ? 'btn-click' : ''}}">
+                    {{ownShare.shareName}}
+                </button>          
+            </div>
+            <div class="watch-list-shares">
+                <p class = "sharegraph-title"> {{watchListSharesTitle}} </p>
+                <button *ngFor = "let share of watchListShare" 
+                    (click)="getChartData(share.instrumentID,share.shareName,share.color,false)"
+                    class="button button-clear btn-share {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
+                    {{share.shareName}}
+                </button>
+            </div>
         </div>
     </div>
 </ion-content>

@@ -14,7 +14,7 @@ export class ChartServices {
         this.localStorage = new Storage(LocalStorage);
         this.helper = helper;
         this.apiName = "chartdata";
-        this.servicesUrl = "http://10.10.15.8/myirappapi2/api/v1/" + this.apiName + "/";
+        this.servicesUrl = "http://113.190.248.146/myirappapi2/api/v1/" + this.apiName + "/";
         this.httpRequestHeader = {
             headers: {
                 'Authorization': "Basic bm9ybWFsdXNlcjpwNmVqYVByRQ=="
@@ -192,7 +192,8 @@ export class ChartServices {
             fDate = fDate + "T000000";
             fDate = fDate.replace(" ", "T") + "/";
             // fDate = "20160916T000000";
-            var params = instrumentId + "/" + fDate;
+            // var params = instrumentId + "/" + fDate;
+            var params = instrumentId;
             console.log(this.servicesUrl + params);    
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
                 .subscribe(

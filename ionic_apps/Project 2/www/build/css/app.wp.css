@@ -10547,6 +10547,16 @@ body {
 .charts-page ion-header {
   height: 16%; }
 
+.charts-page ion-content {
+  overflow-y: hidden !important; }
+
+.charts-page scroll-content {
+  overflow-y: hidden !important; }
+
+.charts-page .chart-page-content {
+  overflow-y: scroll;
+  position: relative; }
+
 .charts-page .btn-period {
   z-index: 99;
   padding: 0;
@@ -11029,6 +11039,10 @@ body {
   .charts-page #charts-container {
     margin-top: 10%; } }
 
+.charts-page .chart-page-content {
+  max-height: calc(100% - 50px);
+  margin-top: 14%; }
+
 .charts-page .btn-period {
   font-size: 15px;
   font-family: "HelveticaNeue-Light"; }
@@ -11050,9 +11064,6 @@ body {
 
 .charts-page .share-name {
   font-size: 12px; }
-
-.charts-page #charts-container {
-  margin-top: 14%; }
 
 .charts-page .tooltip, .charts-page .own-shares-title {
   font-size: 14px; }
@@ -11154,7 +11165,8 @@ body {
     width: 23%; }
   .charts-page .btn-period-click .button-inner {
     font-size: 20px !important; }
-  .charts-page #charts-container {
+  .charts-page .chart-page-content {
+    max-height: calc(100% - 100px);
     margin-top: 0; }
   .charts-page .tooltip, .charts-page .share-name {
     font-size: 17px !important; }

@@ -391,8 +391,9 @@ export class ChartsPage {
                         choose = true;
                     }
                     // break;
-                    if (choose ) break;
+                    // 
                 });
+                if (choose ) break;
                 // console.log(recentDay);
             }
         }
@@ -531,7 +532,6 @@ export class ChartsPage {
                     alert("Cannot delete this own share");
                 }
                 else{
-                    
                     this.sharesChart = this.sharesChart.filter(function(el) {
                         return el.instrumentID !== id;
                     });
@@ -562,6 +562,7 @@ export class ChartsPage {
                 for (let i = 0 ; i < this.sharesChart.length ; i++){
                 // console.log(this.sharesChart[i].isOwnShare);    
                     if (this.sharesChart[i].isOwnShare === true){
+                        if (choose) break;
                         this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true)
                         .then(data=>{
                     // console.log(this.sharesChart[i].instrumentID);
@@ -583,7 +584,7 @@ export class ChartsPage {
                             }
                             // else break;
                         }, true);
-                        if (choose) break;
+                        
                     // });
                     }
               }

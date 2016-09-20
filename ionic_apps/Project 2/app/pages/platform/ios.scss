@@ -6,6 +6,10 @@
   }
 }
 .charts-page{
+  .chart-page-content{
+    max-height: calc(100% - 50px);
+    margin-top: 14%;
+  }
   .btn-period{
     font-size: 15px;
     font-family: $light-font;
@@ -29,7 +33,7 @@
     font-size: 12px;
   }
   #charts-container{
-      margin-top: 14%;
+      // margin-top: 14%;
   }
   // .btn-period  {
   //     width: 15% !important;
@@ -167,7 +171,8 @@
     .btn-period-click .button-inner{
       font-size: 20px !important;
     }
-    #charts-container{
+    .chart-page-content{
+      max-height: calc(100% - 100px);
       margin-top: 0;
     }
     // .share-name{

@@ -9,9 +9,15 @@ $thin-font: "HelveticaNeue-Thin";
   ion-content{
     // color: #848484;
     // overflow-y: scroll;
+    overflow-y: hidden !important;
   }
   scroll-content{
-    // overflow-y: scroll;
+    overflow-y: hidden !important;
+  }
+  .chart-page-content{
+    overflow-y: scroll;
+    position: relative;
+    // margin-top: 100px;
   }
   .btn-period{
       z-index:  99;
