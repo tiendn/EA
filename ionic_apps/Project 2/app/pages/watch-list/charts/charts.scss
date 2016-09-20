@@ -7,12 +7,18 @@ $thin-font: "HelveticaNeue-Thin";
     height: 16%;
   }
   ion-content{
-    // color: #848484;
-    // overflow-y: scroll;
-    overflow-y: hidden !important;
+     overflow-y: hidden;
   }
   scroll-content{
-    overflow-y: hidden !important;
+     overflow-y: hidden;
+  }
+  ion-content{
+    // color: #848484;
+    // overflow-y: scroll;
+    // overflow-y: hidden !important;
+  }
+  scroll-content{
+    // overflow-y: hidden !important;
   }
   .chart-page-content{
     overflow-y: scroll;

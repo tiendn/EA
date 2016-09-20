@@ -494,7 +494,7 @@ export class ChartsPage {
                     // }
                     // console.log(this.recentDay);
                     if (this.recentDay !== 0){ // Nếu có ngày gần nhất có dữ liệu
-                        // Lấy dữ liệu với tham số ngày truyền vòa
+                        // Lấy dữ liệu với tham số ngày truyền vào 
                         this.chartCtrl.getDailyData(id,this.recentDay,true).then(data=>{
                             if (data.length > 0){
                                 this.chart.addSeries({   

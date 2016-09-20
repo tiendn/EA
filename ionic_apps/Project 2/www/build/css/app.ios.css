@@ -9200,10 +9200,10 @@ body {
   height: 16%; }
 
 .charts-page ion-content {
-  overflow-y: hidden !important; }
+  overflow-y: hidden; }
 
 .charts-page scroll-content {
-  overflow-y: hidden !important; }
+  overflow-y: hidden; }
 
 .charts-page .chart-page-content {
   overflow-y: scroll;
@@ -9729,9 +9729,6 @@ body {
 .charts-page .sharegraph-title {
   font-size: 14px; }
 
-.watch-list-page scroll-content {
-  overflow-y: scroll; }
-
 .watch-list-page .tab-button-text {
   font-size: 15px !important; }
 
@@ -9808,10 +9805,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%; }
-  .charts-page ion-content {
-    overflow-y: hidden; }
-  .charts-page scroll-content {
-    overflow-y: hidden; }
   .charts-page .btn-period span {
     font-size: 17px; }
   .charts-page .watchlist-period {
@@ -9842,10 +9835,6 @@ body {
     font-size: 15px; }
   .charts-page .sharegraph-title {
     font-size: 15px; }
-  .watch-list-page ion-content {
-    overflow-y: hidden; }
-  .watch-list-page scroll-content {
-    overflow-y: hidden; }
   .watch-list-page .show-tabbar {
     width: 70%;
     margin-left: 15%;
@@ -9862,10 +9851,6 @@ body {
   .watch-list-page .btn-header-close img {
     height: 20px;
     width: 20px; }
-  .performance-page ion-content {
-    overflow-y: hidden; }
-  .performance-page scroll-content {
-    overflow-y: hidden; }
   .performance-page scroll-content {
     width: 70%;
     margin-left: 15%; }
@@ -9889,10 +9874,6 @@ body {
   .performance-page .div-item-content {
     border-bottom: 1px solid #c8c7cc;
     max-height: calc(100%  - 220px); }
-  .compare-page ion-content {
-    overflow-y: hidden; }
-  .compare-page scroll-content {
-    overflow-y: hidden; }
   .compare-page scroll-content, .compare-page ion-footer {
     width: 70%;
     margin-left: 15%; }

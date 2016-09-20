@@ -1,0 +1,7 @@
+{
+    "CoreLocation.framework": 2,
+    "SystemConfiguration.framework": 2,
+    "CoreTelephony.framework": 2,
+    "Social.framework": 2,
+    "MessageUI.framework": 2
+}

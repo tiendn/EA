@@ -1,0 +1,114 @@
+[
+  {
+    "InstrumentId": 0,
+    "Ticker": "SHR1",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 101.23,
+    "Volume": 431823,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "SHR2",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 100.71,
+    "Volume": 456436,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "SHR3",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 104.15,
+    "Volume": 435645,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR1",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 91.93,
+    "Volume": 2431823,
+    "Currency": "DKK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR2",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 506.11,
+    "Volume": 334354,
+    "Currency": "DKK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR3",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 19.08,
+    "Volume": 12454521,
+    "Currency": "EUR"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR4",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 7021.5,
+    "Volume": 68478,
+    "Currency": "INR"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR5",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 51.98,
+    "Volume": 32546,
+    "Currency": "EUR"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR6",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 124.54,
+    "Volume": 54545,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "TICR7",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 12.58,
+    "Volume": 10124,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "ALMA",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 477.5,
+    "Volume": 11544,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "SECU",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 101.23,
+    "Volume": 414252,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "CARLS",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 101.23,
+    "Volume": 454210,
+    "Currency": "SEK"
+  },
+  {
+    "InstrumentId": 0,
+    "Ticker": "AMMA",
+    "Date": "2015-03-03T00:00:00",
+    "Close": 101.23,
+    "Volume": 1042524,
+    "Currency": "SEK"
+  }
+]
