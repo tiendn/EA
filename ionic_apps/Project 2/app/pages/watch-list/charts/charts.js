@@ -77,6 +77,13 @@ export class ChartsPage {
         this.currentPeriod = 3; 
         // Lấy ngày gần nhất có dữ liệu của ownshare đầu tiên, truyền cho các share khác 
         this.recentDay = 0;
+        this.recentTime  = [
+            {
+                "recentDay" : 0,
+                "instrumentID" : 0
+            }
+            
+        ];
         // Đếm số ownshare được chọn
         this.countOwnShare = 1 ;
         // Array Object các share được chọn vẽ lên chart
@@ -228,12 +235,12 @@ export class ChartsPage {
                 }
             });
         }
-        // add lại dữ liệu vào đồ thị
+        // add dữ liệu khởi tạo vào đồ thị với trường hợp 3M mặc định 
         this.chartCtrl.getHistoryData(this.sharesChart[0].instrumentID,this.currentPeriod,true).then(data=>{
             if (data.length > 0){
-                if (this.currentPeriod === 1 )
+                // if (this.currentPeriod === 1 )
                     // Nếu period mặc định đầu tiên được chọn là 1 thì lấy giá trị recentDay
-                    this.recentDay = data[0][0];
+                    // this.recentDay = data[0][0];
                 // Thêm dữ liệu ban đầu
                 this.chart.addSeries({   
                     id : this.sharesChart[0].instrumentID,    
@@ -388,7 +395,9 @@ export class ChartsPage {
                 this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
                     if (data.length > 0 ){
                         // console.log(data[0][0]);
-                        this.recentDay = data[0][0]; // Lấy ngày gần nhất có dữ liệu
+                        this.recentTime[0].recentDay = data[0][0];
+                        this.recentTime[0].instrumentID = this.sharesChart[i].instrumentID;
+                        // this.recentDay = data[0][0]; // Lấy ngày gần nhất có dữ liệu
                         this.chart.addSeries({   
                             id : this.sharesChart[i].instrumentID,    
                             name: this.sharesChart[i].shareName,              
@@ -406,7 +415,7 @@ export class ChartsPage {
         // Vẽ lại data của các share khác
         for (let i = 0 ; i < this.sharesChart.length ; i++){    
             if (i !== index){
-                this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentDay,true).then(data=>{
+                this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentTime[0].recentDay,true).then(data=>{
                     if (data.length > 0 ){ // Kiểm tra nếu data k có dữ liệu thì k thêm vào 
                         this.chart.addSeries({   
                             id : this.sharesChart[i].instrumentID,    
@@ -493,9 +502,9 @@ export class ChartsPage {
 
                     // }
                     // console.log(this.recentDay);
-                    if (this.recentDay !== 0){ // Nếu có ngày gần nhất có dữ liệu
+                    if (this.recentTime[0].recentDay !== 0){ // Nếu có ngày gần nhất có dữ liệu
                         // Lấy dữ liệu với tham số ngày truyền vào 
-                        this.chartCtrl.getDailyData(id,this.recentDay,true).then(data=>{
+                        this.chartCtrl.getDailyData(id,this.recentTime[0].recentDay,true).then(data=>{
                             if (data.length > 0){
                                 this.chart.addSeries({   
                                     id: id,
@@ -512,7 +521,7 @@ export class ChartsPage {
                         // Lấy dữ liệu ngày gần nhất
                         this.chartCtrl.getLastDailyData(id,true).then(data=>{
                             if (data.length > 0){
-                                this.recentDay = data[0][0]; // Gán ngày gần nhất
+                                this.recentTime[0].recentDay = data[0][0]; // Gán ngày gần nhất
                                 this.chart.addSeries({   
                                     id: id,
                                     data: data,
@@ -530,7 +539,7 @@ export class ChartsPage {
                 console.log("Full choose");
             }
         }
-        else {
+        else { // Nếu instrumentID đó đã có trong đồ thị, xoá.
             if (this.countOwnShare <= 1 ){ // Nếu số lượng ownshare <=1 
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     alert("Cannot delete this own share");
@@ -557,26 +566,36 @@ export class ChartsPage {
                 // Xóa line được chọn
                 if (this.chart.get(id) !== null)
                     this.chart.get(id).remove();
-                let choose = false; // Biến kiểm tra lấy được ngày gần nhất hay chưa
-                for (let i = 0 ; i < this.sharesChart.length ; i++){
-                    if (this.sharesChart[i].isOwnShare === true){ // Nếu là ownshare 
-                        if (choose) break; // Nếu đã có ngày gần nhất
-                        this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true)
-                        .then(data=>{
-                            if (data.length > 0 ){ // Nếu dữ liệu > 0
-                               if (this.chartCtrl.getDay(this.recentDay) === this.chartCtrl.getDay(data[0][0]))
-                                   {} // Nếu ngày gần nhất giống ngày gần nhất của share cũ thì k làm gì
-                               else{
-                                   // Nếu ngày gần nhất khác ngày gần nhất của share cũ thì gán lại giá trị, 
-                                //     vẽ lại toàn bộ đồ thị với period như cũ
-                                   this.recentDay = data[0][0];
-                                   changePeriod(this.currentPeriod);
+                var choose = false; // Biến kiểm tra lấy được ngày gần nhất hay chưa
+                // Cần phải lưu một biến có giá trị lưu xem ownshare nào đang được lựa chọn để lấy recentDay
+                if (this.recentTime[0].instrumentID === id) 
+                // Nếu id bị xoá là instrumentID đang được chọn để lấy recentday
+                    for (let i = 0 ; i < this.sharesChart.length ; i++){
+                        console.log(this.sharesChart[i]);
+                        
+                        if (this.sharesChart[i].isOwnShare === true && choose === false){ // Nếu là ownshare 
+                            console.log(choose);
+                            if (choose === true) break; // Nếu đã có ngày gần nhất
+                            console.log(this.sharesChart[i].instrumentID);
+                            this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true)
+                            .then(data=>{
+                                if (data.length > 0 ){ // Nếu dữ liệu > 0
+                                    alert(2);
+                                    if (this.chartCtrl.getDay(this.recentTime[0].recentDay) === this.chartCtrl.getDay(data[0][0]))
+                                        {} // Nếu ngày gần nhất giống ngày gần nhất của share cũ thì k làm gì
+                                    else{
+                                        // Nếu ngày gần nhất khác ngày gần nhất của share cũ thì gán lại giá trị, 
+                                        //     vẽ lại toàn bộ đồ thị với period như cũ
+                                        this.recentTime[0].recentDay = data[0][0];
+                                        this.recentTime[0].instrumentID = id;
+                                         // đã lấy được ngày gần nhất
+                                        changePeriod(this.currentPeriod);
+                                    }
+                                    choose = true;// Lỗi không biết tại sao choose = true k nhận , có thể nhảy của JS
                                 }
-                                choose = true; // đã lấy được ngày gần nhất
-                            }
-                        }, true);
+                            }, true);
+                        }
                     }
-              }
             }
         } 
             

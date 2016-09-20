@@ -160,10 +160,6 @@ export class ChartServices {
                     res => {
                         if(res != undefined && res != null){
                             var data = res.json();
-                            
-
-
-                            
                             if(data.length > 0){
                                 $scope.processData(data);
                                 resolve($scope.chartData);
