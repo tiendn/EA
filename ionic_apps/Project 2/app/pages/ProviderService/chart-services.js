@@ -141,7 +141,7 @@ export class ChartServices {
         this.isPercentData = isPercentData;
         let $scope = this;
         this.dailyStorageKey = this.apiName + "_" + this.dailyKey;
-        // console.log(recentDay);
+        console.log(recentDay);
         return new Promise(resolve => {
 
             let $scope = this;
