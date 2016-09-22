@@ -386,56 +386,106 @@ export class ChartsPage {
             },
             
         });
-        let index = -1; // chọn được Ownshare nào để lấy date cho các share khác hay chưa
-
-
-        //  Cách ngắt trong js.....
-
-        
-        for (let i = 0 ; i < this.sharesChart.length ; i++){
-            // console.log(this.sharesChart[i].isOwnShare);    
-            if (this.sharesChart[i].isOwnShare === true){
-                if (index !== -1 ) break; // Nếu chọn được rồi dừng vòng lặp
-                // Lấy dữ liệu ngày gần nhất
-                this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
-                    if (data.length > 0 ){
-                        // console.log(data[0][0]);
-                        this.recentTime[0].recentDay = data[0][0];
-                        console.log(this.recentTime[0].recentDay);
-                        this.recentTime[0].instrumentID = this.sharesChart[i].instrumentID;
-                        // this.recentDay = data[0][0]; // Lấy ngày gần nhất có dữ liệu
-                        this.chart.addSeries({   
-                            id : this.sharesChart[i].instrumentID,    
-                            name: this.sharesChart[i].shareName,              
-                            data: data,
-                            // color: this.color[this.sharesChart.length]
-                            color:  this.sharesChart[i].color
-                        }, true);
-                        index = i; // đã chọn được ownshare để lấy ngày
-                    }
-                });
+        // let index = -1; // chọn được Ownshare nào để lấy date cho các share khác hay chưa
+        // //  Cách ngắt trong js.....
+        // for (let i = 0 ; i < this.sharesChart.length ; i++){
+        //     // console.log(this.sharesChart[i].isOwnShare);    
+        //     if (this.sharesChart[i].isOwnShare === true){
+        //         if (index !== -1 ) break; // Nếu chọn được rồi dừng vòng lặp
+        //         // Lấy dữ liệu ngày gần nhất
+        //         this.chartCtrl.getLastDailyData(this.sharesChart[i].instrumentID,true).then(data=>{
+        //             if (data.length > 0 ){
+        //                 // console.log(data[0][0]);
+        //                 this.recentTime[0].recentDay = data[0][0];
+        //                 console.log(this.recentTime[0].recentDay);
+        //                 this.recentTime[0].instrumentID = this.sharesChart[i].instrumentID;
+        //                 // this.recentDay = data[0][0]; // Lấy ngày gần nhất có dữ liệu
+        //                 this.chart.addSeries({   
+        //                     id : this.sharesChart[i].instrumentID,    
+        //                     name: this.sharesChart[i].shareName,              
+        //                     data: data,
+        //                     // color: this.color[this.sharesChart.length]
+        //                     color:  this.sharesChart[i].color
+        //                 }, true);
+        //                 index = i; // đã chọn được ownshare để lấy ngày
+        //             }
+        //         });
+        //     }
+        // }
+        // //  truyền chưa đúng tham số , chưa nhận kết quả của recentDay.
+        // console.log(this.recentTime[0].recentDay);
+        // // console.log(index);
+        // console.log(this.sharesChart);
+        // // Vẽ lại data của các share khác
+        // for (let i = 0 ; i < this.sharesChart.length ; i++){    
+        //     if (i !== index){
+        //         this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentTime[0].recentDay,true).then(data=>{
+        //             if (data.length > 0 ){ // Kiểm tra nếu data k có dữ liệu thì k thêm vào 
+        //                 this.chart.addSeries({   
+        //                     id : this.sharesChart[i].instrumentID,    
+        //                     name: this.sharesChart[i].shareName,              
+        //                     data: data,
+        //                     // color: this.color[this.sharesChart.length]
+        //                     color:  this.sharesChart[i].color
+        //                 }, true);
+        //             }
+        //         });
+        //     }
+        // }  
+        var arr = this.sharesChart.slice();
+        let index = -1;
+        var $scope = this;
+        getShareData(arr,index);
+        function getShareData(arr,index){
+            if (arr.length > 0 ){
+                let share = arr[0];
+                arr = arr.slice(1);
+                if (share.isOwnShare){
+                    $scope.chartCtrl.getLastDailyData(share.instrumentID,true).then(data=>{
+                        if (data.length > 0 ){
+                            // console.log(data[0][0]);
+                            $scope.recentTime[0].recentDay = data[0][0];
+                            console.log($scope.recentTime[0].recentDay);
+                            $scope.recentTime[0].instrumentID = share.instrumentID;
+                            // this.recentDay = data[0][0]; // Lấy ngày gần nhất có dữ liệu
+                            $scope.chart.addSeries({   
+                                id : share.instrumentID,    
+                                name: share.shareName,              
+                                data: data,
+                                // color: this.color[this.sharesChart.length]
+                                color:  share.color
+                            }, true);
+                            // index = i; // đã chọn được ownshare để lấy ngày
+                            for (let i = 0 ; i < arr.length ; i++){    
+                                // if (i !== index){
+                                $scope.chartCtrl.getDailyData(arr[i].instrumentID,$scope.recentTime[0].recentDay,true).then(data=>{
+                                    if (data.length > 0 ){ // Kiểm tra nếu data k có dữ liệu thì k thêm vào 
+                                        $scope.chart.addSeries({   
+                                            id : arr[i].instrumentID,    
+                                            name: arr[i].shareName,              
+                                            data: data,
+                                            // color: this.color[this.sharesChart.length]
+                                            color:  arr[i].color
+                                        }, true);
+                                    }
+                                });
+                                // }
+                            }  
+                        }
+                        else {
+                            index++;
+                            getShareData(arr,index);
+                        }
+                    });
+                }
             }
-        }
-        //  truyền chưa đúng tham số , chưa nhận kết quả của recentDay.
-        console.log(this.recentTime[0].recentDay);
-        // console.log(index);
-        console.log(this.sharesChart);
-        // Vẽ lại data của các share khác
-        for (let i = 0 ; i < this.sharesChart.length ; i++){    
-            if (i !== index){
-                this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentTime[0].recentDay,true).then(data=>{
-                    if (data.length > 0 ){ // Kiểm tra nếu data k có dữ liệu thì k thêm vào 
-                        this.chart.addSeries({   
-                            id : this.sharesChart[i].instrumentID,    
-                            name: this.sharesChart[i].shareName,              
-                            data: data,
-                            // color: this.color[this.sharesChart.length]
-                            color:  this.sharesChart[i].color
-                        }, true);
-                    }
-                });
-            }
-        }   
+
+            // Get phan tu dau tien
+
+            // Get data
+            // De quy
+
+        };
     }
 
     //   Update 
