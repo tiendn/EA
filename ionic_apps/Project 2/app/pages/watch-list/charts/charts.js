@@ -86,7 +86,12 @@ export class ChartsPage {
         ];
         // Đếm số ownshare được chọn
         // this.countOwnShare = 1 ;
-        this.ownShare = [32940];
+        this.ownShare = [
+                {
+                    "instrumentID" : 32940,
+                    "priority" : 1
+                }
+            ];
         // Array Object các share được chọn vẽ lên chart
         this.sharesChart = [
             {
@@ -535,13 +540,19 @@ export class ChartsPage {
         return index;    
     }
     // Nhận share và vẽ lên đồ thị
-    getChartData(id,name,color,bool){
+    getChartData(id,name,color,priority,bool){
         if (this.getIndexShare(id) === -1){ // Nếu instrumentID đó chưa có trong danh sách được vẽ lên
             if (this.sharesChart.length < 5){ // Nếu số item được chọn < 5
                 // Đẩy share vào danh sách chọn
                 this.sharesChart.push({instrumentID: id, shareName : name, color : color, isOwnShare : bool});
-                if (bool === true)
-                    this.ownShare.push(id);
+                if (bool === true){
+                    this.ownShare.push({instrumentID: id,priority: priority});
+                    this.ownShare.sort(function(a,b) {
+                        return a.priority - b.priority;
+                    });
+                }
+
+                    
                 // Nếu là ownshare thì tăng số lượng this.countOwnShare
                 // if (bool === true ) this.countOwnShare += 1;
                 // Nếu đang chọn != 1D
@@ -622,7 +633,7 @@ export class ChartsPage {
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     // this.countOwnShare--;
                     this.ownShare = this.ownShare.filter(function(el) {
-                        return el != id;
+                        return el.instrumentID != id;
                     });
                 }
                 // Lọc danh sách item được chọn
@@ -635,8 +646,13 @@ export class ChartsPage {
                 // this.choose = false; // Biến kiểm tra lấy được ngày gần nhất hay chưa
                 // Cần phải lưu một biến có giá trị lưu xem ownshare nào đang được lựa chọn để lấy recentDay
                 console.log(this.ownShare);
+                // Sort share
+                // this.ownShare.slice(0);
+                this.ownShare.sort(function(a,b) {
+                    return a.priority - b.priority;
+                });
                 if (this.recentTime[0].instrumentID === id) {
-                    this.chartCtrl.getLastDailyData(this.ownShare[0],true)
+                    this.chartCtrl.getLastDailyData(this.ownShare[0].instrumentID,true)
                     .then(data=>{
                         if (data.length > 0 ){ // Nếu dữ liệu > 0
                             // alert(2);
@@ -693,7 +709,12 @@ export class ChartsPage {
                             
                     //     }
                     // }
-
+            
+            /**
+             * Có thể đưa thêm thuộc tính ưu tiên khi click ownshare .
+             * Sau đó load vào mảng ownShare
+             * Cứ sau mỗi lần thêm hoặc xóa, thì cập nhật lại vị trí . theo thuộc tính đó. 
+             */
                     
             }
         } 
