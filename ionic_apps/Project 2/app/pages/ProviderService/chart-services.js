@@ -14,8 +14,8 @@ export class ChartServices {
         this.localStorage = new Storage(LocalStorage);
         this.helper = helper;
         this.apiName = "chartdata";
-        // this.servicesUrl = "http://113.190.248.146/myirappapi2/api/v1/" + this.apiName + "/";
-        this.servicesUrl = "http://10.10.15.8/myirappapi2/api/v1/" + this.apiName + "/";
+        this.servicesUrl = "http://113.190.248.146/myirappapi2/api/v1/" + this.apiName + "/";
+        // this.servicesUrl = "http://10.10.15.8/myirappapi2/api/v1/" + this.apiName + "/";
         this.httpRequestHeader = {
             headers: {
                 'Authorization': "Basic bm9ybWFsdXNlcjpwNmVqYVByRQ=="
@@ -71,15 +71,11 @@ export class ChartServices {
 
     getHistoryDataFromServices(resolve, instrumentId, fDate, tDate, currentStorageData, isAppend = false){
         let storageData = currentStorageData;
-        //if(irApp.isOnline){
             let $scope = this;
             var params = instrumentId + "/" +
                         $scope.helper.dateFormat(fDate, $scope.defaultHisoryDateFormat) + "/" +
                         $scope.helper.dateFormat(tDate, $scope.defaultHisoryDateFormat); //+ "/" + irApp.companyCode;
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
-            // this.http.get('./charts.json')
-                // .timeout(irApp.defaultSettings.common.requestTimeout)
-                // .retry(irApp.defaultSettings.common.retry)
                 .subscribe(
                     res => {
                         if(res != undefined && res != null){
@@ -115,9 +111,6 @@ export class ChartServices {
                         $scope.getHistoryDataFromStorage(resolve, instrumentId, storageData, fDate, tDate);
                     }
             );
-        //}
-        //else
-        //    $scope.getHistoryDataFromStorage(resolve, instrumentId, storageData, fDate, tDate);
     }
 
     getHistoryDataFromStorage(resolve, instrumentId, data, fDate, tDate){
@@ -138,7 +131,6 @@ export class ChartServices {
 
     /*---------------------------INTRADAY---------------------------------*/
     getDailyData(instrumentId,recentDay,isPercentData = false){
-        // alert(1);
         this.isPercentData = isPercentData;
         let $scope = this;
         this.dailyStorageKey = this.apiName + "_" + this.dailyKey;
@@ -146,13 +138,8 @@ export class ChartServices {
         return new Promise(resolve => {
 
             let $scope = this;
-            // var fDate = new Date(new Date().setHours(0,0,0,0));
-            // fDate = $scope.helper.dateFormat(fDate, $scope.defaultDailyDateFormat);
-            // fDate = helper.dateFormat(recentDay, "yyyymmdd");
             var fDate = $scope.helper.dateFormat(recentDay, $scope.defaultHisoryDateFormat);
-            // console.log(fDate);
             fDate = fDate + "T000000";
-            // console.log(fDate);
             fDate = fDate.replace(" ", "T") + "/";
             var params = instrumentId + "/" + fDate;
             console.log(this.servicesUrl + params);
@@ -191,8 +178,6 @@ export class ChartServices {
             fDate = $scope.helper.dateFormat(fDate, $scope.defaultHisoryDateFormat);
             fDate = fDate + "T000000";
             fDate = fDate.replace(" ", "T") + "/";
-            // fDate = "20160916T000000";
-            // var params = instrumentId + "/" + fDate;
             var params = instrumentId;
             console.log(this.servicesUrl + params);    
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
@@ -228,16 +213,7 @@ export class ChartServices {
                 sDate = sDate.replace(" ", "T") + "/";
             }
             var params = instrumentId + "/" + sDate;
-            // console.log(this.servicesUrl + params);
-            // if (!irApp.appSettingsData.currency.isDefault)
-                // params += "/" + irApp.appSettingsData.currency.value;
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
-            // console.log(this.servicesUrl + params);
-            // this.http.get("http://10.10.15.8/myirappapi2/api/v1/chartdata/"+instrumentId+"/20160911T000000", this.httpRequestHeader)
-            
-            // this.http.get('./charts.json')
-                // .timeout(irApp.defaultSettings.common.requestTimeout)
-                // .retry(irApp.defaultSettings.common.retry)
                 .subscribe(
                     res => {
                         if(res != undefined && res != null){
@@ -276,9 +252,6 @@ export class ChartServices {
                         $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
                     }
             );
-        // }
-        // else
-            // $scope.getDailyDataFromStorage(resolve, instrumentId, storageData);
     }
     
     getDailyDataFromStorage(resolve, instrumentId, data){
@@ -319,7 +292,6 @@ export class ChartServices {
                 $scope.chartData.volume.push([date, parseFloat(obj.Volume)]);
             });
         }
-        // console.log($scope.chartData.length);
     }
     getDay(recentDay){
         return this.helper.dateFormat(recentDay, this.defaultHisoryDateFormat);

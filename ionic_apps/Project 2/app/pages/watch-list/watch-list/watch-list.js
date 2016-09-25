@@ -17,15 +17,6 @@ export class WatchListPage {
   }
   constructor(viewCtrl,NavParams) {
     this.navParam = NavParams;
-    // this.iconType = ['irapp-watchlist','irapp-indices'];
-    // if (this.navParam.get("type") === "watchlist") {
-    //   this.titleType = ['Watchlist'];
-    // }
-    // else if (this.navParam.get("type") === "indices"){
-    //   this.titleType = ['Indices'];
-      
-    // }
-    // console.log(this.titleType);
     this.type = this.navParam.get("type");
     this.viewCtrl = viewCtrl;
     this.chartsTab = ChartsPage;

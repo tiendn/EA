@@ -4,28 +4,20 @@
       height: 20%;
   }
   ion-content{
-    // opacity: 0.98;
-    // background-color: #484849;
     overflow-y: hidden;
-    // font-family: Helvetica Neue;
   }
   scroll-content{
     margin-top: 150px !important; 
     margin-bottom: 0 !important;
-    //  margin-top: % !important;
     overflow-y: hidden;
   }
   h1{
     margin-top : 0 ;
     color :#808080;
-    // margin-left: 16px;
-    // font-size: 14px;
   }
   .scroll-content{
-    // margin-top: %;
     overflow-y: scroll;
     position: relative;
-    // border-bottom: 1px solid #787878;
   }
   
   .item-box{
@@ -53,25 +45,18 @@
     color: #fff;
   }
   .price {
-    // font-size: 12px;
-    // color: #fff
     margin-bottom : 20%;
   }
   .change-pro, .currency{
     font-size: 12px;
-    // margin-right: 20%;
-    // position: absolute;
-    // bottom: 0;
+
   }
   .change-pro {
     position: absolute;
-    // margin-left :50%;
-    // left : 10%;
-    // margin-right: 20%;
+
   }
   .currency {
     position: absolute;
-    // margin-left :50%;
     right : 10%;
   }
   ion-footer{
