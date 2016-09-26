@@ -11002,7 +11002,7 @@ body {
   color: white !important; }
 
 .charts-page .btn-click {
-  border: 1px solid white; }
+  border: 1px solid white !important; }
 
 .charts-page .btn-period {
   font-family: "HelveticaNeue-Light"; }

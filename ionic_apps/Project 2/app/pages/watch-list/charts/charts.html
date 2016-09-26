@@ -23,7 +23,7 @@
             <div class ="own-shares">
                 <p class ="own-shares-title"> {{ownShareTitle}}  </p>
                 <button *ngFor = "let ownShare of listOwnShares" 
-                    (click)="getChartData(ownShare.instrumentID,ownShare.shareName,ownShare.color,ownShare.priority,true)"
+                    (click)="getChartData(ownShare.instrumentID,ownShare.shareName,ownShare.priority,true)"
                     class="button button-clear btn-share {{getIndexShare(ownShare.instrumentID) >= 0 ? 'btn-click' : ''}}">
                     {{ownShare.shareName}}
                 </button>          
@@ -31,7 +31,7 @@
             <div class="watch-list-shares">
                 <p class = "sharegraph-title"> {{watchListSharesTitle}} </p>
                 <button *ngFor = "let share of watchListShare" 
-                    (click)="getChartData(share.instrumentID,share.shareName,share.color,0,false)"
+                    (click)="getChartData(share.instrumentID,share.shareName,0,false)"
                     class="button button-clear btn-share {{getIndexShare(share.instrumentID) >= 0 ? 'btn-click' : ''}}">
                     {{share.shareName}}
                 </button>
