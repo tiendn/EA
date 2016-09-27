@@ -11,6 +11,11 @@ $thin-font: "HelveticaNeue-Thin";
   }
   scroll-content{
      overflow-y: hidden;
+     
+  }
+  button:hover{
+    color: white !important;
+    opacity: 1 !important;
   }
   .chart-page-content{
     overflow-y: scroll;
@@ -88,6 +93,7 @@ $thin-font: "HelveticaNeue-Thin";
     font-family: $medium-font !important;
   }
   .btn-share{
+    
     font-family: $light-font;
   }
 }

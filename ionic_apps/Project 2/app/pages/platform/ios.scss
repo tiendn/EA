@@ -6,12 +6,7 @@
   }
 }
 .charts-page{
-  // ion-content{
-  //     overflow-y: hidden;
-  //   }
-  //   scroll-content{
-  //     overflow-y: hidden;
-  //   }
+
   .chart-page-content{
     max-height: calc(100% - 50px);
     margin-top: 14%;
@@ -21,10 +16,10 @@
     font-family: $light-font;
   }
   .watchlist-period{
-    top: -14px;
+    top: -10px;
   }
   .indices-period {
-    top: -15px;
+    top: -9px;
   }
   .watchlist-period .btn-period{ 
     width: 15%;
@@ -32,22 +27,17 @@
   .indices-period .btn-period{ 
     width: 21%;
   }
-  .btn-period-click{
-      font-size: 18px !important;
-  }
+
   .share-name{
     font-size: 12px;
   }
-  #charts-container{
-      // margin-top: 14%;
-  }
-  // .btn-period  {
-  //     width: 15% !important;
-  // }
+
+
   .tooltip , .own-shares-title{
     font-size: 14px;
   }
   .btn-share{
+    width: 20%;
     font-size: 12px; 
   }
   .sharegraph-title{
@@ -55,15 +45,7 @@
   }
 }
 .watch-list-page{
-  // ion-content{
-  //     overflow-y: hidden;
-  //   }
-  //   scroll-content{
-  //     overflow-y: hidden;
-  //   }
-  // scroll-content{
-  //   overflow-y: scroll;
-  // }
+
   .tab-button-text{
       font-size: 15px !important;
     }
@@ -89,12 +71,7 @@
 
 }
 .performance-page {
-    // ion-content{
-    //   overflow-y: hidden;
-    // }
-    // scroll-content{
-    //   overflow-y: hidden;
-    // }
+  
       .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
       border-bottom : 0.55px solid #6b6b6c ;
     }
@@ -122,17 +99,9 @@
     .div-item-content {
       border-bottom: 0.55px solid #c8c7cc;
     }
-    // .item-box,.item-header{
-    //   margin-right:  0;
-    // }
  }
 .compare-page{
-      // ion-content{
-      //   overflow-y: hidden;
-      // }
-      // scroll-content{
-      //   overflow-y: hidden;
-      // }
+      
       scroll-content h1{
         margin-left: 16px;
         font-size: 14px;
@@ -145,10 +114,7 @@
       padding-bottom: (100%/3);
       width: (100%/3);
     }
-    .item-box:nth-child(3n){
-    // color: red;
-      // border-right: 0;
-    }
+   
     .ticker, .price{
       font-size: 18px !important; 
     }
@@ -175,21 +141,16 @@
 
 
   .charts-page{
-    // ion-content{
-    //   overflow-y: hidden;
-    // }
-    // scroll-content{
-    //   overflow-y: hidden;
-    // }
+
     .btn-period span{
       font-size: 17px;
       
     }
     .watchlist-period{
-      top: -14px;
+      top: -10px;
     }
     .indices-period {
-      top: -15px;
+      top: -11px;
     }
     .watchlist-period .btn-period, { 
       width: 18%;
@@ -197,16 +158,12 @@
     .indices-period .btn-period{ 
       width: 23%;
     }
-    .btn-period-click .button-inner{
-      font-size: 20px !important;
-    }
+ 
     .chart-page-content{
       max-height: calc(100% - 100px);
-      margin-top: 0;
+      margin-top: 30px;
     }
-    // .share-name{
-    //   font-size: 12px;
-    // }
+
     .tooltip , .share-name{
       font-size: 17px !important;
     }
@@ -221,6 +178,7 @@
       margin-left : 17px !important;
     }
     .btn-share{
+      width: 13%;
       margin-right: 16px;
       // font-size: 12px; 
       // font-family: $light-font;
@@ -239,26 +197,18 @@
 
 
   .watch-list-page{
-    // ion-content{
-    //   overflow-y: hidden;
-    // }
-    // scroll-content{
-    //   overflow-y: hidden;
-    // }
+
     .show-tabbar {
       width : 70%;
       margin-left: 15%;
 		  margin-right: 15%;
     }
-    // .button-inner{
-    //   font-size: 17px !important;
-    // }
+ 
     .tab-button-text, .btn-header-title span{
       font-size: 17px !important;
       font-family: $medium-font;
     }
     .btn-header-title {
-      // font-size: 17px !important;
       font-weight: medium;
       margin-left: calc(50% - 43.5px);
     }
@@ -277,12 +227,6 @@
 
 
   .performance-page {
-      // ion-content{
-      //   overflow-y: hidden;
-      // }
-      // scroll-content{
-      //   overflow-y: hidden;
-      // }
        scroll-content{
         width: 70%;
         margin-left: 15%;
@@ -294,8 +238,6 @@
         max-height: calc(100% - 130px );
       }
       .item-box{
-        // padding-top: 16px;
-        // padding-bottom: 16px;
         width: 18%;
        
       }
@@ -319,21 +261,14 @@
       border-bottom: 1px solid #c8c7cc;
       max-height:  calc(100%  - 220px);
     }
-      // .item-box,.item-header{
-      //   margin-right:  0;
-      // }
+    
   }
 
   //  compare Page 
 
 
   .compare-page{
-      // ion-content{
-      //   overflow-y: hidden;
-      // }
-      // scroll-content{
-      //   overflow-y: hidden;
-      // }
+     
       scroll-content, ion-footer{
         width: 70%;
         margin-left: 15%;
@@ -350,8 +285,6 @@
           padding-bottom: (100%/4);
           width: (100%/4);
        } 
-        // width: 70%;
-        // margin-left: 15%;
         max-height: calc(100% - 100px);
       }
       .ticker, .price{
@@ -369,10 +302,10 @@
   .charts-page{
     .chart-page-content{
       max-height: calc(100% );
-      margin-top: 0;
+      // margin-top: 50px;
     }
     #charts-container{
-      margin-top: 50px;
+      // margin-top: 50px;
     }
   }
   .compare-page{
