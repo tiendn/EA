@@ -65,9 +65,23 @@
  }
  .show-tabbar {
    width : 90%;
+   height: 25px;
+   border: 1px  solid #848484;
    margin-left: 5%;
 	 margin-right: 5%;
  }
+ .show-tabbar a:first-child{
+    border-top-left-radius : 3.7px;
+    border-bottom-left-radius : 3.7px;
+  }
+  .tab-button:nth-child(2){
+    border-right : 1px solid #848484;
+    border-left: 1px solid #848484;
+  }
+  .show-tabbar a:nth-child(3){
+    border-top-right-radius : 3.7px;
+    border-bottom-right-radius : 3.7px;
+  }
 
 }
 .performance-page {
@@ -200,7 +214,9 @@
 
     .show-tabbar {
       width : 70%;
+      height: 27px;
       margin-left: 15%;
+      border: 2px  solid #848484;
 		  margin-right: 15%;
     }
  
@@ -220,6 +236,18 @@
       height: 20px;
       width: 20px;
     }
+    .show-tabbar a:first-child{
+      border-top-left-radius :2px;
+      border-bottom-left-radius : 2px;
+    }
+    .tab-button:nth-child(2){
+      border-right : 2px solid #848484;
+      border-left: 2px solid #848484;
+    }
+    .show-tabbar a:nth-child(3){
+      border-top-right-radius : 2px;
+      border-bottom-right-radius : 2px;
+	  }
   }
 
   //  Performance Page 

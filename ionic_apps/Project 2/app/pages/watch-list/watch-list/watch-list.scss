@@ -48,27 +48,15 @@
 	}
 	.show-tabbar {
 		top: 90px;
-		height: 25px;
 		background-color: #484849;
-		border-radius: 8px;
-		border: 1px  solid #848484;
+		border-radius: 5px;
 	}
 	.show-tabbar a {
 		height: 23px !important;
 		min-height: 20px !important;
 	}
-	.show-tabbar a:first-child{
-		border-top-left-radius : 5px;
-		border-bottom-left-radius : 5px;
-	}
-	.show-tabbar a:nth-child(3){
-		border-top-right-radius : 5px;
-		border-bottom-right-radius : 5px;
-	}
-	.tab-button:nth-child(2){
-		border-right : 1px solid #848484;
-		border-left: 1px solid #848484;
-	}
+	
+	
 	.tab-button .tab-button-text, .tab-button.has-title-only .tab-button-text{
 		font-size: 13px;
 	}

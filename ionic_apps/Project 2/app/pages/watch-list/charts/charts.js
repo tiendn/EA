@@ -20,10 +20,6 @@ export class ChartsPage {
         this.navParam = NavParams;
         this.chartCtrl = chartServices;
         this.platform = Platform;
-        // this.loader = this.loadingCtrl.create({
-        //     content: "Please wait..."
-        //     // duration: 3000
-        // });
         if (this.navParam.data === "Watchlist"){
             this.type = 0;
             // danh sách các period
@@ -72,13 +68,13 @@ export class ChartsPage {
                     "Value" : 36
                 },
             ];
-            this.ownShareTitle = "OWN SHARES & INDEX";
+            this.ownShareTitle = "OWN SHARES";
             this.watchListSharesTitle = "INDICES";
         }
         this.tooltip = "Tap on the ticker codes below to compare them. We limit the charting to five tickers." ;
         // Set default Period = 3
         this.currentPeriod = 3; 
-        // Lấy ngày gần nhất có dữ liệu của ownshare đầu tiên, truyền cho các share khác 
+
         this.recentTime  = [
             {
                 "recentDay" : 0,
@@ -182,14 +178,7 @@ export class ChartsPage {
             }
         ]
     }
-    // Loading
-    // presentLoading() {
-    //     let loader = this.loadingCtrl.create({
-    //         content: "Please wait...",
-    //         duration: 3000
-    //         });
-    //     loader.present();
-    // }
+    
     // Get index of this instrumentID on sharesChart array object.
     getIndexShare(id){
         // let index = -1;
@@ -234,7 +223,9 @@ export class ChartsPage {
             },
             tooltip: {
                 valueDecimals: 2,
-                valueSuffix: ' %'
+                valueSuffix: ' %',
+                shared:true
+                
             },
             xAxis: {
                 gridLineWidth: 1,
@@ -279,7 +270,7 @@ export class ChartsPage {
             },
             credits: {
                 enabled: false
-            },
+            }
         });
         // If this device is Ipad, change label font-size 
          if (this.platform.is('ipad')){
@@ -351,7 +342,8 @@ export class ChartsPage {
             },
             tooltip: {
                 valueDecimals: 2,
-                valueSuffix: ' %'
+                valueSuffix: ' %',
+                shared:true
             },
             yAxis:{
                 title : '',
@@ -409,7 +401,8 @@ export class ChartsPage {
             },
             tooltip: {
                 valueDecimals: 2,
-                valueSuffix: ' %'
+                valueSuffix: ' %',
+                shared:true
             },
             xAxis: {
                 gridLineWidth: 1,
@@ -634,7 +627,10 @@ export class ChartsPage {
                                             });
                                         }
                                     }
-                                    // If this ownshare higher priority have the same day with this current ownshare was choose for get time  
+                                    // If this ownshare higher priority have the same day with this current ownshare was choose for get time
+                                    this.recentTime[0].instrumentID = id;
+                                    this.recentTime[0].priority = priority;  
+                                    console.log(this.recentTime[0].instrumentID);
                                     this.chart.addSeries({   
                                         id: id,
                                         data: data,
@@ -689,7 +685,7 @@ export class ChartsPage {
         else { // Nếu this share is on list, erase
             if (this.ownShare.length <= 1 ){ // Nếu the number of ownshare <=1 
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
-                    console.log("Cannot delete this own share");
+                    // console.log("Cannot delete this own share");
                 }
                 else{ // If this share isn't ownshare
                     
@@ -739,10 +735,10 @@ export class ChartsPage {
                             this.choose = true;
                             if (this.chartCtrl.getDay(this.recentTime[0].recentDay) === this.chartCtrl.getDay(data[0][0]))
                                 {
-                                    console.log("Dữ liêu cùng ngày ! ");
+                                    // console.log("Dữ liêu cùng ngày ! ");
                                     this.recentTime[0].instrumentID = this.ownShare[0].instrumentID;
                                     this.recentTime[0].priority = this.ownShare[0].priority;
-                                    console.log(this.recentTime);
+                                    console.log(this.recentTime[0].instrumentID);
                                 } 
                             else{
                               

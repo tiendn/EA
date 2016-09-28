@@ -58,9 +58,23 @@
  }
  .show-tabbar {
    width : 90%;
+   height: 25px;
+   border: 1px  solid #848484;
    margin-left: 5%;
 	 margin-right: 5%;
  }
+ .show-tabbar a:first-child{
+    border-top-left-radius : 3.7px;
+    border-bottom-left-radius : 3.7px;
+  }
+  .tab-button:nth-child(2){
+    border-right : 1px solid #848484;
+    border-left: 1px solid #848484;
+  }
+  .show-tabbar a:nth-child(3){
+    border-top-right-radius : 3.7px;
+    border-bottom-right-radius : 3.7px;
+  }
 
 }
 .performance-page {
@@ -116,5 +130,192 @@
     }
     .footer{
       font-size: 14px;
+    }
+}
+  // IPad
+@media only screen and ( min-width : 768px){
+  .modal-wrapper {
+     position: absolute ;
+     top: 0 ;
+     left: 0 ;
+     width: 100% ;
+     height: 100% ;
+     }
+
+
+  // Chart Page
+
+
+
+  .charts-page{
+
+    .btn-period span{
+      font-size: 17px;
+      
+    }
+    .watchlist-period{
+      top: -10px;
+    }
+    .indices-period {
+      top: -11px;
+    }
+    .watchlist-period .btn-period, { 
+      width: 18%;
+    }
+    .indices-period .btn-period{ 
+      width: 23%;
+    }
+ 
+    .chart-page-content{
+      max-height: calc(100% - 100px);
+      margin-top: 30px;
+    }
+
+    .tooltip , .share-name{
+      font-size: 17px !important;
+    }
+    .btn-share span{
+      font-size: 14px !important;
+      font-family: $medium-font;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    
+    .tooltip{
+      margin-left : 17px !important;
+    }
+    .btn-share{
+      width: 13%;
+      margin-right: 16px;
+      // font-size: 12px; 
+      // font-family: $light-font;
+    }
+    .own-shares-title{
+      font-size: 15px;
+    }
+    .sharegraph-title{
+      font-size: 15px;
+    }
+    
+  }
+
+  // Watchlist Page 
+
+
+
+  .watch-list-page{
+
+    .show-tabbar {
+      width : 70%;
+      height: 27px;
+      margin-left: 15%;
+      border: 2px  solid #848484;
+		  margin-right: 15%;
+    }
+ 
+    .tab-button-text, .btn-header-title span{
+      font-size: 17px !important;
+      font-family: $medium-font;
+    }
+    .btn-header-title {
+      font-weight: medium;
+      margin-left: calc(50% - 43.5px);
+    }
+    .btn-header-title img{
+    height: 20px;
+    width: 20px;
+    }
+    .btn-header-close img, {
+      height: 20px;
+      width: 20px;
+    }
+    .show-tabbar a:first-child{
+      border-top-left-radius :2px;
+      border-bottom-left-radius : 2px;
+    }
+    .tab-button:nth-child(2){
+      border-right : 2px solid #848484;
+      border-left: 2px solid #848484;
+    }
+    .show-tabbar a:nth-child(3){
+      border-top-right-radius : 2px;
+      border-bottom-right-radius : 2px;
+	  }
+  }
+
+  //  Performance Page 
+
+
+
+  .performance-page {
+       scroll-content{
+        width: 70%;
+        margin-left: 15%;
+      }
+        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
+        border-bottom : 1px solid #6b6b6c ;
+      }
+      .div-item-content{
+        max-height: calc(100% - 130px );
+      }
+      .item-box{
+        width: 18%;
+       
+      }
+      [item-right]{
+        margin: 16px;
+      }
+      .item-header {
+        width: 18%;
+        font-size: 20px !important;
+      }
+      .item-header span {
+        font-size : 17px !important;
+      } 
+      .item-col-1{
+        font-size: 20px;
+      }
+      .item-data{
+        font-size: 17px;
+      }
+      .div-item-content {
+      border-bottom: 1px solid #c8c7cc;
+      max-height:  calc(100%  - 220px);
+    }
+    
+  }
+
+  //  compare Page 
+
+
+  .compare-page{
+     
+      scroll-content, ion-footer{
+        width: 70%;
+        margin-left: 15%;
+      }
+      ion-footer{
+        bottom: 25% !important;
+      }
+      scroll-content h1{
+        margin-left: 0;
+        font-size: 19px;
+      }
+      .scroll-content{
+       .item-box{
+          padding-bottom: (100%/4);
+          width: (100%/4);
+       } 
+        max-height: calc(100% - 100px);
+      }
+      .ticker, .price{
+        font-size: 20px !important; 
+      }
+      .change-pro, .currency{
+        font-size: 15px;
+      }
+      .footer{
+        font-size: 17px;
+      }
     }
 }
