@@ -1,5 +1,8 @@
 
 .compare-page {
+  /**
+     defaul 
+  */
   ion-header{
       height: 20%;
   }
@@ -19,7 +22,14 @@
     overflow-y: scroll;
     position: relative;
   }
+  ion-footer{
+    bottom:15px !important;
+  }
   
+  /**
+
+  */
+
   .item-box{
     float:left;
     color: white;
@@ -28,25 +38,35 @@
     border-right: 1px solid #787878;
     border-bottom: 1px solid #787878;
   }
+  /**
+   color box
+  */
   .down {
     background: linear-gradient(#bf3335, #c8583e);
   }
   .up {
     background: linear-gradient(#95bc4f, #447d2d);
   }
+  /** CSS between boxes
+  */
   
   .content {
     position: relative;
     height: 100%;
     margin: 20% 2% 40% 10%;
   }
+  /** CSS box 
+
+  **/
   .ticker, .price{
     font-size: 18px !important; 
     color: #fff;
   }
+
   .price {
     margin-bottom : 20%;
   }
+
   .change-pro, .currency{
     font-size: 12px;
 
@@ -59,9 +79,9 @@
     position: absolute;
     right : 10%;
   }
-  ion-footer{
-    bottom:15px !important;
-  }
+  /** 
+    Footer
+  */
   .footer{
     font-size: 14px;
     color: #fff;

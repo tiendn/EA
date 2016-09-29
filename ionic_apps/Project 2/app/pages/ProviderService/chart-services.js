@@ -134,7 +134,7 @@ export class ChartServices {
         this.isPercentData = isPercentData;
         let $scope = this;
         this.dailyStorageKey = this.apiName + "_" + this.dailyKey;
-        console.log(recentDay);
+        // console.log(recentDay);
         return new Promise(resolve => {
 
             let $scope = this;
@@ -142,7 +142,7 @@ export class ChartServices {
             fDate = fDate + "T000000";
             fDate = fDate.replace(" ", "T") + "/";
             var params = instrumentId + "/" + fDate;
-            console.log(this.servicesUrl + params);
+            // console.log(this.servicesUrl + params);
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
                 .subscribe(
                     res => {
@@ -179,7 +179,7 @@ export class ChartServices {
             fDate = fDate + "T000000";
             fDate = fDate.replace(" ", "T") + "/";
             var params = instrumentId;
-            console.log(this.servicesUrl + params);    
+            // console.log(this.servicesUrl + params);    
             this.http.get(this.servicesUrl + params, this.httpRequestHeader)
                 .subscribe(
                     res => {

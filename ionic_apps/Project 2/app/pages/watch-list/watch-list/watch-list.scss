@@ -1,27 +1,42 @@
 
 .watch-list-page {
+	/** Default CSS */
+	ion-content{
+		overflow-y: hidden;
+		background-color: #484849;
+	}
+	scroll-content{
+		overflow-y: hidden;
+	}
+	ion-tab.show-tab{
+		transform: none;
+		-webkit-transform: none;
+	}
+	/** tab CSS */
+	.show-tabbar {
+		top: 90px;
+		background-color: #484849;
+		border-radius: 5px;
+	}
+	.show-tabbar a {
+		height: 23px !important;
+		min-height: 20px !important;
+	}
+	/** CSS Tab active and default */
 	.tab-button{
 		color: #848484;
 		background: #484849;
 	}
 	.tab-button[aria-selected=true] {
-    color: white !important;
-    background: #848484 !important;
-  }
-  	
-   ion-content{
-	 overflow-y: hidden;
-     background-color: #484849;
-   }
-   scroll-content{
-	 overflow-y: hidden;
-   }
-	.header{
-	margin-top: 25px;
-	position: relative;
-	margin-bottom: 30px;
+		color: white !important;
+		background: #848484 !important;
 	}
-
+	/** Box Header */
+	.header{
+		margin-top: 25px;
+		position: relative;
+		margin-bottom: 30px;
+	}
 	.btn-header-title{
 		background-color: white;
 		color: black;
@@ -33,29 +48,10 @@
 		background: transparent;
 		margin:0;
 	}
-	.btn-header-titlewatch img{
-		height: 20px;
-		width: 20px;
-	}
-
 	.btn-header-close img, {
 		height: 20px;
 		width: 20px;
 	}
-	ion-tab.show-tab{
-		transform: none;
-		-webkit-transform: none;
-	}
-	.show-tabbar {
-		top: 90px;
-		background-color: #484849;
-		border-radius: 5px;
-	}
-	.show-tabbar a {
-		height: 23px !important;
-		min-height: 20px !important;
-	}
-	
 	
 	.tab-button .tab-button-text, .tab-button.has-title-only .tab-button-text{
 		font-size: 13px;

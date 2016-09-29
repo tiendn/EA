@@ -22,8 +22,7 @@ export class WatchListPage {
     this.chartsTab = ChartsPage;
     this.compareTab = ComparePage;
     this.performanceTab = PerformancePage;
-    this.HTMLContent = ['Watchlist ','From','To','Change','Change %',
-    ];
+    this.HTMLContent = ['Watchlist ','From','To','Change','Change %'];
   }
   dismiss(){
     this.viewCtrl.dismiss();

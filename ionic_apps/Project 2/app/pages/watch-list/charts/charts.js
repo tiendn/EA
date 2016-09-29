@@ -470,7 +470,6 @@ export class ChartsPage {
                                 data: data,
                                 color: $scope.colors[0].color
                             }, true);
-                            // console.log(index);
                             $scope.sharesChart[index].color = $scope.colors[0].color;
                             $scope.colors[0].isSelected = true;
                             // Add another share with recentDay parameter
@@ -483,10 +482,8 @@ export class ChartsPage {
                                                 id : $scope.sharesChart[i].instrumentID,    
                                                 name: $scope.sharesChart[i].shareName,              
                                                 data: data,
-                                                // color: this.color[this.sharesChart.length]
                                                 color:  color
                                             }, true);
-                                            // $scope.colors[i].isSelected = true;
                                         }
                                         $scope.sharesChart[i].color = color;
                                     });
@@ -548,7 +545,8 @@ export class ChartsPage {
     
     // Add a share on chart.
     getChartData(id,name,priority,bool){
-        // Nếu this instrumentID isn't on list shares
+        console.log(this.sharesChart);
+        // If this instrumentID isn't on list shares
         if (this.getIndexShare(id) === -1){ 
             if (this.sharesChart.length < 5){ // If the number of Shares < 5
                 // Get color
@@ -581,7 +579,7 @@ export class ChartsPage {
                     if (this.sharesChart[this.getIndexShare(id)].isOwnShare === true ){ 
                         // If this ownshare have higher priority (in real life.) than current recent ownshare 
                         if (this.recentTime[0].priority > priority){ 
-                            // Get dât
+                            // Get data
                             this.chartCtrl.getLastDailyData(id,true).then(data=>{
                                 if (data.length > 0){
                                     //If this ownshare higher priority have the different day with this current ownshare was choose for get time
@@ -682,15 +680,14 @@ export class ChartsPage {
                 console.log("Full choose");
             }
         }
-        else { // Nếu this share is on list, erase
-            if (this.ownShare.length <= 1 ){ // Nếu the number of ownshare <=1 
+        else { // If this share is on list, erase
+            if (this.ownShare.length <= 1 ){ // If the number of ownshare <=1 
                 if (this.sharesChart[this.getIndexShare(id)].isOwnShare == true ){
                     // console.log("Cannot delete this own share");
                 }
                 else{ // If this share isn't ownshare
                     
                     // This color is not selected.
-                    // if ((this.sharesChart[this.getIndexShare(id)].color) !== undefined)
                         this.deleteColor(this.sharesChart[this.getIndexShare(id)].color);
                     // Filter 
                     this.sharesChart = this.sharesChart.filter(function(el) {
@@ -712,10 +709,8 @@ export class ChartsPage {
                     });
                 }
                 // This color is not selected.
-                // if ((this.sharesChart[this.getIndexShare(id)].color) !== undefined)
                     this.deleteColor(this.sharesChart[this.getIndexShare(id)].color);
                         
-                // this.colors[this.getIndexShare(id)].isSelected = false; 
                 // filter
                 this.sharesChart = this.sharesChart.filter(function(el) {
                     return el.instrumentID !== id;
@@ -750,10 +745,10 @@ export class ChartsPage {
                             }
                         }
                     }, true);
-                }
+                } // End case "If recentTime have the same day with this ownshare  and currentPeriod = 1;"
                 
-            }
-        } 
-            
-    }    
+            } // End number of ownshare > 1 case
+        } // End erase this share
+        console.log(this.sharesChart);
+    }     // End getData.
 }

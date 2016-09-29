@@ -2,6 +2,9 @@ $light-font: "HelveticaNeue-Light";
 $medium-font: "HelveticaNeue-Medium";
 $thin-font: "HelveticaNeue-Thin";
 .performance-page {
+  /**
+    Default CSS
+  */ 
   ion-header{
       height: 17%;
   }
@@ -27,6 +30,9 @@ $thin-font: "HelveticaNeue-Thin";
   ion-list > .item:last-child{
     border-bottom: 0px;
   }
+  /**
+    CSS item-box 
+  */
   .item-header-content{
     margin-top: 20%;
   }
@@ -48,7 +54,6 @@ $thin-font: "HelveticaNeue-Thin";
     border-bottom: 0px;
   }
   .item-box div{
-    // width: 20%;
     padding-top: 8px;
     padding-bottom: 8px;
     display: flex;
@@ -58,15 +63,17 @@ $thin-font: "HelveticaNeue-Thin";
     border-radius: 5%;
 
   }
-  
   .item-header{
     text-align: right;
-    font-family: $light-font;
+    font-family: $light-font !important;
   }
   .item-inner{
     display: flex;
     flex-direction: row;
   }
+  /**
+   color
+  */ 
   .down{
     background-color: #ff3a2d;
   }

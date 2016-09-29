@@ -1,321 +1,139 @@
-.charts-page{
+.platform-android{
+    .charts-page{
 
-  .chart-page-content{
-    max-height: calc(100% - 50px);
-    margin-top: 14%;
-  }
-  .btn-period{
-    font-size: 15px;
-    font-family: $light-font;
-  }
-  .watchlist-period{
-    top: -10px;
-  }
-  .indices-period {
-    top: -9px;
-  }
-  .watchlist-period .btn-period{ 
-    width: 15%;
-  }
-  .indices-period .btn-period{ 
-    width: 21%;
-  }
-
-  .share-name{
-    font-size: 12px;
-  }
-
-
-  .tooltip , .own-shares-title{
-    font-size: 14px;
-  }
-  .btn-share{
-    width: 20%;
-    font-size: 12px; 
-  }
-  .sharegraph-title{
-    font-size: 14px;
-  }
-}
-.watch-list-page{
-
-  .tab-button-text{
-      font-size: 15px !important;
+    .chart-page-content{
+      max-height: calc(100% - 50px);
+      margin-top: 14%;
     }
-  .btn-header-title{
-    font-size: 15px;
-    height: 35px;
-    font-weight: medium;
-    margin-left: calc(50% - 43.5px);
-  }
-  .btn-header-title img{
-   height: 20px;
-   width: 20px;
- }
- .btn-header-close img, {
-   height: 20px;
-   width: 20px;
- }
- .show-tabbar {
-   width : 90%;
-   height: 25px;
-   border: 1px  solid #848484;
-   margin-left: 5%;
-	 margin-right: 5%;
- }
- .show-tabbar a:first-child{
-    border-top-left-radius : 3.7px;
-    border-bottom-left-radius : 3.7px;
-  }
-  .tab-button:nth-child(2){
-    border-right : 1px solid #848484;
-    border-left: 1px solid #848484;
-  }
-  .show-tabbar a:nth-child(3){
-    border-top-right-radius : 3.7px;
-    border-bottom-right-radius : 3.7px;
-  }
-
-}
-.performance-page {
-  
-      .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
-      border-bottom : 0.55px solid #6b6b6c ;
-    }
-    .div-item-content{
-      max-height: calc(100% - 130px );
-    }
-    .item-box{
-      padding-top: 8px;
-      padding-bottom: 8px;
-      width: 19%;
-    }
-    .item-header {
-      width: 19%;
-      font-size: 15px !important;
-    }
-    .item-header span {
-      font-size : 12px !important;
-    } 
-    .item-col-1{
-      font-size: 17px;
-    }
-    .item-data{
-      font-size: 12px;
-    }
-    .div-item-content {
-      border-bottom: 0.55px solid #c8c7cc;
-    }
- }
-.compare-page{
-      
-      scroll-content h1{
-        margin-left: 16px;
-        font-size: 14px;
-      }
-    .scroll-content{
-      max-height: calc(100% - 100px);
-      // clear: both;
-    }
-    .item-box{
-      padding-bottom: (100%/3);
-      width: (100%/3);
-    }
-   
-    .ticker, .price{
-      font-size: 18px !important; 
-    }
-    .change-pro, .currency{
-      font-size: 12px;
-    }
-    .footer{
-      font-size: 14px;
-    }
-}
-  // IPad
-@media only screen and ( min-width : 768px){
-  .modal-wrapper {
-     position: absolute ;
-     top: 0 ;
-     left: 0 ;
-     width: 100% ;
-     height: 100% ;
-     }
-
-
-  // Chart Page
-
-
-
-  .charts-page{
-
-    .btn-period span{
-      font-size: 17px;
-      
+    .btn-period{
+      font-size: 15px;
+      font-family: $light-font;
     }
     .watchlist-period{
       top: -10px;
     }
     .indices-period {
-      top: -11px;
+      top: -9px;
     }
-    .watchlist-period .btn-period, { 
-      width: 18%;
+    .watchlist-period .btn-period{ 
+      width: 15%;
     }
     .indices-period .btn-period{ 
-      width: 23%;
-    }
- 
-    .chart-page-content{
-      max-height: calc(100% - 100px);
-      margin-top: 30px;
+      width: 21%;
     }
 
-    .tooltip , .share-name{
-      font-size: 17px !important;
+    .share-name{
+      font-size: 12px;
     }
-    .btn-share span{
-      font-size: 14px !important;
-      font-family: $medium-font;
-      padding-left: 16px;
-      padding-right: 16px;
+    #charts-container{
+      border-top: 2px solid #848484;
+      border-bottom: 2px solid #848484;
     }
-    
-    .tooltip{
-      margin-left : 17px !important;
+
+    .tooltip , .own-shares-title{
+      font-size: 14px;
     }
     .btn-share{
-      width: 13%;
-      margin-right: 16px;
-      // font-size: 12px; 
-      // font-family: $light-font;
-    }
-    .own-shares-title{
-      font-size: 15px;
+      width: 20%;
+      font-size: 12px; 
     }
     .sharegraph-title{
-      font-size: 15px;
+      font-size: 14px;
     }
-    
   }
-
-  // Watchlist Page 
-
-
-
   .watch-list-page{
 
-    .show-tabbar {
-      width : 70%;
-      height: 27px;
-      margin-left: 15%;
-      border: 2px  solid #848484;
-		  margin-right: 15%;
-    }
- 
-    .tab-button-text, .btn-header-title span{
-      font-size: 17px !important;
-      font-family: $medium-font;
-    }
-    .btn-header-title {
+    .tab-button-text{
+        font-size: 15px !important;
+      }
+    .btn-header-title{
+      font-size: 15px;
+      height: 35px;
       font-weight: medium;
       margin-left: calc(50% - 43.5px);
     }
     .btn-header-title img{
     height: 20px;
     width: 20px;
-    }
-    .btn-header-close img, {
-      height: 20px;
-      width: 20px;
-    }
-    .show-tabbar a:first-child{
-      border-top-left-radius :2px;
-      border-bottom-left-radius : 2px;
+  }
+  .btn-header-close img, {
+    height: 20px;
+    width: 20px;
+  }
+  .show-tabbar {
+    width : 90%;
+    height: 25px;
+    border: 1px  solid #848484;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .show-tabbar a:first-child{
+      border-top-left-radius : 3.7px;
+      border-bottom-left-radius : 3.7px;
     }
     .tab-button:nth-child(2){
-      border-right : 2px solid #848484;
-      border-left: 2px solid #848484;
+      border-right : 1px solid #848484;
+      border-left: 1px solid #848484;
     }
     .show-tabbar a:nth-child(3){
-      border-top-right-radius : 2px;
-      border-bottom-right-radius : 2px;
-	  }
+      border-top-right-radius : 3.7px;
+      border-bottom-right-radius : 3.7px;
+    }
+
   }
-
-  //  Performance Page 
-
-
-
   .performance-page {
-       scroll-content{
-        width: 70%;
-        margin-left: 15%;
-      }
+    
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner{
-        border-bottom : 1px solid #6b6b6c ;
+        border-bottom : 0.55px solid #6b6b6c ;
       }
       .div-item-content{
         max-height: calc(100% - 130px );
       }
       .item-box{
-        width: 18%;
-       
-      }
-      [item-right]{
-        margin: 16px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        width: 19%;
       }
       .item-header {
-        width: 18%;
-        font-size: 20px !important;
+        width: 19%;
+        font-size: 15px !important;
       }
       .item-header span {
-        font-size : 17px !important;
+        font-size : 12px !important;
       } 
       .item-col-1{
-        font-size: 20px;
+        font-size: 17px;
       }
       .item-data{
-        font-size: 17px;
+        font-size: 12px;
       }
       .div-item-content {
-      border-bottom: 1px solid #c8c7cc;
-      max-height:  calc(100%  - 220px);
-    }
-    
+        border-bottom: 0.55px solid #c8c7cc;
+      }
   }
-
-  //  compare Page 
-
-
   .compare-page{
-     
-      scroll-content, ion-footer{
-        width: 70%;
-        margin-left: 15%;
-      }
-      ion-footer{
-        bottom: 25% !important;
-      }
-      scroll-content h1{
-        margin-left: 0;
-        font-size: 19px;
-      }
+        
+        scroll-content h1{
+          margin-left: 16px;
+          font-size: 14px;
+        }
       .scroll-content{
-       .item-box{
-          padding-bottom: (100%/4);
-          width: (100%/4);
-       } 
         max-height: calc(100% - 100px);
+        // clear: both;
       }
+      .item-box{
+        padding-bottom: (100%/3);
+        width: (100%/3);
+      }
+    
       .ticker, .price{
-        font-size: 20px !important; 
+        font-size: 18px !important; 
       }
       .change-pro, .currency{
-        font-size: 15px;
+        font-size: 12px;
       }
       .footer{
-        font-size: 17px;
+        font-size: 14px;
       }
-    }
+  }
 }

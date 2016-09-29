@@ -26,13 +26,17 @@ export class PerformancePage {
     if (this.navParam.data === "Watchlist"){
         this.provider.getWatchListPerformanceData()
           .then(data => {
-            self.data = data;
+            if  (data.length > 0 )
+              self.data = data;
+            else {}
           });
     }
     else if (this.navParam.data === "Indices"){
         this.provider.getIndicesPerformanceData()
           .then(data => {
-            self.data = data;
+            if  (data.length > 0 )
+              self.data = data;
+            else {}
           });
     }
     
