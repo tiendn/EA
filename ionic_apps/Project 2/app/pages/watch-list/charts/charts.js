@@ -210,6 +210,14 @@ export class ChartsPage {
             this.colors[i].isSelected = false;
         }
     }
+    addSeries(id,name,data,color){
+        this.chart.addSeries({   
+            id: id,
+            data: data,
+            name: name,
+            color: color,
+        }, true);
+    }
     ionViewLoaded(){
         // Draw chart at first
         this.chart = new Highcharts.Chart({
@@ -296,12 +304,13 @@ export class ChartsPage {
             this.colors[0].isSelected = true;
             if (data.length > 0){
                 // add Series
-                this.chart.addSeries({   
-                    id : this.sharesChart[0].instrumentID,    
-                    name: this.sharesChart[0].shareName,              
-                    data: data,
-                    color: this.colors[0].color
-                }, true);
+                this.addSeries(this.sharesChart[0].instrumentID,this.sharesChart[0].shareName,data,this.colors[0].color);
+                // this.chart.addSeries({   
+                //     id : this.sharesChart[0].instrumentID,    
+                //     name: this.sharesChart[0].shareName,              
+                //     data: data,
+                //     color: this.colors[0].color
+                // }, true);
                 
             }
             else {
@@ -374,12 +383,13 @@ export class ChartsPage {
         for (let i = 0 ; i < this.sharesChart.length ; i++){
             this.chartCtrl.getHistoryData(this.sharesChart[i].instrumentID,this.currentPeriod,true).then(data=>{
                 if (data.length > 0 ){
-                    this.chart.addSeries({   
-                        id : this.sharesChart[i].instrumentID,    
-                        name: this.sharesChart[i].shareName,              
-                        data: data,
-                        color: this.colors[i].color
-                    }, true);                
+                    this.addSeries(this.sharesChart[i].instrumentID,this.sharesChart[i].shareName,data,this.colors[i].color);
+                    // this.chart.addSeries({   
+                    //     id : this.sharesChart[i].instrumentID,    
+                    //     name: this.sharesChart[i].shareName,              
+                    //     data: data,
+                    //     color: this.colors[i].color
+                    // }, true);                
                 }
                 // Set color for this.sharesChart array object, and check this color isSelected is true
                 this.sharesChart[i].color = this.colors[i].color;
@@ -450,48 +460,47 @@ export class ChartsPage {
         // Đệ quy
         var arr = this.sharesChart.slice();
         let index = 0;
-        var $scope = this;
-        console.log(arr);
-        getShareData(arr,index);
-        function getShareData(arr,index){
+        var getShareData = (arr,index) => {
             if (arr.length > 0 ){
                 let share = arr[0]; // get first element 
                 arr = arr.slice(1); // Erase first element
                 if (share.isOwnShare){ // if this element have attr isOwnShare
-                    $scope.chartCtrl.getLastDailyData(share.instrumentID,true).then(data=>{
+                    this.chartCtrl.getLastDailyData(share.instrumentID,true).then(data=>{
                         if (data.length > 0 ){ // If recentDay have data.
                             // Assign value recentTime
-                            $scope.recentTime[0].recentDay = data[0][0];
-                            $scope.recentTime[0].instrumentID = share.instrumentID;
+                            this.recentTime[0].recentDay = data[0][0];
+                            this.recentTime[0].instrumentID = share.instrumentID;
                             // Add series 
-                            $scope.chart.addSeries({   
-                                id : share.instrumentID,    
-                                name: share.shareName,              
-                                data: data,
-                                color: $scope.colors[0].color
-                            }, true);
-                            $scope.sharesChart[index].color = $scope.colors[0].color;
-                            $scope.colors[0].isSelected = true;
+                            this.addSeries(share.instrumentID,share.shareName,data,this.colors[0].color);
+                            // this.chart.addSeries({   
+                            //     id : share.instrumentID,    
+                            //     name: share.shareName,              
+                            //     data: data,
+                            //     color: this.colors[0].color
+                            // }, true);
+                            this.sharesChart[index].color = this.colors[0].color;
+                            this.colors[0].isSelected = true;
                             // Add another share with recentDay parameter
-                            for (let i = 0 ; i < $scope.sharesChart.length ; i++){  
-                                if ($scope.sharesChart[i].instrumentID !== share.instrumentID){ 
-                                    $scope.chartCtrl.getDailyData($scope.sharesChart[i].instrumentID,$scope.recentTime[0].recentDay,true).then(data=>{
-                                        let color = $scope.getColor(); 
+                            for (let i = 0 ; i < this.sharesChart.length ; i++){  
+                                if (this.sharesChart[i].instrumentID !== share.instrumentID){ 
+                                    this.chartCtrl.getDailyData(this.sharesChart[i].instrumentID,this.recentTime[0].recentDay,true).then(data=>{
+                                        let color = this.getColor(); 
                                         if (data.length > 0 ){ // If this share have data.
-                                            $scope.chart.addSeries({   
-                                                id : $scope.sharesChart[i].instrumentID,    
-                                                name: $scope.sharesChart[i].shareName,              
-                                                data: data,
-                                                color:  color
-                                            }, true);
+                                            this.addSeries(share.instrumentID,share.shareName,data,color);
+                                            // this.chart.addSeries({   
+                                            //     id : this.sharesChart[i].instrumentID,    
+                                            //     name: this.sharesChart[i].shareName,              
+                                            //     data: data,
+                                            //     color:  color
+                                            // }, true);
                                         }
-                                        $scope.sharesChart[i].color = color;
+                                        this.sharesChart[i].color = color;
                                     });
                                 }    
                             }
                         }
                         else { // If not satified, continue seek.
-                            if ( index + 1 < $scope.sharesChart.length ){
+                            if ( index + 1 < this.sharesChart.length ){
                                 index++;
                                 getShareData(arr,index);
                             }
@@ -499,14 +508,14 @@ export class ChartsPage {
                     });
                 }
                 else { // If not satified, continue seek.
-                    if ( index + 1 < $scope.sharesChart.length ){
+                    if ( index + 1 < this.sharesChart.length ){
                         index++;
                         getShareData(arr,index);
                     }
                 }
             }
         };
-       
+        getShareData(arr,index);
     } 
 
     //   Update 
@@ -564,12 +573,13 @@ export class ChartsPage {
                 if (this.currentPeriod !== 1){ 
                     this.chartCtrl.getHistoryData(id,this.currentPeriod,true).then(data=>{
                         if (data.length > 0){
-                            this.chart.addSeries({   
-                                id: id,
-                                data: data,
-                                name: name,
-                                color: color,
-                            }, true);
+                            this.addSeries(id,name,data,color);
+                            // this.chart.addSeries({   
+                            //     id: id,
+                            //     data: data,
+                            //     name: name,
+                            //     color: color,
+                            // }, true);
                         }
                     });
                 }
@@ -600,28 +610,30 @@ export class ChartsPage {
                                          * Redraw highcharts by this ownshare time
                                          */
                                         // Add new serie 
-                                        this.chart.addSeries({   
-                                                id: id,
-                                                data: data,
-                                                name: name,
-                                                color: this.colors[0].color,
-                                        }, true);
+                                        this.addSeries(id,name,data,this.colors[0].color);
+                                        // this.chart.addSeries({   
+                                        //         id: id,
+                                        //         data: data,
+                                        //         name: name,
+                                        //         color: this.colors[0].color,
+                                        // }, true);
                                         // Because this ownshare add last so this index is (this.sharesChart.length-1)
                                         this.sharesChart[this.sharesChart.length-1].color = this.colors[0].color;
                                         this.colors[0].isSelected = true;
                                         // Add all share remain again.
                                         for (let i = 0 ; i < this.sharesChart.length ; i++){
                                             this.chartCtrl.getDailyData(id,this.recentTime[0].recentDay,true).then(data=>{
-                                                let anotherColor = this.getColor();
+                                                let color = this.getColor();
                                                 if (data.length > 0){
-                                                    this.chart.addSeries({   
-                                                        id: id,
-                                                        data: data,
-                                                        name: name,
-                                                        color: anotherColor,
-                                                    }, true);
+                                                    this.addSeries(id,name,data,color);
+                                                    // this.chart.addSeries({   
+                                                    //     id: id,
+                                                    //     data: data,
+                                                    //     name: name,
+                                                    //     color: anotherColor,
+                                                    // }, true);
                                                 }
-                                                this.sharesChart[i].color = anotherColor;
+                                                this.sharesChart[i].color = color;
                                             });
                                         }
                                     }
@@ -629,12 +641,13 @@ export class ChartsPage {
                                     this.recentTime[0].instrumentID = id;
                                     this.recentTime[0].priority = priority;  
                                     console.log(this.recentTime[0].instrumentID);
-                                    this.chart.addSeries({   
-                                        id: id,
-                                        data: data,
-                                        name: name,
-                                        color: color,
-                                    }, true);
+                                    this.addSeries(id,name,data,color);
+                                    // this.chart.addSeries({   
+                                    //     id: id,
+                                    //     data: data,
+                                    //     name: name,
+                                    //     color: color,
+                                    // }, true);
                                     
                                 }
                             });
@@ -645,13 +658,14 @@ export class ChartsPage {
                         // Get data
                                 this.chartCtrl.getDailyData(id,this.recentTime[0].recentDay,true).then(data=>{
                                     if (data.length > 0){
-                                        this.chart.addSeries({   
-                                            id: id,
-                                            data: data,
-                                            name: name,
-                                            // color: this.color[this.sharesChart.length-1]
-                                            color: color,
-                                        }, true);
+                                        this.addSeries(id,name,data,color);
+                                        // this.chart.addSeries({   
+                                        //     id: id,
+                                        //     data: data,
+                                        //     name: name,
+                                        //     // color: this.color[this.sharesChart.length-1]
+                                        //     color: color,
+                                        // }, true);
                                     }
                                 });
                             }
@@ -662,12 +676,13 @@ export class ChartsPage {
                         // Get data
                             this.chartCtrl.getDailyData(id,this.recentTime[0].recentDay,true).then(data=>{
                                 if (data.length > 0){
-                                    this.chart.addSeries({   
-                                        id: id,
-                                        data: data,
-                                        name: name,
-                                        color: color,
-                                    }, true);
+                                    this.addSeries(id,name,data,color);
+                                    // this.chart.addSeries({   
+                                    //     id: id,
+                                    //     data: data,
+                                    //     name: name,
+                                    //     color: color,
+                                    // }, true);
                                 }
                             });
                         }
