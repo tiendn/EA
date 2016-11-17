@@ -1,0 +1,448 @@
+body {
+	background: #fff;
+	font-family: Calibri;
+}
+#main {
+	padding: 20px;
+}
+
+.Euroland-CommonObjects-Calendar-Button-HiddenButton,
+.Euroland-CommonObjects-Calendar-HiddenSelectionButton {
+	display: block;
+    width: 1px;
+    height: 1px;
+
+    overflow-x: hidden;
+    white-space: nowrap;
+
+    font-size: 1px;
+    
+    position: fixed;
+    top: -1000px;
+    left: -1000px;
+
+    margin: 0px;
+    padding: 0px;
+}
+
+/************************************************ Month CSS */
+
+.Euroland-CommonObjects-Calendar-Month-Table {
+	width: 100%;
+	border-collapse: collapse;	
+}
+.Euroland-CommonObjects-Calendar-Month-Day {
+	text-align: center;
+	
+	padding: 0px;
+	text-shadow: 1px 1px 1px #ccc;
+	
+	height: 28px;
+	width: 14.28;
+	
+	padding-right: 0px;
+
+	/*
+	
+	
+	border: 1px solid #000;
+	
+	width: 14.28%;
+	
+	
+	padding-right: 10px;
+	*/
+	
+	padding-bottom: 5px;
+}
+.Euroland-CommonObjects-Calendar-Month-DayName {
+	text-align: center;
+	
+	padding: 0px 0px 5px 0px;
+	
+	color: #464646;
+	text-shadow: 1px 1px 1px #aaa;
+	/* 
+	border-bottom: 1px solid #333;
+	padding-bottom: 5px;
+	 */
+	
+}
+.Euroland-CommonObjects-Calendar-Month-DayName-Weekend {
+	color: #ed1c24;
+}
+.Euroland-CommonObjects-Calendar-Month-Weekend {
+	color: #ed1c24;
+}
+.Euroland-CommonObjects-Calendar-Month-NotActive {
+	color: #959595;
+	text-shadow: 1px 1px 1px #ddd;
+}
+.Euroland-CommonObjects-Calendar-Month-WeekendNotActive {
+	color: #ed7c80;
+}
+.Euroland-CommonObjects-Calendar-Month-Today {		
+	
+	
+}
+.Euroland-CommonObjects-Calendar-Month-Today .Euroland-CommonObjects-Calendar-Button-VisualButton {
+	border-color: #ed1c24;	
+	
+}
+.Euroland-CommonObjects-Calendar-Month-DayButton {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	width: 26px;
+	height: 26px;
+	
+	margin-right: 0px;
+	
+	border-radius: 13px;
+	text-align:  center;
+	line-height: 26px;
+	border: 1px solid #fff;
+	
+	transition: background 0.5s;
+}
+.Euroland-CommonObjects-Calendar-Month-DayButton:hover {
+	background: #d8d8d8;	
+	cursor: pointer;
+}
+.Euroland-CommonObjects-Calendar-Month-SelectedDay {
+	border: 1px solid #ccc;
+	background: #ccc;
+	/* border-radius: 0px; */
+}
+.Euroland-CommonObjects-Calendar-Calendar-MonthContainer {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+
+/************************************************ Other CSS */
+
+.Euroland-CommonObjects-Calendar-Calendar-CloseButtonContainer {
+	padding: 10px;
+}
+.Euroland-CommonObjects-Calendar-Calendar-CloseButton {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	width: 100%;	
+	padding: 5px 0px;
+	
+	border: 1px solid #464646;
+	background: #cb6b6e;
+	
+	
+	text-align: center;
+	
+	font-size: 15px;
+	line-height: 15px;
+	font-weight: bold;	
+	
+	color: #262626;
+	color: #fff;
+	
+	text-shadow: 0px 0px 1px #666;	
+	transition: background 1.0s, border 1.0s;
+}
+.Euroland-CommonObjects-Calendar-Calendar-CloseButton:hover {
+	background: #d2444a;
+}
+
+.Euroland-CommonObjects-Calendar-Selection {	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;		
+}
+.Euroland-CommonObjects-Calendar-CalendarPositioner {
+	position: relative;
+	top: 0px;
+	left: 0px;
+}
+.Euroland-CommonObjects-Calendar-CalendarContainer {
+/*
+	This is a structural class, only 
+*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	min-width: 0px;
+	min-height: 0px;
+	
+	max-width: 320px;
+	
+	overflow: hidden;
+	
+	box-shadow: 3px 3px 5px #ccc;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	
+	cursor: default;
+	
+	z-index: 99999;
+}
+.Euroland-CommonObjects-Calendar-IntegratedCalendarContainer {
+	box-shadow: none;
+} 
+.Euroland-CommonObjects-Calendar-Calendar {
+	min-width: 300px;
+	min-height: 300px;
+		
+	background: rgba(255, 255, 255, 0.85);
+	background: #fff;
+	
+	border: 1px solid #252525;	
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation {
+	background: #ccc;
+	background: rgba(225, 225, 225, 0.90);
+	width : 100%;
+	height: 100%;
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation-Navigation {
+	padding: 20px 20px 20px 20px;	
+}
+.Euroland-CommonObjects-Calendar-Calendar-ExtraNavigation-CurrentMonth {
+	text-align: center;
+	width: 100%;
+}
+.Euroland-CommonObjects-Calendar-Calendar-ExtraNavigation-PreviousButtons,
+.Euroland-CommonObjects-Calendar-Calendar-ExtraNavigation-NextButtons {
+	width: 0px;
+	white-space: nowrap;
+}
+.Euroland-CommonObjects-Calendar-ExtraNavigation-Button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	padding: 10px;
+	margin: 3px;
+	
+	border: 1px solid #000;
+			
+	text-align: center;
+	
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;	
+	
+	color: #464646;
+	
+	text-shadow: 1px 1px 1px #aaa;	
+	
+	transition: background 0.5s, border 0.5s;
+}
+.Euroland-CommonObjects-Calendar-ExtraNavigation-PeriodButton {
+	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	margin: 3px;
+	text-align: center;
+	padding: 0px;
+	
+	text-align: center;
+	width: 100%;
+		
+	border: 1px solid #a1a1a1;
+	border: 1px solid rgba(161,161,161,0);
+	
+	transition: background 0.5s, border 0.5s;
+}
+.Euroland-CommonObjects-Calendar-ExtraNavigation-PeriodButton-OutOfPeriod {
+	color: #636363;
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CurrentButton,
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CloseButton {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	
+	transition: background 0.5s, border 0.5s;
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CurrentButton:hover,
+.Euroland-CommonObjects-Calendar-ExtraNavigation-Button:hover,
+.Euroland-CommonObjects-Calendar-ExtraNavigation-PeriodButton:hover {
+	background: #fff;
+	background: rgba(255,255,255,0.55);
+	border: 1px solid #636363;
+}
+
+.Euroland-CommonObjects-Calendar-NavigationPanel-Table {
+	width: 100%;
+	height: 100%;
+		
+	margin-top: 20px;
+}
+.Euroland-CommonObjects-Calendar-Calendar-ExtraNavigation-PeriodButtonContainer {
+	text-align: center;
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CloseButtonContainer {
+	text-align: center;
+	padding-top: 20px;
+}
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CloseButton {
+	font-size: 15px;
+	line-height: 15px;
+	
+	background: #cd7073;
+	background: rgba(205,112,115,0.6);
+}
+
+.Euroland-CommonObjects-Calendar-ExtraNavigation-CloseButton:hover {
+	background: #ed1c24;
+	background: rgba(237,28,36,0.6);
+}
+.Euroland-CommonObjects-Calendar-Button-VisualButton {	
+	
+}
+.Euroland-CommonObjects-Calendar-Navigator-Button {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;	
+	
+	padding: 5px;
+	margin: 3px;
+	
+	border: 1px solid #fff;
+			
+	text-align: center;
+	
+	font-size: 20px;
+	line-height: 20px;
+	font-weight: bold;	
+	
+	color: #464646;
+	
+	text-shadow: 1px 1px 1px #aaa;	
+	
+	transition: background 0.5s, border 0.5s;
+}
+
+.Euroland-CommonObjects-Calendar-Calendar-Navigator-CurrentMonth {
+	color: #252525;
+}
+
+.Euroland-CommonObjects-Calendar-Navigator-MonthButton {
+	width: 100%;
+	padding-left: 0px;
+	padding-right: 0px;	
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.Euroland-CommonObjects-Calendar-Navigator-Button:hover {
+	border: 1px solid #898989;
+	background: #c2c2c2;	
+}
+.Euroland-CommonObjects-Calendar-Button-VisualButton-Focus {
+	border: 1px solid #0072bc;
+	
+	transition: border 0s;
+	
+	box-shadow: 
+		#6e8fa5 2px 2px 2px
+		,#6e8fa5 2px -2px 2px		
+		,#6e8fa5 -2px -2px 2px
+		,#6e8fa5 -2px 2px 2px
+	;
+}
+
+.Euroland-CommonObjects-Calendar-Button-VisualButton-Disabled {
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)"; 
+	filter: alpha(opacity=20);
+	
+	opacity: 0.2;
+}
+
+.Euroland-CommonObjects-Calendar-Calendar-NavigatorStructTable {
+	width: 100%;
+}
+.Euroland-CommonObjects-Calendar-Calendar-Navigator-PreviousButtons {
+	text-align: left;
+	white-space: nowrap;
+	width: 0px;
+}
+.Euroland-CommonObjects-Calendar-Calendar-Navigator-NextButtons {
+	text-align: right;
+	white-space: nowrap;
+	width: 0px;
+}
+
+.Euroland-CommonObjects-Calendar-Calendar-Navigator {
+	
+}
+
+.Euroland-CommonObjects-Calendar-Calendar-Month {
+	
+}
+
+.Euroland-CommonObjects-Calendar-CalendarIcon {
+	cursor: pointer;
+}
+.Euroland-CommonObjects-Calendar-SelectionIndicator {
+	padding: 5px;
+	border: 1px solid #ccc;
+	
+	display: inline-block;
+	*display: inline;
+	*zoom: 1.0;
+	
+	margin: 10px;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	
+	min-width: 150px;
+	
+	cursor: pointer;
+	
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.Euroland-CommonObjects-Calendar-SelectionFocusIndicator {
+	position: absolute;
+	top: -4px;
+	left: -4px;
+		
+	width: 100%;
+	height: 100%;
+		
+	border: 4px solid #a8c1e4;
+	
+	z-index: 99999;
+	
+	box-shadow: 
+		#a8c1e4 2px 2px 2px
+		,#a8c1e4 2px -2px 2px		
+		,#a8c1e4 -2px -2px 2px
+		,#a8c1e4 -2px 2px 2px
+	;
+	
+	display: none;
+}
+

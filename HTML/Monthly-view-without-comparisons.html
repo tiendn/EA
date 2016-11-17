@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<title>WAI-ARIA Calendar</title>
+	<link rel="stylesheet" href="css/CalendarObject.css" />
+	<script type="text/javascript" src="js/jquery-v1-9-1.js"></script>	
+	<script type="text/javascript" src="js/CalendarObject.js"></script>
+	<script type="text/javascript" src="js/CalendarButtonObject.js"></script>
+	<script type="text/javascript" src="js/CalendarMonthObject.js"></script>
+	<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+	<script type="text/javascript" src="js/scroll.js"></script>
+</head>
+<body>
+	<div id="monthly-view-without-comparisons">
+		<div class="logo"></div>
+		<h1><b> Accessible share graph for disabled persons </b></h1>
+		
+		<div class="skip">
+			<a href = "#"> Skip to detailed settings </a>
+			<a href = "main-view.html"> Return to main page </a>
+		</div>
+
+		<h2> Monthly share price details in euros for period from 28 november 2015 to 28 november 2016</h2>
+		<table class="table table-bordered">
+			<tr>
+			    <th>Period starting from</th>
+			    <th>First price</th>
+			    <th>Last price</th>
+			    <th>Change %</th>
+			    <th>Highest price</th>
+			    <th>Lowest price</th>
+			    <th>Shares traded</th>
+			    <th>Total return</th>
+			    <th>Link to daily data</th>
+			</tr>
+			<tr>
+			    <td>November 28. 2015</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>7.6%</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>1000000</td>
+			    <td>150.63</td>
+			    <td><a href = "daily-without-compare.html">Daily prices</td>.html">Daily view without comparisons</td>
+			</tr>
+			<tr>
+			    <td>November 28. 2015</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>7.6%</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>1000000</td>
+			    <td>150.63</td>
+			    <td><a href = "daily-without-compare.html">Daily prices</td>
+			</tr>
+			<tr>
+			    <td>November 28. 2015</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>7.6%</td>
+			    <td>150.63</td>
+			    <td>150.63</td>
+			    <td>1000000</td>
+			    <td>150.63</td>
+			    <td><a href = "daily-without-compare.html">Daily prices</td>
+			</tr>
+		</table>
+
+	 	<div class=""> 
+	 		<!-- CSS border-right 1px -->
+	 		<a href = "#"> Weekly share price details </a>
+			<a href = "#" class="back-to-top">Back to top</a>
+	 	</div>	
+	 	<h2> Details settings</h2>
+	 	<h3> Select  custom period for the share price details, also you can add peers, indices and own instruments for comparison. You can select up to five instruments for comparison.  </h3>
+	 	
+	 	<h2>Detailed settings</h2>
+	 	<p> Select  custom period for the share price details, also you can add peers, indices and own instruments for comparison. You can select up to five instruments for comparison.</p>
+	 	
+	 	<span>Select start date</span> 
+	 	<br>
+		
+		<!--  JS choose day. -->
+		<span>Select end date
+		</span>
+		<!-- Icon -->
+		<br>
+		<span> Select indices </span>
+		<div class="checkbox-indices">
+			<div class="checkbox">
+			  <label><input type="checkbox" checked value="">Option 1</label>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" checked value="">Option 2</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" checked value="">Option 3</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">Option 3</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">Option 3</label>
+			</div>
+		</div>
+		<span>Select peers </span>
+		<div class="checkbox-peers">
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">Option 1</label>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">Option 2</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">Option 3</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">Option 3</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">Option 3</label>
+			</div>
+		</div>
+		<span>Select moving averages </span>
+		<div class="checkbox-peers">
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">10 days moving average</label>
+			</div>
+			<div class="checkbox">
+			  <label><input type="checkbox" value="">20 days moving average</label>
+			</div>
+			<div class="checkbox ">
+			  <label><input type="checkbox" value="">50 days moving average</label>
+			</div>
+		</div>
+		<button type="submit" class="btn btn-default">Submit to update table</button>  <br>
+		<a href = "#" class="back-to-top">Back to top</a>
+		<div class="footer">
+			Supplied by <a href="euroland.com">Euroland.com</a> <br>
+			For terms of use and data vendors information, see <a href="euroland.com">disclaimer</a>
+		</div>
+
+
+	</div> <!-- End #main -->
+</body>
+</html>
