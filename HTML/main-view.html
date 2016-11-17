@@ -21,7 +21,7 @@
 		<div class="logo"></div>
 		<h1><b> Accessible share graph for disabled persons </b></h1>
 		<span> Select share </span> 
-		<select>
+		<select class="select-share">
 		  <option value="volvo">Volvo</option>
 		  <option value="saab">Saab</option>
 		  <option value="mercedes">Mercedes</option>
@@ -35,67 +35,70 @@
 			<a href = "Foreign-ownership.html"> Skip to foreign ownership tab </a>
 		</div>
 		<h2> Share price performance today November 28, 2016 at 15:15 Central European Time..</h2>
-		<p>
-			Open price was 15,56 Euros <br>
-			Last price is 15,56 Euros <br>
-			Change in currency is 0,56 Euros <br>
-			Change in per centage is 1,52 <br>
-			Highest price of the day is 16,00 Euros <br>
-			Lowest price of the days is 14,00 Euros <br>
-			Number of shares traded is 14 000 000 <br>
-			Data is delayed at least 15 minutes <br>
+		<p class="share-price-performance">
+			<span itemprop="open-price"> Open price was 15,56 Euros </span><br>
+			<span itemprop="last-price"> Last price is 15,56 Euros </span><br>
+			<span itemprop="currency"> Change in currency is 0,56 Euros </span> <br>
+			<span itemprop="percentage">Change in percentage is 1,52 </span><br>
+			<span itemprop="highest-price">Highest price of the day is 16,00 Euros </span><br>
+			<span itemprop="lowest-price">Lowest price of the days is 14,00 Euros </span><br>
+			<span itemprop="number-shares-traded">Number of shares traded is 14 000 000 </span><br>
+			<span itemprop="delay-time">Data is delayed at least 15 minutes </span><br>
 	 	</p>
-	 	<div class="">
-	 		<!-- CSS border-right 1px -->
+	 	<div class="skip">
 	 		<a href = "#"> Download today's share prices to Excel </a>
 			<a href = "Order-depth.html"> Skip to order depth table </a>
 			<a href = "#" class="back-to-top">Back to top</a>
 	 	</div>	
 	 	<h2> Share price details </h2>
 	 	<h3><b> Select period for share price details </b> </h3>
-	 	<div class="">
+	 	<div class="time-period">
 		 	<a href="">3 months</a>
 		 	<a href="">6 months</a>
 		 	<a href="">1 year</a>
 		 	<a href="">5 years</a>
 		 	<a href="">skip to detailed settings</a>
 	 	</div>
-	 	<h3> Overview of the share prices for period from 28 november 2015 to 28 november 2016</h3>
-	 	<p>
-			First price of the period was 14,00 Euros <br>
-			Last price of the period was 16,00 Euros <br>
-			Change in currency was 2.00 Euros <br>
-			Change in per centage was 2,15 <br>
-			Highest price of the period reached at 15 March 2016 was 18,00 Euros <br>
-			Lowest price of the period  reached at 15 June 2016 was 12,00 Euros <br> 
-			Total number of shares traded was 156 000 000 <br>
-			Highest number of shares were traded at 23 August 2016 <br>
-			Lowest number of shares were traded at 23 August 2016 <br>
-			Total return of the period was 16 per cent <br>
+	 	<h3> <b> Overview of the share prices for period from 28 november 2015 to 28 november 2016 </b></h3>
+	 	<p class="share-price-details">
+			<span itemprop="first-price">First price of the period was 14,00 Euros </span><br>
+			<span itemprop="last-price">Last price of the period was 16,00 Euros </span><br>
+			<span itemprop="currency">Change in currency was 2.00 Euros </span><br>
+			<span itemprop="percentage">Change in per centage was 2,15 </span><br>
+			<span itemprop="highest-price">Highest price of the period reached at 15 March 2016 was 18,00 Euros </span><br>
+			<span itemprop="lowest-price">Lowest price of the period  reached at 15 June 2016 was 12,00 Euros </span><br> 
+			<span itemprop="total-shares-traded">Total number of shares traded was 156 000 000 </span><br>
+			<span itemprop="highest-shares-traded
+			">Highest number of shares were traded at 23 August 2016 </span><br>
+			<span itemprop="lowest-share-traded">Lowest number of shares were traded at 23 August 2016 </span><br>
+			<span itemprop="total-return-period">Total return of the period was 16 per cent </span><br>
+			<br>
 			<br>
 			For more detailed share price information, select either monthly or weekly share price details. Daily share price details can be accessed next to each respective month or week. <br>
 	 	</p>
 	 	<div class=""> 
-	 		<a href="Monthly-view-without-comparisons.html"> Monthy share price details </a>
+	 		<a href="Monthly-view-without-comparisons.html"> Monthly share price details </a>
 	 		<a href=""> Weekly share price details </a>
 	 		<a href = "#" class="back-to-top">Back to top</a>
 	 	</div>
 	 	<h2>Detailed settings</h2>
 	 	<p> Select  custom period for the share price details, also you can add peers, indices and own instruments for comparison. You can select up to five instruments for comparison.</p>
-	 	
-	 	<span>Select start date</span>
-	 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calendar-modal">
-		  Launch demo modal
-		</button> 
-		<div id="calendar-modal" class="modal" onload="load();">
+	 	<div class="set-start-end-date">
+		 	<span>Select start date</span>
+		 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calendar-modal">
+			  Launch demo modal
+			</button> 
+			<div id="calendar-modal" class="modal" onload="load();">
 
-		  <!-- Modal content -->
-		  	<a href="#">simply something</a>
-			<div id="main"></div>
-			<div id="main2"></div>
-			<a href="#">simply something new</a>
-			<button type="button" onclick="reLimit();">re-limit</button>
+			  <!-- Modal content -->
+			  	<a href="#">simply something</a>
+				<div id="main"></div>
+				<div id="main2"></div>
+				<a href="#">simply something new</a>
+				<button type="button" onclick="reLimit();">re-limit</button>
 
+			</div>
+			<span>Select end date</span>
 		</div>
 		<!-- Modal 
 		<body onload="load();">
@@ -108,8 +111,7 @@
   -->
 		<!--  Icon  --> 
 		<!--  JS choose day. -->
-		<span>Select end date
-		</span>
+		
 		<br>
 		<span> Select indices </span>
 		<div class="checkbox-indices">
@@ -162,14 +164,9 @@
 		<button type="submit" class="btn btn-default "  >Submit to update table</button>  <br>
 		<a href = "#" class="back-to-top">Back to top</a>
 		<div class="footer">
-			Supplied by <a href="euroland.com">Euroland.com</a> <br>
-			For terms of use and data vendors information, see <a href="euroland.com">disclaimer</a>
+			Supplied by <a href="https://euroland.com">Euroland.com</a> <br>
+			For terms of use and data vendors information, see <a href="#">disclaimer</a>
 		</div>
-
-
 	</div> <!-- End #main -->
-	<script type="text/javascript">
-		
-	</script>
 </body>
 </html>
