@@ -19,9 +19,7 @@ a{
 a:last-of-type , .footer a{
 	border-right: 0px;
 }
-body{
-	padding:20px;
-}
+
 .logo{
 	background-image: url('#');
 }
@@ -32,4 +30,11 @@ button[type="submit"]{
 	margin-top: 50px;
 }
 /*#monthly-view*/
-
+body{
+	padding:20px;
+}
+@media screen and (max-width: 400px){
+	body{
+		padding:0px !important;
+	}
+}

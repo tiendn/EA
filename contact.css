@@ -1,0 +1,165 @@
+    .contact-page .contact-tab {
+        padding: 16px;
+    }
+
+    .contact-page .contact-tab .contact-container {
+        padding-bottom: 48%;
+        width: 48%;
+        height: auto;
+        float: left;
+        height: 0;
+        margin-bottom: 115px;
+        font-style: "HelveticaNeue-Light"; 
+    }
+
+    .contact-page .contact-tab .contact-box {
+        box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.15);
+        margin-bottom: 16px;
+        padding-bottom: 100%;
+        width: 100%;
+        background-image: url("/img/headquarter.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    
+    .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email{
+        font-size: 12px;
+        color: #333333;
+    }
+    .contact-page .contact-tab .position{
+        font-size: 11px;
+        color: #868686;
+    }
+    .contact-page .contact-tab .email, .contact-page .contact-tab .phone-number{
+        text-decoration: none; 
+    }
+   
+
+    .contact-page .address-tab .address-background {
+        margin-top: 16px;
+        height: 200px;
+        width: 100%;
+        background-image: url("/img/headquarter.jpg");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+    .contact-page .address-tab .address-content {
+        padding: 16px;
+        font-style: HelveticaNeue-Light; 
+    }
+    .contact-page .address-tab .headquarter{
+        margin-bottom: 10px;
+        font-size: 12px;
+        color: #333333;
+        font-style: HelveticaNeue-Medium !important; 
+    }
+    .contact-page .address-tab .headquarter-info{
+        margin-bottom: 4px;
+        font-size: 11px; 
+        color: #868686;
+    }
+    .contact-page .address-tab .headquarter-contact[itemprop="telephone"]{
+        text-decoration: none;
+    }
+    .contact-page .address-tab .headquarter-contact[itemprop="telephone"],
+    .contact-page .address-tab .headquarter-contact[itemprop="fax"]
+    {
+        
+        font-size: 11px; 
+        color: #868686;
+        /*margin-top: 6px;*/
+    }
+    .contact-page .address-tab .headquarter-contact[itemprop="email"],
+    .contact-page .address-tab .headquarter-contact[itemprop="url"]{
+        font-size: 11px; 
+        text-decoration: none;
+        color: #868686;
+    }
+@media screen and (max-width: 767px){
+    .contact-page .contact-tab .contact-container:nth-of-type(2n) {
+        margin-left: 4%;
+    }
+}    
+@media screen and (min-width: 768px){
+    .contact-page .contact-tab {
+        padding: 32px;
+    }
+    .contact-page .contact-tab .contact-container {
+        padding-bottom: 28%;
+        width: 28%;
+        margin-left: 8%;
+        margin-bottom: 140px;
+        
+    }
+    .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
+        margin-left: 0;
+    }
+    .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email{
+        font-size: 17px;
+        color: #000000;
+        margin-bottom : 7px;
+    }
+    .contact-page .contact-tab .position{
+        font-size: 13px;
+        color: #9B9B9B;
+        margin-bottom : 7px;
+    }
+
+
+    .contact-page .address-tab .address-background {
+        height: 410px;
+    }
+
+    .contact-page .address-tab .headquarter{
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333333;
+        font-style: HelveticaNeue-Medium !important; 
+    }
+    .contact-page .address-tab .headquarter-info,
+    .contact-page .address-tab .headquarter-contact[itemprop="telephone"],
+    .contact-page .address-tab .headquarter-contact[itemprop="fax"]{
+        margin-bottom: 4px;
+        font-size: 22px; 
+        color: #868686;
+    }
+    
+    .contact-page .address-tab .headquarter-info[itemprop="country-name"]{
+        margin-bottom: 20px;
+    }
+    .contact-page .address-tab .headquarter-contact[itemprop="email"],
+    .contact-page .address-tab .headquarter-contact[itemprop="url"]{
+        font-size: 22px; 
+    }
+}
+@media screen and (min-width: 1024px){
+    .contact-page .address-tab{
+        margin-left: 18.75%;
+        margin-right: 18.75%;
+    }
+    .contact-page .address-tab .address-content{
+        padding: 0;
+    }
+    .contact-page .address-tab .headquarter{
+        margin-top: 16px;
+    }
+    .contact-page .address-tab .address-background {
+        height: 400px;
+     
+    }
+    .contact-page .contact-tab .contact-container {
+        width: 20%;
+        float: left;
+        font-style: HelveticaNeue-Light; 
+        margin-left: 6.5%;
+        margin-bottom:  70px;
+    }
+    .contact-page .contact-tab .contact-container:nth-of-type(4n+1) {
+        margin-left: 0 !important;
+    }
+    .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
+        margin-left: 6.5%;
+    }
+}

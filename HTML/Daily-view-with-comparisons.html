@@ -3,6 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -23,7 +24,7 @@
 		
 		<div class="skip">
 			<a href = "#"> Skip to detailed settings </a>
-			<a href = "main-view.html"> Return to main page </a>
+			<a href = "index.html"> Return to main page </a>
 		</div>
 
 		<caption> Daily share price details in euros for period from 28 november 2015 to 28 november 2016</caption>
@@ -87,13 +88,25 @@
 	 	
 	 	
 	 	<div class="set-start-end-date">
-		 	<span>Select start date</span> 
+	 		<div class="row">
+	 			<div class="col-md-1 col-xs-2 col-lg-1 ">
+			 	<span>Select start date </span>
+			 	</div>
+			 	<div class="col-md-11 col-xs-10 col-lg-11">
+				 	<input type="date" name="bday" >
+				 	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			 	</div>
+		 	</div>
 		 	<br>
-			
-			<!--  JS choose day. -->
-			<span>Select end date
-			</span>
-			<!-- Icon -->
+			<div class="row">
+	 			<div class="col-md-1 col-xs-2 col-lg-1">
+			 	<span>Select end date </span>
+			 	</div>
+			 	<div class="col-md-11 col-xs-10 col-lg-11">
+				 	<input type="date" name="bday" >
+				 	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			 	</div>
+		 	</div>
 		</div>
 		<br>
 		<span> Select indices </span>
@@ -151,7 +164,7 @@
 			</div>
 		</div>
 		<button type="submit" class="btn btn-default">Submit to update table</button>  <br>
-		<a href="main-view.html">Return to main page</a>
+		<a href="index.html">Return to main page</a>
 		<a href = "#" class="back-to-top">Back to top</a>
 		<div class="footer">
 			Supplied by <a href="https://euroland.com">Euroland.com</a> <br>

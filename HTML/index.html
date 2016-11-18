@@ -3,6 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width, initial-scale=1"" />
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -42,7 +43,7 @@
 			<span itemprop="percentage">Change in percentage is 1,52 </span><br>
 			<span itemprop="highest-price">Highest price of the day is 16,00 Euros </span><br>
 			<span itemprop="lowest-price">Lowest price of the days is 14,00 Euros </span><br>
-			<span itemprop="number-shares-traded">Number of shares traded is 14 000 000 </span><br>
+			<span itemprop="number-shares-traded">Number of shares traded is 14 000 </span><br>
 			<span itemprop="delay-time">Data is delayed at least 15 minutes </span><br>
 	 	</p>
 	 	<div class="skip">
@@ -84,34 +85,26 @@
 	 	<h2>Detailed settings</h2>
 	 	<p> Select  custom period for the share price details, also you can add peers, indices and own instruments for comparison. You can select up to five instruments for comparison.</p>
 	 	<div class="set-start-end-date">
-		 	<span>Select start date</span>
-		 	<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#calendar-modal">
-			  Launch demo modal
-			</button> 
-			<div id="calendar-modal" class="modal" onload="load();">
-
-			  <!-- Modal content -->
-			  	<a href="#">simply something</a>
-				<div id="main"></div>
-				<div id="main2"></div>
-				<a href="#">simply something new</a>
-				<button type="button" onclick="reLimit();">re-limit</button>
-
-			</div>
-			<span>Select end date</span>
+	 		<div class="row">
+	 			<div class="col-md-1 col-xs-4 col-lg-1 ">
+			 	<span>Select start date </span>
+			 	</div>
+			 	<div class="col-md-11 col-xs-8 col-lg-11">
+				 	<input type="date" name="bday" >
+				 	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			 	</div>
+		 	</div>
+		 	<br>
+			<div class="row">
+	 			<div class="col-md-1 col-xs-4 col-lg-1">
+			 	<span>Select end date </span>
+			 	</div>
+			 	<div class="col-md-11 col-xs-8 col-lg-11">
+				 	<input type="date" name="bday" >
+				 	<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+			 	</div>
+		 	</div>
 		</div>
-		<!-- Modal 
-		<body onload="load();">
-	<a href="#">simply something</a>
-	<div id="main"></div>
-	<div id="main2"></div>
-	<a href="#">simply something new</a>
-	<button type="button" onclick="reLimit();">re-limit</button>
-</body>
-  -->
-		<!--  Icon  --> 
-		<!--  JS choose day. -->
-		
 		<br>
 		<span> Select indices </span>
 		<div class="checkbox-indices">
