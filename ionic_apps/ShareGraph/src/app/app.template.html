@@ -1,0 +1,28 @@
+<!-- left menu -->
+<ion-menu id="irapp-leftmenu" [content]="content" [side]="menuSide" type="push" class="{{menuClass}}">
+    <ion-content no-padding>
+        <button ion-button menuClose class="btn-authenticate" clear (click)="userAuthenticate()" [disabled]="!isOnline">
+            {{userText}}
+            <ion-icon class="irapp-icon" name="irapp-account"></ion-icon>
+        </button>
+        <div class="company-logo"></div>
+        <div class="list-menu" *ngIf="leftMenuModules">
+            <ion-list class="list-modules">
+                <button ion-item menuClose *ngFor="let module of leftMenuModules" (click)="helper.goToModule(module)" [class]="module.moduleName" [disabled]="helper.disableModulesOfflineMode.indexOf(module.moduleName) >= 0 && !isOnline">
+                    {{modulesDisplayName[module.moduleName]}}
+                </button>
+                <!--<ion-item menuClose *ngFor="let module of leftMenuModules" (click)="helper.goToModule(module)" [class]="module.moduleName">
+                    {{modulesDisplayName[module.moduleName]}}
+                </ion-item>-->
+                <ion-item menuClose (click)="helper.goToSettings()" class="settings">
+                    {{settingsText}}
+                </ion-item>
+            </ion-list>
+        </div>
+        <button ion-button menuClose class="btn-settings" clear (click)="helper.goToSettings()">
+            <ion-icon class="irapp-icon" name="irapp-settings-white"></ion-icon>
+        </button>
+    </ion-content>
+</ion-menu>
+<!-- main navigation -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

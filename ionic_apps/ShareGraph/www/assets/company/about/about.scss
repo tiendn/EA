@@ -1,0 +1,31 @@
+.aboutIOS{
+	@media only screen and (max-width: 767px) {
+		padding:8px;
+	}
+	@media screen and (min-width: 768px) and (orientation:portrait) {
+		padding-top:3vh;
+		padding-left:8vw;
+		padding-right:8vw;
+		p{
+			font-size:17px;
+		}
+		ion-note{
+			font-size:13px;
+		}
+	}
+	@media screen and (min-width: 768px) and (orientation:landscape) {
+		padding-top:3vh;
+		padding-left:8vw;
+		padding-right:8vw;
+		p{
+			font-size:17px;
+		}
+		ion-note{
+			font-size:13px;
+		}
+	}
+}
+
+.aboutAndroid{
+
+}

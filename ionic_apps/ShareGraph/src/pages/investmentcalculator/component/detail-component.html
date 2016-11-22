@@ -1,0 +1,59 @@
+<ion-list *ngIf="icalData">
+    <ion-item class="instrument">
+        <ion-label>{{icalPhrases.instrument}}</ion-label>
+        <ion-note item-right><bdo dir="auto">{{instrumentName}}</bdo></ion-note>
+    </ion-item>
+    <ion-item class="change">
+        <ion-icon class="irapp-icon" name="irapp-change" item-left></ion-icon>
+        <ion-label>{{icalPhrases.change}}</ion-label>
+        <ion-note item-right class="{{icalData.Change > 0 ? 'plus' : icalData.Change < 0 ? 'minus' : ''}}">{{icalData.Change > 0 ? '+' : ''}}{{icalData.Change | formatNumber:decimalDigits}} {{icalData.Unit}}</ion-note>
+    </ion-item>
+    <ion-item class="change-percent">
+        <ion-icon class="irapp-icon" name="irapp-changepercent" item-left></ion-icon>
+        <ion-label>{{icalPhrases.changePercent}}</ion-label>
+        <ion-note item-right class="{{icalData.ChangePercent > 0 ? 'plus' : icalData.ChangePercent < 0 ? 'minus' : ''}}">{{icalData.ChangePercent > 0 ? '+' : ''}}{{icalData.ChangePercent | formatNumber:decimalDigits}}</ion-note>
+    </ion-item>
+    <ion-item class="compare">
+        <ion-card class="cards-compare">
+            <ion-card-header>{{icalPhrases.compare}}</ion-card-header>
+            <ion-card-content>
+                <button ion-button (click)="showModal('watchlist')" [disabled]="!enableWatchList">
+                    {{icalPhrases.watchlist}}
+                    <ion-icon class="irapp-icon" name="irapp-watchlist"></ion-icon>
+                </button>
+                <button ion-button (click)="showModal('indices')" [disabled]="!enableIndices">
+                    {{icalPhrases.indices}}
+                    <ion-icon class="irapp-icon" name="irapp-indices"></ion-icon>
+                </button>
+            </ion-card-content>
+        </ion-card>
+    </ion-item>
+    <ion-item class="start-date">
+        <ion-label>{{icalPhrases.startDate}}</ion-label>
+        <ion-note item-right>{{icalData.StartDate}}</ion-note>
+    </ion-item>
+    <ion-item class="share-price">
+        <ion-label>{{icalPhrases.sharePrice}}</ion-label>
+        <ion-note item-right>{{icalData.StartPrice | formatNumber:decimalDigits}} {{icalData.Unit}}</ion-note>
+    </ion-item>
+    <ion-item class="share-bought">
+        <ion-label>{{icalPhrases.shareBought}}</ion-label>
+        <ion-note item-right>{{icalData.ShareBought | formatNumber:0}}</ion-note>
+    </ion-item>
+    <ion-item class="start-value">
+        <ion-label>{{icalPhrases.value}}</ion-label>
+        <ion-note item-right>{{icalData.StartValue | formatNumber:decimalDigits}} {{icalData.Unit}}</ion-note>
+    </ion-item>
+    <ion-item class="end-date">
+        <ion-label>{{icalPhrases.endDate}}</ion-label>
+        <ion-note item-right>{{icalData.EndDate}}</ion-note>
+    </ion-item>
+    <ion-item class="share-price">
+        <ion-label>{{icalPhrases.sharePrice}}</ion-label>
+        <ion-note item-right>{{icalData.EndPrice | formatNumber:decimalDigits}} {{icalData.Unit}}</ion-note>
+    </ion-item>
+    <ion-item class="end-value">
+        <ion-label>{{icalPhrases.value}}</ion-label>
+        <ion-note item-right>{{icalData.EndValue | formatNumber:decimalDigits}} {{icalData.Unit}}</ion-note>
+    </ion-item>
+</ion-list>

@@ -1,0 +1,197 @@
+page-investmentcalculator {
+    ion-label {
+        color: #000;
+    }
+    /*.ical-content {*/
+    .selectdate-block {
+        padding-top: 10px;
+    }
+
+    button.start-date, button.end-date {
+        &.item-block {
+            .item-inner {
+                /*border: 0;*/
+                font-size: 17px;
+
+
+
+                .datetime-text {
+                    color: #8F8F95;
+                }
+            }
+        }
+    }
+
+    button.end-date {
+        border-bottom: 1px solid #ddd;
+
+        &.item-block {
+            .item-inner {
+                border: 0;
+            }
+        }
+    }
+
+    .input-noofshare, .input-amount {
+        font-size: 15px;
+
+        .text-input {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        ion-label {
+            font-size: 15px;
+            margin-top: 14px;
+        }
+    }
+
+    .input-noofshare, .input-amount, .checkbox-dividends {
+        margin-top: 20px;
+        /*margin-bottom: 20px;*/
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+
+        &.item-block {
+            .item-inner {
+                border: 0;
+            }
+        }
+    }
+
+    .input-noofshare, .input-amount {
+        margin-bottom: 5px;
+    }
+
+    .checkbox-dividends {
+        margin-bottom: 20px;
+    }
+
+    .checkbox-dividends {
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .item-input {
+        ion-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        ion-icon {
+            margin: 0;
+        }
+    }
+
+    .disabled {
+        background-color: #E6E8ED;
+
+        input {
+            text-decoration: line-through;
+        }
+    }
+
+    .mess {
+        background: transparent;
+        min-height: 0;
+        font-size: 15px;
+
+        .item-inner {
+            border: 0 !important;
+        }
+
+        ion-label {
+            margin: 0;
+        }
+    }
+    /*}*/
+}
+
+page-ical-detail {
+    .ical-detail-content {
+        ion-label{
+            color: #000;
+        }
+
+        ion-label, ion-note {
+            font-size: 17px;
+        }
+        /*ion-note{
+        color: #8F8F95;
+    }*/
+        .instrument {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            border-top: 1px solid #ddd !important;
+
+            .item-inner {
+                border: 0;
+            }
+        }
+
+        .compare {
+            background: transparent;
+
+            .cards-compare {
+                padding-top: 10px;
+                padding-bottom: 10px;
+
+                ion-card-header, ion-card-content {
+                    padding: 0;
+                }
+
+                ion-card-header {
+                    padding-bottom: 10px;
+                }
+            }
+
+            .item-inner {
+                border: 0;
+            }
+        }
+
+        ion-icon {
+            margin: 0;
+        }
+
+        .change {
+            border-top: 1px solid #ddd;
+        }
+
+        .change-percent {
+            border-bottom: 1px solid #ddd;
+
+            .item-inner {
+                border: 0;
+            }
+        }
+
+        .change, .change-percent {
+            .item-inner {
+                /*margin-left: 10px;*/
+            }
+        }
+
+        .start-date {
+            border-top: 1px solid #ddd;
+            /*.item-inner{
+            border: 0;
+        }*/
+        }
+
+        .start-value {
+            border-bottom: 1px solid #ddd;
+
+            .item-inner {
+                border: 0;
+            }
+        }
+
+        .end-date {
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+    }
+}

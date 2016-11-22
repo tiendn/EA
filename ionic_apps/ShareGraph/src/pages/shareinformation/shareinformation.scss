@@ -1,0 +1,18 @@
+page-shareinformation {
+    .shareinfo-content {
+        ion-item.item {
+            font-size: 17px;
+        }
+
+        .shareinfo-note {
+            padding: 15px;
+            display: block;
+            font-size: 14px;
+        }
+
+        .loading-wrapper {
+            background: transparent !important;
+            box-shadow: none;
+        }
+    }
+}

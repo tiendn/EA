@@ -1,0 +1,18 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-buttons end *ngIf="!isShowFooter">
+            <button (click)="closeModal()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content class="progressbar-modal-content">
+    <div class="progressbar-content">
+        <div class="progress-bar"><span id="irapp-progressbar" [attr.filename]="fileName" [style.width]="progressPercent"></span></div>
+    </div>
+</ion-content>
+<ion-footer class="progress-modal-buttons" *ngIf="isShowFooter">
+    <button ion-button full light class="btn-movetobg" (click)="moveToBG()">{{moveToBGText}}</button>
+    <button ion-button full light class="btn-cancel" (click)="cancel()">{{cancelText}}</button>
+</ion-footer>

@@ -1,0 +1,98 @@
+﻿/*Custom Toolbar*/
+.irapp-toolbar {
+    padding: 0;
+    min-height: 0;
+
+    .scrollbar .btn-active {
+        border: 0;
+        border-bottom: 2px solid #fff;
+        border-radius: 0;
+    }
+
+    .scrollbar .button {
+        min-height: 40px;
+    }
+}
+/*End Custom Toolbar*/
+.btn-leftmenu {
+    order: 1;
+    -webkit-order: 1;
+}
+/*Share Information*/
+.share-information-page {
+    ion-list {
+        .item {
+            padding: 0;
+
+            .item-inner {
+                padding: 10px 15px;
+                /*padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;*/
+                flex-direction: column;
+
+                ion-label, ion-note {
+                    margin: 0;
+                    display: block;
+                    width: 100%;
+                }
+
+                ion-note {
+                    padding-top: 5px;
+                }
+            }
+        }
+    }
+}
+/*End Share Information*/
+/*Historical Price*/
+/*Watchlist Modal*/
+.hp-watchlist-content {
+    .div-item-content {
+        max-height: calc(100% - 250px);
+    }
+
+    .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+        border-bottom: 1px solid #6b6b6c;
+    }
+
+    .btn-watch {
+        font-size: 12px;
+        font-weight: medium;
+        margin-left: calc(50% - 57.869px);
+    }
+
+    .close {
+        margin-top: 6.35px;
+    }
+
+    .item-content .item-center {
+        font-size: 15px;
+    }
+
+    .item-content .item-right {
+        font-size: 15px;
+    }
+
+    .item-content .item-left {
+        font-size: 15px;
+    }
+
+    .current-date span {
+        font-size: 15px;
+    }
+
+    .item-content, .item-header-content span {
+        font-size: 17px;
+    }
+
+    .item-content .currency {
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+}
+/*End Watchlist Modal*/
+/*End Historical Price*/

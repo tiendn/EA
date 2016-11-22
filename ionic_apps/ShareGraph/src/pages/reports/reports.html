@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+    <!--<scroll-tab id="irapp-scroll-tab"></scroll-tab>-->
+    <ion-toolbar *ngIf="!hideTab" no-border no-padding ngClass="irapp-toolbar">
+        <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+            <button ion-button *ngFor="let item of tabData; let i=index" (click)="selectedTab(item)" [ngClass]="currentId == item.id ? 'btn-active' : ''">
+                <bdo dir="auto">{{item.displayName}}</bdo>
+            </button>
+        </ion-scroll>
+    </ion-toolbar>
+    <ion-toolbar *ngIf="groupData" no-border no-padding class="irapp-toolbar report-group">
+        <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+            <button ion-button *ngFor="let year of groupData" (click)="selectedGroup(year)" [class]="currentGroup == year ? 'button btn-active' : 'button'">
+                {{year}}
+            </button>
+        </ion-scroll>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding [ngClass]="isShowFooter ? 'report-content show-footer' : 'report-content'">
+    <div *ngIf="data" class="report-block {{orientation}}">
+        <div class="report-item" *ngFor="let item of data; let i = index;">
+            <button ion-button (click)="openReport(item)">
+                <img [src]="item.LocalThumbnailUrl" [attr.filename]="item.FileName" [attr.etag]="item.ETag" (error)="getThumbnail($event, item)" />
+                <span class="filename">{{item.DisplayName}}</span>
+            </button>
+            <button ion-button *ngIf="reportsDownloaded.length > 0 && reportsDownloaded.indexOf(item.FileName) >= 0" class="btn-status" (click)="openPopupRemoveFile(item)"><ion-icon class="irapp-icon" [name]="lstDelete.indexOf(item.FileName) >= 0 ? 'irapp-delete' : 'irapp-downloaded'"></ion-icon></button>
+            <span *ngIf="reportsDownloading.length > 0 && reportsDownloading.indexOf(item.FileName) >= 0" class="progress-download"><span [id]="item.FileName" class="progress-percent"></span></span>
+        </div>
+        <div class="report-item"></div><div class="report-item"></div><div class="report-item"></div><div class="report-item"></div>
+        <div class="report-item"></div><div class="report-item"></div><div class="report-item"></div><div class="report-item"></div>
+    </div>
+</ion-content>
+
+<ion-footer [hidden]="!isShowFooter" class="modal-delete-file">
+    <button ion-button [disabled]="lstDelete.length == 0" (click)="deleteFiles()" class="btn-delete" full light>Delete</button>
+    <button ion-button (click)="hideFooter()" class="btn-cancel" full light>Cancel</button>
+</ion-footer>

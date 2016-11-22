@@ -1,0 +1,119 @@
+{
+  "common": {
+    "serviceBaseUrl": "http://10.10.15.8/myirappapi2/",
+    "externalAccServiceUrl": "http://server.vn/myirappapi2/",
+    "apiPath": "api",
+    "apiVersion": "v1",
+    "retry": 3,
+    "tickerTimeInterval": 60000,
+    "currencyStorageTTL": 3600000,
+    "settingStorageTTL": 7200000,
+    "requestTimeout": 10000,
+    "decimalSeparator": [
+      {
+        "name": "Comma",
+        "value": ","
+      },
+      {
+        "name": "Dot",
+        "value": "."
+      }
+    ],
+    "language": [
+      {
+        "name": "English",
+        "value": "en-gb"
+      },
+      {
+        "name": "日本語",
+        "value": "ja-jp"
+      },
+      {
+        "name": "Pусский",
+        "value": "ru-ru"
+      },
+      {
+        "name": "Norsk",
+        "value": "nb-no"
+      },
+      {
+        "name": "Svenska",
+        "value": "sv-se"
+      },
+      {
+        "name": "Suomi",
+        "value": "fi-fi"
+      },
+      {
+        "name": "Dansk",
+        "value": "da-dk"
+      },
+      {
+        "name": "Español",
+        "value": "es-es"
+      },
+      {
+        "name": "Deutsch",
+        "value": "de-de"
+      },
+      {
+        "name": "Français",
+        "value": "fr-fr"
+      },
+      {
+        "name": "Íslenska",
+        "value": "is-is"
+      },
+      {
+        "name": "Italiano",
+        "value": "it-it"
+      },
+      {
+        "name": "Português",
+        "value": "pt-pt"
+      },
+      {
+        "name": "العربية",
+        "value": "ar-ae"
+      },
+      {
+        "name": "简体中文",
+        "value": "zh-cn"
+      },
+      {
+        "name": "繁體中文",
+        "value": "zh-tw"
+      },
+      {
+        "name": "한국어",
+        "value": "ko-kr"
+      }
+    ],
+    "useEasternArabicNumbers": true
+  },
+  "sharegraph": {
+    "timeInterval": 60000,
+    "historyStorageTTL": 900000,
+    "intradayStorageTTL": 300000,
+    "performanceDataStorageTTL": 900000
+  },
+  "calendar": {
+    "storageTTL": 300000
+  },
+  "historicalprice": {
+    "storageTTL": 900000
+  },
+  "pressreleases": {
+    "storageTTL": 300000
+  },
+  "report": {
+    "storageTTL": 300000,
+    "downloadLimit": 10
+  },
+  "keyfinancials": {
+    "storageTTL": 300000
+  },
+  "disclosures": {
+    "storageTTL": 300000
+  }
+}

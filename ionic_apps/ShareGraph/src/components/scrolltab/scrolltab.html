@@ -1,0 +1,7 @@
+<ion-toolbar *ngIf="!hideTab" no-border no-padding ngClass="irapp-toolbar">
+    <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+        <button ion-button *ngFor="let item of data; let i=index" (click)="target.selectedTab(item)" [ngClass]="currentId == item.id ? 'btn-active' : ''">
+            <bdo dir="auto">{{item.displayName}}</bdo>
+        </button>
+    </ion-scroll>
+</ion-toolbar>

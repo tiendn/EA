@@ -1,0 +1,118 @@
+page-charts {
+    /**
+    Some default
+  **/
+    ion-header {
+        height: 16%;
+    }
+    /*ion-content{
+     overflow-y: hidden;
+  }
+  scroll-content{
+     overflow-y: hidden;
+
+  }*/
+    button {
+        border: 0;
+        color: white !important;
+    }
+    /**
+    CSS: Chart Page
+  **/
+    .chart-page-content {
+        /*overflow-y: scroll;
+    position: relative;*/
+    }
+    /**
+    CSS Period button
+  */
+    .btn-period {
+        z-index: 99;
+        padding: 0;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .btn-share:hover, .btn-period:hover {
+        color: white !important;
+        opacity: 1 !important;
+    }
+    // If watchlist
+    .watchlist-period {
+        display: inline;
+        // left: 50px;
+        position: absolute;
+        top: -14px;
+        // right: 0;
+        text-align: center;
+        width: 100%;
+    }
+    // If indices
+    .indices-period {
+        display: inline;
+        left: 40px;
+        position: absolute;
+        top: -15px;
+        right: 0;
+    }
+    // Div cover chart.
+    #charts-container {
+        position: relative;
+        margin-bottom: 10px;
+    }
+    /**
+   HighCharts.
+   */
+    #charts {
+        width: 90%;
+        height: 200px;
+        margin-left: 5%;
+        margin-bottom: 25px;
+        padding-bottom: -15px;
+    }
+
+    #charts .highcharts-container svg {
+        border-top: 1px solid #848484;
+        margin-top: 30px;
+    }
+
+    #charts .highcharts-container {
+        height: 215px !important;
+    }
+
+    .share-item {
+        height: 10px;
+        width: 100%;
+    }
+
+    .share-name {
+        margin-top: 10px;
+        margin-right: 20px;
+    }
+    /**
+    .footer : button config : ownshare, share.
+  */
+    .footer {
+        margin-left: 16px !important;
+    }
+
+    .tooltip {
+        margin-top: 30px;
+        margin-bottom: 20px !important;
+    }
+
+    .tooltip, .own-shares-title, .sharegraph-title {
+        color: #848484 !important;
+    }
+
+    .own-shares-title, .sharegraph-title {
+        text-transform: uppercase;
+    }
+
+    .btn-click {
+        border: 1px solid white !important;
+    }
+    /**
+    Change Font
+  */
+}

@@ -1,0 +1,341 @@
+.report-group {
+    padding: 0;
+    min-height: 0;
+
+    .toolbar-content {
+        height: 40px;
+
+        ion-scroll {
+            height: 100%;
+        }
+    }
+
+    .toolbar-background {
+        background-color: #fff;
+    }
+
+    button {
+        height: 40px !important;
+        margin: 0 !important;
+
+        .button-inner {
+            color: #7D7D7D;
+            font-size: 13px;
+        }
+    }
+
+    button.btn-active {
+        .button-inner {
+            color: #333333;
+        }
+    }
+}
+
+page-reports {
+    .report-content {
+        .report-block {
+            /*display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        align-items: stretch;
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;*/
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -webkit-box-direction: normal;
+            -moz-box-direction: normal;
+            -webkit-box-flex-direction: row;
+            -moz-box-flex-direction: row;
+            -webkit-flex-direction: row;
+            flex-direction: row;
+            box-orient: horizontal;
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            -webkit-justify-content: space-between;
+            -moz-justify-content: space-between;
+            -ms-justify-content: space-between;
+            justify-content: space-between;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 5px 20px 30px 20px;
+            /*padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 5px;*/
+            .report-item {
+                position: relative;
+                /*margin-top: 10px;
+            margin-bottom: 5px;*/
+                margin: 25px 10px 0px 10px;
+
+                button {
+                    margin: 0;
+                    padding: 0;
+                    width: auto;
+                    height: auto;
+                    border-radius: 0;
+                    background: transparent;
+                    /*padding-bottom: 10px;
+                margin-top: 10px;*/
+                    .button-inner {
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    img {
+                        width: 63px;
+                        height: 90px;
+                        //background-color: #fff;
+                        //position: relative;
+                    }
+
+                    img:before {
+                        content: " ";
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                    }
+
+                    .filename {
+                        color: #000;
+                        padding-top: 5px;
+                        font-size: 10px;
+                    }
+                }
+
+                .progress-download {
+                    position: absolute;
+                    top: 40%;
+                    left: 0;
+                    right: 0;
+                    /*top: 0;
+                bottom: 0;*/
+                    display: block;
+                    width: 45px;
+                    height: 8px;
+                    background-color: #ddd;
+                    margin-left: auto;
+                    margin-right: auto;
+                    /*margin: auto;*/
+                    .progress-percent {
+                        display: block;
+                        width: 0;
+                        height: 100%;
+                        background-color: #75B0CF;
+                    }
+                }
+
+                .btn-status {
+                    position: absolute;
+                    /*top: -5px;
+                right: 7px;*/
+                    top: -10px;
+                    right: -8px;
+                    margin: 0;
+                    padding: 0;
+
+                    ion-icon {
+                        padding: 0 !important;
+                    }
+                }
+            }
+
+            .report-item:empty {
+                width: 63px;
+                height: 0 !important;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        .report-block.landscape {
+            padding-top: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+
+            .report-item {
+                /*margin-top: 0;
+                margin-bottom: 0;*/
+                margin: 0;
+
+                button {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                    margin: 0;
+                    padding-bottom: 10px;
+
+                    img {
+                        width: 90px;
+                        height: 63px;
+                    }
+                }
+
+                .progress-download {
+                    top: 33%;
+                }
+
+                .btn-status {
+                    top: -10px;
+                    right: -8px;
+                }
+            }
+
+            .report-item:empty {
+                width: 90px;
+            }
+        }
+    }
+
+    .report-content.show-footer {
+        scroll-content {
+            margin-bottom: 130px;
+        }
+    }
+
+    .modal-delete-file {
+        padding: 10px;
+
+        button, button:hover {
+            background-color: #fff !important;
+            color: #007aff;
+            text-transform: none;
+            height: 50px;
+            border-radius: 10px;
+        }
+
+        .btn-delete {
+            margin-bottom: 10px;
+        }
+
+        .btn-cancel {
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+}
+
+.platform-ios{
+    .report-content {
+        .report-block {
+            button {
+                img{
+                    background-color: #fff;
+                    //border: 1px solid #ddd;
+                }
+            }
+        }
+    }
+}
+
+.platform-android{
+    .report-content {
+        .report-block {
+            button {
+                img{
+                    position: relative;
+                }
+
+                img:before{
+                    content: " ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+    }
+}
+
+/*iPhone 6*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    .report-content {
+        .report-block {
+            .report-item{
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+        }
+
+        .report-block.landscape{
+            .report-item{
+                margin: 15px 5px 0px 5px;
+            }
+        }
+    }
+}
+
+/* iPhone 6 plus */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+    .report-content {
+        .report-block.landscape{
+            .report-item{
+                margin: 15px 15px 0px 15px;
+            }
+        }
+    }
+}
+
+/*Tablet*/
+@media only screen and (min-width: 601px) {
+    .report-content {
+        .report-block {
+            .report-item{
+                button {
+                    img {
+                        width: 86px !important;
+                        height: 125px !important;
+                        //background-color: #fff;
+                        //position: relative;
+                    }
+                }
+            }
+
+            .report-item:empty{
+                width: 86px;
+            }
+        }
+
+        .report-block.landscape{
+            padding-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            .report-item{
+                margin: 15px 5px 5px 5px;
+
+                button {
+                    img {
+                        width: 125px !important;
+                        height: 86px !important;
+                    }
+                }
+            }
+
+            .report-item:empty{
+                width: 125px;
+            }
+        }
+    }
+}

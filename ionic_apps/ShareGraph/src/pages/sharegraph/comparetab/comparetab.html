@@ -1,0 +1,18 @@
+<ion-header>
+    <div class="btn-header-title">
+        {{headerTitle}}
+        <ion-icon class="irapp-icon" [name]="type == 'watchlist' ? 'irapp-watchlist' : 'irapp-indices'"></ion-icon>
+    </div>
+
+    <button ion-button class="btn-header-close" (click)="closeModal()">
+        <ion-icon class="irapp-icon" name="irapp-closemodal"></ion-icon>
+    </button>
+</ion-header>
+
+<ion-content no-padding>
+    <ion-tabs>
+        <ion-tab tabTitle="{{chartsText}}" [root]="charts" [rootParams]="rootParams"></ion-tab>
+        <ion-tab tabTitle="{{compareText}}" [root]="compare" [rootParams]="rootParams"></ion-tab>
+        <ion-tab tabTitle="{{performanceText}}" [root]="performance" [rootParams]="rootParams"></ion-tab>
+    </ion-tabs>
+</ion-content>

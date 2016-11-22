@@ -1,0 +1,512 @@
+.toolbar-background {
+    background-color: #B3D749;
+}
+
+/*Left Menu*/
+#irapp-leftmenu {
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*iPhone 4 & 4s*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (device-aspect-ratio: 2/3) {
+    #irapp-leftmenu {
+        background-size: 320px 480px;
+    }
+
+    .sidemenu-image1 {
+        background: -webkit-image-set(url("menuimages/image1/iPhone4.jpg") 1x, url("menuimages/image1/iPhone4@2x.jpg") 2x);
+    }
+
+    .sidemenu-image2 {
+        background: -webkit-image-set(url("menuimages/image2/iPhone4.jpg") 1x, url("menuimages/image2/iPhone4@2x.jpg") 2x);
+    }
+
+    .sidemenu-image3 {
+        background: -webkit-image-set(url("menuimages/image3/iPhone4.jpg") 1x, url("menuimages/image3/iPhone4@2x.jpg") 2x);
+    }
+
+    .sidemenu-image4 {
+        background: -webkit-image-set(url("menuimages/image4/iPhone4.jpg") 1x, url("menuimages/image4/iPhone4@2x.jpg") 2x);
+    }
+
+    .sidemenu-image5 {
+        background: -webkit-image-set(url("menuimages/image5/iPhone4.jpg") 1x, url("menuimages/image5/iPhone4@2x.jpg") 2x);
+    }
+
+    .sidemenu-image6 {
+        background: -webkit-image-set(url("menuimages/image6/iPhone4.jpg") 1x, url("menuimages/image6/iPhone4@2x.jpg") 2x);
+    }
+}
+
+/*iPhone 5 & 5s*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) and (device-aspect-ratio: 40/71) {
+    #irapp-leftmenu {
+        background-size: 320px 568px;
+    }
+
+    .sidemenu-image1 {
+        background-image: url("menuimages/image1/iPhone5.jpg");
+    }
+
+    .sidemenu-image2 {
+        background-image: url("menuimages/image2/iPhone5.jpg");
+    }
+
+    .sidemenu-image3 {
+        background-image: url("menuimages/image3/iPhone5.jpg");
+    }
+
+    .sidemenu-image4 {
+        background-image: url("menuimages/image4/iPhone5.jpg");
+    }
+
+    .sidemenu-image5 {
+        background-image: url("menuimages/image5/iPhone5.jpg");
+    }
+
+    .sidemenu-image6 {
+        background-image: url("menuimages/image6/iPhone5.jpg");
+    }
+}
+
+/*iPhone 6*/
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+    #irapp-leftmenu {
+        background-size: 375px 667px;
+    }
+
+    .sidemenu-image1 {
+        background-image: url("menuimages/image1/iPhone6.jpg");
+    }
+
+    .sidemenu-image2 {
+        background-image: url("menuimages/image2/iPhone6.jpg");
+    }
+
+    .sidemenu-image3 {
+        background-image: url("menuimages/image3/iPhone6.jpg");
+    }
+
+    .sidemenu-image4 {
+        background-image: url("menuimages/image4/iPhone6.jpg");
+    }
+
+    .sidemenu-image5 {
+        background-image: url("menuimages/image5/iPhone6.jpg");
+    }
+
+    .sidemenu-image6 {
+        background-image: url("menuimages/image6/iPhone6.jpg");
+    }
+}
+
+/* iPhone 6 plus */
+@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+    #irapp-leftmenu {
+        background-size: 414px 736px;
+    }
+
+    .sidemenu-image1 {
+        background-image: url("menuimages/image1/iPhone6plus.jpg");
+    }
+
+    .sidemenu-image2 {
+        background-image: url("menuimages/image2/iPhone6plus.jpg");
+    }
+
+    .sidemenu-image3 {
+        background-image: url("menuimages/image3/iPhone6plus.jpg");
+    }
+
+    .sidemenu-image4 {
+        background-image: url("menuimages/image4/iPhone6plus.jpg");
+    }
+
+    .sidemenu-image5 {
+        background-image: url("menuimages/image5/iPhone6plus.jpg");
+    }
+
+    .sidemenu-image6 {
+        background-image: url("menuimages/image6/iPhone6plus.jpg");
+    }
+}
+
+/*iPad Portrait*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    #irapp-leftmenu {
+        background-size: 768px 1024px;
+    }
+
+    .sidemenu-image1 {
+        background: -webkit-image-set(url("menuimages/image1/iPad-Portrait.jpg") 1x, url("menuimages/image1/iPad-Portrait@2x.jpg") 2x, url("menuimages/image1/iPad-Portrait@3x.jpg") 3x);
+    }
+
+    .sidemenu-image2 {
+        background: -webkit-image-set(url("menuimages/image2/iPad-Portrait.jpg") 1x, url("menuimages/image2/iPad-Portrait@2x.jpg") 2x, url("menuimages/image2/iPad-Portrait@3x.jpg") 3x);
+    }
+
+    .sidemenu-image3 {
+        background: -webkit-image-set(url("menuimages/image3/iPad-Portrait.jpg") 1x, url("menuimages/image3/iPad-Portrait@2x.jpg") 2x, url("menuimages/image3/iPad-Portrait@3x.jpg") 3x);
+    }
+
+    .sidemenu-image4 {
+        background: -webkit-image-set(url("menuimages/image4/iPad-Portrait.jpg") 1x, url("menuimages/image4/iPad-Portrait@2x.jpg") 2x, url("menuimages/image4/iPad-Portrait@3x.jpg") 3x);
+    }
+
+    .sidemenu-image5 {
+        background: -webkit-image-set(url("menuimages/image5/iPad-Portrait.jpg") 1x, url("menuimages/image5/iPad-Portrait@2x.jpg") 2x, url("menuimages/image5/iPad-Portrait@3x.jpg") 3x);
+    }
+
+    .sidemenu-image6 {
+        background: -webkit-image-set(url("menuimages/image6/iPad-Portrait.jpg") 1x, url("menuimages/image6/iPad-Portrait@2x.jpg") 2x, url("menuimages/image6/iPad-Portrait@3x.jpg") 3x);
+    }
+}
+
+/*iPad Landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    #irapp-leftmenu {
+        background-size: 1024px 768px;
+    }
+
+    .sidemenu-image1 {
+        background: -webkit-image-set(url("menuimages/image1/iPad-Landscape.jpg") 1x, url("menuimages/image1/iPad-Landscape@2x.jpg") 2x, url("menuimages/image1/iPad-Landscape@3x.jpg") 3x);
+    }
+
+    .sidemenu-image2 {
+        background: -webkit-image-set(url("menuimages/image2/iPad-Landscape.jpg") 1x, url("menuimages/image2/iPad-Landscape@2x.jpg") 2x, url("menuimages/image2/iPad-Landscape@3x.jpg") 3x);
+    }
+
+    .sidemenu-image3 {
+        background: -webkit-image-set(url("menuimages/image3/iPad-Landscape.jpg") 1x, url("menuimages/image3/iPad-Landscape@2x.jpg") 2x, url("menuimages/image3/iPad-Landscape@3x.jpg") 3x);
+    }
+
+    .sidemenu-image4 {
+        background: -webkit-image-set(url("menuimages/image4/iPad-Landscape.jpg") 1x, url("menuimages/image4/iPad-Landscape@2x.jpg") 2x, url("menuimages/image4/iPad-Landscape@3x.jpg") 3x);
+    }
+
+    .sidemenu-image5 {
+        background: -webkit-image-set(url("menuimages/image5/iPad-Landscape.jpg") 1x, url("menuimages/image5/iPad-Landscape@2x.jpg") 2x, url("menuimages/image5/iPad-Landscape@3x.jpg") 3x);
+    }
+
+    .sidemenu-image6 {
+        background: -webkit-image-set(url("menuimages/image6/iPad-Landscape.jpg") 1x, url("menuimages/image6/iPad-Landscape@2x.jpg") 2x, url("menuimages/image6/iPad-Landscape@3x.jpg") 3x);
+    }
+}
+
+/*iPad-pro Portrait*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : portrait) {
+    #irapp-leftmenu {
+        background-size: 1024px 1336px;
+    }
+
+    .sidemenu-image1 {
+        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image1/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+
+    .sidemenu-image2 {
+        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image2/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+
+    .sidemenu-image3 {
+        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image3/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+
+    .sidemenu-image4 {
+        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image4/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+
+    .sidemenu-image5 {
+        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image5/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+
+    .sidemenu-image6 {
+        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image6/iPad-Pro-Portrait@2x.jpg") 2x);
+    }
+}
+
+/*iPad-pro Landscape*/
+@media only screen and (min-device-width : 1024px) and (max-device-width : 1366px) and (orientation : landscape) {
+    #irapp-leftmenu {
+        background-size: 1336px 1024px;
+    }
+
+    .sidemenu-image1 {
+        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image1/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+
+    .sidemenu-image2 {
+        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image2/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+
+    .sidemenu-image3 {
+        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image3/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+
+    .sidemenu-image4 {
+        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image4/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+
+    .sidemenu-image5 {
+        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image5/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+
+    .sidemenu-image6 {
+        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image6/iPad-Pro-Landscape@2x.jpg") 2x);
+    }
+}
+
+
+/*.sidemenu-image1 {
+    background-image: url("menuimages/image1.jpg");
+}
+
+.sidemenu-image2 {
+    background-image: url("menuimages/image2.jpg");
+}
+
+.sidemenu-image3 {
+    background-image: url("menuimages/image3.jpg");
+}
+
+.sidemenu-image4 {
+    background-image: url("menuimages/image4.jpg");
+}
+
+.sidemenu-image5 {
+    background-image: url("menuimages/image5.jpg");
+}
+
+.sidemenu-image6 {
+    background-image: url("menuimages/image6.jpg");
+}*/
+/*End Left Menu*/
+/*Logo*/
+.company-logo {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+@media screen and (-webkit-max-device-pixel-ratio: 1) {
+    .platform-iphone .company-logo {
+        background-image: url("logo/logo.png");
+    }
+
+    .platform-tablet .company-logo {
+        background-image: url("logo/logo-tablet.png");
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 2) {
+    .platform-iphone .company-logo {
+        background-image: url("logo/logo@2x.png");
+    }
+
+    .platform-tablet .company-logo {
+        background-image: url("logo/logo-tablet@2x.png");
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2.1) {
+    .platform-iphone .company-logo {
+        background-image: url("logo/logo@3x.png");
+    }
+
+    .platform-tablet .company-logo {
+        background-image: url("logo/logo-tablet@3x.png");
+    }
+}
+/*End Logo*/
+
+/*Contact*/
+.contact-page .contact-tab {
+    padding: 16px;
+}
+
+    .contact-page .contact-tab .contact-container {
+        padding-bottom: 48%;
+        width: 48%;
+        height: auto;
+        float: left;
+        height: 0;
+        margin-bottom: 115px;
+        font-style: "HelveticaNeue-Light";
+    }
+
+    .contact-page .contact-tab .contact-box {
+        box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.15);
+        margin-bottom: 16px;
+        padding-bottom: 100%;
+        width: 100%;
+        /*background-image: url("/img/headquarter.jpg")*/;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+
+
+    .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email {
+        font-size: 12px;
+        color: #333333;
+    }
+
+    .contact-page .contact-tab .position {
+        font-size: 11px;
+        color: #868686;
+    }
+
+    .contact-page .contact-tab .email, .contact-page .contact-tab .phone-number {
+        text-decoration: none;
+    }
+
+
+.contact-page .address-tab .address-background {
+    margin-top: 16px;
+    height: 200px;
+    width: 100%;
+    /*background-image: url("/img/headquarter.jpg");*/
+    background-position: center;
+    background-size: contain;
+    background: -webkit-image-set(url("contact/img/phone_address.jpg") 1x, url("contact/img/phone_address@2x.jpg") 2x, url("contact/img/phone_address@3x.jpg") 3x);
+    /*background-size: 100% 100%;*/
+    background-repeat: no-repeat;
+}
+
+.contact-page .address-tab .address-content {
+    padding: 16px;
+    font-style: HelveticaNeue-Light;
+}
+
+.contact-page .address-tab .headquarter {
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #333333;
+    font-style: HelveticaNeue-Medium !important;
+}
+
+.contact-page .address-tab .headquarter-info {
+    margin-bottom: 4px;
+    font-size: 11px;
+    color: #868686;
+}
+
+.contact-page .address-tab .headquarter-contact[itemprop="telephone"] {
+    text-decoration: none;
+}
+
+.contact-page .address-tab .headquarter-contact[itemprop="telephone"],
+.contact-page .address-tab .headquarter-contact[itemprop="fax"] {
+    font-size: 11px;
+    color: #868686;
+    /*margin-top: 6px;*/
+}
+
+.contact-page .address-tab .headquarter-contact[itemprop="email"],
+.contact-page .address-tab .headquarter-contact[itemprop="url"] {
+    font-size: 11px;
+    text-decoration: none;
+    color: #868686;
+}
+
+@media screen and (max-width: 767px) {
+    .contact-page .contact-tab .contact-container:nth-of-type(2n) {
+        margin-left: 4%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .contact-page .contact-tab {
+        padding: 32px;
+    }
+
+        .contact-page .contact-tab .contact-container {
+            padding-bottom: 28%;
+            width: 28%;
+            margin-left: 8%;
+            margin-bottom: 140px;
+        }
+
+            .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
+                margin-left: 0;
+            }
+
+        .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email {
+            font-size: 17px;
+            color: #000000;
+            margin-bottom: 7px;
+        }
+
+        .contact-page .contact-tab .position {
+            font-size: 13px;
+            color: #9B9B9B;
+            margin-bottom: 7px;
+        }
+
+
+    .contact-page .address-tab .address-background {
+        height: 410px;
+        background: -webkit-image-set(url("contact/img/tablet_portrait_address.jpg") 1x, url("contact/img/tablet_portrait_address@2x.jpg") 2x, url("contact/img/tablet_portrait_address@3x.jpg") 3x);
+        background-repeat: no-repeat;
+    }
+
+    .contact-page .address-tab .headquarter {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333333;
+        font-style: HelveticaNeue-Medium !important;
+    }
+
+    .contact-page .address-tab .headquarter-info,
+    .contact-page .address-tab .headquarter-contact[itemprop="telephone"],
+    .contact-page .address-tab .headquarter-contact[itemprop="fax"] {
+        margin-bottom: 4px;
+        font-size: 22px;
+        color: #868686;
+    }
+
+        .contact-page .address-tab .headquarter-info[itemprop="country-name"] {
+            margin-bottom: 20px;
+        }
+
+    .contact-page .address-tab .headquarter-contact[itemprop="email"],
+    .contact-page .address-tab .headquarter-contact[itemprop="url"] {
+        font-size: 22px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .contact-page .address-tab {
+        margin-left: 18.75%;
+        margin-right: 18.75%;
+    }
+
+        .contact-page .address-tab .address-content {
+            padding: 0;
+        }
+
+        .contact-page .address-tab .headquarter {
+            margin-top: 16px;
+        }
+
+        .contact-page .address-tab .address-background {
+            height: 400px;
+            background: -webkit-image-set(url("contact/img/tablet_landscape_address.jpg") 1x, url("contact/img/tablet_landscape_address@2x.jpg") 2x, url("contact/img/tablet_landscape_address@3x.jpg") 3x);
+        }
+
+    .contact-page .contact-tab .contact-container {
+        width: 20%;
+        float: left;
+        font-style: HelveticaNeue-Light;
+        margin-left: 6.5%;
+        margin-bottom: 70px;
+    }
+
+        .contact-page .contact-tab .contact-container:nth-of-type(4n+1) {
+            margin-left: 0 !important;
+        }
+
+        .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
+            margin-left: 6.5%;
+        }
+}
+/*End Contact*/
