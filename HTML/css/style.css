@@ -38,3 +38,10 @@ body{
 		padding:0px !important;
 	}
 }
+@media screen and (min-width: 1024px){
+	body{
+		/*margin-right: 30% !important;*/
+		width: 50% ;
+	}
+}
+
