@@ -1,5 +1,32 @@
-<ion-header>
-</ion-header>
+<ion-content overflow-scroll="false">
+    <ion-list class="item-header-content" *ngIf="data">
+        <ion-item>
+            <div item-right class="item-header"> {{itemHeader[0]}}</div>
+            <div item-right class="item-header"> {{itemHeader[1]}} <span> % </span> </div>
+            <div item-right class="item-header"> {{itemHeader[2]}}<span> % </span></div>
+        </ion-item>
+    </ion-list>
+    <div class="div-item-content">
+        <ion-list class="item-content">
+            <ion-item *ngFor="let item of data">
+                <span class="item-left item-col-1"> {{item.Ticker}} </span>
+                <div item-right class="item-box item-data">
+                    <div [class]="item.Change3M < 0 ? 'down' :'up'">
+                        {{item.Change3M > 0 ? '+' : ''}}{{item.Change3M | formatNumber:2}}%
+                    </div>
+                </div>
+                <div item-right class="item-box item-data">
+                    <div [class]="item.Change52W < 0 ? 'down' :'up'">
+                        {{item.Change52W > 0 ? '+' : ''}}{{item.Change52W | formatNumber:2}}%
+                    </div>
+                </div>
 
-<ion-content no-padding>
+                <div item-right class="item-box item-data">
+                    <div [class]="item.ChangeYTD < 0 ? 'down' :'up'">
+                        {{item.ChangeYTD > 0 ? '+' : ''}}{{item.ChangeYTD | formatNumber:2}}%
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
 </ion-content>

@@ -7,7 +7,7 @@ compare-tab {
         padding-top: 30px;
         padding-bottom: 30px;
     }*/
-
+   
     ion-header{
         display: flex;
         text-align: center;
@@ -35,6 +35,9 @@ compare-tab {
         }
         /*font-weight: medium;*/
         /*margin-left: calc(50% - 43.5px);*/
+    }
+    .btn-header-title ion-icon{
+        margin-left: 5px;
     }
     .btn-header-close {
         position:  absolute;
@@ -69,12 +72,12 @@ compare-tab {
 
     ion-content {
         /*overflow-y: hidden;*/
-        background-color: #484849;
+        background-color: #484849 !important;
     }
     /** tab CSS */
     .show-tabbar {
         /*top: 90px;*/
-        background-color: #484849;
+        background-color: #484849 !important;
         border-radius: 5px;
     }
 

@@ -2,11 +2,11 @@
     <div class="chart-page-content">
         <div id="charts-container">
             <div class="{{type == 0 ? 'watchlist-period' : 'indices-period'}} ">
-                <button *ngFor="let period of listPeriod"
+                <button ion-button clear *ngFor="let period of listPeriod"
                         (click)="changePeriod(period.Value)"
-                        class="button button-clear btn-period {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
+                        class="button ion-button   btn-period {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
                     {{period.Name}}
-                </button>
+                </button >
             </div> <!-- End class watchlist-period/indices-period -->
             <div id="charts" style="">
             </div>
@@ -21,17 +21,17 @@
             </p>
             <div class="own-shares" *ngIf="listOwnShares">
                 <p class="own-shares-title"> {{ownShareTitle}}  </p>
-                <button *ngFor="let ownShare of listOwnShares"
+                <button ion-button  clear *ngFor="let ownShare of listOwnShares"
                         (click)="selectedId(ownShare,true)"
-                        class="button button-clear btn-share {{getIndexShare(ownShare.instrumentid) >= 0 ? 'btn-click' : ''}}">
+                        class="button ion-button  btn-share {{getIndexShare(ownShare.instrumentid) >= 0 ? 'btn-click' : ''}}">
                     {{ownShare.ticker}}
-                </button>
+                </button >
             </div>
             <div class="watch-list-shares" *ngIf="watchListShare">
                 <p class="sharegraph-title"> {{watchListSharesTitle}} </p>
-                <button *ngFor="let share of watchListShare"
+                <button ion-button clear *ngFor="let share of watchListShare"
                         (click)="selectedId(share,false)"
-                        class="button button-clear btn-share {{getIndexShare(share.Id) >= 0 ? 'btn-click' : ''}}">
+                        class="button ion-button  btn-share {{getIndexShare(share.Id) >= 0 ? 'btn-click' : ''}}">
                     {{share.Ticker}}
                 </button>
             </div>

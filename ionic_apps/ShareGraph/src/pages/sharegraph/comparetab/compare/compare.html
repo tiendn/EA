@@ -1,5 +1,18 @@
-<ion-header>
-</ion-header>
-
-<ion-content no-padding>
+ <ion-content >
+  <ion-label class="date-title"> {{dateTitle}} </ion-label>
+  <div class = "scroll-content">
+    <div *ngFor ="let item of data"
+    [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
+      <div class = "content">
+          <div class = "ticker">{{item.Ticker}} </div>
+          <div class = "price">{{item.Price | formatNumber:1}}</div>
+          <span class = "change-pro"> 
+            ({{item.ChangePro > 0 ? '+' : '' }}{{item.ChangePro|formatNumber:1}}%)
+          </span>
+          <span *ngIf="currency" class="currency">
+            {{item.Currency}}
+          </span>
+      </div>
+    </div>
+  </div>
 </ion-content>

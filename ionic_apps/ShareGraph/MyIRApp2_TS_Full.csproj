@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7607BE87-A4CA-4153-A381-A15BD4030EEB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyIRApp2_TS_Full</RootNamespace>
+    <AssemblyName>MyIRApp2_TS_Full</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=1.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.0.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.0.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.0.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.0.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.0.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.0.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\main.dev.ts" />
+    <TypeScriptCompile Include="src\app\main.prod.ts" />
+    <TypeScriptCompile Include="src\common\global-vars.ts" />
+    <TypeScriptCompile Include="src\common\helper.ts" />
+    <TypeScriptCompile Include="src\components\popover\popover.ts" />
+    <TypeScriptCompile Include="src\components\progressbar\progressbar.ts" />
+    <TypeScriptCompile Include="src\components\scrolltab\scrolltab.ts" />
+    <TypeScriptCompile Include="src\declarations.d.ts" />
+    <TypeScriptCompile Include="src\model\iTicker.ts" />
+    <TypeScriptCompile Include="src\pages\about\about.ts" />
+    <TypeScriptCompile Include="src\pages\calendar\calendar.ts" />
+    <TypeScriptCompile Include="src\pages\contact\contact.ts" />
+    <TypeScriptCompile Include="src\pages\historicalprice\historicalprice.ts" />
+    <TypeScriptCompile Include="src\pages\home\home.ts" />
+    <TypeScriptCompile Include="src\pages\investmentcalculator\component\detail-component.ts" />
+    <TypeScriptCompile Include="src\pages\investmentcalculator\detail-page\detail-page.ts" />
+    <TypeScriptCompile Include="src\pages\investmentcalculator\investmentcalculator.ts" />
+    <TypeScriptCompile Include="src\pages\keyfinancials\keyfinancials.ts" />
+    <TypeScriptCompile Include="src\pages\media\media.ts" />
+    <TypeScriptCompile Include="src\pages\pressreleases\pressreleases.ts" />
+    <TypeScriptCompile Include="src\pages\reports\reports.ts" />
+    <TypeScriptCompile Include="src\pages\settings\settings.ts" />
+    <TypeScriptCompile Include="src\pages\sharegraph\comparetab\charts\charts.ts" />
+    <TypeScriptCompile Include="src\pages\sharegraph\comparetab\comparetab.ts" />
+    <TypeScriptCompile Include="src\pages\sharegraph\comparetab\compare\compare.ts" />
+    <TypeScriptCompile Include="src\pages\sharegraph\comparetab\performance\performance.ts" />
+    <TypeScriptCompile Include="src\pages\sharegraph\sharegraph.ts" />
+    <TypeScriptCompile Include="src\pages\shareinformation\shareinformation.ts" />
+    <TypeScriptCompile Include="src\pipes\formatnumber.ts" />
+    <TypeScriptCompile Include="src\providers\appconfig-service.ts" />
+    <TypeScriptCompile Include="src\providers\auth-service.ts" />
+    <TypeScriptCompile Include="src\providers\chart-service.ts" />
+    <TypeScriptCompile Include="src\providers\performance-service.ts" />
+    <TypeScriptCompile Include="src\providers\profile-service.ts" />
+    <TypeScriptCompile Include="src\providers\reports-service.ts" />
+    <TypeScriptCompile Include="src\providers\ical-service.ts" />
+    <TypeScriptCompile Include="src\providers\ticker-service.ts" />
+    <TypeScriptCompile Include="src\providers\translation-service.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="config.xml" />
+    <Content Include="src\app\app.template.html" />
+    <Content Include="src\assets\company\about\ar-ae.html" />
+    <Content Include="src\assets\company\about\da-dk.html" />
+    <Content Include="src\assets\company\about\de-de.html" />
+    <Content Include="src\assets\company\about\en-gb.html" />
+    <Content Include="src\assets\company\about\es-es.html" />
+    <Content Include="src\assets\company\about\fi-fi.html" />
+    <Content Include="src\assets\company\about\fr-fr.html" />
+    <Content Include="src\assets\company\about\img\Emaar04.jpg" />
+    <Content Include="src\assets\company\about\is-is.html" />
+    <Content Include="src\assets\company\about\it-it.html" />
+    <Content Include="src\assets\company\about\ja-jp.html" />
+    <Content Include="src\assets\company\about\ko-kr.html" />
+    <Content Include="src\assets\company\about\nb-no.html" />
+    <Content Include="src\assets\company\about\pt-pt.html" />
+    <Content Include="src\assets\company\about\ru-ru.html" />
+    <Content Include="src\assets\company\about\sv-se.html" />
+    <Content Include="src\assets\company\about\zh-cn.html" />
+    <Content Include="src\assets\company\about\zh-tw.html" />
+    <Content Include="src\assets\company\contact\address_en.html" />
+    <Content Include="src\assets\company\contact\address_ja.html" />
+    <Content Include="src\assets\company\contact\contact_en.html" />
+    <Content Include="src\assets\company\contact\contact_ja.html" />
+    <Content Include="src\assets\company\contact\img\phone_address%402x.jpg" />
+    <Content Include="src\assets\company\contact\img\phone_address%403x.jpg" />
+    <Content Include="src\assets\company\contact\img\phone_address.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_landscape_address%402x.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_landscape_address%403x.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_landscape_address.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_portrait_address%402x.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_portrait_address%403x.jpg" />
+    <Content Include="src\assets\company\contact\img\tablet_portrait_address.jpg" />
+    <Content Include="src\assets\company\logo\logo%402x.png" />
+    <Content Include="src\assets\company\logo\logo%403x.png" />
+    <Content Include="src\assets\company\logo\logo-tablet%402x.png" />
+    <Content Include="src\assets\company\logo\logo-tablet%403x.png" />
+    <Content Include="src\assets\company\logo\logo-tablet.png" />
+    <Content Include="src\assets\company\logo\logo.png" />
+    <Content Include="src\assets\company\menuimages\image1.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Pro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Pro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Pro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPad-Pro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image1\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\image2.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Pro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Pro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Pro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPad-Pro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image2\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\image3.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Pro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Pro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Pro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPad-Pro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image3\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\image4.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPadPro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPadPro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPadPro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPadPro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image4\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\image5.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPadPro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPadPro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPadPro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPadPro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image5\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\image6.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Landscape%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Portrait%403x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPad-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPadPro-Landscape%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPadPro-Landscape.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPadPro-Portrait%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPadPro-Portrait.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPhone4%402x.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPhone4.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPhone5.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPhone6.jpg" />
+    <Content Include="src\assets\company\menuimages\image6\iPhone6plus.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image1.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image2.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image3.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image4.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image5.jpg" />
+    <Content Include="src\assets\company\menuimages\thumbnails\image6.jpg" />
+    <Content Include="src\assets\company\style.css" />
+    <Content Include="src\assets\icon\favicon.ico" />
+    <Content Include="src\assets\img\appicon.png" />
+    <Content Include="src\assets\img\appicon.svg" />
+    <Content Include="src\assets\img\ica-slidebox-img-1.png" />
+    <Content Include="src\assets\img\ica-slidebox-img-2.png" />
+    <Content Include="src\assets\img\ica-slidebox-img-3.png" />
+    <Content Include="src\assets\img\ica-slidebox-img-4.png" />
+    <Content Include="src\assets\img\ionic-logo-white.svg" />
+    <Content Include="src\assets\img\speakers\bear.jpg" />
+    <Content Include="src\assets\img\speakers\cheetah.jpg" />
+    <Content Include="src\assets\img\speakers\duck.jpg" />
+    <Content Include="src\assets\img\speakers\eagle.jpg" />
+    <Content Include="src\assets\img\speakers\elephant.jpg" />
+    <Content Include="src\assets\img\speakers\giraffe.jpg" />
+    <Content Include="src\assets\img\speakers\iguana.jpg" />
+    <Content Include="src\assets\img\speakers\kitten.jpg" />
+    <Content Include="src\assets\img\speakers\lion.jpg" />
+    <Content Include="src\assets\img\speakers\mouse.jpg" />
+    <Content Include="src\assets\img\speakers\puppy.jpg" />
+    <Content Include="src\assets\img\speakers\rabbit.jpg" />
+    <Content Include="src\assets\img\speakers\turtle.jpg" />
+    <Content Include="src\components\popover\popover.html" />
+    <Content Include="src\components\progressbar\progressbar.html" />
+    <Content Include="src\components\scrolltab\scrolltab.html" />
+    <Content Include="src\index.html" />
+    <Content Include="src\pages\about\about.html" />
+    <Content Include="src\pages\calendar\calendar.html" />
+    <Content Include="src\pages\contact\contact.html" />
+    <Content Include="src\pages\historicalprice\historicalprice.html" />
+    <Content Include="src\pages\home\home.html" />
+    <Content Include="src\pages\investmentcalculator\component\detail-component.html" />
+    <Content Include="src\pages\investmentcalculator\detail-page\detail-page.html" />
+    <Content Include="src\pages\investmentcalculator\investmentcalculator.html" />
+    <Content Include="src\pages\keyfinancials\keyfinancials.html" />
+    <Content Include="src\pages\media\media.html" />
+    <Content Include="src\pages\pressreleases\pressreleases.html" />
+    <Content Include="src\pages\reports\reports.html" />
+    <Content Include="src\pages\settings\settings.html" />
+    <Content Include="src\pages\sharegraph\comparetab\charts\charts.html" />
+    <Content Include="src\pages\sharegraph\comparetab\comparetab.html" />
+    <Content Include="src\pages\sharegraph\comparetab\compare\compare.html" />
+    <Content Include="src\pages\sharegraph\comparetab\performance\performance.html" />
+    <Content Include="src\pages\sharegraph\sharegraph.html" />
+    <Content Include="src\pages\shareinformation\shareinformation.html" />
+    <Content Include="src\service-worker.js" />
+    <Content Include="www\assets\company\about\ar-ae.html" />
+    <Content Include="www\assets\company\about\da-dk.html" />
+    <Content Include="www\assets\company\about\de-de.html" />
+    <Content Include="www\assets\company\about\en-gb.html" />
+    <Content Include="www\assets\company\about\es-es.html" />
+    <Content Include="www\assets\company\about\fi-fi.html" />
+    <Content Include="www\assets\company\about\fr-fr.html" />
+    <Content Include="www\assets\company\about\img\Emaar04.jpg" />
+    <Content Include="www\assets\company\about\is-is.html" />
+    <Content Include="www\assets\company\about\it-it.html" />
+    <Content Include="www\assets\company\about\ja-jp.html" />
+    <Content Include="www\assets\company\about\ko-kr.html" />
+    <Content Include="www\assets\company\about\nb-no.html" />
+    <Content Include="www\assets\company\about\pt-pt.html" />
+    <Content Include="www\assets\company\about\ru-ru.html" />
+    <Content Include="www\assets\company\about\sv-se.html" />
+    <Content Include="www\assets\company\about\zh-cn.html" />
+    <Content Include="www\assets\company\about\zh-tw.html" />
+    <Content Include="www\assets\company\logo\logo%402x.png" />
+    <Content Include="www\assets\company\logo\logo%403x.png" />
+    <Content Include="www\assets\company\logo\logo-tablet%402x.png" />
+    <Content Include="www\assets\company\logo\logo-tablet%403x.png" />
+    <Content Include="www\assets\company\logo\logo-tablet.png" />
+    <Content Include="www\assets\company\logo\logo.png" />
+    <Content Include="www\assets\company\menuimages\image1\iPad-Landscape%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPad-Pro-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPad-Pro-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image1\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPad-Pro-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image2\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPad-Landscape%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPad-Pro-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPad-Pro-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image3\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image4\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image5\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPad-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPad-Portrait%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPad-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPadPro-Landscape.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPadPro-Portrait.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPhone4%402x.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPhone4.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPhone5.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPhone6.jpg" />
+    <Content Include="www\assets\company\menuimages\image6\iPhone6plus.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image1.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image2.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image3.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image4.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image5.jpg" />
+    <Content Include="www\assets\company\menuimages\thumbnails\image6.jpg" />
+    <Content Include="www\assets\company\style.css" />
+    <Content Include="www\assets\fonts\ionicons.svg" />
+    <Content Include="www\assets\icon\favicon.ico" />
+    <Content Include="www\assets\img\back-arabic.png" />
+    <Content Include="www\assets\img\back.png" />
+    <Content Include="www\assets\img\ipad%402x.png" />
+    <Content Include="www\assets\img\ipad%403x.png" />
+    <Content Include="www\assets\img\ipad.png" />
+    <Content Include="www\assets\img\iphone%402x.png" />
+    <Content Include="www\assets\img\iphone%403x.png" />
+    <Content Include="www\assets\img\iphone.png" />
+    <Content Include="www\assets\img\share.png" />
+    <Content Include="www\assets\img\speakers\bear.jpg" />
+    <Content Include="www\assets\img\speakers\cheetah.jpg" />
+    <Content Include="www\assets\img\speakers\duck.jpg" />
+    <Content Include="www\assets\img\speakers\eagle.jpg" />
+    <Content Include="www\assets\img\speakers\elephant.jpg" />
+    <Content Include="www\assets\img\speakers\giraffe.jpg" />
+    <Content Include="www\assets\img\speakers\iguana.jpg" />
+    <Content Include="www\assets\img\speakers\kitten.jpg" />
+    <Content Include="www\assets\img\speakers\lion.jpg" />
+    <Content Include="www\assets\img\speakers\mouse.jpg" />
+    <Content Include="www\assets\img\speakers\puppy.jpg" />
+    <Content Include="www\assets\img\speakers\rabbit.jpg" />
+    <Content Include="www\assets\img\speakers\turtle.jpg" />
+    <Content Include="www\assets\js\highstock-4.2.5.js" />
+    <Content Include="www\build\main.css" />
+    <Content Include="www\build\main.js" />
+    <Content Include="www\build\polyfills.js" />
+    <Content Include="www\index.html" />
+    <Content Include="www\service-worker.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\app\app.scss" />
+    <Content Include="src\assets\data\data.json" />
+    <Content Include="src\manifest.json" />
+    <Content Include="src\pages\home\home.scss" />
+    <Content Include="src\theme\variables.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\.gitkeep" />
+    <Content Include="www\assets\data\data.json" />
+    <Content Include="www\assets\fonts\ionicons.eot" />
+    <Content Include="www\assets\fonts\ionicons.ttf" />
+    <Content Include="www\assets\fonts\ionicons.woff" />
+    <Content Include="www\assets\fonts\ionicons.woff2" />
+    <Content Include="www\manifest.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="package.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\assets\company\about\about.scss" />
+    <Content Include="www\assets\company\settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="www\assets\data\lang\ar.json" />
+    <Content Include="www\assets\data\lang\da.json" />
+    <Content Include="www\assets\data\lang\de.json" />
+    <Content Include="www\assets\data\lang\en.json" />
+    <Content Include="www\assets\data\lang\es.json" />
+    <Content Include="www\assets\data\lang\fi.json" />
+    <Content Include="www\assets\data\lang\fr.json" />
+    <Content Include="www\assets\data\lang\is.json" />
+    <Content Include="www\assets\data\lang\it.json" />
+    <Content Include="www\assets\data\lang\ja.json" />
+    <Content Include="www\assets\data\lang\ko.json" />
+    <Content Include="www\assets\data\lang\nb.json" />
+    <Content Include="www\assets\data\lang\pt.json" />
+    <Content Include="www\assets\data\lang\ru.json" />
+    <Content Include="www\assets\data\lang\sv.json" />
+    <Content Include="www\assets\data\lang\zh-cn.json" />
+    <Content Include="www\assets\data\lang\zh-tw.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\assets\company\about\about.scss" />
+    <Content Include="src\assets\company\settings.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\platform-css\android.scss" />
+    <Content Include="src\platform-css\ios.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\shareinformation\shareinformation.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\sharegraph\sharegraph.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ionic.config.json" />
+    <Content Include="tsconfig.json" />
+    <Content Include="tslint.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\sharegraph\comparetab\comparetab.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\sharegraph\comparetab\charts\charts.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\sharegraph\comparetab\compare\compare.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\sharegraph\comparetab\performance\performance.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\reports\reports.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="src\pages\investmentcalculator\investmentcalculator.scss" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63781</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63781/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

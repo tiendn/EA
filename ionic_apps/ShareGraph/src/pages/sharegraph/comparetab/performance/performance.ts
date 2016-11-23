@@ -12,7 +12,37 @@ import { ProfileService } from '../../../../providers/profile-service';
     templateUrl: 'performance.html'
 })
 export class PerformancePage {
-
-    constructor(public nav: NavController, public navParams: NavParams, public helper: Helper, public globalVars: GlobalVars, public profileService: ProfileService) {
+    moduleName : string = "ShareGraph";
+    itemHeader : any;
+    data : any = [];
+    constructor(public nav: NavController, public navParams: NavParams, public helper: Helper,
+     public globalVars: GlobalVars, public profileService: ProfileService) {
+        this.moduleName = "ShareGraph";
+        this.itemHeader = [helper.getPhrase("Button6Month", this.moduleName),helper.getPhrase("52W", this.moduleName),helper.getPhrase("YTD", this.moduleName)];
     }
+
+    getInstrumentIds(compareData)
+    {
+        let lstInstrumentIDs = [];
+
+        this.globalVars.configData.common.instruments.forEach((item) => {
+            lstInstrumentIDs.push(item.instrumentid);
+        });
+
+        compareData.forEach((item)=>{
+            lstInstrumentIDs.push(item.Id);
+        })
+
+        return lstInstrumentIDs.toString();
+    }
+
+    ionViewDidLoad(){
+        this.helper.showLoading(this);
+        let iDs = this.getInstrumentIds(this.navParams.data.compareData);
+        this.profileService.getPerformanceData(this.navParams.data.type, iDs).then(data => {
+            this.data = data;
+            this.helper.hideLoading(this);
+        });
+    }
+    
 }

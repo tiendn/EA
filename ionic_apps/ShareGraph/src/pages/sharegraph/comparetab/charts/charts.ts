@@ -161,7 +161,8 @@ export class ChartsPage {
             }
     }
 
-    ionViewLoaded() {
+    ionViewDidLoad() {
+        console.log(this.watchListShare);
         let $scope = this;
         // Draw chart at first
         this.chart = new Highcharts.Chart({

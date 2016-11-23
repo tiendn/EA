@@ -1,0 +1,117 @@
+page-compare {
+  /**
+     defaul
+  */
+  ion-header{
+      height: 20%;
+  }
+  ion-content{
+    overflow-y: hidden;
+  }
+  scroll-content{
+    margin-bottom: 0 !important;
+    overflow-y: hidden;
+  }
+  .date-title{
+    /*margin-top: 30px ;*/
+    margin-top: 0;
+    padding-left: 10px;
+    color :#808080;
+    text-transform: uppercase;
+  }
+  .scroll-content{
+    overflow-y: scroll;
+    position: relative;
+    padding-bottom: 45px;
+  }
+  ion-footer{
+    bottom:15px !important;
+  }
+
+  /**
+
+  */
+
+  .item-box{
+  
+    float:left;
+    color: white;
+    height: 0;
+    border-right: 1px solid #787878;
+    border-bottom: 1px solid #787878;
+  }
+  /**
+   color box
+  */
+  .down {
+    background: linear-gradient(#bf3335, #c8583e);
+  }
+  .up {
+    background: linear-gradient(#95bc4f, #447d2d);
+  }
+  /** CSS between boxes
+  */
+
+  .content {
+    position: relative;
+    height: 100%;
+    
+    // margin: 20% 2% 40% 10%;
+  }
+  /** CSS box
+
+  **/
+
+  .ticker, .price{
+    font-size: 18px !important;
+    color: #fff;
+    padding-left: 10%;
+  }
+
+  .price {
+    margin-bottom : 20%;
+  }
+
+  .change-pro, .currency{
+      padding-left: 10%;
+      font-size: 12px;
+
+  }
+  .change-pro {
+    position: absolute;
+
+  }
+  .currency {
+    position: absolute;
+    right : 10%;
+  }
+  /**
+    Footer
+  */
+  .footer{
+    font-size: 14px;
+    color: #fff;
+  }
+  .footer a {
+    text-decoration:  none;
+    color: #0091ff;
+  }
+
+}
+html:lang(ar) {
+    .compare-tab {
+        .currency {
+            left : 5% !important;
+            right: auto !important;
+            margin-top: -10% !important;
+        }
+        .change-pro {
+            right: 10% !important;
+            margin-top: -10% !important;
+        }
+        .price, .ticker{
+            margin-right: 10% !important;
+        }
+
+    }
+}

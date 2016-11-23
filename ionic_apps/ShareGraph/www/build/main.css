@@ -24367,15 +24367,15 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   margin-right: 0px;
 }
 
-.charts-page .btn-period .button-inner {
+page-chart .btn-period .button-inner {
   font-family: "HelveticaNeue-Light";
 }
 
-.charts-page .btn-share .button-inner {
+page-chart .btn-share .button-inner {
   font-family: "HelveticaNeue-Light";
 }
 
-.charts-page .btn-period-click .button-inner {
+page-chart .btn-period-click .button-inner {
   font-family: "HelveticaNeue-Medium";
 }
 
@@ -25173,98 +25173,107 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   .mediaDetailContent ion-grid button {
     font-size: 17px !important;
   }
-  .charts-page {
+  page-chart {
     /** CSS Chart */
     /** CSS period */
     /** CSS Share name */
     /** CSS footer */
   }
-  .charts-page scroll-content {
+  page-chart scroll-content {
     max-height: calc(100% - 160px);
   }
-  .charts-page #charts-container {
+  page-chart #charts-container {
     border-top: 2px solid #848484;
     border-bottom: 2px solid #848484;
   }
-  .charts-page .tooltip, .charts-page .own-shares-title {
+  page-chart .tooltip, page-chart .own-shares-title {
     font-size: 14px;
   }
-  .charts-page .btn-period {
+  page-chart .btn-period {
     font-size: 15px;
   }
-  .charts-page .watchlist-period {
+  page-chart .watchlist-period {
     top: -10px;
   }
-  .charts-page .indices-period {
+  page-chart .indices-period {
     top: -9px;
   }
-  .charts-page .watchlist-period .btn-period {
+  page-chart .watchlist-period .btn-period {
     width: 15%;
+    padding-left: 28px;
+    padding-right: 28px;
   }
-  .charts-page .indices-period .btn-period {
+  page-chart .indices-period .btn-period {
     width: 21%;
+    padding-left: 32px;
+    padding-right: 32px;
   }
-  .charts-page .share-name {
+  page-chart .share-name {
     font-size: 12px;
   }
-  .charts-page .btn-share {
+  page-chart .btn-share {
     /*width: 20%;*/
+    margin: 8px;
+    padding: 8px;
     font-size: 12px;
   }
-  .charts-page .sharegraph-title {
+  page-chart .sharegraph-title {
     font-size: 14px;
   }
-  .performance-page .div-item-content {
+  page-performance .div-item-content {
     max-height: calc(100% - 130px);
   }
-  .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
+  page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 0.55px solid #6b6b6c;
   }
-  .performance-page .item-box {
+  page-performance .item-box {
     padding-top: 8px;
     padding-bottom: 8px;
     width: 19%;
   }
-  .performance-page .item-header {
+  page-performance .item-header {
     width: 19%;
     font-size: 15px !important;
   }
-  .performance-page .item-header span {
+  page-performance .item-header span {
     font-size: 12px !important;
   }
-  .performance-page .item-col-1 {
+  page-performance .item-col-1 {
     font-size: 17px;
   }
-  .performance-page .item-data {
+  page-performance .item-data {
     font-size: 12px;
   }
-  .performance-page .div-item-content {
+  page-performance .div-item-content {
     border-bottom: 0.55px solid #c8c7cc;
   }
-  .compare-page {
+  page-compare {
     /** Box */
     /** Footer */
   }
-  .compare-page .date-title {
+  page-compare .date-title {
     font-size: 14px;
   }
-  .compare-page .scroll-content {
+  page-compare .scroll-content {
     max-height: calc(100% - 100px);
   }
-  .compare-page .item-box {
+  page-compare .item-box {
     padding-bottom: 33.33333%;
     width: 33.33333%;
   }
-  .compare-page .ticker, .compare-page .price {
+  page-compare .ticker, page-compare .price {
     font-size: 18px !important;
   }
-  .compare-page .change-pro, .compare-page .currency {
+  page-compare .change-pro, page-compare .currency {
     font-size: 12px;
   }
-  .compare-page .footer {
+  page-compare .footer {
     font-size: 14px;
   }
-  .compare-tab .btn-header-title {
+  page-compare .content {
+    padding-top: 15%;
+  }
+  compare-tab .btn-header-title {
     font-size: 12px;
     text-align: center;
     /*font-weight: medium;*/
@@ -25287,26 +25296,26 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     /*padding-top: 5px;
             padding-bottom: 5px;*/
   }
-  .compare-tab .show-tabbar {
+  compare-tab .show-tabbar {
     width: 90%;
     /*height: 25px;*/
     border: 1px solid #848484 !important;
     margin-left: 5%;
     margin-right: 5%;
   }
-  .compare-tab .show-tabbar a:first-child {
+  compare-tab .show-tabbar a:first-child {
     border-top-left-radius: 3.7px;
     border-bottom-left-radius: 3.7px;
   }
-  .compare-tab .tab-button:nth-child(2) {
+  compare-tab .tab-button:nth-child(2) {
     border-right: 1px solid #848484;
     border-left: 1px solid #848484;
   }
-  .compare-tab .show-tabbar a:nth-child(3) {
+  compare-tab .show-tabbar a:nth-child(3) {
     border-top-right-radius: 3.7px;
     border-bottom-right-radius: 3.7px;
   }
-  .compare-tab .tab-button-text {
+  compare-tab .tab-button-text {
     font-size: 15px !important;
   }
   html:lang(ar) {
@@ -25330,19 +25339,19 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     left: 15px;
     top: 32%;
   }
-  html:lang(ar) .compare-tab .show-tabbar a:first-child {
+  html:lang(ar) compare-tab .show-tabbar a:first-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
   }
-  html:lang(ar) .compare-tab .show-tabbar a:nth-child(3) {
+  html:lang(ar) compare-tab .show-tabbar a:nth-child(3) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
   }
-  html:lang(ar) .charts-page .footer {
+  html:lang(ar) page-chart .footer {
     margin-left: 0 !important;
     margin-right: 16px !important;
   }
@@ -26360,7 +26369,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   .mediaDetailContent ion-grid button {
     font-size: 17px !important;
   }
-  .charts-page {
+  page-chart {
     /** Chart */
     /*.chart-page-content {
             max-height: calc(100% - 100px);
@@ -26369,117 +26378,127 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     /** Button Period */
     /** Footer */
   }
-  .charts-page .chart-page-content {
+  page-chart .chart-page-content {
     margin-top: 30px;
   }
-  .charts-page #charts-container {
+  page-chart #charts-container {
     border-top: 3px solid #848484;
     border-bottom: 3px solid #848484;
   }
-  .charts-page .btn-period span {
+  page-chart .btn-period span {
     font-size: 17px;
   }
-  .charts-page .watchlist-period {
-    top: -10px;
+  page-chart .watchlist-period {
+    top: 2px;
+    left: 16px;
+    margin-right: 16px;
   }
-  .charts-page .indices-period {
+  page-chart .indices-period {
     top: -11px;
   }
-  .charts-page .watchlist-period .btn-period {
-    width: 18%;
+  page-chart .watchlist-period .btn-period {
+    width: 19.4%;
   }
-  .charts-page .indices-period .btn-period {
+  page-chart .indices-period .btn-period {
     width: 23%;
   }
-  .charts-page .tooltip, .charts-page .share-name {
+  page-chart .tooltip, page-chart .share-name {
     font-size: 17px !important;
   }
-  .charts-page .btn-share span {
+  page-chart .btn-share span {
     font-size: 14px !important;
     font-family: "HelveticaNeue-Medium";
     padding-left: 16px;
     padding-right: 16px;
   }
-  .charts-page .btn-share {
-    /*width: 13%;*/
+  page-chart .btn-share {
+    width: 13%;
+    margin: 16px;
+    padding: 16px;
     margin-right: 16px;
   }
-  .charts-page .own-shares-title {
+  page-chart .own-shares-title {
     font-size: 15px;
   }
-  .charts-page .sharegraph-title {
+  page-chart .sharegraph-title {
     font-size: 15px;
   }
-  .performance-page {
+  page-performance {
     /** Settings default */
     /** Height content data */
     /** Border */
     /** CSS box */
   }
-  .performance-page scroll-content {
+  page-performance scroll-content {
     width: 70%;
     margin-left: 15%;
   }
-  .performance-page [item-right] {
-    margin: 16px;
+  page-performance [item-right] {
+    margin: 16px !important;
   }
-  .performance-page .div-item-content {
+  page-performance .div-item-content {
     border-bottom: 1px solid #c8c7cc;
     max-height: calc(100% - 220px);
   }
-  .performance-page .item-header-content > .item:last-child .item-inner, .performance-page ion-list > .item-wrapper:last-child .item-inner {
+  page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 1px solid #6b6b6c;
   }
-  .performance-page .div-item-content {
+  page-performance .div-item-content {
     max-height: calc(100% - 130px);
   }
-  .performance-page .item-box {
+  page-performance .item-box {
     width: 18%;
   }
-  .performance-page .item-header {
+  page-performance .item-box div {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+  }
+  page-performance .item-header {
     width: 18%;
     font-size: 20px !important;
   }
-  .performance-page .item-header span {
+  page-performance .item-header span {
     font-size: 17px !important;
   }
-  .performance-page .item-col-1 {
+  page-performance .item-col-1 {
     font-size: 20px;
   }
-  .performance-page .item-data {
+  page-performance .item-data {
     font-size: 17px;
   }
-  .compare-page {
+  page-compare {
     /** Default CSS */
   }
-  .compare-page scroll-content {
-    width: 70%;
-    margin-left: 15%;
-  }
-  .compare-page ion-footer {
+  page-compare ion-footer {
     bottom: 25% !important;
   }
-  .compare-page scroll-content h1 {
-    margin-left: 0;
-    font-size: 19px;
+  page-compare ion-content {
+    padding-left: 20%;
+    padding-right: 20%;
   }
-  .compare-page .scroll-content {
+  page-compare .date-title {
+    padding-left: 0px !important;
+  }
+  page-compare .scroll-content {
     max-height: calc(100% - 100px);
   }
-  .compare-page .scroll-content .item-box {
+  page-compare .scroll-content .item-box {
     padding-bottom: 25%;
     width: 25%;
   }
-  .compare-page .ticker, .compare-page .price {
+  page-compare .ticker, page-compare .price {
     font-size: 20px !important;
   }
-  .compare-page .change-pro, .compare-page .currency {
+  page-compare .change-pro, page-compare .currency {
     font-size: 15px;
   }
-  .compare-page .footer {
+  page-compare .footer {
     font-size: 17px;
   }
-  .compare-tab .btn-header-title {
+  page-compare .content {
+    padding-top: 8%;
+  }
+  compare-tab .btn-header-title {
     font-size: 15px;
     text-align: center;
     /*font-weight: medium;*/
@@ -26502,26 +26521,26 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     /*padding-top: 5px;
             padding-bottom: 5px;*/
   }
-  .compare-tab .show-tabbar {
+  compare-tab .show-tabbar {
     width: 70%;
     /*height: 25px;*/
     border: 2px solid #848484 !important;
     margin-left: 15%;
     margin-right: 15%;
   }
-  .compare-tab .show-tabbar a:first-child {
+  compare-tab .show-tabbar a:first-child {
     border-top-left-radius: 2px;
     border-bottom-left-radius: 2px;
   }
-  .compare-tab .tab-button:nth-child(2) {
+  compare-tab .tab-button:nth-child(2) {
     border-right: 2px solid #848484;
     border-left: 2px solid #848484;
   }
-  .compare-tab .show-tabbar a:nth-child(3) {
+  compare-tab .show-tabbar a:nth-child(3) {
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
   }
-  .compare-tab .tab-button-text, .compare-tab .btn-header-title span {
+  compare-tab .tab-button-text, compare-tab .btn-header-title span {
     font-size: 17px !important;
     font-family: "HelveticaNeue-Medium";
   }
@@ -26554,13 +26573,13 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     background-image: none;
     padding-left: 0;
   }
-  html:lang(ar) .compare-tab .show-tabbar a:first-child {
+  html:lang(ar) compare-tab .show-tabbar a:first-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
   }
-  html:lang(ar) .compare-tab .show-tabbar a:nth-child(3) {
+  html:lang(ar) compare-tab .show-tabbar a:nth-child(3) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     border-top-left-radius: 2px;
@@ -26661,13 +26680,6 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   .note.tablet {
     float: left;
     padding-left: 15px;
-  }
-  .compare-tab #charts {
-    height: 365px;
-    margin-bottom: 45px;
-  }
-  .compare-tab #charts .highcharts-container {
-    height: 380px !important;
   }
 }
 
@@ -26777,26 +26789,26 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     width: 35%;
     border-right: 1px solid #ddd;
   }
-  .compare-tab ion-header, .compare-tab .show-tabbar, .charts-page #charts-container {
+  compare-tab ion-header, compare-tab .show-tabbar, page-chart #charts-container {
     margin-left: 20%;
     margin-right: 20%;
     width: 60%;
   }
-  .charts-page .share-item {
+  page-chart .share-item {
     margin-left: 20%;
     margin-right: 20%;
   }
-  .compare-page ion-footer {
+  page-compare ion-footer {
     bottom: 5px !important;
   }
-  .performance-page scroll-content {
+  page-performance scroll-content {
     margin-top: 30px !important;
   }
-  .performance-page .item-box div {
+  page-performance .item-box div {
     padding-bottom: 16px;
     padding-top: 16px;
   }
-  .compare-tab .footer {
+  compare-tab .footer {
     margin-left: 60px !important;
     margin-right: 60px !important;
   }
@@ -28669,6 +28681,10 @@ compare-tab .btn-header-title .button-inner {
   color: black;
 }
 
+compare-tab .btn-header-title ion-icon {
+  margin-left: 5px;
+}
+
 compare-tab .btn-header-close {
   position: absolute;
   right: 5%;
@@ -28700,12 +28716,12 @@ compare-tab .compare-tab .user-icon {
 
 compare-tab ion-content {
   /*overflow-y: hidden;*/
-  background-color: #484849;
+  background-color: #484849 !important;
 }
 
 compare-tab .show-tabbar {
   /*top: 90px;*/
-  background-color: #484849;
+  background-color: #484849 !important;
   border-radius: 5px;
 }
 
@@ -28742,7 +28758,7 @@ html:lang(ar) compare-tab .btn-header-close {
   right: auto !important;
 }
 
-page-charts {
+page-chart {
   /**
     Some default
   **/
@@ -28756,6 +28772,8 @@ page-charts {
   /**
     CSS: Chart Page
   **/
+  /*overflow-y: scroll;
+    position: relative;*/
   /**
     CSS Period button
   */
@@ -28770,54 +28788,55 @@ page-charts {
   */
 }
 
-page-charts ion-header {
+page-chart ion-header {
   height: 16%;
 }
 
-page-charts button {
-  border: 0;
+page-chart button {
+  border-radius: 3px;
   color: white !important;
+  background-color: inherit;
 }
 
-page-charts .chart-page-content {
-  /*overflow-y: scroll;
-    position: relative;*/
-}
-
-page-charts .btn-period {
+page-chart .btn-period {
   z-index: 99;
   padding: 0;
   padding-right: 8px;
   padding-left: 8px;
 }
 
-page-charts .btn-share:hover, page-charts .btn-period:hover {
+page-chart .btn-share:hover, page-chart .btn-period:hover {
   color: white !important;
   opacity: 1 !important;
 }
 
-page-charts .watchlist-period {
+page-chart .watchlist-period {
   display: inline;
   position: absolute;
-  top: -14px;
+  top: 2px;
   text-align: center;
   width: 100%;
 }
 
-page-charts .indices-period {
+page-chart .indices-period {
   display: inline;
   left: 40px;
   position: absolute;
-  top: -15px;
+  top: 2px;
   right: 0;
+  width: 100%;
 }
 
-page-charts #charts-container {
+page-chart .chart-page-content {
+  margin-top: 10%;
+}
+
+page-chart #charts-container {
   position: relative;
   margin-bottom: 10px;
 }
 
-page-charts #charts {
+page-chart #charts {
   width: 90%;
   height: 200px;
   margin-left: 5%;
@@ -28825,44 +28844,270 @@ page-charts #charts {
   padding-bottom: -15px;
 }
 
-page-charts #charts .highcharts-container svg {
+page-chart #charts .highcharts-container svg {
   border-top: 1px solid #848484;
   margin-top: 30px;
 }
 
-page-charts #charts .highcharts-container {
+page-chart #charts .highcharts-container {
   height: 215px !important;
 }
 
-page-charts .share-item {
+page-chart .share-item {
   height: 10px;
   width: 100%;
 }
 
-page-charts .share-name {
+page-chart .share-name {
   margin-top: 10px;
   margin-right: 20px;
 }
 
-page-charts .footer {
+page-chart .footer {
   margin-left: 16px !important;
 }
 
-page-charts .tooltip {
+page-chart .tooltip {
   margin-top: 30px;
   margin-bottom: 20px !important;
 }
 
-page-charts .tooltip, page-charts .own-shares-title, page-charts .sharegraph-title {
+page-chart .tooltip, page-chart .own-shares-title, page-chart .sharegraph-title {
   color: #848484 !important;
 }
 
-page-charts .own-shares-title, page-charts .sharegraph-title {
+page-chart .own-shares-title, page-chart .sharegraph-title {
   text-transform: uppercase;
 }
 
-page-charts .btn-click {
+page-chart .btn-click {
   border: 1px solid white !important;
+}
+
+page-compare {
+  /**
+     defaul
+  */
+  /**
+
+  */
+  /**
+   color box
+  */
+  /** CSS between boxes
+  */
+  /** CSS box
+
+  **/
+  /**
+    Footer
+  */
+}
+
+page-compare ion-header {
+  height: 20%;
+}
+
+page-compare ion-content {
+  overflow-y: hidden;
+}
+
+page-compare scroll-content {
+  margin-bottom: 0 !important;
+  overflow-y: hidden;
+}
+
+page-compare .date-title {
+  /*margin-top: 30px ;*/
+  margin-top: 0;
+  padding-left: 10px;
+  color: #808080;
+  text-transform: uppercase;
+}
+
+page-compare .scroll-content {
+  overflow-y: scroll;
+  position: relative;
+  padding-bottom: 45px;
+}
+
+page-compare ion-footer {
+  bottom: 15px !important;
+}
+
+page-compare .item-box {
+  float: left;
+  color: white;
+  height: 0;
+  border-right: 1px solid #787878;
+  border-bottom: 1px solid #787878;
+}
+
+page-compare .down {
+  background: linear-gradient(#bf3335, #c8583e);
+}
+
+page-compare .up {
+  background: linear-gradient(#95bc4f, #447d2d);
+}
+
+page-compare .content {
+  position: relative;
+  height: 100%;
+}
+
+page-compare .ticker, page-compare .price {
+  font-size: 18px !important;
+  color: #fff;
+  padding-left: 10%;
+}
+
+page-compare .price {
+  margin-bottom: 20%;
+}
+
+page-compare .change-pro, page-compare .currency {
+  padding-left: 10%;
+  font-size: 12px;
+}
+
+page-compare .change-pro {
+  position: absolute;
+}
+
+page-compare .currency {
+  position: absolute;
+  right: 10%;
+}
+
+page-compare .footer {
+  font-size: 14px;
+  color: #fff;
+}
+
+page-compare .footer a {
+  text-decoration: none;
+  color: #0091ff;
+}
+
+html:lang(ar) .compare-tab .currency {
+  left: 5% !important;
+  right: auto !important;
+  margin-top: -10% !important;
+}
+
+html:lang(ar) .compare-tab .change-pro {
+  right: 10% !important;
+  margin-top: -10% !important;
+}
+
+html:lang(ar) .compare-tab .price, html:lang(ar) .compare-tab .ticker {
+  margin-right: 10% !important;
+}
+
+page-performance {
+  /**
+    Default CSS
+  */
+  /**
+    CSS item-box
+  */
+  /**
+   color
+  */
+}
+
+page-performance ion-header {
+  height: 17%;
+}
+
+page-performance scroll-content {
+  overflow-y: hidden;
+}
+
+page-performance ion-list {
+  margin: 0;
+}
+
+page-performance ion-item, page-performance span {
+  background: transparent;
+  opacity: 0.98;
+  color: white !important;
+  background-color: #484849 !important;
+}
+
+page-performance ion-list .item .item-inner {
+  border-bottom: 1px solid #6b6b6c !important;
+}
+
+page-performance ion-list > .item:last-child {
+  border-bottom: 0px;
+}
+
+page-performance .item-header-content {
+  margin-top: 40px;
+  margin-bottom: 0px !important;
+}
+
+page-performance .item-header-content ion-item {
+  border-bottom: 0;
+}
+
+page-performance .div-item-content {
+  overflow-y: scroll;
+  position: relative;
+  border-bottom: 0;
+  padding-bottom: 35px;
+}
+
+page-performance .item-content {
+  margin-bottom: 1px;
+}
+
+page-performance .item-content .item:first-child {
+  border-top: 0;
+}
+
+page-performance .item-content .item:last-child .item-inner {
+  border-bottom: 0px;
+}
+
+page-performance .item-box div {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  border-radius: 5%;
+}
+
+page-performance .item-header {
+  text-align: right;
+  font-family: "HelveticaNeue-Light" !important;
+}
+
+page-performance .item-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+page-performance .down {
+  background-color: #ff3a2d;
+}
+
+page-performance .up {
+  background-color: #43a047;
 }
 
 page-shareinformation .shareinfo-content ion-item.item {
