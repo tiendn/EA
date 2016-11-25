@@ -113,10 +113,10 @@ export class GlobalVars {
         storageTTL: 300000,
         downloadLimit: 10
     };
-    keyfinancials: {
+    keyfinancials = {
         storageTTL: 300000
     };
-    disclosures: {
+    disclosures = {
         storageTTL: 300000
     }
 
@@ -184,6 +184,7 @@ export class GlobalVars {
     isOnline: boolean = true;
     isArabic: boolean = false;
     isTablet: boolean = false;
+    isIpad: boolean = false;
     isNativeMode: boolean = false;
     currentModule: string;
     isIOS: boolean = true;
@@ -192,10 +193,17 @@ export class GlobalVars {
     changedCurrency: boolean = false;
     isCloseCompareModal: boolean = false;
     progressBar: any;
+    downloadConfirm: any;
     /*Report*/
     reportsDownloading: any;
     reportFileTransfers: any;
     reportPendingDownload: any;
+    /*Historical Price*/
+    hpSelectedDate: any;
+    /*Press Releases*/
+    prDetail: any;
+    /*Calendar*/
+    fincalModule: any;
 
     constructor() {
     }

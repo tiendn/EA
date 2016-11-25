@@ -6,10 +6,10 @@ page-performance {
     Default CSS
   */
 
-  ion-header{
-      height: 17%;
-  }
-  scroll-content{
+  // ion-header{
+  //     height: 17%;
+  // }
+  .scroll-content{
     overflow-y: hidden;
     
   }
@@ -35,11 +35,11 @@ page-performance {
   
   .item-header-content
   {
-    margin-top: 40px;
+    
     margin-bottom : 0px !important;
   }
   .item-header-content ion-item{
-      border-bottom: 0;
+      border-bottom: 0 !important;
   }
 //   .item-header-content div.item-inner{
 //     margin-bottom: 1px !important;
@@ -66,7 +66,7 @@ page-performance {
     align-items: center;
     text-align: center;
     justify-content: center;
-    border-radius: 5%;
+    border-radius: 3px;
 
   }
   .item-header{

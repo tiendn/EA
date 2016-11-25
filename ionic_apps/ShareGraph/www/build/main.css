@@ -25179,8 +25179,8 @@ page-chart .btn-period-click .button-inner {
     /** CSS Share name */
     /** CSS footer */
   }
-  page-chart scroll-content {
-    max-height: calc(100% - 160px);
+  page-chart .chart-page-content {
+    margin-top: 15%;
   }
   page-chart #charts-container {
     border-top: 2px solid #848484;
@@ -25225,6 +25225,9 @@ page-chart .btn-period-click .button-inner {
   }
   page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 0.55px solid #6b6b6c;
+  }
+  page-performance .item-header-content {
+    margin-top: 15% !important;
   }
   page-performance .item-box {
     padding-top: 8px;
@@ -26379,7 +26382,7 @@ page-chart .btn-period-click .button-inner {
     /** Footer */
   }
   page-chart .chart-page-content {
-    margin-top: 30px;
+    margin-top: 10%;
   }
   page-chart #charts-container {
     border-top: 3px solid #848484;
@@ -26429,19 +26432,24 @@ page-chart .btn-period-click .button-inner {
     /** Border */
     /** CSS box */
   }
-  page-performance scroll-content {
-    width: 70%;
+  page-performance .scroll-content {
     margin-left: 15%;
+    margin-right: 15%;
+  }
+  page-performance .item-header-content {
+    margin-top: 15%;
   }
   page-performance [item-right] {
     margin: 16px !important;
   }
   page-performance .div-item-content {
     border-bottom: 1px solid #c8c7cc;
-    max-height: calc(100% - 220px);
   }
   page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 1px solid #6b6b6c;
+  }
+  page-performance .list-ios > .item-block:first-child {
+    border-top: 1px solid #c8c7cc;
   }
   page-performance .div-item-content {
     max-height: calc(100% - 130px);
@@ -26469,12 +26477,9 @@ page-chart .btn-period-click .button-inner {
   page-compare {
     /** Default CSS */
   }
-  page-compare ion-footer {
-    bottom: 25% !important;
-  }
-  page-compare ion-content {
-    padding-left: 20%;
-    padding-right: 20%;
+  page-compare .scroll-content {
+    margin-left: 15%;
+    margin-right: 15%;
   }
   page-compare .date-title {
     padding-left: 0px !important;
@@ -26798,20 +26803,365 @@ page-chart .btn-period-click .button-inner {
     margin-left: 20%;
     margin-right: 20%;
   }
-  page-compare ion-footer {
-    bottom: 5px !important;
+  page-chart .chart-page-content {
+    margin-top: 7%;
   }
-  page-performance scroll-content {
-    margin-top: 30px !important;
+  page-compare .scroll-content {
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+  page-performance .scroll-content {
+    margin-left: 20%;
+    margin-right: 20%;
   }
   page-performance .item-box div {
     padding-bottom: 16px;
     padding-top: 16px;
   }
+  page-performance .item-header-content {
+    margin-top: 10% !important;
+  }
   compare-tab .footer {
     margin-left: 60px !important;
     margin-right: 60px !important;
   }
+}
+
+page-historicalprice .historicalprice-content .cards-chart {
+  margin-top: 40px;
+  padding: 15px;
+}
+
+page-historicalprice .historicalprice-content .cards-chart ion-card-header {
+  font-size: 17px;
+  text-transform: none;
+  padding: 0;
+  color: #000 !important;
+}
+
+page-historicalprice .historicalprice-content .cards-chart ion-card-content {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+page-historicalprice .historicalprice-content .cards-chart .chart-currency {
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+page-historicalprice .historicalprice-content .cards-chart .chart-closeprice {
+  height: 140px;
+  padding-left: 15%;
+}
+
+page-historicalprice .historicalprice-content .cards-chart ion-card-footer {
+  font-size: 11px;
+  color: #808080;
+}
+
+page-historicalprice .historicalprice-content .cards-chart .highcharts-axis-labels.highcharts-xaxis-labels > text {
+  font-size: 12px;
+  color: #9B9B9B;
+}
+
+page-historicalprice .historicalprice-content .cards-chart .highcharts-data-labels tspan {
+  font-size: 12px;
+  color: #000;
+  font-weight: normal;
+}
+
+.select-date.item-block {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.select-date.item-block .item-inner {
+  border: 0;
+  font-size: 17px;
+}
+
+.select-date.item-block .item-inner ion-label {
+  color: #000;
+}
+
+.select-date.item-block .item-inner .datetime-text {
+  color: #8F8F95;
+}
+
+.historicalprice-detail-content .cards-fiveday-chart {
+  /*padding-left: 20px;
+        padding-right: 20px;*/
+}
+
+.historicalprice-detail-content .cards-fiveday-chart .chart-container {
+  height: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.historicalprice-detail-content .cards-fiveday-chart .chart-container .highcharts-axis-labels.highcharts-xaxis-labels span {
+  color: #9B9B9B !important;
+  font-size: 10px !important;
+}
+
+.historicalprice-detail-content .cards-fiveday-chart .chart-container .highcharts-axis-labels.highcharts-xaxis-labels span.candlestick-currentdate {
+  color: #000 !important;
+}
+
+.historicalprice-detail-content .pr-oneday .item {
+  border: 0;
+}
+
+.historicalprice-detail-content .pr-oneday .item:first-child .item-inner {
+  border-top: 1px solid #ddd;
+}
+
+.historicalprice-detail-content .hp-result-tooltip {
+  padding: 8px;
+  display: table;
+}
+
+.historicalprice-detail-content .hp-result-tooltip div {
+  display: table-row;
+}
+
+.historicalprice-detail-content .hp-result-tooltip div span {
+  display: table-cell;
+}
+
+.historicalprice-detail-content .hp-result-tooltip .tooltip-value {
+  font-weight: bold;
+}
+
+.historicalprice-detail-content .hp-result-tooltip .tooltip-label {
+  padding-right: 5px;
+}
+
+.historicalprice-detail-content .highcharts-tooltip > span {
+  background-color: #fff;
+  z-index: 1000;
+}
+
+.historicalprice-detail-content .cards-compare ion-card-header {
+  padding-top: 0;
+  font-size: 14px;
+}
+
+.historicalprice-detail-content .cards-compare button {
+  margin: 0;
+  height: 35px;
+  font-size: 12px;
+}
+
+.historicalprice-detail-content .chart-header {
+  padding-top: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: block;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: #9b9b9b;
+}
+
+.pr-detail .toolbar {
+  border-bottom: 1px solid #ddd;
+}
+
+.pr-detail .toolbar .toolbar-background {
+  background-color: #fff;
+}
+
+/*Watchlist Modal*/
+page-hp-watchlist ion-content {
+  overflow-y: hidden;
+  background-color: #484849 !important;
+}
+
+page-hp-watchlist .header {
+  position: relative;
+}
+
+page-hp-watchlist .btn-watch-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+page-hp-watchlist .btn-watch {
+  background-color: #ffffff !important;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 5px 10px;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: auto !important;
+  border-radius: 5px;
+}
+
+page-hp-watchlist .btn-watch ion-icon {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+page-hp-watchlist .btn-watch .button-inner {
+  color: black;
+}
+
+page-hp-watchlist .close {
+  color: white;
+  background-color: #484849 !important;
+  background: transparent;
+  position: absolute;
+}
+
+page-hp-watchlist .date-content {
+  color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-hp-watchlist .current-date {
+  color: white;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 4%;
+}
+
+page-hp-watchlist .current-date {
+  text-align: left;
+}
+
+page-hp-watchlist ion-item span, page-hp-watchlist h6, page-hp-watchlist ion-icon {
+  color: #ffffff;
+}
+
+page-hp-watchlist .item-header-content {
+  border-top: 1px solid #c8c7cc;
+  margin-bottom: 0px;
+}
+
+page-hp-watchlist .item-content {
+  margin-bottom: 0px;
+  margin-top: 0px;
+  -webkit-overflow-scrolling: touch;
+}
+
+page-hp-watchlist .item-content > .item:first-child {
+  border-top: 0px;
+}
+
+page-hp-watchlist .item-content > .item:last-child {
+  border-bottom: 0px;
+}
+
+page-hp-watchlist ion-list .item .item-inner {
+  border-bottom: 0.55px solid #6b6b6c !important;
+}
+
+page-hp-watchlist ion-item {
+  background: transparent;
+  background-color: #484849 !important;
+  opacity: .9;
+}
+
+page-hp-watchlist ion-item:last-child {
+  border-bottom: 1px solid #c8c7cc;
+}
+
+page-hp-watchlist .item-right {
+  width: 37%;
+  text-align: right;
+}
+
+page-hp-watchlist .div-item-content {
+  overflow-y: scroll;
+  position: relative;
+}
+
+page-hp-watchlist .footer {
+  margin-top: 0;
+  padding-top: 5%;
+  border-top: 1px solid #c8c7cc;
+  color: #c9c9c9;
+}
+
+page-hp-watchlist .footer a {
+  text-decoration: none;
+}
+
+/*End Watchlist Modal*/
+@media screen and (max-width: 640px) {
+  page-hp-watchlist .footer {
+    padding-left: 4.4%;
+  }
+  page-hp-watchlist .scroll-content {
+    margin-top: 5%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  page-hp-watchlist .scroll-content {
+    margin: 2.5% 20% 0 20%;
+  }
+  page-hp-watchlist ion-list .item .item-inner {
+    border-bottom: 1px solid #6b6b6c !important;
+  }
+}
+
+html:lang(ar) .historicalprice-content .cards-chart .chart-currency {
+  left: auto;
+  right: 0;
+}
+
+html:lang(ar) .historicalprice-content .cards-chart .chart-closeprice {
+  padding-left: 0;
+  padding-right: 15%;
+  direction: ltr;
+}
+
+html:lang(ar) page-hp-watchlist .current-date {
+  text-align: right;
+  padding-right: 4%;
+  padding-left: 0;
+}
+
+html:lang(ar) page-hp-watchlist .item-right {
+  display: block;
+  text-align: left;
 }
 
 /*Variables*/
@@ -28788,10 +29138,6 @@ page-chart {
   */
 }
 
-page-chart ion-header {
-  height: 16%;
-}
-
 page-chart button {
   border-radius: 3px;
   color: white !important;
@@ -28825,10 +29171,6 @@ page-chart .indices-period {
   top: 2px;
   right: 0;
   width: 100%;
-}
-
-page-chart .chart-page-content {
-  margin-top: 10%;
 }
 
 page-chart #charts-container {
@@ -28904,15 +29246,11 @@ page-compare {
   */
 }
 
-page-compare ion-header {
-  height: 20%;
-}
-
 page-compare ion-content {
   overflow-y: hidden;
 }
 
-page-compare scroll-content {
+page-compare .scroll-content {
   margin-bottom: 0 !important;
   overflow-y: hidden;
 }
@@ -28929,10 +29267,6 @@ page-compare .scroll-content {
   overflow-y: scroll;
   position: relative;
   padding-bottom: 45px;
-}
-
-page-compare ion-footer {
-  bottom: 15px !important;
 }
 
 page-compare .item-box {
@@ -29017,11 +29351,7 @@ page-performance {
   */
 }
 
-page-performance ion-header {
-  height: 17%;
-}
-
-page-performance scroll-content {
+page-performance .scroll-content {
   overflow-y: hidden;
 }
 
@@ -29045,12 +29375,11 @@ page-performance ion-list > .item:last-child {
 }
 
 page-performance .item-header-content {
-  margin-top: 40px;
   margin-bottom: 0px !important;
 }
 
 page-performance .item-header-content ion-item {
-  border-bottom: 0;
+  border-bottom: 0 !important;
 }
 
 page-performance .div-item-content {
@@ -29085,7 +29414,7 @@ page-performance .item-box div {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  border-radius: 5%;
+  border-radius: 3px;
 }
 
 page-performance .item-header {

@@ -1,6 +1,6 @@
  <ion-content >
   <ion-label class="date-title"> {{dateTitle}} </ion-label>
-  <div class = "scroll-content">
+  <!--<div class = "scroll-content">-->
     <div *ngFor ="let item of data"
     [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
       <div class = "content">
@@ -14,5 +14,5 @@
           </span>
       </div>
     </div>
-  </div>
+  <!--</div>-->
 </ion-content>

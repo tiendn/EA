@@ -2,13 +2,11 @@ page-compare {
   /**
      defaul
   */
-  ion-header{
-      height: 20%;
-  }
+  
   ion-content{
     overflow-y: hidden;
   }
-  scroll-content{
+  .scroll-content{
     margin-bottom: 0 !important;
     overflow-y: hidden;
   }
@@ -24,9 +22,7 @@ page-compare {
     position: relative;
     padding-bottom: 45px;
   }
-  ion-footer{
-    bottom:15px !important;
-  }
+  
 
   /**
 

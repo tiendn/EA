@@ -1384,10 +1384,12 @@ page-chart {
 
     page-chart {
         /** CSS Chart */
-        scroll-content {
-            max-height: calc(100% - 160px);
+        // .scroll-content {
+        //     max-height: calc(100% - 20px);
+        // }
+        .chart-page-content{
+            margin-top: 15%;
         }
-
         #charts-container {
             border-top: 2px solid #848484;
             border-bottom: 2px solid #848484;
@@ -1445,7 +1447,9 @@ page-chart {
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 0.55px solid #6b6b6c;
         }
-
+        .item-header-content{
+            margin-top: 15% !important; 
+        }
         .item-box {
             padding-top: 8px;
             padding-bottom: 8px;
@@ -2908,7 +2912,7 @@ page-chart {
     page-chart {
         /** Chart */
         .chart-page-content {
-            margin-top: 30px;
+            margin-top: 10% ;
         }
         // #charts {
         //     height: 330px !important;
@@ -2984,11 +2988,14 @@ page-chart {
     //  Performance Page
     page-performance {
         /** Settings default */
-        scroll-content {
-            width: 70%;
+        .scroll-content {
+            // width: 60%;
             margin-left: 15%;
+            margin-right: 15%;
         }
-        
+        .item-header-content{
+            margin-top: 15%;
+        }
 
         [item-right] {
             margin: 16px !important;
@@ -2996,13 +3003,15 @@ page-chart {
         /** Height content data */
         .div-item-content {
             border-bottom: 1px solid #c8c7cc;
-            max-height: calc(100% - 220px);
+            // max-height: calc(100% - 220px);
         }
         /** Border */
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 1px solid #6b6b6c;
         }
-
+        .list-ios > .item-block:first-child{
+            border-top: 1px solid #c8c7cc;
+        }
         .div-item-content {
             max-height: calc(100% - 130px );
         }
@@ -3040,13 +3049,13 @@ page-chart {
         //     margin-left: 15%;
         // }
 
-        ion-footer {
-            bottom: 25% !important;
-        }
-        ion-content{
+        // ion-footer {
+        //     bottom: 25% !important;
+        // }
+        .scroll-content{
             // width: 70% !important;
-            padding-left: 20%;
-            padding-right: 20%;
+            margin-left: 15%;
+            margin-right: 15%;
         }
         // scroll-content h1 {
         //     margin-left: 0;
@@ -3451,26 +3460,38 @@ page-chart {
         width: 60%;
     }
 
-    page-chart .share-item {
-        margin-left: 20%;
-        margin-right: 20%;
+    page-chart {
+        .share-item {
+            margin-left: 20%;
+         margin-right: 20%;
+        }
+        .chart-page-content {
+            margin-top: 7%;
+        }
     }
 
     page-compare {
-        ion-footer {
-            bottom: 5px !important;
+        .scroll-content{
+            margin-left: 20% !important;
+            margin-right: 20% !important;
         }
     }
 
     page-performance {
-        scroll-content {
-            margin-top: 30px !important;
+        .scroll-content {
+            // margin-top: 30px !important;
+            margin-left: 20% ;
+            margin-right: 20%;
         }
 
         .item-box div {
             padding-bottom: 16px;
             padding-top: 16px;
         }
+        .item-header-content{
+            margin-top: 10% !important;
+        }
+
     }
 
     compare-tab {

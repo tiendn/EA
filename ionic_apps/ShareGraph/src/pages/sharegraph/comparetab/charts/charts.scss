@@ -2,8 +2,8 @@ page-chart {
     /**
     Some default
   **/
-    ion-header {
-        height: 16%;
+    ion-content {
+        // margin-top: 16%;
     }
     /*ion-content{
      overflow-y: hidden;
@@ -58,9 +58,7 @@ page-chart {
         right: 0;
         width: 100%;
     }
-    .chart-page-content{
-        margin-top: 10%;
-    }
+    
     // Div cover chart.
     #charts-container {
         position: relative;

@@ -11,6 +11,9 @@ import {AboutPage} from '../pages/about/about';
 import {CalendarPage} from '../pages/calendar/calendar';
 import {ContactPage} from '../pages/contact/contact';
 import {HistoricalPricePage} from '../pages/historicalprice/historicalprice';
+import {HPWatchListPage} from '../pages/historicalprice/watchlist/watchlist';
+import {HPDetailPage} from '../pages/historicalprice/detail-page/detail-page';
+import {HPDetailComponent} from '../pages/historicalprice/component/detail-component';
 import {InvestmentCalculatorPage} from '../pages/investmentcalculator/investmentcalculator';
 import {KeyFinancialsPage} from '../pages/keyfinancials/keyfinancials';
 import {MediaPage} from '../pages/media/media';
@@ -19,7 +22,6 @@ import {ReportsPage} from '../pages/reports/reports';
 import {SettingsPage} from '../pages/settings/settings';
 import {ShareGraphPage} from '../pages/sharegraph/sharegraph';
 import {ShareInformationPage} from '../pages/shareinformation/shareinformation';
-
 import {CompareTab} from '../pages/sharegraph/comparetab/comparetab';
 import {ChartsPage} from '../pages/sharegraph/comparetab/charts/charts';
 import {ComparePage} from '../pages/sharegraph/comparetab/compare/compare';
@@ -41,7 +43,7 @@ import { TranslationService } from '../providers/translation-service';
 import { AuthService } from '../providers/auth-service';
 import { ProfileService } from '../providers/profile-service'; 
 import { FormatNumber } from '../pipes/formatnumber';
-
+import { HistoricalPriceService } from '../providers/historicalprice-service';
 @NgModule({
     declarations: [
         MyIRApp,
@@ -50,6 +52,9 @@ import { FormatNumber } from '../pipes/formatnumber';
         CalendarPage,
         ContactPage,
         HistoricalPricePage,
+        HPWatchListPage,
+        HPDetailPage,
+        HPDetailComponent,
         InvestmentCalculatorPage,
         KeyFinancialsPage,
         MediaPage,
@@ -81,6 +86,9 @@ import { FormatNumber } from '../pipes/formatnumber';
         CalendarPage,
         ContactPage,
         HistoricalPricePage,
+        HPWatchListPage,
+        HPDetailPage,
+        HPDetailComponent,
         InvestmentCalculatorPage,
         KeyFinancialsPage,
         MediaPage,
@@ -97,6 +105,6 @@ import { FormatNumber } from '../pipes/formatnumber';
         ProgressBar,
         ICalDetailPage
     ],
-    providers: [Storage, GlobalVars, Helper, AppConfigService, TranslationService, AuthService, ProfileService]
+    providers: [Storage, GlobalVars, Helper, AppConfigService, TranslationService, AuthService, ProfileService,HistoricalPriceService]
 })
 export class AppModule { }

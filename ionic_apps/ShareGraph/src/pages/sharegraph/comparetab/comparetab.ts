@@ -21,11 +21,13 @@ export class CompareTab {
     charts: any;
     compare: any;
     performance: any;
+    type: string;
 
     constructor(public nav: NavController, public navParams: NavParams, public view: ViewController, public helper: Helper, public globalVars: GlobalVars, public profileService: ProfileService) {
         //Get params from Sharegraph page
         let params = this.navParams.get("params");
         let compareData = [];
+        this.type = params.type;
         if (params.type == "watchlist") {
             this.headerTitle = this.helper.getPhrase("Watchlist");
             compareData = this.profileService.getWatchlistConfig();
