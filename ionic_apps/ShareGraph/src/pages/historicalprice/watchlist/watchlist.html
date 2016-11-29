@@ -28,7 +28,7 @@
     <ion-list class="item-header-content">
         <ion-item style="border-top: 0px; border-bottom: 0px;">
             <span class="item-left"></span>
-            <span item-content>{{closeText}}</span>
+            <span item-right class="item-mid">{{closeText}}</span>
             <span item-right class="item-right">{{volumeText}}</span>
         </ion-item>
     </ion-list>
@@ -37,7 +37,7 @@
         <ion-list class="item-content">
             <ion-item *ngFor="let item of data">
                 <span class="item-left"> {{item.Ticker}} </span>
-                <span item-content class="item-center"> <span>{{item.Close | formatNumber:decimalDigits}} </span> <span class="currency">{{item.Currency}}</span></span>
+                <span item-right class="item-mid"> <span>{{item.Close | formatNumber:decimalDigits}} </span> <span class="currency">{{item.Currency}}</span></span>
                 <span item-right class="item-right"> {{item.Volume | formatNumber:0}} </span>
             </ion-item>
         </ion-list>

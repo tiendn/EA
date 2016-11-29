@@ -63,8 +63,11 @@ export class HPWatchListPage {
             if(data != null && data instanceof Array && data.length > 0){
                 this.data = data;
             }
+            // this.data = this.data.push( data);
+            // this.data = this.data.push( data);
             this.loadDone = true;
         });
+        
     }
 
 }

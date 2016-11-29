@@ -109,7 +109,8 @@ export class HistoricalPriceService {
         if (!this.globalVars.generalSettings.currency.isDefault)
             requestParams += "/" + this.globalVars.generalSettings.currency.value + "/";
         return new Promise(resolve => {
-            this.http.get(this.globalVars.servicesUrl + "watchlist/" + this.apiName + "/" + requestParams)
+            // this.http.get(this.globalVars.servicesUrl + "watchlist/" + this.apiName + "/" + requestParams)
+            this.http.get('data.json')
                 .timeout(this.globalVars.requestTimeout)
                 .retry(this.globalVars.retry)
                 .subscribe(

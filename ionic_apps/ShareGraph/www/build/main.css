@@ -27088,6 +27088,10 @@ page-hp-watchlist .item-content > .item:last-child {
   border-bottom: 0px;
 }
 
+page-hp-watchlist .div-item-content > ion-list > ion-item:last-child .item-inner {
+  border-bottom: 0 !important;
+}
+
 page-hp-watchlist ion-list .item .item-inner {
   border-bottom: 0.55px solid #6b6b6c !important;
 }
@@ -27102,8 +27106,13 @@ page-hp-watchlist ion-item:last-child {
   border-bottom: 1px solid #c8c7cc;
 }
 
+page-hp-watchlist .item-mid {
+  width: 30%;
+  text-align: right;
+}
+
 page-hp-watchlist .item-right {
-  width: 37%;
+  width: 30%;
   text-align: right;
 }
 
@@ -27114,7 +27123,7 @@ page-hp-watchlist .div-item-content {
 
 page-hp-watchlist .footer {
   margin-top: 0;
-  padding-top: 5%;
+  padding-top: 2%;
   border-top: 1px solid #c8c7cc;
   color: #c9c9c9;
 }
