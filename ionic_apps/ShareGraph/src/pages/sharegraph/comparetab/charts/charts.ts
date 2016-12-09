@@ -3,7 +3,7 @@ import { NavParams, Content } from 'ionic-angular';
 import { Helper } from '../../../../common/helper';
 import { GlobalVars } from '../../../../common/global-vars';
 import { ChartService } from '../../../../providers/chart-service';
-
+import { Platform } from 'ionic-angular';
 declare var Highcharts: any;
 
 @Component({
@@ -14,7 +14,7 @@ declare var Highcharts: any;
 export class ChartsPage {
 
     @ViewChild(Content) content: Content;
-
+    
     moduleName = "ShareGraph";
     ownShareTitle: string;
     type: number;
@@ -32,9 +32,9 @@ export class ChartsPage {
     chart: any;
     instrumentName: string;
 
-    constructor(public navParams: NavParams, public helper: Helper, public globalVars: GlobalVars, public chartService: ChartService) {
+    constructor(public platform: Platform,public navParams: NavParams, public helper: Helper, public globalVars: GlobalVars, public chartService: ChartService) {
+        // console.log(this.platform);
         this.ownShareTitle = this.helper.getPhrase("OwnShares", this.moduleName);
-
         let lstPeriod = [
             {
                 "Name": this.helper.getPhrase("Button1Day", this.moduleName),

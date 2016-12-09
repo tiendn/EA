@@ -24,7 +24,7 @@
                 <p class="own-shares-title"> {{ownShareTitle}}  </p>
                 <button ion-button  clear *ngFor="let ownShare of listOwnShares"
                         (click)="selectedId(ownShare,true)"
-                        class="button ion-button  btn-share {{getIndexShare(ownShare.instrumentid) >= 0 ? 'btn-click' : ''}}">
+                        class="button ion-button  btn-share {{getIndexShare(ownShare.instrumentid) >= 0  ? platform.is('ios') ? 'btn-click' : 'btn-click-android' : ''}}">
                     {{ownShare.ticker}}
                 </button >
             </div>
@@ -32,7 +32,7 @@
                 <p class="sharegraph-title"> {{watchListSharesTitle}} </p>
                 <button ion-button clear *ngFor="let share of watchListShare"
                         (click)="selectedId(share,false)"
-                        class="button ion-button  btn-share {{getIndexShare(share.Id) >= 0 ? 'btn-click' : ''}}">
+                        class="button ion-button  btn-share {{getIndexShare(share.Id) >= 0 ? platform.is('ios') ? 'btn-click' : 'btn-click-android' : ''}}">
                     {{share.Ticker}}
                 </button>
             </div>

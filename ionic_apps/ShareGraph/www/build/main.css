@@ -26876,34 +26876,40 @@ page-chart .btn-period-click .button-inner {
 }
 
 /*Custom Toolbar*/
-.irapp-toolbar {
+.platform-android {
+  /*End Custom Toolbar*/
+  /*Share Information*/
+  /*End Share Information*/
+  /*Historical Price*/
+  /*Watchlist Modal*/
+}
+
+.platform-android .irapp-toolbar {
   padding: 0;
   min-height: 0;
 }
 
-.irapp-toolbar .scrollbar .btn-active {
+.platform-android .irapp-toolbar .scrollbar .btn-active {
   border: 0;
   border-bottom: 2px solid #fff;
   border-radius: 0;
 }
 
-.irapp-toolbar .scrollbar .button {
+.platform-android .irapp-toolbar .scrollbar .button {
   min-height: 40px;
 }
 
-/*End Custom Toolbar*/
-.btn-leftmenu {
+.platform-android .btn-leftmenu {
   -ms-flex-order: 1;
   order: 1;
   -webkit-order: 1;
 }
 
-/*Share Information*/
-.share-information-page ion-list .item {
+.platform-android .share-information-page ion-list .item {
   padding: 0;
 }
 
-.share-information-page ion-list .item .item-inner {
+.platform-android .share-information-page ion-list .item .item-inner {
   padding: 10px 15px;
   /*padding-left: 15px;
                 padding-top: 10px;
@@ -26913,99 +26919,445 @@ page-chart .btn-period-click .button-inner {
   flex-direction: column;
 }
 
-.share-information-page ion-list .item .item-inner ion-label, .share-information-page ion-list .item .item-inner ion-note {
+.platform-android .share-information-page ion-list .item .item-inner ion-label, .platform-android .share-information-page ion-list .item .item-inner ion-note {
   margin: 0;
   display: block;
   width: 100%;
 }
 
-.share-information-page ion-list .item .item-inner ion-note {
+.platform-android .share-information-page ion-list .item .item-inner ion-note {
   padding-top: 5px;
 }
 
-/*End Share Information*/
-/*Historical Price*/
-/*Watchlist Modal*/
-.hp-watchlist-content .header {
+.platform-android .hp-watchlist-content .header {
   margin-top: 3%;
   margin-bottom: 8%;
 }
 
-.hp-watchlist-content .date-content {
+.platform-android .hp-watchlist-content .date-content {
   margin-bottom: 8%;
 }
 
-.hp-watchlist-content .div-item-content {
-  max-height: calc(100% - 9% - 181px);
+.platform-android .hp-watchlist-content .div-item-content {
+  max-height: calc(100% - 9% - 180px);
 }
 
-.hp-watchlist-content .item-header-content > .item:last-child .item-inner, .hp-watchlist-content ion-list > .item-wrapper:last-child .item-inner {
+.platform-android .hp-watchlist-content .item-header-content > .item:last-child .item-inner, .platform-android .hp-watchlist-content ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c;
 }
 
-.hp-watchlist-content .btn-watch {
+.platform-android .hp-watchlist-content .btn-watch {
   font-size: 14px;
   font-weight: normal;
   font-family: "HelveticaNeue-Light";
 }
 
-.hp-watchlist-content .current-date span:first-of-type {
+.platform-android .hp-watchlist-content .current-date span:first-of-type {
   font-size: 20px;
 }
 
-.hp-watchlist-content .current-date span:last-of-type {
+.platform-android .hp-watchlist-content .current-date span:last-of-type {
   font-size: 14px;
 }
 
-.hp-watchlist-content .close {
+.platform-android .hp-watchlist-content .close {
+  top: 0px;
   right: 15px;
 }
 
-.hp-watchlist-content .item-content .item span {
+.platform-android .hp-watchlist-content .item-content .item span {
   font-size: 17px;
 }
 
-.hp-watchlist-content .current-date span {
+.platform-android .hp-watchlist-content .current-date span {
   font-size: 15px;
 }
 
-.hp-watchlist-content .item-content, .hp-watchlist-content .item-header-content span {
+.platform-android .hp-watchlist-content .item-content, .platform-android .hp-watchlist-content .item-header-content span {
   font-size: 15px;
   font-family: "HelveticaNeue-Light";
 }
 
-.hp-watchlist-content .item-content .item span.currency {
+.platform-android .hp-watchlist-content .item-content .item span.currency {
   font-size: 12px;
 }
 
-.hp-watchlist-content .footer {
+.platform-android .hp-watchlist-content .footer {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 767px) {
-  html:lang(ar) {
-    /*Compare Tabs SG Module*/
-  }
-  html:lang(ar) compare-tab .show-tabbar a:first-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-  }
-  html:lang(ar) compare-tab .show-tabbar a:nth-child(3) {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-  }
-  html:lang(ar) page-chart .footer {
-    margin-left: 0 !important;
-    margin-right: 16px !important;
-  }
-  html:lang(ar) .hp-watchlist-content .close {
-    left: 15px;
-    right: auto;
-  }
+.platform-android .ical-compare-content {
+  /*.item-content .item-center {
+            font-size: 15px;
+        }
+
+        .item-content .item-right {
+            font-size: 15px;
+        }
+
+        .item-content .item-left {
+            font-size: 15px;
+        }*/
+}
+
+.platform-android .ical-compare-content .item-header-content > .item:last-child .item-inner, .platform-android .ical-compare-content ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c;
+}
+
+.platform-android .ical-compare-content .div-item-content {
+  max-height: calc(100% - 10px - 267px);
+}
+
+.platform-android .ical-compare-content .btn-header-watch {
+  font-size: 12px;
+  font-weight: medium;
+}
+
+.platform-android .ical-compare-content .btn-header-close {
+  right: 10px;
+  top: 0;
+}
+
+.platform-android .ical-compare-content .flex-date img {
+  height: 40px;
+  width: 40px;
+}
+
+.platform-android .ical-compare-content .item-content span, .platform-android .ical-compare-content .item-content .item-right {
+  font-size: 17px;
+}
+
+.platform-android .ical-compare-content .date-info span {
+  font-size: 15px;
+}
+
+.platform-android .ical-compare-content .item-content, .platform-android .ical-compare-content .item-header-content span {
+  font-size: 15px;
+  font-family: "HelveticaNeue-Light";
+}
+
+.platform-android .ical-compare-content .item-content .currency {
+  font-size: 12px;
+}
+
+.platform-android .ical-compare-content .footer {
+  padding-left: 16px;
+  font-size: 14px;
+}
+
+.platform-android page-ical-compare .btn-header-watch {
+  font-size: 14px !important;
+}
+
+.platform-android page-ical-compare .date-info span {
+  font-size: 14px !important;
+}
+
+.platform-android page-ical-compare .item-header-content {
+  border-top: 1px solid #c8c7cc;
+}
+
+.platform-android page-ical-compare .item-inner {
+  color: white !important;
+}
+
+.platform-android page-ical-compare .div-item-content .item-left {
+  font-size: 20px !important;
+}
+
+.platform-android page-ical-compare .div-item-content .item-center {
+  font-size: 18px !important;
+}
+
+.platform-android page-ical-compare .item-header-content span {
+  font-size: 16px !important;
+}
+
+.platform-android page-ical-compare .div-item-content .item-right {
+  font-size: 14px !important;
+}
+
+.platform-android page-ical-compare .currency {
+  font-size: 14px !important;
+}
+
+.platform-android page-sharegraph {
+  /*.performance-block{
+			ion-item{
+				ion-label, ion-note{
+					font-size: 17px;
+				}
+				ion-note{
+					color: $value-color;
+				}
+			}
+		}*/
+}
+
+.platform-android page-sharegraph .periods .segment-button {
+  height: 35px;
+}
+
+.platform-android page-sharegraph .ticker ion-col {
+  padding-top: 20px;
+}
+
+.platform-android page-sharegraph .ticker .price {
+  font-size: 20px;
+}
+
+.platform-android page-sharegraph .ticker .label {
+  font-size: 10px;
+}
+
+.platform-android page-sharegraph .cards-compare ion-card-header {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.platform-android page-sharegraph .cards-compare .button-inner {
+  font-family: "HelveticaNeue-Light";
+}
+
+.platform-android page-sharegraph .cards-compare .button {
+  height: 35px;
+  margin: 0 10px 0 0;
+}
+
+.platform-android page-chart {
+  /** CSS Chart */
+  /** CSS period */
+  /** CSS Share name */
+  /** CSS footer */
+}
+
+.platform-android page-chart .scroll-content {
+  margin-top: 15%;
+}
+
+.platform-android page-chart #charts-container {
+  border-top: 2px solid #848484;
+  border-bottom: 2px solid #848484;
+}
+
+.platform-android page-chart .tooltip, .platform-android page-chart .own-shares-title {
+  font-size: 14px;
+}
+
+.platform-android page-chart .btn-period {
+  font-size: 15px;
+}
+
+.platform-android page-chart .watchlist-period {
+  top: -10px;
+}
+
+.platform-android page-chart .indices-period {
+  top: -9px;
+}
+
+.platform-android page-chart .watchlist-period .btn-period {
+  width: 15%;
+  padding-left: 28px;
+  padding-right: 28px;
+}
+
+.platform-android page-chart .indices-period .btn-period {
+  width: 21%;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.platform-android page-chart .share-name {
+  font-size: 14px !important;
+}
+
+.platform-android page-chart .btn-share {
+  /*width: 20%;*/
+  margin: 8px;
+  padding: 8px;
+  font-size: 14px !important;
+}
+
+.platform-android page-chart .btn-click-android {
+  background-color: #6a6a6a;
+}
+
+.platform-android page-chart .sharegraph-title {
+  font-size: 14px;
+}
+
+.platform-android page-performance {
+  /*.item-header-content{
+            margin-top: 15% !important; 
+        }*/
+}
+
+.platform-android page-performance .div-item-content {
+  max-height: calc(100% - 40px);
+}
+
+.platform-android page-performance .item-header-content > .item:last-child .item-inner, .platform-android page-performance ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c;
+}
+
+.platform-android page-performance .item-box {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  width: 19%;
+  font-size: 14px !important;
+}
+
+.platform-android page-performance .item-header {
+  width: 19%;
+  font-size: 16px !important;
+}
+
+.platform-android page-performance .item-header span {
+  font-size: 12px !important;
+}
+
+.platform-android page-performance .item-col-1 {
+  font-size: 17px;
+}
+
+.platform-android page-performance .item-data {
+  font-size: 12px;
+}
+
+.platform-android page-performance .div-item-content {
+  border-bottom: 0.55px solid #c8c7cc;
+}
+
+.platform-android page-performance .item-left {
+  font-size: 20px !important;
+}
+
+.platform-android page-compare {
+  /*.scroll-content {
+            max-height: calc(100% - 100px);
+        }*/
+  /** Box */
+  /** Footer */
+  /*.content{
+            padding-top: 15%;
+        }*/
+}
+
+.platform-android page-compare .scroll-content {
+  margin-top: 10% !important;
+}
+
+.platform-android page-compare .date-title {
+  font-size: 14px;
+}
+
+.platform-android page-compare .price {
+  margin-bottom: 15% !important;
+}
+
+.platform-android page-compare .content-box {
+  margin-top: 20% !important;
+}
+
+.platform-android page-compare .item-box {
+  padding-bottom: 33.33333%;
+  width: 33.33333%;
+}
+
+.platform-android page-compare .ticker, .platform-android page-compare .price {
+  font-size: 20px !important;
+}
+
+.platform-android page-compare .change-pro, .platform-android page-compare .currency {
+  font-size: 14px !important;
+}
+
+.platform-android page-compare .footer {
+  font-size: 14px;
+}
+
+.platform-android compare-tab .btn-header-title {
+  font-size: 14px;
+  text-align: center;
+  /*font-weight: medium;*/
+  /*margin-left: calc(50% - 43.5px);
+            margin-right: calc(50% - 62px);*/
+  border-radius: 5px;
+  /*margin-top: 35px;*/
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  /*padding-top: 5px;
+            padding-bottom: 5px;*/
+}
+
+.platform-android compare-tab .show-tabbar {
+  width: 90%;
+  /*height: 25px;*/
+  border: 1px solid #848484 !important;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.platform-android compare-tab .show-tabbar a {
+  height: 50px !important;
+}
+
+.platform-android compare-tab .show-tabbar a:first-child {
+  border-top-left-radius: 3.7px;
+  border-bottom-left-radius: 3.7px;
+}
+
+.platform-android compare-tab .tab-button:nth-child(2) {
+  border-right: 1px solid #848484;
+  border-left: 1px solid #848484;
+}
+
+.platform-android compare-tab .show-tabbar a:nth-child(3) {
+  border-top-right-radius: 3.7px;
+  border-bottom-right-radius: 3.7px;
+}
+
+.platform-android compare-tab .tab-button-text {
+  font-size: 15px !important;
+}
+
+.platform-android html:lang(ar) {
+  /*Compare Tabs SG Module*/
+}
+
+.platform-android html:lang(ar) compare-tab .show-tabbar a:first-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.platform-android html:lang(ar) compare-tab .show-tabbar a:nth-child(3) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.platform-android html:lang(ar) page-chart .footer {
+  margin-left: 0 !important;
+  margin-right: 16px !important;
+}
+
+.platform-android html:lang(ar) .hp-watchlist-content .close {
+  left: 15px;
+  right: auto;
 }
 
 page-historicalprice .historicalprice-content .cards-chart {
@@ -29485,7 +29837,6 @@ compare-tab ion-tab {
 }
 
 compare-tab ion-tab .ion-page .fixed-content, compare-tab ion-tab .ion-page .scroll-content {
-  margin-top: 0 !important;
   height: calc(100% - 80px);
 }
 
@@ -29568,7 +29919,6 @@ compare-tab .show-tabbar {
 }
 
 compare-tab .show-tabbar a {
-  height: 23px !important;
   min-height: 20px !important;
 }
 

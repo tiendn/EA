@@ -22,7 +22,7 @@ compare-tab {
         margin-top: 70px;
         .ion-page{
             .fixed-content, .scroll-content{
-                margin-top: 0 !important;
+                // margin-top: 0 !important;
                 height: calc(100% - 80px);
             }
         }
@@ -107,7 +107,7 @@ compare-tab {
     }
 
     .show-tabbar a {
-        height: 23px !important;
+        // height: 23px !important;
         min-height: 20px !important;
     }
     /** CSS Tab active and default */
