@@ -5,18 +5,25 @@ import { GlobalVars } from '../../common/global-vars';
 import { HistoricalPriceService } from '../../providers/historicalprice-service';
 //import { ScrollTabComponent } from '../../components/scrolltab/scrolltab';
 import { HPDetailPage } from './detail-page/detail-page';
-//import { HistoricalPriceComponent } from '../../components/historicalprice/historicalprice';
+import { HPDetailComponent } from './component/detail-component';
 
 declare var Highcharts: any;
+declare var isIpad: any;
 
 @Component({
     selector: 'page-historicalprice',
-    templateUrl: 'historicalprice.html',
+    templateUrl: "historicalprice.html",
     providers: [HistoricalPriceService]
 })
+//@Component({
+//    selector: 'page-historicalprice',
+//    templateUrl: "historicalprice-tablet.html",
+//    providers: [HistoricalPriceService]
+//})
 export class HistoricalPricePage {
 
     //@ViewChild(ScrollTabComponent) scrollTab: ScrollTabComponent;
+    @ViewChild(HPDetailComponent) hpDetailComponent: HPDetailComponent;
 
     headerTitle: string;
     selectDateText: string;
@@ -110,12 +117,14 @@ export class HistoricalPricePage {
 
     /*Tab Events*/
     selectedTab(data) {
-        this.helper.checkTokenExpired();
-        //if (!isIpad)
-            this.helper.showLoading(this);
-        //this.scrollTab.currentId = data.id;
-        this.currentInstrumentId = data.id;
-        this.genClosePriceChart();
+        if (data.id != this.currentInstrumentId) {
+            this.helper.checkTokenExpired();
+            if (!this.globalVars.isIpad)
+                this.helper.showLoading(this);
+            //this.scrollTab.currentId = data.id;
+            this.currentInstrumentId = data.id;
+            this.genClosePriceChart();
+        }
     }
     /*End Tab Events*/
 
@@ -139,9 +148,10 @@ export class HistoricalPricePage {
     /*Date Picker*/
     onChange(date) {
         this.selectedDateObj = date;
-        //if (isIpad) {
-        //    this.historicalPriceComponent.genHistoricalPriceContent(this.scrollTab.currentId, this.selectedDateObj, this.decimalDigits, this.currency);
-        //}
+        if (this.globalVars.isIpad) {
+            //this.hpDetailComponent.genHistoricalPriceContent(this.scrollTab.currentId, this.selectedDateObj, this.decimalDigits, this.currency);
+            this.hpDetailComponent.genHistoricalPriceContent(this.currentInstrumentId, this.selectedDateObj, this.decimalDigits, this.currency);
+        }
     }
     /*End Date Picker*/
 
@@ -180,6 +190,9 @@ export class HistoricalPricePage {
             //if (isIpad) {
             //    this.historicalPriceComponent.genHistoricalPriceContent(this.scrollTab.currentId, this.selectedDateObj, this.decimalDigits, this.currency);
             //}
+            if (this.globalVars.isIpad) {
+                this.hpDetailComponent.genHistoricalPriceContent(this.currentInstrumentId, this.selectedDateObj, this.decimalDigits, this.currency);
+            }
         });
     }
     drawClosePriceChart() {

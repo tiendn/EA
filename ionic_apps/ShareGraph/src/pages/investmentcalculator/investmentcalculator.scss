@@ -1,5 +1,5 @@
 page-investmentcalculator {
-    ion-label {
+    .item-block ion-label.label {
         color: #000;
     }
     /*.ical-content {*/
@@ -12,8 +12,6 @@ page-investmentcalculator {
             .item-inner {
                 /*border: 0;*/
                 font-size: 17px;
-
-
 
                 .datetime-text {
                     color: #8F8F95;
@@ -43,6 +41,7 @@ page-investmentcalculator {
         ion-label {
             font-size: 15px;
             margin-top: 14px;
+            color: #7f7f7f;
         }
     }
 
@@ -56,6 +55,12 @@ page-investmentcalculator {
             .item-inner {
                 border: 0;
             }
+        }
+    }
+    
+    .checkbox-dividends{
+        .checkbox-icon .checkbox-inner{
+            display: none;
         }
     }
 
@@ -73,10 +78,11 @@ page-investmentcalculator {
     }
 
     .item-input {
-        ion-label {
+        ion-label.label {
             position: absolute;
             top: 0;
             right: 0;
+            color: #7f7f7f;
         }
 
         ion-icon {
@@ -108,9 +114,9 @@ page-investmentcalculator {
     /*}*/
 }
 
-page-ical-detail {
+/*page-ical-detail {*/
     .ical-detail-content {
-        ion-label{
+        ion-label {
             color: #000;
         }
 
@@ -192,6 +198,224 @@ page-ical-detail {
         .end-date {
             border-top: 1px solid #ddd;
             margin-top: 20px;
+        }
+    }
+/*}*/
+
+/*Watchlist*/
+page-ical-compare {
+    .scroll-content {
+        overflow-y: hidden;
+        background-color: #484849 !important;
+    }
+
+    .item {
+        background: transparent;
+    }
+
+    .header {
+        margin-top: 30px;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .btn-header-watch-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-header-watch {
+        padding: 5px 10px;
+
+        .button-inner {
+            color: black;
+        }
+
+        border-radius: 5px;
+        min-width: 40px !important;
+        width: auto !important;
+        background-color: #fff !important;
+        color: black;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-header-watch ion-icon {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .btn-header-close {
+        position: absolute;
+        opacity: 0.98;
+        background-color: inherit;
+        background: transparent;
+    }
+
+    .div-date-content {
+        // color: white !important;
+        margin-bottom: 100px;
+    }
+
+    .last-date-content {
+        margin-left: 16px;
+        float: left;
+        // float: left;
+        // flex-direction:
+    }
+
+    .current-date-content {
+        margin-right: 16px;
+        float: right;
+        // justify-content: flex-end;
+        // align-items: flex-end;
+    }
+
+    .flex-date {
+        color: white;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .date-info {
+        display: flex;
+        flex-direction: column;
+        white-space: nowrap;
+    }
+
+    .date-info span:first-child {
+        margin-bottom: 8px;
+    }
+
+    .date-left {
+        padding-left: 20px;
+    }
+
+    .img-right {
+        margin-left: 20px;
+    }
+
+    .date-right span {
+        text-align: right;
+    }
+
+    .div-item-content {
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    .item-header-content {
+        margin: 0 !important;
+    }
+
+    ion-list {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .item-ios, ion-label {
+        /*background: transparent;
+            background-color: #484849 !important;
+            opacity: .9;*/
+        color: white !important;
+    }
+
+    ion-list .item .item-inner {
+        border-bottom: 1px solid #6b6b6c !important;
+    }
+
+    .item-content {
+        margin-bottom: 1px;
+    }
+
+    .item-content .item:first-child {
+        border-top: 0px;
+        
+    }
+
+    .item-content .item:last-child .item-inner {
+        border-bottom: 0px;
+    }
+
+    .div-item-content .item-content .item:last-child .item-inner {
+        border-bottom: 0px !important;
+    }
+
+    ion-list > .item:last-child {
+        border-bottom: 0px !important;
+    }
+
+    .item-right {
+        width: 37%;
+        text-align: right;
+    }
+
+    .item-right div {
+        display: flex;
+        float: right;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        width: 80px;
+        border-radius: 5px;
+        height: 35px;
+    }
+
+    .up {
+        background-color: #43A047;
+    }
+
+    .down {
+        background-color: #FF3A2D;
+    }
+
+    .footer {
+        margin-top: 1px;
+        padding-top: 3%;
+        border-top: 0.55px solid #c8c7cc;
+        color: #c9c9c9;
+    }
+
+    .footer a {
+        text-decoration: none;
+    }
+}
+html:lang(ar) {
+    page-ical-compare{
+        .btn-header-close{
+            left: 10px;
+            right: auto;
+        }
+        .last-date-content{
+            margin-right:16px;
+            float: right;
+            margin-left: 0;
+        }
+        .current-date-content {
+            margin-right: 0;
+            float:left;
+        }
+        .date-right span:first-child{
+            text-align: left;
+        }
+        .date-right{
+            padding-left: 16px;
+        }
+        .date-left{
+            padding-right: 16px;
+        }
+        .item-right{
+            text-align: left;
+            display:flex;
+            align-items:flex-end;
+            justify-content: flex-end;
+        }
+        .footer{
+            margin-right: 16px;
         }
     }
 }

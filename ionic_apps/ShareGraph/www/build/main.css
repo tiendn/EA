@@ -24191,7 +24191,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   font-size: 14px;
 }
 
-.platform-iphone .ical-watchlist-content, .platform-iphone .ical-indices-content {
+.platform-iphone .ical-compare-content {
   /*.item-content .item-center {
             font-size: 15px;
         }
@@ -24205,47 +24205,47 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         }*/
 }
 
-.platform-iphone .ical-watchlist-content .item-header-content > .item:last-child .item-inner, .platform-iphone .ical-watchlist-content ion-list > .item-wrapper:last-child .item-inner, .platform-iphone .ical-indices-content .item-header-content > .item:last-child .item-inner, .platform-iphone .ical-indices-content ion-list > .item-wrapper:last-child .item-inner {
+.platform-iphone .ical-compare-content .item-header-content > .item:last-child .item-inner, .platform-iphone .ical-compare-content ion-list > .item-wrapper:last-child .item-inner {
   border-bottom: 0.55px solid #6b6b6c;
 }
 
-.platform-iphone .ical-watchlist-content .div-item-content, .platform-iphone .ical-indices-content .div-item-content {
-  max-height: calc(100% - 15px - 267px);
+.platform-iphone .ical-compare-content .div-item-content {
+  max-height: calc(100% - 10px - 267px);
 }
 
-.platform-iphone .ical-watchlist-content .btn-header-watch, .platform-iphone .ical-indices-content .btn-header-watch {
+.platform-iphone .ical-compare-content .btn-header-watch {
   font-size: 12px;
   font-weight: medium;
 }
 
-.platform-iphone .ical-watchlist-content .btn-header-close, .platform-iphone .ical-indices-content .btn-header-close {
-  right: 30px;
+.platform-iphone .ical-compare-content .btn-header-close {
+  right: 10px;
   top: 0;
 }
 
-.platform-iphone .ical-watchlist-content .flex-date img, .platform-iphone .ical-indices-content .flex-date img {
+.platform-iphone .ical-compare-content .flex-date img {
   height: 40px;
   width: 40px;
 }
 
-.platform-iphone .ical-watchlist-content .item-content span, .platform-iphone .ical-watchlist-content .item-content .item-right, .platform-iphone .ical-indices-content .item-content span, .platform-iphone .ical-indices-content .item-content .item-right {
+.platform-iphone .ical-compare-content .item-content span, .platform-iphone .ical-compare-content .item-content .item-right {
   font-size: 17px;
 }
 
-.platform-iphone .ical-watchlist-content .date-info span, .platform-iphone .ical-indices-content .date-info span {
+.platform-iphone .ical-compare-content .date-info span {
   font-size: 15px;
 }
 
-.platform-iphone .ical-watchlist-content .item-content, .platform-iphone .ical-watchlist-content .item-header-content span, .platform-iphone .ical-indices-content .item-content, .platform-iphone .ical-indices-content .item-header-content span {
+.platform-iphone .ical-compare-content .item-content, .platform-iphone .ical-compare-content .item-header-content span {
   font-size: 15px;
   font-family: "HelveticaNeue-Light";
 }
 
-.platform-iphone .ical-watchlist-content .item-content .currency, .platform-iphone .ical-indices-content .item-content .currency {
+.platform-iphone .ical-compare-content .item-content .currency {
   font-size: 12px;
 }
 
-.platform-iphone .ical-watchlist-content .footer, .platform-iphone .ical-indices-content .footer {
+.platform-iphone .ical-compare-content .footer {
   padding-left: 16px;
   font-size: 14px;
 }
@@ -24259,7 +24259,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
 
 /*End Report*/
 /**/
-.keyFinancial scroll-content {
+.keyFinancial .scroll-content {
   overflow-y: hidden !important;
 }
 
@@ -24320,8 +24320,11 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   text-align: center !important;
 }
 
-.keyFinancial ion-item {
-  border-top: 0px !important;
+.keyFinancial ion-item .item-inner {
+  border-bottom: 1px solid grey;
+  padding-right: 8px;
+  background-color: white !important;
+  padding-left: 8px;
 }
 
 .keyFinancial td {
@@ -24329,12 +24332,11 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
   padding-bottom: 8px !important;
 }
 
-.keyFinancial .selected {
-  background-color: #007FFF !important;
-}
-
 .keyFinancial .selected .item-inner {
   border-bottom-color: #007FFF;
+  background-color: #007FFF !important;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .keyFinancial .selected td {
@@ -24394,8 +24396,14 @@ page-chart .btn-period-click .button-inner {
     color: white !important;
     text-align: center !important;
   }
+  .mediaHeader .tabletButton, .keyFinancialHeader .tabletButton {
+    color: white !important;
+  }
   .mediaHeader .tabletButton .button-inner, .keyFinancialHeader .tabletButton .button-inner {
     font-size: 17px !important;
+  }
+  .mediaHeader .phoneButton, .keyFinancialHeader .phoneButton {
+    color: white !important;
   }
   .mediaHeader .phoneButton .button-inner, .keyFinancialHeader .phoneButton .button-inner {
     font-size: 12px !important;
@@ -24563,6 +24571,18 @@ page-chart .btn-period-click .button-inner {
     background-position: -304px -64px !important;
   }
   /*End Press Releases Icons*/
+  /*Calendar Icons*/
+  .ion-ios-irapp-download:before {
+    width: 28px;
+    height: 32px;
+    background-position: -232px -58px !important;
+  }
+  .ion-ios-irapp-close:before {
+    width: 30px;
+    height: 30px;
+    background-position: -195px -238px !important;
+  }
+  /*End Calendar Icons*/
   /*Media Icons*/
   .ion-ios-irapp-tick:before {
     width: 24px;
@@ -24992,8 +25012,8 @@ page-chart .btn-period-click .button-inner {
     background-color: #EFEFF4 !important;
     color: #333333 !important;
   }
-  .mediaDetailContent scroll-content {
-    overflow-y: hidden;
+  .mediaDetailContent .scroll-content {
+    overflow-y: scroll;
   }
   .mediaDetailContent #videoDownloadCompletedBox {
     text-align: left;
@@ -25179,7 +25199,7 @@ page-chart .btn-period-click .button-inner {
     /** CSS Share name */
     /** CSS footer */
   }
-  page-chart .chart-page-content {
+  page-chart .scroll-content {
     margin-top: 15%;
   }
   page-chart #charts-container {
@@ -25220,14 +25240,16 @@ page-chart .btn-period-click .button-inner {
   page-chart .sharegraph-title {
     font-size: 14px;
   }
+  page-performance {
+    /*.item-header-content{
+            margin-top: 15% !important; 
+        }*/
+  }
   page-performance .div-item-content {
-    max-height: calc(100% - 130px);
+    max-height: calc(100% - 40px);
   }
   page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 0.55px solid #6b6b6c;
-  }
-  page-performance .item-header-content {
-    margin-top: 15% !important;
   }
   page-performance .item-box {
     padding-top: 8px;
@@ -25251,14 +25273,17 @@ page-chart .btn-period-click .button-inner {
     border-bottom: 0.55px solid #c8c7cc;
   }
   page-compare {
+    /*.scroll-content {
+            max-height: calc(100% - 100px);
+        }*/
     /** Box */
     /** Footer */
+    /*.content{
+            padding-top: 15%;
+        }*/
   }
   page-compare .date-title {
     font-size: 14px;
-  }
-  page-compare .scroll-content {
-    max-height: calc(100% - 100px);
   }
   page-compare .item-box {
     padding-bottom: 33.33333%;
@@ -25272,9 +25297,6 @@ page-chart .btn-period-click .button-inner {
   }
   page-compare .footer {
     font-size: 14px;
-  }
-  page-compare .content {
-    padding-top: 15%;
   }
   compare-tab .btn-header-title {
     font-size: 12px;
@@ -25389,6 +25411,13 @@ page-chart .btn-period-click .button-inner {
 /*iPhone 6+*/
 /*---------Tablet--------*/
 @media screen and (min-width: 768px) {
+  /*Listview*/
+  .list-ios .item-block:first-child {
+    border-top: 1px solid #ddd;
+  }
+  .list-ios .item-block .item-inner {
+    border-bottom-width: 1px;
+  }
   .irapp-toolbar .scrollbar {
     height: 40px;
   }
@@ -25411,8 +25440,14 @@ page-chart .btn-period-click .button-inner {
   .mediaHeader ion-toolbar, .keyFinancialHeader ion-toolbar {
     text-align: center;
   }
+  .mediaHeader .tabletButton, .keyFinancialHeader .tabletButton {
+    color: white !important;
+  }
   .mediaHeader .tabletButton .button-inner, .keyFinancialHeader .tabletButton .button-inner {
     font-size: 17px !important;
+  }
+  .mediaHeader .phoneButton, .keyFinancialHeader .phoneButton {
+    color: white !important;
   }
   .mediaHeader .phoneButton .button-inner, .keyFinancialHeader .phoneButton .button-inner {
     font-size: 12px !important;
@@ -25511,12 +25546,12 @@ page-chart .btn-period-click .button-inner {
   .ion-ios-irapp-watchlist:before {
     width: 30px;
     height: 30px;
-    background-position: -75px -378px !important;
+    background-position: -128px -378px !important;
   }
   .ion-ios-irapp-indices:before {
     width: 30px;
     height: 30px;
-    background-position: -128px -378px !important;
+    background-position: -75px -378px !important;
   }
   .ion-ios-irapp-closemodal:before {
     width: 25px;
@@ -26038,8 +26073,8 @@ page-chart .btn-period-click .button-inner {
     border-bottom: 1px solid #ddd;
     border-top: 1px solid #ddd;
   }
-  .platform-ipad .historicalprice-content scroll-content,
-  .disabled-scroll scroll-content {
+  .platform-ipad .historicalprice-content .scroll-content,
+  .disabled-scroll .scroll-content {
     overflow: hidden !important;
   }
   .hp-detail-container, .hp-master,
@@ -26069,9 +26104,6 @@ page-chart .btn-period-click .button-inner {
   .hp-watchlist-content .date-content {
     margin-bottom: 6%;
   }
-  .hp-watchlist-content scroll-content {
-    padding: 2.5% 15% 0 15%;
-  }
   .hp-watchlist-content .div-item-content {
     max-height: calc(100% - 290px);
   }
@@ -26083,10 +26115,10 @@ page-chart .btn-period-click .button-inner {
     font-weight: medium;
   }
   .hp-watchlist-content .close {
-    right: -50px;
+    right: 10px;
     top: 0px;
   }
-  .hp-watchlist-content .item-content .item-center {
+  .hp-watchlist-content .item-content .item-mid {
     font-size: 15px;
   }
   .hp-watchlist-content .item-content .item-right {
@@ -26108,12 +26140,15 @@ page-chart .btn-period-click .button-inner {
     font-size: 13px;
   }
   /*Press Releases*/
-  .pr-tablet-content scroll-content, .calendar-tablet-layout scroll-content {
+  .pr-tablet-content .scroll-content, .calendar-tablet-layout .scroll-content {
     overflow-y: hidden !important;
   }
-  .pr-content {
+  #pr-master-content {
     margin-top: 45px;
   }
+  /*.pr-content {
+        margin-top: 45px;
+    }*/
   /*.calendar-detail-content, .calendar-content{
         margin-top: 40px;
     }*/
@@ -26125,49 +26160,54 @@ page-chart .btn-period-click .button-inner {
   .ical-tablet .ical-content .selectdate-block {
     padding-top: 30px;
   }
-  .ical-watchlist-content .item-header-content > .item:last-child .item-inner, .ical-watchlist-content ion-list > .item-wrapper:last-child .item-inner, .ical-indices-content .item-header-content > .item:last-child .item-inner, .ical-indices-content ion-list > .item-wrapper:last-child .item-inner {
+  .ical-compare-content .item-header-content > .item:last-child .item-inner, .ical-compare-content ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 1px solid #6b6b6c;
   }
-  .ical-watchlist-content .div-item-content, .ical-indices-content .div-item-content {
+  .ical-compare-content .div-item-content {
     max-height: calc(100% - 15% - 281px);
   }
-  .ical-watchlist-content scroll-content, .ical-indices-content scroll-content {
+  .ical-compare-content .scroll-content {
     padding: 0 15% 0 15%;
   }
-  .ical-watchlist-content .btn-header-watch, .ical-indices-content .btn-header-watch {
+  .ical-compare-content .btn-header-watch {
     font-size: 17px;
     font-weight: medium;
   }
-  .ical-watchlist-content .div-date-content, .ical-indices-content .div-date-content {
+  .ical-compare-content .div-date-content {
     margin-bottom: 150px;
   }
-  .ical-watchlist-content .btn-header-close, .ical-indices-content .btn-header-close {
+  .ical-compare-content .btn-header-close {
     right: -50px;
     top: -7px;
   }
-  .ical-watchlist-content .flex-date img, .ical-indices-content .flex-date img {
+  .ical-compare-content .flex-date img {
     height: 64px;
     width: 61px;
   }
-  .ical-watchlist-content .item-content .item-center, .ical-indices-content .item-content .item-center {
+  .ical-compare-content .item-content .item-center {
     font-size: 15px;
   }
-  .ical-watchlist-content .item-content .item-right, .ical-indices-content .item-content .item-right {
+  .ical-compare-content .item-content .item-right {
     font-size: 17px;
   }
-  .ical-watchlist-content .item-content .item-left, .ical-indices-content .item-content .item-left {
+  .ical-compare-content .item-content .item-left {
     font-size: 20px;
   }
-  .ical-watchlist-content .date-info span, .ical-indices-content .date-info span {
+  .ical-compare-content .date-info span {
     font-size: 24px;
   }
-  .ical-watchlist-content .item-content, .ical-watchlist-content .item-header-content span, .ical-indices-content .item-content, .ical-indices-content .item-header-content span {
+  .ical-compare-content .item-content, .ical-compare-content .item-header-content span {
     font-size: 20px;
   }
-  .ical-watchlist-content .item-content .currency, .ical-indices-content .item-content .currency {
+  .ical-compare-content .item-header-content > .item-block:first-child {
+    border-top: 1px solid #c8c7cc !important;
+  }
+  .ical-compare-content .item-content .currency {
     font-size: 13px;
   }
-  .ical-watchlist-content .footer, .ical-indices-content .footer {
+  .ical-compare-content .footer {
+    border-top: 1px solid #c8c7cc !important;
+    padding-left: 0;
     font-size: 13px;
   }
   /*ShareGraph*/
@@ -26208,8 +26248,8 @@ page-chart .btn-period-click .button-inner {
     background-color: #EFEFF4 !important;
     color: #333333 !important;
   }
-  .mediaDetailContent scroll-content {
-    overflow-y: hidden;
+  .mediaDetailContent .scroll-content {
+    overflow-y: scroll;
   }
   .mediaDetailContent .popover {
     text-align: center;
@@ -26381,8 +26421,8 @@ page-chart .btn-period-click .button-inner {
     /** Button Period */
     /** Footer */
   }
-  page-chart .chart-page-content {
-    margin-top: 10%;
+  page-chart .scroll-content {
+    margin-top: 10% !important;
   }
   page-chart #charts-container {
     border-top: 3px solid #848484;
@@ -26411,8 +26451,6 @@ page-chart .btn-period-click .button-inner {
   page-chart .btn-share span {
     font-size: 14px !important;
     font-family: "HelveticaNeue-Medium";
-    padding-left: 16px;
-    padding-right: 16px;
   }
   page-chart .btn-share {
     width: 13%;
@@ -26442,14 +26480,17 @@ page-chart .btn-period-click .button-inner {
   page-performance [item-right] {
     margin: 16px !important;
   }
-  page-performance .div-item-content {
-    border-bottom: 1px solid #c8c7cc;
+  page-performance .div-item-content .list-ios > .item-block:last-child {
+    border-bottom: 1px solid #c8c7cc !important;
   }
   page-performance .item-header-content > .item:last-child .item-inner, page-performance ion-list > .item-wrapper:last-child .item-inner {
     border-bottom: 1px solid #6b6b6c;
   }
   page-performance .list-ios > .item-block:first-child {
-    border-top: 1px solid #c8c7cc;
+    border-top: 1px solid #c8c7cc !important;
+  }
+  page-performance .list-ios > .item-block:last-child {
+    /*border-bottom: 1px solid #c8c7cc !important;*/
   }
   page-performance .div-item-content {
     max-height: calc(100% - 130px);
@@ -26557,7 +26598,7 @@ page-chart .btn-period-click .button-inner {
     left: -50px;
     top: 3px;
   }
-  html:lang(ar) .ical-watchlist-content, html:lang(ar) .ical-indices-content {
+  html:lang(ar) .ical-compare-content {
     right: auto;
     left: -50px;
   }
@@ -26596,9 +26637,6 @@ page-chart .btn-period-click .button-inner {
   .mediaTabletSharePopup .popover-content {
     width: 335px;
     left: 33% !important;
-  }
-  #webcastFooter {
-    position: absolute;
   }
   #videoContainer {
     visibility: hidden;
@@ -26686,15 +26724,19 @@ page-chart .btn-period-click .button-inner {
     float: left;
     padding-left: 15px;
   }
+  compare-tab #charts {
+    height: 365px;
+    margin-bottom: 45px;
+  }
+  compare-tab #charts .highcharts-container {
+    height: 380px !important;
+  }
 }
 
 @media screen and (min-width: 768px) and (orientation: landscape) {
   .mediaTabletSharePopup .popover-content {
     width: 335px;
     left: 44% !important;
-  }
-  #webcastFooter {
-    position: static;
   }
   #videoContainer {
     position: relative;
@@ -26762,7 +26804,7 @@ page-chart .btn-period-click .button-inner {
     width: 19%;
   }
   /*Share Graph*/
-  page-sharegraph scroll-content {
+  page-sharegraph .scroll-content {
     overflow-y: hidden;
   }
   page-sharegraph div#chart-container {
@@ -26800,8 +26842,12 @@ page-chart .btn-period-click .button-inner {
     width: 60%;
   }
   page-chart .share-item {
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 20% !important;
+    margin-right: 20% !important;
+  }
+  page-chart .footer {
+    margin-left: 60px !important;
+    /*margin-right: 60px;;*/
   }
   page-chart .chart-page-content {
     margin-top: 7%;
@@ -26821,9 +26867,144 @@ page-chart .btn-period-click .button-inner {
   page-performance .item-header-content {
     margin-top: 10% !important;
   }
-  compare-tab .footer {
-    margin-left: 60px !important;
-    margin-right: 60px !important;
+  compare-tab {
+    /*.footer {
+            margin-left: 60px !important;
+            margin-right: 60px !important;
+        }*/
+  }
+}
+
+/*Custom Toolbar*/
+.irapp-toolbar {
+  padding: 0;
+  min-height: 0;
+}
+
+.irapp-toolbar .scrollbar .btn-active {
+  border: 0;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+}
+
+.irapp-toolbar .scrollbar .button {
+  min-height: 40px;
+}
+
+/*End Custom Toolbar*/
+.btn-leftmenu {
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-order: 1;
+}
+
+/*Share Information*/
+.share-information-page ion-list .item {
+  padding: 0;
+}
+
+.share-information-page ion-list .item .item-inner {
+  padding: 10px 15px;
+  /*padding-left: 15px;
+                padding-top: 10px;
+                padding-bottom: 10px;*/
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.share-information-page ion-list .item .item-inner ion-label, .share-information-page ion-list .item .item-inner ion-note {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+
+.share-information-page ion-list .item .item-inner ion-note {
+  padding-top: 5px;
+}
+
+/*End Share Information*/
+/*Historical Price*/
+/*Watchlist Modal*/
+.hp-watchlist-content .header {
+  margin-top: 3%;
+  margin-bottom: 8%;
+}
+
+.hp-watchlist-content .date-content {
+  margin-bottom: 8%;
+}
+
+.hp-watchlist-content .div-item-content {
+  max-height: calc(100% - 9% - 181px);
+}
+
+.hp-watchlist-content .item-header-content > .item:last-child .item-inner, .hp-watchlist-content ion-list > .item-wrapper:last-child .item-inner {
+  border-bottom: 0.55px solid #6b6b6c;
+}
+
+.hp-watchlist-content .btn-watch {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: "HelveticaNeue-Light";
+}
+
+.hp-watchlist-content .current-date span:first-of-type {
+  font-size: 20px;
+}
+
+.hp-watchlist-content .current-date span:last-of-type {
+  font-size: 14px;
+}
+
+.hp-watchlist-content .close {
+  right: 15px;
+}
+
+.hp-watchlist-content .item-content .item span {
+  font-size: 17px;
+}
+
+.hp-watchlist-content .current-date span {
+  font-size: 15px;
+}
+
+.hp-watchlist-content .item-content, .hp-watchlist-content .item-header-content span {
+  font-size: 15px;
+  font-family: "HelveticaNeue-Light";
+}
+
+.hp-watchlist-content .item-content .item span.currency {
+  font-size: 12px;
+}
+
+.hp-watchlist-content .footer {
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 767px) {
+  html:lang(ar) {
+    /*Compare Tabs SG Module*/
+  }
+  html:lang(ar) compare-tab .show-tabbar a:first-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+  html:lang(ar) compare-tab .show-tabbar a:nth-child(3) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+  }
+  html:lang(ar) page-chart .footer {
+    margin-left: 0 !important;
+    margin-right: 16px !important;
+  }
+  html:lang(ar) .hp-watchlist-content .close {
+    left: 15px;
+    right: auto;
   }
 }
 
@@ -26873,6 +27054,10 @@ page-historicalprice .historicalprice-content .cards-chart .highcharts-data-labe
   font-size: 12px;
   color: #000;
   font-weight: normal;
+}
+
+.splitview-block {
+  height: 100%;
 }
 
 .select-date.item-block {
@@ -26980,8 +27165,11 @@ page-historicalprice .historicalprice-content .cards-chart .highcharts-data-labe
 
 /*Watchlist Modal*/
 page-hp-watchlist ion-content {
-  overflow-y: hidden;
   background-color: #484849 !important;
+}
+
+page-hp-watchlist .scroll-content {
+  overflow-y: hidden;
 }
 
 page-hp-watchlist .header {
@@ -27144,7 +27332,7 @@ page-hp-watchlist .footer a {
 
 @media screen and (min-width: 768px) {
   page-hp-watchlist .scroll-content {
-    margin: 2.5% 20% 0 20%;
+    margin: 2.5% 15% 0 15%;
   }
   page-hp-watchlist ion-list .item .item-inner {
     border-bottom: 1px solid #6b6b6c !important;
@@ -27168,9 +27356,22 @@ html:lang(ar) page-hp-watchlist .current-date {
   padding-left: 0;
 }
 
+html:lang(ar) page-hp-watchlist .close {
+  left: auto !important;
+  top: -3px !important;
+}
+
+html:lang(ar) page-hp-watchlist .btn-watch {
+  margin-left: 0 !important;
+}
+
 html:lang(ar) page-hp-watchlist .item-right {
   display: block;
   text-align: left;
+}
+
+html:lang(ar) page-hp-watchlist .footer {
+  margin-right: 16px;
 }
 
 /*Variables*/
@@ -28283,7 +28484,7 @@ page-investmentcalculator {
   /*}*/
 }
 
-page-investmentcalculator ion-label {
+page-investmentcalculator .item-block ion-label.label {
   color: #000;
 }
 
@@ -28320,6 +28521,7 @@ page-investmentcalculator .input-noofshare .text-input, page-investmentcalculato
 page-investmentcalculator .input-noofshare ion-label, page-investmentcalculator .input-amount ion-label {
   font-size: 15px;
   margin-top: 14px;
+  color: #7f7f7f;
 }
 
 page-investmentcalculator .input-noofshare, page-investmentcalculator .input-amount, page-investmentcalculator .checkbox-dividends {
@@ -28331,6 +28533,10 @@ page-investmentcalculator .input-noofshare, page-investmentcalculator .input-amo
 
 page-investmentcalculator .input-noofshare.item-block .item-inner, page-investmentcalculator .input-amount.item-block .item-inner, page-investmentcalculator .checkbox-dividends.item-block .item-inner {
   border: 0;
+}
+
+page-investmentcalculator .checkbox-dividends .checkbox-icon .checkbox-inner {
+  display: none;
 }
 
 page-investmentcalculator .input-noofshare, page-investmentcalculator .input-amount {
@@ -28346,10 +28552,11 @@ page-investmentcalculator .checkbox-dividends {
   margin-bottom: 30px;
 }
 
-page-investmentcalculator .item-input ion-label {
+page-investmentcalculator .item-input ion-label.label {
   position: absolute;
   top: 0;
   right: 0;
+  color: #7f7f7f;
 }
 
 page-investmentcalculator .item-input ion-icon {
@@ -28378,90 +28585,337 @@ page-investmentcalculator .mess ion-label {
   margin: 0;
 }
 
-page-ical-detail .ical-detail-content {
+/*page-ical-detail {*/
+.ical-detail-content {
   /*ion-note{
         color: #8F8F95;
     }*/
 }
 
-page-ical-detail .ical-detail-content ion-label {
+.ical-detail-content ion-label {
   color: #000;
 }
 
-page-ical-detail .ical-detail-content ion-label, page-ical-detail .ical-detail-content ion-note {
+.ical-detail-content ion-label, .ical-detail-content ion-note {
   font-size: 17px;
 }
 
-page-ical-detail .ical-detail-content .instrument {
+.ical-detail-content .instrument {
   margin-top: 30px;
   margin-bottom: 20px;
   border-bottom: 1px solid #ddd;
   border-top: 1px solid #ddd !important;
 }
 
-page-ical-detail .ical-detail-content .instrument .item-inner {
+.ical-detail-content .instrument .item-inner {
   border: 0;
 }
 
-page-ical-detail .ical-detail-content .compare {
+.ical-detail-content .compare {
   background: transparent;
 }
 
-page-ical-detail .ical-detail-content .compare .cards-compare {
+.ical-detail-content .compare .cards-compare {
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
-page-ical-detail .ical-detail-content .compare .cards-compare ion-card-header, page-ical-detail .ical-detail-content .compare .cards-compare ion-card-content {
+.ical-detail-content .compare .cards-compare ion-card-header, .ical-detail-content .compare .cards-compare ion-card-content {
   padding: 0;
 }
 
-page-ical-detail .ical-detail-content .compare .cards-compare ion-card-header {
+.ical-detail-content .compare .cards-compare ion-card-header {
   padding-bottom: 10px;
 }
 
-page-ical-detail .ical-detail-content .compare .item-inner {
+.ical-detail-content .compare .item-inner {
   border: 0;
 }
 
-page-ical-detail .ical-detail-content ion-icon {
+.ical-detail-content ion-icon {
   margin: 0;
 }
 
-page-ical-detail .ical-detail-content .change {
+.ical-detail-content .change {
   border-top: 1px solid #ddd;
 }
 
-page-ical-detail .ical-detail-content .change-percent {
+.ical-detail-content .change-percent {
   border-bottom: 1px solid #ddd;
 }
 
-page-ical-detail .ical-detail-content .change-percent .item-inner {
+.ical-detail-content .change-percent .item-inner {
   border: 0;
 }
 
-page-ical-detail .ical-detail-content .change .item-inner, page-ical-detail .ical-detail-content .change-percent .item-inner {
+.ical-detail-content .change .item-inner, .ical-detail-content .change-percent .item-inner {
   /*margin-left: 10px;*/
 }
 
-page-ical-detail .ical-detail-content .start-date {
+.ical-detail-content .start-date {
   border-top: 1px solid #ddd;
   /*.item-inner{
             border: 0;
         }*/
 }
 
-page-ical-detail .ical-detail-content .start-value {
+.ical-detail-content .start-value {
   border-bottom: 1px solid #ddd;
 }
 
-page-ical-detail .ical-detail-content .start-value .item-inner {
+.ical-detail-content .start-value .item-inner {
   border: 0;
 }
 
-page-ical-detail .ical-detail-content .end-date {
+.ical-detail-content .end-date {
   border-top: 1px solid #ddd;
   margin-top: 20px;
+}
+
+/*}*/
+/*Watchlist*/
+page-ical-compare .scroll-content {
+  overflow-y: hidden;
+  background-color: #484849 !important;
+}
+
+page-ical-compare .item {
+  background: transparent;
+}
+
+page-ical-compare .header {
+  margin-top: 30px;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+page-ical-compare .btn-header-watch-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-ical-compare .btn-header-watch {
+  padding: 5px 10px;
+  border-radius: 5px;
+  min-width: 40px !important;
+  width: auto !important;
+  background-color: #fff !important;
+  color: black;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-ical-compare .btn-header-watch .button-inner {
+  color: black;
+}
+
+page-ical-compare .btn-header-watch ion-icon {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+page-ical-compare .btn-header-close {
+  position: absolute;
+  opacity: 0.98;
+  background-color: inherit;
+  background: transparent;
+}
+
+page-ical-compare .div-date-content {
+  margin-bottom: 100px;
+}
+
+page-ical-compare .last-date-content {
+  margin-left: 16px;
+  float: left;
+}
+
+page-ical-compare .current-date-content {
+  margin-right: 16px;
+  float: right;
+}
+
+page-ical-compare .flex-date {
+  color: white;
+  height: auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+page-ical-compare .date-info {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  white-space: nowrap;
+}
+
+page-ical-compare .date-info span:first-child {
+  margin-bottom: 8px;
+}
+
+page-ical-compare .date-left {
+  padding-left: 20px;
+}
+
+page-ical-compare .img-right {
+  margin-left: 20px;
+}
+
+page-ical-compare .date-right span {
+  text-align: right;
+}
+
+page-ical-compare .div-item-content {
+  overflow-y: scroll;
+  position: relative;
+}
+
+page-ical-compare .item-header-content {
+  margin: 0 !important;
+}
+
+page-ical-compare ion-list {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+page-ical-compare .item-ios, page-ical-compare ion-label {
+  /*background: transparent;
+            background-color: #484849 !important;
+            opacity: .9;*/
+  color: white !important;
+}
+
+page-ical-compare ion-list .item .item-inner {
+  border-bottom: 1px solid #6b6b6c !important;
+}
+
+page-ical-compare .item-content {
+  margin-bottom: 1px;
+}
+
+page-ical-compare .item-content .item:first-child {
+  border-top: 0px;
+}
+
+page-ical-compare .item-content .item:last-child .item-inner {
+  border-bottom: 0px;
+}
+
+page-ical-compare .div-item-content .item-content .item:last-child .item-inner {
+  border-bottom: 0px !important;
+}
+
+page-ical-compare ion-list > .item:last-child {
+  border-bottom: 0px !important;
+}
+
+page-ical-compare .item-right {
+  width: 37%;
+  text-align: right;
+}
+
+page-ical-compare .item-right div {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  float: right;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 80px;
+  border-radius: 5px;
+  height: 35px;
+}
+
+page-ical-compare .up {
+  background-color: #43A047;
+}
+
+page-ical-compare .down {
+  background-color: #FF3A2D;
+}
+
+page-ical-compare .footer {
+  margin-top: 1px;
+  padding-top: 3%;
+  border-top: 0.55px solid #c8c7cc;
+  color: #c9c9c9;
+}
+
+page-ical-compare .footer a {
+  text-decoration: none;
+}
+
+html:lang(ar) page-ical-compare .btn-header-close {
+  left: 10px;
+  right: auto;
+}
+
+html:lang(ar) page-ical-compare .last-date-content {
+  margin-right: 16px;
+  float: right;
+  margin-left: 0;
+}
+
+html:lang(ar) page-ical-compare .current-date-content {
+  margin-right: 0;
+  float: left;
+}
+
+html:lang(ar) page-ical-compare .date-right span:first-child {
+  text-align: left;
+}
+
+html:lang(ar) page-ical-compare .date-right {
+  padding-left: 16px;
+}
+
+html:lang(ar) page-ical-compare .date-left {
+  padding-right: 16px;
+}
+
+html:lang(ar) page-ical-compare .item-right {
+  text-align: left;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+html:lang(ar) page-ical-compare .footer {
+  margin-right: 16px;
 }
 
 .report-group {
@@ -28990,6 +29444,14 @@ page-sharegraph .custom-spinner .spinner-blade:nth-child(12) {
   }
 }
 
+html:lang(ar) page-sharegraph #chart-container {
+  direction: ltr;
+}
+
+ion-content-section {
+  height: auto;
+}
+
 compare-tab {
   /*ion-tab{
         margin-top: 25px;
@@ -29018,12 +29480,31 @@ compare-tab ion-header {
   justify-content: center;
 }
 
+compare-tab ion-tab {
+  margin-top: 70px;
+}
+
+compare-tab ion-tab .ion-page .fixed-content, compare-tab ion-tab .ion-page .scroll-content {
+  margin-top: 0 !important;
+  height: calc(100% - 80px);
+}
+
+compare-tab .tabbar.show-tabbar {
+  margin-bottom: 20px;
+  /*.tab-button{
+            height: 30px !important;
+        }
+        .tab-button-text{
+            line-height: normal !important;
+        }*/
+}
+
 compare-tab .toolbar-content {
   /*margin-top: 30px;
         margin-bottom: 30px;*/
 }
 
-compare-tab .toolbar-content ion-buttons {
+compare-tab .toolbar-content button {
   text-align: center;
 }
 
@@ -29051,6 +29532,8 @@ compare-tab .btn-header-close {
   width: 25px;
   margin: 0;
   top: 32px;
+  padding-left: 0;
+  padding-right: 0;
   background: #484849;
 }
 
@@ -29099,12 +29582,12 @@ compare-tab .tab-button[aria-selected=true] {
   background: #848484 !important;
 }
 
-compare-tab ion-page.show-page scroll-content {
+compare-tab ion-page.show-page .scroll-content {
   /*overflow-y: hidden !important;*/
   margin-top: 75px !important;
 }
 
-.compare-tab > ion-content > scroll-content {
+compare-tab > ion-content > .scroll-content {
   overflow-y: hidden !important;
 }
 
@@ -29118,6 +29601,9 @@ html:lang(ar) compare-tab .btn-header-close {
 }
 
 page-chart {
+  /*.scroll-content {
+        margin-top: 70px !important;
+    }*/
   /**
     Some default
   **/
@@ -29128,6 +29614,9 @@ page-chart {
      overflow-y: hidden;
 
   }*/
+  /*.scroll-content {
+        margin-top: 65px !important;
+    }*/
   /**
     CSS: Chart Page
   **/
@@ -29193,6 +29682,7 @@ page-chart #charts {
   margin-left: 5%;
   margin-bottom: 25px;
   padding-bottom: -15px;
+  direction: ltr;
 }
 
 page-chart #charts .highcharts-container svg {
@@ -29207,6 +29697,7 @@ page-chart #charts .highcharts-container {
 page-chart .share-item {
   height: 10px;
   width: 100%;
+  margin-left: 16px;
 }
 
 page-chart .share-name {
@@ -29215,7 +29706,7 @@ page-chart .share-name {
 }
 
 page-chart .footer {
-  margin-left: 16px !important;
+  margin-left: 16px;
 }
 
 page-chart .tooltip {
@@ -29299,6 +29790,10 @@ page-compare .content {
   height: 100%;
 }
 
+page-compare .content-box {
+  margin-top: 10%;
+}
+
 page-compare .ticker, page-compare .price {
   font-size: 18px !important;
   color: #fff;
@@ -29333,18 +29828,18 @@ page-compare .footer a {
   color: #0091ff;
 }
 
-html:lang(ar) .compare-tab .currency {
+html:lang(ar) page-compare .currency {
   left: 5% !important;
   right: auto !important;
   margin-top: -10% !important;
 }
 
-html:lang(ar) .compare-tab .change-pro {
+html:lang(ar) page-compare .change-pro {
   right: 10% !important;
   margin-top: -10% !important;
 }
 
-html:lang(ar) .compare-tab .price, html:lang(ar) .compare-tab .ticker {
+html:lang(ar) page-compare .price, html:lang(ar) page-compare .ticker {
   margin-right: 10% !important;
 }
 

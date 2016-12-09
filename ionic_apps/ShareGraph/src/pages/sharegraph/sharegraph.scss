@@ -213,3 +213,11 @@ page-sharegraph {
       }
     }
 }
+
+html:lang(ar) {
+    page-sharegraph {
+        #chart-container{
+            direction: ltr;
+        }
+    }
+}

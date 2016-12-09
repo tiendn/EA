@@ -1,3 +1,6 @@
+ion-content-section {
+  height: auto;
+}
 compare-tab {
     /*ion-tab{
         margin-top: 25px;
@@ -15,10 +18,30 @@ compare-tab {
         justify-content: center;
     }
 
+    ion-tab{
+        margin-top: 70px;
+        .ion-page{
+            .fixed-content, .scroll-content{
+                margin-top: 0 !important;
+                height: calc(100% - 80px);
+            }
+        }
+    }
+
+    .tabbar.show-tabbar{
+        margin-bottom: 20px;
+        /*.tab-button{
+            height: 30px !important;
+        }
+        .tab-button-text{
+            line-height: normal !important;
+        }*/
+    }
+
     .toolbar-content{
         /*margin-top: 30px;
         margin-bottom: 30px;*/
-        ion-buttons{
+        button{
             text-align: center;
         }
     }
@@ -46,6 +69,8 @@ compare-tab {
         width: 25px;
         margin: 0;
         top: 32px;
+        padding-left: 0;
+        padding-right: 0;
         background: #484849;
     }
     .irapp-icon.ion-ios-irapp-closemodal {
@@ -96,13 +121,13 @@ compare-tab {
         background: #848484 !important;
     }
 
-    ion-page.show-page scroll-content {
+    ion-page.show-page .scroll-content {
         /*overflow-y: hidden !important;*/
         margin-top: 75px !important;
     }
 }
 
-.compare-tab > ion-content > scroll-content {
+compare-tab > ion-content > .scroll-content {
     overflow-y: hidden !important;
 }
 html:lang(ar) {

@@ -54,10 +54,13 @@ page-compare {
     
     // margin: 20% 2% 40% 10%;
   }
+
   /** CSS box
 
   **/
-
+  .content-box{
+    margin-top:10%;
+  }
   .ticker, .price{
     font-size: 18px !important;
     color: #fff;
@@ -95,7 +98,7 @@ page-compare {
 
 }
 html:lang(ar) {
-    .compare-tab {
+    page-compare {
         .currency {
             left : 5% !important;
             right: auto !important;
@@ -110,4 +113,5 @@ html:lang(ar) {
         }
 
     }
+    
 }

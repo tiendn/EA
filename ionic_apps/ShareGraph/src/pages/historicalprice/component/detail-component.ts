@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Helper } from '../../../common/helper';
@@ -7,11 +7,8 @@ import { HistoricalPriceService } from '../../../providers/historicalprice-servi
 import { PressReleasesService } from '../../../providers/pressreleases-service';
 import { ProfileService } from '../../../providers/profile-service';
 // import { PressReleasesDetailPage } from '../../pressreleases/detail-page/detail-page';
-//import {PressReleasesComponent} from '../../components/pressreleases/pressreleases';
-import {HPWatchListPage} from '../watchlist/watchlist';
-
-//import {ICalWatchListPage} from '../../pages/investmentcalculator/watchlist/watchlist';
-//import {ICalIndicesPage} from '../../pages/investmentcalculator/indices/indices';
+// import { PressReleasesDetailComponent } from '../../pressreleases/component/detail-component';
+import { HPWatchListPage } from '../watchlist/watchlist';
 
 declare var Highcharts: any;
 
@@ -22,6 +19,9 @@ declare var Highcharts: any;
 })
 
 export class HPDetailComponent {
+
+    // @ViewChild(PressReleasesDetailComponent) prDetailComponent: PressReleasesDetailComponent;
+
     selectDateText: string;
     cancelText: string;
     doneText: string;
@@ -331,13 +331,13 @@ export class HPDetailComponent {
         return this.helper.dateFormat(displayDate, this.globalVars.generalSettings.longDateFormat);
     }
     getPRDetail(prItem) {
-    //     if (!this.isIpad) {
-    //         this.nav.push(PressReleasesDetailPage, { prData: prItem });
-    //     }
-    //     //else {
-    //     //    this.prDetailComponent.getPrDetailData(prItem);
-    //     //    this.showHPDetail = false;
-    //     //}
+         if (!this.isIpad) {
+             //this.nav.push(PressReleasesDetailPage, { prData: prItem });
+         }
+         else {
+            //  this.prDetailComponent.getPrDetailData(prItem);
+             this.showHPDetail = false;
+         }
     }
     backToHistoricalPrice() {
         this.showHPDetail = true;
@@ -353,6 +353,10 @@ export class HPDetailComponent {
             decimalDigits: this.decimalDigits
         }
         let watchlistModal = this.modalController.create(HPWatchListPage, { data: params });
+        watchlistModal.onDidDismiss(data => {
+            if (data && data.goToSettings)
+                this.helper.goToSettings();
+        });
         watchlistModal.present();
     }
 }

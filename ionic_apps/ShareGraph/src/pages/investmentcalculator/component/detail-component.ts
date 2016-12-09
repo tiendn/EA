@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 import { ModalController } from 'ionic-angular';
-import { DomSanitizer } from '@angular/platform-browser';
 import { Helper } from '../../../common/helper';
 import { GlobalVars } from '../../../common/global-vars';
 import { ICalService } from '../../../providers/ical-service';
 
 import { ProfileService } from '../../../providers/profile-service';
-//import {ICalWatchListPage} from '../../pages/investmentcalculator/watchlist/watchlist';
-//import {ICalIndicesPage} from '../../pages/investmentcalculator/indices/indices';
+import { ICalComparePage } from '../compare/compare';
 
 export interface ICalPhrases {
     instrument: string;
@@ -130,18 +128,19 @@ export class ICalDetailComponent {
     }
 
     showModal(type) {
-        //let modal = null;
-        //let params = {
-        //    dSDate: this.icalData.StartDate,
-        //    dEDate: this.icalData.EndDate,
-        //    pSDate: this.paramsData.startDate,
-        //    pEDate: this.paramsData.endDate,
-        //    decimalDigits: this.decimalDigits
-        //};
-        //if (type == "watchlist")
-        //    modal = this.modalController.create(ICalWatchListPage, { data: params });
-        //else
-        //    modal = this.modalController.create(ICalIndicesPage, { data: params });
-        //modal.present();
+        let modal = null;
+        let params = {
+            dSDate: this.icalData.StartDate,
+            dEDate: this.icalData.EndDate,
+            pSDate: this.paramsData.startDate,
+            pEDate: this.paramsData.endDate,
+            decimalDigits: this.decimalDigits
+        };
+        modal = this.modalController.create(ICalComparePage, { data: params, type: type });
+        modal.onDidDismiss(data => {
+            if (data && data.goToSettings)
+                this.helper.goToSettings();
+        });
+        modal.present();
     }
 }

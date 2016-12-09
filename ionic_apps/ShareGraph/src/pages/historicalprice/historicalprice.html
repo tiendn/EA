@@ -13,27 +13,36 @@
 </ion-header>
 
 <ion-content no-padding ngClass="historicalprice-content">
-    <button ion-item class="select-date">
-        <ion-label>{{selectDateText}}</ion-label>
-        <ion-datetime [displayFormat]="dateFormat" [max]="maxDate" [(ngModel)]="selectedDate"
-                      [pickerFormat]="pickerFormat" (ionChange)="onChange($event)"
-                      [cancelText]="cancelText" [doneText]="doneText"
-                      [monthNames]="monthNames"
-                      [monthShortNames]="monthShortNames"
-                      [dayNames]="dayNames"
-                      [dayShortNames]="dayShortNames">
-        </ion-datetime>
-    </button>
-    <button ion-button full light (click)="showData()" class="btn-showdata">{{showDataText}}</button>
-    <ion-card class="cards-chart">
-        <ion-card-header>{{chartTitle}}</ion-card-header>
-        <ion-card-content>
-            <div class="chart-currency">{{currency}}</div>
-            <div class="chart-closeprice" id="closeprice-chart"></div>
-        </ion-card-content>
-        <ion-note>{{chartNote}}</ion-note>
-        <!--<ion-card-footer>{{chartNote}}</ion-card-footer>-->
-    </ion-card>
+    <ion-grid [ngClass]="globalVars.isIpad ? 'hp-tablet irapp-splitview' : 'irapp-phone-layout'">
+        <ion-row>
+            <ion-col class="left-panel">
+                <div class="hp-master">
+                    <button ion-item ngClass="select-date">
+                        <ion-label>{{selectDateText}}</ion-label>
+                        <ion-datetime [displayFormat]="dateFormat" [max]="maxDate" [(ngModel)]="selectedDate"
+                                      [pickerFormat]="pickerFormat" (ionChange)="onChange($event)"
+                                      [cancelText]="cancelText" [doneText]="doneText"
+                                      [monthNames]="monthNames"
+                                      [monthShortNames]="monthShortNames"
+                                      [dayNames]="dayNames"
+                                      [dayShortNames]="dayShortNames"></ion-datetime>
+                    </button>
+                    <button ion-button full light (click)="showData()" *ngIf="!globalVars.isIpad" class="btn-showdata">{{showDataText}}</button>
+                    <ion-card ngClass="cards-chart">
+                        <ion-card-header>{{chartTitle}}</ion-card-header>
+                        <ion-card-content>
+                            <div class="chart-currency">{{currency}}</div>
+                            <div class="chart-closeprice" id="closeprice-chart"></div>
+                        </ion-card-content>
+                        <ion-note>{{chartNote}}</ion-note>
+                    </ion-card>
+                </div>
+            </ion-col>
+            <ion-col class="right-panel" *ngIf="globalVars.isIpad">
+                <historicalprice-detail id="historicalprice-detail" class="historicalprice-detail-content"></historicalprice-detail>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
 </ion-content>
 
 

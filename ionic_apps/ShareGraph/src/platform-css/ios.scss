@@ -201,13 +201,13 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         }
     }
     /*Invesment Calculator*/
-    .ical-watchlist-content, .ical-indices-content {
+    .ical-compare-content {
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 0.55px solid #6b6b6c;
         }
 
         .div-item-content {
-            max-height: calc(100% - 15px - 267px );
+            max-height: calc(100% - 10px - 267px );
         }
 
         .btn-header-watch {
@@ -220,7 +220,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         //     width: 20px;
         // }
         .btn-header-close {
-            right: 30px;
+            right: 10px;
             top: 0;
         }
 
@@ -277,7 +277,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
 
 /**/
 .keyFinancial {
-    scroll-content {
+    .scroll-content {
         overflow-y: hidden !important;
     }
 
@@ -335,8 +335,13 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     }
 
 
-    ion-item {
-        border-top: 0px !important;
+    ion-item {        
+        .item-inner {  
+            border-bottom: 1px solid grey;         
+            padding-right:8px;
+            background-color: white !important;
+            padding-left:8px;
+        }
     }
 
     td {
@@ -345,10 +350,11 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
     }
 
     .selected {
-        background-color: #007FFF !important;
-
         .item-inner {
             border-bottom-color: #007FFF;
+            background-color: #007FFF !important;
+            padding-left:8px;
+            padding-right:8px;
         }
 
         td {
@@ -422,12 +428,14 @@ page-chart {
             .button-inner {
                 font-size: 17px !important;
             }
+            color:white !important;
         }
 
         .phoneButton {
             .button-inner {
                 font-size: 12px !important;
             }
+            color:white !important;
         }
 
         .mediaYearHeader {
@@ -635,6 +643,20 @@ page-chart {
         background-position: -304px -64px !important;
     }
     /*End Press Releases Icons*/
+
+    /*Calendar Icons*/
+    .ion-ios-irapp-download:before {
+        width: 28px;
+        height: 32px;
+        background-position: -232px -58px !important;
+    }
+
+    .ion-ios-irapp-close:before {
+        width: 30px;
+        height: 30px;
+        background-position: -195px -238px !important;
+    }
+    /*End Calendar Icons*/
 
     /*Media Icons*/
     .ion-ios-irapp-tick:before {
@@ -1174,8 +1196,8 @@ page-chart {
     }
 
     .mediaDetailContent {
-        scroll-content {
-            overflow-y: hidden;
+        .scroll-content {
+            overflow-y: scroll;
         }
 
         #videoDownloadCompletedBox {
@@ -1382,12 +1404,12 @@ page-chart {
         }
     }
 
-    page-chart {
+   page-chart {
         /** CSS Chart */
         // .scroll-content {
         //     max-height: calc(100% - 20px);
         // }
-        .chart-page-content{
+        .scroll-content{
             margin-top: 15%;
         }
         #charts-container {
@@ -1441,15 +1463,15 @@ page-chart {
 
     page-performance {
         .div-item-content {
-            max-height: calc(100% - 130px );
+            max-height: calc(100% - 40px );
         }
 
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 0.55px solid #6b6b6c;
         }
-        .item-header-content{
+        /*.item-header-content{
             margin-top: 15% !important; 
-        }
+        }*/
         .item-box {
             padding-top: 8px;
             padding-bottom: 8px;
@@ -1483,9 +1505,9 @@ page-chart {
             font-size: 14px;
         }
 
-        .scroll-content {
+        /*.scroll-content {
             max-height: calc(100% - 100px);
-        }
+        }*/
         /** Box */
         .item-box {
             padding-bottom: (100%/3);
@@ -1503,11 +1525,10 @@ page-chart {
         .footer {
             font-size: 14px;
         }
-        .content{
+        /*.content{
             padding-top: 15%;
-        }
+        }*/
     }
-
     compare-tab {
         .btn-header-title {
             font-size: 12px;
@@ -1645,6 +1666,14 @@ page-chart {
 
 /*---------Tablet--------*/
 @media screen and (min-width: 768px) {
+    /*Listview*/
+    .list-ios .item-block:first-child{
+        border-top: 1px solid #ddd;
+    }
+    .list-ios .item-block .item-inner{
+        border-bottom-width: 1px;
+    }
+    
     .irapp-toolbar {
         .scrollbar {
             height: 40px;
@@ -1681,12 +1710,14 @@ page-chart {
             .button-inner {
                 font-size: 17px !important;
             }
+            color:white !important;
         }
 
         .phoneButton {
             .button-inner {
                 font-size: 12px !important;
             }
+            color:white !important;
         }
 
         .mediaYearHeader {
@@ -1807,13 +1838,13 @@ page-chart {
     .ion-ios-irapp-watchlist:before {
         width: 30px;
         height: 30px;
-        background-position: -75px -378px !important;
+        background-position: -128px -378px !important;
     }
 
     .ion-ios-irapp-indices:before {
         width: 30px;
         height: 30px;
-        background-position: -128px -378px !important;
+        background-position: -75px -378px !important;
     }
 
     .ion-ios-irapp-closemodal:before {
@@ -2498,7 +2529,7 @@ page-chart {
 
     .platform-ipad .historicalprice-content,
     .disabled-scroll {
-        scroll-content {
+        .scroll-content {
             overflow: hidden !important;
         }
     }
@@ -2534,9 +2565,9 @@ page-chart {
             margin-bottom: 6%;
         }
 
-        scroll-content {
-            padding: 2.5% 15% 0 15%;
-        }
+        // .scroll-content {
+        //     padding: 2.5% 15% 0 15%;
+        // }
 
         .div-item-content {
             max-height: calc(100% - 290px );
@@ -2552,11 +2583,11 @@ page-chart {
         }
 
         .close {
-            right: -50px;
+            right: 10px;
             top: 0px;
         }
 
-        .item-content .item-center {
+        .item-content .item-mid {
             font-size: 15px;
         }
 
@@ -2585,13 +2616,16 @@ page-chart {
         }
     }
     /*Press Releases*/
-    .pr-tablet-content scroll-content, .calendar-tablet-layout scroll-content {
+    .pr-tablet-content .scroll-content, .calendar-tablet-layout .scroll-content {
         overflow-y: hidden !important;
     }
-
-    .pr-content {
+    
+    #pr-master-content{
         margin-top: 45px;
     }
+    /*.pr-content {
+        margin-top: 45px;
+    }*/
     /*.calendar-detail-content, .calendar-content{
         margin-top: 40px;
     }*/
@@ -2608,7 +2642,7 @@ page-chart {
         }
     }
 
-    .ical-watchlist-content, .ical-indices-content {
+    .ical-compare-content  {
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 1px solid #6b6b6c;
         }
@@ -2617,7 +2651,7 @@ page-chart {
             max-height: calc(100% - 15% - 281px );
         }
 
-        scroll-content {
+        .scroll-content {
             padding: 0 15% 0 15%;
         }
 
@@ -2663,12 +2697,16 @@ page-chart {
         .item-content, .item-header-content span {
             font-size: 20px;
         }
-
+        .item-header-content  > .item-block:first-child{
+            border-top: 1px solid #c8c7cc !important;
+        }
         .item-content .currency {
             font-size: 13px;
         }
 
         .footer {
+            border-top: 1px solid #c8c7cc !important;
+            padding-left: 0;
             font-size: 13px;
         }
     }
@@ -2719,8 +2757,8 @@ page-chart {
     }
 
     .mediaDetailContent {
-        scroll-content {
-            overflow-y: hidden;
+        .scroll-content {
+            overflow-y: scroll;
         }
 
         .popover {
@@ -2905,14 +2943,11 @@ page-chart {
             }
         }
     }
-
-
-
     // Chart Page
     page-chart {
         /** Chart */
-        .chart-page-content {
-            margin-top: 10% ;
+        .scroll-content {
+            margin-top: 10% !important;
         }
         // #charts {
         //     height: 330px !important;
@@ -2965,8 +3000,7 @@ page-chart {
         .btn-share span {
             font-size: 14px !important;
             font-family: $medium-font;
-            padding-left: 16px;
-            padding-right: 16px;
+
         }
         /** Footer */
         .btn-share {
@@ -3001,8 +3035,8 @@ page-chart {
             margin: 16px !important;
         }
         /** Height content data */
-        .div-item-content {
-            border-bottom: 1px solid #c8c7cc;
+        .div-item-content .list-ios > .item-block:last-child {
+            border-bottom: 1px solid #c8c7cc !important;
             // max-height: calc(100% - 220px);
         }
         /** Border */
@@ -3010,7 +3044,10 @@ page-chart {
             border-bottom: 1px solid #6b6b6c;
         }
         .list-ios > .item-block:first-child{
-            border-top: 1px solid #c8c7cc;
+            border-top: 1px solid #c8c7cc !important;
+        }
+        .list-ios > .item-block:last-child {
+            /*border-bottom: 1px solid #c8c7cc !important;*/
         }
         .div-item-content {
             max-height: calc(100% - 130px );
@@ -3089,6 +3126,9 @@ page-chart {
         }
     }
 
+
+    
+
     compare-tab {
         .btn-header-title {
             font-size: 15px;
@@ -3145,7 +3185,7 @@ page-chart {
             top: 3px;
         }
 
-        .ical-watchlist-content, .ical-indices-content {
+        .ical-compare-content  {
             right: auto;
             left: -50px;
         }
@@ -3195,9 +3235,9 @@ page-chart {
         }
     }
 
-    #webcastFooter {
-        position: absolute;
-    }
+    // #webcastFooter {
+    //     position: absolute;
+    // }
 
     #videoContainer {
         visibility: hidden;
@@ -3280,7 +3320,6 @@ page-chart {
         div#chart-container {
             height: 300px;
         }
-       
     }
 
     .performance-block {
@@ -3305,16 +3344,16 @@ page-chart {
         padding-left: 15px;
     }
 
-    // compare-tab {
-    //     #charts {
-    //         height: 505px;
-    //         margin-bottom: 45px;
-    //     }
+    compare-tab {
+        #charts {
+            height: 365px;
+            margin-bottom: 45px;
+        }
 
-    //     #charts .highcharts-container {
-    //         height: 580px !important;
-    //     }
-    // }
+        #charts .highcharts-container {
+            height: 380px !important;
+        }
+    }
 }
 
 @media screen and (min-width: 768px) and (orientation:landscape) {
@@ -3325,9 +3364,9 @@ page-chart {
         }
     }
 
-    #webcastFooter {
-        position: static;
-    }
+    // #webcastFooter {
+    //     position: absolute;
+    // }
 
     #videoContainer {
         position: relative;
@@ -3409,7 +3448,7 @@ page-chart {
 
     /*Share Graph*/
     page-sharegraph {
-        scroll-content {
+        .scroll-content {
             overflow-y: hidden;
         }
 
@@ -3462,8 +3501,12 @@ page-chart {
 
     page-chart {
         .share-item {
-            margin-left: 20%;
-         margin-right: 20%;
+            margin-left: 20% !important;
+            margin-right: 20% !important;
+        }
+        .footer{
+            margin-left: 60px !important;
+            /*margin-right: 60px;;*/
         }
         .chart-page-content {
             margin-top: 7%;
@@ -3496,9 +3539,9 @@ page-chart {
 
     compare-tab {
 
-        .footer {
+        /*.footer {
             margin-left: 60px !important;
             margin-right: 60px !important;
-        }
+        }*/
     }
 }

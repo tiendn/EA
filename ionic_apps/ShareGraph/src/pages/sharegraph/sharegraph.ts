@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Renderer } from '@angular/core';
 import { NavController, ModalController, ViewController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Helper } from '../../common/helper';
@@ -38,7 +38,7 @@ export class ShareGraphPage {
     isOnline: boolean = true;
     enableWatchList: boolean = false;
     enableIndices: boolean = false;
-    currenInstrument: any;
+    currentInstrument: any;
     currentIntrumenId: number;
     chartInterval: any;
     headerTitle: string;
@@ -61,7 +61,7 @@ export class ShareGraphPage {
     constructor(public nav: NavController, public modalController: ModalController, public viewController: ViewController,
         public helper: Helper, public globalVars: GlobalVars, public chartService: ChartService,
         public tickerService: TickerService, public performanceService: PerformanceService,
-        public sanitizationService: DomSanitizer, public profileService: ProfileService) {
+        public sanitizationService: DomSanitizer, public profileService: ProfileService, public renderer: Renderer) {
         this.isTablet = this.globalVars.isTablet;
         if (this.globalVars.configData.sharegraph) {
             if (this.globalVars.configData.sharegraph.defaultperiod)
@@ -87,6 +87,28 @@ export class ShareGraphPage {
             this.viewController.setBackButtonText(this.helper.getPhrase("Back"));
             this.getPhrasesInPage();
         }
+        if (this.globalVars.changedCurrency && this.globalVars.changedCurrency == true) {
+            this.selectedTab(this.currentInstrument, true);
+        }
+        else if (this.globalVars.changedDecimalSeparator && this.globalVars.changedDecimalSeparator == true) {
+            let tickerData = this.tickerData;
+            let perData = this.performanceData;
+            this.chart.series[0].setData([]);
+            this.chart.series[1].setData([]);
+            this.performanceData = [];
+            this.tickerData = [];
+            setTimeout(() => {
+                if (this.chart) {
+                    if (this.volumeData)
+                        this.chart.series[0].setData(this.volumeData);
+                    if (this.closeData)
+                        this.chart.series[1].setData(this.closeData);
+                }
+                this.tickerData = tickerData;
+                this.performanceData = perData;
+            }, 100);
+        }
+        
         this.enableWatchList = this.profileService.isEnabledWatchlist();
         this.enableIndices = this.profileService.isEnabledIndices();
     }
@@ -95,17 +117,20 @@ export class ShareGraphPage {
         this.helper.checkTokenExpired();
         this.globalVars.currentModule = "sharegraph";
         /*Get default instrumentid when first load*/
-        if (!this.currenInstrument) {
-            this.currenInstrument = this.globalVars.configData.common.sharetypes[0];
-            this.currenInstrument.id = this.currenInstrument.instrumentid;
+        if (!this.currentInstrument) {
+            this.currentInstrument = this.globalVars.configData.common.sharetypes[0];
+            this.currentInstrument.id = this.currentInstrument.instrumentid;
+            this.selectedTab(this.currentInstrument, true);
         }
-        if (!this.globalVars["isCloseCompareModal"]) {
-            this.selectedTab(this.currenInstrument, true);
-            this.setChartInterval();
-        }
-        else {
-            this.globalVars["isCloseCompareModal"] = false;
-        }
+        this.setChartInterval();
+        //if (!this.globalVars["isCloseCompareModal"]) {
+        //    alert(1);
+        //    this.selectedTab(this.currentInstrument, true);
+        //    this.setChartInterval();
+        //}
+        //else {
+        //    this.globalVars["isCloseCompareModal"] = false;
+        //}
         this.globalVars.activePage = this;
         this.helper.checkAppStatus();
     }
@@ -118,7 +143,7 @@ export class ShareGraphPage {
     doRefresh(refresher) {
         if (this.refresher == null) {
             this.refresher = refresher;
-            this.selectedTab(this.currenInstrument);
+            this.selectedTab(this.currentInstrument);
         }
     }
 
@@ -208,7 +233,7 @@ export class ShareGraphPage {
         this.performancePhrases = {
             sharedata: this.helper.getPhrase("ShareData", "ShareGraph"),
             //sharedataNote: this.helper.getPhrase("ShareDataNote", "ShareGraph"),
-            sharedataNote: this.sanitizationService.bypassSecurityTrustHtml(this.helper.getPhrase("ShareDataNote", "ShareGraph").replace("<a>", "<a class='link-to-settings' href='javascript:document.getElementById(\"btn_gotosettings\").click();'>")),
+            sharedataNote: this.sanitizationService.bypassSecurityTrustHtml(this.helper.getPhrase("ShareDataNote", "ShareGraph").replace("<a>", "<a class='link-to-settings' id='sg_linktosettings'>")),
             currency: this.sanitizationService.bypassSecurityTrustHtml(currencyLabel),
             prevClose: this.helper.getPhrase("PreviousClose", "ShareGraph"),
             high: this.helper.getPhrase("WeeksHigh52", "ShareGraph"),
@@ -235,6 +260,11 @@ export class ShareGraphPage {
             this.tickerPhases["low"] = this.helper.getPhrase("Low", "ShareGraph");
             this.tickerPhases["volume"] = this.helper.getPhrase("Volume", "ShareGraph");
         }
+        setTimeout(()=>{
+            this.renderer.listen(document.getElementById("sg_linktosettings"), 'click', (event) => {
+                this.helper.goToSettings();
+            });
+        },1000);
     }
 
     /*-----button events-----*/
@@ -243,7 +273,7 @@ export class ShareGraphPage {
         //if (forceReload || (this.refresher != null || tabData.id != this.scrollTab.currentId)) {
         if (forceReload || (this.refresher != null || tabData.id != this.currentIntrumenId)) {
             this.helper.showLoading(this);
-            this.currenInstrument = tabData;
+            this.currentInstrument = tabData;
             //this.scrollTab.currentId = tabData.id;
             this.currentIntrumenId = tabData.id;
             if (this.currentPeriod > 0) {
@@ -286,7 +316,7 @@ export class ShareGraphPage {
             this.helper.showConfirmLogin();
         }
         else {
-            let compareModal = this.modalController.create(CompareTab, { params: { type: compareType, activeId: this.currenInstrument.id } });
+            let compareModal = this.modalController.create(CompareTab, { params: { type: compareType, activeId: this.currentInstrument.id } });
             compareModal.present();
         }
     }
@@ -345,16 +375,16 @@ export class ShareGraphPage {
                     }
                 }
             }, {
-                    gridLineWidth: 0,
-                    title: {
-                        text: null
-                    },
-                    showFirstLabel: false,
-                    labels: {
-                        enabled: false
-                    },
-                    opposite: true
-                }],
+                gridLineWidth: 0,
+                title: {
+                    text: null
+                },
+                showFirstLabel: false,
+                labels: {
+                    enabled: false
+                },
+                opposite: true
+            }],
             plotOptions: {
                 series: {
                     shadow: false,
@@ -416,15 +446,15 @@ export class ShareGraphPage {
                 yAxis: 1,
                 data: sharegraph.volumeData//(sgobj.chartOptions == null ? arrayVolumeFiltered : [])
             }, {
-                    name: sharegraph.helper.getPhrase("Price", "ShareGraph"),
-                    type: 'area',
-                    animation: false,
-                    threshold: null,
-                    marker: {
-                        enabled: false
-                    },
-                    data: sharegraph.closeData//(sgobj.chartOptions == null ? arrayCloseFiltered : [])
-                }],
+                name: sharegraph.helper.getPhrase("Price", "ShareGraph"),
+                type: 'area',
+                animation: false,
+                threshold: null,
+                marker: {
+                    enabled: false
+                },
+                data: sharegraph.closeData//(sgobj.chartOptions == null ? arrayCloseFiltered : [])
+            }],
             exporting: {
                 enabled: false
             },
@@ -563,8 +593,4 @@ export class ShareGraphPage {
         return data;
     }
     /*--------------END PERFORMANCE DATA-----------------------*/
-
-    goToSettingsPage() {
-        this.helper.goToSettings();
-    }
 }

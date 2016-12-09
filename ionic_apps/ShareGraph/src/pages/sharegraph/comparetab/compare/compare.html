@@ -4,6 +4,7 @@
     <div *ngFor ="let item of data"
     [class] = "item.ChangePro >= 0 ? 'up item-box' : 'down item-box'"  >
       <div class = "content">
+        <div class = " content-box">
           <div class = "ticker">{{item.Ticker}} </div>
           <div class = "price">{{item.Price | formatNumber:1}}</div>
           <span class = "change-pro"> 
@@ -12,6 +13,7 @@
           <span *ngIf="currency" class="currency">
             {{item.Currency}}
           </span>
+        </div>
       </div>
     </div>
   <!--</div>-->

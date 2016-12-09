@@ -1,0 +1,69 @@
+﻿<ion-content class=" ical-compare-content">
+
+    <div class="header">
+        <span class="btn-header-watch-container">
+            <div class="btn-header-watch">
+                {{watchlistText}}
+                <ion-icon class="irapp-icon" [name]="type == 'watchlist' ? 'irapp-watchlist' : 'irapp-indices'"></ion-icon>
+            </div>
+        </span>
+            <button class="btn-header-close" (click)="closeModal()">
+                <ion-icon class="irapp-icon" name="irapp-closemodal"></ion-icon>
+            </button>
+    </div>
+    <!-- Date information -->
+    <div class="div-date-content">
+        <div class="last-date-content flex-date">
+            <ion-icon class="irapp-icon" name="irapp-daterange"></ion-icon>
+            <div class="date-info date-left">
+                <span>
+                    <!-- fix dong tu` -->
+                    {{fromText}}
+                </span>
+                <span>
+                    {{fDateValue}}
+                </span>
+            </div>
+        </div>
+        <div class="current-date-content flex-date">
+            <div class="date-info date-right">
+                <span>
+                    {{toText}}
+                </span>
+                <span>
+                    {{eDateValue}}
+                </span>
+            </div>
+            <div class="img-right">
+                <ion-icon class="irapp-icon" name="irapp-daterange"></ion-icon>
+            </div>
+        </div>
+    </div>
+    <!-- Data Content -->
+    <ion-list class="item-header-content">
+        <ion-item>
+            <span item-content class="item-center"> {{changeText}} </span>
+            <span item-right class="item-right"> {{changePercentText}} </span>
+        </ion-item>
+    </ion-list>
+    <div class="div-item-content">
+        <ion-list class="item-content" *ngIf="data">
+            <ion-item *ngFor="let item of data">
+                <span class="item-left"> {{item.Name}} </span>
+                <span item-content class="item-center">
+                    {{item.Change > 0 ? '+' : ''}}{{item.Change | formatNumber:decimalDigits}}
+                    <span class="currency">
+                        {{item.Currency}}
+                    </span>
+                </span>
+                <div item-right class="item-right">
+                    <div [class]="item.ChangePro < 0 ? 'down': 'up'">
+                        {{item.ChangePro > 0 ? '+' : ''}}{{item.ChangePro | formatNumber:decimalDigits}}%
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+    <!-- Footer -->
+    <h6 [hidden]=!loadDone class="footer" [innerHTML]="footerText"></h6>
+</ion-content>

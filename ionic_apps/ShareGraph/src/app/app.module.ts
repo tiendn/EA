@@ -15,6 +15,7 @@ import {HPWatchListPage} from '../pages/historicalprice/watchlist/watchlist';
 import {HPDetailPage} from '../pages/historicalprice/detail-page/detail-page';
 import {HPDetailComponent} from '../pages/historicalprice/component/detail-component';
 import {InvestmentCalculatorPage} from '../pages/investmentcalculator/investmentcalculator';
+import {ICalComparePage} from '../pages/investmentcalculator/compare/compare';
 import {KeyFinancialsPage} from '../pages/keyfinancials/keyfinancials';
 import {MediaPage} from '../pages/media/media';
 import {PressReleasesPage} from '../pages/pressreleases/pressreleases';
@@ -56,6 +57,7 @@ import { HistoricalPriceService } from '../providers/historicalprice-service';
         HPDetailPage,
         HPDetailComponent,
         InvestmentCalculatorPage,
+        ICalComparePage,
         KeyFinancialsPage,
         MediaPage,
         PressReleasesPage,
@@ -90,6 +92,7 @@ import { HistoricalPriceService } from '../providers/historicalprice-service';
         HPDetailPage,
         HPDetailComponent,
         InvestmentCalculatorPage,
+        ICalComparePage,
         KeyFinancialsPage,
         MediaPage,
         PressReleasesPage,

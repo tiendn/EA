@@ -1,24 +1,23 @@
 import { Component, ViewChild } from '@angular/core';
 import { NavController } from 'ionic-angular';
-//import { FORM_DIRECTIVES, REACTIVE_FORM_DIRECTIVES } from '@angular/forms';
-
-//You can replace ControlGroup by FormGroup and Control by FormControl
-
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { Helper } from '../../common/helper';
 import { GlobalVars } from '../../common/global-vars';
-import { FormatNumber } from '../../pipes/formatnumber';
 //import { ScrollTabComponent } from '../../components/scrolltab/scrolltab';
 import { ICalDetailPage } from './detail-page/detail-page';
-//import { ICalComponent } from '../../components/ical/ical';
+import { ICalDetailComponent } from './component/detail-component';
 
 @Component({
     selector: 'page-investmentcalculator',
     templateUrl: 'investmentcalculator.html'
+    //templateUrl: (function () {
+    //    return 'investmentcalculator.html';
+    //} ()),
 })
 export class InvestmentCalculatorPage {
 
     //@ViewChild(ScrollTabComponent) scrollTab: ScrollTabComponent;
+    @ViewChild(ICalDetailComponent) iCalDetailComponent: ICalDetailComponent;
 
     form: any;
     headerTitle: string;
@@ -172,20 +171,22 @@ export class InvestmentCalculatorPage {
             }
         }
         this.currency = this.helper.getCurrencyName(currency);
-        //if (isIpad && this.iCalComponent.icalData)
-        //    this.onSubmit(this.form.value);
+        if (this.globalVars.isIpad && this.iCalDetailComponent.icalData)
+            this.onSubmit(this.form.value);
     }
     /*End Page Events*/
 
     /*Tab Events*/
     selectedTab(data) {
-        this.helper.checkTokenExpired();
-        //if(!isIpad)
-        //    this.helper.showLoading(this);
-        //this.scrollTab.currentId = data.id;
-        this.currentInstrumentId = data.id;
-        this.getCurrency(data.id);
-        //this.genClosePriceChart();
+        if (data.id != this.currentInstrumentId) {
+            this.helper.checkTokenExpired();
+            //if (!this.globalVars.isIpad)
+            //    this.helper.showLoading(this);
+            //this.scrollTab.currentId = data.id;
+            this.currentInstrumentId = data.id;
+            this.getCurrency(data.id);
+            //this.genClosePriceChart();
+        }
     }
     /*End Tab Events*/
 
@@ -238,12 +239,12 @@ export class InvestmentCalculatorPage {
             data.getByAmount = this.isAmount;
 
             data.unit = this.currency;
-            //if (!isIpad)
-            //    this.nav.push(InvestmentCalculatorDetailPage, { inputData: data });
-            //else
-            //    this.iCalComponent.getICalData(data);
-
-            this.nav.push(ICalDetailPage, { inputData: data });
+            if (!this.globalVars.isIpad) {
+                this.nav.push(ICalDetailPage, { inputData: data });
+            }
+            else {
+                this.iCalDetailComponent.getICalData(data);
+            }
         }
     }
     /*End Show Data*/
@@ -322,8 +323,6 @@ export class InvestmentCalculatorPage {
             prevValueCount = this.prevValue.split(this.globalVars.generalSettings.separator.thousand).length;
             curValueCount = currenValueFormated.split(this.globalVars.generalSettings.separator.thousand).length;
         }
-
-        let rawPos = 0;
 
         if (prevValueCount >= 0) {
             if (code == 8) { //backspace

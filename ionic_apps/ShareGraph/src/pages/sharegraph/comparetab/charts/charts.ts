@@ -1,5 +1,5 @@
-﻿import { Component } from '@angular/core';
-import { NavParams } from 'ionic-angular';
+﻿import { Component, ViewChild } from '@angular/core';
+import { NavParams, Content } from 'ionic-angular';
 import { Helper } from '../../../../common/helper';
 import { GlobalVars } from '../../../../common/global-vars';
 import { ChartService } from '../../../../providers/chart-service';
@@ -12,6 +12,8 @@ declare var Highcharts: any;
     providers: [ChartService]
 })
 export class ChartsPage {
+
+    @ViewChild(Content) content: Content;
 
     moduleName = "ShareGraph";
     ownShareTitle: string;
@@ -31,7 +33,6 @@ export class ChartsPage {
     instrumentName: string;
 
     constructor(public navParams: NavParams, public helper: Helper, public globalVars: GlobalVars, public chartService: ChartService) {
-        let tickers = [];
         this.ownShareTitle = this.helper.getPhrase("OwnShares", this.moduleName);
 
         let lstPeriod = [
@@ -136,6 +137,13 @@ export class ChartsPage {
         this.currentPriorityId = currentOwnShareActive;
     }
 
+    ionViewDidEnter() {
+        //let lstBackdrop = document.getElementsByTagName("ion-backdrop");
+        //while (lstBackdrop.length > 0) {
+        //    lstBackdrop[0].parentElement.removeChild(lstBackdrop[0]);
+        //}
+    }
+
     // Get index of this instrumentID on sharesChart array object.
     getIndexShare(id) {
         for (let i = 0; i < this.sharesChart.length; i++)
@@ -162,7 +170,6 @@ export class ChartsPage {
     }
 
     ionViewDidLoad() {
-        console.log(this.watchListShare);
         let $scope = this;
         // Draw chart at first
         this.chart = new Highcharts.Chart({

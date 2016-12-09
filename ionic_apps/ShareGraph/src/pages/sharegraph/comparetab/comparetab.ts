@@ -55,7 +55,7 @@ export class CompareTab {
     }
 
     closeModal() {
-        this.globalVars.isCloseCompareModal = true;
+        //this.globalVars.isCloseCompareModal = true;
         this.view.dismiss();
     }
     

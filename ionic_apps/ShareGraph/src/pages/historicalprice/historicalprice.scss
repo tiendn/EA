@@ -50,6 +50,10 @@ page-historicalprice {
     }
 }
 
+.splitview-block{
+    height: 100%;
+}
+
 .select-date.item-block {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -164,13 +168,12 @@ page-historicalprice {
 
 /*Watchlist Modal*/
 page-hp-watchlist {
-
+    
     ion-content {
-        overflow-y: hidden;
         background-color: #484849 !important;
     }
     .scroll-content{
-        // overflow-y : hidden;
+        overflow-y : hidden;
     }
     .header {
         position: relative;
@@ -311,7 +314,7 @@ page-hp-watchlist {
 @media screen and (min-width: 768px) {
     page-hp-watchlist {
         .scroll-content {
-            margin: 2.5% 20% 0 20%;
+            margin: 2.5% 15% 0 15%;
         }
         ion-list .item .item-inner {
             border-bottom: 1px solid #6b6b6c !important;
@@ -342,10 +345,19 @@ html:lang(ar) {
             padding-right: 4%;
             padding-left: 0;
         }
-
+        .close{
+            left: auto !important;
+            top: -3px !important;
+        }
+        .btn-watch{
+            margin-left: 0 !important;
+        }
         .item-right {
             display: block;
             text-align: left;
+        }
+        .footer{
+            margin-right: 16px;
         }
     }
 }

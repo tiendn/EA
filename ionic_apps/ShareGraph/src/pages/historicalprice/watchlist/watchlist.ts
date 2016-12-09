@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, Renderer } from '@angular/core';
 import { NavParams, ViewController } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Helper } from '../../../common/helper';
 import { GlobalVars } from '../../../common/global-vars';
 import { HistoricalPriceService } from '../../../providers/historicalprice-service';
+//import {SettingsPage} from '../../../modules/settings/settings';
 
 @Component({
     selector: 'page-hp-watchlist',
-    templateUrl: 'watchlist.html'
+    templateUrl: 'watchlist.html',
+    providers : [HistoricalPriceService]
 })
 export class HPWatchListPage {
     data : any = []; // Data
@@ -22,14 +24,14 @@ export class HPWatchListPage {
     decimalDigits : number;
     dateValue : number;
     // hpriceServices : HistoricalPriceService;
-    constructor(public navParams : NavParams, public viewCtrl: ViewController, public hpriceService: HistoricalPriceService,
-        public helper: Helper, public globalVars: GlobalVars, public domSanitizer: DomSanitizer) {
+    constructor(public navParams: NavParams, public viewCtrl: ViewController, public hpriceService: HistoricalPriceService,
+        public helper: Helper, public globalVars: GlobalVars, public domSanitizer: DomSanitizer, public renderer: Renderer) {
         this.watchListText = helper.getPhrase("Watchlist", this.moduleName);
         this.dateText = helper.getPhrase("Date", this.moduleName);
         this.closeText = helper.getPhrase("Close", this.moduleName);
         this.volumeText = helper.getPhrase("Volume", this.moduleName);
         this.lstId = this.getWatchlistIDs(); //Get watchlist share ids from config
-        this.footerText = domSanitizer.bypassSecurityTrustHtml(helper.getPhrase("Footer",this.moduleName).replace("<a>","<a class='link-to-settings' href='javascript:document.getElementById(\"btn_gotosettings\").click();'>"));
+        this.footerText = domSanitizer.bypassSecurityTrustHtml(helper.getPhrase("Footer",this.moduleName).replace("<a>","<a class='link-to-settings' id='hp_linktosettings'>"));
     }
 
     getWatchlistIDs()
@@ -48,12 +50,6 @@ export class HPWatchListPage {
         this.viewCtrl.dismiss();
     }
 
-    goToSettings(){
-        this.viewCtrl.dismiss().then(()=>{
-            this.helper.goToSettings();
-        });
-    }
-
     ionViewDidLoad(){
         let params = this.navParams.get("data");
         this.decimalDigits = params.decimalDigits;
@@ -67,7 +63,11 @@ export class HPWatchListPage {
             // this.data = this.data.push( data);
             this.loadDone = true;
         });
-        
+        setTimeout(() => {
+            this.renderer.listen(document.getElementById("hp_linktosettings"), 'click', (event) => {
+                //this.nav.push(this.helper.getPage("settings"));
+                this.viewCtrl.dismiss({goToSettings: true});
+            });
+        }, 1000);
     }
-
 }
