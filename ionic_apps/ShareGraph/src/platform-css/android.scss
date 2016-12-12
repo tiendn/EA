@@ -104,7 +104,67 @@
         }
     }
 //     /*Invesment Calculator*/
-    .ical-compare-content {
+    // .ical-compare-content {
+    //     .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+    //         border-bottom: 0.55px solid #6b6b6c;
+    //     }
+
+    //     .div-item-content {
+    //         max-height: calc(100% - 10px - 267px );
+    //     }
+
+    //     .btn-header-watch {
+    //         font-size: 12px;
+    //         font-weight: medium;
+    //         // margin-left: calc(50% - 43.5px);
+    //     }
+    //     // .btn-header-watch img {
+    //     //     height: 20px;
+    //     //     width: 20px;
+    //     // }
+    //     .btn-header-close {
+    //         right: 10px;
+    //         top: 0;
+    //     }
+
+    //     .flex-date img {
+    //         height: 40px;
+    //         width: 40px;
+    //     }
+
+    //     .item-content span, .item-content .item-right {
+    //         font-size: 17px;
+    //     }
+    //     /*.item-content .item-center {
+    //         font-size: 15px;
+    //     }
+
+    //     .item-content .item-right {
+    //         font-size: 15px;
+    //     }
+
+    //     .item-content .item-left {
+    //         font-size: 15px;
+    //     }*/
+    //     .date-info span {
+    //         font-size: 15px;
+    //     }
+
+    //     .item-content, .item-header-content span {
+    //         font-size: 15px;
+    //         font-family: $light-font;
+    //     }
+
+    //     .item-content .currency {
+    //         font-size: 12px;
+    //     }
+
+    //     .footer {
+    //         padding-left: 16px;
+    //         font-size: 14px;
+    //     }
+    // }
+    page-ical-compare {
         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
             border-bottom: 0.55px solid #6b6b6c;
         }
@@ -114,7 +174,7 @@
         }
 
         .btn-header-watch {
-            font-size: 12px;
+            // font-size: 12px;
             font-weight: medium;
             // margin-left: calc(50% - 43.5px);
         }
@@ -162,9 +222,8 @@
         .footer {
             padding-left: 16px;
             font-size: 14px;
+            border-top: 1px solid #c8c7cc !important;
         }
-    }
-    page-ical-compare {
         .btn-header-watch{
             font-size: 14px !important;
         }
@@ -316,7 +375,7 @@
             border-bottom: 1px solid #6b6b6c;
         }
         .div-item-content .item-content .item-block:last-child{
-            border-bottom: 2px solid #c8c7cc;
+            border-bottom: 1px solid #c8c7cc;
         } 
         .div-item-content .item-content .item-block:last-child .item-inner{
             border-bottom: 0px !important;
@@ -396,7 +455,7 @@
     }
     compare-tab {
         ion-tab{
-            margin-top: 10px !important;
+            margin-top: 60px !important;
         }
         .btn-header-title {
             font-size: 14px;
@@ -415,10 +474,11 @@
             padding-bottom: 5px;*/
             // margin-left: 20px;
         }
-        .scroll-content{
-            margin-top: 20% !important;
-        }
+        // compare-tab > .scroll-content{
+        //     margin-top: 20% !important;
+        // }
         .show-tabbar {
+            margin-top: 4% !important;
             width: 100%;
             // height: 5.3%;
             border: 2px solid #848484  !important;
