@@ -1,3550 +1,3562 @@
-$primary-font: "HelveticaNeue";
-$light-font: "HelveticaNeue-Light";
-$medium-font: "HelveticaNeue-Medium";
-$thin-font: "HelveticaNeue-Thin";
-$note-color: #808080;
-$link-color: #0B6AFF;
-$value-color: #8F8F95;
-$card-font-size: 17px;
-
-* {
-    font-family: $primary-font;
-}
-
-/*ion-page.show-page {
-    z-index: 200 !important;
-}*/
-
-.toolbar-title {
-    font-size: 18px;
-    font-weight: normal;
-}
-
-.back-button .back-default {
-    font-family: $light-font;
-    font-size: 17px;
-}
-
-#irapp-leftmenu {
-    .btn-authenticate {
-        font-family: $light-font;
-    }
-}
-
-.irapp-toolbar {
-    .scrollbar {
-        height: 30px;
-    }
-
-    .button-inner {
-        font-family: $light-font;
-        font-size: 12px;
-    }
-}
-
-ion-card-header, ion-list-header, .note {
-    color: $note-color !important;
-}
-
-ion-card-header, ion-list-header {
-    text-transform: uppercase;
-}
-
-.custom-link {
-    color: $link-color;
-}
-
-.label {
-    color: $note-color;
-}
-
-.performance-block {
-    ion-item {
-        ion-label, ion-note {
-            font-size: 17px;
-        }
-
-        ion-note {
-            color: $value-color;
-        }
-    }
-}
-
-ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
-    font-size: 14px;
-}
-
-.note {
-    margin-top: 15px;
-}
-
-.checkbox-icon {
-    background-color: transparent !important;
-    border: 0 !important;
-}
-
-/*List View With Sticky Divider*/
-.ir-listview-divider {
-    ion-item-divider {
-        ion-label {
-            font-family: $medium-font;
-        }
-    }
-}
-/*End List View With Sticky Divider*/
-
-/*Calendar*/
-.calendar-content {
-    .event-type {
-        font-family: $medium-font;
-    }
-    /*.event-date, .event-title{
-        font-family: $primary-font;
-    }*/
-}
-
-.download-confirm {
-    .cards-confirm {
-        .confirm-title {
-            font-family: $light-font;
-        }
-    }
-}
-/*End Calendar*/
-
-/*Press Releases*/
-.pr-content {
-    .pr-list-master {
-        .label {
-            font-family: $medium-font;
-        }
-    }
-}
-
-.pr-detail {
-    .title {
-        font-family: $medium-font;
-    }
-}
-/*End Press Releases*/
-
-/*Historical Price*/
-.historicalprice-detail-content {
-    .cards-compare {
-        button {
-            font-family: $light-font;
-        }
-    }
-}
-/*Watchlist Modal*/
-.platform-iphone {
-    .hp-watchlist-content {
-        .header {
-            margin-top: 3%;
-            margin-bottom: 8%;
-        }
-
-        .date-content {
-            margin-bottom: 8%;
-        }
-
-        .div-item-content {
-            max-height: calc(100% - 9% - 181px );
-        }
-
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 0.55px solid #6b6b6c;
-        }
-
-        .btn-watch {
-            font-size: 12px;
-            font-weight: normal;
-            font-family: $light-font;
-        }
-
-        .close {
-            top: 0px;
-            right: 15px;
-        }
-
-        .item-content .item span {
-            font-size: 17px;
-        }
-        /*.item-content .item-center {
-            font-size: 15px;
-        }
-
-        .item-content .item-right {
-            font-size: 15px;
-        }
-
-        .item-content .item-left {
-            font-size: 15px;
-        }*/
-        .current-date span {
-            font-size: 15px;
-        }
-        /*.item-content, .item-header-content span {
-            font-size: 17px;
-        }*/
-        .item-content, .item-header-content span {
-            font-size: 15px;
-            font-family: $light-font;
-        }
-
-        .item-content .item span.currency {
-            font-size: 12px;
-        }
-
-        .footer {
-            font-size: 14px;
-        }
-    }
-    /*Invesment Calculator*/
-    .ical-compare-content {
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 0.55px solid #6b6b6c;
-        }
-
-        .div-item-content {
-            max-height: calc(100% - 10px - 267px );
-        }
-
-        .btn-header-watch {
-            font-size: 12px;
-            font-weight: medium;
-            // margin-left: calc(50% - 43.5px);
-        }
-        // .btn-header-watch img {
-        //     height: 20px;
-        //     width: 20px;
-        // }
-        .btn-header-close {
-            right: 10px;
-            top: 0;
-        }
-
-        .flex-date img {
-            height: 40px;
-            width: 40px;
-        }
-
-        .item-content span, .item-content .item-right {
-            font-size: 17px;
-        }
-        /*.item-content .item-center {
-            font-size: 15px;
-        }
-
-        .item-content .item-right {
-            font-size: 15px;
-        }
-
-        .item-content .item-left {
-            font-size: 15px;
-        }*/
-        .date-info span {
-            font-size: 15px;
-        }
-
-        .item-content, .item-header-content span {
-            font-size: 15px;
-            font-family: $light-font;
-        }
-
-        .item-content .currency {
-            font-size: 12px;
-        }
-
-        .footer {
-            padding-left: 16px;
-            font-size: 14px;
-        }
-    }
-}
-/*Watchlist Modal*/
-/*End Historical Price*/
-
-/*Report*/
-.report-group {
-    button.btn-active {
-        .button-inner {
-            font-family: $medium-font;
-        }
-    }
-}
-/*End Report*/
-
-/**/
-.keyFinancial {
-    .scroll-content {
-        overflow-y: hidden !important;
-    }
-
-    #keyFinancialLeftCol {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        display: block;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        will-change: scroll-position;
-        width: 100%;
-    }
-
-    .nopadding {
-        padding: 0px !important;
-    }
-
-    ion-grid {
-        padding: 0px !important;
-        height: 100% !important;
-
-        ion-row {
-            height: 100% !important;
-
-            ion-col:first-child {
-                padding: 0px !important;
-                flex: 0 0 40% !important;
-                position: relative !important;
-            }
-
-            ion-col:last-child {
-                padding: 0px !important;
-                flex: 0 0 60% !important;
-                overflow: scroll !important;
-                height: 100vh;
-                background-color: white !important;
-                border-left: 1px solid grey !important;
-                padding-top: 0px !important;
-
-                h4 {
-                    margin-top: 10px !important;
-                }
-
-                table {
-                    width: 100% !important;
-                    text-align: center !important;
-                }
-            }
-        }
-    }
-
-
-    ion-item {        
-        .item-inner {  
-            border-bottom: 1px solid grey;         
-            padding-right:8px;
-            background-color: white !important;
-            padding-left:8px;
-        }
-    }
-
-    td {
-        padding-top: 8px !important;
-        padding-bottom: 8px !important;
-    }
-
-    .selected {
-        .item-inner {
-            border-bottom-color: #007FFF;
-            background-color: #007FFF !important;
-            padding-left:8px;
-            padding-right:8px;
-        }
-
-        td {
-            color: white !important;
-        }
-    }
-}
-
-.noVerticalPadding {
-    padding-top: 0px !important;
-    padding-bottom: 0px !important;
-}
-
-.Better {
-    background-color: #87AF3F;
-}
-
-.Worse {
-    background-color: #D0021B;
-}
-
-.Default {
-    background-color: #9B9B9B;
-}
-
-.mediaDetailHeader {
-    ion-navbar {
-        padding-right: 0px;
-    }
-
-    button {
-        float: right;
-        margin-right: 0px;
-    }
-}
-
-page-chart {
-    .btn-period .button-inner {
-        font-family: $light-font;
-    }
-
-    .btn-share .button-inner {
-        font-family: $light-font;
-    }
-
-    .btn-period-click .button-inner {
-        font-family: $medium-font;
-    }
-}
-/*---------Phone--------*/
-@media only screen and (max-width: 767px) {
-    .mediaHeader, .keyFinancialHeader {
-        ion-grid {
-            text-align: center !important;
-
-            ion-col {
-                padding-top: 0px !important;
-
-                h4 {
-                    margin-top: 10px !important;
-                }
-            }
-
-            ion-row {
-                color: white !important;
-                text-align: center !important;
-            }
-        }
-
-        .tabletButton {
-            .button-inner {
-                font-size: 17px !important;
-            }
-            color:white !important;
-        }
-
-        .phoneButton {
-            .button-inner {
-                font-size: 12px !important;
-            }
-            color:white !important;
-        }
-
-        .mediaYearHeader {
-            button {
-                color: black !important;
-            }
-
-            .thick {
-                font-weight: bold;
-            }
-
-            .toolbar-background {
-                background-color: white !important;
-            }
-        }
-    }
-
-    /*Card compare*/
-    .cards-compare {
-        button {
-            min-height: 35px;
-            min-width: 95px;
-        }
-    }
-
-    /*Load icons*/
-    .irapp-icon:before, .back-button-icon:before,
-    .checkbox-checked, .icon-attachment,
-    button:not([detail-none]) .item-inner:before {
-        //ion-list button:not([detail-none]) .item-inner:before {
-        /*background: -webkit-image-set(url(../../img/iphone.png) 1x, url(../../img/iphone@2x.png) 2x, url(../../img/iphone@3x.png) 3x) !important;*/
-        background: -webkit-image-set(url(../assets/img/iphone.png) 1x, url(../assets/img/iphone@2x.png) 2x, url(../assets/img/iphone@3x.png) 3x) !important;
-        content: " ";
-        background-size: 418px 362px;
-        background-repeat: no-repeat;
-        display: block;
-    }
-    /*End Load icons*/
-
-    /*Common Icons*/
-    .checkbox-checked {
-        background-position: -160px -340px !important;
-
-        .checkbox-inner {
-            width: 0;
-            height: 0;
-        }
-    }
-    /*End Common Icons*/
-
-    /*HomePage Icons*/
-    .bar-button-menutoggle {
-        margin: 0;
-    }
-
-    .ion-ios-irapp-account:before {
-        width: 27px;
-        height: 27px;
-        background-position: -67px -252px !important;
-    }
-
-    .ion-ios-irapp-settings-white:before {
-        width: 27px;
-        height: 27px;
-        background-position: 1px -232px !important;
-    }
-
-    .back-button-icon:before, .ion-ios-irapp-back:before {
-        width: 12px;
-        height: 21px;
-        background-position: -166px -317px !important;
-    }
-
-    .ion-ios-irapp-menu:before {
-        width: 30px;
-        height: 18px;
-        background-position: -232px -33px !important;
-    }
-
-    .ion-ios-irapp-share:before {
-        width: 20px;
-        height: 28px;
-        background-position: -234px -2px !important;
-    }
-
-    .ion-ios-irapp-settings-black:before {
-        width: 40px;
-        height: 40px;
-        background-position: 1px -181px !important;
-    }
-    /*End HomePage Icons*/
-
-    /*iCal Icons*/
-    .ion-ios-irapp-shares:before {
-        width: 25px;
-        height: 25px;
-        background-position: -269px -244px !important;
-    }
-
-    .ion-ios-irapp-amount:before {
-        width: 25px;
-        height: 25px;
-        background-position: -269px -216px !important;
-    }
-
-    .ion-ios-irapp-change:before {
-        width: 34px;
-        height: 30px;
-        background-position: -231px -100px !important;
-    }
-
-    .ion-ios-irapp-changepercent:before {
-        width: 34px;
-        height: 30px;
-        background-position: -231px -134px !important;
-    }
-
-    .ion-ios-irapp-watchlist:before {
-        width: 22px;
-        height: 22px;
-        background-position: -66px -217px !important;
-    }
-
-    .ion-ios-irapp-indices:before {
-        width: 22px;
-        height: 22px;
-        background-position: -66px -192px !important;
-    }
-
-    .ion-ios-irapp-closemodal:before {
-        width: 25px;
-        height: 25px;
-        background-position: -196px -240px !important;
-    }
-
-    .ion-ios-irapp-daterange:before {
-        width: 42px;
-        height: 42px;
-        background-position: -303px -134px !important;
-    }
-    /*End iCal Icons*/
-
-    /*Historical Price Icons*/
-    .ion-ios-irapp-calendar:before {
-        width: 42px;
-        height: 42px;
-        background-position: -303px -178px !important;
-    }
-    /*End Historical Price Icons*/
-
-    /*Press Releases Icons*/
-    .attachment:before, .ion-ios-irapp-attachment:before {
-        width: 20px;
-        height: 20px;
-        background-position: -28px -260px !important;
-    }
-
-    .ion-ios-irapp-pricechange {
-        width: 18px;
-        height: 18px;
-        border-radius: 3px;
-        background-color: #DDD7D2;
-    }
-
-    .ion-ios-irapp-pricechange:before {
-        width: 18px;
-        height: 18px;
-        background-position: -29px -285px !important;
-    }
-
-    .price-change.plus {
-        .ion-ios-irapp-pricechange {
-            background-color: #43A047;
-        }
-
-        .ion-ios-irapp-pricechange:before {
-            background-position: -31px -220px !important;
-        }
-    }
-
-    .price-change.minus {
-        .ion-ios-irapp-pricechange {
-            background-color: #FF3A2D;
-        }
-
-        .ion-ios-irapp-pricechange:before {
-            background-position: -31px -238px !important;
-        }
-    }
-
-    .ion-ios-irapp-price-up {
-        width: 18px;
-        height: 18px;
-        background-color: #43A047;
-        border-radius: 3px;
-    }
-
-    .ion-ios-irapp-price-up:before {
-        width: 18px;
-        height: 18px;
-        background-position: -31px -220px !important;
-    }
-
-    .icon-attachment {
-        background-position: -304px -64px !important;
-    }
-    /*End Press Releases Icons*/
-
-    /*Calendar Icons*/
-    .ion-ios-irapp-download:before {
-        width: 28px;
-        height: 32px;
-        background-position: -232px -58px !important;
-    }
-
-    .ion-ios-irapp-close:before {
-        width: 30px;
-        height: 30px;
-        background-position: -195px -238px !important;
-    }
-    /*End Calendar Icons*/
-
-    /*Media Icons*/
-    .ion-ios-irapp-tick:before {
-        width: 24px;
-        height: 24px;
-        background-position: -268px -190px !important;
-    }
-
-    .ion-ios-irapp-Video:before {
-        width: 44px;
-        height: 54px;
-        background-position: -303px -1px !important;
-    }
-
-    .ion-ios-irapp-cancel-download:before {
-        width: 27px;
-        height: 27px;
-        background-position: -1px -331px !important;
-    }
-
-    .ion-ios-irapp-Audio:before {
-        width: 41px;
-        height: 50px;
-        background-position: -199px -268px !important;
-    }
-
-    .ion-ios-irapp-play-button:before {
-        width: 52px;
-        height: 50px;
-        background-position: -32px -309px !important;
-    }
-
-    .ion-ios-irapp-pause-button:before {
-        width: 52px;
-        height: 50px;
-        background-position: -248px -278px !important;
-    }
-
-    .ion-ios-irapp-share-facebook:before {
-        width: 40px;
-        height: 40px;
-        background-position: -371px -4px !important;
-    }
-
-    .ion-ios-irapp-share-twitter:before {
-        width: 40px;
-        height: 40px;
-        background-position: -371px -138px !important;
-    }
-
-    .ion-ios-irapp-share-linkedin:before {
-        width: 40px;
-        height: 40px;
-        background-position: -371px -48px !important;
-    }
-
-    .ion-ios-irapp-share-email:before {
-        width: 40px;
-        height: 40px;
-        background-position: -372px -93px !important;
-    }
-
-    .ion-ios-irapp-video-enter-fullscreen:before {
-        width: 23px;
-        height: 23px;
-        background-position: -234px -247px !important;
-    }
-
-    .ion-ios-irapp-video-exit-fullscreen:before {
-        width: 23px;
-        height: 23px;
-        background-position: -234px -337px !important;
-    }
-
-    .ion-ios-irapp-download-confirm:before {
-        width: 61px;
-        height: 80px;
-        background-position: -305px -280px !important;
-    }
-
-    .ion-ios-irapp-yes:before {
-        width: 21px;
-        height: 21px;
-        background-position: -165px -191px !important;
-    }
-
-    .ion-ios-irapp-no:before {
-        width: 21px;
-        height: 21px;
-        background-position: -199px -190px !important;
-    }
-
-    /*End Media Icons*/
-
-    /*Report Icons*/
-    .ion-ios-irapp-downloaded:before, .image-selected:before {
-        width: 24px;
-        height: 24px;
-        background-position: -268px -189px !important;
-    }
-
-    .ion-ios-irapp-delete:before {
-        width: 24px;
-        height: 24px;
-        background-position: 0 -298px !important;
-    }
-    /*End Report Icons*/
-
-    /*Settings Icons*/
-    .ion-ios-irapp-facebook:before {
-        width: 33px;
-        height: 33px;
-        background-position: -132px -288px !important;
-    }
-
-    .ion-ios-irapp-google:before {
-        width: 33px;
-        height: 33px;
-        background-position: -132px -215px !important;
-    }
-
-    .ion-ios-irapp-setting-watchlist:before {
-        width: 33px;
-        height: 33px;
-        background-position: -130px -542px !important;
-    }
-
-    .ion-ios-irapp-setting-indices:before {
-        width: 33px;
-        height: 33px;
-        background-position: -99px -681px !important;
-    }
-
-    .ion-ios-irapp-setting-emailalert:before {
-        width: 33px;
-        height: 33px;
-        background-position: -132px -688px !important;
-    }
-
-    .ion-ios-irapp-setting-account:before {
-        width: 32px;
-        height: 32px;
-        background-position: -166px -615px !important;
-    }
-
-    .ion-ios-irapp-setting-currency:before {
-        width: 33px;
-        height: 33px;
-        background-position: -98px -613px !important;
-    }
-
-    .ion-ios-irapp-setting-decimal:before {
-        width: 33px;
-        height: 33px;
-        background-position: -131px -613px !important;
-    }
-
-    .ion-ios-irapp-setting-language:before {
-        width: 33px;
-        height: 33px;
-        background-position: -98px -579px !important;
-    }
-
-    .ion-ios-irapp-setting-quickmenu:before {
-        width: 33px;
-        height: 33px;
-        background-position: -98px -547px !important;
-    }
-
-    .ion-ios-irapp-setting-notification:before {
-        width: 33px;
-        height: 33px;
-        background-position: -164px -577px !important;
-    }
-
-    .ion-ios-irapp-setting-stream:before {
-        width: 33px;
-        height: 33px;
-        background-position: 2px -625px !important;
-    }
-
-    .ion-ios-irapp-setting-menuimage:before {
-        width: 33px;
-        height: 33px;
-        background-position: -98px -649px !important;
-    }
-    /*End Settings Icons*/
-
-    /*Flags*/
-    .flag-icon:before {
-        width: 32px;
-        height: 22px;
-    }
-
-    .ion-ios-flag-aed:before {
-        background-position: -99px -23px !important;
-    }
-
-    .ion-ios-flag-ars:before {
-        background-position: -99px 0 !important;
-    }
-
-    .ion-ios-flag-aud:before {
-        background-position: -132px 0px !important;
-    }
-
-    .ion-ios-flag-bhd:before {
-        background-position: 1px -46px !important;
-    }
-
-    .ion-ios-flag-brl:before {
-        background-position: -164px 0px !important;
-    }
-
-    .ion-ios-flag-cad:before {
-        background-position: -198px 0px !important;
-    }
-
-    .ion-ios-flag-chf:before {
-        background-position: -32px -158px !important;
-    }
-
-    .ion-ios-flag-cny:before {
-        background-position: -32px -46px !important;
-    }
-
-    .ion-ios-flag-czk:before {
-        background-position: 0px -24px !important;
-    }
-
-    .ion-ios-flag-dkk:before {
-        background-position: -32px -23px !important;
-    }
-
-    .ion-ios-flag-dzd:before {
-        background-position: -197px -24px !important;
-    }
-
-    .ion-ios-flag-eek:before {
-        background-position: -131px -24px !important;
-    }
-
-    .ion-ios-flag-egp:before {
-        background-position: -65px -24px !important;
-    }
-
-    .ion-ios-flag-eur:before {
-        background-position: -165px -23px !important;
-    }
-
-    .ion-ios-flag-gbp:before {
-        background-position: 0 0 !important;
-    }
-
-    .ion-ios-flag-gbx:before {
-        background-position: 0 0 !important;
-    }
-
-    .ion-ios-flag-hkd:before {
-        background-position: -32px 0 !important;
-    }
-
-    .ion-ios-flag-hrk:before {
-        background-position: -65px -46px !important;
-    }
-
-    .ion-ios-flag-huf:before {
-        background-position: -98px -46px !important;
-    }
-
-    .ion-ios-flag-idr:before {
-        background-position: 0 -68px !important;
-    }
-
-    .ion-ios-flag-ils:before {
-        background-position: -32px -68px !important;
-    }
-
-    .ion-ios-flag-inr:before {
-        background-position: -197px -46px !important;
-    }
-
-    .ion-ios-flag-isk:before {
-        background-position: -131px -46px !important;
-    }
-
-    .ion-ios-flag-jod:before {
-        background-position: -99px -68px !important;
-    }
-
-    .ion-ios-flag-jpy:before {
-        background-position: -65px -68px !important;
-    }
-
-    .ion-ios-flag-kes:before {
-        background-position: -132px -68px !important;
-    }
-
-    .ion-ios-flag-krw:before {
-        background-position: -165px -135px !important;
-    }
-
-    .ion-ios-flag-kwd:before {
-        background-position: -165px -68px !important;
-    }
-
-    .ion-ios-flag-lbp:before {
-        background-position: 1px -91px !important;
-    }
-
-    .ion-ios-flag-lkr:before {
-        background-position: -198px -136px !important;
-    }
-
-    .ion-ios-flag-ltl:before {
-        background-position: -65px -90px !important;
-    }
-
-    .ion-ios-flag-lvl:before {
-        background-position: -198px -68px !important;
-    }
-
-    .ion-ios-flag-lyd:before {
-        background-position: -32px -90px !important;
-    }
-
-    .ion-ios-flag-mad:before {
-        background-position: -198px -91px !important;
-    }
-
-    .ion-ios-flag-mdl:before {
-        background-position: -165px -45px !important;
-    }
-
-    .ion-ios-flag-mur:before {
-        background-position: -132px -91px !important;
-    }
-
-    .ion-ios-flag-mxn:before {
-        background-position: -165px -91px !important;
-    }
-
-    .ion-ios-flag-myr:before {
-        background-position: -99px -92px !important;
-    }
-
-    .ion-ios-flag-nad:before {
-        background-position: 0 -114px !important;
-    }
-
-    .ion-ios-flag-nok:before {
-        background-position: -65px -114px !important;
-    }
-
-    .ion-ios-flag-nzd:before {
-        background-position: -32px -114px !important;
-    }
-
-    .ion-ios-flag-omr:before {
-        background-position: -98px -114px !important;
-    }
-
-    .ion-ios-flag-pln:before {
-        background-position: -132px -114px !important;
-    }
-
-    .ion-ios-flag-qar:before {
-        background-position: -165px -114px !important;
-    }
-
-    .ion-ios-flag-ron:before {
-        background-position: -198px -114px !important;
-    }
-
-    .ion-ios-flag-rub:before {
-        background-position: 0 -137px !important;
-    }
-
-    .ion-ios-flag-sar:before {
-        background-position: -32px -137px !important;
-    }
-
-    .ion-ios-flag-scr:before {
-        background-position: -64px -137px !important;
-    }
-
-    .ion-ios-flag-sek:before {
-        background-position: 0 -158px !important;
-    }
-
-    .ion-ios-flag-sgd:before {
-        background-position: -99px -137px !important;
-    }
-
-    .ion-ios-flag-thb:before {
-        background-position: -99px -158px !important;
-    }
-
-    .ion-ios-flag-tnd:before {
-        background-position: -132px -159px !important;
-    }
-
-    .ion-ios-flag-try:before {
-        background-position: -165px -159px !important;
-    }
-
-    .ion-ios-flag-twd:before {
-        background-position: -65px -158px !important;
-    }
-
-    .ion-ios-flag-usd:before {
-        background-position: -65px 0 !important;
-    }
-
-    .ion-ios-flag-vnd:before {
-        background-position: -198px -158px !important;
-    }
-
-    .ion-ios-flag-zar:before {
-        background-position: -132px -136px !important;
-    }
-    /*End Flags*/
-
-    /*ion-card ion-card-header, ion-list-header{
-		font-size: 14px;
-	}
-	.note{
-		margin-top: 15px;
-	}*/
-
-    #irapp-leftmenu {
-        .btn-authenticate {
-            font-size: 12px;
-        }
-    }
-
-    /*Share Graph*/
-    page-sharegraph {
-        .periods {
-            .segment-button {
-                height: 35px;
-            }
-        }
-
-        .ticker {
-            ion-col {
-                padding-top: 20px;
-            }
-
-            .price {
-                font-size: 20px;
-            }
-
-            .label {
-                font-size: 10px;
-                //color: $note-color;
-            }
-        }
-
-        .cards-compare {
-            ion-card-header {
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-
-            .button-inner {
-                font-family: $light-font;
-            }
-
-            .button {
-                height: 35px;
-                margin: 0 10px 0 0;
-            }
-        }
-        /*.performance-block{
-			ion-item{
-				ion-label, ion-note{
-					font-size: 17px;
-				}
-				ion-note{
-					color: $value-color;
-				}
-			}
-		}*/
-    }
-
-    .mediaContent {
-        background-color: #F3F3F3 !important;
-
-        .flex-container {
-            display: flex;
-            width: 100%;
-            -webkit-flex-wrap: wrap;
-
-            .mediaItem {
-                width: 42%;
-                margin: 4%;
-                line-height: 1.5;
-
-                button {
-                    width: 100%;
-                    height: 42vw;
-                    background-color: #DEDEDE;
-                }
-
-                button:active {
-                    background-color: #DEDEDE !important;
-                }
-
-                div {
-                    width: 100%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-
-                    ion-icon {
-                        float: right;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
-            }
-        }
-    }
-
-    .mediaPopover {
-        text-align: center !important;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        font-size: 16px;
-        position: relative;
-
-        span {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
-
-    .mediaDetailContent {
-        .scroll-content {
-            overflow-y: scroll;
-        }
-
-        #videoDownloadCompletedBox {
-            text-align: left;
-            position: absolute;
-            width: 100%;
-            background-color: white;
-            z-index: 101;
-        }
-
-        #downloadCompletedBox {
-            text-align: left;
-            position: absolute;
-            width: 100%;
-            background-color: white;
-            z-index: 101;
-        }
-
-        #videoContainer {
-            position: relative;
-            visibility: hidden;
-            text-align: center;
-        }
-
-        .videoControl {
-            text-align: center !important;
-            background-color: white !important;
-
-            .videoBtn {
-                text-align: center !important;
-                width: 100vw !important;
-                color: #4D4D4D !important;
-                font-size: 30px !important;
-                padding-bottom: 10px !important;
-            }
-
-            .videoBar {
-                ion-range {
-                    padding-top: 0px !important;
-                    padding-bottom: 0px !important;
-                }
-
-                width: 100vw !important;
-            }
-        }
-
-        #videoButton {
-            position: absolute;
-            color: white;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-
-            ion-icon {
-                font-size: 32px;
-            }
-        }
-
-        #videoRangeDiv {
-            position: absolute;
-            bottom: 0px;
-            width: 100%;
-            color: white;
-            background-color: rgba(169,169,169,0.5);
-        }
-
-        #videoRange {
-            padding-top: 0px !important;
-            padding-bottom: 0px !important;
-        }
-
-        ion-spinner {
-            left: 49%;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
-
-            svg {
-                width: 15px;
-                height: 15px;
-            }
-
-            circle {
-                stroke: white;
-            }
-        }
-
-        background-color: #EFEFF4 !important;
-        color: #333333 !important;
-
-        .bottomButton {
-            bottom: 0px !important;
-            position: absolute !important;
-            width: 100% !important;
-            text-align: center !important;
-            border-top: 1px solid grey !important;
-        }
-
-        .audioHeader {
-            position: relative !important;
-            height: 30vh !important;
-            text-align: center !important;
-            background-color: #D8D8D8 !important;
-
-            img {
-                position: relative !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-            }
-
-            ion-icon {
-                position: relative !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-            }
-
-            .downloadCompletedBox {
-                width: 100vw !important;
-                background-color: white !important;
-                font-size: 15px !important;
-                text-align: left !important;
-                position: absolute !important;
-            }
-
-            .theSpinner {
-                position: absolute !important;
-                top: 50%;
-                transform: translateY(-50%) !important;
-                text-align: center !important;
-                width: 100vw !important;
-            }
-        }
-
-        .audioControl {
-            text-align: center !important;
-            background-color: white !important;
-
-            .audioBtn {
-                text-align: center !important;
-                width: 100vw !important;
-                color: #4D4D4D !important;
-                font-size: 30px !important;
-                padding-bottom: 10px !important;
-            }
-
-            .audioBar {
-                ion-range {
-                    padding-top: 0px !important;
-                    padding-bottom: 0px !important;
-                }
-
-                width: 100vw !important;
-            }
-        }
-
-        .progressBar1 {
-            background-color: #1D57FF;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
-
-        .progressBar2 {
-            background-color: #9C9B99;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-
-        .fadeOut {
-            opacity: 0;
-            visibility: hidden;
-            transition: 5s linear;
-        }
-
-        .left {
-            float: left !important;
-        }
-
-        .right {
-            float: right !important;
-            color: grey !important;
-        }
-
-        ion-grid {
-            text-align: center !important;
-            border-top: 1px solid grey !important;
-            padding: 0px !important;
-
-            ion-col:first-child {
-                border-right: 1px solid grey !important;
-            }
-
-            ion-col {
-                padding: 0px !important;
-                background-color: #F3F3F3 !important;
-            }
-
-            button {
-                font-size: 17px !important;
-            }
-        }
-    }
-
-   page-chart {
-        /** CSS Chart */
-        // .scroll-content {
-        //     max-height: calc(100% - 20px);
-        // }
-        .scroll-content{
-            margin-top: 15%;
-        }
-        #charts-container {
-            border-top: 2px solid #848484;
-            border-bottom: 2px solid #848484;
-        }
-
-        .tooltip, .own-shares-title {
-            font-size: 14px;
-        }
-        /** CSS period */
-        .btn-period {
-            font-size: 15px;
-        }
-
-        .watchlist-period {
-            top: -10px;
-        }
-
-        .indices-period {
-            top: -9px;
-        }
-
-        .watchlist-period .btn-period {
-            width: 15% ;
-            padding-left: 28px;
-            padding-right: 28px;
-        }
-
-        .indices-period .btn-period {
-            width: 21%;
-            padding-left: 32px;
-            padding-right: 32px;
-        }
-        /** CSS Share name */
-        .share-name {
-            font-size: 12px;
-        }
-        /** CSS footer */
-        .btn-share {
-            /*width: 20%;*/
-            margin: 8px;
-            padding:8px;
-            font-size: 12px;
-        }
-
-        .sharegraph-title {
-            font-size: 14px;
-        }
-    }
-
-    page-performance {
-        .div-item-content {
-            max-height: calc(100% - 40px );
-        }
-
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 0.55px solid #6b6b6c;
-        }
-        /*.item-header-content{
-            margin-top: 15% !important; 
-        }*/
-        .item-box {
-            padding-top: 8px;
-            padding-bottom: 8px;
-            width: 19%;
-        }
-
-        .item-header {
-            width: 19%;
-            font-size: 15px !important;
-        }
-
-        .item-header span {
-            font-size: 12px !important;
-        }
-
-        .item-col-1 {
-            font-size: 17px;
-        }
-
-        .item-data {
-            font-size: 12px;
-        }
-
-        .div-item-content {
-            border-bottom: 0.55px solid #c8c7cc;
-        }
-    }
-
-    page-compare {
-        .date-title {
-            font-size: 14px;
-        }
-
-        /*.scroll-content {
-            max-height: calc(100% - 100px);
-        }*/
-        /** Box */
-        .item-box {
-            padding-bottom: (100%/3);
-            width: (100%/3);
-        }
-
-        .ticker, .price {
-            font-size: 18px !important;
-        }
-
-        .change-pro, .currency {
-            font-size: 12px;
-        }
-        /** Footer */
-        .footer {
-            font-size: 14px;
-        }
-        /*.content{
-            padding-top: 15%;
-        }*/
-    }
-    compare-tab {
-        .btn-header-title {
-            font-size: 12px;
-            text-align: center;
-            // height: 35px;
-            /*font-weight: medium;*/
-            /*margin-left: calc(50% - 43.5px);
-            margin-right: calc(50% - 62px);*/
-            border-radius: 5px;
-            /*margin-top: 35px;*/
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            /*padding-top: 5px;
-            padding-bottom: 5px;*/
-            // margin-left: 20px;
-        }
-
-        .show-tabbar {
-            width: 90%;
-            /*height: 25px;*/
-            border: 1px solid #848484 !important;
-            margin-left: 5%;
-            margin-right: 5%;
-        }
-        // .show-tabbar a {
-        //     height: 23px !important;
-        //     min-height: 20px !important;
-        // }
-        .show-tabbar a:first-child {
-            border-top-left-radius: 3.7px;
-            border-bottom-left-radius: 3.7px;
-        }
-
-        .tab-button:nth-child(2) {
-            border-right: 1px solid #848484;
-            border-left: 1px solid #848484;
-        }
-
-        .show-tabbar a:nth-child(3) {
-            border-top-right-radius: 3.7px;
-            border-bottom-right-radius: 3.7px;
-        }
-
-        .tab-button-text {
-            font-size: 15px !important;
-        }
-    }
-
-    //Arabic
-    html:lang(ar) {
-        /*Icons*/
-        .back-button-icon:before, .ion-ios-irapp-back:before {
-            background-position: -166px -288px !important;
-        }
-        //ion-list button:not([detail-none]) {
-        button:not([detail-none]) {
-            .item-inner {
-                background-image: none;
-            }
-
-            .item-inner:before {
-                position: absolute;
-                background-position: -197px -344px !important;
-                width: 15px;
-                height: 15px;
-                left: 15px;
-                top: 32%;
-            }
-        }
-        /*.attachment:before{
-            right: 5px;
-        }*/
-        /*Compare Tabs SG Module*/
-        compare-tab {
-            .show-tabbar a:first-child {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-            }
-
-            .show-tabbar a:nth-child(3) {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
-            }
-        }
-
-        page-chart .footer {
-            margin-left: 0 !important;
-            margin-right: 16px !important;
-        }
-        // History Price watchlist
-        .hp-watchlist-content .close {
-            left: 15px;
-            right: auto;
-        }
-    }
-}
-
-/*iPhone 6*/
-@media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
-    .menu-note {
-        margin-top: 40px;
-        margin-bottom: 20px;
-    }
-    /*Ticker*/
-    .cards-ticker {
-        .ticker-content {
-            .ticker-name {
-                padding-top: 10px;
-                padding-bottom: 10px;
-            }
-
-            .ticker-lastvalue {
-                padding-bottom: 10px;
-            }
-
-            .ticker-datacontent {
-                span {
-                    line-height: 25px;
-                }
-            }
-        }
-
-        .ticker-icon {
-            top: 60px;
-        }
-    }
-}
-
-/*iPhone 6+*/
-@media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
-}
-
-/*---------Tablet--------*/
-@media screen and (min-width: 768px) {
-    /*Listview*/
-    .list-ios .item-block:first-child{
-        border-top: 1px solid #ddd;
-    }
-    .list-ios .item-block .item-inner{
-        border-bottom-width: 1px;
-    }
+// $primary-font: "HelveticaNeue";
+// $light-font: "HelveticaNeue-Light";
+// $medium-font: "HelveticaNeue-Medium";
+// $thin-font: "HelveticaNeue-Thin";
+// $note-color: #808080;
+// $link-color: #0B6AFF;
+// $value-color: #8F8F95;
+// $card-font-size: 17px;
+
+// * {
+//     font-family: $primary-font;
+// }
+
+// /*ion-page.show-page {
+//     z-index: 200 !important;
+// }*/
+
+// .toolbar-title {
+//     font-size: 18px;
+//     font-weight: normal;
+// }
+
+// .back-button .back-default {
+//     font-family: $light-font;
+//     font-size: 17px;
+// }
+
+// #irapp-leftmenu {
+//     .btn-authenticate {
+//         font-family: $light-font;
+//     }
+// }
+
+// .irapp-toolbar {
+//     .scrollbar {
+//         height: 30px;
+//     }
+
+//     .button-inner {
+//         font-family: $light-font;
+//         font-size: 12px;
+//     }
+// }
+
+// ion-card-header, ion-list-header, .note {
+//     color: $note-color !important;
+// }
+
+// ion-card-header, ion-list-header {
+//     text-transform: uppercase;
+// }
+
+// .custom-link {
+//     color: $link-color;
+// }
+
+// .label {
+//     color: $note-color;
+// }
+
+// .performance-block {
+//     ion-item {
+//         ion-label, ion-note {
+//             font-size: 17px;
+//         }
+
+//         ion-note {
+//             color: $value-color;
+//         }
+//     }
+// }
+
+// ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
+//     font-size: 14px;
+// }
+
+// .note {
+//     margin-top: 15px;
+// }
+
+// .checkbox-icon {
+//     background-color: transparent !important;
+//     border: 0 !important;
+// }
+
+// /*List View With Sticky Divider*/
+// .ir-listview-divider {
+//     ion-item-divider {
+//         ion-label {
+//             font-family: $medium-font;
+//         }
+//     }
+// }
+// /*End List View With Sticky Divider*/
+
+// /*Calendar*/
+// .calendar-content {
+//     .event-type {
+//         font-family: $medium-font;
+//     }
+//     /*.event-date, .event-title{
+//         font-family: $primary-font;
+//     }*/
+// }
+
+// .download-confirm {
+//     .cards-confirm {
+//         .confirm-title {
+//             font-family: $light-font;
+//         }
+//     }
+// }
+// /*End Calendar*/
+
+// /*Press Releases*/
+// .pr-content {
+//     .pr-list-master {
+//         .label {
+//             font-family: $medium-font;
+//         }
+//     }
+// }
+
+// .pr-detail {
+//     .title {
+//         font-family: $medium-font;
+//     }
+// }
+// /*End Press Releases*/
+
+// /*Historical Price*/
+// .historicalprice-detail-content {
+//     .cards-compare {
+//         button {
+//             font-family: $light-font;
+//         }
+//     }
+// }
+// /*Watchlist Modal*/
+// .platform-iphone {
+//     .hp-watchlist-content {
+//         .header {
+//             margin-top: 3%;
+//             margin-bottom: 8%;
+//         }
+
+//         .date-content {
+//             margin-bottom: 8%;
+//         }
+
+//         .div-item-content {
+//             max-height: calc(100% - 9% - 181px );
+//         }
+
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 0.55px solid #6b6b6c;
+//         }
+//         ion-list .item .item-inner {
+//             border-bottom: 0.55px solid #6b6b6c ;
+//         }
+//         .btn-watch {
+//             font-size: 12px;
+//             font-weight: normal;
+//             font-family: $light-font;
+//         }
+
+//         .close {
+//             top: 0px;
+//             right: 15px;
+//         }
+
+//         .item-content .item span {
+//             font-size: 17px;
+//         }
+//         /*.item-content .item-center {
+//             font-size: 15px;
+//         }
+
+//         .item-content .item-right {
+//             font-size: 15px;
+//         }
+
+//         .item-content .item-left {
+//             font-size: 15px;
+//         }*/
+//         .current-date span {
+//             font-size: 15px;
+//         }
+//         /*.item-content, .item-header-content span {
+//             font-size: 17px;
+//         }*/
+//         .item-content, .item-header-content span {
+//             font-size: 15px;
+//             font-family: $light-font;
+//         }
+
+//         .item-content .item span.currency {
+//             font-size: 12px;
+//         }
+
+//         .footer {
+//             font-size: 14px;
+//         }
+//     }
+//     /*Invesment Calculator*/
+//     .ical-compare-content {
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 0.55px solid #6b6b6c;
+//         }
+
+//         .div-item-content {
+//             max-height: calc(100% - 10px - 267px );
+//         }
+
+//         .btn-header-watch {
+//             font-size: 12px;
+//             font-weight: medium;
+//             // margin-left: calc(50% - 43.5px);
+//         }
+//         // .btn-header-watch img {
+//         //     height: 20px;
+//         //     width: 20px;
+//         // }
+//         .btn-header-close {
+//             right: 10px;
+//             top: 0;
+//         }
+
+//         .flex-date img {
+//             height: 40px;
+//             width: 40px;
+//         }
+
+//         .item-content span, .item-content .item-right {
+//             font-size: 17px;
+//         }
+//         /*.item-content .item-center {
+//             font-size: 15px;
+//         }
+
+//         .item-content .item-right {
+//             font-size: 15px;
+//         }
+
+//         .item-content .item-left {
+//             font-size: 15px;
+//         }*/
+//         .date-info span {
+//             font-size: 15px;
+//         }
+
+//         .item-content, .item-header-content span {
+//             font-size: 15px;
+//             font-family: $light-font;
+//         }
+
+//         .item-content .currency {
+//             font-size: 12px;
+//         }
+
+//         .footer {
+//             padding-left: 16px;
+//             font-size: 14px;
+//         }
+//     }
+// }
+// /*Watchlist Modal*/
+// /*End Historical Price*/
+
+// /*Report*/
+// .report-group {
+//     button.btn-active {
+//         .button-inner {
+//             font-family: $medium-font;
+//         }
+//     }
+// }
+// /*End Report*/
+
+// /**/
+// .keyFinancial {
+//     .scroll-content {
+//         overflow-y: hidden !important;
+//     }
+
+//     #keyFinancialLeftCol {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         z-index: 1;
+//         display: block;
+//         overflow-x: hidden;
+//         overflow-y: scroll;
+//         -webkit-overflow-scrolling: touch;
+//         will-change: scroll-position;
+//         width: 100%;
+//     }
+
+//     .nopadding {
+//         padding: 0px !important;
+//     }
+
+//     ion-grid {
+//         padding: 0px !important;
+//         height: 100% !important;
+
+//         ion-row {
+//             height: 100% !important;
+
+//             ion-col:first-child {
+//                 padding: 0px !important;
+//                 flex: 0 0 40% !important;
+//                 position: relative !important;
+//             }
+
+//             ion-col:last-child {
+//                 padding: 0px !important;
+//                 flex: 0 0 60% !important;
+//                 overflow: scroll !important;
+//                 height: 100vh;
+//                 background-color: white !important;
+//                 border-left: 1px solid grey !important;
+//                 padding-top: 0px !important;
+
+//                 h4 {
+//                     margin-top: 10px !important;
+//                 }
+
+//                 table {
+//                     width: 100% !important;
+//                     text-align: center !important;
+//                 }
+//             }
+//         }
+//     }
+
+
+//     ion-item {        
+//         .item-inner {  
+//             border-bottom: 1px solid grey;         
+//             padding-right:8px;
+//             background-color: white !important;
+//             padding-left:8px;
+//         }
+//     }
+
+//     td {
+//         padding-top: 8px !important;
+//         padding-bottom: 8px !important;
+//     }
+
+//     .selected {
+//         .item-inner {
+//             border-bottom-color: #007FFF;
+//             background-color: #007FFF !important;
+//             padding-left:8px;
+//             padding-right:8px;
+//         }
+
+//         td {
+//             color: white !important;
+//         }
+//     }
+// }
+
+// .noVerticalPadding {
+//     padding-top: 0px !important;
+//     padding-bottom: 0px !important;
+// }
+
+// .Better {
+//     background-color: #87AF3F;
+// }
+
+// .Worse {
+//     background-color: #D0021B;
+// }
+
+// .Default {
+//     background-color: #9B9B9B;
+// }
+
+// .mediaDetailHeader {
+//     ion-navbar {
+//         padding-right: 0px;
+//     }
+
+//     button {
+//         float: right;
+//         margin-right: 0px;
+//     }
+// }
+
+// page-chart {
+//     .btn-period .button-inner {
+//         font-family: $light-font;
+//     }
+
+//     .btn-share .button-inner {
+//         font-family: $light-font;
+//     }
+
+//     .btn-period-click .button-inner {
+//         font-family: $medium-font;
+//     }
+// }
+// /*---------Phone--------*/
+// @media only screen and (max-width: 767px) {
+//     .mediaHeader, .keyFinancialHeader {
+//         ion-grid {
+//             text-align: center !important;
+
+//             ion-col {
+//                 padding-top: 0px !important;
+
+//                 h4 {
+//                     margin-top: 10px !important;
+//                 }
+//             }
+
+//             ion-row {
+//                 color: white !important;
+//                 text-align: center !important;
+//             }
+//         }
+
+//         .tabletButton {
+//             .button-inner {
+//                 font-size: 17px !important;
+//             }
+//             color:white !important;
+//         }
+
+//         .phoneButton {
+//             .button-inner {
+//                 font-size: 12px !important;
+//             }
+//             color:white !important;
+//         }
+
+//         .mediaYearHeader {
+//             button {
+//                 color: black !important;
+//             }
+
+//             .thick {
+//                 font-weight: bold;
+//             }
+
+//             .toolbar-background {
+//                 background-color: white !important;
+//             }
+//         }
+//     }
+
+//     /*Card compare*/
+//     .cards-compare {
+//         button {
+//             min-height: 35px;
+//             min-width: 95px;
+//         }
+//     }
+
+//     /*Load icons*/
+//     .irapp-icon:before, .back-button-icon:before,
+//     .checkbox-checked, .icon-attachment,
+//     button:not([detail-none]) .item-inner:before {
+//         //ion-list button:not([detail-none]) .item-inner:before {
+//         /*background: -webkit-image-set(url(../../img/iphone.png) 1x, url(../../img/iphone@2x.png) 2x, url(../../img/iphone@3x.png) 3x) !important;*/
+//         background: -webkit-image-set(url(../assets/img/iphone.png) 1x, url(../assets/img/iphone@2x.png) 2x, url(../assets/img/iphone@3x.png) 3x) !important;
+//         content: " ";
+//         background-size: 418px 362px;
+//         background-repeat: no-repeat;
+//         display: block;
+//     }
+//     /*End Load icons*/
+
+//     /*Common Icons*/
+//     .checkbox-checked {
+//         background-position: -160px -340px !important;
+
+//         .checkbox-inner {
+//             width: 0;
+//             height: 0;
+//         }
+//     }
+//     /*End Common Icons*/
+
+//     /*HomePage Icons*/
+//     .bar-button-menutoggle {
+//         margin: 0;
+//     }
+
+//     .ion-ios-irapp-account:before {
+//         width: 27px;
+//         height: 27px;
+//         background-position: -67px -252px !important;
+//     }
+
+//     .ion-ios-irapp-settings-white:before {
+//         width: 27px;
+//         height: 27px;
+//         background-position: 1px -232px !important;
+//     }
+
+//     .back-button-icon:before, .ion-ios-irapp-back:before {
+//         width: 12px;
+//         height: 21px;
+//         background-position: -166px -317px !important;
+//     }
+
+//     .ion-ios-irapp-menu:before {
+//         width: 30px;
+//         height: 18px;
+//         background-position: -232px -33px !important;
+//     }
+
+//     .ion-ios-irapp-share:before {
+//         width: 20px;
+//         height: 28px;
+//         background-position: -234px -2px !important;
+//     }
+
+//     .ion-ios-irapp-settings-black:before {
+//         width: 40px;
+//         height: 40px;
+//         background-position: 1px -181px !important;
+//     }
+//     /*End HomePage Icons*/
+
+//     /*iCal Icons*/
+//     .ion-ios-irapp-shares:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -269px -244px !important;
+//     }
+
+//     .ion-ios-irapp-amount:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -269px -216px !important;
+//     }
+
+//     .ion-ios-irapp-change:before {
+//         width: 34px;
+//         height: 30px;
+//         background-position: -231px -100px !important;
+//     }
+
+//     .ion-ios-irapp-changepercent:before {
+//         width: 34px;
+//         height: 30px;
+//         background-position: -231px -134px !important;
+//     }
+
+//     .ion-ios-irapp-watchlist:before {
+//         width: 22px;
+//         height: 22px;
+//         background-position: -66px -217px !important;
+//     }
+
+//     .ion-ios-irapp-indices:before {
+//         width: 22px;
+//         height: 22px;
+//         background-position: -66px -192px !important;
+//     }
+
+//     .ion-ios-irapp-closemodal:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -196px -240px !important;
+//     }
+
+//     .ion-ios-irapp-daterange:before {
+//         width: 42px;
+//         height: 42px;
+//         background-position: -303px -134px !important;
+//     }
+//     /*End iCal Icons*/
+
+//     /*Historical Price Icons*/
+//     .ion-ios-irapp-calendar:before {
+//         width: 42px;
+//         height: 42px;
+//         background-position: -303px -178px !important;
+//     }
+//     /*End Historical Price Icons*/
+
+//     /*Press Releases Icons*/
+//     .attachment:before, .ion-ios-irapp-attachment:before {
+//         width: 20px;
+//         height: 20px;
+//         background-position: -28px -260px !important;
+//     }
+
+//     .ion-ios-irapp-pricechange {
+//         width: 18px;
+//         height: 18px;
+//         border-radius: 3px;
+//         background-color: #DDD7D2;
+//     }
+
+//     .ion-ios-irapp-pricechange:before {
+//         width: 18px;
+//         height: 18px;
+//         background-position: -29px -285px !important;
+//     }
+
+//     .price-change.plus {
+//         .ion-ios-irapp-pricechange {
+//             background-color: #43A047;
+//         }
+
+//         .ion-ios-irapp-pricechange:before {
+//             background-position: -31px -220px !important;
+//         }
+//     }
+
+//     .price-change.minus {
+//         .ion-ios-irapp-pricechange {
+//             background-color: #FF3A2D;
+//         }
+
+//         .ion-ios-irapp-pricechange:before {
+//             background-position: -31px -238px !important;
+//         }
+//     }
+
+//     .ion-ios-irapp-price-up {
+//         width: 18px;
+//         height: 18px;
+//         background-color: #43A047;
+//         border-radius: 3px;
+//     }
+
+//     .ion-ios-irapp-price-up:before {
+//         width: 18px;
+//         height: 18px;
+//         background-position: -31px -220px !important;
+//     }
+
+//     .icon-attachment {
+//         background-position: -304px -64px !important;
+//     }
+//     /*End Press Releases Icons*/
+
+//     /*Calendar Icons*/
+//     .ion-ios-irapp-download:before {
+//         width: 28px;
+//         height: 32px;
+//         background-position: -232px -58px !important;
+//     }
+
+//     .ion-ios-irapp-close:before {
+//         width: 30px;
+//         height: 30px;
+//         background-position: -195px -238px !important;
+//     }
+//     /*End Calendar Icons*/
+
+//     /*Media Icons*/
+//     .ion-ios-irapp-tick:before {
+//         width: 24px;
+//         height: 24px;
+//         background-position: -268px -190px !important;
+//     }
+
+//     .ion-ios-irapp-Video:before {
+//         width: 44px;
+//         height: 54px;
+//         background-position: -303px -1px !important;
+//     }
+
+//     .ion-ios-irapp-cancel-download:before {
+//         width: 27px;
+//         height: 27px;
+//         background-position: -1px -331px !important;
+//     }
+
+//     .ion-ios-irapp-Audio:before {
+//         width: 41px;
+//         height: 50px;
+//         background-position: -199px -268px !important;
+//     }
+
+//     .ion-ios-irapp-play-button:before {
+//         width: 52px;
+//         height: 50px;
+//         background-position: -32px -309px !important;
+//     }
+
+//     .ion-ios-irapp-pause-button:before {
+//         width: 52px;
+//         height: 50px;
+//         background-position: -248px -278px !important;
+//     }
+
+//     .ion-ios-irapp-share-facebook:before {
+//         width: 40px;
+//         height: 40px;
+//         background-position: -371px -4px !important;
+//     }
+
+//     .ion-ios-irapp-share-twitter:before {
+//         width: 40px;
+//         height: 40px;
+//         background-position: -371px -138px !important;
+//     }
+
+//     .ion-ios-irapp-share-linkedin:before {
+//         width: 40px;
+//         height: 40px;
+//         background-position: -371px -48px !important;
+//     }
+
+//     .ion-ios-irapp-share-email:before {
+//         width: 40px;
+//         height: 40px;
+//         background-position: -372px -93px !important;
+//     }
+
+//     .ion-ios-irapp-video-enter-fullscreen:before {
+//         width: 23px;
+//         height: 23px;
+//         background-position: -234px -247px !important;
+//     }
+
+//     .ion-ios-irapp-video-exit-fullscreen:before {
+//         width: 23px;
+//         height: 23px;
+//         background-position: -234px -337px !important;
+//     }
+
+//     .ion-ios-irapp-download-confirm:before {
+//         width: 61px;
+//         height: 80px;
+//         background-position: -305px -280px !important;
+//     }
+
+//     .ion-ios-irapp-yes:before {
+//         width: 21px;
+//         height: 21px;
+//         background-position: -165px -191px !important;
+//     }
+
+//     .ion-ios-irapp-no:before {
+//         width: 21px;
+//         height: 21px;
+//         background-position: -199px -190px !important;
+//     }
+
+//     /*End Media Icons*/
+
+//     /*Report Icons*/
+//     .ion-ios-irapp-downloaded:before, .image-selected:before {
+//         width: 24px;
+//         height: 24px;
+//         background-position: -268px -189px !important;
+//     }
+
+//     .ion-ios-irapp-delete:before {
+//         width: 24px;
+//         height: 24px;
+//         background-position: 0 -298px !important;
+//     }
+//     /*End Report Icons*/
+
+//     /*Settings Icons*/
+//     .ion-ios-irapp-facebook:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -132px -288px !important;
+//     }
+
+//     .ion-ios-irapp-google:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -132px -215px !important;
+//     }
+
+//     .ion-ios-irapp-setting-watchlist:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -130px -542px !important;
+//     }
+
+//     .ion-ios-irapp-setting-indices:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -99px -681px !important;
+//     }
+
+//     .ion-ios-irapp-setting-emailalert:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -132px -688px !important;
+//     }
+
+//     .ion-ios-irapp-setting-account:before {
+//         width: 32px;
+//         height: 32px;
+//         background-position: -166px -615px !important;
+//     }
+
+//     .ion-ios-irapp-setting-currency:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -98px -613px !important;
+//     }
+
+//     .ion-ios-irapp-setting-decimal:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -131px -613px !important;
+//     }
+
+//     .ion-ios-irapp-setting-language:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -98px -579px !important;
+//     }
+
+//     .ion-ios-irapp-setting-quickmenu:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -98px -547px !important;
+//     }
+
+//     .ion-ios-irapp-setting-notification:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -164px -577px !important;
+//     }
+
+//     .ion-ios-irapp-setting-stream:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: 2px -625px !important;
+//     }
+
+//     .ion-ios-irapp-setting-menuimage:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -98px -649px !important;
+//     }
+//     /*End Settings Icons*/
+
+//     /*Flags*/
+//     .flag-icon:before {
+//         width: 32px;
+//         height: 22px;
+//     }
+
+//     .ion-ios-flag-aed:before {
+//         background-position: -99px -23px !important;
+//     }
+
+//     .ion-ios-flag-ars:before {
+//         background-position: -99px 0 !important;
+//     }
+
+//     .ion-ios-flag-aud:before {
+//         background-position: -132px 0px !important;
+//     }
+
+//     .ion-ios-flag-bhd:before {
+//         background-position: 1px -46px !important;
+//     }
+
+//     .ion-ios-flag-brl:before {
+//         background-position: -164px 0px !important;
+//     }
+
+//     .ion-ios-flag-cad:before {
+//         background-position: -198px 0px !important;
+//     }
+
+//     .ion-ios-flag-chf:before {
+//         background-position: -32px -158px !important;
+//     }
+
+//     .ion-ios-flag-cny:before {
+//         background-position: -32px -46px !important;
+//     }
+
+//     .ion-ios-flag-czk:before {
+//         background-position: 0px -24px !important;
+//     }
+
+//     .ion-ios-flag-dkk:before {
+//         background-position: -32px -23px !important;
+//     }
+
+//     .ion-ios-flag-dzd:before {
+//         background-position: -197px -24px !important;
+//     }
+
+//     .ion-ios-flag-eek:before {
+//         background-position: -131px -24px !important;
+//     }
+
+//     .ion-ios-flag-egp:before {
+//         background-position: -65px -24px !important;
+//     }
+
+//     .ion-ios-flag-eur:before {
+//         background-position: -165px -23px !important;
+//     }
+
+//     .ion-ios-flag-gbp:before {
+//         background-position: 0 0 !important;
+//     }
+
+//     .ion-ios-flag-gbx:before {
+//         background-position: 0 0 !important;
+//     }
+
+//     .ion-ios-flag-hkd:before {
+//         background-position: -32px 0 !important;
+//     }
+
+//     .ion-ios-flag-hrk:before {
+//         background-position: -65px -46px !important;
+//     }
+
+//     .ion-ios-flag-huf:before {
+//         background-position: -98px -46px !important;
+//     }
+
+//     .ion-ios-flag-idr:before {
+//         background-position: 0 -68px !important;
+//     }
+
+//     .ion-ios-flag-ils:before {
+//         background-position: -32px -68px !important;
+//     }
+
+//     .ion-ios-flag-inr:before {
+//         background-position: -197px -46px !important;
+//     }
+
+//     .ion-ios-flag-isk:before {
+//         background-position: -131px -46px !important;
+//     }
+
+//     .ion-ios-flag-jod:before {
+//         background-position: -99px -68px !important;
+//     }
+
+//     .ion-ios-flag-jpy:before {
+//         background-position: -65px -68px !important;
+//     }
+
+//     .ion-ios-flag-kes:before {
+//         background-position: -132px -68px !important;
+//     }
+
+//     .ion-ios-flag-krw:before {
+//         background-position: -165px -135px !important;
+//     }
+
+//     .ion-ios-flag-kwd:before {
+//         background-position: -165px -68px !important;
+//     }
+
+//     .ion-ios-flag-lbp:before {
+//         background-position: 1px -91px !important;
+//     }
+
+//     .ion-ios-flag-lkr:before {
+//         background-position: -198px -136px !important;
+//     }
+
+//     .ion-ios-flag-ltl:before {
+//         background-position: -65px -90px !important;
+//     }
+
+//     .ion-ios-flag-lvl:before {
+//         background-position: -198px -68px !important;
+//     }
+
+//     .ion-ios-flag-lyd:before {
+//         background-position: -32px -90px !important;
+//     }
+
+//     .ion-ios-flag-mad:before {
+//         background-position: -198px -91px !important;
+//     }
+
+//     .ion-ios-flag-mdl:before {
+//         background-position: -165px -45px !important;
+//     }
+
+//     .ion-ios-flag-mur:before {
+//         background-position: -132px -91px !important;
+//     }
+
+//     .ion-ios-flag-mxn:before {
+//         background-position: -165px -91px !important;
+//     }
+
+//     .ion-ios-flag-myr:before {
+//         background-position: -99px -92px !important;
+//     }
+
+//     .ion-ios-flag-nad:before {
+//         background-position: 0 -114px !important;
+//     }
+
+//     .ion-ios-flag-nok:before {
+//         background-position: -65px -114px !important;
+//     }
+
+//     .ion-ios-flag-nzd:before {
+//         background-position: -32px -114px !important;
+//     }
+
+//     .ion-ios-flag-omr:before {
+//         background-position: -98px -114px !important;
+//     }
+
+//     .ion-ios-flag-pln:before {
+//         background-position: -132px -114px !important;
+//     }
+
+//     .ion-ios-flag-qar:before {
+//         background-position: -165px -114px !important;
+//     }
+
+//     .ion-ios-flag-ron:before {
+//         background-position: -198px -114px !important;
+//     }
+
+//     .ion-ios-flag-rub:before {
+//         background-position: 0 -137px !important;
+//     }
+
+//     .ion-ios-flag-sar:before {
+//         background-position: -32px -137px !important;
+//     }
+
+//     .ion-ios-flag-scr:before {
+//         background-position: -64px -137px !important;
+//     }
+
+//     .ion-ios-flag-sek:before {
+//         background-position: 0 -158px !important;
+//     }
+
+//     .ion-ios-flag-sgd:before {
+//         background-position: -99px -137px !important;
+//     }
+
+//     .ion-ios-flag-thb:before {
+//         background-position: -99px -158px !important;
+//     }
+
+//     .ion-ios-flag-tnd:before {
+//         background-position: -132px -159px !important;
+//     }
+
+//     .ion-ios-flag-try:before {
+//         background-position: -165px -159px !important;
+//     }
+
+//     .ion-ios-flag-twd:before {
+//         background-position: -65px -158px !important;
+//     }
+
+//     .ion-ios-flag-usd:before {
+//         background-position: -65px 0 !important;
+//     }
+
+//     .ion-ios-flag-vnd:before {
+//         background-position: -198px -158px !important;
+//     }
+
+//     .ion-ios-flag-zar:before {
+//         background-position: -132px -136px !important;
+//     }
+//     /*End Flags*/
+
+//     /*ion-card ion-card-header, ion-list-header{
+// 		font-size: 14px;
+// 	}
+// 	.note{
+// 		margin-top: 15px;
+// 	}*/
+
+//     #irapp-leftmenu {
+//         .btn-authenticate {
+//             font-size: 12px;
+//         }
+//     }
+
+//     /*Share Graph*/
+//     page-sharegraph {
+//         .periods {
+//             .segment-button {
+//                 height: 35px;
+//             }
+//         }
+
+//         .ticker {
+//             ion-col {
+//                 padding-top: 20px;
+//             }
+
+//             .price {
+//                 font-size: 20px;
+//             }
+
+//             .label {
+//                 font-size: 10px;
+//                 //color: $note-color;
+//             }
+//         }
+
+//         .cards-compare {
+//             ion-card-header {
+//                 padding-top: 20px;
+//                 padding-bottom: 20px;
+//             }
+
+//             .button-inner {
+//                 font-family: $light-font;
+//             }
+
+//             .button {
+//                 height: 35px;
+//                 margin: 0 10px 0 0;
+//             }
+//         }
+//         /*.performance-block{
+// 			ion-item{
+// 				ion-label, ion-note{
+// 					font-size: 17px;
+// 				}
+// 				ion-note{
+// 					color: $value-color;
+// 				}
+// 			}
+// 		}*/
+//     }
+
+//     .mediaContent {
+//         background-color: #F3F3F3 !important;
+
+//         .flex-container {
+//             display: flex;
+//             width: 100%;
+//             -webkit-flex-wrap: wrap;
+
+//             .mediaItem {
+//                 width: 42%;
+//                 margin: 4%;
+//                 line-height: 1.5;
+
+//                 button {
+//                     width: 100%;
+//                     height: 42vw;
+//                     background-color: #DEDEDE;
+//                 }
+
+//                 button:active {
+//                     background-color: #DEDEDE !important;
+//                 }
+
+//                 div {
+//                     width: 100%;
+//                     padding-left: 10px;
+//                     padding-right: 10px;
+
+//                     ion-icon {
+//                         float: right;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .mediaPopover {
+//         text-align: center !important;
+//         padding-top: 8px;
+//         padding-bottom: 8px;
+//         font-size: 16px;
+//         position: relative;
+
+//         span {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//         }
+//     }
+
+//     .mediaDetailContent {
+//         .scroll-content {
+//             overflow-y: scroll;
+//         }
+
+//         #videoDownloadCompletedBox {
+//             text-align: left;
+//             position: absolute;
+//             width: 100%;
+//             background-color: white;
+//             z-index: 101;
+//         }
+
+//         #downloadCompletedBox {
+//             text-align: left;
+//             position: absolute;
+//             width: 100%;
+//             background-color: white;
+//             z-index: 101;
+//         }
+
+//         #videoContainer {
+//             position: relative;
+//             visibility: hidden;
+//             text-align: center;
+//         }
+
+//         .videoControl {
+//             text-align: center !important;
+//             background-color: white !important;
+
+//             .videoBtn {
+//                 text-align: center !important;
+//                 width: 100vw !important;
+//                 color: #4D4D4D !important;
+//                 font-size: 30px !important;
+//                 padding-bottom: 10px !important;
+//             }
+
+//             .videoBar {
+//                 ion-range {
+//                     padding-top: 0px !important;
+//                     padding-bottom: 0px !important;
+//                 }
+
+//                 width: 100vw !important;
+//             }
+//         }
+
+//         #videoButton {
+//             position: absolute;
+//             color: white;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             text-align: center;
+//             top: 50% !important;
+//             transform: translateY(-50%) !important;
+
+//             ion-icon {
+//                 font-size: 32px;
+//             }
+//         }
+
+//         #videoRangeDiv {
+//             position: absolute;
+//             bottom: 0px;
+//             width: 100%;
+//             color: white;
+//             background-color: rgba(169,169,169,0.5);
+//         }
+
+//         #videoRange {
+//             padding-top: 0px !important;
+//             padding-bottom: 0px !important;
+//         }
+
+//         ion-spinner {
+//             left: 49%;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             position: absolute;
+
+//             svg {
+//                 width: 15px;
+//                 height: 15px;
+//             }
+
+//             circle {
+//                 stroke: white;
+//             }
+//         }
+
+//         background-color: #EFEFF4 !important;
+//         color: #333333 !important;
+
+//         .bottomButton {
+//             bottom: 0px !important;
+//             position: absolute !important;
+//             width: 100% !important;
+//             text-align: center !important;
+//             border-top: 1px solid grey !important;
+//         }
+
+//         .audioHeader {
+//             position: relative !important;
+//             height: 30vh !important;
+//             text-align: center !important;
+//             background-color: #D8D8D8 !important;
+
+//             img {
+//                 position: relative !important;
+//                 top: 50% !important;
+//                 transform: translateY(-50%) !important;
+//             }
+
+//             ion-icon {
+//                 position: relative !important;
+//                 top: 50% !important;
+//                 transform: translateY(-50%) !important;
+//             }
+
+//             .downloadCompletedBox {
+//                 width: 100vw !important;
+//                 background-color: white !important;
+//                 font-size: 15px !important;
+//                 text-align: left !important;
+//                 position: absolute !important;
+//             }
+
+//             .theSpinner {
+//                 position: absolute !important;
+//                 top: 50%;
+//                 transform: translateY(-50%) !important;
+//                 text-align: center !important;
+//                 width: 100vw !important;
+//             }
+//         }
+
+//         .audioControl {
+//             text-align: center !important;
+//             background-color: white !important;
+
+//             .audioBtn {
+//                 text-align: center !important;
+//                 width: 100vw !important;
+//                 color: #4D4D4D !important;
+//                 font-size: 30px !important;
+//                 padding-bottom: 10px !important;
+//             }
+
+//             .audioBar {
+//                 ion-range {
+//                     padding-top: 0px !important;
+//                     padding-bottom: 0px !important;
+//                 }
+
+//                 width: 100vw !important;
+//             }
+//         }
+
+//         .progressBar1 {
+//             background-color: #1D57FF;
+//             border-top-left-radius: 10px;
+//             border-bottom-left-radius: 10px;
+//         }
+
+//         .progressBar2 {
+//             background-color: #9C9B99;
+//             border-top-right-radius: 10px;
+//             border-bottom-right-radius: 10px;
+//         }
+
+//         .fadeOut {
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: 5s linear;
+//         }
+
+//         .left {
+//             float: left !important;
+//         }
+
+//         .right {
+//             float: right !important;
+//             color: grey !important;
+//         }
+
+//         ion-grid {
+//             text-align: center !important;
+//             border-top: 1px solid grey !important;
+//             padding: 0px !important;
+
+//             ion-col:first-child {
+//                 border-right: 1px solid grey !important;
+//             }
+
+//             ion-col {
+//                 padding: 0px !important;
+//                 background-color: #F3F3F3 !important;
+//             }
+
+//             button {
+//                 font-size: 17px !important;
+//             }
+//         }
+//     }
+
+//    page-chart {
+//         /** CSS Chart */
+//         // .scroll-content {
+//         //     max-height: calc(100% - 20px);
+//         // }
+//         .scroll-content{
+//             margin-top: 15%;
+//         }
+//         #charts-container {
+//             border-top: 2px solid #848484;
+//             border-bottom: 2px solid #848484;
+//         }
+
+//         .tooltip, .own-shares-title {
+//             font-size: 14px;
+//         }
+//         /** CSS period */
+//         .btn-period {
+//             font-size: 15px;
+//         }
+
+//         .watchlist-period {
+//             top: -10px;
+//         }
+
+//         .indices-period {
+//             top: -9px;
+//         }
+
+//         .watchlist-period .btn-period {
+//             width: 15% ;
+//             padding-left: 28px;
+//             padding-right: 28px;
+//         }
+
+//         .indices-period .btn-period {
+//             width: 21%;
+//             padding-left: 32px;
+//             padding-right: 32px;
+//         }
+//         /** CSS Share name */
+//         .share-name {
+//             font-size: 12px;
+//         }
+//         /** CSS footer */
+//         .btn-share {
+//             /*width: 20%;*/
+//             margin: 8px;
+//             padding:8px;
+//             font-size: 12px;
+//         }
+
+//         .sharegraph-title {
+//             font-size: 14px;
+//         }
+//     }
+
+//     page-performance {
+//         .div-item-content {
+//             max-height: calc(100% - 40px );
+//         }
+
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 0.55px solid #6b6b6c;
+//         }
+//         /*.item-header-content{
+//             margin-top: 15% !important; 
+//         }*/
+//         .item-box {
+//             padding-top: 8px;
+//             padding-bottom: 8px;
+//             width: 19%;
+//         }
+
+//         .item-header {
+//             width: 19%;
+//             font-size: 15px !important;
+//         }
+
+//         .item-header span {
+//             font-size: 12px !important;
+//         }
+
+//         .item-col-1 {
+//             font-size: 17px;
+//         }
+
+//         .item-data {
+//             font-size: 12px;
+//         }
+
+//         .div-item-content {
+//             border-bottom: 0.55px solid #c8c7cc;
+//         }
+//     }
+
+//     page-compare {
+//         .date-title {
+//             font-size: 14px;
+//         }
+
+//         /*.scroll-content {
+//             max-height: calc(100% - 100px);
+//         }*/
+//         /** Box */
+//         .item-box {
+//             padding-bottom: (100%/3);
+//             width: (100%/3);
+//         }
+
+//         .ticker, .price {
+//             font-size: 18px !important;
+//         }
+
+//         .change-pro, .currency {
+//             font-size: 12px;
+//         }
+//         /** Footer */
+//         .footer {
+//             font-size: 14px;
+//         }
+//         /*.content{
+//             padding-top: 15%;
+//         }*/
+//     }
+//     compare-tab {
+//         .btn-header-title {
+//             font-size: 12px;
+//             text-align: center;
+//             // height: 35px;
+//             /*font-weight: medium;*/
+//             /*margin-left: calc(50% - 43.5px);
+//             margin-right: calc(50% - 62px);*/
+//             border-radius: 5px;
+//             /*margin-top: 35px;*/
+//             display: flex;
+//             align-content: center;
+//             align-items: center;
+//             justify-content: center;
+//             /*padding-top: 5px;
+//             padding-bottom: 5px;*/
+//             // margin-left: 20px;
+//         }
+
+//         .show-tabbar {
+//             width: 90%;
+//             /*height: 25px;*/
+//             border: 1px solid #848484 !important;
+//             margin-left: 5%;
+//             margin-right: 5%;
+//         }
+//         // .show-tabbar a {
+//         //     height: 23px !important;
+//         //     min-height: 20px !important;
+//         // }
+//         .show-tabbar a:first-child {
+//             border-top-left-radius: 3.7px;
+//             border-bottom-left-radius: 3.7px;
+//         }
+
+//         .tab-button:nth-child(2) {
+//             border-right: 1px solid #848484;
+//             border-left: 1px solid #848484;
+//         }
+
+//         .show-tabbar a:nth-child(3) {
+//             border-top-right-radius: 3.7px;
+//             border-bottom-right-radius: 3.7px;
+//         }
+
+//         .tab-button-text {
+//             font-size: 15px !important;
+//         }
+//     }
+
+//     //Arabic
+//     html:lang(ar) {
+//         /*Icons*/
+//         .back-button-icon:before, .ion-ios-irapp-back:before {
+//             background-position: -166px -288px !important;
+//         }
+//         //ion-list button:not([detail-none]) {
+//         button:not([detail-none]) {
+//             .item-inner {
+//                 background-image: none;
+//             }
+
+//             .item-inner:before {
+//                 position: absolute;
+//                 background-position: -197px -344px !important;
+//                 width: 15px;
+//                 height: 15px;
+//                 left: 15px;
+//                 top: 32%;
+//             }
+//         }
+//         /*.attachment:before{
+//             right: 5px;
+//         }*/
+//         /*Compare Tabs SG Module*/
+//         compare-tab {
+//             .show-tabbar a:first-child {
+//                 border-top-left-radius: 0;
+//                 border-bottom-left-radius: 0;
+//                 border-top-right-radius: 4px;
+//                 border-bottom-right-radius: 4px;
+//             }
+
+//             .show-tabbar a:nth-child(3) {
+//                 border-top-right-radius: 0;
+//                 border-bottom-right-radius: 0;
+//                 border-top-left-radius: 4px;
+//                 border-bottom-left-radius: 4px;
+//             }
+//         }
+
+//         page-chart .footer {
+//             margin-left: 0 !important;
+//             margin-right: 16px !important;
+//         }
+//         // History Price watchlist
+//         .hp-watchlist-content .close {
+//             left: 15px;
+//             right: auto;
+//         }
+//     }
+// }
+
+// /*iPhone 6*/
+// @media only screen and (min-device-width : 375px) and (max-device-width : 667px) {
+//     .menu-note {
+//         margin-top: 40px;
+//         margin-bottom: 20px;
+//     }
+//     /*Ticker*/
+//     .cards-ticker {
+//         .ticker-content {
+//             .ticker-name {
+//                 padding-top: 10px;
+//                 padding-bottom: 10px;
+//             }
+
+//             .ticker-lastvalue {
+//                 padding-bottom: 10px;
+//             }
+
+//             .ticker-datacontent {
+//                 span {
+//                     line-height: 25px;
+//                 }
+//             }
+//         }
+
+//         .ticker-icon {
+//             top: 60px;
+//         }
+//     }
+// }
+
+// /*iPhone 6+*/
+// @media only screen and (min-device-width : 414px) and (max-device-width : 736px) {
+// }
+
+// /*---------Tablet--------*/
+// @media screen and (min-width: 768px) {
+//     .platform-ios{}
+//     /*Listview*/
+//     .list-ios .item-block:first-child{
+//         border-top: 1px solid #ddd;
+//     }
+//     .list-ios .item-block .item-inner{
+//         border-bottom-width: 1px;
+//     }
     
-    .irapp-toolbar {
-        .scrollbar {
-            height: 40px;
-        }
-
-        .button-inner {
-            font-size: 17px;
-        }
-    }
-
-    .mediaHeader, .keyFinancialHeader {
-        ion-grid {
-            text-align: center !important;
-
-            ion-col {
-                padding-top: 0px !important;
-
-                h4 {
-                    margin-top: 10px !important;
-                }
-            }
-
-            ion-row {
-                color: white !important;
-                text-align: center !important;
-            }
-        }
-
-        ion-toolbar {
-            text-align: center;
-        }
-
-        .tabletButton {
-            .button-inner {
-                font-size: 17px !important;
-            }
-            color:white !important;
-        }
-
-        .phoneButton {
-            .button-inner {
-                font-size: 12px !important;
-            }
-            color:white !important;
-        }
-
-        .mediaYearHeader {
-            button {
-                color: black !important;
-            }
-
-            .thick {
-                font-weight: bold;
-            }
-
-            .toolbar-background {
-                background-color: white !important;
-            }
-        }
-    }
-
-    /*Load icons*/
-    .irapp-icon:before, .back-button-icon:before,
-    .checkbox-checked, .icon-attachment {
-        //button:not([detail-none]) .item-inner:before {
-        //background: -webkit-image-set(url(../../img/ipad.png) 1x, url(../../img/ipad@2x.png) 2x, url(../../img/ipad@3x.png) 3x) !important;
-        background: -webkit-image-set(url(../assets/img/ipad.png) 1x, url(../assets/img/ipad@2x.png) 2x, url(../assets/img/ipad@3x.png) 3x) !important;
-        content: " ";
-        background-size: 606px 645px;
-        background-repeat: no-repeat;
-        display: block;
-    }
-    /*End Load icons*/
-
-    /*Common Icons*/
-    .bar-button {
-        height: auto;
-    }
-
-    .checkbox-icon {
-        background-color: transparent;
-        border: 0;
-    }
-
-    .checkbox-checked {
-        background-position: -22px -390px !important;
-
-        .checkbox-inner {
-            width: 0;
-            height: 0;
-        }
-    }
-    /*End Common Icons*/
-
-    /*HomePage Icons*/
-    .bar-button-menutoggle {
-        margin: 0;
-    }
-
-    .ion-ios-irapp-account:before {
-        width: 29px;
-        height: 29px;
-        background-position: -24px -438px !important;
-    }
-
-    .ion-ios-irapp-settings-white:before {
-        width: 60px;
-        height: 60px;
-        background-position: -285px -412px !important;
-    }
-
-    .back-button-icon:before, .ion-ios-irapp-back:before {
-        width: 13px;
-        height: 22px;
-        background-position: -130px -444px !important;
-    }
-
-    .ion-ios-irapp-menu:before {
-        width: 35px;
-        height: 30px;
-        background-position: -388px -230px !important;
-    }
-
-    .ion-ios-irapp-share:before {
-        width: 30px;
-        height: 35px;
-        background-position: -388px -259px !important;
-    }
-
-    .ion-ios-irapp-settings-black:before {
-        width: 68px;
-        height: 68px;
-        background-position: -340px -471px !important;
-    }
-    /*End HomePage Icons*/
-
-    /*iCal Icons*/
-    .ion-ios-irapp-shares:before {
-        width: 25px;
-        height: 25px;
-        background-position: -76px -553px !important;
-    }
-
-    .ion-ios-irapp-amount:before {
-        width: 25px;
-        height: 25px;
-        background-position: -21px -553px !important;
-    }
-
-    .ion-ios-irapp-change:before {
-        width: 34px;
-        height: 30px;
-        background-position: -388px -154px !important;
-    }
-
-    .ion-ios-irapp-changepercent:before {
-        width: 34px;
-        height: 30px;
-        background-position: -388px -191px !important;
-    }
-
-    .ion-ios-irapp-watchlist:before {
-        width: 30px;
-        height: 30px;
-        background-position: -128px -378px !important;
-    }
-
-    .ion-ios-irapp-indices:before {
-        width: 30px;
-        height: 30px;
-        background-position: -75px -378px !important;
-    }
-
-    .ion-ios-irapp-closemodal:before {
-        width: 25px;
-        height: 25px;
-        background-position: -448px -80px !important;
-    }
-
-    .ion-ios-irapp-daterange:before {
-        width: 65px;
-        height: 65px;
-        background-position: -448px -490px !important;
-    }
-    /*End iCal Icons*/
-
-    /*Historical Price Icons*/
-    .ion-ios-irapp-calendar:before {
-        width: 62px;
-        height: 66px;
-        background-position: -448px -563px !important;
-    }
-    /*End Historical Price Icons*/
-
-    /*Press Releases Icons*/
-    .attachment:before, .ion-ios-irapp-attachment:before {
-        width: 20px;
-        height: 20px;
-        background-position: -444px -273px !important;
-    }
-
-    .ion-ios-irapp-pricechange {
-        width: 18px;
-        height: 18px;
-        border-radius: 3px;
-        background-color: #DDD7D2;
-    }
-
-    .ion-ios-irapp-pricechange:before {
-        width: 18px;
-        height: 18px;
-    }
-
-    .price-change.plus {
-        .ion-ios-irapp-pricechange {
-            background-color: #43A047;
-        }
-
-        .ion-ios-irapp-pricechange:before {
-            background-position: -445px -23px !important;
-        }
-    }
-
-    .price-change.minus {
-        .ion-ios-irapp-pricechange {
-            background-color: #FF3A2D;
-        }
-
-        .ion-ios-irapp-pricechange:before {
-            background-position: -445px -59px !important;
-        }
-    }
-
-    .ion-ios-irapp-price-up {
-        width: 18px;
-        height: 18px;
-        background-color: #43A047;
-        border-radius: 3px;
-    }
-
-    .ion-ios-irapp-price-up:before {
-        width: 18px;
-        height: 18px;
-        background-position: -445px -23px !important;
-    }
-
-    .icon-attachment {
-        background-position: -23px -580px !important;
-    }
-    /*End Press Releases Icons*/
-
-    /*Media Icons*/
-    .ion-ios-irapp-tick:before {
-        width: 31px;
-        height: 31px;
-        background-position: -391px -78px !important;
-    }
-
-    .ion-ios-irapp-Video:before {
-        width: 60px;
-        height: 78px;
-        background-position: -236px -565px !important;
-    }
-
-    .ion-ios-irapp-cancel-download:before {
-        width: 55px;
-        height: 55px;
-        background-position: -182px -468px !important;
-    }
-
-    .ion-ios-irapp-Audio:before {
-        width: 62px;
-        height: 77px;
-        background-position: -537px -511px !important;
-    }
-
-    .ion-ios-irapp-play-button:before {
-        width: 75px;
-        height: 75px;
-        background-position: -502px -76px !important;
-    }
-
-    .ion-ios-irapp-pause-button:before {
-        width: 75px;
-        height: 75px;
-        background-position: -502px -1px !important;
-    }
-
-    .ion-ios-irapp-share-facebook:before {
-        width: 63px;
-        height: 55px;
-        background-position: -540px -442px !important;
-    }
-
-    .ion-ios-irapp-share-twitter:before {
-        width: 63px;
-        height: 55px;
-        background-position: -502px -235px !important;
-    }
-
-    .ion-ios-irapp-share-linkedin:before {
-        width: 63px;
-        height: 55px;
-        background-position: -502px -304px !important;
-    }
-
-    .ion-ios-irapp-share-email:before {
-        width: 63px;
-        height: 55px;
-        background-position: -540px -376px !important;
-    }
-
-    .ion-ios-irapp-video-enter-fullscreen:before {
-        width: 25px;
-        height: 25px;
-        background-position: -234px -534px !important;
-    }
-
-    .ion-ios-irapp-video-exit-fullscreen:before {
-        width: 25px;
-        height: 25px;
-        background-position: -288px -534px !important;
-    }
-
-    .ion-ios-irapp-download-confirm:before {
-        width: 75px;
-        height: 105px;
-        background-position: -393px -298px !important;
-    }
-
-    .ion-ios-irapp-yes:before {
-        width: 38px;
-        height: 38px;
-        background-position: -447px -108px !important;
-    }
-
-    .ion-ios-irapp-no:before {
-        width: 29px;
-        height: 29px;
-        background-position: -390px -117px !important;
-    }
-
-    /*End Media Icons*/
-
-    /*Report Icons*/
-    .ion-ios-irapp-downloaded:before {
-        width: 30px;
-        height: 30px;
-        background-position: -393px -78px !important;
-    }
-
-    .ion-ios-irapp-delete:before {
-        width: 30px;
-        height: 30px;
-        background-position: -237px -435px !important;
-    }
-    /*End Report Icons*/
-
-    /*Loading*/
-    .loading-left {
-        padding-right: 60%;
-    }
-
-    .loading-right {
-        padding-left: 40%;
-    }
-    /*Card*/
-    ion-card {
-        box-shadow: none;
-    }
-
-    .cards-compare {
-        button {
-            min-height: 40px;
-            min-width: 150px;
-        }
-    }
-    /*Setting*/
-    .ion-ios-irapp-setting-currency:before {
-        background-position: -129px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-decimal:before {
-        background-position: -340px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-language:before {
-        background-position: -23px -984px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-quickmenu:before {
-        background-position: -181px -987px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-notification:before {
-        background-position: -236px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-stream:before {
-        background-position: -285px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-menuimage:before {
-        background-position: -184px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-account:before {
-        background-position: -75px -982px !important;
-        width: 32px;
-        height: 32px;
-    }
-
-    .ion-ios-irapp-setting-watchlist:before {
-        background-position: -236px -986px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-indices:before {
-        background-position: -23px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-performance:before {
-        background-position: -129px -984px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-setting-emailalert:before {
-        background-position: -73px -948px !important;
-        width: 30px;
-        height: 30px;
-    }
-
-    .ion-ios-irapp-facebook:before {
-        width: 33px;
-        height: 33px;
-        background-position: -183px -377px !important;
-    }
-
-    .ion-ios-irapp-google:before {
-        width: 33px;
-        height: 33px;
-        background-position: -287px -490px !important;
-    }
-
-    /*Flags*/
-    .flag-icon:before {
-        width: 47px;
-        height: 32px;
-    }
-
-    .ion-ios-flag-aed:before {
-        background-position: -184px -42px !important;
-    }
-
-    .ion-ios-flag-ars:before {
-        background-position: -184px -6px !important;
-    }
-
-    .ion-ios-flag-aud:before {
-        background-position: -236px -6px !important;
-    }
-
-    .ion-ios-flag-bhd:before {
-        background-position: -24px -76px !important;
-    }
-
-    .ion-ios-flag-brl:before {
-        background-position: -287px -6px !important;
-    }
-
-    .ion-ios-flag-cad:before {
-        background-position: -340px -6px !important;
-    }
-
-    .ion-ios-flag-chf:before {
-        background-position: -76px -264px !important;
-    }
-
-    .ion-ios-flag-cny:before {
-        background-position: -74px -77px !important;
-    }
-
-    .ion-ios-flag-czk:before {
-        background-position: -24px -41px !important;
-    }
-
-    .ion-ios-flag-dkk:before {
-        background-position: -76px -41px !important;
-    }
-
-    .ion-ios-flag-dzd:before {
-        background-position: -339px -42px !important;
-    }
-
-    .ion-ios-flag-eek:before {
-        background-position: -236px -42px !important;
-    }
-
-    .ion-ios-flag-egp:before {
-        background-position: -128px -41px !important;
-    }
-
-    .ion-ios-flag-eur:before {
-        background-position: -288px -41px !important;
-    }
-
-    .ion-ios-flag-gbp:before {
-        background-position: -23px -6px !important;
-    }
-
-    .ion-ios-flag-gbx:before {
-        background-position: -23px -6px !important;
-    }
-
-    .ion-ios-flag-hkd:before {
-        background-position: -75px -6px !important;
-    }
-
-    .ion-ios-flag-hrk:before {
-        background-position: -128px -75px !important;
-    }
-
-    .ion-ios-flag-huf:before {
-        background-position: -183px -75px !important;
-    }
-
-    .ion-ios-flag-idr:before {
-        background-position: -23px -113px !important;
-    }
-
-    .ion-ios-flag-ils:before {
-        background-position: -74px -113px !important;
-    }
-
-    .ion-ios-flag-inr:before {
-        background-position: -340px -76px !important;
-    }
-
-    .ion-ios-flag-isk:before {
-        background-position: -236px -76px !important;
-    }
-
-    .ion-ios-flag-jod:before {
-        background-position: -184px -113px !important;
-    }
-
-    .ion-ios-flag-jpy:before {
-        background-position: -129px -113px !important;
-    }
-
-    .ion-ios-flag-kes:before {
-        background-position: -237px -113px !important;
-    }
-
-    .ion-ios-flag-krw:before {
-        background-position: -287px -226px !important;
-    }
-
-    .ion-ios-flag-kwd:before {
-        background-position: -288px -113px !important;
-    }
-
-    .ion-ios-flag-lbp:before {
-        background-position: -23px -150px !important;
-    }
-
-    .ion-ios-flag-lkr:before {
-        background-position: -339px -226px !important;
-    }
-
-    .ion-ios-flag-ltl:before {
-        background-position: -129px -150px !important;
-    }
-
-    .ion-ios-flag-lvl:before {
-        background-position: -341px -113px !important;
-    }
-
-    .ion-ios-flag-lyd:before {
-        background-position: -75px -150px !important;
-    }
-
-    .ion-ios-flag-mad:before {
-        background-position: -341px -150px !important;
-    }
-
-    .ion-ios-flag-mdl:before {
-        background-position: -288px -76px !important;
-    }
-
-    .ion-ios-flag-mur:before {
-        background-position: -237px -150px !important;
-    }
-
-    .ion-ios-flag-mxn:before {
-        background-position: -287px -150px !important;
-    }
-
-    .ion-ios-flag-myr:before {
-        background-position: -184px -150px !important;
-    }
-
-    .ion-ios-flag-nad:before {
-        background-position: -23px -186px !important;
-    }
-
-    .ion-ios-flag-nok:before {
-        background-position: -130px -186px !important;
-    }
-
-    .ion-ios-flag-nzd:before {
-        background-position: -75px -186px !important;
-    }
-
-    .ion-ios-flag-omr:before {
-        background-position: -185px -186px !important;
-    }
-
-    .ion-ios-flag-pln:before {
-        background-position: -240px -186px !important;
-    }
-
-    .ion-ios-flag-qar:before {
-        background-position: -290px -186px !important;
-    }
-
-    .ion-ios-flag-ron:before {
-        background-position: -340px -186px !important;
-    }
-
-    .ion-ios-flag-rub:before {
-        background-position: -23px -224px !important;
-    }
-
-    .ion-ios-flag-sar:before {
-        background-position: -74px -224px !important;
-    }
-
-    .ion-ios-flag-scr:before {
-        background-position: -128px -224px !important;
-    }
-
-    .ion-ios-flag-sek:before {
-        background-position: -23px -263px !important;
-    }
-
-    .ion-ios-flag-sgd:before {
-        background-position: -183px -224px !important;
-    }
-
-    .ion-ios-flag-thb:before {
-        background-position: -184px -263px !important;
-    }
-
-    .ion-ios-flag-tnd:before {
-        background-position: -235px -263px !important;
-    }
-
-    .ion-ios-flag-try:before {
-        background-position: -287px -263px !important;
-    }
-
-    .ion-ios-flag-twd:before {
-        background-position: -128px -263px !important;
-    }
-
-    .ion-ios-flag-usd:before {
-        background-position: -128px -6px !important;
-    }
-
-    .ion-ios-flag-vnd:before {
-        background-position: -341px -263px !important;
-    }
-
-    .ion-ios-flag-zar:before {
-        background-position: -237px -226px !important;
-    }
-    /*End Flags*/
-
-    /*Home*/
-    page-home {
-        .cards-ticker {
-            .ticker-content {
-                .ticker-name {
-                    font-size: 24px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                }
-
-                .ticker-lastvalue {
-                    font-size: 48px;
-                    font-family: $light-font;
-                }
-
-                .ticker-currency {
-                    font-size: 24px;
-                    padding-left: 5px;
-                    padding-right: 5px;
-                    font-family: $thin-font;
-                }
-
-                .change, .changepercent {
-                    font-size: 24px;
-                    color: #444444;
-                }
-
-                .ticker-change {
-                    display: table;
-
-                    span {
-                        display: table-cell;
-                        vertical-align: middle;
-                    }
-
-                    .changepercent {
-                        padding-left: 5px;
-                        padding-right: 5px;
-                    }
-                }
-
-                .ticker-datacontent {
-                    padding-top: 20px;
-                    padding-bottom: 10px;
-
-                    span {
-                        font-size: 16px;
-                        line-height: 35px;
-                    }
-                }
-            }
-
-            .ticker-chart {
-                height: 220px;
-                margin-top: 30px;
-            }
-
-            .ticker-footer {
-                padding-bottom: 20px;
-
-                .ticker-date, .ticker-desc {
-                    font-size: 13px;
-                }
-
-                .ticker-date {
-                    padding-left: 25px;
-                }
-
-                .ticker-date::before {
-                    width: 14px;
-                    height: 14px;
-                    top: 11px;
-                }
-            }
-        }
-
-        .menu-note {
-            font-size: 16px;
-            line-height: 30px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        .cards-list-module {
-            .button {
-                span {
-                    font-size: 17px;
-                }
-            }
-        }
-
-        .irapp-footer {
-            padding-top: 20px;
-            font-size: 12px;
-            font-family: $light-font;
-        }
-    }
-    /*Share Graph*/
-    page-sharegraph {
-        .periods {
-            .segment-button {
-                height: 42px;
-            }
-        }
-
-        .ticker {
-            ion-col {
-                padding-top: 20px;
-            }
-
-            .price {
-                font-size: 20px;
-            }
-
-            .label {
-                font-size: 12px;
-            }
-        }
-
-        .cards-compare {
-            ion-card-header {
-                padding-top: 20px;
-                padding-bottom: 20px;
-            }
-
-            .button {
-                height: 44px;
-                margin: 0 10px 0 0;
-
-                span.button-inner {
-                    font-family: $medium-font;
-                    font-size: 17px;
-                }
-            }
-        }
-
-        .performance-block {
-            .note {
-                display: none !important;
-            }
-        }
-    }
-    /*Historical Price*/
-    .historicalprice-content {
-        .right-panel {
-            .hp-detail-container {
-                padding-top: 31px;
-            }
-        }
-
-        .nodata {
-            border-bottom: 1px solid #ddd;
-            border-top: 1px solid #ddd;
-        }
-    }
-
-    .platform-ipad .historicalprice-content,
-    .disabled-scroll {
-        .scroll-content {
-            overflow: hidden !important;
-        }
-    }
-
-    .hp-detail-container, .hp-master,
-    .pr-detail-content, .pr-content, .pr-detail-container,
-    .calendar-content, .calendar-detail-content,
-    .scroll-in-div {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: 1;
-        display: block;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        -webkit-overflow-scrolling: touch;
-        will-change: scroll-position;
-    }
-
-    .pr-detail-content {
-        padding-top: 44px;
-    }
-    /*Watchlist Modal*/
-    .hp-watchlist-content {
-        .header {
-            margin-top: 7%;
-            margin-bottom: 6%;
-        }
-
-        .date-content {
-            margin-bottom: 6%;
-        }
-
-        // .scroll-content {
-        //     padding: 2.5% 15% 0 15%;
-        // }
-
-        .div-item-content {
-            max-height: calc(100% - 290px );
-        }
-
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 1px solid #6b6b6c;
-        }
-
-        .btn-watch {
-            font-size: 17px;
-            font-weight: medium;
-        }
-
-        .close {
-            right: 10px;
-            top: 0px;
-        }
-
-        .item-content .item-mid {
-            font-size: 15px;
-        }
-
-        .item-content .item-right {
-            font-size: 17px;
-        }
-
-        .item-content .item-left {
-            font-size: 20px;
-        }
-
-        .current-date span {
-            font-size: 24px;
-        }
-
-        .item-content, .item-header-content span {
-            font-size: 20px;
-        }
-
-        .item-content .currency {
-            font-size: 13px;
-        }
-
-        .footer {
-            font-size: 13px;
-        }
-    }
-    /*Press Releases*/
-    .pr-tablet-content .scroll-content, .calendar-tablet-layout .scroll-content {
-        overflow-y: hidden !important;
-    }
+//     .irapp-toolbar {
+//         .scrollbar {
+//             height: 40px;
+//         }
+
+//         .button-inner {
+//             font-size: 17px;
+//         }
+//     }
+
+//     .mediaHeader, .keyFinancialHeader {
+//         ion-grid {
+//             text-align: center !important;
+
+//             ion-col {
+//                 padding-top: 0px !important;
+
+//                 h4 {
+//                     margin-top: 10px !important;
+//                 }
+//             }
+
+//             ion-row {
+//                 color: white !important;
+//                 text-align: center !important;
+//             }
+//         }
+
+//         ion-toolbar {
+//             text-align: center;
+//         }
+
+//         .tabletButton {
+//             .button-inner {
+//                 font-size: 17px !important;
+//             }
+//             color:white !important;
+//         }
+
+//         .phoneButton {
+//             .button-inner {
+//                 font-size: 12px !important;
+//             }
+//             color:white !important;
+//         }
+
+//         .mediaYearHeader {
+//             button {
+//                 color: black !important;
+//             }
+
+//             .thick {
+//                 font-weight: bold;
+//             }
+
+//             .toolbar-background {
+//                 background-color: white !important;
+//             }
+//         }
+//     }
+
+//     /*Load icons*/
+//     .irapp-icon:before, .back-button-icon:before,
+//     .checkbox-checked, .icon-attachment {
+//         //button:not([detail-none]) .item-inner:before {
+//         //background: -webkit-image-set(url(../../img/ipad.png) 1x, url(../../img/ipad@2x.png) 2x, url(../../img/ipad@3x.png) 3x) !important;
+//         background: -webkit-image-set(url(../assets/img/ipad.png) 1x, url(../assets/img/ipad@2x.png) 2x, url(../assets/img/ipad@3x.png) 3x) !important;
+//         content: " ";
+//         background-size: 606px 645px;
+//         background-repeat: no-repeat;
+//         display: block;
+//     }
+//     /*End Load icons*/
+
+//     /*Common Icons*/
+//     .bar-button {
+//         height: auto;
+//     }
+
+//     .checkbox-icon {
+//         background-color: transparent;
+//         border: 0;
+//     }
+
+//     .checkbox-checked {
+//         background-position: -22px -390px !important;
+
+//         .checkbox-inner {
+//             width: 0;
+//             height: 0;
+//         }
+//     }
+//     /*End Common Icons*/
+
+//     /*HomePage Icons*/
+//     .bar-button-menutoggle {
+//         margin: 0;
+//     }
+
+//     .ion-ios-irapp-account:before {
+//         width: 29px;
+//         height: 29px;
+//         background-position: -24px -438px !important;
+//     }
+
+//     .ion-ios-irapp-settings-white:before {
+//         width: 60px;
+//         height: 60px;
+//         background-position: -285px -412px !important;
+//     }
+
+//     .back-button-icon:before, .ion-ios-irapp-back:before {
+//         width: 13px;
+//         height: 22px;
+//         background-position: -130px -444px !important;
+//     }
+
+//     .ion-ios-irapp-menu:before {
+//         width: 35px;
+//         height: 30px;
+//         background-position: -388px -230px !important;
+//     }
+
+//     .ion-ios-irapp-share:before {
+//         width: 30px;
+//         height: 35px;
+//         background-position: -388px -259px !important;
+//     }
+
+//     .ion-ios-irapp-settings-black:before {
+//         width: 68px;
+//         height: 68px;
+//         background-position: -340px -471px !important;
+//     }
+//     /*End HomePage Icons*/
+
+//     /*iCal Icons*/
+//     .ion-ios-irapp-shares:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -76px -553px !important;
+//     }
+
+//     .ion-ios-irapp-amount:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -21px -553px !important;
+//     }
+
+//     .ion-ios-irapp-change:before {
+//         width: 34px;
+//         height: 30px;
+//         background-position: -388px -154px !important;
+//     }
+
+//     .ion-ios-irapp-changepercent:before {
+//         width: 34px;
+//         height: 30px;
+//         background-position: -388px -191px !important;
+//     }
+
+//     .ion-ios-irapp-watchlist:before {
+//         width: 30px;
+//         height: 30px;
+//         background-position: -128px -378px !important;
+//     }
+
+//     .ion-ios-irapp-indices:before {
+//         width: 30px;
+//         height: 30px;
+//         background-position: -75px -378px !important;
+//     }
+
+//     .ion-ios-irapp-closemodal:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -448px -80px !important;
+//     }
+
+//     .ion-ios-irapp-daterange:before {
+//         width: 65px;
+//         height: 65px;
+//         background-position: -448px -490px !important;
+//     }
+//     /*End iCal Icons*/
+
+//     /*Historical Price Icons*/
+//     .ion-ios-irapp-calendar:before {
+//         width: 62px;
+//         height: 66px;
+//         background-position: -448px -563px !important;
+//     }
+//     /*End Historical Price Icons*/
+
+//     /*Press Releases Icons*/
+//     .attachment:before, .ion-ios-irapp-attachment:before {
+//         width: 20px;
+//         height: 20px;
+//         background-position: -444px -273px !important;
+//     }
+
+//     .ion-ios-irapp-pricechange {
+//         width: 18px;
+//         height: 18px;
+//         border-radius: 3px;
+//         background-color: #DDD7D2;
+//     }
+
+//     .ion-ios-irapp-pricechange:before {
+//         width: 18px;
+//         height: 18px;
+//     }
+
+//     .price-change.plus {
+//         .ion-ios-irapp-pricechange {
+//             background-color: #43A047;
+//         }
+
+//         .ion-ios-irapp-pricechange:before {
+//             background-position: -445px -23px !important;
+//         }
+//     }
+
+//     .price-change.minus {
+//         .ion-ios-irapp-pricechange {
+//             background-color: #FF3A2D;
+//         }
+
+//         .ion-ios-irapp-pricechange:before {
+//             background-position: -445px -59px !important;
+//         }
+//     }
+
+//     .ion-ios-irapp-price-up {
+//         width: 18px;
+//         height: 18px;
+//         background-color: #43A047;
+//         border-radius: 3px;
+//     }
+
+//     .ion-ios-irapp-price-up:before {
+//         width: 18px;
+//         height: 18px;
+//         background-position: -445px -23px !important;
+//     }
+
+//     .icon-attachment {
+//         background-position: -23px -580px !important;
+//     }
+//     /*End Press Releases Icons*/
+
+//     /*Media Icons*/
+//     .ion-ios-irapp-tick:before {
+//         width: 31px;
+//         height: 31px;
+//         background-position: -391px -78px !important;
+//     }
+
+//     .ion-ios-irapp-Video:before {
+//         width: 60px;
+//         height: 78px;
+//         background-position: -236px -565px !important;
+//     }
+
+//     .ion-ios-irapp-cancel-download:before {
+//         width: 55px;
+//         height: 55px;
+//         background-position: -182px -468px !important;
+//     }
+
+//     .ion-ios-irapp-Audio:before {
+//         width: 62px;
+//         height: 77px;
+//         background-position: -537px -511px !important;
+//     }
+
+//     .ion-ios-irapp-play-button:before {
+//         width: 75px;
+//         height: 75px;
+//         background-position: -502px -76px !important;
+//     }
+
+//     .ion-ios-irapp-pause-button:before {
+//         width: 75px;
+//         height: 75px;
+//         background-position: -502px -1px !important;
+//     }
+
+//     .ion-ios-irapp-share-facebook:before {
+//         width: 63px;
+//         height: 55px;
+//         background-position: -540px -442px !important;
+//     }
+
+//     .ion-ios-irapp-share-twitter:before {
+//         width: 63px;
+//         height: 55px;
+//         background-position: -502px -235px !important;
+//     }
+
+//     .ion-ios-irapp-share-linkedin:before {
+//         width: 63px;
+//         height: 55px;
+//         background-position: -502px -304px !important;
+//     }
+
+//     .ion-ios-irapp-share-email:before {
+//         width: 63px;
+//         height: 55px;
+//         background-position: -540px -376px !important;
+//     }
+
+//     .ion-ios-irapp-video-enter-fullscreen:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -234px -534px !important;
+//     }
+
+//     .ion-ios-irapp-video-exit-fullscreen:before {
+//         width: 25px;
+//         height: 25px;
+//         background-position: -288px -534px !important;
+//     }
+
+//     .ion-ios-irapp-download-confirm:before {
+//         width: 75px;
+//         height: 105px;
+//         background-position: -393px -298px !important;
+//     }
+
+//     .ion-ios-irapp-yes:before {
+//         width: 38px;
+//         height: 38px;
+//         background-position: -447px -108px !important;
+//     }
+
+//     .ion-ios-irapp-no:before {
+//         width: 29px;
+//         height: 29px;
+//         background-position: -390px -117px !important;
+//     }
+
+//     /*End Media Icons*/
+
+//     /*Report Icons*/
+//     .ion-ios-irapp-downloaded:before {
+//         width: 30px;
+//         height: 30px;
+//         background-position: -393px -78px !important;
+//     }
+
+//     .ion-ios-irapp-delete:before {
+//         width: 30px;
+//         height: 30px;
+//         background-position: -237px -435px !important;
+//     }
+//     /*End Report Icons*/
+
+//     /*Loading*/
+//     .loading-left {
+//         padding-right: 60%;
+//     }
+
+//     .loading-right {
+//         padding-left: 40%;
+//     }
+//     /*Card*/
+//     ion-card {
+//         box-shadow: none;
+//     }
+
+//     .cards-compare {
+//         button {
+//             min-height: 40px;
+//             min-width: 150px;
+//         }
+//     }
+//     /*Setting*/
+//     .ion-ios-irapp-setting-currency:before {
+//         background-position: -129px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-decimal:before {
+//         background-position: -340px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-language:before {
+//         background-position: -23px -984px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-quickmenu:before {
+//         background-position: -181px -987px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-notification:before {
+//         background-position: -236px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-stream:before {
+//         background-position: -285px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-menuimage:before {
+//         background-position: -184px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-account:before {
+//         background-position: -75px -982px !important;
+//         width: 32px;
+//         height: 32px;
+//     }
+
+//     .ion-ios-irapp-setting-watchlist:before {
+//         background-position: -236px -986px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-indices:before {
+//         background-position: -23px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-performance:before {
+//         background-position: -129px -984px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-setting-emailalert:before {
+//         background-position: -73px -948px !important;
+//         width: 30px;
+//         height: 30px;
+//     }
+
+//     .ion-ios-irapp-facebook:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -183px -377px !important;
+//     }
+
+//     .ion-ios-irapp-google:before {
+//         width: 33px;
+//         height: 33px;
+//         background-position: -287px -490px !important;
+//     }
+
+//     /*Flags*/
+//     .flag-icon:before {
+//         width: 47px;
+//         height: 32px;
+//     }
+
+//     .ion-ios-flag-aed:before {
+//         background-position: -184px -42px !important;
+//     }
+
+//     .ion-ios-flag-ars:before {
+//         background-position: -184px -6px !important;
+//     }
+
+//     .ion-ios-flag-aud:before {
+//         background-position: -236px -6px !important;
+//     }
+
+//     .ion-ios-flag-bhd:before {
+//         background-position: -24px -76px !important;
+//     }
+
+//     .ion-ios-flag-brl:before {
+//         background-position: -287px -6px !important;
+//     }
+
+//     .ion-ios-flag-cad:before {
+//         background-position: -340px -6px !important;
+//     }
+
+//     .ion-ios-flag-chf:before {
+//         background-position: -76px -264px !important;
+//     }
+
+//     .ion-ios-flag-cny:before {
+//         background-position: -74px -77px !important;
+//     }
+
+//     .ion-ios-flag-czk:before {
+//         background-position: -24px -41px !important;
+//     }
+
+//     .ion-ios-flag-dkk:before {
+//         background-position: -76px -41px !important;
+//     }
+
+//     .ion-ios-flag-dzd:before {
+//         background-position: -339px -42px !important;
+//     }
+
+//     .ion-ios-flag-eek:before {
+//         background-position: -236px -42px !important;
+//     }
+
+//     .ion-ios-flag-egp:before {
+//         background-position: -128px -41px !important;
+//     }
+
+//     .ion-ios-flag-eur:before {
+//         background-position: -288px -41px !important;
+//     }
+
+//     .ion-ios-flag-gbp:before {
+//         background-position: -23px -6px !important;
+//     }
+
+//     .ion-ios-flag-gbx:before {
+//         background-position: -23px -6px !important;
+//     }
+
+//     .ion-ios-flag-hkd:before {
+//         background-position: -75px -6px !important;
+//     }
+
+//     .ion-ios-flag-hrk:before {
+//         background-position: -128px -75px !important;
+//     }
+
+//     .ion-ios-flag-huf:before {
+//         background-position: -183px -75px !important;
+//     }
+
+//     .ion-ios-flag-idr:before {
+//         background-position: -23px -113px !important;
+//     }
+
+//     .ion-ios-flag-ils:before {
+//         background-position: -74px -113px !important;
+//     }
+
+//     .ion-ios-flag-inr:before {
+//         background-position: -340px -76px !important;
+//     }
+
+//     .ion-ios-flag-isk:before {
+//         background-position: -236px -76px !important;
+//     }
+
+//     .ion-ios-flag-jod:before {
+//         background-position: -184px -113px !important;
+//     }
+
+//     .ion-ios-flag-jpy:before {
+//         background-position: -129px -113px !important;
+//     }
+
+//     .ion-ios-flag-kes:before {
+//         background-position: -237px -113px !important;
+//     }
+
+//     .ion-ios-flag-krw:before {
+//         background-position: -287px -226px !important;
+//     }
+
+//     .ion-ios-flag-kwd:before {
+//         background-position: -288px -113px !important;
+//     }
+
+//     .ion-ios-flag-lbp:before {
+//         background-position: -23px -150px !important;
+//     }
+
+//     .ion-ios-flag-lkr:before {
+//         background-position: -339px -226px !important;
+//     }
+
+//     .ion-ios-flag-ltl:before {
+//         background-position: -129px -150px !important;
+//     }
+
+//     .ion-ios-flag-lvl:before {
+//         background-position: -341px -113px !important;
+//     }
+
+//     .ion-ios-flag-lyd:before {
+//         background-position: -75px -150px !important;
+//     }
+
+//     .ion-ios-flag-mad:before {
+//         background-position: -341px -150px !important;
+//     }
+
+//     .ion-ios-flag-mdl:before {
+//         background-position: -288px -76px !important;
+//     }
+
+//     .ion-ios-flag-mur:before {
+//         background-position: -237px -150px !important;
+//     }
+
+//     .ion-ios-flag-mxn:before {
+//         background-position: -287px -150px !important;
+//     }
+
+//     .ion-ios-flag-myr:before {
+//         background-position: -184px -150px !important;
+//     }
+
+//     .ion-ios-flag-nad:before {
+//         background-position: -23px -186px !important;
+//     }
+
+//     .ion-ios-flag-nok:before {
+//         background-position: -130px -186px !important;
+//     }
+
+//     .ion-ios-flag-nzd:before {
+//         background-position: -75px -186px !important;
+//     }
+
+//     .ion-ios-flag-omr:before {
+//         background-position: -185px -186px !important;
+//     }
+
+//     .ion-ios-flag-pln:before {
+//         background-position: -240px -186px !important;
+//     }
+
+//     .ion-ios-flag-qar:before {
+//         background-position: -290px -186px !important;
+//     }
+
+//     .ion-ios-flag-ron:before {
+//         background-position: -340px -186px !important;
+//     }
+
+//     .ion-ios-flag-rub:before {
+//         background-position: -23px -224px !important;
+//     }
+
+//     .ion-ios-flag-sar:before {
+//         background-position: -74px -224px !important;
+//     }
+
+//     .ion-ios-flag-scr:before {
+//         background-position: -128px -224px !important;
+//     }
+
+//     .ion-ios-flag-sek:before {
+//         background-position: -23px -263px !important;
+//     }
+
+//     .ion-ios-flag-sgd:before {
+//         background-position: -183px -224px !important;
+//     }
+
+//     .ion-ios-flag-thb:before {
+//         background-position: -184px -263px !important;
+//     }
+
+//     .ion-ios-flag-tnd:before {
+//         background-position: -235px -263px !important;
+//     }
+
+//     .ion-ios-flag-try:before {
+//         background-position: -287px -263px !important;
+//     }
+
+//     .ion-ios-flag-twd:before {
+//         background-position: -128px -263px !important;
+//     }
+
+//     .ion-ios-flag-usd:before {
+//         background-position: -128px -6px !important;
+//     }
+
+//     .ion-ios-flag-vnd:before {
+//         background-position: -341px -263px !important;
+//     }
+
+//     .ion-ios-flag-zar:before {
+//         background-position: -237px -226px !important;
+//     }
+//     /*End Flags*/
+
+//     /*Home*/
+//     page-home {
+//         .cards-ticker {
+//             .ticker-content {
+//                 .ticker-name {
+//                     font-size: 24px;
+//                     padding-top: 10px;
+//                     padding-bottom: 10px;
+//                 }
+
+//                 .ticker-lastvalue {
+//                     font-size: 48px;
+//                     font-family: $light-font;
+//                 }
+
+//                 .ticker-currency {
+//                     font-size: 24px;
+//                     padding-left: 5px;
+//                     padding-right: 5px;
+//                     font-family: $thin-font;
+//                 }
+
+//                 .change, .changepercent {
+//                     font-size: 24px;
+//                     color: #444444;
+//                 }
+
+//                 .ticker-change {
+//                     display: table;
+
+//                     span {
+//                         display: table-cell;
+//                         vertical-align: middle;
+//                     }
+
+//                     .changepercent {
+//                         padding-left: 5px;
+//                         padding-right: 5px;
+//                     }
+//                 }
+
+//                 .ticker-datacontent {
+//                     padding-top: 20px;
+//                     padding-bottom: 10px;
+
+//                     span {
+//                         font-size: 16px;
+//                         line-height: 35px;
+//                     }
+//                 }
+//             }
+
+//             .ticker-chart {
+//                 height: 220px;
+//                 margin-top: 30px;
+//             }
+
+//             .ticker-footer {
+//                 padding-bottom: 20px;
+
+//                 .ticker-date, .ticker-desc {
+//                     font-size: 13px;
+//                 }
+
+//                 .ticker-date {
+//                     padding-left: 25px;
+//                 }
+
+//                 .ticker-date::before {
+//                     width: 14px;
+//                     height: 14px;
+//                     top: 11px;
+//                 }
+//             }
+//         }
+
+//         .menu-note {
+//             font-size: 16px;
+//             line-height: 30px;
+//             padding-top: 20px;
+//             padding-bottom: 20px;
+//         }
+
+//         .cards-list-module {
+//             .button {
+//                 span {
+//                     font-size: 17px;
+//                 }
+//             }
+//         }
+
+//         .irapp-footer {
+//             padding-top: 20px;
+//             font-size: 12px;
+//             font-family: $light-font;
+//         }
+//     }
+//     // Historical price
+//     page-hp-watchlist {
+//         .scroll-content {
+//             margin: 2.5% 15% 0 15%;
+//         }
+//         ion-list .item .item-inner {
+//             border-bottom: 1px solid #6b6b6c !important;
+//         }
+//     }
+//     /*Share Graph*/
+//     page-sharegraph {
+//         .periods {
+//             .segment-button {
+//                 height: 42px;
+//             }
+//         }
+
+//         .ticker {
+//             ion-col {
+//                 padding-top: 20px;
+//             }
+
+//             .price {
+//                 font-size: 20px;
+//             }
+
+//             .label {
+//                 font-size: 12px;
+//             }
+//         }
+
+//         .cards-compare {
+//             ion-card-header {
+//                 padding-top: 20px;
+//                 padding-bottom: 20px;
+//             }
+
+//             .button {
+//                 height: 44px;
+//                 margin: 0 10px 0 0;
+
+//                 span.button-inner {
+//                     font-family: $medium-font;
+//                     font-size: 17px;
+//                 }
+//             }
+//         }
+
+//         .performance-block {
+//             .note {
+//                 display: none !important;
+//             }
+//         }
+//     }
+//     /*Historical Price*/
+//     .historicalprice-content {
+//         .right-panel {
+//             .hp-detail-container {
+//                 padding-top: 31px;
+//             }
+//         }
+
+//         .nodata {
+//             border-bottom: 1px solid #ddd;
+//             border-top: 1px solid #ddd;
+//         }
+//     }
+
+//     .platform-ipad .historicalprice-content,
+//     .disabled-scroll {
+//         .scroll-content {
+//             overflow: hidden !important;
+//         }
+//     }
+
+//     .hp-detail-container, .hp-master,
+//     .pr-detail-content, .pr-content, .pr-detail-container,
+//     .calendar-content, .calendar-detail-content,
+//     .scroll-in-div {
+//         position: absolute;
+//         top: 0;
+//         right: 0;
+//         bottom: 0;
+//         left: 0;
+//         z-index: 1;
+//         display: block;
+//         overflow-x: hidden;
+//         overflow-y: scroll;
+//         -webkit-overflow-scrolling: touch;
+//         will-change: scroll-position;
+//     }
+
+//     .pr-detail-content {
+//         padding-top: 44px;
+//     }
+//     /*Watchlist Modal*/
+//     .hp-watchlist-content {
+//         .header {
+//             margin-top: 7%;
+//             margin-bottom: 6%;
+//         }
+
+//         .date-content {
+//             margin-bottom: 6%;
+//         }
+
+//         // .scroll-content {
+//         //     padding: 2.5% 15% 0 15%;
+//         // }
+
+//         .div-item-content {
+//             max-height: calc(100% - 290px );
+//         }
+
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 1px solid #6b6b6c;
+//         }
+
+//         .btn-watch {
+//             font-size: 17px;
+//             font-weight: medium;
+//         }
+
+//         .close {
+//             right: 10px;
+//             top: 0px;
+//         }
+
+//         .item-content .item-mid {
+//             font-size: 15px;
+//         }
+
+//         .item-content .item-right {
+//             font-size: 17px;
+//         }
+
+//         .item-content .item-left {
+//             font-size: 20px;
+//         }
+
+//         .current-date span {
+//             font-size: 24px;
+//         }
+
+//         .item-content, .item-header-content span {
+//             font-size: 20px;
+//         }
+
+//         .item-content .currency {
+//             font-size: 13px;
+//         }
+
+//         .footer {
+//             font-size: 13px;
+//         }
+//     }
+//     /*Press Releases*/
+//     .pr-tablet-content .scroll-content, .calendar-tablet-layout .scroll-content {
+//         overflow-y: hidden !important;
+//     }
     
-    #pr-master-content{
-        margin-top: 45px;
-    }
-    /*.pr-content {
-        margin-top: 45px;
-    }*/
-    /*.calendar-detail-content, .calendar-content{
-        margin-top: 40px;
-    }*/
-    .pr-detail-container, .pr-content,
-    .calendar-content, .calendar-detail-content {
-        background-color: #fff;
-    }
-    /*Investment Calculator*/
-    .ical-tablet {
-        .ical-content {
-            .selectdate-block {
-                padding-top: 30px;
-            }
-        }
-    }
+//     #pr-master-content{
+//         margin-top: 45px;
+//     }
+//     /*.pr-content {
+//         margin-top: 45px;
+//     }*/
+//     /*.calendar-detail-content, .calendar-content{
+//         margin-top: 40px;
+//     }*/
+//     .pr-detail-container, .pr-content,
+//     .calendar-content, .calendar-detail-content {
+//         background-color: #fff;
+//     }
+//     /*Investment Calculator*/
+//     .ical-tablet {
+//         .ical-content {
+//             .selectdate-block {
+//                 padding-top: 30px;
+//             }
+//         }
+//     }
 
-    .ical-compare-content  {
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 1px solid #6b6b6c;
-        }
+//     .ical-compare-content  {
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 1px solid #6b6b6c;
+//         }
 
-        .div-item-content {
-            max-height: calc(100% - 15% - 281px );
-        }
+//         .div-item-content {
+//             max-height: calc(100% - 15% - 281px );
+//         }
 
-        .scroll-content {
-            padding: 0 15% 0 15%;
-        }
+//         .scroll-content {
+//             padding: 0 15% 0 15%;
+//         }
 
-        .btn-header-watch {
-            font-size: 17px;
-            font-weight: medium;
-            // margin-left: calc(50% - 62.1955px);
-        }
-        // .btn-header-watch img {
-        //     height: 29px;
-        //     width: 29px;
-        // }
-        .div-date-content {
-            margin-bottom: 150px;
-        }
+//         .btn-header-watch {
+//             font-size: 17px;
+//             font-weight: medium;
+//             // margin-left: calc(50% - 62.1955px);
+//         }
+//         // .btn-header-watch img {
+//         //     height: 29px;
+//         //     width: 29px;
+//         // }
+//         .div-date-content {
+//             margin-bottom: 150px;
+//         }
 
-        .btn-header-close {
-            right: -50px;
-            top: -7px;
-        }
+//         .btn-header-close {
+//             right: -50px;
+//             top: -7px;
+//         }
 
-        .flex-date img {
-            height: 64px;
-            width: 61px;
-        }
+//         .flex-date img {
+//             height: 64px;
+//             width: 61px;
+//         }
 
-        .item-content .item-center {
-            font-size: 15px;
-        }
+//         .item-content .item-center {
+//             font-size: 15px;
+//         }
 
-        .item-content .item-right {
-            font-size: 17px;
-        }
+//         .item-content .item-right {
+//             font-size: 17px;
+//         }
 
-        .item-content .item-left {
-            font-size: 20px;
-        }
+//         .item-content .item-left {
+//             font-size: 20px;
+//         }
 
-        .date-info span {
-            font-size: 24px;
-        }
+//         .date-info span {
+//             font-size: 24px;
+//         }
 
-        .item-content, .item-header-content span {
-            font-size: 20px;
-        }
-        .item-header-content  > .item-block:first-child{
-            border-top: 1px solid #c8c7cc !important;
-        }
-        .item-content .currency {
-            font-size: 13px;
-        }
+//         .item-content, .item-header-content span {
+//             font-size: 20px;
+//         }
+//         .item-header-content  > .item-block:first-child{
+//             border-top: 1px solid #c8c7cc !important;
+//         }
+//         .item-content .currency {
+//             font-size: 13px;
+//         }
 
-        .footer {
-            border-top: 1px solid #c8c7cc !important;
-            padding-left: 0;
-            font-size: 13px;
-        }
-    }
+//         .footer {
+//             border-top: 1px solid #c8c7cc !important;
+//             padding-left: 0;
+//             font-size: 13px;
+//         }
+//     }
 
-    /*ShareGraph*/
-    page-sharegraph {
-        .periods {
-            .segment-button span {
-                font-size: 17px;
-            }
-        }
-    }
-    /*Share Information*/
-    page-shareinformation {
-        .shareinfo-content ion-note.shareinfo-note, ion-list-header.item {
-            padding-left: 20%;
-            padding-right: 20%;
-        }
+//     /*ShareGraph*/
+//     page-sharegraph {
+//         .periods {
+//             .segment-button span {
+//                 font-size: 17px;
+//             }
+//         }
+//     }
+//     /*Share Information*/
+//     page-shareinformation {
+//         .shareinfo-content ion-note.shareinfo-note, ion-list-header.item {
+//             padding-left: 20%;
+//             padding-right: 20%;
+//         }
 
-        ion-item.item {
-            padding-left: 0;
+//         ion-item.item {
+//             padding-left: 0;
 
-            .item-inner {
-                margin-left: 20%;
-                margin-right: 20%;
-                padding-right: 0;
+//             .item-inner {
+//                 margin-left: 20%;
+//                 margin-right: 20%;
+//                 padding-right: 0;
 
-                ion-note {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
+//                 ion-note {
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+//     }
 
-    .mediaPopover {
-        text-align: center !important;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        font-size: 16px;
-        width: 100%;
-        position: relative;
+//     .mediaPopover {
+//         text-align: center !important;
+//         padding-top: 8px;
+//         padding-bottom: 8px;
+//         font-size: 16px;
+//         width: 100%;
+//         position: relative;
 
-        span {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    }
+//         span {
+//             position: absolute;
+//             top: 50%;
+//             transform: translateY(-50%);
+//         }
+//     }
 
-    .mediaDetailContent {
-        .scroll-content {
-            overflow-y: scroll;
-        }
+//     .mediaDetailContent {
+//         .scroll-content {
+//             overflow-y: scroll;
+//         }
 
-        .popover {
-            text-align: center;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            font-size: 16px;
-        }
+//         .popover {
+//             text-align: center;
+//             padding-top: 8px;
+//             padding-bottom: 8px;
+//             font-size: 16px;
+//         }
 
-        #videoDownloadCompletedBox {
-            text-align: left;
-            position: absolute;
-            width: 100%;
-            background-color: white;
-            z-index: 101;
-        }
+//         #videoDownloadCompletedBox {
+//             text-align: left;
+//             position: absolute;
+//             width: 100%;
+//             background-color: white;
+//             z-index: 101;
+//         }
 
-        #downloadCompletedBox {
-            text-align: left;
-            position: absolute;
-            width: 100%;
-            background-color: white;
-            z-index: 101;
-        }
+//         #downloadCompletedBox {
+//             text-align: left;
+//             position: absolute;
+//             width: 100%;
+//             background-color: white;
+//             z-index: 101;
+//         }
 
-        #videoButton {
-            position: absolute;
-            color: white;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
+//         #videoButton {
+//             position: absolute;
+//             color: white;
+//             width: 100%;
+//             display: flex;
+//             align-items: center;
+//             justify-content: center;
+//             text-align: center;
+//             top: 50% !important;
+//             transform: translateY(-50%) !important;
 
-            ion-icon {
-                font-size: 52px;
-            }
-        }
+//             ion-icon {
+//                 font-size: 52px;
+//             }
+//         }
 
-        #videoRangeDiv {
-            position: absolute;
-            bottom: 0px;
-            width: 100%;
-            color: white;
-            background-color: rgba(169,169,169,0.5);
-        }
+//         #videoRangeDiv {
+//             position: absolute;
+//             bottom: 0px;
+//             width: 100%;
+//             color: white;
+//             background-color: rgba(169,169,169,0.5);
+//         }
 
-        #videoRange {
-            padding-top: 0px !important;
-            padding-bottom: 0px !important;
-        }
+//         #videoRange {
+//             padding-top: 0px !important;
+//             padding-bottom: 0px !important;
+//         }
 
-        ion-spinner {
-            left: 49%;
-            top: 50%;
-            transform: translateY(-50%);
-            position: absolute;
+//         ion-spinner {
+//             left: 49%;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             position: absolute;
 
-            svg {
-                width: 30px;
-                height: 30px;
-            }
+//             svg {
+//                 width: 30px;
+//                 height: 30px;
+//             }
 
-            circle {
-                stroke: white;
-            }
-        }
+//             circle {
+//                 stroke: white;
+//             }
+//         }
 
-        background-color: #EFEFF4 !important;
-        color: #333333 !important;
+//         background-color: #EFEFF4 !important;
+//         color: #333333 !important;
 
-        .bottomButton {
-            bottom: 0px !important;
-            position: absolute !important;
-            width: 100% !important;
-            text-align: center !important;
-            border-top: 1px solid grey !important;
-        }
+//         .bottomButton {
+//             bottom: 0px !important;
+//             position: absolute !important;
+//             width: 100% !important;
+//             text-align: center !important;
+//             border-top: 1px solid grey !important;
+//         }
 
-        .audioHeader {
-            position: relative !important;
-            height: 30vh !important;
-            text-align: center !important;
-            background-color: #D8D8D8 !important;
+//         .audioHeader {
+//             position: relative !important;
+//             height: 30vh !important;
+//             text-align: center !important;
+//             background-color: #D8D8D8 !important;
 
-            img {
-                position: relative !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-            }
+//             img {
+//                 position: relative !important;
+//                 top: 50% !important;
+//                 transform: translateY(-50%) !important;
+//             }
 
-            ion-icon {
-                position: relative !important;
-                top: 50% !important;
-                transform: translateY(-50%) !important;
-            }
+//             ion-icon {
+//                 position: relative !important;
+//                 top: 50% !important;
+//                 transform: translateY(-50%) !important;
+//             }
 
-            .downloadCompletedBox {
-                width: 100vw !important;
-                background-color: white !important;
-                font-size: 15px !important;
-                text-align: left !important;
-                position: absolute !important;
-            }
+//             .downloadCompletedBox {
+//                 width: 100vw !important;
+//                 background-color: white !important;
+//                 font-size: 15px !important;
+//                 text-align: left !important;
+//                 position: absolute !important;
+//             }
 
-            .theSpinner {
-                position: absolute !important;
-                top: 50%;
-                transform: translateY(-50%) !important;
-                text-align: center !important;
-                width: 100vw !important;
-            }
-        }
+//             .theSpinner {
+//                 position: absolute !important;
+//                 top: 50%;
+//                 transform: translateY(-50%) !important;
+//                 text-align: center !important;
+//                 width: 100vw !important;
+//             }
+//         }
 
-        .audioControl {
-            text-align: center !important;
-            background-color: white !important;
+//         .audioControl {
+//             text-align: center !important;
+//             background-color: white !important;
 
-            .audioBtn {
-                text-align: center !important;
-                width: 100vw !important;
-                color: #4D4D4D !important;
-                font-size: 30px !important;
-                padding-bottom: 10px !important;
-            }
+//             .audioBtn {
+//                 text-align: center !important;
+//                 width: 100vw !important;
+//                 color: #4D4D4D !important;
+//                 font-size: 30px !important;
+//                 padding-bottom: 10px !important;
+//             }
 
-            .audioBar {
-                ion-range {
-                    padding-top: 0px !important;
-                    padding-bottom: 0px !important;
-                }
+//             .audioBar {
+//                 ion-range {
+//                     padding-top: 0px !important;
+//                     padding-bottom: 0px !important;
+//                 }
 
-                width: 100vw !important;
-            }
-        }
+//                 width: 100vw !important;
+//             }
+//         }
 
-        .progressBar1 {
-            background-color: #1D57FF;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
-        }
+//         .progressBar1 {
+//             background-color: #1D57FF;
+//             border-top-left-radius: 10px;
+//             border-bottom-left-radius: 10px;
+//         }
 
-        .progressBar2 {
-            background-color: #9C9B99;
-            border-top-right-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
+//         .progressBar2 {
+//             background-color: #9C9B99;
+//             border-top-right-radius: 10px;
+//             border-bottom-right-radius: 10px;
+//         }
 
-        .fadeOut {
-            opacity: 0;
-            visibility: hidden;
-            transition: 5s linear;
-        }
+//         .fadeOut {
+//             opacity: 0;
+//             visibility: hidden;
+//             transition: 5s linear;
+//         }
 
-        .left {
-            float: left !important;
-        }
+//         .left {
+//             float: left !important;
+//         }
 
-        .right {
-            float: right !important;
-            color: grey !important;
-        }
+//         .right {
+//             float: right !important;
+//             color: grey !important;
+//         }
 
-        ion-grid {
-            text-align: center !important;
-            border-top: 1px solid grey !important;
-            padding: 0px !important;
+//         ion-grid {
+//             text-align: center !important;
+//             border-top: 1px solid grey !important;
+//             padding: 0px !important;
 
-            ion-col:first-child {
-                border-right: 1px solid grey !important;
-            }
+//             ion-col:first-child {
+//                 border-right: 1px solid grey !important;
+//             }
 
-            ion-col {
-                padding: 0px !important;
-                background-color: #F3F3F3 !important;
-            }
+//             ion-col {
+//                 padding: 0px !important;
+//                 background-color: #F3F3F3 !important;
+//             }
 
-            button {
-                font-size: 17px !important;
-            }
-        }
-    }
-    // Chart Page
-    page-chart {
-        /** Chart */
-        .scroll-content {
-            margin-top: 10% !important;
-        }
-        // #charts {
-        //     height: 330px !important;
-        // }
-        // .highcharts-container{
-        //     height: 320px !important;
-        // }
+//             button {
+//                 font-size: 17px !important;
+//             }
+//         }
+//     }
+//     // Chart Page
+//     page-chart {
+//         /** Chart */
+//         .scroll-content {
+//             margin-top: 10% !important;
+//         }
+//         // #charts {
+//         //     height: 330px !important;
+//         // }
+//         // .highcharts-container{
+//         //     height: 320px !important;
+//         // }
 
-        #charts-container {
-            // height: 350px;
-            border-top: 3px solid #848484;
-            border-bottom: 3px solid #848484;
-        }
-        /*.chart-page-content {
-            max-height: calc(100% - 100px);
-            margin-top: 30px;
-        }*/
-        .tooltip {
-            // margin-left: 17px !important;
-        }
-        /** Button Period */
-        .btn-period span {
-            font-size: 17px;
-        }
+//         #charts-container {
+//             // height: 350px;
+//             border-top: 3px solid #848484;
+//             border-bottom: 3px solid #848484;
+//         }
+//         /*.chart-page-content {
+//             max-height: calc(100% - 100px);
+//             margin-top: 30px;
+//         }*/
+//         .tooltip {
+//             // margin-left: 17px !important;
+//         }
+//         /** Button Period */
+//         .btn-period span {
+//             font-size: 17px;
+//         }
 
-        .watchlist-period {
-            top: 2px;
-            left: 16px;
-            margin-right: 16px;
-        }
+//         .watchlist-period {
+//             top: 2px;
+//             left: 16px;
+//             margin-right: 16px;
+//         }
 
-        .indices-period {
-            top: -11px;
-        }
-        .watchlist-period .btn-period {
-            width: 19.4% ;
-            // padding-right: 10%;
-        }
+//         .indices-period {
+//             top: -11px;
+//         }
+//         .watchlist-period .btn-period {
+//             width: 19.4% ;
+//             // padding-right: 10%;
+//         }
 
-        .indices-period .btn-period {
-            width: 23%;
-            // padding-left: 32px;
-            // padding-right: 32px;
-        }
+//         .indices-period .btn-period {
+//             width: 23%;
+//             // padding-left: 32px;
+//             // padding-right: 32px;
+//         }
         
-        .tooltip, .share-name {
-            font-size: 17px !important;
-        }
+//         .tooltip, .share-name {
+//             font-size: 17px !important;
+//         }
 
-        .btn-share span {
-            font-size: 14px !important;
-            font-family: $medium-font;
+//         .btn-share span {
+//             font-size: 14px !important;
+//             font-family: $medium-font;
 
-        }
-        /** Footer */
-        .btn-share {
-            width: 13%;
-            margin: 16px;
-            padding:16px;
-            margin-right: 16px;
-        }
+//         }
+//         /** Footer */
+//         .btn-share {
+//             width: 13%;
+//             margin: 16px;
+//             padding:16px;
+//             margin-right: 16px;
+//         }
 
-        .own-shares-title {
-            font-size: 15px;
-        }
+//         .own-shares-title {
+//             font-size: 15px;
+//         }
 
-        .sharegraph-title {
-            font-size: 15px;
-        }
-    }
+//         .sharegraph-title {
+//             font-size: 15px;
+//         }
+//     }
 
-    //  Performance Page
-    page-performance {
-        /** Settings default */
-        .scroll-content {
-            // width: 60%;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-        .item-header-content{
-            margin-top: 15%;
-        }
+//     //  Performance Page
+//     page-performance {
+//         /** Settings default */
+//         .scroll-content {
+//             // width: 60%;
+//             margin-left: 15%;
+//             margin-right: 15%;
+//         }
+//         .item-header-content{
+//             margin-top: 15%;
+//         }
 
-        [item-right] {
-            margin: 16px !important;
-        }
-        /** Height content data */
-        .div-item-content .list-ios > .item-block:last-child {
-            border-bottom: 1px solid #c8c7cc !important;
-            // max-height: calc(100% - 220px);
-        }
-        /** Border */
-        .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            border-bottom: 1px solid #6b6b6c;
-        }
-        .list-ios > .item-block:first-child{
-            border-top: 1px solid #c8c7cc !important;
-        }
-        .list-ios > .item-block:last-child {
-            /*border-bottom: 1px solid #c8c7cc !important;*/
-        }
-        .div-item-content {
-            max-height: calc(100% - 130px );
-        }
-        /** CSS box */
-        .item-box {
-            width: 18%;
-        }
-        .item-box div{
-            padding-top: 16px !important;
-            padding-bottom: 16px !important;
-        }
-        .item-header {
-            width: 18%;
-            font-size: 20px !important;
-        }
+//         [item-right] {
+//             margin: 16px !important;
+//         }
+//         /** Height content data */
+//         .div-item-content .list-ios > .item-block:last-child {
+//             border-bottom: 1px solid #c8c7cc !important;
+//             // max-height: calc(100% - 220px);
+//         }
+//         /** Border */
+//         .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+//             border-bottom: 1px solid #6b6b6c;
+//         }
+//         .list-ios > .item-block:first-child{
+//             border-top: 1px solid #c8c7cc !important;
+//         }
+//         .list-ios > .item-block:last-child {
+//             /*border-bottom: 1px solid #c8c7cc !important;*/
+//         }
+//         .div-item-content {
+//             max-height: calc(100% - 130px );
+//         }
+//         /** CSS box */
+//         .item-box {
+//             width: 18%;
+//         }
+//         .item-box div{
+//             padding-top: 16px !important;
+//             padding-bottom: 16px !important;
+//         }
+//         .item-header {
+//             width: 18%;
+//             font-size: 20px !important;
+//         }
 
-        .item-header span {
-            font-size: 17px !important;
-        }
+//         .item-header span {
+//             font-size: 17px !important;
+//         }
 
-        .item-col-1 {
-            font-size: 20px;
-        }
+//         .item-col-1 {
+//             font-size: 20px;
+//         }
 
-        .item-data {
-            font-size: 17px;
-        }
-    }
-    //  compare Page
+//         .item-data {
+//             font-size: 17px;
+//         }
+//     }
+//     //  compare Page
 
-    page-compare {
-        /** Default CSS */
-        // scroll-content {
-        //     width: 70% !important;
-        //     margin-left: 15%;
-        // }
+//     page-compare {
+//         /** Default CSS */
+//         // scroll-content {
+//         //     width: 70% !important;
+//         //     margin-left: 15%;
+//         // }
 
-        // ion-footer {
-        //     bottom: 25% !important;
-        // }
-        .scroll-content{
-            // width: 70% !important;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-        // scroll-content h1 {
-        //     margin-left: 0;
-        //     font-size: 19px;
-        // }
-        .date-title{
-            padding-left: 0px !important;
-        }
-        .scroll-content {
-            .item-box {
-                padding-bottom: (100%/4);
-                width: (100%/4);
-            }
+//         // ion-footer {
+//         //     bottom: 25% !important;
+//         // }
+//         .scroll-content{
+//             // width: 70% !important;
+//             margin-left: 15%;
+//             margin-right: 15%;
+//         }
+//         // scroll-content h1 {
+//         //     margin-left: 0;
+//         //     font-size: 19px;
+//         // }
+//         .date-title{
+//             padding-left: 0px !important;
+//         }
+//         .scroll-content {
+//             .item-box {
+//                 padding-bottom: (100%/4);
+//                 width: (100%/4);
+//             }
 
-            max-height: calc(100% - 100px);
-        }
+//             max-height: calc(100% - 100px);
+//         }
 
-        .ticker, .price {
-            font-size: 20px !important;
-        }
+//         .ticker, .price {
+//             font-size: 20px !important;
+//         }
 
-        .change-pro, .currency {
-            font-size: 15px;
-        }
+//         .change-pro, .currency {
+//             font-size: 15px;
+//         }
 
-        .footer {
-            font-size: 17px;
-        }
-        .content{
-            padding-top: 8%;
-        }
-    }
+//         .footer {
+//             font-size: 17px;
+//         }
+//         .content{
+//             padding-top: 8%;
+//         }
+//     }
 
 
     
 
-    compare-tab {
-        .btn-header-title {
-            font-size: 15px;
-            text-align: center;
-            // height: 35px;
-            /*font-weight: medium;*/
-            /*margin-left: calc(50% - 43.5px);
-            margin-right: calc(50% - 62px);*/
-            border-radius: 5px;
-            /*margin-top: 35px;*/
-            display: flex;
-            align-content: center;
-            align-items: center;
-            justify-content: center;
-            /*padding-top: 5px;
-            padding-bottom: 5px;*/
-            // margin-left: 20px;
-        }
-
-        .show-tabbar {
-            width: 70%;
-            /*height: 25px;*/
-            border: 2px solid #848484 !important;
-            margin-left: 15%;
-            margin-right: 15%;
-        }
-
-        .show-tabbar a:first-child {
-            border-top-left-radius: 2px;
-            border-bottom-left-radius: 2px;
-        }
-
-        .tab-button:nth-child(2) {
-            border-right: 2px solid #848484;
-            border-left: 2px solid #848484;
-        }
-
-        .show-tabbar a:nth-child(3) {
-            border-top-right-radius: 2px;
-            border-bottom-right-radius: 2px;
-        }
-
-        .tab-button-text, .btn-header-title span {
-            font-size: 17px !important;
-            font-family: $medium-font;
-        }
-    }
-
-    //Arabic
-    html:lang(ar) {
-        .hp-watchlist-content .close {
-            right: auto;
-            left: -50px;
-            top: 3px;
-        }
-
-        .ical-compare-content  {
-            right: auto;
-            left: -50px;
-        }
-
-        .back-button-icon:before, .ion-ios-irapp-back:before {
-            background-position: -130px -415px !important;
-        }
-
-        button:not([detail-none]) {
-            .item-inner {
-                background-image: none;
-                padding-left: 0;
-            }
-            /*.item-inner:before {
-                position: absolute;
-                background-position: -75px -415px !important;
-                width: 25px;
-                height: 25px;
-                left: 15px;
-                top: 22%;
-            }*/
-        }
-        /*Compare Tabs SG Module*/
-        compare-tab {
-            .show-tabbar a:first-child {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-                border-top-right-radius: 2px;
-                border-bottom-right-radius: 2px;
-            }
-
-            .show-tabbar a:nth-child(3) {
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border-top-left-radius: 2px;
-                border-bottom-left-radius: 2px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (orientation:portrait) {
-    .mediaTabletSharePopup {
-        .popover-content {
-            width: 335px;
-            left: 33% !important;
-        }
-    }
-
-    // #webcastFooter {
-    //     position: absolute;
-    // }
-
-    #videoContainer {
-        visibility: hidden;
-        position: relative;
-        text-align: center;
-    }
-
-    .videoControl {
-        text-align: center !important;
-        background-color: white !important;
-
-        .videoBtn {
-            text-align: center !important;
-            width: 100vw !important;
-            color: #4D4D4D !important;
-            font-size: 30px !important;
-            padding-bottom: 10px !important;
-        }
-
-        .videoBar {
-            ion-range {
-                padding-top: 0px !important;
-                padding-bottom: 0px !important;
-            }
-
-            width: 100vw !important;
-        }
-    }
-
-    .mediaTabletDownloadPopup {
-        .popover-content {
-            width: 335px;
-            left: 21% !important;
-        }
-    }
-
-    .mediaContent {
-        background-color: #F3F3F3 !important;
-
-        .flex-container {
-            display: flex;
-            width: 100%;
-            -webkit-flex-wrap: wrap;
-
-            .mediaItem {
-                width: 29%;
-                margin: 2.166666%;
-                line-height: 1.5;
-
-                button {
-                    width: 100%;
-                    height: 29vw;
-                    background-color: #DEDEDE;
-                }
-
-                button:active {
-                    background-color: #DEDEDE !important;
-                }
-
-                div {
-                    width: 100%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-
-                    ion-icon {
-                        float: right;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
-            }
-        }
-    }
-
-    .cards-list-module button.button {
-        width: 24%;
-    }
-    /*Share Graph*/
-    page-sharegraph {
-        div#chart-container {
-            height: 300px;
-        }
-    }
-
-    .performance-block {
-        float: left;
-        margin: 0;
-        padding: 0;
-        width: 50%;
-
-        .item {
-            border-right: 1px solid #ddd;
-        }
-
-        ion-list-header.item {
-            margin-top: 0 !important;
-            padding-top: 10px !important;
-            border-right: 0;
-        }
-    }
-
-    .note.tablet {
-        float: left;
-        padding-left: 15px;
-    }
-
-    compare-tab {
-        #charts {
-            height: 365px;
-            margin-bottom: 45px;
-        }
-
-        #charts .highcharts-container {
-            height: 380px !important;
-        }
-    }
-}
-
-@media screen and (min-width: 768px) and (orientation:landscape) {
-    .mediaTabletSharePopup {
-        .popover-content {
-            width: 335px;
-            left: 44% !important;
-        }
-    }
-
-    // #webcastFooter {
-    //     position: absolute;
-    // }
-
-    #videoContainer {
-        position: relative;
-        visibility: hidden;
-        text-align: center;
-        background-color: black;
-    }
-
-    .videoControl {
-        text-align: center !important;
-        background-color: white !important;
-
-        .videoBtn {
-            text-align: center !important;
-            width: 100vw !important;
-            color: #4D4D4D !important;
-            font-size: 30px !important;
-            padding-bottom: 10px !important;
-        }
-
-        .videoBar {
-            ion-range {
-                padding-top: 0px !important;
-                padding-bottom: 0px !important;
-            }
-
-            width: 100vw !important;
-        }
-    }
-
-    .mediaTabletDownloadPopup {
-        .popover-content {
-            width: 335px;
-            left: 21% !important;
-        }
-    }
-
-    .mediaContent {
-        background-color: #F3F3F3 !important;
-
-        .flex-container {
-            display: flex;
-            width: 100%;
-            -webkit-flex-wrap: wrap;
-
-            .mediaItem {
-                width: 20%;
-                margin: 2.5%;
-                line-height: 1.5;
-
-                button {
-                    width: 100%;
-                    height: 20vw;
-                    background-color: #DEDEDE;
-                }
-
-                button:active {
-                    background-color: #DEDEDE !important;
-                }
-
-                div {
-                    width: 100%;
-                    padding-left: 10px;
-                    padding-right: 10px;
-
-                    ion-icon {
-                        float: right;
-                        top: 50%;
-                        transform: translateY(-50%);
-                    }
-                }
-            }
-        }
-    }
-
-    .cards-list-module button.button {
-        width: 19%;
-    }
-
-    /*Share Graph*/
-    page-sharegraph {
-        .scroll-content {
-            overflow-y: hidden;
-        }
-
-        div#chart-container {
-            height: 340px;
-        }
-
-        .performance-placeholder {
-            ion-list {
-                margin-bottom: 0;
-                margin-top: 10px;
-
-                .item {
-                    min-height: 0;
-
-                    ion-label {
-                        margin-top: 8px;
-                        margin-bottom: 8px;
-                    }
-                }
-            }
-
-            .marketdata {
-                margin-top: 15px;
-            }
-        }
-
-        .note {
-            margin-left: 15px;
-        }
-    }
-
-    .chart-placeholder {
-        float: right;
-        width: 65%;
-    }
-
-    .performance-placeholder {
-        float: left;
-        width: 35%;
-        border-right: 1px solid #ddd;
-    }
-
-
-    compare-tab ion-header, compare-tab .show-tabbar, page-chart #charts-container {
-        margin-left: 20%;
-        margin-right: 20%;
-        width: 60%;
-    }
-
-    page-chart {
-        .share-item {
-            margin-left: 20% !important;
-            margin-right: 20% !important;
-        }
-        .footer{
-            margin-left: 60px !important;
-            /*margin-right: 60px;;*/
-        }
-        .chart-page-content {
-            margin-top: 7%;
-        }
-    }
-
-    page-compare {
-        .scroll-content{
-            margin-left: 20% !important;
-            margin-right: 20% !important;
-        }
-    }
-
-    page-performance {
-        .scroll-content {
-            // margin-top: 30px !important;
-            margin-left: 20% ;
-            margin-right: 20%;
-        }
-
-        .item-box div {
-            padding-bottom: 16px;
-            padding-top: 16px;
-        }
-        .item-header-content{
-            margin-top: 10% !important;
-        }
-
-    }
-
-    compare-tab {
-
-        /*.footer {
-            margin-left: 60px !important;
-            margin-right: 60px !important;
-        }*/
-    }
-}
+//     compare-tab {
+//         .btn-header-title {
+//             font-size: 15px;
+//             text-align: center;
+//             // height: 35px;
+//             /*font-weight: medium;*/
+//             /*margin-left: calc(50% - 43.5px);
+//             margin-right: calc(50% - 62px);*/
+//             border-radius: 5px;
+//             /*margin-top: 35px;*/
+//             display: flex;
+//             align-content: center;
+//             align-items: center;
+//             justify-content: center;
+//             /*padding-top: 5px;
+//             padding-bottom: 5px;*/
+//             // margin-left: 20px;
+//         }
+
+//         .show-tabbar {
+//             width: 70%;
+//             /*height: 25px;*/
+//             border: 2px solid #848484 !important;
+//             margin-left: 15%;
+//             margin-right: 15%;
+//         }
+
+//         .show-tabbar a:first-child {
+//             border-top-left-radius: 2px;
+//             border-bottom-left-radius: 2px;
+//         }
+
+//         .tab-button:nth-child(2) {
+//             border-right: 2px solid #848484;
+//             border-left: 2px solid #848484;
+//         }
+
+//         .show-tabbar a:nth-child(3) {
+//             border-top-right-radius: 2px;
+//             border-bottom-right-radius: 2px;
+//         }
+
+//         .tab-button-text, .btn-header-title span {
+//             font-size: 17px !important;
+//             font-family: $medium-font;
+//         }
+//     }
+
+//     //Arabic
+//     html:lang(ar) {
+//         .hp-watchlist-content .close {
+//             right: auto;
+//             left: -50px;
+//             top: 3px;
+//         }
+
+//         .ical-compare-content  {
+//             right: auto;
+//             left: -50px;
+//         }
+
+//         .back-button-icon:before, .ion-ios-irapp-back:before {
+//             background-position: -130px -415px !important;
+//         }
+
+//         button:not([detail-none]) {
+//             .item-inner {
+//                 background-image: none;
+//                 padding-left: 0;
+//             }
+//             /*.item-inner:before {
+//                 position: absolute;
+//                 background-position: -75px -415px !important;
+//                 width: 25px;
+//                 height: 25px;
+//                 left: 15px;
+//                 top: 22%;
+//             }*/
+//         }
+//         /*Compare Tabs SG Module*/
+//         compare-tab {
+//             .show-tabbar a:first-child {
+//                 border-top-left-radius: 0;
+//                 border-bottom-left-radius: 0;
+//                 border-top-right-radius: 2px;
+//                 border-bottom-right-radius: 2px;
+//             }
+
+//             .show-tabbar a:nth-child(3) {
+//                 border-top-right-radius: 0;
+//                 border-bottom-right-radius: 0;
+//                 border-top-left-radius: 2px;
+//                 border-bottom-left-radius: 2px;
+//             }
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 768px) and (orientation:portrait) {
+//     .mediaTabletSharePopup {
+//         .popover-content {
+//             width: 335px;
+//             left: 33% !important;
+//         }
+//     }
+
+//     // #webcastFooter {
+//     //     position: absolute;
+//     // }
+
+//     #videoContainer {
+//         visibility: hidden;
+//         position: relative;
+//         text-align: center;
+//     }
+
+//     .videoControl {
+//         text-align: center !important;
+//         background-color: white !important;
+
+//         .videoBtn {
+//             text-align: center !important;
+//             width: 100vw !important;
+//             color: #4D4D4D !important;
+//             font-size: 30px !important;
+//             padding-bottom: 10px !important;
+//         }
+
+//         .videoBar {
+//             ion-range {
+//                 padding-top: 0px !important;
+//                 padding-bottom: 0px !important;
+//             }
+
+//             width: 100vw !important;
+//         }
+//     }
+
+//     .mediaTabletDownloadPopup {
+//         .popover-content {
+//             width: 335px;
+//             left: 21% !important;
+//         }
+//     }
+
+//     .mediaContent {
+//         background-color: #F3F3F3 !important;
+
+//         .flex-container {
+//             display: flex;
+//             width: 100%;
+//             -webkit-flex-wrap: wrap;
+
+//             .mediaItem {
+//                 width: 29%;
+//                 margin: 2.166666%;
+//                 line-height: 1.5;
+
+//                 button {
+//                     width: 100%;
+//                     height: 29vw;
+//                     background-color: #DEDEDE;
+//                 }
+
+//                 button:active {
+//                     background-color: #DEDEDE !important;
+//                 }
+
+//                 div {
+//                     width: 100%;
+//                     padding-left: 10px;
+//                     padding-right: 10px;
+
+//                     ion-icon {
+//                         float: right;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .cards-list-module button.button {
+//         width: 24%;
+//     }
+//     /*Share Graph*/
+//     page-sharegraph {
+//         div#chart-container {
+//             height: 300px;
+//         }
+//     }
+
+//     .performance-block {
+//         float: left;
+//         margin: 0;
+//         padding: 0;
+//         width: 50%;
+
+//         .item {
+//             border-right: 1px solid #ddd;
+//         }
+
+//         ion-list-header.item {
+//             margin-top: 0 !important;
+//             padding-top: 10px !important;
+//             border-right: 0;
+//         }
+//     }
+
+//     .note.tablet {
+//         float: left;
+//         padding-left: 15px;
+//     }
+
+//     compare-tab {
+//         #charts {
+//             height: 365px;
+//             margin-bottom: 45px;
+//         }
+
+//         #charts .highcharts-container {
+//             height: 380px !important;
+//         }
+//     }
+// }
+
+// @media screen and (min-width: 768px) and (orientation:landscape) {
+//     .mediaTabletSharePopup {
+//         .popover-content {
+//             width: 335px;
+//             left: 44% !important;
+//         }
+//     }
+
+//     // #webcastFooter {
+//     //     position: absolute;
+//     // }
+
+//     #videoContainer {
+//         position: relative;
+//         visibility: hidden;
+//         text-align: center;
+//         background-color: black;
+//     }
+
+//     .videoControl {
+//         text-align: center !important;
+//         background-color: white !important;
+
+//         .videoBtn {
+//             text-align: center !important;
+//             width: 100vw !important;
+//             color: #4D4D4D !important;
+//             font-size: 30px !important;
+//             padding-bottom: 10px !important;
+//         }
+
+//         .videoBar {
+//             ion-range {
+//                 padding-top: 0px !important;
+//                 padding-bottom: 0px !important;
+//             }
+
+//             width: 100vw !important;
+//         }
+//     }
+
+//     .mediaTabletDownloadPopup {
+//         .popover-content {
+//             width: 335px;
+//             left: 21% !important;
+//         }
+//     }
+
+//     .mediaContent {
+//         background-color: #F3F3F3 !important;
+
+//         .flex-container {
+//             display: flex;
+//             width: 100%;
+//             -webkit-flex-wrap: wrap;
+
+//             .mediaItem {
+//                 width: 20%;
+//                 margin: 2.5%;
+//                 line-height: 1.5;
+
+//                 button {
+//                     width: 100%;
+//                     height: 20vw;
+//                     background-color: #DEDEDE;
+//                 }
+
+//                 button:active {
+//                     background-color: #DEDEDE !important;
+//                 }
+
+//                 div {
+//                     width: 100%;
+//                     padding-left: 10px;
+//                     padding-right: 10px;
+
+//                     ion-icon {
+//                         float: right;
+//                         top: 50%;
+//                         transform: translateY(-50%);
+//                     }
+//                 }
+//             }
+//         }
+//     }
+
+//     .cards-list-module button.button {
+//         width: 19%;
+//     }
+
+//     /*Share Graph*/
+//     page-sharegraph {
+//         .scroll-content {
+//             overflow-y: hidden;
+//         }
+
+//         div#chart-container {
+//             height: 340px;
+//         }
+
+//         .performance-placeholder {
+//             ion-list {
+//                 margin-bottom: 0;
+//                 margin-top: 10px;
+
+//                 .item {
+//                     min-height: 0;
+
+//                     ion-label {
+//                         margin-top: 8px;
+//                         margin-bottom: 8px;
+//                     }
+//                 }
+//             }
+
+//             .marketdata {
+//                 margin-top: 15px;
+//             }
+//         }
+
+//         .note {
+//             margin-left: 15px;
+//         }
+//     }
+
+//     .chart-placeholder {
+//         float: right;
+//         width: 65%;
+//     }
+
+//     .performance-placeholder {
+//         float: left;
+//         width: 35%;
+//         border-right: 1px solid #ddd;
+//     }
+
+
+//     compare-tab ion-header, compare-tab .show-tabbar, page-chart #charts-container {
+//         margin-left: 20%;
+//         margin-right: 20%;
+//         width: 60%;
+//     }
+
+//     page-chart {
+//         .share-item {
+//             margin-left: 20% !important;
+//             margin-right: 20% !important;
+//         }
+//         .footer{
+//             margin-left: 60px !important;
+//             /*margin-right: 60px;;*/
+//         }
+//         .chart-page-content {
+//             margin-top: 7%;
+//         }
+//     }
+
+//     page-compare {
+//         .scroll-content{
+//             margin-left: 20% !important;
+//             margin-right: 20% !important;
+//         }
+//     }
+
+//     page-performance {
+//         .scroll-content {
+//             // margin-top: 30px !important;
+//             margin-left: 20% ;
+//             margin-right: 20%;
+//         }
+
+//         .item-box div {
+//             padding-bottom: 16px;
+//             padding-top: 16px;
+//         }
+//         .item-header-content{
+//             margin-top: 10% !important;
+//         }
+
+//     }
+
+//     compare-tab {
+
+//         /*.footer {
+//             margin-left: 60px !important;
+//             margin-right: 60px !important;
+//         }*/
+//     }
+// }

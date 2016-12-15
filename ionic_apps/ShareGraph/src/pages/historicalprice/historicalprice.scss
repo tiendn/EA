@@ -185,7 +185,7 @@ page-hp-watchlist {
         align-items: center;
         text-align: center;
     }
-
+    
     .btn-watch {
         ion-icon {
             padding-left: 5px;
@@ -212,6 +212,7 @@ page-hp-watchlist {
         background-color: #484849 !important;
         background: transparent;
         position: absolute;
+        
     }
 
     .date-content {
@@ -258,9 +259,7 @@ page-hp-watchlist {
     .div-item-content > ion-list > ion-item:last-child .item-inner{
         border-bottom: 0 !important;
     }
-    ion-list .item .item-inner {
-        border-bottom: 0.55px solid #6b6b6c !important;
-    }
+    
 
     ion-item {
         background: transparent;
@@ -311,16 +310,7 @@ page-hp-watchlist {
     }
 }
 
-@media screen and (min-width: 768px) {
-    page-hp-watchlist {
-        .scroll-content {
-            margin: 2.5% 15% 0 15%;
-        }
-        ion-list .item .item-inner {
-            border-bottom: 1px solid #6b6b6c !important;
-        }
-    }
-}
+
 
 html:lang(ar) {
 
