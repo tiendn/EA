@@ -957,6 +957,7 @@
                 border-bottom: 0 !important;
             }
             .btn-watch {
+                border-radius: 0px;
                 font-size: 14px;
                 font-weight: normal;
                 font-family: $light-font;
@@ -1060,6 +1061,7 @@
             }
             .btn-header-watch{
                 font-size: 14px !important;
+                border-radius: 0px;
             }
             .date-info span {
                 font-size: 14px !important;
@@ -1306,7 +1308,7 @@
                 /*font-weight: medium;*/
                 /*margin-left: calc(50% - 43.5px);
                 margin-right: calc(50% - 62px);*/
-                border-radius: 1px;
+                // border-radius: 1px;
                 /*margin-top: 35px;*/
                 display: flex;
                 align-content: center;
@@ -1580,6 +1582,7 @@
                     border-bottom: 0 !important;
                 }
                 .btn-watch {
+                    border-radius: 0px;
                     font-size: 14px;
                     font-weight: normal;
                     font-family: $light-font;
@@ -1592,11 +1595,13 @@
                 }
                 .close {
                     top: 0px;
-                    right: 15px;
+                    right: 0;
                     height: 24px;
                     width:24px;
                 }
-
+                .item-md{
+                    padding-left: 16px !important;
+                }
                 .item-content .item .item-left {
                     font-size: 20px;    
                 }
@@ -1622,7 +1627,15 @@
              /*End Historical Price*/
              /*Investment Calculator */
             page-ical-compare {
-                
+                ion-list .item {
+                    padding: 0 0 0 16px !important;
+                    // padding-left: 16px ; 
+                    .item-inner{
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        flex-direction: row !important;
+                    }
+                }
                 .list-md{
                     box-shadow: 0 0 0 !important;
                 }
@@ -1631,6 +1644,7 @@
                 }
                 .btn-header-watch {
                     font-weight: medium;
+                    border-radius: 0px;
                 }
     
                 .btn-header-close {
@@ -1850,7 +1864,7 @@
                     font-size: 14px;
                     text-align: center;
                     height: 35px;
-                    border-radius: 1px;
+                    // border-radius: 1px;
                     display: flex;
                     align-content: center;
                     align-items: center;
