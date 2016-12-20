@@ -1,0 +1,363 @@
+page-historicalprice {
+    .historicalprice-content {
+        .cards-chart {
+            margin-top: 40px;
+            padding: 15px;
+
+            ion-card-header {
+                font-size: 17px;
+                text-transform: none;
+                padding: 0;
+                color: #000 !important;
+            }
+
+            ion-card-content {
+                margin: 0;
+                padding: 0;
+                position: relative;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            .chart-currency {
+                font-size: 15px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .chart-closeprice {
+                height: 140px;
+                padding-left: 15%;
+            }
+
+            ion-card-footer {
+                font-size: 11px;
+                color: #808080;
+            }
+
+            .highcharts-axis-labels.highcharts-xaxis-labels > text {
+                font-size: 12px;
+                color: #9B9B9B;
+            }
+
+            .highcharts-data-labels tspan {
+                font-size: 12px;
+                color: #000;
+                font-weight: normal;
+            }
+        }
+    }
+}
+
+.splitview-block{
+    height: 100%;
+}
+
+.select-date.item-block {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+
+    .item-inner {
+        border: 0;
+        font-size: 17px;
+
+        ion-label {
+            color: #000;
+        }
+
+        .datetime-text {
+            color: #8F8F95;
+        }
+    }
+}
+
+.historicalprice-detail-content {
+    .cards-fiveday-chart {
+        /*padding-left: 20px;
+        padding-right: 20px;*/
+        .chart-container {
+            height: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .highcharts-axis-labels.highcharts-xaxis-labels span {
+                color: #9B9B9B !important;
+                font-size: 10px !important;
+            }
+
+            .highcharts-axis-labels.highcharts-xaxis-labels span.candlestick-currentdate {
+                color: #000 !important;
+            }
+        }
+    }
+
+    .pr-oneday {
+        .item {
+            border: 0;
+        }
+
+        .item:first-child {
+            .item-inner {
+                border-top: 1px solid #ddd;
+            }
+        }
+    }
+
+    .hp-result-tooltip {
+        padding: 8px;
+        display: table;
+
+        div {
+            display: table-row;
+
+            span {
+                display: table-cell;
+            }
+        }
+
+        .tooltip-value {
+            font-weight: bold;
+        }
+
+        .tooltip-label {
+            padding-right: 5px;
+        }
+    }
+
+    .highcharts-tooltip > span {
+        background-color: #fff;
+        z-index: 1000;
+    }
+
+    .cards-compare {
+        ion-card-header {
+            padding-top: 0;
+            font-size: 14px;
+        }
+
+        button {
+            margin: 0;
+            height: 35px;
+            font-size: 12px;
+        }
+    }
+
+    .chart-header {
+        padding-top: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+        display: block;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: #9b9b9b;
+    }
+}
+
+.pr-detail {
+    .toolbar {
+        border-bottom: 1px solid #ddd;
+
+        .toolbar-background {
+            background-color: #fff;
+        }
+    }
+}
+
+/*Watchlist Modal*/
+page-hp-watchlist {
+    
+    ion-content {
+        background-color: #484849 !important;
+    }
+    .scroll-content{
+        overflow-y : hidden;
+    }
+    .header {
+        position: relative;
+    }
+
+    .btn-watch-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-watch {
+        ion-icon {
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        background-color: #ffffff !important;
+        display: flex;
+        padding: 5px 10px;
+
+        .button-inner {
+            color: black;
+        }
+
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: auto !important;
+        border-radius: 5px;
+    }
+
+    .close {
+        color: white;
+        background-color: #484849 !important;
+        background: transparent;
+        position: absolute;
+    }
+
+    .date-content {
+        color: white;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .current-date {
+        color: white;
+        display: flex;
+        flex-direction: column;
+        padding-left: 4%;
+    }
+
+    .current-date {
+        text-align: left;
+    }
+
+    ion-item span, h6, ion-icon {
+        color: #ffffff;
+    }
+
+    .item-header-content {
+        border-top: 1px solid #c8c7cc;
+        margin-bottom: 0px;
+    }
+
+    .item-content {
+        margin-bottom: 0px;
+        margin-top: 0px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .item-content > .item:first-child {
+        border-top: 0px;
+    }
+
+    .item-content > .item:last-child {
+        border-bottom: 0px;
+    }
+    .div-item-content > ion-list > ion-item:last-child .item-inner{
+        border-bottom: 0 !important;
+    }
+    ion-list .item .item-inner {
+        border-bottom: 0.55px solid #6b6b6c !important;
+    }
+
+    ion-item {
+        background: transparent;
+        background-color: #484849 !important;
+        opacity: .9;
+    }
+
+    ion-item:last-child {
+        border-bottom: 1px solid #c8c7cc;
+    }
+    .item-mid {
+        width: 30%;
+        text-align: right;
+    }
+    .item-right {
+        width: 30%;
+        text-align: right;
+    }
+
+    .div-item-content {
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    .footer {
+        margin-top: 0;
+        padding-top: 2%;
+        border-top: 1px solid #c8c7cc;
+        color: #c9c9c9;
+    }
+
+    .footer a {
+        text-decoration: none;
+    }
+}
+/*End Watchlist Modal*/
+
+// IOS Platform - IPhone && IPad
+@media screen and (max-width: 640px) {
+    page-hp-watchlist {
+        .footer {
+            padding-left: 4.4%;
+        }
+
+        .scroll-content {
+            margin-top: 5%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    page-hp-watchlist {
+        .scroll-content {
+            margin: 2.5% 15% 0 15%;
+        }
+        ion-list .item .item-inner {
+            border-bottom: 1px solid #6b6b6c !important;
+        }
+    }
+}
+
+html:lang(ar) {
+
+    .historicalprice-content {
+        .cards-chart {
+            .chart-currency {
+                left: auto;
+                right: 0;
+            }
+
+            .chart-closeprice {
+                padding-left: 0;
+                padding-right: 15%;
+                direction: ltr;
+            }
+        }
+    }
+
+    page-hp-watchlist {
+        .current-date {
+            text-align: right;
+            padding-right: 4%;
+            padding-left: 0;
+        }
+        .close{
+            left: auto !important;
+            top: -3px !important;
+        }
+        .btn-watch{
+            margin-left: 0 !important;
+        }
+        .item-right {
+            display: block;
+            text-align: left;
+        }
+        .footer{
+            margin-right: 16px;
+        }
+    }
+}

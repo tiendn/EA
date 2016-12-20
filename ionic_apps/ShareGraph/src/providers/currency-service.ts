@@ -1,0 +1,64 @@
+﻿import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import { Storage } from '@ionic/storage';
+import { GlobalVars } from '../common/global-vars';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
+
+@Injectable()
+export class CurrencyService {
+    apiName = "currencies";
+    servicesUrl: any;
+    storageKey: any;
+    data: any;
+
+    constructor(public http: Http, public storage: Storage, public globalVars: GlobalVars) {
+        this.servicesUrl = globalVars.servicesUrl + this.apiName + "/";
+    }
+
+    getCurrenciesData() {
+        this.storageKey = this.apiName + "_" + this.globalVars.generalSettings.language.value.toLowerCase();
+
+        return new Promise(resolve => {
+            this.storage.get(this.storageKey).then(storageData => {
+                if (storageData != null) {
+                    let sData = storageData;
+                    let TTL = this.globalVars.currencyStorageTTL;
+                    if (TTL <= (new Date().getTime() - sData.cacheTime))
+                        this.getCurrenciesDataFromServices(resolve);
+                    else {
+                        this.data = sData.data;
+                        resolve(this.data);
+                    }
+                }
+                else
+                    this.getCurrenciesDataFromServices(resolve);
+            });
+        });
+    }
+
+    getCurrenciesDataFromServices(resolve) {
+        let params = this.globalVars.generalSettings.language.value.toLowerCase();
+        this.http.get(this.servicesUrl + params)
+            //this.http.get("http://10.10.15.8/mirtools/api/v6/currencies/en-gb", irApp.httpRequestHeader)
+            .timeout(this.globalVars.requestTimeout)
+            .retry(this.globalVars.retry)
+            .subscribe(
+            res => {
+                if (res != undefined && res != null && res.json().length > 0) {
+                    this.data = res.json();
+                    resolve(this.data);
+                    let storageData = { cacheTime: new Date().getTime(), data: this.data };
+                    this.storage.set(this.storageKey, storageData);
+                }
+                else {
+                    resolve([]);
+                }
+            },
+            error => {
+                console.log(error);
+                resolve([]);
+            }
+            );
+    }
+}

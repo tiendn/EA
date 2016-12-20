@@ -2,20 +2,21 @@
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { GlobalVars } from '../common/global-vars';
-import 'rxjs/Rx';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
 
 @Injectable()
 export class ReportsService {
     apiName = "documentlibrary";
     servicesUrl: any;
-    lstDownloadingStorageKey: string;
+    //lstDownloadingStorageKey: string;
     storageKey: string;
     tabid: any;
     data: any;
 
     constructor(public http: Http, public storage: Storage, public globalVars: GlobalVars) {
         this.servicesUrl = this.globalVars.servicesUrl + this.apiName + "/";
-        this.lstDownloadingStorageKey = this.apiName + "_downloading";
+        //this.lstDownloadingStorageKey = this.apiName + "_downloading";
     }
 
     getReportData(tabid) {
@@ -41,8 +42,8 @@ export class ReportsService {
     }
 
     getReportDataFromServices(resolve) {
-        //let params = this.globalVars.companyCode + "/" + this.globalVars.generalSettings.language.value.toLowerCase() + "/" +
-        let params = "ae-emaar" + "/" + this.globalVars.generalSettings.language.value.toLowerCase() + "/" +
+        let params = this.globalVars.companyCode + "/" + this.globalVars.generalSettings.language.value.toLowerCase() + "/" +
+        //let params = "ae-emaar" + "/" + this.globalVars.generalSettings.language.value.toLowerCase() + "/" +
             this.globalVars.currentModule + "/" + this.tabid;
 
         this.http.get(this.servicesUrl + params)
@@ -68,6 +69,7 @@ export class ReportsService {
     }
 
     saveListDownloadingData(data) {
-        this.storage.set(this.lstDownloadingStorageKey, data);
+        //this.storage.set(this.lstDownloadingStorageKey, data);
+        this.storage.set(this.globalVars.storageKey['reportDownloading'], data);
     }
 }

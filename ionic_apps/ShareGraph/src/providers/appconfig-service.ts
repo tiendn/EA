@@ -32,11 +32,16 @@ export class AppConfigService {
 
     //Check app version, if new => clear all storage
     checkAppVersion(buildVersion) {
-        this.storage.get(this.appBuildVersionStorageKey).then(data => {
-            if (data != buildVersion) {
-                this.storage.clear();
-                this.storage.set(this.appBuildVersionStorageKey, buildVersion);
+        this.storage.get(this.globalVars.storageKey["reportDownloading"]).then(data => {
+            if(data != null){
+                this.globalVars.reportPendingDownload = data;
             }
+            this.storage.get(this.appBuildVersionStorageKey).then(data => {
+                if (data != buildVersion) {
+                    this.storage.clear();
+                    this.storage.set(this.appBuildVersionStorageKey, buildVersion);
+                }
+            });
         });
     }
 
@@ -54,7 +59,6 @@ export class AppConfigService {
 
     //Set general settings to storage
     setGeneralSettingsData() {
-        if (this.globalVars.generalSettings)
-            this.storage.set(this.generalSettingStorageKey, this.globalVars.generalSettings);
+        this.storage.set(this.generalSettingStorageKey, JSON.parse(JSON.stringify(this.globalVars.generalSettings)));
     }
 }

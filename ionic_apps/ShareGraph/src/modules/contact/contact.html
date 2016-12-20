@@ -1,0 +1,19 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border no-padding class="irapp-toolbar">
+        <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+            <button ion-button (click)="changeTab('contact')" [ngClass]="activeTab == 'contact' ? 'btn-active' : ''">
+                INVESTOR RELATIONS
+            </button>
+            <button ion-button (click)="changeTab('address')" [ngClass]="activeTab == 'address' ? 'btn-active' : ''">
+                ADDRESS
+            </button>
+        </ion-scroll>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding>
+    <div [innerHTML]="HTMLContent"></div>
+</ion-content>

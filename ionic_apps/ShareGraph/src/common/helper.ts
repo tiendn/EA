@@ -3,7 +3,8 @@ import { LoadingController, ActionSheetController, PopoverController, Config, Al
 import { Push, File, ThemeableBrowser } from 'ionic-native';
 import { GlobalVars } from './global-vars';
 import { PopoverComponent } from '../components/popover/popover';
-//import {SignInPage} from '../pages/settings/profile/account/signin/signin';
+
+declare var WindowsAzure: any;
 
 @Injectable()
 export class Helper {
@@ -220,7 +221,10 @@ export class Helper {
         var c = decimalPlaces;
         var d = this.globalVars.generalSettings.separator.decimal;
         var t = this.globalVars.generalSettings.separator.thousand;
-        var n = number, c = isNaN(c = Math.abs(c)) ? 2 : c, d = d == undefined ? "," : d, t = t == undefined ? "." : t, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
+        c = isNaN(c = Math.abs(c)) ? 2 : c;
+        d = d == undefined ? "," : d;
+        t = t == undefined ? "." : t;
+        var n = number, s = n < 0 ? "-" : "", i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "", j = (j = i.length) > 3 ? j % 3 : 0;
         var num = s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - parseInt(i)).toFixed(c).slice(2) : "");
         if (this.globalVars.isArabic && this.globalVars.useEasternArabicNumbers)
             return this.convertToArabic(num);
@@ -422,10 +426,19 @@ export class Helper {
     }
 
     //Create Share Popup For Iphone
-    showSharePopup(scope, event) {
-        let shareEmailText = this.getPhrase("SendViaEmail", "Common");
-        let tweetThisText = this.getPhrase("TweetThis", "Common");
-        let cancelText = this.getPhrase("Cancel", "Common");
+    showSharePopup(scope, event, title = "") {
+        let shareEmailText = "";
+        let tweetThisText = "";
+        let cancelText = "";
+        if (this.globalVars.isIOS) {
+            shareEmailText = this.getPhrase("SendViaEmail", "Common");
+            tweetThisText = this.getPhrase("TweetThis", "Common");
+            cancelText = this.getPhrase("Cancel", "Common");
+        }
+        else {
+            shareEmailText = this.getPhrase("Mail");
+            tweetThisText = this.getPhrase("Twitter");
+        }
         if (this.globalVars.isTablet) {
             let popover = this.popoverController.create(PopoverComponent, {
                 scope: scope,
@@ -443,24 +456,50 @@ export class Helper {
             });
         }
         else {
-            let actionSheet = this.actionSheetController.create({
-                buttons: [
-                    {
-                        text: shareEmailText,
-                        handler: () => {
-                            scope.sendViaEmail();
+            let actionSheetOptions = {};
+            if (this.globalVars.isIOS) {
+                actionSheetOptions = {
+                    buttons: [
+                        {
+                            text: shareEmailText,
+                            handler: () => {
+                                scope.sendViaEmail();
+                            }
+                        }, {
+                            text: tweetThisText,
+                            handler: () => {
+                                scope.tweetThis();
+                            }
+                        }, {
+                            text: cancelText,
+                            role: 'cancel'
                         }
-                    }, {
-                        text: tweetThisText,
-                        handler: () => {
-                            scope.tweetThis();
+                    ]
+                };
+            }
+            else {
+                actionSheetOptions = {
+                    title: title,
+                    cssClass: "irapp-share-popup",
+                    buttons: [
+                        {
+                            text: shareEmailText,
+                            cssClass: "share-email-btn",
+                            icon: "irapp-mail",
+                            handler: () => {
+                                scope.sendViaEmail();
+                            }
+                        }, {
+                            text: tweetThisText,
+                            icon: "irapp-twitter",
+                            handler: () => {
+                                scope.tweetThis();
+                            }
                         }
-                    }, {
-                        text: cancelText,
-                        role: 'cancel'
-                    }
-                ]
-            });
+                    ]
+                };
+            }
+            let actionSheet = this.actionSheetController.create(actionSheetOptions);
             actionSheet.present();
         }
     }
@@ -541,7 +580,7 @@ export class Helper {
 
     /*Open Document By ThemeableBrowser Plugin*/
     openDocument(scope, path, title) {
-        let iconPath = "src/assets/img/";
+        let iconPath = "assets/img/";
         let backIcon = iconPath + (this.globalVars.isArabic ? "back-arabic.png" : "back.png");
         let shareIcon = iconPath + "share.png";
 
@@ -686,66 +725,67 @@ export class Helper {
         }
     }
     showConfirmLogin() {
-        //let expiredAlert = this.alert.create({
-        //    title: this.getPhrase("TokenExpired", "Settings"),
-        //    message: this.getPhrase("TokenExpiredDesc", "Settings"),
-        //    buttons: [
-        //        {
-        //            text: this.getPhrase("OK"),
-        //            role: 'cancel',
-        //            handler: () => {
-        //                irApp.homepage.nav.push(SignInPage);
-        //            }
-        //        }
-        //    ]
-        //});
-        //expiredAlert.present();
+        let expiredAlert = this.alert.create({
+            title: this.getPhrase("TokenExpired", "Settings"),
+            message: this.getPhrase("TokenExpiredDesc", "Settings"),
+            buttons: [
+                {
+                    text: this.getPhrase("OK"),
+                    role: 'cancel',
+                    handler: () => {
+                        this.globalVars.homepage.navCtrl.push(this.getPage("signin"));
+                        //this.nav.push(SignInPage);
+                    }
+                }
+            ]
+        });
+        expiredAlert.present();
     }
 
     /*Register push notifications*/
     registerPushNotifications(tags = "") {
-        //if (window.cordova) {
-        //    //Register push notification
-        //    let push = Push.init({
-        //        android: {
-        //            senderID: '546128565693'
-        //        },
-        //        ios: {
-        //            alert: 'true',
-        //            badge: true,
-        //            sound: 'true'
-        //        },
-        //        windows: {}
-        //    });
+        if (this.globalVars.isNativeMode) {
+           //Register push notification
+           let push = Push.init({
+               android: {
+                   senderID: '546128565693'
+               },
+               ios: {
+                   alert: 'true',
+                   badge: true,
+                   sound: 'true'
+               },
+               windows: {}
+           });
 
-        //    push.on('registration', (data) => {
-        //        console.log(data.registrationId);
-        //    });
+           push.on('registration', (data) => {
+               console.log(data.registrationId);
+           });
 
-        //    push.on('notification', (data) => {
-        //        console.log(data);
-        //    });
+           push.on('notification', (data) => {
+               console.log(data);
+           });
 
-        //    push.on('error', (error) => {
-        //        console.log(error.message);
-        //    });
+           push.on('error', (error) => {
+               console.log(error.message);
+           });
 
-        //    //Set glolbal variable
-        //    irApp.push = push;
+           //Set glolbal variable
+           this.globalVars.push = push;
 
-        //    //Register Azure Notification Hub
-        //    var connectionString = "Endpoint=sb://eurolandtesthub-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=JWhkaab3Qjnko8Tm3huYuB8jOQooXez/K24t2IbN0VA=",
-        //        notificationHubPath = "eurolandtesthub";
+           //Register Azure Notification Hub
+           var connectionString = "Endpoint=sb://eurolandtesthub-ns.servicebus.windows.net/;SharedAccessKeyName=DefaultListenSharedAccessSignature;SharedAccessKey=JWhkaab3Qjnko8Tm3huYuB8jOQooXez/K24t2IbN0VA=",
+               notificationHubPath = "eurolandtesthub";
 
-        //    var hub = new WindowsAzure.Messaging.NotificationHub(notificationHubPath, connectionString);
+           var hub = new WindowsAzure.Messaging.NotificationHub(notificationHubPath, connectionString);
 
-        //    hub.registerApplicationAsync(tags).then((result) => {
-        //        console.log("Registration successful: " + result.registrationId);
-        //    });
+           hub.registerApplicationAsync(tags).then((result) => {
+               console.log("Registration successful: " + result.registrationId);
+           });
 
-        //    //Set glolbal variable
-        //    irApp.hub = hub;
-        //}
+           //Set glolbal variable
+           this.globalVars.hub = hub;
+        }
     }
 
     /*UnRegister push notifications*/
@@ -774,9 +814,7 @@ export class Helper {
 
     //Open external link
     openExternalLink(url) {
-        //alert(url);
-        //let browser = new InAppBrowser(url, '_system');
-        let browser = window.open(url, '_system');
+        window.open(url, '_system');
     }
 
     /*Create Folder for module*/
@@ -785,8 +823,37 @@ export class Helper {
             this.setMetaDataNoBackup(entry);
         },
         (error) =>{
-            console.log(error);
+            //console.log(error);
         });
+    }
+
+    /*Create Multi Folders*/
+    createTreeFolder(folders, path = "") {
+        if (folders.length > 0) {
+            let item = folders[0];
+            folders.splice(0, 1);
+            if (path == "") path = this.globalVars.appPath;
+            if (item instanceof Array) {
+                item.forEach((value) => {
+                    File.createDir(path, value, false).then(entry => {
+                        this.setMetaDataNoBackup(entry);
+                    },
+                    (error) => {
+                        //console.log(error);
+                    });
+                });
+                this.createTreeFolder(folders, path);
+            }
+            else {
+                File.createDir(path, item, false).then(entry => {
+                    this.setMetaDataNoBackup(entry);
+                    this.createTreeFolder(folders, path + item);
+                },
+                (error) => {
+                    this.createTreeFolder(folders, path + item);
+                });
+            }
+        }
     }
 
     /*Get Display Date For Calendar Event*/
@@ -816,55 +883,7 @@ export class Helper {
         }
         return displayDate;
     }
-
-    /*Create Multi Folders*/
-    createTreeFolder(folders, entry = null) {
-        if (this.globalVars.rootEntry != null) {
-            let $scope = this;
-            if (folders.length > 0) {
-                let item = folders[0];
-                folders.splice(0, 1);
-                if (entry == null)
-                    entry = this.globalVars.rootEntry;
-                if (Array.isArray(item)) {
-                    item.forEach((value) => {
-                        entry.getDirectory(value, {
-                            create: true,
-                            exclusive: true
-                        }, function (cEntry) {
-                            $scope.setMetaDataNoBackup(cEntry);
-                        }, function (error) {
-                        });
-                    });
-                    $scope.createTreeFolder(folders, entry);
-                }
-                else {
-                    entry.getDirectory(item, {
-                        create: true,
-                        exclusive: true
-                    }, function (cEntry) {
-                        $scope.setMetaDataNoBackup(cEntry);
-                        $scope.createTreeFolder(folders, cEntry);
-                    }, function (error) {
-                        let nextItem = folders[0];
-                        let defaultParentFolder = Array.isArray(item) ? item[0] : item;
-                        if (!Array.isArray(nextItem)) {
-                            //if(nextItem.indexOf("/") < 0)
-                            folders[0] = defaultParentFolder + "/" + nextItem;
-                        }
-                        else {
-                            nextItem.forEach((value, index) => {
-                                //if(value.indexOf("/") < 0)
-                                folders[0][index] = defaultParentFolder + "/" + value;
-                            });
-                        }
-                        $scope.createTreeFolder(folders, entry);
-                    });
-                }
-            }
-        }
-    }
-
+    
     /**Offline Mess*/
     createOffileMess() {
         let offlineMess = "<div class='offline-mess'><span>No internet connection</span></div>";
@@ -883,7 +902,7 @@ export class Helper {
                 activePage.getElementsByTagName("ion-header")[0].insertAdjacentHTML("beforeend", offlineMess);
             }
             if (this.disableModulesOfflineMode.indexOf(this.globalVars.currentModule) >= 0 && activePage.getElementsByClassName("offline-backdrop").length == 0) {
-                let scrollContent = activePage.getElementsByTagName("scroll-content");
+                let scrollContent = activePage.getElementsByClassName("scroll-content");
                 if (scrollContent.length > 0)
                     scrollContent[scrollContent.length - 1].insertAdjacentHTML("beforeend", offlineBackDrop);
             }
@@ -913,5 +932,37 @@ export class Helper {
             else
                 this.createOffileMess();
         }, 200);
+    }
+
+    getAuthMessage(messId) {
+        if (this.globalVars.authErrorMessage[messId])
+            return this.getPhrase(this.globalVars.authErrorMessage[messId], "Settings");
+        else
+            return "";
+    }
+
+    //Date Picker
+    setDatePickerOptions(target) {
+        target.monthNames = this.globalVars.phrasesData.Common.MonthNames;
+        target.monthShortNames = this.globalVars.phrasesData.Common.MonthNamesShort;
+        target.dayNames = this.globalVars.phrasesData.Common.DOWNames;
+        target.dayShortNames = this.globalVars.phrasesData.Common.DOWNames;
+        if (this.globalVars.isArabic) {
+            let dayValues = [];
+            let i = 0;
+            while (i < 32) {
+                i++;
+                //dayValues.push(this.formatNumber(i, 0));
+                dayValues.push(i.toString());
+            }
+            target.dayValues = dayValues;
+        }
+    }
+
+    getDatePickerFormat(){
+        let currentFormat = this.globalVars.generalSettings.shortDateFormat.toLowerCase();
+        if(currentFormat.indexOf("y") == currentFormat.lastIndexOf("y"))
+            currentFormat = currentFormat.replace("y","yyyy");
+        return currentFormat.toUpperCase();
     }
 }

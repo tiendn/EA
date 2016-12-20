@@ -1,25 +1,26 @@
 <!-- left menu -->
-<ion-menu id="irapp-leftmenu" [content]="content" [side]="menuSide" type="push" class="{{menuClass}}">
+<!--<ion-menu id="irapp-leftmenu" [content]="content" [side]="menuSide" type="push" class="{{menuClass}}">-->
+<ion-menu id="irapp-leftmenu" [content]="content" side="left" type="push" class="{{menuClass}}">
     <ion-content no-padding>
-        <button ion-button menuClose class="btn-authenticate" clear (click)="userAuthenticate()" [disabled]="!isOnline">
+        <button ion-button menuClose="" ngClass="btn-authenticate" clear (click)="userAuthenticate()" [disabled]="!isOnline">
             {{userText}}
-            <ion-icon class="irapp-icon" name="irapp-account"></ion-icon>
+            <ion-icon class="irapp-icon" ios="ios-irapp-account" md="md-irapp-options"></ion-icon>
         </button>
         <div class="company-logo"></div>
         <div class="list-menu" *ngIf="leftMenuModules">
-            <ion-list class="list-modules">
-                <button ion-item menuClose *ngFor="let module of leftMenuModules" (click)="helper.goToModule(module)" [class]="module.moduleName" [disabled]="helper.disableModulesOfflineMode.indexOf(module.moduleName) >= 0 && !isOnline">
+            <ion-list ngClass="list-modules">
+                <button ion-item detail-none menuClose *ngFor="let module of leftMenuModules" (click)="helper.goToModule(module)" [ngClass]="module.moduleName" [disabled]="helper.disableModulesOfflineMode.indexOf(module.moduleName) >= 0 && !isOnline">
                     {{modulesDisplayName[module.moduleName]}}
                 </button>
                 <!--<ion-item menuClose *ngFor="let module of leftMenuModules" (click)="helper.goToModule(module)" [class]="module.moduleName">
                     {{modulesDisplayName[module.moduleName]}}
                 </ion-item>-->
-                <ion-item menuClose (click)="helper.goToSettings()" class="settings">
+                <button ion-item detail-none menuClose (click)="helper.goToSettings()" ngClass="settings">
                     {{settingsText}}
-                </ion-item>
+                </button>
             </ion-list>
         </div>
-        <button ion-button menuClose class="btn-settings" clear (click)="helper.goToSettings()">
+        <button *ngIf="globalVars.isIOS" ion-button menuClose ngClass="btn-settings" clear (click)="helper.goToSettings()">
             <ion-icon class="irapp-icon" name="irapp-settings-white"></ion-icon>
         </button>
     </ion-content>

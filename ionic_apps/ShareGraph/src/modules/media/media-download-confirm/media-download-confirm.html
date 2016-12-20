@@ -1,0 +1,15 @@
+<div padding class="mediaPopover">
+	{{header}}<br/>
+	<ion-icon class="irapp-icon" name="irapp-download-confirm"></ion-icon><br/>
+	{{notification}}
+</div>
+<hr/>
+<div padding class="mediaPopover" (click)="startD()">
+	<ion-icon class="irapp-icon" name="irapp-yes"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+	<span>{{yes}}</span>
+</div>
+<hr/>
+<div padding class="mediaPopover" (click)="close()">
+	<ion-icon class="irapp-icon" name="irapp-no"></ion-icon>&nbsp;&nbsp;&nbsp;&nbsp;
+	<span>{{no}}</span>
+</div>

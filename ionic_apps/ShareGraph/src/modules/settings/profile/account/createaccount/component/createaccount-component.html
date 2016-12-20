@@ -1,0 +1,49 @@
+<form [formGroup]="form" (ngSubmit)="onCreateAccount(form.value)">
+    <ion-list ngClass="account-info">
+        <ion-item>
+            <ion-input [formControl]="form.controls['FirstName']" type="text" placeholder="{{firstNameText}}" (focus)="onFocus($event,'FirstName')" (input)="onFocus($event,'FirstName')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['FirstName']">
+            <ion-label>{{firstNameMess}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input [formControl]="form.controls['LastName']" type="text" placeholder="{{lastNameText}}" (focus)="onFocus($event,'LastName')" (input)="onFocus($event,'LastName')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['LastName']">
+            <ion-label>{{lastNameMess}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input [formControl]="form.controls['Email']" placeholder="{{emailText}}" (focus)="onFocus($event,'Email')" (input)="onFocus($event,'Email')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['Email']">
+            <ion-label>{{email.hasError('required') ? emailRequiredMess : email.hasError('invalidEmailAddress') ? emailPatternMess : ''}}</ion-label>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="emailRegistered">
+            <ion-label>{{emailErrorMess}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input [formControl]="form.controls['Passwords'].controls['Password']" type="password" placeholder="{{passwordText}}" (focus)="onFocus($event,'Password')" (input)="onFocus($event,'Password')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['Password']">
+            <ion-label>{{password.hasError('required') ? passwordRequiredMess : password.hasError('invalidPassword') ? passwordPatternMess : ''}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input [formControl]="form.controls['Passwords'].controls['ConfirmPassword']" type="password" placeholder="{{confirmPasswordText}}" (focus)="onFocus($event,'ConfirmPassword')" (input)="onFocus($event,'ConfirmPassword')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['ConfirmPassword']">
+            <ion-label>{{confirmPasswordDoesNotMatchMess}}</ion-label>
+        </ion-item>
+        <ion-item ngClass="cb-acceptTerms">
+            <ion-label>{{acceptTermsText}}</ion-label>
+            <ion-checkbox checked="false" [formControl]="form.controls['AcceptTerms']" (ionChange)="onCheck($event)"></ion-checkbox>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="isAccept==0">
+            <ion-label>{{acceptTermsMess}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <button ion-button clear full ngClass="btn-create-account" type="submit">{{createAccountText}}</button>
+</form>
+
+<div class="custom-loading" *ngIf="showLoading">
+    <ion-spinner name="ios"></ion-spinner>
+</div>

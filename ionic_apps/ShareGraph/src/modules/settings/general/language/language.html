@@ -1,0 +1,23 @@
+﻿<ion-header>
+    <ion-navbar no-border hideBackButton>
+        <ion-buttons start ngClass="btn-cancel" (click)="onCancel()">
+            <button ion-button>{{cancelText}}</button>
+        </ion-buttons>
+        <ion-title>{{headerTitle}}</ion-title>
+        <ion-buttons end ngClass="btn-done" [hidden]="currentLangSelected == prevLangSelected" (click)="onDone()">
+            <button ion-button>{{doneText}}</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="language-content">
+    <ion-list radio-group no-border [(ngModel)]="currentLangSelected" *ngIf="languages">
+        <ion-item>
+            <ion-label>{{defaultText}}</ion-label>
+            <ion-radio value="default"></ion-radio>
+        </ion-item>
+        <ion-item *ngFor="let lang of languages">
+            <ion-label>{{lang.name}}</ion-label>
+            <ion-radio value={{lang.value}}></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>

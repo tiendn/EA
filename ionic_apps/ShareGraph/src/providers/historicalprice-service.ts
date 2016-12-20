@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+﻿import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { GlobalVars } from '../common/global-vars';
-import 'rxjs/Rx';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
 
 @Injectable()
 export class HistoricalPriceService {
@@ -109,8 +110,7 @@ export class HistoricalPriceService {
         if (!this.globalVars.generalSettings.currency.isDefault)
             requestParams += "/" + this.globalVars.generalSettings.currency.value + "/";
         return new Promise(resolve => {
-            // this.http.get(this.globalVars.servicesUrl + "watchlist/" + this.apiName + "/" + requestParams)
-            this.http.get('data.json')
+            this.http.get(this.globalVars.servicesUrl + "watchlist/" + this.apiName + "/" + requestParams)
                 .timeout(this.globalVars.requestTimeout)
                 .retry(this.globalVars.retry)
                 .subscribe(

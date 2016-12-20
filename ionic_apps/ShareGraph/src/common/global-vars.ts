@@ -5,6 +5,8 @@ export class GlobalVars {
     //Static variables
     serviceBaseUrl = "http://10.10.15.8/myirappapi2/";
     externalAccServiceUrl = "http://server.vn/myirappapi2/";
+    //serviceBaseUrl = "http://tools.euroland.com/tools/myirappapi/";
+    //externalAccServiceUrl = "http://tools.euroland.com/tools/myirappapi/";
     apiPath = "api";
     apiVersion = "v1";
     retry = 3;
@@ -126,6 +128,23 @@ export class GlobalVars {
         }
     };
 
+    //Const
+    authErrorMessage: Object = {
+        EMAIL_INVALID: "InvalidEmail",
+        EMAIL_ALREADY_TAKEN: "EmailRegistered",
+        EMAIL_NOT_FOUND: "EmailNotFound",
+        EMAIL_PASSWORD_NOT_MATCH: "LoginFailed",
+        PASSWORD_CONFIRM_PASSWORD_NOT_MATCH: "",
+        INVALID_ACCESS_TOKEN: "InvalidAccessToken",
+        //CONFIRMATION_TOKEN_ERROR: "",
+        EMAIL_ALREADY_TAKEN_WITH_GOOGLE: "EmailAlreadyTakenWithGG",
+        EMAIL_ALREADY_TAKEN_WITH_FACEBOOK: "EmailAlreadyTakenWithFB"
+    };
+
+    storageKey: Object = {
+        reportDownloading: 'report_downloading'
+    };
+
     //Dynamic variables
     appPath: string;
     companyCode: any;
@@ -174,7 +193,8 @@ export class GlobalVars {
         watchlist: [],
         enableIndices: false,
         indices: [],
-        emailAlert: 0
+        emailAlert: 0,
+        pendingStartDownload: []
     };
     user: any;
     translations: any;
@@ -188,12 +208,14 @@ export class GlobalVars {
     isNativeMode: boolean = false;
     currentModule: string;
     isIOS: boolean = true;
+    isChangeLayout: boolean = false;
     changedLanguage: boolean = false;
     changedDecimalSeparator: boolean = false;
     changedCurrency: boolean = false;
-    isCloseCompareModal: boolean = false;
+    //isCloseCompareModal: boolean = false;
     progressBar: any;
     downloadConfirm: any;
+    homepage: any;
     /*Report*/
     reportsDownloading: any;
     reportFileTransfers: any;
@@ -204,6 +226,11 @@ export class GlobalVars {
     prDetail: any;
     /*Calendar*/
     fincalModule: any;
+
+    mediaDownloadingList:any[] = [];
+    isAnnual:boolean = false;
+    /*Download*/
+    startDownloadingFile:any;
 
     constructor() {
     }

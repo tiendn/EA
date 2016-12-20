@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="account-panel" *ngIf="!hasLoggedIn">
+        <ion-note>{{loggedInAs}}</ion-note>
+        <button  ion-item class="create-account" (click)="gotoAccount()">
+            <ion-icon class="irapp-icon" name="irapp-setting-account" item-left></ion-icon>
+            {{accText}}
+        </button>
+     </ion-list>
+
+     <ion-list>
+        <ion-item>
+             <ion-label>Enable Indices</ion-label>
+            <ion-toggle [(ngModel)]="enableIndices" (ionChange) = "ionEnableIndicesChange()" [disabled]="!hasLoggedIn"></ion-toggle>
+        </ion-item>
+     </ion-list>
+
+     <ion-list *ngIf="hasLoggedIn">
+        <button ion-item (click)="gotoStocks(item)" [disabled]="!enableIndices">
+             <ion-label>Indices</ion-label>
+            <ion-note item-right="">{{numberOfShare}}</ion-note>
+        </button>
+     </ion-list>
+</ion-content>

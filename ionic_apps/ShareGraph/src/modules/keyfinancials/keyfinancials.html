@@ -1,0 +1,106 @@
+<ion-header class="keyFinancialHeader">   
+    <ion-navbar no-border>
+        <ion-title>{{keyFinancialText}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar *ngIf="!hideTab" no-border no-padding ngClass="irapp-toolbar">
+	    <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+		    <ion-grid class="noVerticalPadding">
+		    	<ion-row>
+		    		<ion-col width-50 *ngFor="let item of tab;">
+		    			<button clear="true" ion-button *ngIf="isTablet === true" (click)="goToTab(item)" [ngClass]="currentTabId == item.id ? 'btn-active tabletButton button' : 'tabletButton button'">
+				            {{item.displayName}}
+				        </button>
+                        <button clear="true" ion-button *ngIf="isTablet === false" (click)="goToTab(item)" [ngClass]="currentTabId == item.id ? 'btn-active phoneButton button' : 'phoneButton button'">
+				            {{item.displayName}}
+				        </button>
+		    		</ion-col>
+		    	</ion-row>
+		    </ion-grid>
+	    </ion-scroll>
+	</ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="isTablet === false">
+	<ion-list no-border>
+  		<ion-item *ngFor="let item of FinalData" style="line-height:1.5" (click)="viewInDetail($event, item)">
+	        <div>
+	          <span style="font-size:19px;white-space:normal">{{item.SerieName}}</span><br/>
+	          <ion-note style="font-size:12px">{{item.Data[item.Data.length - 1].Key}}</ion-note>
+	        </div>
+	        <div item-right style="text-align:right">
+	          <span style="font-size:19px">{{item.Data[item.Data.length - 1].Value | formatNumber:item.DecimalPlaces}}</span><br/>
+	          <ion-note style="font-size:12px">{{item.Unit}}</ion-note>
+	        </div>
+	        <div *ngIf="isArabic === false" item-right><ion-note><ion-icon name="ios-arrow-forward"></ion-icon></ion-note></div>
+	        <div *ngIf="isArabic === true" item-right><ion-note><ion-icon name="ios-arrow-back"></ion-icon></ion-note></div>
+	    </ion-item>
+  	</ion-list>
+</ion-content>
+
+<ion-content class="keyFinancial" *ngIf="isTablet === true">
+	<ion-grid >
+	    <ion-row>
+	    	<ion-col>
+	    		<div id="keyFinancialLeftCol">
+	    			<ion-list no-border>
+	    				<ion-item *ngFor="let item of FinalData;let i=index" [class]="currentIndex === i ? 'item selected' : 'item'" (click)="viewInDetail($event, item)">
+				            <table style="width:100%;font-size:17px;table-layout:fixed;">
+				            	<tr>
+				            		<td style="width:70%;white-space: normal;color:black">{{item.SerieName}}</td>
+				            		<td style="float:right;color:black">{{item.Data[item.Data.length - 1].Value | formatNumber:item.DecimalPlaces}}</td>
+				            	</tr>
+				            	<tr>
+				            		<td style="width:70%;color:grey">{{item.Data[item.Data.length - 1].Key}}</td>
+				            		<td style="float:right;color:black">{{item.Unit}}</td>
+				            	</tr>
+				            </table>
+
+			            </ion-item>
+	    			</ion-list>
+
+	    		</div>
+	    	</ion-col>
+	    	<ion-col id="keyFinancialRightCol">	 
+        		<table *ngIf="dataLoaded === true">
+        			<tr>
+        				<td [style.visibility] = 'currentIndex === 0 ? "hidden" : "visible"' style="width:20%" valign="top">
+        					<ion-icon *ngIf="isArabic === false" style="font-size:55px;" (click)="ViewPrevious()" name="ios-arrow-back"></ion-icon>
+        					<ion-icon *ngIf="isArabic === true" style="font-size:55px;" (click)="ViewPrevious()" name="ios-arrow-forward"></ion-icon>
+        				</td>
+        				<td style="width:60%;line-height:1.5">
+        					<span style="font-size:22px">{{currentItem.SerieName}}</span><br/>
+				            <span style="font-size:17px">{{currentItem.Data[currentItem.Data.length - 1].Key}}</span><br/>
+				            <span style="font-size:44px">{{currentItem.Data[currentItem.Data.length - 1].Value | formatNumber:currentItem.DecimalPlaces}}</span><br/>
+				            <span style="font-size:17px">{{currentItem.Unit}}</span>
+        				</td>
+        				<td [style.visibility] = 'currentIndex === FinalData.length - 1 ? "hidden" : "visible"' style="width:20%" valign="top">
+        					<ion-icon *ngIf="isArabic === false" style="font-size:54px;" (click)="ViewNext()" name="ios-arrow-forward"></ion-icon>
+        					<ion-icon *ngIf="isArabic === true" style="font-size:54px;" (click)="ViewNext()" name="ios-arrow-back"></ion-icon>
+        				</td>
+        			</tr>
+        		</table>	
+        		
+        		<div *ngIf="dataLoaded === true" padding>
+	        		<p style="font-size:13px;color:grey">&nbsp;&nbsp;&nbsp;&nbsp;{{historicalDataText}}</p>
+				    <div *ngFor="let i of graph" style="margin-bottom:2vh"> 
+				    	<span style="font-size:12px">{{i.Key}}</span><br/> 
+				    	<table>
+				    		<tr>
+								<td style="width:45vw;border-bottom: 1px solid grey;position: absolute;padding:0px !important;">
+									<div style="height:3vh" [style.width] = 'i.Width' [class]='i.nColorCode > 0 ? "Better" : i.nColorCode < 0 ? "Worse" : "Default"'>&nbsp;</div>
+								</td> 
+								<td *ngIf="isArabic === false"><span style="float:right;">{{i.Value | formatNumber:i.DecimalPlaces}}</span></td>
+				    			<td *ngIf="isArabic === true"><span style="float:right;">{{i.Value | formatNumber:i.DecimalPlaces}}</span></td>
+				    		</tr>
+				    	</table>
+				    </div><br/>
+
+	        		<div style="padding-left:10px;font-size:13px;color:grey">					    
+					    {{note}}					    
+				    </div> 
+			    </div> 	
+
+	    	</ion-col>
+	    </ion-row>
+    </ion-grid>
+</ion-content>

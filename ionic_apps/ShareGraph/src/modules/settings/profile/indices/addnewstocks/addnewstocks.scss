@@ -1,0 +1,33 @@
+indices-add-stock-page{
+    .selected-number, .center
+    {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    /*Custom loading icon in chart*/
+    .inner-loading
+    {
+        position: absolute;
+        display: inline-block;
+        width: 100%;
+        height: 1em;
+        top: 45%;
+        z-index: 999;
+        text-align: center;
+    }
+
+    .market
+    {
+        font-size: 85%;
+    }
+
+    .item-checkbox ion-label{
+        margin: 6px 8px 6px 0
+    }
+
+    .checkbox-ios .checkbox-checked .checkbox-inner
+    {
+        top: 0;
+    }
+}

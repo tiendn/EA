@@ -1,31 +1,29 @@
 import { Component, ViewChild, NgZone } from '@angular/core';
-import { Push, Network } from 'ionic-native';
+import { Network } from 'ionic-native';
 import { MenuController, Nav, Platform } from 'ionic-angular';
 //import { Splashscreen, StatusBar } from 'ionic-native';
-
-import { File } from 'ionic-native';
 
 import { AuthService } from '../providers/auth-service';
 import { Helper } from '../common/helper';
 import { GlobalVars } from '../common/global-vars';
 
 //App pages
-import { HomePage } from '../pages/home/home';
-import {AboutPage} from '../pages/about/about';
-import {CalendarPage} from '../pages/calendar/calendar';
-import {ContactPage} from '../pages/contact/contact';
-import {HistoricalPricePage} from '../pages/historicalprice/historicalprice';
-import {InvestmentCalculatorPage} from '../pages/investmentcalculator/investmentcalculator';
-import {KeyFinancialsPage} from '../pages/keyfinancials/keyfinancials';
-import {MediaPage} from '../pages/media/media';
-import {PressReleasesPage} from '../pages/pressreleases/pressreleases';
-import {ReportsPage} from '../pages/reports/reports';
-import {SettingsPage} from '../pages/settings/settings';
-import {ShareGraphPage} from '../pages/sharegraph/sharegraph';
-import {ShareInformationPage} from '../pages/shareinformation/shareinformation';
+import { HomePage } from '../modules/home/home';
+import {AboutPage} from '../modules/about/about';
+import {CalendarPage} from '../modules/calendar/calendar';
+import {ContactPage} from '../modules/contact/contact';
+import {HistoricalPricePage} from '../modules/historicalprice/historicalprice';
+import {InvestmentCalculatorPage} from '../modules/investmentcalculator/investmentcalculator';
+import {KeyFinancialsPage} from '../modules/keyfinancials/keyfinancials';
+import {MediaPage} from '../modules/media/media';
+import {PressReleasesPage} from '../modules/pressreleases/pressreleases';
+import {ReportsPage} from '../modules/reports/reports';
+import {SettingsPage} from '../modules/settings/settings';
+import {ShareGraphPage} from '../modules/sharegraph/sharegraph';
+import {ShareInformationPage} from '../modules/shareinformation/shareinformation';
 //User pages
-//import {SignInPage} from '../pages/settings/profile/account/signin/signin';
-//import {AccountInfoPage} from '../pages/settings/profile/account/accountinfo/accountinfo';
+import {SignInPage} from '../modules/settings/profile/account/signin/signin';
+import {AccountInfoPage} from '../modules/settings/profile/account/accountinfo/accountinfo';
 
 export interface PageObj {
     name: string;
@@ -55,7 +53,8 @@ export class MyIRApp {
         { name: "reports", component: ReportsPage },
         { name: "settings", component: SettingsPage },
         { name: "sharegraph", component: ShareGraphPage },
-        { name: "shareinformation", component: ShareInformationPage }
+        { name: "shareinformation", component: ShareInformationPage },
+        { name: "signin", component: SignInPage }
     ];
     rootPage: any = HomePage;
     isOnline: boolean = true;
@@ -83,6 +82,7 @@ export class MyIRApp {
             this.globalVars.isOnline = this.isOnline;
             this.bindEventsNetworkConnetion();
             this.globalVars.isIOS = platform.is('ios');
+            this.globalVars.isIpad = platform.is('ipad');
             this.globalVars.isTablet = platform.platforms().indexOf("tablet") >= 0;
             this.globalVars.isNativeMode = platform.is("cordova");
 
@@ -91,18 +91,6 @@ export class MyIRApp {
                     this.globalVars.appPath = cordova.file.dataDirectory;
                 else
                     this.globalVars.appPath = cordova.file.externalApplicationStorageDirectory;
-
-                //window.resolveLocalFileSystemURL(path, function (dir) {
-                //    this.globalVars.rootEntry = dir;
-                //    this.globalVars.appPath = path;
-                //});
-
-                //Check push notification is registered
-                //Push.hasPermission(data => {
-                //    if (data.isEnabled) {
-                //        this.helper.registerPushNotifications();
-                //    }
-                //});
             }
         });
 
@@ -111,7 +99,8 @@ export class MyIRApp {
     }
 
     bindEventsNetworkConnetion() {
-        let disconnectSubs = Network.onDisconnect().subscribe(() => {
+        //let disconnectSubs = Network.onDisconnect().subscribe(() => {
+        Network.onDisconnect().subscribe(() => {
             this.helper.createOffileMess();
             this.zone.run(() => {
                 this.globalVars.isOnline = false;
@@ -120,7 +109,8 @@ export class MyIRApp {
                     this.globalVars.activePage.isOnline = false;
             });
         });
-        let connectSubs = Network.onConnect().subscribe(() => {
+        //let connectSubs = Network.onConnect().subscribe(() => {
+        Network.onConnect().subscribe(() => {
             this.helper.removeOffileMess();
             this.zone.run(() => {
                 this.globalVars.isOnline = true;
@@ -142,11 +132,11 @@ export class MyIRApp {
     }
 
     userAuthenticate() {
-        //if (this.authService.hasLoggedIn()) {
-        //    this.nav.push(AccountInfoPage, { module: "home" });
-        //}
-        //else {
-        //    this.nav.push(SignInPage, { module: "home" });
-        //}
+        if (this.authService.hasLoggedIn()) {
+            this.nav.push(AccountInfoPage, { module: "home" });
+        }
+        else {
+            this.nav.push(SignInPage, { module: "home" });
+        }
     }
 }

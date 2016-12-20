@@ -1,7 +1,7 @@
 ﻿{
   "companycode": "dk-nzmb",
   "common": {
-    "headercolor": "#B3D749",
+    "headercolor": "#4D4D4F",
     "appname": {
       "en-gb": "Novozymes Investor Relations"
     },
@@ -247,23 +247,7 @@
           "orientation": "Portrait",
           "displayassuffix": false,
           "groupbyyear": true
-      },
-      {
-          "tabid": "id_3",
-          "phraseid": "Report/EarningsPR",
-          "nameprefix": "EP_",
-          "orientation": "Portrait",
-          "displayassuffix": false,
-          "groupbyyear": false
-        },
-        {
-          "tabid": "id_4",
-          "phraseid": "Report/Presentations",
-          "nameprefix": "RP_",
-          "orientation": "Landscape",
-          "displayassuffix": false,
-          "groupbyyear": false
-        }
+      }
       ]
     },
     {

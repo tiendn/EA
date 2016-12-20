@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()">
+                <ion-icon class="irapp-icon" name="irapp-close"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="download-confirm">
+    <div class="cards-confirm">
+        <div class="confirm-title">{{title}}</div>
+        <div class="confirm-icon">
+            <ion-icon ios="ios-download-outline" md="md-download"></ion-icon>
+        </div>
+        <div class="confirm-details" [innerHTML]="detail"></div>
+        <button ion-button full light (click)="onDownload()"><ion-icon name="checkmark"></ion-icon>{{yes}}</button>
+        <button ion-button full light (click)="closeModal()"><ion-icon name="close"></ion-icon>{{no}}</button>
+    </div>
+</ion-content>

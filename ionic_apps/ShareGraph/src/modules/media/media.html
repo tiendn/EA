@@ -1,0 +1,44 @@
+<ion-header class="mediaHeader">
+	
+	    <ion-navbar no-border>
+	        <ion-title>{{headerTitle}}</ion-title>
+	    </ion-navbar>
+	    <ion-toolbar *ngIf="!hideTab" no-border no-padding ngClass="irapp-toolbar">
+		    <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+		        <button ion-button *ngFor="let item of tab;" (click)="goToTab(item)" [ngClass]="currentTabId == item.Id ? 'btn-active button' : 'button'" style="padding:5px;color:white;margin-left:10px;margin-right:10px;">
+		            {{item.displayName}}
+		        </button>
+		    </ion-scroll>
+		</ion-toolbar>
+		<ion-toolbar *ngIf="!hideTab" no-border no-padding ngClass="irapp-toolbar mediaYearHeader">
+		    <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+		        <button ion-button style="font-size:13px;margin-left:10px;margin-right:10px;" *ngFor="let item of yearTitle; " (click)="goToYear(item)" [ngClass]="currentYear == item.Year ? 'btn-active thick button' : 'button'">
+		            {{item.Year}}
+		        </button>		       
+		    </ion-scroll>
+		</ion-toolbar>
+	
+</ion-header>
+
+<ion-content class="mediaContent">
+	<br/>
+	<div id="mediaEventCatcher"></div>
+	<div class="flex-container">
+		<div *ngFor="let item of annualData" class="mediaItem">	  		
+<!-- 			<div style="box-shadow:0 0 20px #646464" (click)="play(item)">
+				<ion-icon *ngIf="currentTabId === 'audiocast'" class="irapp-icon" name="irapp-Audio"></ion-icon>
+				<ion-icon *ngIf="currentTabId === 'webcast'" class="irapp-icon" name="irapp-Video"></ion-icon>
+			</div> -->
+			<button ion-button clear="true" style="box-shadow:0 0 20px #646464" (click)="play1(item)">
+				<ion-icon *ngIf="item.FileType === 'mp3'" class="irapp-icon" name="irapp-Audio"></ion-icon>
+				<ion-icon *ngIf="item.FileType === 'mp4'" class="irapp-icon" name="irapp-Video"></ion-icon>
+			</button>
+			<div>
+				<span style="font-size:12px">{{item.Title}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><br/>
+				<ion-note style="font-size:11px">{{item.Date}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</ion-note>		
+				<!-- <img *ngIf="item.downloaded === true" src="img/tick.png" alt="tick" width="22" height="22">		 -->
+				<ion-icon *ngIf="item.downloaded === true" class="irapp-icon" name="irapp-tick"></ion-icon>
+			</div>			
+	  	</div>  	
+    </div>    
+</ion-content>

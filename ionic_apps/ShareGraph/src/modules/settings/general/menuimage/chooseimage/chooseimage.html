@@ -1,0 +1,18 @@
+﻿<ion-header>
+    <ion-navbar no-border hideBackButton>
+        <ion-buttons start ngClass="btn-cancel" (click)="onCancel()">
+            <button ion-button>{{cancelText}}</button>
+        </ion-buttons>
+        <ion-title>{{headerTitle}}</ion-title>
+        <ion-buttons end ngClass="btn-done" [hidden]="!imageSelected || imageSelected == currentImage" (click)="onDone()">
+            <button ion-button>{{doneText}}</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="choose-menuimage-content">
+    <div class="menu-images">
+        <button ion-button *ngFor="let item of imagesData" (click)="selectedImage(item)" [ngClass]="item == imageSelected ? 'irapp-icon image-selected' : ''">
+            <ion-img ngClass="thumbnail-leftmenu-image" [src]="filePath + item"></ion-img>
+        </button>
+    </div>
+</ion-content>

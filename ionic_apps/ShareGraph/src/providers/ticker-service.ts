@@ -2,8 +2,9 @@
 import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { GlobalVars } from '../common/global-vars';
-import { iTicker } from '../model/iTicker';
-import 'rxjs/Rx';
+//import 'rxjs/Rx';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
 
 @Injectable()
 export class TickerService {

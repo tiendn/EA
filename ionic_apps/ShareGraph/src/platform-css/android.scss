@@ -1,26 +1,321 @@
-﻿/*Custom Toolbar*/
-.platform-android{
-    .irapp-toolbar {
-    padding: 0;
-    min-height: 0;
+﻿    $information-phone: "only screen and (max-width : 599px)";
+    $information-tablet: "only screen and (max-width : 600px)";
+    $ratio1x: "and (-webkit-max-device-pixel-ratio: 1)";
+    $ratio2x: "and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 2)";
+    $ratio3x: "and (-webkit-min-device-pixel-ratio: 2.1)";
 
-    .scrollbar .btn-active {
+    $primary-font: "Roboto-Regular";
+    $light-font: "Roboto-Light";
+    $medium-font: "Roboto-Medium";
+    $thin-font: "Roboto-Thin";
+
+    $box-shadow: 0px 0px 4px 0 rgba(0, 0, 0, 0.12), 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+    $box-shadow-top: 0px -1px 4px -1px rgba(0, 0, 0, 0.12);
+    $box-shadow-bottom: 0px 0px 0px 0px rgba(0, 0, 0, 0), 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+    $gray-color: rgba(0,0,0,0.54);
+    $link-color: #4A90E2;
+
+    * {
+        font-family: $primary-font;
+    }
+
+    .toolbar-title {
+        font-size: 20px;
+        font-family: $medium-font;
+        font-weight: normal !important;
+    }
+
+    .back-button-text {
+        display: none;
+    }
+
+    .button-md {
+        text-transform: none;
+    }
+
+    /*ListView*/
+    ion-list {
+        box-shadow: $box-shadow-bottom;
         border: 0;
-        border-bottom: 2px solid #fff;
-        border-radius: 0;
+
+        ion-list-header{
+            background: transparent;
+            margin: 0;
+            border-top: 0;
+            .item-inner{
+                background: transparent;
+                border: 0;
+            }
+        }
+
+        .item-md{
+            background: transparent;
+        }
+
+        ion-list-header.list-header + .item-block,
+        .item-block:first-child{
+            box-shadow: $box-shadow-top;
+        }
+
+        /*.item-block:last-child{
+            box-shadow: $box-shadow-bottom;
+        }*/
     }
 
-    .scrollbar .button {
-        min-height: 40px;
+    /*Custom Toolbar*/
+    .irapp-toolbar {
+        min-height: 0;
+        padding: 0;
+
+        .scrollbar {
+            height: 30px;
+        }
+
+        .button {
+            min-height: 30px;
+            font-family: $medium-font;
+
+            .button-inner {
+                font-size: 14px;
+            }
+        }
+
+        .btn-active {
+            border-bottom: 2px solid #979797 !important;
+            border-radius: 0;
+        }
     }
-}
-/*End Custom Toolbar*/
-.btn-leftmenu {
-    order: 1;
-    -webkit-order: 1;
-}
-/*Share Information*/
-.share-information-page {
+
+    /*End Custom Toolbar*/
+    .btn-leftmenu {
+        order: 1;
+        -webkit-order: 1;
+    }
+
+    /*BG Common*/
+    .content-md {
+        background-color: #EEEEEE;
+    }
+
+    /*Note*/
+    ion-note {
+        color: $gray-color;
+        font-size: 14px;
+    }
+
+    /*Pop-over*/
+    .irapp-share-popover {
+        ion-list {
+            margin-bottom: 0;
+            border-radius: 2px;
+
+            .item-inner {
+                border: 0;
+
+                ion-label {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    //Share Popup
+    .irapp-share-popup {
+
+        & *{
+            font-size: 12px;
+            color: $gray-color;
+        }
+
+        .action-sheet-container{
+            padding: 15px 15px 30px 15px;
+        }
+        .action-sheet-title{
+            padding: 0;
+        }
+        button {
+            width: 50%;
+
+            .button-inner {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                ion-icon{
+                    margin: 0;
+                    width: 50px;
+                    margin-top: 10px;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+
+        .share-email-btn{
+            padding-left: 25%;
+        }
+        .action-sheet-button:last-child{
+            padding-right: 25%;
+        }
+    }
+
+    /*Left-Menu*/
+    #irapp-leftmenu {
+        .list-modules {
+            button {
+                .item-inner {
+                    padding: 0;
+
+                    .label {
+                        font-size: 16px;
+                        letter-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .btn-authenticate {
+            padding-left: 5px;
+            padding-right: 5px;
+
+            .button-inner {
+                font-size: 16px;
+            }
+        }
+    }
+
+    /*Home Page*/
+    page-home {
+        .cards-ticker {
+            margin-top: 15px;
+            box-shadow: none;
+
+            ion-card-content {
+                min-height: 210px;
+            }
+
+            .ticker-content {
+                .ticker-name * {
+                    font-family: $medium-font;
+                    font-size: 20px;
+                    color: #4A4A4A;
+                }
+
+                .ticker-lastvalue, .ticker-currency {
+                    font-family: $primary-font;
+                    color: $gray-color;
+                }
+
+                .ticker-lastvalue {
+                    font-size: 33px;
+                }
+
+                .ticker-currency {
+                    font-size: 20px;
+                }
+
+                .ticker-datacontent {
+                    margin-top: 10px;
+
+                    span {
+                        font-size: 14px;
+                        color: rgba(0,0,0,0.87);
+                    }
+
+                    .change, .changepercent {
+                        font-size: 16px;
+                    }
+
+                    .label {
+                        color: $gray-color;
+                    }
+                }
+
+                .ticker-icon {
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                }
+
+                .icon-plus {
+                    border-bottom: 40px solid #4EA440;
+                }
+
+                .icon-minus {
+                    border-top: 40px solid #AD2233;
+                }
+            }
+
+            .ticker-footer {
+                .ticker-date {
+                    font-size: 14px;
+                    color: $gray-color;
+
+                    &:before {
+                        top: 16px;
+                    }
+                }
+
+                .ticker-desc {
+                    font-size: 10px;
+                    color: $gray-color;
+                }
+            }
+        }
+
+        .cards-list-module {
+            padding-left: 3px;
+            padding-right: 3px;
+
+            button {
+                box-shadow: none;
+                border: 0;
+                width: 32.5%;
+                margin-bottom: 5px;
+
+                .button-inner {
+                    font-size: 20px;
+                    color: $link-color;
+                }
+            }
+        }
+
+        .irapp-footer {
+            font-size: 12px;
+        }
+
+        .menu-note {
+            margin-top: 40px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+    }
+
+    a {
+        color: $link-color;
+    }
+    /*End Home Page*/
+
+    /*Slider Bullet*/
+    ion-slides {
+        .swiper-pagination {
+            span.swiper-pagination-bullet {
+                background-color: #606060;
+            }
+
+            span.swiper-pagination-bullet-active {
+                background-color: #A8A8A8;
+            }
+        }
+    }
+
+    /*Share Information*/
+    /*.share-information-page {*/
     ion-list {
         .item {
             padding: 0;
@@ -28,8 +323,8 @@
             .item-inner {
                 padding: 10px 15px;
                 /*padding-left: 15px;
-                padding-top: 10px;
-                padding-bottom: 10px;*/
+                    padding-top: 10px;
+                    padding-bottom: 10px;*/
                 flex-direction: column;
 
                 ion-label, ion-note {
@@ -44,11 +339,595 @@
             }
         }
     }
-}
-/*End Share Information*/
-/*Historical Price*/
-    @media screen and (max-width: 767px)  {
-    /*Watchlist Modal*/
+    /*}*/
+    /*End Share Information*/
+    /*Historical Price*/
+    /*Historical Price*/
+        
+
+
+
+    /*Phone*/
+    //Load Icon
+    .irapp-icon:before, .back-button-icon:before,
+    .checkbox-checked, .icon-attachment,
+    button:not([detail-none]) .item-inner:before, .action-sheet-icon:before {
+        display: inline-block;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-rendering: auto;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        content: "";
+    }
+
+    @media #{$information-phone $ratio1x} {
+        .irapp-icon:before, .back-button-icon:before,
+        .checkbox-checked, .icon-attachment,
+        button:not([detail-none]) .item-inner:before, .action-sheet-icon:before {
+            background: url("../assets/img/android_phone.png");
+        }
+    }
+
+    @media #{$information-phone $ratio2x} {
+        .irapp-icon:before, .back-button-icon:before,
+        .checkbox-checked, .icon-attachment,
+        button:not([detail-none]) .item-inner:before, .action-sheet-icon:before {
+            background: url("../assets/img/android_phone@2x.png");
+        }
+    }
+
+    @media #{$information-phone $ratio3x} {
+        .irapp-icon:before, .back-button-icon:before,
+        .checkbox-checked, .icon-attachment,
+        button:not([detail-none]) .item-inner:before, .action-sheet-icon:before {
+            background: url("../assets/img/android_phone@3x.png");
+        }
+    }
+
+    @media #{$information-phone} {
+        .irapp-icon:before, .back-button-icon:before,
+        .checkbox-checked, .icon-attachment,
+        button:not([detail-none]) .item-inner:before, .action-sheet-icon:before {
+            background-size: 484px 487px !important;
+            background-repeat: no-repeat !important;
+        }
+
+        /*Common Icons*/
+        .checkbox-checked {
+            background-position: -160px -340px !important;
+
+            .checkbox-inner {
+                /*width: 0;
+                height: 0;*/
+                display: none;
+            }
+        }
+        /*End Common Icons*/
+
+        /*Share Popup*/
+        .ion-md-irapp-mail:before{
+            width: 50px;
+            height: 40px;
+            background-position: -429px -98px !important;
+        }
+
+        .ion-md-irapp-twitter:before{
+            width: 50px;
+            height: 50px;
+            background-position: -431px -136px !important;
+        }
+
+        /*HomePage Icons*/
+        .bar-button-menutoggle {
+            margin: 0;
+        }
+
+        .ion-md-irapp-account:before {
+            width: 27px;
+            height: 27px;
+            background-position: -67px -252px !important;
+        }
+
+        .ion-md-irapp-settings-white:before {
+            width: 27px;
+            height: 27px;
+            background-position: 0px -232px !important;
+        }
+
+        .back-button-icon:before, .ion-md-irapp-back:before {
+            width: 24px;
+            height: 24px;
+            background-position: -191px -348px !important;
+        }
+
+        .ion-md-irapp-menu:before {
+            width: 30px;
+            height: 18px;
+            background-position: -310px -25px !important;
+        }
+
+        .ion-md-irapp-share:before {
+            width: 20px;
+            height: 28px;
+            background-position: -192px -460px !important;
+        }
+
+        .ion-md-irapp-settings-black:before {
+            width: 42px;
+            height: 42px;
+            background-position: -1px -254px !important;
+        }
+
+        .ion-md-irapp-options:before {
+            width: 15px;
+            height: 25px;
+            background-position: -255px -299px !important;
+        }
+        /*End HomePage Icons*/
+
+        /*iCal Icons*/
+        .ion-md-irapp-shares:before {
+            width: 25px;
+            height: 25px;
+            background-position: -269px -244px !important;
+        }
+
+        .ion-md-irapp-amount:before {
+            width: 25px;
+            height: 25px;
+            background-position: -269px -216px !important;
+        }
+
+        .ion-md-irapp-change:before {
+            width: 34px;
+            height: 30px;
+            background-position: -231px -100px !important;
+        }
+
+        .ion-md-irapp-changepercent:before {
+            width: 34px;
+            height: 30px;
+            background-position: -231px -134px !important;
+        }
+
+        .ion-md-irapp-watchlist:before {
+            width: 26px;
+            height: 26px;
+            background-position: -44px -277px !important;
+        }
+
+        .ion-md-irapp-indices:before {
+            width: 26px;
+            height: 26px;
+            background-position: -44px -250px !important;
+        }
+
+        .ion-md-irapp-closemodal:before {
+            width: 25px;
+            height: 25px;
+            background-position: -196px -240px !important;
+        }
+
+        .ion-md-irapp-daterange:before {
+            width: 42px;
+            height: 42px;
+            background-position: -303px -134px !important;
+        }
+        /*End iCal Icons*/
+
+        /*Historical Price Icons*/
+        .ion-md-irapp-calendar:before {
+            width: 42px;
+            height: 42px;
+            background-position: -303px -178px !important;
+        }
+        /*End Historical Price Icons*/
+
+        /*Press Releases Icons*/
+        .attachment:before, .ion-md-irapp-attachment:before {
+            width: 20px;
+            height: 20px;
+            background-position: -28px -260px !important;
+        }
+
+        .ion-md-irapp-pricechange {
+            width: 18px;
+            height: 18px;
+            border-radius: 3px;
+            background-color: #DDD7D2;
+        }
+
+        .ion-md-irapp-pricechange:before {
+            width: 18px;
+            height: 18px;
+            background-position: -29px -285px !important;
+        }
+
+        .price-change.plus {
+            .ion-md-irapp-pricechange {
+                background-color: #43A047;
+            }
+
+            .ion-md-irapp-pricechange:before {
+                background-position: -31px -220px !important;
+            }
+        }
+
+        .price-change.minus {
+            .ion-md-irapp-pricechange {
+                background-color: #FF3A2D;
+            }
+
+            .ion-md-irapp-pricechange:before {
+                background-position: -31px -238px !important;
+            }
+        }
+
+        .ion-md-irapp-price-up {
+            width: 18px;
+            height: 18px;
+            background-color: #43A047;
+            border-radius: 3px;
+        }
+
+        .ion-md-irapp-price-up:before {
+            width: 18px;
+            height: 18px;
+            background-position: -31px -220px !important;
+        }
+
+        .icon-attachment {
+            background-position: -304px -64px !important;
+        }
+        /*End Press Releases Icons*/
+
+        /*Calendar Icons*/
+        .ion-md-irapp-download:before {
+            width: 28px;
+            height: 32px;
+            background-position: -232px -58px !important;
+        }
+
+        .ion-md-irapp-close:before {
+            width: 30px;
+            height: 30px;
+            background-position: -195px -238px !important;
+        }
+        /*End Calendar Icons*/
+
+        /*Report Icons*/
+        .ion-md-irapp-downloaded:before, .image-selected:before {
+            width: 24px;
+            height: 24px;
+            background-position: -268px -189px !important;
+        }
+
+        .ion-md-irapp-delete:before {
+            width: 24px;
+            height: 24px;
+            background-position: 0 -298px !important;
+        }
+        /*End Report Icons*/
+
+        /*Settings Icons*/
+        .ion-md-irapp-facebook:before {
+            width: 33px;
+            height: 33px;
+            background-position: -132px -288px !important;
+        }
+
+        .ion-md-irapp-google:before {
+            width: 33px;
+            height: 33px;
+            background-position: -132px -215px !important;
+        }
+
+        .ion-md-irapp-setting-watchlist:before {
+            width: 33px;
+            height: 33px;
+            background-position: -130px -542px !important;
+        }
+
+        .ion-md-irapp-setting-indices:before {
+            width: 33px;
+            height: 33px;
+            background-position: -99px -681px !important;
+        }
+
+        .ion-md-irapp-setting-emailalert:before {
+            width: 33px;
+            height: 33px;
+            background-position: -132px -688px !important;
+        }
+
+        .ion-md-irapp-setting-account:before {
+            width: 32px;
+            height: 32px;
+            background-position: -166px -615px !important;
+        }
+
+        .ion-md-irapp-setting-currency:before {
+            width: 33px;
+            height: 33px;
+            background-position: -98px -613px !important;
+        }
+
+        .ion-md-irapp-setting-decimal:before {
+            width: 33px;
+            height: 33px;
+            background-position: -131px -613px !important;
+        }
+
+        .ion-md-irapp-setting-language:before {
+            width: 33px;
+            height: 33px;
+            background-position: -98px -579px !important;
+        }
+
+        .ion-md-irapp-setting-quickmenu:before {
+            width: 33px;
+            height: 33px;
+            background-position: -98px -547px !important;
+        }
+
+        .ion-md-irapp-setting-notification:before {
+            width: 33px;
+            height: 33px;
+            background-position: -164px -577px !important;
+        }
+
+        .ion-md-irapp-setting-stream:before {
+            width: 33px;
+            height: 33px;
+            background-position: 2px -625px !important;
+        }
+
+        .ion-md-irapp-setting-menuimage:before {
+            width: 33px;
+            height: 33px;
+            background-position: -98px -649px !important;
+        }
+        /*End Settings Icons*/
+
+        /*Flags*/
+        .flag-icon:before {
+            width: 32px;
+            height: 22px;
+        }
+
+        .ion-md-flag-aed:before {
+            background-position: -99px -23px !important;
+        }
+
+        .ion-md-flag-ars:before {
+            background-position: -99px 0 !important;
+        }
+
+        .ion-md-flag-aud:before {
+            background-position: -132px 0px !important;
+        }
+
+        .ion-md-flag-bhd:before {
+            background-position: 1px -46px !important;
+        }
+
+        .ion-md-flag-brl:before {
+            background-position: -164px 0px !important;
+        }
+
+        .ion-md-flag-cad:before {
+            background-position: -198px 0px !important;
+        }
+
+        .ion-md-flag-chf:before {
+            background-position: -32px -158px !important;
+        }
+
+        .ion-md-flag-cny:before {
+            background-position: -32px -46px !important;
+        }
+
+        .ion-md-flag-czk:before {
+            background-position: 0px -24px !important;
+        }
+
+        .ion-md-flag-dkk:before {
+            background-position: -32px -23px !important;
+        }
+
+        .ion-md-flag-dzd:before {
+            background-position: -197px -24px !important;
+        }
+
+        .ion-md-flag-eek:before {
+            background-position: -131px -24px !important;
+        }
+
+        .ion-md-flag-egp:before {
+            background-position: -65px -24px !important;
+        }
+
+        .ion-md-flag-eur:before {
+            background-position: -165px -23px !important;
+        }
+
+        .ion-md-flag-gbp:before {
+            background-position: 0 0 !important;
+        }
+
+        .ion-md-flag-gbx:before {
+            background-position: 0 0 !important;
+        }
+
+        .ion-md-flag-hkd:before {
+            background-position: -32px 0 !important;
+        }
+
+        .ion-md-flag-hrk:before {
+            background-position: -65px -46px !important;
+        }
+
+        .ion-md-flag-huf:before {
+            background-position: -98px -46px !important;
+        }
+
+        .ion-md-flag-idr:before {
+            background-position: 0 -68px !important;
+        }
+
+        .ion-md-flag-ils:before {
+            background-position: -32px -68px !important;
+        }
+
+        .ion-md-flag-inr:before {
+            background-position: -197px -46px !important;
+        }
+
+        .ion-md-flag-isk:before {
+            background-position: -131px -46px !important;
+        }
+
+        .ion-md-flag-jod:before {
+            background-position: -99px -68px !important;
+        }
+
+        .ion-md-flag-jpy:before {
+            background-position: -65px -68px !important;
+        }
+
+        .ion-md-flag-kes:before {
+            background-position: -132px -68px !important;
+        }
+
+        .ion-md-flag-krw:before {
+            background-position: -165px -135px !important;
+        }
+
+        .ion-md-flag-kwd:before {
+            background-position: -165px -68px !important;
+        }
+
+        .ion-md-flag-lbp:before {
+            background-position: 1px -91px !important;
+        }
+
+        .ion-md-flag-lkr:before {
+            background-position: -198px -136px !important;
+        }
+
+        .ion-md-flag-ltl:before {
+            background-position: -65px -90px !important;
+        }
+
+        .ion-md-flag-lvl:before {
+            background-position: -198px -68px !important;
+        }
+
+        .ion-md-flag-lyd:before {
+            background-position: -32px -90px !important;
+        }
+
+        .ion-md-flag-mad:before {
+            background-position: -198px -91px !important;
+        }
+
+        .ion-md-flag-mdl:before {
+            background-position: -165px -45px !important;
+        }
+
+        .ion-md-flag-mur:before {
+            background-position: -132px -91px !important;
+        }
+
+        .ion-md-flag-mxn:before {
+            background-position: -165px -91px !important;
+        }
+
+        .ion-md-flag-myr:before {
+            background-position: -99px -92px !important;
+        }
+
+        .ion-md-flag-nad:before {
+            background-position: 0 -114px !important;
+        }
+
+        .ion-md-flag-nok:before {
+            background-position: -65px -114px !important;
+        }
+
+        .ion-md-flag-nzd:before {
+            background-position: -32px -114px !important;
+        }
+
+        .ion-md-flag-omr:before {
+            background-position: -98px -114px !important;
+        }
+
+        .ion-md-flag-pln:before {
+            background-position: -132px -114px !important;
+        }
+
+        .ion-md-flag-qar:before {
+            background-position: -165px -114px !important;
+        }
+
+        .ion-md-flag-ron:before {
+            background-position: -198px -114px !important;
+        }
+
+        .ion-md-flag-rub:before {
+            background-position: 0 -137px !important;
+        }
+
+        .ion-md-flag-sar:before {
+            background-position: -32px -137px !important;
+        }
+
+        .ion-md-flag-scr:before {
+            background-position: -64px -137px !important;
+        }
+
+        .ion-md-flag-sek:before {
+            background-position: 0 -158px !important;
+        }
+
+        .ion-md-flag-sgd:before {
+            background-position: -99px -137px !important;
+        }
+
+        .ion-md-flag-thb:before {
+            background-position: -99px -158px !important;
+        }
+
+        .ion-md-flag-tnd:before {
+            background-position: -132px -159px !important;
+        }
+
+        .ion-md-flag-try:before {
+            background-position: -165px -159px !important;
+        }
+
+        .ion-md-flag-twd:before {
+            background-position: -65px -158px !important;
+        }
+
+        .ion-md-flag-usd:before {
+            background-position: -65px 0 !important;
+        }
+
+        .ion-md-flag-vnd:before {
+            background-position: -198px -158px !important;
+        }
+
+        .ion-md-flag-zar:before {
+            background-position: -132px -136px !important;
+        }
+        /*End Flags*/
+        /* Historical Price - Watchlist Modal*/
         .hp-watchlist-content {
             .header {
                 margin-top: 3%;
@@ -62,11 +941,21 @@
             .div-item-content {
                 max-height: calc(100% - 9% - 180px );
             }
-
+            .item-inner{
+                flex-direction:  row !important ;
+            }
+            .item-header-content {
+                border-top: 2px solid #c8c7cc;
+            }
             .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
                 border-bottom: 0.55px solid #6b6b6c;
+            }       
+            .item-block .item-inner{
+                border-bottom: 1px solid #6b6b6c !important;
             }
-
+            .div-item-content .item-block:last-child .item-inner{
+                border-bottom: 0 !important;
+            }
             .btn-watch {
                 font-size: 14px;
                 font-weight: normal;
@@ -83,89 +972,34 @@
                 right: 15px;
             }
 
-            .item-content .item span {
-                font-size: 17px;
+            .item-content .item .item-left {
+                font-size: 20px;    
             }
             
-            .current-date span {
-                font-size: 15px;
+            .item-content .item .item-mid span:first-child, .item-content .item .item-right{
+                font-size: 18px;
             }
             
             .item-content, .item-header-content span {
-                font-size: 15px;
+                font-size: 16px;
                 font-family: $light-font;
             }
 
             .item-content .item span.currency {
-                font-size: 12px;
+                font-size: 14px;
             }
 
             .footer {
+                border-top : 2px solid #c8c7cc !important;
                 font-size: 14px;
             }
         }
-    //     /*Invesment Calculator*/
-        // .ical-compare-content {
-        //     .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-        //         border-bottom: 0.55px solid #6b6b6c;
-        //     }
-
-        //     .div-item-content {
-        //         max-height: calc(100% - 10px - 267px );
-        //     }
-
-        //     .btn-header-watch {
-        //         font-size: 12px;
-        //         font-weight: medium;
-        //         // margin-left: calc(50% - 43.5px);
-        //     }
-        //     // .btn-header-watch img {
-        //     //     height: 20px;
-        //     //     width: 20px;
-        //     // }
-        //     .btn-header-close {
-        //         right: 10px;
-        //         top: 0;
-        //     }
-
-        //     .flex-date img {
-        //         height: 40px;
-        //         width: 40px;
-        //     }
-
-        //     .item-content span, .item-content .item-right {
-        //         font-size: 17px;
-        //     }
-        //     /*.item-content .item-center {
-        //         font-size: 15px;
-        //     }
-
-        //     .item-content .item-right {
-        //         font-size: 15px;
-        //     }
-
-        //     .item-content .item-left {
-        //         font-size: 15px;
-        //     }*/
-        //     .date-info span {
-        //         font-size: 15px;
-        //     }
-
-        //     .item-content, .item-header-content span {
-        //         font-size: 15px;
-        //         font-family: $light-font;
-        //     }
-
-        //     .item-content .currency {
-        //         font-size: 12px;
-        //     }
-
-        //     .footer {
-        //         padding-left: 16px;
-        //         font-size: 14px;
-        //     }
-        // }
+        /*End Historical Price*/
+        /*Investment Calculator */
         page-ical-compare {
+            .list-md{
+                box-shadow: 0 0 0    !important;
+            }
             .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
                 border-bottom: 1px solid #6b6b6c;
             }
@@ -191,6 +1025,9 @@
 
             .item-content span, .item-content .item-right {
                 font-size: 17px;
+            }
+            .item-inner{
+                flex-direction: row !important; 
             }
             /*.item-content .item-center {
                 font-size: 15px;
@@ -238,6 +1075,8 @@
             }
             .div-item-content .item-center{
                 font-size: 18px !important;
+                width: 37%;
+                text-align: right;
             }
             .item-header-content span{
                 font-size: 16px !important;
@@ -249,18 +1088,15 @@
                 font-size: 14px !important;
             }
         }
-    // }
-    // /*End Watchlist Modal*/
-    // /*End Historical Price*/
-    // @media only screen and (max-width: 767px) {
-        // /*Share Graph*/
+    
+      /*End Investment Calculator */
+       /* Share Graph */
         page-sharegraph {
             .periods {
                 .segment-button {
                     height: 35px;
                 }
             }
-
             .ticker {
                 ion-col {
                     padding-top: 20px;
@@ -304,12 +1140,10 @@
         }
         page-chart {
             /** CSS Chart */
-            // .scroll-content {
-            //     max-height: calc(100% - 20px);
-            // }
             .scroll-content{
-                // margin-top: 15%;
+                margin-top: 15% !important;
             }
+            
             #charts-container {
                 border-top: 2px solid #848484;
                 border-bottom: 2px solid #848484;
@@ -362,6 +1196,19 @@
         }
 
         page-performance {
+            .list-md{
+                box-shadow : 0 0 0 !important;
+            }
+            ion-list .item {
+                padding: 0 0 0 16px !important;
+                // padding-left: 16px ; 
+                .item-inner{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    flex-direction: row !important;
+                }
+            }
+            
             .div-item-content {
                 max-height: calc(100% - 40px );
             }
@@ -372,14 +1219,13 @@
                 border-bottom: 1px solid #6b6b6c;
             }
             .div-item-content .item-content .item-block:last-child{
-                border-bottom: 1px solid #c8c7cc;
+                border-bottom: 1px solid #c8c7cc !important;
             } 
             .div-item-content .item-content .item-block:last-child .item-inner{
                 border-bottom: 0px !important;
             }
-            /*.item-header-content{
-                margin-top: 15% !important; 
-            }*/
+            
+            
             .item-box {
                 padding-top: 8px;
                 padding-bottom: 8px;
@@ -411,7 +1257,6 @@
                 font-size: 20px !important;
             }
         }
-
         page-compare {
             .scroll-content{
                 margin-top: 10% !important;
@@ -420,9 +1265,6 @@
                 font-size: 14px;
             }
 
-            /*.scroll-content {
-                max-height: calc(100% - 100px);
-            }*/
             /** Box */
             .price{
                 margin-bottom: 15% !important;
@@ -451,8 +1293,11 @@
             }*/
         }
         compare-tab {
+            .show-tabbar::after, .header-md::after{
+                background-image: none !important;
+            }
             ion-tab{
-                margin-top: 60px !important;
+                // margin-top: 60px !important;
             }
             .btn-header-title {
                 font-size: 14px;
@@ -480,7 +1325,9 @@
                 // height: 5.3%;
                 border: 2px solid #848484  !important;
                 margin: 0;
+                // border: 0;
                 border-radius: 0 !important;
+                    padding-bottom: -1px;
                 
                 
             }
@@ -506,460 +1353,570 @@
                 font-size: 15px !important;
             }
         }
+        html:lang(ar) {
+            page-chart .footer {
+                margin-left: 0 !important;
+                margin-right: 16px !important;
+            }
+            // History Price watchlist
+            .hp-watchlist-content .close {
+                left: 15px;
+                right: auto;
+            }
+        }    
+
     }
-    html:lang(ar) {
-        page-chart .footer {
-            margin-left: 0 !important;
-            margin-right: 16px !important;
+    /*End Phone*/
+
+    /*Tablet*/
+    @media screen and (min-width: 600px) {
+        @media screen and (-webkit-max-device-pixel-ratio: 1) {
         }
-        // History Price watchlist
-        .hp-watchlist-content .close {
-            left: 15px;
-            right: auto;
+
+        @media screen and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 2) {
         }
-    }    
 
-// }
-    @media screen and (min-width: 768px) and (orientation:portrait) {
-        .hp-watchlist-content {
-            .scroll-content{
-                margin-left: 10%;
-                margin-right: 10%;
-                width : 80%;
-            }
-            .header {
-                margin-top: 3%;
-                margin-bottom: 8%;
-            }
-
-            .date-content {
-                margin-bottom: 8%;
-            }
-
-            .div-item-content {
-                max-height: calc(100% - 9% - 180px );
-            }
-            .item-header-content {
-                border-top: 2px solid #c8c7cc !important;
-            }
-            // .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-            //     border-bottom: 0.55px solid #6b6b6c;
-            // }
-            ion-list .item .item-inner{
-                border-bottom: 2x solid #6b6b6c !important;
-            }
-            .item-header-content span{
-                font-size: 16px;
-            }
-            .btn-watch {
-                font-size: 14px;
-                font-weight: normal;
-                font-family: $light-font;
-            }
-            .current-date span:first-of-type{
-                font-size: 21px;
-            }
-            .current-date span:last-of-type{
-                font-size: 14px;
-            }
-            .close {
-                top: 0px;
-                right: 15px;
-                height: 24px;
-                width:24px;
-            }
-
-            .div-item-content .item-left{
-                font-size: 20px;
-            }
-            .div-item-content .item-mid span:first-child{
-                font-size: 18px;
-            }
-            .div-item-content .item-mid .currency{
-                font-size: 14px;
-            }
-            .current-date span {
-                font-size: 15px;
-            }
-            
-            .item-content, .item-header-content span {
-                // font-size: 15px;
-                font-family: $light-font;
-            }
-
-           
-
-            .footer {
-                font-size: 18px;
-                border-top: 2px solid #c8c7cc !important;
-            }
+        @media screen and (-webkit-min-device-pixel-ratio: 2.1) {
         }
-  
-        page-ical-compare {
-            .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-                border-bottom: 0.55px solid #6b6b6c;
+        @media screen and (orientation:portrait){
+            .hp-watchlist-content {
+                
+                .scroll-content{
+                    margin-left: 10%;
+                    margin-right: 10%;
+                    width : 80%;
+                }
+                
+                .div-item-content {
+                    max-height: calc(100% - 9% - 180px );
+                }
+            }
+            /*Investment Calculator */
+            page-ical-compare {
+                .scroll-content{
+                    padding-left: 9%;
+                    padding-right: 9%;
+                }
+                .div-item-content {
+                    max-height: calc(100% - 10px - 267px );
+                }
+
+            }
+            /*End Investment Calculator */
+            page-sharegraph {
+                .periods {
+                    .segment-button {
+                        height: 35px;
+                    }
+                }
+                .ticker {
+                    ion-col {
+                        padding-top: 20px;
+                    }
+
+                    .price {
+                        font-size: 20px;
+                    }
+
+                    .label {
+                        font-size: 10px;
+                        //color: $note-color;
+                    }
+                }
+
+                .cards-compare {
+                    ion-card-header {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+
+                    .button-inner {
+                        font-family: $light-font;
+                    }
+
+                    .button {
+                        height: 35px;
+                        margin: 0 10px 0 0;
+                    }
+                }
+                /*.performance-block{
+                    ion-item{
+                        ion-label, ion-note{
+                            font-size: 17px;
+                        }
+                        ion-note{
+                            color: $value-color;
+                        }
+                    }
+                }*/
+            }
+            page-chart {
+                /** CSS Chart */
+                .tooltip{
+                    margin-bottom: 8% !important;
+                }
+                .watchlist-period, .indices-period {
+                    top: 3px;
+                }
+                .watchlist-period .btn-period {
+                    width: 19% ;
+                    padding-left: 28px;
+                    padding-right: 28px;
+                }
+                .indices-period .btn-period {
+                    width: 21%;
+                    padding-left: 32px;
+                    padding-right: 32px;
+                }
+                /** CSS Share name */
+                .share-name {
+                    margin-bottom:5% !important;
+                    font-size: 16px !important;
+                    margin-right: 64px;
+                }
             }
 
-            .div-item-content {
-                max-height: calc(100% - 10px - 267px );
-            }
+            page-performance {
+                
+                
+                .div-item-content {
+                    max-height: calc(100% - 40px );
+                }
+                
+                
+                
+                .item-box {
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    width: 19%;
+                    font-size: 14px !important;
+                }
+                .item-header-content{
+                    margin-top: 5% !important;
+                }
+                .item-header {
+                    width: 19%;
+                    font-size: 16px !important;
+                }
 
-            .btn-header-watch {
-                // font-size: 12px;
-                font-weight: medium;
-                // margin-left: calc(50% - 43.5px);
+                
+                .scroll-content {
+                    margin-left: 9%;
+                    margin-right: 9%;
+                    width: 82%;
+                }
             }
-            // .btn-header-watch img {
-            //     height: 20px;
-            //     width: 20px;
-            // }
-            .btn-header-close {
-                right: 10px;
-                top: 0;
-                height: 24px;
-                width: 24px;
+            page-compare {
+                .scroll-content{
+                    margin-top: 10% !important ;
+                    margin-left: 10% ;
+                    margin-right: 10% ;
+                }
+
+                /** Box */
+                .price{
+                    margin-top:5%;
+                    margin-bottom: 15% !important;
+                }
+                .content-box{
+                    margin-top: 15% !important;
+                }
+                .item-box {
+                    padding-bottom: (100%/5);
+                    width: (100%/5);
+                }
+
                 
             }
-
-           
-
-            .item-content span, .item-content .item-right {
-                font-size: 17px;
-            }
-            /*.item-content .item-center {
-                font-size: 15px;
-            }
-
-            .item-content .item-right {
-                font-size: 15px;
-            }
-
-            .item-content .item-left {
-                font-size: 15px;
-            }*/
-            .date-info span {
-                font-size: 15px;
-            }
-
-            .item-content, .item-header-content span {
-                font-size: 15px;
-                font-family: $light-font;
-            }
-
-            .item-content .currency {
-                font-size: 12px;
-            }
-
-            .footer {
-                padding-left: 16px;
-                font-size: 14px;
-                border-top: 1px solid #c8c7cc !important;
-            }
-            .btn-header-watch{
-                font-size: 14px !important;
-            }
-            .date-info span {
-                font-size: 14px !important;
-            }
-            .item-header-content {
-                border-top: 1px solid #c8c7cc;
-            }
-            .item-inner{
-                color: white !important;
-            }
-            .div-item-content .item-left{
-                font-size: 20px !important;
-            }
-            .div-item-content .item-center{
-                font-size: 18px !important;
-            }
-            .item-header-content span{
-                font-size: 16px !important;
-            }
-            .div-item-content .item-right{
-                font-size: 14px !important;
-            }
-            .currency{
-                font-size: 14px !important;
+            compare-tab {
+                
+                ion-tab{
+                    margin-top: 60px !important;
+                }
+            
+                .show-tabbar {
+                    margin-top: 4% !important;
+                    width: 50%;
+                    // height: 5.3%;
+                    border: 2px solid #848484  !important;
+                    margin: 0;
+                    // border: 0;
+                    border-radius: 0 !important;
+                    margin-left: 25%;
+                    margin-right: 25%;
+                    
+                }
+                
             }
         }
-    // }
-    // /*End Watchlist Modal*/
-    // /*End Historical Price*/
-    // @media only screen and (max-width: 767px) {
-        // /*Share Graph*/
-        page-sharegraph {
-            .periods {
-                .segment-button {
-                    height: 35px;
+        @media screen {
+        /* Historical Price - Watchlist Modal*/
+        .hp-watchlist-content {
+                .header {
+                    margin-top: 3%;
+                    margin-bottom: 8%;
                 }
-            }
-
-            .ticker {
-                ion-col {
-                    padding-top: 20px;
+                
+                .date-content {
+                    margin-bottom: 8%;
                 }
 
-                .price {
-                    font-size: 20px;
+                .div-item-content {
+                    max-height: calc(100% - 9% - 180px );
+                }
+                .item-inner{
+                    flex-direction:  row !important ;
+                }
+                .item-header-content {
+                    border-top: 2px solid #c8c7cc;
+                }
+                .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+                    border-bottom: 2px solid #6b6b6c;
+                }       
+                .item-block .item-inner{
+                    border-bottom: 2px solid #6b6b6c !important;
+                }
+                .div-item-content .item-block:last-child .item-inner{
+                    border-bottom: 0 !important;
+                }
+                .btn-watch {
+                    font-size: 14px;
+                    font-weight: normal;
+                    font-family: $light-font;
+                }
+                .current-date span:first-of-type{
+                    font-size: 21px;
+                }
+                .current-date span:last-of-type{
+                    font-size: 14px;
+                }
+                .close {
+                    top: 0px;
+                    right: 15px;
+                    height: 24px;
+                    width:24px;
                 }
 
-                .label {
-                    font-size: 10px;
-                    //color: $note-color;
+                .item-content .item .item-left {
+                    font-size: 20px;    
                 }
-            }
-
-            .cards-compare {
-                ion-card-header {
-                    padding-top: 20px;
-                    padding-bottom: 20px;
+                
+                .item-content .item .item-mid span:first-child, .item-content .item .item-right{
+                    font-size: 18px;
                 }
-
-                .button-inner {
+                
+                .item-content, .item-header-content span {
+                    font-size: 16px;
                     font-family: $light-font;
                 }
 
-                .button {
-                    height: 35px;
-                    margin: 0 10px 0 0;
+                .item-content .item span.currency {
+                    font-size: 14px;
+                }
+
+                .footer {
+                    border-top : 2px solid #c8c7cc !important;
+                    font-size: 18px;
                 }
             }
-            /*.performance-block{
-                ion-item{
-                    ion-label, ion-note{
-                        font-size: 17px;
-                    }
-                    ion-note{
-                        color: $value-color;
+             /*End Historical Price*/
+             /*Investment Calculator */
+            page-ical-compare {
+                
+                .list-md{
+                    box-shadow: 0 0 0 !important;
+                }
+                .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+                    border-bottom: 2px solid #6b6b6c;
+                }
+                .btn-header-watch {
+                    font-weight: medium;
+                }
+    
+                .btn-header-close {
+                    right: 10px;
+                    top: 0;
+                    height: 24px;
+                    width: 24px;
+                }
+                .item-content span, .item-content .item-right {
+                    font-size: 17px;
+                }
+                .item-inner{
+                    flex-direction: row !important; 
+                }
+                
+                .date-info span {
+                    font-size: 15px;
+                }
+
+                .item-content, .item-header-content span {
+                    font-size: 15px;
+                    font-family: $light-font;
+                }
+
+                .item-content .currency {
+                    font-size: 12px;
+                }
+
+                .footer {
+                    font-size: 18px;
+                    border-top: 2px solid #c8c7cc !important;
+                }
+                .btn-header-watch{
+                    font-size: 14px !important;
+                }
+                .date-info span {
+                    font-size: 14px !important;
+                }
+                .item-header-content {
+                    border-top: 2px solid #c8c7cc !important;
+                }
+                .item-inner{
+                    color: white !important;
+                }
+                .div-item-content .item-left{
+                    font-size: 20px !important;
+                }
+                .div-item-content .item-center{
+                    font-size: 18px !important;
+                    width: 37%;
+                    text-align: right;
+                }
+                .item-header-content span{
+                    font-size: 16px !important;
+                }
+                .div-item-content .item-right{
+                    font-size: 14px !important;
+                }
+                .currency{
+                    font-size: 14px !important;
+                }
+            }
+            /*End Investment Calculator */
+            /* Share Graph */
+            page-sharegraph {
+                .periods {
+                    .segment-button {
+                        height: 35px;
                     }
                 }
-            }*/
-        }
-        page-chart {
-            /** CSS Chart */
-            // .scroll-content {
-            //     max-height: calc(100% - 20px);
-            // }
-            .scroll-content{
-                // margin-top: 15%;
+                .ticker {
+                    ion-col {
+                        padding-top: 20px;
+                    }
+
+                    .price {
+                        font-size: 20px;
+                    }
+
+                    .label {
+                        font-size: 10px;
+                        //color: $note-color;
+                    }
+                }
+
+                .cards-compare {
+                    ion-card-header {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+
+                    .button-inner {
+                        font-family: $light-font;
+                    }
+
+                    .button {
+                        height: 35px;
+                        margin: 0 10px 0 0;
+                    }
+                }
+                /*.performance-block{
+                    ion-item{
+                        ion-label, ion-note{
+                            font-size: 17px;
+                        }
+                        ion-note{
+                            color: $value-color;
+                        }
+                    }
+                }*/
             }
-            #charts-container {
-                border-top: 2px solid #848484;
-                border-bottom: 2px solid #848484;
-                // height: 286px !important;
-                // #charts .highcharts-container {
-                //     height: 280px !important;
+            page-chart {
+                /** CSS Chart */
+                
+                #charts-container {
+                    border-top: 2px solid #848484;
+                    border-bottom: 2px solid #848484;
+                }
+
+                .tooltip, .own-shares-title {
+                    font-size: 14px;
+                }
+                
+                /** CSS period */
+                .btn-period {
+                    font-size: 14px;
+                }
+                /** CSS footer */
+                .btn-share {
+                    /*width: 20%;*/
+                    margin: 10px;
+                    padding: 10px;
+                    font-size: 14px !important;
+                }
+                .btn-click-android{
+                    background-color: #6a6a6a;
+                }
+                .sharegraph-title {
+                    font-size: 14px;
+                }
+            }
+
+            page-performance {
+                .list-md{
+                    box-shadow : 0 0 0 !important;
+                }
+                ion-list .item {
+                    padding: 0 0 0 16px !important;
+                    // padding-left: 16px ; 
+                    .item-inner{
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        flex-direction: row !important;
+                    }
+                }
+                
+                
+                .item-header-content > .item-block:first-child{
+                    border-top: 2px solid #c8c7cc !important;
+                }
+                .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
+                    border-bottom: 2px solid #6b6b6c;
+                }
+                .div-item-content .item-content .item-block:last-child{
+                    border-bottom: 2px solid #c8c7cc !important;
+                } 
+                .div-item-content .item-content .item-block:last-child .item-inner{
+                    border-bottom: 0px !important;
+                }
+                
+                .item-header span {
+                    font-size: 12px !important;
+                }
+
+                .item-col-1 {
+                    font-size: 17px;
+                }
+
+                .item-data {
+                    font-size: 12px;
+                }
+
+                // .div-item-content {
+                //     border-bottom: 0.55px solid #c8c7cc;
                 // }
-            }
-            
-            .tooltip, .own-shares-title {
-                font-size: 14px !important;
-            }
-            .tooltip{
-                margin-bottom: 50px !important;
-            }
-            /** CSS period */
-            .btn-period {
-                font-size: 14px;
-            }
-
-            .watchlist-period, .indices-period {
-                top: 2px;
-            }
-
-            // .indices-period {
-            //     top: 2px;
-            // }
-
-            .watchlist-period .btn-period {
-                width: 19% ;
-                padding-left: 28px;
-                padding-right: 28px;
-            }
-
-            .indices-period .btn-period {
-                width: 21%;
-                padding-left: 32px;
-                padding-right: 32px;
-            }
-            /** CSS Share name */
-            .share-name {
-                // padding-top:82px !important;
-                margin-right: 64px;
-                font-size: 16px !important;
-            }
-            /** CSS footer */
-            .btn-share {
-                /*width: 20%;*/
-                margin: 10px;
-                padding: 10px;
-                font-size: 14px !important;
-            }
-            .btn-click-android{
-                background-color: #6a6a6a;
-            }
-            .sharegraph-title {
-                font-size: 14px;
-            }
-        }
-
-        page-performance {
-            .div-item-content {
-                max-height: calc(100% - 40px );
-            }
-            .item-header-content > .item-block:first-child{
-                border-top: 2px solid #c8c7cc !important;
-            }
-            .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-                border-bottom: 1px solid #6b6b6c;
-            }
-            .div-item-content .item-content .item-block:last-child{
-                border-bottom: 1px solid #c8c7cc;
-            } 
-            .div-item-content .item-content .item-block:last-child .item-inner{
-                border-bottom: 0px !important;
-            }
-            /*.item-header-content{
-                margin-top: 15% !important; 
-            }*/
-            .item-box {
-                padding-top: 8px;
-                padding-bottom: 8px;
-                width: 19%;
-                font-size: 14px !important;
-            }
-            .item-header-content{
-                margin-top: 5% !important;
-            }
-            .item-header {
-                width: 19%;
-                font-size: 16px !important;
-            }
-
-            .item-header span {
-                font-size: 12px !important;
-            }
-
-            .item-col-1 {
-                font-size: 17px;
-            }
-
-            .item-data {
-                font-size: 12px;
-            }
-
-            // .div-item-content {
-            //     border-bottom: 0.55px solid #c8c7cc;
-            // }
-            .item-left{
-                font-size: 20px !important;
-            }
-            .scroll-content {
-                margin-left: 9%;
-                margin-right: 9%;
-                width: 82%;
-            }
-        }
-
-        page-compare {
-            .scroll-content{
-                margin-top: 3% !important;
-            }
-            .date-title {
-                font-size: 14px;
-            }
-            .scroll-content{
-                margin-left: 10% !important;
-                margin-right: 10% !important;
-            }
-            /*.scroll-content {
-                max-height: calc(100% - 100px);
-            }*/
-            /** Box */
-            .price{
-                margin-top:5%;
-                margin-bottom: 15% !important;
-            }
-            .content-box{
-                margin-top: 7% !important;
-            }
-            .item-box {
-                padding-bottom: (100%/5);
-                width: (100%/5);
-            }
-
-            .ticker, .price {
-                font-size: 20px !important;
-            }
-
-            .change-pro, .currency {
-                font-size: 14px !important;
-            }
-            /** Footer */
-            .footer {
-                font-size: 14px;
-            }
-            /*.content{
-                padding-top: 15%;
-            }*/
-        }
-        compare-tab {
-            ion-tab{
-                margin-top: 60px !important;
-            }
-            .btn-header-title {
-                font-size: 14px;
-                text-align: center;
-                height: 35px;
-                /*font-weight: medium;*/
-                /*margin-left: calc(50% - 43.5px);
-                margin-right: calc(50% - 62px);*/
-                border-radius: 1px;
-                /*margin-top: 35px;*/
-                display: flex;
-                align-content: center;
-                align-items: center;
-                justify-content: center;
-                /*padding-top: 5px;
-                padding-bottom: 5px;*/
-                // margin-left: 20px;
-            }
-            // compare-tab > .scroll-content{
-            //     margin-top: 20% !important;
-            // }
-            .show-tabbar {
-                margin-top: 4% !important;
-                width: 50%;
-                // height: 5.3%;
-                border: 2px solid #848484  !important;
-                border-radius: 0 !important;
-                margin-left: 25%;
-                margin-right: 25%;
+                .item-left{
+                    font-size: 20px !important;
+                }
                 
             }
-            .show-tabbar a {
-                height: 50px !important;
-            }
-            .show-tabbar a:first-child {
-                border-top-left-radius: 0px;
-                border-bottom-left-radius: 0px;
-            }
+            page-compare {
+                
+                .date-title {
+                    font-size: 14px;
+                }
 
-            .tab-button:nth-child(2) {
-                border-right: 2px solid #848484;
-                border-left: 2px solid #848484;
-            }
+                /** Box */
+                .ticker, .price {
+                    font-size: 20px !important;
+                }
 
-            .show-tabbar a:nth-child(3) {
-                border-top-right-radius: 0px;
-                border-bottom-right-radius: 0px;
+                .change-pro, .currency {
+                    font-size: 14px !important;
+                }
+                /** Footer */
+                .footer {
+                    font-size: 14px;
+                }
+           
             }
+            compare-tab {
+                .show-tabbar::after, .header-md::after{
+                    background-image: none !important;
+                }
+                
+                .btn-header-title {
+                    font-size: 14px;
+                    text-align: center;
+                    height: 35px;
+                    border-radius: 1px;
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    justify-content: center;
+                }
+            
+                
+                .show-tabbar a {
+                    height: 50px !important;
+                }
+                .show-tabbar a:first-child {
+                    border-top-left-radius: 0px;
+                    border-bottom-left-radius: 0px;
+                }
 
-            .tab-button-text {
-                font-size: 14px !important;
+                .tab-button:nth-child(2) {
+                    border-right: 2px solid #848484;
+                    border-left: 2px solid #848484;
+                }
+
+                .show-tabbar a:nth-child(3) {
+                    border-top-right-radius: 0px;
+                    border-bottom-right-radius: 0px;
+                }
+
+                .tab-button-text {
+                    font-size: 14px !important;
+                }
+            }
+        }
+
+        
+        
+       
+        
+    
+        html:lang(ar) {
+            page-chart .footer {
+                // margin-left: 0 !important;
+                // margin-right: 16px !important;
+            }
+            // History Price watchlist
+            .hp-watchlist-content .close {
+                // left: 15px;
+                // right: auto;
+            }
+        }    
+        @media screen and (orientation:landscape){
+            .hp-watchlist-content {
+                .scroll-content{
+                    margin-left: 18.5%;
+                    margin-right: 18.5%;
+                    width : 62.5%;
+                }
+                
+                .div-item-content {
+                    // max-height: calc(100% - 9% - 180px );
+                }
+                
+            }
+            page-chart{
+                .scroll-content{
+                    margin-left: 13%;
+                    margin-right: 13%;
+                }
             }
         }
     }
-
-}
+    /*End Tablet*/

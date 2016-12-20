@@ -2,7 +2,8 @@
 import { Http, Headers } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { GlobalVars } from '../common/global-vars';
-import 'rxjs/Rx';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
 
 @Injectable()
 export class AuthService {
@@ -28,15 +29,11 @@ export class AuthService {
                 .retry(this.globalVars.retry)
                 .subscribe(
                 res => {
-                    if (res != undefined && res != null) {
-                        resolve(true);
-                    }
-                    else
-                        resolve(false);
+                    resolve(res.json());
                 },
                 error => {
                     console.log(error);
-                    resolve(false);
+                    resolve(error.json());
                 }
                 );
         });
@@ -61,18 +58,14 @@ export class AuthService {
                 .retry(this.globalVars.retry)
                 .subscribe(
                 res => {
-                    if (res != undefined && res != null) {
-                        let data = res.json();
-                        if (!data.userName)
-                            data.userName = userData.userName;
-                        resolve(data);
-                    }
-                    else
-                        resolve(null);
+                    let data = res.json();
+                    if (!data.userName)
+                        data.userName = userData.userName;
+                    resolve(data);
                 },
                 error => {
-                    console.log(error);
-                    resolve(null);
+                    console.log(error.json());
+                    resolve({ Message: error.json()["error_description"]});
                 }
                 )
         });
@@ -136,22 +129,25 @@ export class AuthService {
      * Logout
      */
     logout() {
-        this.globalVars.setGlobalVar("user", null);
-        //this.removeUserData();
-        this.globalVars.setGlobalVar("profileSettings", {
+        this.globalVars.user = null;
+        this.removeUserData();
+        this.globalVars.profileSettings = {
             enableWatchlist: false,
             watchlist: [],
             enableIndices: false,
             indices: [],
             emailAlert: 0
-        });
+        };
     }
 
     /**
      * Check user has logged in
      */
     hasLoggedIn() {
-        return this.globalVars.user && this.globalVars.user != null && this.globalVars.user.userName.length > 0;
+        if (this.globalVars.user && this.globalVars.user != null && this.globalVars.user.firstName && this.globalVars.user.lastName)
+            return true;
+        else
+            return false;
     }
 
     /**

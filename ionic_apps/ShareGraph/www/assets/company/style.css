@@ -1,5 +1,5 @@
 .toolbar-background {
-    background-color: #B3D749;
+    background-color: #4D4D4F;
 }
 
 /*Left Menu*/
@@ -8,6 +8,206 @@
     background-repeat: no-repeat;
 }
 
+/*Contact*/
+page-contact .contact-tab {
+    padding: 16px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -webkit-box-direction: normal;
+    -moz-box-direction: normal;
+    align-items: stretch justify-content: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+page-contact a {
+    display: block;
+}
+
+page-contact .contact-tab .contact-container {
+    /*padding-bottom: 48%;*/
+    width: 48%;
+    height: auto;
+    float: left;
+    /*height: 0;*/
+    /*margin-bottom: 115px;*/
+    font-family: "HelveticaNeue-Light";
+    margin-bottom: 20px;
+    align-self: flex-start
+}
+
+page-contact .contact-tab .contact-box {
+    box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.15);
+    margin-bottom: 16px;
+    padding-bottom: 100%;
+    width: 100%;
+    /*background-image: url("/img/headquarter.jpg")*/;
+    /*background-size: 100% 100%;*/
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+page-contact .contact-tab .contact1 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact1.jpg") 1x, url("contact/img/contact1@2x.jpg") 2x, url("contact/img/contact1@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .contact2 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact2.jpg") 1x, url("contact/img/contact2@2x.jpg") 2x, url("contact/img/contact2@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .contact3 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact3.jpg") 1x, url("contact/img/contact3@2x.jpg") 2x, url("contact/img/contact3@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .contact4 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact4.jpg") 1x, url("contact/img/contact4@2x.jpg") 2x, url("contact/img/contact4@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .contact5 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact5.jpg") 1x, url("contact/img/contact5@2x.jpg") 2x, url("contact/img/contact5@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .contact6 .contact-box {
+    background: -webkit-image-set(url("contact/img/contact6.jpg") 1x, url("contact/img/contact6@2x.jpg") 2x, url("contact/img/contact6@3x.jpg") 3x);
+}
+
+page-contact .contact-tab .name, page-contact .contact-tab .phone-number, page-contact .contact-tab .email {
+    font-size: 12px;
+    color: #333333;
+}
+
+page-contact .contact-tab .position {
+    font-size: 11px;
+    color: #868686;
+}
+
+page-contact .contact-tab .email, page-contact .contact-tab .phone-number {
+    text-decoration: none;
+}
+
+page-contact .address-tab .address-background {
+    margin-top: 16px;
+    height: 200px;
+    width: 100%;
+    /*background-image: url("/img/headquarter.jpg");*/
+    background-position: center;
+    /*background-size: contain;*/
+    background: -webkit-image-set(url("contact/img/phone_address.jpg") 1x, url("contact/img/phone_address@2x.jpg") 2x, url("contact/img/phone_address@3x.jpg") 3x);
+    /*background-size: 100% 100%;*/
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+page-contact .address-tab .address-content {
+    padding: 15px 16px;
+    /*font-family: "HelveticaNeue";*/
+    font-size: 11px;
+    color: #989898;
+}
+
+page-contact .address-tab .headquarter {
+    margin-bottom: 10px;
+    font-size: 17px;
+    color: #333333;
+    font-family: "HelveticaNeue-Medium" !important;
+}
+
+page-contact .address-tab .label {
+    color: #868686;
+    font-family: "HelveticaNeue-Bold" !important;
+}
+
+page-contact .address-tab .phone a {
+    display: inline;
+}
+
+page-contact .address-tab .headquarter-info {
+    margin-bottom: 10px;
+}
+
+page-contact .address-tab .street {
+    margin-bottom: 0;
+}
+
+page-contact .address-tab .headquarter-contact[itemprop="telephone"],
+page-contact .address-tab .headquarter-contact[itemprop="fax"],
+page-contact .address-tab .headquarter-contact[itemprop="email"],
+page-contact .address-tab .headquarter-contact[itemprop="url"]
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+page-contact .contact-tab .contact-container:nth-of-type(2n) {
+    margin-left: 4%;
+}
+
+page-contact .address-tab .details span{
+    display: block;
+    margin-top: 20px;
+}
+/*End Contact*/
+
+/*About*/
+.aboutIOS * {
+    color:#4A4A4A;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.aboutIOS #about {
+    margin-top: 5px;
+}
+
+.aboutIOS #about div {
+    font-size: 12px;
+    padding: 7px 10px;   
+    background-color: #000;
+    position:absolute;
+    bottom:5px;
+    color:white;
+    width:100%;
+    opacity: .5;
+}
+
+.aboutIOS p, .aboutIOS h1, .aboutIOS h2, .aboutIOS h3, .aboutIOS h4, .aboutIOS h5{
+	padding: 0 15px;
+    margin: 0;
+}
+
+.aboutIOS h1, .aboutIOS h3 {
+    font-size:18px;
+}
+.aboutIOS h1 {
+    margin-top: 20px;
+}
+.aboutIOS h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-family: HelveticaNeue-Light;
+}
+.aboutIOS .leader {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+.aboutIOS p {
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+.aboutIOS .light{
+	text-align:justify;
+}
+.aboutIOS .light{			
+	font-family: HelveticaNeue-Light;
+}		
+/*End About*/
+
 /*iPhone 4 & 4s*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (device-aspect-ratio: 2/3) {
     #irapp-leftmenu {
@@ -15,27 +215,27 @@
     }
 
     .sidemenu-image1 {
-        background: -webkit-image-set(url("menuimages/image1/iPhone4.jpg") 1x, url("menuimages/image1/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image1/iPhone4.jpg") 1x, url("menuimages/image1/iPhone4@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image2 {
-        background: -webkit-image-set(url("menuimages/image2/iPhone4.jpg") 1x, url("menuimages/image2/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image2/iPhone4.jpg") 1x, url("menuimages/image2/iPhone4@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image3 {
-        background: -webkit-image-set(url("menuimages/image3/iPhone4.jpg") 1x, url("menuimages/image3/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image3/iPhone4.jpg") 1x, url("menuimages/image3/iPhone4@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image4 {
-        background: -webkit-image-set(url("menuimages/image4/iPhone4.jpg") 1x, url("menuimages/image4/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image4/iPhone4.jpg") 1x, url("menuimages/image4/iPhone4@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image5 {
-        background: -webkit-image-set(url("menuimages/image5/iPhone4.jpg") 1x, url("menuimages/image5/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image5/iPhone4.jpg") 1x, url("menuimages/image5/iPhone4@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image6 {
-        background: -webkit-image-set(url("menuimages/image6/iPhone4.jpg") 1x, url("menuimages/image6/iPhone4@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image6/iPhone4.jpg") 1x, url("menuimages/image6/iPhone4@2x.jpg") 2x) !important;
     }
 }
 
@@ -46,27 +246,27 @@
     }
 
     .sidemenu-image1 {
-        background-image: url("menuimages/image1/iPhone5.jpg");
+        background-image: url("menuimages/image1/iPhone5.jpg") !important;
     }
 
     .sidemenu-image2 {
-        background-image: url("menuimages/image2/iPhone5.jpg");
+        background-image: url("menuimages/image2/iPhone5.jpg") !important;
     }
 
     .sidemenu-image3 {
-        background-image: url("menuimages/image3/iPhone5.jpg");
+        background-image: url("menuimages/image3/iPhone5.jpg") !important;
     }
 
     .sidemenu-image4 {
-        background-image: url("menuimages/image4/iPhone5.jpg");
+        background-image: url("menuimages/image4/iPhone5.jpg") !important;
     }
 
     .sidemenu-image5 {
-        background-image: url("menuimages/image5/iPhone5.jpg");
+        background-image: url("menuimages/image5/iPhone5.jpg") !important;
     }
 
     .sidemenu-image6 {
-        background-image: url("menuimages/image6/iPhone5.jpg");
+        background-image: url("menuimages/image6/iPhone5.jpg") !important;
     }
 }
 
@@ -77,28 +277,34 @@
     }
 
     .sidemenu-image1 {
-        background-image: url("menuimages/image1/iPhone6.jpg");
+        background-image: url("menuimages/image1/iPhone6.jpg") !important;
     }
 
     .sidemenu-image2 {
-        background-image: url("menuimages/image2/iPhone6.jpg");
+        background-image: url("menuimages/image2/iPhone6.jpg") !important;
     }
 
     .sidemenu-image3 {
-        background-image: url("menuimages/image3/iPhone6.jpg");
+        background-image: url("menuimages/image3/iPhone6.jpg") !important;
     }
 
     .sidemenu-image4 {
-        background-image: url("menuimages/image4/iPhone6.jpg");
+        background-image: url("menuimages/image4/iPhone6.jpg") !important;
     }
 
     .sidemenu-image5 {
-        background-image: url("menuimages/image5/iPhone6.jpg");
+        background-image: url("menuimages/image5/iPhone6.jpg") !important;
     }
 
     .sidemenu-image6 {
-        background-image: url("menuimages/image6/iPhone6.jpg");
+        background-image: url("menuimages/image6/iPhone6.jpg") !important;
     }
+
+    /*Contact*/
+    page-contact .address-tab .address-background {
+        height: 234px;
+    }
+    /*End Contact*/
 }
 
 /* iPhone 6 plus */
@@ -108,28 +314,65 @@
     }
 
     .sidemenu-image1 {
-        background-image: url("menuimages/image1/iPhone6plus.jpg");
+        background-image: url("menuimages/image1/iPhone6plus.jpg") !important;
     }
 
     .sidemenu-image2 {
-        background-image: url("menuimages/image2/iPhone6plus.jpg");
+        background-image: url("menuimages/image2/iPhone6plus.jpg") !important;
     }
 
     .sidemenu-image3 {
-        background-image: url("menuimages/image3/iPhone6plus.jpg");
+        background-image: url("menuimages/image3/iPhone6plus.jpg") !important;
     }
 
     .sidemenu-image4 {
-        background-image: url("menuimages/image4/iPhone6plus.jpg");
+        background-image: url("menuimages/image4/iPhone6plus.jpg") !important;
     }
 
     .sidemenu-image5 {
-        background-image: url("menuimages/image5/iPhone6plus.jpg");
+        background-image: url("menuimages/image5/iPhone6plus.jpg") !important;
     }
 
     .sidemenu-image6 {
-        background-image: url("menuimages/image6/iPhone6plus.jpg");
+        background-image: url("menuimages/image6/iPhone6plus.jpg") !important;
     }
+
+    /*Contact*/
+    page-contact .address-tab .address-background {
+        height: 259px;
+    }
+    /*End Contact*/
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    page-contact .contact-tab .contact-container {
+        margin-bottom: 30px;
+    }
+    page-contact .contact-tab .contact-container:nth-of-type(2n) {
+        margin-left: 8%;
+    }
+
+    /*About*/
+    .aboutIOS {
+        padding: 40px 60px;
+    }
+
+    .aboutIOS * {
+        font-size: 15px;
+    }
+
+    .aboutIOS h1 {
+        font-size: 24px;
+    }
+
+    .aboutIOS h3 {
+        font-size: 20px;
+    }
+
+    .aboutIOS .normal {
+        font-size: 17px;
+    }
+    /*About*/
 }
 
 /*iPad Portrait*/
@@ -139,28 +382,92 @@
     }
 
     .sidemenu-image1 {
-        background: -webkit-image-set(url("menuimages/image1/iPad-Portrait.jpg") 1x, url("menuimages/image1/iPad-Portrait@2x.jpg") 2x, url("menuimages/image1/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image1/iPad-Portrait.jpg") 1x, url("menuimages/image1/iPad-Portrait@2x.jpg") 2x, url("menuimages/image1/iPad-Portrait@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image2 {
-        background: -webkit-image-set(url("menuimages/image2/iPad-Portrait.jpg") 1x, url("menuimages/image2/iPad-Portrait@2x.jpg") 2x, url("menuimages/image2/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image2/iPad-Portrait.jpg") 1x, url("menuimages/image2/iPad-Portrait@2x.jpg") 2x, url("menuimages/image2/iPad-Portrait@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image3 {
-        background: -webkit-image-set(url("menuimages/image3/iPad-Portrait.jpg") 1x, url("menuimages/image3/iPad-Portrait@2x.jpg") 2x, url("menuimages/image3/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image3/iPad-Portrait.jpg") 1x, url("menuimages/image3/iPad-Portrait@2x.jpg") 2x, url("menuimages/image3/iPad-Portrait@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image4 {
-        background: -webkit-image-set(url("menuimages/image4/iPad-Portrait.jpg") 1x, url("menuimages/image4/iPad-Portrait@2x.jpg") 2x, url("menuimages/image4/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image4/iPad-Portrait.jpg") 1x, url("menuimages/image4/iPad-Portrait@2x.jpg") 2x, url("menuimages/image4/iPad-Portrait@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image5 {
-        background: -webkit-image-set(url("menuimages/image5/iPad-Portrait.jpg") 1x, url("menuimages/image5/iPad-Portrait@2x.jpg") 2x, url("menuimages/image5/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image5/iPad-Portrait.jpg") 1x, url("menuimages/image5/iPad-Portrait@2x.jpg") 2x, url("menuimages/image5/iPad-Portrait@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image6 {
-        background: -webkit-image-set(url("menuimages/image6/iPad-Portrait.jpg") 1x, url("menuimages/image6/iPad-Portrait@2x.jpg") 2x, url("menuimages/image6/iPad-Portrait@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image6/iPad-Portrait.jpg") 1x, url("menuimages/image6/iPad-Portrait@2x.jpg") 2x, url("menuimages/image6/iPad-Portrait@3x.jpg") 3x) !important;
     }
+
+    /*Contact*/
+    page-contact .contact-tab {
+        padding: 32px;
+    }
+
+    page-contact .contact-tab .contact-container {
+        /*padding-bottom: 28%;*/
+        width: 28%;
+        margin-left: 8%;
+        /*margin-bottom: 140px;*/
+    }
+
+    page-contact .contact-tab .contact-container:nth-of-type(3n+1) {
+        margin-left: 0;
+    }
+
+    page-contact .contact-tab .name, page-contact .contact-tab .phone-number, page-contact .contact-tab .email {
+        font-size: 17px;
+        color: #000000;
+        margin-bottom: 7px;
+    }
+
+    page-contact .contact-tab .position {
+        font-size: 13px;
+        color: #9B9B9B;
+        margin-bottom: 7px;
+    }
+
+
+    page-contact .address-tab .address-background {
+        height: 480px;
+        background: -webkit-image-set(url("contact/img/tablet_portrait_address.jpg") 1x, url("contact/img/tablet_portrait_address@2x.jpg") 2x, url("contact/img/tablet_portrait_address@3x.jpg") 3x);
+        background-repeat: no-repeat;
+    }
+
+    page-contact .address-tab .headquarter {
+        margin-bottom: 15px;
+        font-size: 29px;
+        color: #333333;
+        font-family: HelveticaNeue-Medium !important;
+    }
+
+    page-contact .address-tab .headquarter-info,
+    page-contact .address-tab .headquarter-contact[itemprop="telephone"],
+    page-contact .address-tab .headquarter-contact[itemprop="fax"] {
+        margin-bottom: 4px;
+        font-size: 22px;
+        color: #868686;
+    }
+
+    page-contact .address-tab .headquarter-info[itemprop="country-name"] {
+        margin-bottom: 20px;
+    }
+
+    page-contact .address-tab .headquarter-contact[itemprop="email"],
+    page-contact .address-tab .headquarter-contact[itemprop="url"] {
+        font-size: 22px;
+    }
+
+    page-contact .address-tab .details{
+        font-size: 22px;
+    }
+    /*End Contact*/
 }
 
 /*iPad Landscape*/
@@ -170,27 +477,68 @@
     }
 
     .sidemenu-image1 {
-        background: -webkit-image-set(url("menuimages/image1/iPad-Landscape.jpg") 1x, url("menuimages/image1/iPad-Landscape@2x.jpg") 2x, url("menuimages/image1/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image1/iPad-Landscape.jpg") 1x, url("menuimages/image1/iPad-Landscape@2x.jpg") 2x, url("menuimages/image1/iPad-Landscape@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image2 {
-        background: -webkit-image-set(url("menuimages/image2/iPad-Landscape.jpg") 1x, url("menuimages/image2/iPad-Landscape@2x.jpg") 2x, url("menuimages/image2/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image2/iPad-Landscape.jpg") 1x, url("menuimages/image2/iPad-Landscape@2x.jpg") 2x, url("menuimages/image2/iPad-Landscape@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image3 {
-        background: -webkit-image-set(url("menuimages/image3/iPad-Landscape.jpg") 1x, url("menuimages/image3/iPad-Landscape@2x.jpg") 2x, url("menuimages/image3/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image3/iPad-Landscape.jpg") 1x, url("menuimages/image3/iPad-Landscape@2x.jpg") 2x, url("menuimages/image3/iPad-Landscape@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image4 {
-        background: -webkit-image-set(url("menuimages/image4/iPad-Landscape.jpg") 1x, url("menuimages/image4/iPad-Landscape@2x.jpg") 2x, url("menuimages/image4/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image4/iPad-Landscape.jpg") 1x, url("menuimages/image4/iPad-Landscape@2x.jpg") 2x, url("menuimages/image4/iPad-Landscape@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image5 {
-        background: -webkit-image-set(url("menuimages/image5/iPad-Landscape.jpg") 1x, url("menuimages/image5/iPad-Landscape@2x.jpg") 2x, url("menuimages/image5/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image5/iPad-Landscape.jpg") 1x, url("menuimages/image5/iPad-Landscape@2x.jpg") 2x, url("menuimages/image5/iPad-Landscape@3x.jpg") 3x) !important;
     }
 
     .sidemenu-image6 {
-        background: -webkit-image-set(url("menuimages/image6/iPad-Landscape.jpg") 1x, url("menuimages/image6/iPad-Landscape@2x.jpg") 2x, url("menuimages/image6/iPad-Landscape@3x.jpg") 3x);
+        background: -webkit-image-set(url("menuimages/image6/iPad-Landscape.jpg") 1x, url("menuimages/image6/iPad-Landscape@2x.jpg") 2x, url("menuimages/image6/iPad-Landscape@3x.jpg") 3x) !important;
+    }
+
+    /*Contact*/
+    page-contact .address-tab {
+        margin-left: 18.75%;
+        margin-right: 18.75%;
+    }
+
+    page-contact .address-tab .address-content {
+        padding: 0;
+    }
+
+    page-contact .address-tab .headquarter {
+        margin-top: 16px;
+    }
+
+    page-contact .address-tab .address-background {
+        height: 400px;
+        background: -webkit-image-set(url("contact/img/tablet_landscape_address.jpg") 1x, url("contact/img/tablet_landscape_address@2x.jpg") 2x, url("contact/img/tablet_landscape_address@3x.jpg") 3x);
+    }
+
+    page-contact .contact-tab .contact-container {
+        width: 20%;
+        float: left;
+        font-family: HelveticaNeue-Light;
+        margin-left: 6.5% !important;
+        /*margin-bottom: 70px;*/
+    }
+
+    page-contact .contact-tab .contact-container:nth-of-type(4n+1) {
+        margin-left: 0 !important;
+    }
+
+    page-contact .contact-tab .contact-container:nth-of-type(3n+1) {
+        margin-left: 6.5%;
+    }
+    /*End Contact*/
+
+    /*About*/
+    .aboutIOS {
+        padding: 40px 150px;
     }
 }
 
@@ -201,27 +549,27 @@
     }
 
     .sidemenu-image1 {
-        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image1/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image1/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image2 {
-        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image2/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image2/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image3 {
-        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image3/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image3/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image4 {
-        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image4/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image4/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image5 {
-        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image5/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image5/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image6 {
-        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image6/iPad-Pro-Portrait@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Portrait.jpg") 1x, url("menuimages/image6/iPad-Pro-Portrait@2x.jpg") 2x) !important;
     }
 }
 
@@ -232,27 +580,27 @@
     }
 
     .sidemenu-image1 {
-        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image1/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image1/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image1/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image2 {
-        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image2/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image2/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image2/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image3 {
-        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image3/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image3/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image3/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image4 {
-        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image4/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image4/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image4/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image5 {
-        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image5/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image5/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image5/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 
     .sidemenu-image6 {
-        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image6/iPad-Pro-Landscape@2x.jpg") 2x);
+        background: -webkit-image-set(url("menuimages/image6/iPad-Pro-Landscape.jpg") 1x, url("menuimages/image6/iPad-Pro-Landscape@2x.jpg") 2x) !important;
     }
 }
 
@@ -289,7 +637,7 @@
 }
 
 @media screen and (-webkit-max-device-pixel-ratio: 1) {
-    .platform-iphone .company-logo {
+    .platform-mobile .company-logo {
         background-image: url("logo/logo.png");
     }
 
@@ -299,7 +647,7 @@
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 2) {
-    .platform-iphone .company-logo {
+    .platform-mobile .company-logo {
         background-image: url("logo/logo@2x.png");
     }
 
@@ -309,7 +657,7 @@
 }
 
 @media screen and (-webkit-min-device-pixel-ratio: 2.1) {
-    .platform-iphone .company-logo {
+    .platform-mobile .company-logo {
         background-image: url("logo/logo@3x.png");
     }
 
@@ -319,194 +667,9 @@
 }
 /*End Logo*/
 
-/*Contact*/
-.contact-page .contact-tab {
-    padding: 16px;
-}
-
-    .contact-page .contact-tab .contact-container {
-        padding-bottom: 48%;
-        width: 48%;
-        height: auto;
-        float: left;
-        height: 0;
-        margin-bottom: 115px;
-        font-style: "HelveticaNeue-Light";
-    }
-
-    .contact-page .contact-tab .contact-box {
-        box-shadow: 0px 0px 20px 7px rgba(0, 0, 0, 0.15);
-        margin-bottom: 16px;
-        padding-bottom: 100%;
-        width: 100%;
-        /*background-image: url("/img/headquarter.jpg")*/;
-        background-size: 100% 100%;
-        background-repeat: no-repeat;
-    }
-
-
-    .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email {
-        font-size: 12px;
-        color: #333333;
-    }
-
-    .contact-page .contact-tab .position {
-        font-size: 11px;
-        color: #868686;
-    }
-
-    .contact-page .contact-tab .email, .contact-page .contact-tab .phone-number {
-        text-decoration: none;
-    }
-
-
-.contact-page .address-tab .address-background {
-    margin-top: 16px;
-    height: 200px;
-    width: 100%;
-    /*background-image: url("/img/headquarter.jpg");*/
-    background-position: center;
-    background-size: contain;
-    background: -webkit-image-set(url("contact/img/phone_address.jpg") 1x, url("contact/img/phone_address@2x.jpg") 2x, url("contact/img/phone_address@3x.jpg") 3x);
-    /*background-size: 100% 100%;*/
+/*Android*/
+.md .sidemenu-image1 {
+    background: url("menuimages/image1/iPhone6plus.jpg") !important;
+    background-size: contain !important;
     background-repeat: no-repeat;
 }
-
-.contact-page .address-tab .address-content {
-    padding: 16px;
-    font-style: HelveticaNeue-Light;
-}
-
-.contact-page .address-tab .headquarter {
-    margin-bottom: 10px;
-    font-size: 12px;
-    color: #333333;
-    font-style: HelveticaNeue-Medium !important;
-}
-
-.contact-page .address-tab .headquarter-info {
-    margin-bottom: 4px;
-    font-size: 11px;
-    color: #868686;
-}
-
-.contact-page .address-tab .headquarter-contact[itemprop="telephone"] {
-    text-decoration: none;
-}
-
-.contact-page .address-tab .headquarter-contact[itemprop="telephone"],
-.contact-page .address-tab .headquarter-contact[itemprop="fax"] {
-    font-size: 11px;
-    color: #868686;
-    /*margin-top: 6px;*/
-}
-
-.contact-page .address-tab .headquarter-contact[itemprop="email"],
-.contact-page .address-tab .headquarter-contact[itemprop="url"] {
-    font-size: 11px;
-    text-decoration: none;
-    color: #868686;
-}
-
-@media screen and (max-width: 767px) {
-    .contact-page .contact-tab .contact-container:nth-of-type(2n) {
-        margin-left: 4%;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .contact-page .contact-tab {
-        padding: 32px;
-    }
-
-        .contact-page .contact-tab .contact-container {
-            padding-bottom: 28%;
-            width: 28%;
-            margin-left: 8%;
-            margin-bottom: 140px;
-        }
-
-            .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
-                margin-left: 0;
-            }
-
-        .contact-page .contact-tab .name, .contact-page .contact-tab .phone-number, .contact-page .contact-tab .email {
-            font-size: 17px;
-            color: #000000;
-            margin-bottom: 7px;
-        }
-
-        .contact-page .contact-tab .position {
-            font-size: 13px;
-            color: #9B9B9B;
-            margin-bottom: 7px;
-        }
-
-
-    .contact-page .address-tab .address-background {
-        height: 410px;
-        background: -webkit-image-set(url("contact/img/tablet_portrait_address.jpg") 1x, url("contact/img/tablet_portrait_address@2x.jpg") 2x, url("contact/img/tablet_portrait_address@3x.jpg") 3x);
-        background-repeat: no-repeat;
-    }
-
-    .contact-page .address-tab .headquarter {
-        margin-bottom: 20px;
-        font-size: 24px;
-        color: #333333;
-        font-style: HelveticaNeue-Medium !important;
-    }
-
-    .contact-page .address-tab .headquarter-info,
-    .contact-page .address-tab .headquarter-contact[itemprop="telephone"],
-    .contact-page .address-tab .headquarter-contact[itemprop="fax"] {
-        margin-bottom: 4px;
-        font-size: 22px;
-        color: #868686;
-    }
-
-        .contact-page .address-tab .headquarter-info[itemprop="country-name"] {
-            margin-bottom: 20px;
-        }
-
-    .contact-page .address-tab .headquarter-contact[itemprop="email"],
-    .contact-page .address-tab .headquarter-contact[itemprop="url"] {
-        font-size: 22px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .contact-page .address-tab {
-        margin-left: 18.75%;
-        margin-right: 18.75%;
-    }
-
-        .contact-page .address-tab .address-content {
-            padding: 0;
-        }
-
-        .contact-page .address-tab .headquarter {
-            margin-top: 16px;
-        }
-
-        .contact-page .address-tab .address-background {
-            height: 400px;
-            background: -webkit-image-set(url("contact/img/tablet_landscape_address.jpg") 1x, url("contact/img/tablet_landscape_address@2x.jpg") 2x, url("contact/img/tablet_landscape_address@3x.jpg") 3x);
-        }
-
-    .contact-page .contact-tab .contact-container {
-        width: 20%;
-        float: left;
-        font-style: HelveticaNeue-Light;
-        margin-left: 6.5%;
-        margin-bottom: 70px;
-    }
-
-        .contact-page .contact-tab .contact-container:nth-of-type(4n+1) {
-            margin-left: 0 !important;
-        }
-
-        .contact-page .contact-tab .contact-container:nth-of-type(3n+1) {
-            margin-left: 6.5%;
-        }
-}
-/*End Contact*/

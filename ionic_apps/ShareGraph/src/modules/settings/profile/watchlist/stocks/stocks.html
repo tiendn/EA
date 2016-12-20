@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar no-border hideBackButton>
+        <ion-title>{{headerTitle}}</ion-title>
+        <ion-buttons start>
+            <button ion-button (click)="goBack()">
+                <ion-icon name="arrow-back" class="back-button-icon icon icon-ios back-button-icon-ios ion-ios-arrow-back"></ion-icon>
+                {{backText}}</button>
+        </ion-buttons>    
+        <ion-buttons end>
+            <!--<button (click)="closeModal()">-->
+            <button ion-button (click)="editWatchList()" *ngIf="canEdit">
+                {{editText}}
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list class="stock-list" reorder="{{isedit}}" (ionItemReorder)="reorderItems($event)">
+        <ion-item-sliding *ngFor="let item of selectedShare" (ionDrag)="logDrag($event)">
+            <ion-item>
+                <button ion-button item-left clear *ngIf="isedit" (click)="removeItem(item)" class="delete-button">
+                    <ion-icon name="remove-circle" item-left class="delete-button"></ion-icon>
+                </button>
+                <div class="ticker-code">{{item.Ticker}} <bdo dir="auto">({{item.Market}})</bdo></div>
+                <div class="share-name">{{item.Company}}</div>
+            </ion-item>
+            <ion-item-options side="left" style="direction:ltr" *ngIf="isRtl">
+                <button ion-button color="danger" class="button-danger" (click)="removeItem(item)">Delete</button>
+            </ion-item-options>
+            <ion-item-options side="right" *ngIf="!isRtl">
+                <button ion-button color="danger" class="button-danger" (click)="removeItem(item)">Delete</button>
+            </ion-item-options>
+        </ion-item-sliding>
+     </ion-list>
+     
+     <ion-label>
+        <ion-note>
+            Data provider and delay can be found in our <a href="javascript:void(0)" (click)="openDisclaimerLink()">disclaimer section</a>. For some markets only end of day data is available.
+        </ion-note>
+    </ion-label>
+    <ion-list>
+        <button ion-item (click)="gotoAddNewStock()">
+            {{addNewStocks}}
+        </button>
+    </ion-list>
+</ion-content>

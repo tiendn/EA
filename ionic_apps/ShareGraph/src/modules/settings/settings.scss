@@ -1,0 +1,821 @@
+.settings-tab {
+    padding: 0;
+
+    .toolbar-content {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        -webkit-flex-wrap: nowrap;
+
+        .button {
+            width: 50%;
+            background: transparent;
+            height: auto;
+            text-transform: uppercase;
+            margin: 0;
+
+            .button-inner {
+                display: inline-block;
+                width: auto;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+
+        .btn-active {
+            border: 0 !important;
+            .button-inner {
+                border: 1px solid #fff;
+                border-radius: 4px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+.md {
+    .settings-tab {
+        .toolbar-content {
+            .button{
+                box-shadow: none;
+            }
+            .btn-active {
+                .button-inner {
+                    border: 0;
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+.button-full .button-inner {
+    padding: 13px;
+}
+
+/*Settings Home*/
+.settings-content {
+
+    ion-note.label-sub {
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .item-menuimage {
+        border-bottom: 1px solid #c8c7cc;
+
+        .item-inner {
+            border-bottom: 0;
+        }
+    }
+
+    .item-help {
+        margin-top: 50px;
+    }
+
+    .item-help, .item-about {
+        border-top: 1px solid #c8c7cc;
+        border-bottom: 1px solid #c8c7cc;
+        margin-bottom: 25px;
+
+        .item-inner {
+            border-bottom: 0;
+        }
+    }
+}
+
+.setting-footer {
+    margin-bottom: 10px;
+
+    ion-label, ion-note {
+        text-align: center;
+        margin: 0;
+    }
+
+    ion-label {
+        font-size: 14px;
+        color: #343434;
+    }
+
+    ion-note {
+        display: block;
+        font-size: 8px;
+    }
+}
+
+.settings-block {
+    .account-panel {
+        margin-top: 25px;
+    }
+}
+/*Account*/
+.account {
+    .list-account {
+        margin-bottom: 20px;
+
+        .item {
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            .item-inner {
+                border: 0;
+            }
+        }
+
+        .item:first-child {
+            margin-top: 40px;
+            margin-bottom: 40px;
+            border-top: 1px solid #ddd;
+        }
+
+        .item:last-child {
+            margin-top: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        button {
+            font-size: 17px;
+        }
+    }
+
+    .account-note {
+        padding-left: 15px;
+        font-size: 14px;
+        color: #808080;
+        display: block;
+    }
+
+    .signin-external-account {
+        margin-top: 10px;
+        /*display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: no-wrap;
+        -webkit-flex-wrap: no-wrap;*/
+    }
+}
+/*End Account*/
+
+/*Create Account*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #C7C7CC !important;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #C7C7CC !important;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: #C7C7CC !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #C7C7CC !important;
+}
+
+.create-account {
+    /*.item-inner{
+        border-color: $border-color !important;
+    }*/
+    .btn-create-account, .btn-create-account:hover {
+        background-color: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        color: #007AFF;
+        font-size: 17px;
+    }
+
+    .account-info {
+        margin-top: 40px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+
+    .create-external-account {
+        margin-top: 30px;
+        /*.fb-account{
+            color: #3F51B5;
+        }
+        .gg-account{
+            color: #FF3D00;
+        }*/
+        ion-list-header {
+            ion-label {
+                font-size: 14px;
+            }
+        }
+    }
+
+    .mess-validate {
+        min-height: 0;
+
+        ion-label {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .cb-acceptTerms {
+        ion-checkbox {
+            margin-top: 2px;
+
+            .checkbox-icon {
+                border: 1px solid #ddd !important;
+            }
+        }
+
+        .checkbox-checked {
+            background-position: -163px -341px !important;
+        }
+
+        .item-inner {
+            font-size: 12px;
+        }
+    }
+}
+
+/*Acc info*/
+.accountinfo-content {
+    .account-info {
+        margin-top: 40px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+
+    .btn-signout, .btn-signout:hover {
+        background-color: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        color: #007AFF;
+        font-size: 17px;
+    }
+}
+
+.fb-account {
+    .label {
+        color: #3F51B5;
+    }
+
+    font-size: 15px;
+}
+
+.gg-account {
+    .label {
+        color: #FF3D00;
+    }
+
+    font-size: 15px;
+}
+/*End Create Account*/
+
+/*Verify*/
+.verify-account {
+    .verify-note {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 30px;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    ion-input, button,
+    ion-input:hover, button:hover {
+        background: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+    /*ion-input {
+        margin-bottom: 50px;
+    }*/
+    input {
+        margin-left: 10px;
+    }
+
+    .btn-verify-account {
+        color: #007AFF;
+        margin-top: 45px;
+    }
+
+    .btn-resend {
+        color: #FF3A2D;
+        margin-top: 20px;
+    }
+}
+/*End Verify*/
+
+/*Resend Verification Code*/
+.resend-verify-code {
+    .verify-note {
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-top: 30px;
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    ion-input, button,
+    ion-input:hover, button:hover {
+        background: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    input {
+        margin-left: 10px;
+    }
+
+    .btn-send {
+        margin-top: 40px;
+        color: #007AFF;
+    }
+}
+/*End Resend Verification Code*/
+
+/*Sign In*/
+.signin {
+    button, button:hover {
+        background: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .signin-info {
+        margin-top: 30px;
+    }
+
+    .btn-signin {
+        color: #007AFF;
+    }
+
+    .btn-forgot-password {
+        color: #000;
+        margin-top: 30px;
+    }
+
+    .signin-external-account {
+        margin-top: 40px;
+    }
+}
+
+.custom-loading {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    ion-spinner {
+        position: absolute;
+        left: 48%;
+        top: 48%;
+    }
+}
+/*End Sign In*/
+
+/*Forgot Password*/
+.forgot-password {
+    ion-input, button,
+    ion-input:hover, button:hover {
+        background: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+    }
+
+    button {
+        color: #007AFF;
+        margin-top: 35px;
+    }
+
+    ion-input {
+        padding-left: 10px;
+        margin-top: 30px;
+        /*margin-bottom: 40px;*/
+    }
+}
+/*End Forgot Password*/
+
+.mess-validate ion-label, ion-label.mess-validate {
+    font-size: 14px;
+    white-space: normal;
+}
+
+ion-label.mess-validate {
+    padding-left: 10px;
+    margin-top: 5px;
+}
+
+/*Change Password*/
+.change-password {
+
+    .btn-changepass, .btn-changepass:hover {
+        background-color: #fff !important;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        color: #007AFF;
+        font-size: 17px;
+    }
+
+    .changepass-info {
+        margin-top: 40px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+
+    .mess-validate {
+        min-height: 0;
+
+        ion-label {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+    }
+}
+/*End Change Password*/
+
+/*--------------------GENERAL--------------------*/
+/*MenuImage*/
+.thumbnail-leftmenu-image {
+    width: 90px;
+    height: 133px;
+}
+
+.menuimage-content {
+    ion-list {
+        ion-list-header {
+            margin-top: 30px;
+        }
+
+        .btn-chooseimage {
+            font-size: 17px;
+        }
+
+        .image-thumbnail {
+            ion-label {
+                display: -webkit-box;
+                display: -moz-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                -webkit-box-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
+/*End MenuImage*/
+
+/*Choose Menu Image*/
+.choose-menuimage-content {
+    /*scroll-content {
+        padding-left: 12px;
+        padding-right: 12px;
+    }*/
+    button {
+        margin: 0;
+        padding: 0;
+        min-height: 0;
+        min-width: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        border-radius: 0;
+        padding: 8px;
+    }
+
+    button:hover, button:active {
+        background: transparent !important;
+    }
+
+    .menu-images {
+        /*display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        justify-content: stretch;
+        -webkit-justify-content: space-between;*/
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-flex-direction: row;
+        -moz-box-flex-direction: row;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        padding: 8px 1px;
+        /*ion-img {
+            margin-top: 12px;
+        }*/
+        .image-selected {
+            position: relative;
+        }
+
+        .image-selected:before {
+            position: absolute;
+            top: 2px;
+            right: 0px;
+            margin: 0;
+            padding: 0;
+            z-index: 100;
+        }
+    }
+}
+/*End Choose Menu Image*/
+
+/*Quick Menu*/
+.quickmenu-content {
+    .menu-note {
+        padding-right: 10px;
+    }
+}
+
+.sortmenu-content {
+    .sort-type {
+        margin-top: 40px;
+    }
+
+    .custom-type {
+        .custom-note {
+            white-space: normal;
+            padding: 15px;
+            display: block;
+        }
+        /*ion-list-header {
+            text-transform: none;
+
+            ion-label {
+                white-space: normal;
+            }
+        }*/
+    }
+
+    .end-item {
+        margin-bottom: 30px;
+        border-bottom: 1px solid #c8c7cc;
+
+        .item-inner {
+            border-bottom: 0;
+        }
+    }
+
+    .end-item + .item {
+        border-top: 1px solid #c8c7cc;
+    }
+}
+/*End Quick Menu*/
+
+/*Language*/
+.language-content {
+    ion-list {
+        margin-top: 30px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+}
+/*Decimal*/
+.decimalseparator-content {
+    ion-list {
+        margin-top: 30px;
+        margin-bottom: 20px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+
+    ion-note {
+        margin-left: 15px;
+        display: block;
+        font-size: 14px;
+    }
+}
+/*Currency*/
+.currency-content {
+    .currency-desc {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .currency-note {
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .currency-desc, .currency-note {
+        padding-left: 15px;
+        display: block;
+        white-space: normal;
+        font-size: 14px;
+    }
+
+    ion-list {
+        margin-bottom: 20px;
+
+        .item {
+            font-size: 17px;
+        }
+    }
+}
+
+/*Push Notifications, Stream*/
+.notifications-content, .stream-content {
+    ion-list {
+        ion-list-header {
+            text-transform: none;
+
+            ion-label {
+                font-size: 14px;
+                white-space: normal;
+                margin-top: 0;
+                margin-bottom: 0;
+                margin-top: 25px;
+                margin-bottom: 15px;
+            }
+        }
+
+        .item {
+            font-size: 17px;
+        }
+    }
+}
+
+.toggle-ios .toggle-checked {
+    background-color: #4CD764;
+}
+
+.download-page {
+    .ion-ios-irapp-setting-audio:before {
+        width: 50px;
+        height: 50px;
+        background-position: -197px -631px !important;
+    }
+
+    .ion-ios-irapp-setting-video:before {
+        width: 50px;
+        height: 50px;
+        background-position: -302px -3px !important;
+    }
+
+    .ion-ios-irapp-setting-stop-download:before {
+        width: 30px;
+        height: 30px;
+        background-position: 1px 35px !important;
+    }
+
+    .item-button {
+        height: 30px;
+    }
+
+    .media-icon {
+        float: left;
+    }
+
+    .media-item {
+        float: left;
+    }
+
+    .fileName, .fileSize, .fileSizeDownload {
+        margin-top: 3px;
+        width: 100%;
+        display: block;
+    }
+
+    .fileSize {
+        margin-top: 10px;
+        color: gray;
+        font-size: 80%;
+    }
+
+    .fileSizeDownload {
+        color: gray;
+        font-size: 80%;
+    }
+
+    .download-delete {
+        color: #f53d3d;
+        border-top: solid 1px #CCC;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .download-delete:hover {
+        background-color: #f4f4f4 !important;
+    }
+
+    .modal-delete-file {
+        padding-bottom: 0;
+    }
+
+    .progress {
+        padding-left: 50px;
+        margin-top: 5px;
+    }
+
+    .progress-report {
+        padding-left: 75px;
+        margin-top: 5px;
+    }
+
+    .progress-download {
+        display: block;
+        width: 100%;
+        height: 6px;
+        border-radius: 3px;
+        background-color: #ddd;
+        margin-left: auto;
+        margin-right: auto;
+        /*margin: auto;*/
+        .progress-percent {
+            display: block;
+            width: 0%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: #75B0CF;
+        }
+    }
+
+    .report-thumbnail {
+        background-color: #d8d8d8;
+        /*min-width: 63px;
+        min-height: 90px;*/
+        width: 63px;
+        height: 90px;
+        float: left;
+        margin-right: 10px;
+    }
+}
+/*--------------------END GENERAL--------------------*/
+
+/*Arabic*/
+html:lang(ar) {
+    /*.choose-menuimage-content {
+        .menu-images {
+            flex-direction: row-reverse;
+        }
+    }*/
+    .sortmenu-content {
+        .custom-type > ion-list {
+            direction: ltr;
+        }
+    }
+}

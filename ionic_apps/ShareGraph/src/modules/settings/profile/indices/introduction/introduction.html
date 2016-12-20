@@ -1,0 +1,61 @@
+<!--
+  Generated template for the IntroductionPage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="background {{menuClass}}">
+	<ion-slides #introSlider pager="false">
+		<ion-slide class="step1">
+			<div class="slide-image introduction-screen firstStepIndices">
+				<!--<div class="bubble">
+					<div>Image after Indices <br/>view is ready</div>
+				</div>-->
+			</div>
+			<div class="slide-content">
+				<h1>Indices</h1>
+				<div class="description">Compare performance with indices of choice within our app. Create account to access Indices</div>
+				<div class="slide-command">
+					<button class="skip" ion-button clear (click)="closeIntroduction()" style="z-index:1000;">skip intro</button>
+					<button class="next" ion-button clear (click)="nextSlide()">next</button>
+					<div style="clear:both"></div>
+				</div>
+			</div>
+		</ion-slide>
+		<ion-slide class="step2">
+			<div class="slide-image introduction-screen secondStepIndices">
+				<!--<div class="bubble">
+					<div>Image after full Indices<br/>view is ready</div>
+				</div>-->
+			</div>
+			<div class="slide-content">
+				<h1>Indices</h1>
+				<div class="description">Your indices of choice will be integrated different places within the app</div>
+				<div class="slide-command">
+					<button ion-button class="skip" clear (click)="closeIntroduction()">skip intro</button>
+					<button ion-button class="next" clear (click)="nextSlide()">next</button>
+				</div>
+			</div>
+		</ion-slide>
+		<ion-slide class="step3">
+			<div class="close-button">
+        <button ion-button clear (click)="closeIntroduction()" class="button-close">
+				  <ion-icon class="irapp-icon" name="irapp-close-introduction" item-left></ion-icon>
+        </button>
+			</div>
+			<div class="slide-image introduction-screen thirdStepIndices">
+				<!--<div class="bubble">
+					<div>Image after indices <br/>symbol is ready</div>
+				</div>-->
+			</div>
+			<div class="slide-content">
+				<h1>Indices</h1>
+				<div class="description">Follow the symbol to see indices within the app</div>
+				<div class="command">
+					<button ion-button class="sign-up" outline (click)="gotoSignUp()">Sign up</button>
+					<button ion-button class="sign-in" outline (click)="gotoSignIn()">Log in</button>
+				</div>
+			</div>
+		</ion-slide>
+	</ion-slides>
+</ion-content>

@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+    <ion-toolbar no-border no-padding class="irapp-toolbar settings-tab">
+        <button ion-button [ngClass]="isGeneral ? 'btn-active' : ''" (click)="changeTab('general')">
+            {{general}}
+        </button>
+        <button ion-button [ngClass]="!isGeneral ? 'btn-active' : ''" (click)="changeTab('profile')" [disabled]="!isOnline">
+            {{profile}}
+        </button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding ngClass="settings-content">
+    <div *ngIf="!isGeneral" class="settings-block">
+        <ion-list ngClass="account-panel">
+            <ion-list-header *ngIf="hasLoggedin == true">{{loggedInAs}}</ion-list-header>
+            <button ion-item ngClass="create-account" (click)="gotoAccount()">
+                <ion-icon class="irapp-icon" name="irapp-setting-account" item-left></ion-icon>
+                {{accText}}
+            </button>
+        </ion-list>
+        <ion-note ngClass="label-sub">{{createAnAccount}}</ion-note>
+        <ion-list>
+            <button ion-item (click)="gotoWatchlist()">
+                <ion-icon class="irapp-icon" name="irapp-setting-watchlist" item-left></ion-icon>
+                {{watchlist}}
+            </button>
+
+            <button ion-item (click)="gotoIndices()">
+                <ion-icon class="irapp-icon" name="irapp-setting-indices" item-left></ion-icon>
+                {{indices}}
+            </button>
+
+            <!--<button ion-item (click)="gotoEmailAlert()">
+                <ion-icon class="irapp-icon" name="irapp-setting-emailalert" item-left></ion-icon>
+                {{emailAlert}}
+            </button>-->
+            <!--
+                    <button ion-item (click)="goToMenuImage()">
+                        <ion-icon name="sunny" item-left></ion-icon>
+                        Menu Image
+                    </button>
+
+                    <button ion-item (click)="goToMenuQuickMenu()">
+                        <ion-icon name="sunny" item-left></ion-icon>
+                        Quick Menu
+                    </button>-->
+        </ion-list>
+    </div>
+    <div *ngIf="isGeneral" class="settings-general">
+        <ion-note ngClass="label-sub">{{settingGeneralNote}}</ion-note>
+        <ion-list>
+            <button ion-item (click)="goToSubSettings('currency')" [disabled]="!isOnline">
+                <ion-icon class="irapp-icon" name="irapp-setting-currency" item-left></ion-icon>
+                <ion-label>{{currencyText}}</ion-label>
+                <ion-note item-right>{{currencyValue}}</ion-note>
+            </button>
+            <button ion-item (click)="goToSubSettings('decimal')">
+                <ion-icon class="irapp-icon" name="irapp-setting-decimal" item-left></ion-icon>
+                <ion-label>{{decimalText}}</ion-label>
+                <ion-note item-right>{{decimalValue}}</ion-note>
+            </button>
+            <button ion-item (click)="goToSubSettings('language')" [disabled]="!isOnline">
+                <ion-icon class="irapp-icon" name="irapp-setting-language" item-left></ion-icon>
+                <ion-label>{{languageText}}</ion-label>
+                <ion-note item-right>{{languageValue}}</ion-note>
+            </button>
+            <button ion-item (click)="goToSubSettings('quickmenu')">
+                <ion-icon class="irapp-icon" name="irapp-setting-quickmenu" item-left></ion-icon>
+                <ion-label>{{quickMenuText}}</ion-label>
+                <ion-note item-right>{{quickMenuValue}}</ion-note>
+            </button>
+            <button ion-item (click)="goToSubSettings('notifications')" [disabled]="!isOnline">
+                <ion-icon class="irapp-icon" name="irapp-setting-notification" item-left></ion-icon>
+                <ion-label>{{pushNotifText}}</ion-label>
+            </button>
+            <!--<button ion-item (click)="goToSubSettings('stream')">
+                <ion-icon class="irapp-icon" name="irapp-setting-stream" item-left></ion-icon>
+                <ion-label>{{streamText}}</ion-label>
+            </button>-->
+            <button ion-item (click)="goToSubSettings('menuimage')" ngClass="item-menuimage">
+                <ion-icon class="irapp-icon" name="irapp-setting-menuimage" item-left></ion-icon>
+                <ion-label>{{menuImageText}}</ion-label>
+            </button>
+            <!--<button ion-item (click)="goToSubSettings('download')" [ngClass]="item-menuimage">
+                <ion-icon class="irapp-icon" item-left></ion-icon>
+                <ion-label>Download</ion-label>
+            </button>-->
+            <!--<button ion-item (click)="goToSubSettings('help')" ngClass="item-help">
+                {{helpText}}
+            </button>
+            <button ion-item (click)="goToSubSettings('about')" ngClass="item-about">
+                {{aboutText}}
+            </button>-->
+        </ion-list>
+    </div>
+
+    <div class="setting-footer">
+        <ion-label>{{myIRAppText}}</ion-label>
+        <ion-label>{{investorRelationsText}}</ion-label>
+        <ion-label [innerHTML]="eurolandInvestorsText"></ion-label>
+        <ion-note>{{copyrightText}}</ion-note>
+    </div>
+</ion-content>

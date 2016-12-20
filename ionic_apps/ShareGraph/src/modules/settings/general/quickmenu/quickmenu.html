@@ -1,0 +1,23 @@
+﻿<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="quickmenu-content">
+    <ion-note ngClass="menu-note">{{menuNote}}</ion-note>
+    <ion-card ngClass="cards-list-module" *ngIf="modules">
+        <button ion-button *ngFor="let module of modules" [ngClass]="module.orientation">
+            {{modulesDisplayName[module.moduleName]}}
+        </button>
+        <button ion-button ngClass="btn-qmenu-settings">
+            <ion-icon class="irapp-icon" name="irapp-settings-black"></ion-icon>
+        </button>
+    </ion-card>
+    <ion-list no-border>
+        <ion-list-header>{{quickMenuViewText}}</ion-list-header>
+        <button ion-item (click)="goToQuickMenuView()" ngClass="btn-gotoquickmenu">
+            <ion-label>{{sortText}}</ion-label>
+            <ion-note item-right>{{type}}</ion-note>
+        </button>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-content>
+    <div class="close-button">
+        <button ion-button clear (click)="closeConfirm()" class="button-close">
+                <ion-icon class="irapp-icon" name="irapp-close-introduction" item-left></ion-icon>
+        </button>
+    </div>
+    <div class="start-download-box">
+        <h1 class="wellcome">Welcome</h1>
+        <p>Download some material for offline use. You can delete them later to free your space.</p>
+        <div class="download-summary">
+            <div>
+                <ion-icon class="irapp-icon" name="irapp-download-icon"></ion-icon>
+            </div>
+            <div>
+            <span>{{downloadLength}} MB</span>
+            </div>
+        </div>
+        <p class="command-box">
+            <button ion-button color="dark"outline (click)="startDownload()" class="download-button">Download</button>
+        </p>
+    </div>
+</ion-content>

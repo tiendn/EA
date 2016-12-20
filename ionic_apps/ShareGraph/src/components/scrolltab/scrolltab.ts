@@ -1,11 +1,9 @@
-﻿import {NavController, NavParams, IONIC_DIRECTIVES} from 'ionic-angular';
-import {Component} from '@angular/core';
+﻿import {Component} from '@angular/core';
 import {Helper} from '../../common/helper';
 
 @Component({
     selector: 'scroll-tab',
     templateUrl: 'scrolltab.html'
-    //directives: [IONIC_DIRECTIVES]
 })
 
 export class ScrollTabComponent {

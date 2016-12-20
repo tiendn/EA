@@ -1,0 +1,399 @@
+watchlist-introduction-page, indices-introduction-page{
+    scroll-content
+    {
+        overflow: hidden;
+    }
+    
+    .introduction-screen
+    {
+        content: " ";
+        background-repeat: no-repeat;
+        display: block;
+    }
+  
+    .background
+    {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .swiper-pagination
+    {
+        display: block !important;
+        bottom: 15px !important;
+        left: 0;
+        width: 30% !important;
+        margin-left: 35%;
+        background: #4D4D4D;
+    }
+
+    .slide-image
+    {
+        margin: 4%;
+        margin-bottom: 0;
+        background-color:transparent;
+        height: 92%;
+        display: block;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        line-height: 30px;
+        position: relative;
+    }
+
+    .slide-content
+    {
+        position: absolute;
+        bottom: 0;
+        height: 165px;
+        background: #4D4D4D;
+        width: 100%;
+        color: white;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .slide-content h1
+    {
+        margin-top: 1rem;
+    }
+
+    .slide-content .description
+    {
+        min-height: 70px;
+    }
+
+    .slide-zoom
+    {
+        height: 100%;
+    }
+
+    .skip, .next
+    {
+        float: left;
+        color: white;
+        background: transparent;
+        line-height: 2.3em;
+        font-size: 1.6rem;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .sign-in, .sign-up
+    {
+        color: white;
+        line-height: 2.3em;
+        font-size: 1.6rem;
+        margin-top: -10px;
+    }
+    .next, .sign-in
+    {
+        float: right;
+    }
+    
+    .sign-up
+    {
+        float: left;
+    }
+
+    .button-outline
+    {
+        border-color: white;
+    }
+
+    .step3 .slide-image
+    {
+        margin-top: 10px;
+    }
+
+    .close-button
+    {
+        margin-top: 30px;
+    }
+
+    .ion-ios-irapp-close-introduction
+    {
+        padding:0;
+        margin:0;
+    }
+    .ion-ios-irapp-close-introduction:before{
+        width: 74px;
+        height: 74px;
+        background-position: -295px -576px !important;
+    }
+    .button-close
+    {
+        width: 70px;
+        height: 62px;
+        padding: 0px;
+    }
+
+    .bubble {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        display: table;
+        padding-bottom: 180px;
+    }
+
+    .bubble div {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        width: 100%;
+    }
+
+    .step3 .bubble
+    {
+        padding-bottom: 220px;
+    }
+    /*Iphone 5*/
+    @media screen and (-webkit-min-device-pixel-ratio: 1.1) and (-webkit-max-device-pixel-ratio: 2){
+        .firstStepWatchlist{
+            background-image: url("../assets/img/introduction/watchlist/iPhone5/intro-1@2x.png") !important;
+            background-size: 292px 424px;
+        }
+
+        .secondStepWatchlist{
+            background-image: url("../assets/img/introduction/watchlist/iPhone5/intro-2@2x.png") !important;
+            background-size: 292px 424px;
+        }
+
+        .thirdStepWatchlist
+        {
+            margin: 4%;
+            margin-top: 0;
+            background-image: url("../assets/img/introduction/watchlist/iPhone5/intro-3@2x.png") !important;
+            background-position: 0px -4px !important;
+            background-size: 305px 362px;
+        }
+
+        .firstStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPhone5/intro-1@2x.png") !important;
+            background-size: 292px 424px;
+        }
+
+        .secondStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPhone5/intro-2@2x.png") !important;
+            background-size: 292px 424px;
+        }
+
+        .thirdStepIndices
+        {
+            margin-top: 0;
+            background-image: url("../assets/img/introduction/indices/iPhone5/intro-3@2x.png") !important;
+            background-size: 292px 424px;
+        }
+    }
+
+    /*Iphone 6*/
+   @media only screen and (min-device-width : 375px) and (max-device-width : 667px){
+
+        .slide-image
+        {
+            margin: 4%;
+        }
+
+        .firstStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPhone6/intro-1@2x.png") !important;
+            background-size: 347px 602px;
+        }
+
+        .secondStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPhone6/intro-2@2x.png") !important;
+            background-size: 347px 602px;
+        }
+
+        .thirdStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPhone6/intro-3@2x.png") !important;
+            background-size: 360px 553px;
+            margin: 3%;
+        }
+
+        .firstStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPhone6/intro-1@2x.png") !important;
+            background-size: 347px 602px;
+        }
+
+        .secondStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPhone6/intro-2@2x.png") !important;
+            background-size: 347px 602px;
+        }
+
+        .thirdStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPhone6/intro-3@2x.png") !important;
+            background-size: 347px 550px;
+        }
+    }
+
+    /*Iphone 6 Plus*/
+    @media only screen and (min-device-width : 414px) and (max-device-width : 736px){
+
+        .slide-image
+        {
+            margin: 4%;
+        }
+
+        .firstStepWatchlist
+        {
+            background-image: url("../../assets/img/introduction/Watchlist/iPhone 6+/iPhone6Plus Intro 1@3x.png") !important;
+            background-size: 377px 675px;
+        }
+
+        .secondStepWatchlist
+        {
+            background-image: url("../../assets/img/introduction/Watchlist/iPhone 6+/iPhone6Plus Intro 2@3x.png") !important;
+            background-size: 377px 675px;
+        }
+
+        .thirdStepWatchlist
+        {
+            background-image: url("../../assets/img/introduction/Watchlist/iPhone 6+/iPhone6Plus Intro 3@3x.png") !important;
+            background-size: 383px 600px;
+        }
+
+        .firstStepIndices
+        {
+            background-image: url("../../assets/img/introduction/Indices/iPhone 6+/iPhone6Plus Intro 1@3x.png") !important;
+            background-size: 377px 675px;
+        }
+
+        .secondStepIndices
+        {
+            background-image: url("../../assets/img/introduction/Indices/iPhone 6+/iPhone6Plus Intro 2@3x.png") !important;
+            background-size: 377px 675px;
+        }
+
+        .thirdStepIndices
+        {
+            background-image: url("../../assets/img/introduction/Indices/iPhone 6+/iPhone6Plus Intro 3@3x.png") !important;
+            background-size: 377px 675px;
+        }
+    }
+
+    /*Ipad*/
+    @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+        .slide-image
+        {
+            margin: 16%;
+            padding-top: 10px;
+        }
+        .slide-zoom
+        {
+            padding-top: 10px;
+        }
+        .close-button
+        {
+            margin-top: 70px;
+        }
+
+        .slide-content
+        {
+            height: 200px;
+        }
+
+        .button-close{
+            padding: 0;
+            width: 110px;
+            height: 110px;
+        }
+
+        .ion-ios-irapp-close-introduction:before
+        {
+            width: 110px;
+            height: 110px;
+            background-position: -325px -540px !important;
+        }
+
+        .firstStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPad/intro-1@2x.png") !important;
+            background-size: 524px 723px;
+        }
+
+        .secondStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPad/intro-2@2x.png") !important;
+            background-size: 524px 723px;
+        }
+
+        .thirdStepWatchlist
+        {
+            background-image: url("../assets/img/introduction/watchlist/iPad/intro-3@2x.png") !important;
+            background-size: 570px 708px;
+            margin: 11%
+        }
+
+        .firstStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPad/intro-1@2x.png") !important;
+            background-size: 524px 723px;
+        }
+
+        .secondStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPad/intro-2@2x.png") !important;
+            background-size: 524px 723px;
+        }
+
+        .thirdStepIndices
+        {
+            background-image: url("../assets/img/introduction/indices/iPad/intro-3@2x.png") !important;
+            background-size: 548px 860px;
+        }
+    }
+
+
+}
+
+setting-watchlist-page
+{
+    .setting-enable-watchlist
+    {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .account-panel {
+        margin-top: 25px;
+    }
+
+    .account-panel .create-account
+    {
+        border-top: 0.55px solid #c8c7cc;
+    }
+
+    label {
+        padding: 0 20px 20px;
+        display: block;
+    }
+
+    .create-account-text
+    {
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .list-ios
+    {
+        margin-top: 32px;
+    }
+}
+
+.ion-ios-arrow-back
+{
+    display: inherit;
+    margin: 0;
+    margin-top: -1px;
+    min-width: 18px;
+    font-size: 3.4rem;
+}

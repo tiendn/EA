@@ -1,0 +1,53 @@
+setting-watchlist-stocks{
+    .ticker-code
+    {
+        font-size: 120%;
+    }
+
+    .share-name
+    {
+        font-size: 90%;
+    }
+
+    ion-label{
+        white-space: normal;
+    }
+
+    ion-note{
+        padding-left: 10px;
+        padding-right: 10px;
+        display: block;
+    }
+
+    .item-wrapper  ion-label{
+        margin: 6px 8px 6px 0;
+    }
+
+    .stock-list
+    {
+        margin-top: 44px;
+    }
+
+    .delete-button
+    {
+        color: red;
+        margin: 0px;
+        padding: 0px !important;
+        font-size: 1.8em;
+    }
+
+    .list-ios > ion-item-sliding:first-child>.item-block
+    {
+        border-top: 0.55px solid #c8c7cc !important;
+    }
+}
+
+html:lang(ar) setting-watchlist-stocks 
+{
+    .delete-button
+    {
+        margin: 8px 0 8px 16px !important;
+        background: transparent;
+    }
+    
+}

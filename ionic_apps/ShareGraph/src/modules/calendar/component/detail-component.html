@@ -1,0 +1,30 @@
+<ion-header>
+    <div class="calendar-mess" [hidden]="!eventAdded">{{addEventToDeviceSuccess}}</div>
+</ion-header>
+<ion-list class="calendar-detail" *ngIf="eventData">
+    <ion-item class="event-title">
+        <div class="title">{{eventData.Title}}</div>
+    </ion-item>
+    <ion-item class="displaydate" [innerHTML]="eventData.FullDisplayDate">
+    </ion-item>
+    <ion-item class="event-type">
+        <ion-label>{{eventType}}</ion-label>
+        <ion-note item-right>{{eventData.EventType}}</ion-note>
+    </ion-item>
+    <ion-item class="event-detail" *ngIf="eventData.Text" [innerHTML]="eventData.Text">
+    </ion-item>
+    <ion-item class="attachments" *ngIf="eventData.EventAttachments">
+        <ion-grid>
+            <ion-row *ngFor="let att of eventData.EventAttachments" (click)="openAttachment(att)" center>
+                <ion-col class="attachment"><div class="icon-attachment"><span>{{att.FileName.substring(att.FileName.lastIndexOf(".") + 1, att.FileName.length).toUpperCase()}}</span></div></ion-col>
+                <ion-col class="attachment-name"><span>{{att.FileName.substring(0, att.FileName.lastIndexOf("."))}}</span></ion-col>
+            </ion-row>
+        </ion-grid>
+    </ion-item>
+</ion-list>
+<ion-footer class="irapp-footer-tab" [hidden]="hideFooter">
+    <ion-toolbar no-border-bottom>
+        <button (click)="onDownload()" [disabled]="isDownloaded || !isOnline">{{downloadText}}</button>
+        <button (click)="onShare($event)" [disabled]="!isOnline">{{shareText}}</button>
+    </ion-toolbar>
+</ion-footer>

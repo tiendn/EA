@@ -3,7 +3,8 @@ import { Http } from '@angular/http';
 import { Storage } from '@ionic/storage';
 import { GlobalVars } from '../common/global-vars';
 import { Helper } from '../common/helper';
-import 'rxjs/Rx';
+import 'rxjs/operator/timeout';
+import 'rxjs/operator/retry';
 
 @Injectable()
 export class PressReleasesService {
@@ -116,7 +117,7 @@ export class PressReleasesService {
     }
 
     searchPRData(resolve, keyword) {
-        if (this.searchData && this.searchData.length > 0) {
+        if (this.searchData && this.searchData.length > 0 && this.lastDateNumeric > 0) {
             if (this.searchData.length >= this.pagesize) {
                 resolve(this.searchData.splice(0, this.pagesize));
             }

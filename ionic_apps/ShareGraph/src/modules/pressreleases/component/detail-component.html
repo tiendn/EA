@@ -1,0 +1,42 @@
+<ion-list class="pr-detail" *ngIf="prMasterData">
+    <ion-item>
+        <!--<div [class]="prMasterData.Attachment ? 'title irapp-icon attachment' : 'title'">{{prMasterData.Title}}</div>-->
+        <div class="title">{{prMasterData.Title}}</div>
+    </ion-item>
+    <ion-item class="displaydate">
+        <div class="date">{{prMasterData.FullDisplayDate}}</div>
+        <div class="price-change {{prMasterData.PriceChange > 0 ? 'plus' : prMasterData.PriceChange < 0 ? 'minus' : ''}}">
+            <ion-icon class="irapp-icon" name="irapp-pricechange"></ion-icon>
+            <span class="price">{{prMasterData.PriceChange | formatNumber:2}}%</span>
+        </div>
+        <button ion-button item-right class="btn-attachment" (click)="scrollToAttachment()">
+            <ion-icon class="irapp-icon" name="irapp-attachment"></ion-icon>
+        </button>
+        <!--<div [class]="prMasterData.PriceChange > 0 ? 'icon plus' : prMasterData.PriceChange < 0 ? 'icon minus' : 'icon'"><span>&nbsp;</span></div>
+        <div [class]="prMasterData.PriceChange > 0 ? 'price plus' : prMasterData.PriceChange < 0 ? 'price minus' : 'price'">{{prMasterData.PriceChange | formatNumber:2}}{{prMasterData.PriceChange != 0 ? "%" : ""}}</div>-->
+    </ion-item>
+    <ion-item class="message" *ngIf="Message">
+        <div [innerHTML]="Message"></div>
+    </ion-item>
+    <ion-item class="attachments" *ngIf="Attachments && Attachments.length > 0">
+        <div class="att-header">{{attachmentPhrase}}</div>
+        <div class="att-list">
+            <ion-grid>
+                <ion-row *ngFor="let att of Attachments" (click)="openAttachment(att)" center>
+                    <ion-col class="attachment"><div class="icon-attachment"><span>{{att.atFileName.substring(att.atFileName.lastIndexOf(".") + 1, att.atFileName.length).toUpperCase()}}</span></div></ion-col>
+                    <ion-col class="attachment-name"><span>{{att.atFileName.substring(0, att.atFileName.lastIndexOf("."))}}</span></ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </ion-item>
+    <ion-item class="oneday-change" *ngIf="oneDayChangeData">
+        <div class="oneday-title">{{oneDayChangePhrase}}</div>
+        <!--<div class="oneday-date">{{prMasterData.DisplayDate}}</div>-->
+        <div class="oneday-ticker">
+            <div *ngFor="let ticker of oneDayChangeData" [class]="ticker.ChangePro > 0 ? 'oneday-plus' : ticker.ChangePro < 0 ? 'oneday-minus' : ''">
+                <span>{{ticker.Ticker}}</span>
+                <span>{{ticker.ChangePro > 0 ? "+" : ""}}{{ticker.ChangePro | formatNumber:2}}{{ticker.ChangePro != 0 ? "%" : ""}}</span>
+            </div>
+        </div>
+    </ion-item>
+</ion-list>

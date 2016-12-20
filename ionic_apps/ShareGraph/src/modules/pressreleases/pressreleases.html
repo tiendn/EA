@@ -1,0 +1,51 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+    <ion-searchbar *ngIf="!globalVars.isIpad" [(ngModel)]="searchQuery"
+                   (ionBlur)="onBlur($event)"
+                   (ionClear)="onClear($event)"
+                   (keydown)="onKeyDown($event)"
+                   [placeholder]="searchPlaceHolder">
+    </ion-searchbar>
+</ion-header>
+
+<ion-content no-padding ngClass="pr-content">
+    <ion-grid [ngClass]="globalVars.isIpad ? 'pr-tablet irapp-splitview' : 'irapp-phone-layout'">
+        <ion-row>
+            <ion-col ngClass="left-panel">
+                <ion-searchbar *ngIf="globalVars.isIpad" [(ngModel)]="searchQuery"
+                               (ionBlur)="onBlur($event)"
+                               (ionClear)="onClear($event)"
+                               (keydown)="onKeyDown($event)"
+                               [placeholder]="searchPlaceHolder">
+                </ion-searchbar>
+                <div class="pr-content" id="pr-master-content" #prListView>
+                    <ion-card ngClass="nodata" [hidden]="!showMessNoData">
+                        <ion-card-content>{{noDataText}}</ion-card-content>
+                    </ion-card>
+                    <ion-list ngClass="ir-listview-divider pr-list-master">
+                        <ion-item-group *ngFor="let group of prData">
+                            <ion-item-divider light sticky>{{group.divider}}</ion-item-divider>
+                            <button ion-item *ngFor="let prItem of group.data" (click)="getPRDetail(prItem)" [ngClass]="currentPRItem && prItem.Id == currentPRItem.Id ? 'item item-actived' : 'item'">
+                                <div [class]="prItem.Attachment ? 'label irapp-icon attachment' : 'label'">{{prItem.Title}}</div>
+                                <div class="item-detail">
+                                    <div class="note">{{prItem.DisplayDate}}</div>
+                                    <ion-icon *ngIf="prItem.PriceChange > 0" class="irapp-icon" name="irapp-price-up"></ion-icon>
+                                </div>
+                            </button>
+                        </ion-item-group>
+                    </ion-list>
+                </div>
+            </ion-col>
+            <ion-col ngClass="right-panel" *ngIf="globalVars.isIpad">
+                <div class="pr-detail-container">
+                    <pr-detail id="pr-detail"></pr-detail>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="loadMoreData($event)" *ngIf="!globalVars.isIpad">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

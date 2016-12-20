@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+        <ion-buttons end [hidden]="disableShare">
+            <button ion-button (click)="showDownloadConfirm($event)" [disabled]="!isOnline">
+                <ion-icon class="irapp-icon" name="irapp-download"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+    <!--<scroll-tab id="irapp-scroll-tab"></scroll-tab>-->
+    <ion-toolbar *ngIf="tabData" no-border no-padding ngClass="irapp-toolbar">
+        <ion-scroll scrollX="true" zoom="false" class="scrollbar">
+            <button ion-button *ngFor="let item of tabData; let i=index" (click)="selectedTab(item)" [ngClass]="currentEventTypeId == item.ID ? 'btn-active' : ''">
+                <bdo dir="auto">{{item.Name}}</bdo>
+            </button>
+        </ion-scroll>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content no-padding ngClass="calendar-content">
+    <ion-grid [ngClass]="globalVars.isIpad ? 'calendar-tablet irapp-splitview' : 'irapp-phone-layout'">
+        <ion-row>
+            <ion-col class="left-panel">
+                <div class="calendar-content" id="calendar-master-content" #listEvents>
+                    <ion-header ngClass="calendar-mess-header" [hidden]="!eventAdded">
+                        <div class="calendar-mess">{{addEventToDeviceSuccess}}</div>
+                    </ion-header>
+                    <ion-card ngClass="nodata" [hidden]="!showMessNoData">
+                        <ion-card-content>{{noDataText}}</ion-card-content>
+                    </ion-card>
+                    <ion-list ngClass="ir-listview-divider calendar-list-master" *ngIf="eventData">
+                        <ion-item-group *ngFor="let group of eventData">
+                            <ion-item-divider light sticky>{{group.divider}}</ion-item-divider>
+                            <button ion-item *ngFor="let event of group.data" (click)="getEventDetail(event)" [ngClass]="currentEvent && event.Id == currentEvent.Id ? 'item item-actived' : 'item'">
+                                <div class="event-type">{{event.EventType}}</div>
+                                <div class="event-date" [innerHTML]="event.DisplayDate"></div>
+                                <div class="event-title">{{event.Title}}</div>
+                            </button>
+                        </ion-item-group>
+                    </ion-list>
+                </div>
+            </ion-col>
+            <ion-col class="right-panel" *ngIf="globalVars.isIpad">
+                <div class="calendar-detail-content">
+                    <calendar-detail id="calendar-detail"></calendar-detail>
+                </div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+    <ion-infinite-scroll (ionInfinite)="loadMoreData($event)" *ngIf="!globalVars.isIpad">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

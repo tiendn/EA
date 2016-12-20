@@ -57,7 +57,11 @@
     "Watchlist": "Watchlist",
     "Indices": "Indices",
     "OK": "OK",
-    "Login": "Log In"
+    "Login": "Log In",
+    "Delete": "Delete",
+    "ShareVia": "Share \"[name]\" via",
+    "Mail": "Mail",
+    "Twitter": "Twitter"
   },
   "Settings": {
     "Default": "Defeito",
@@ -123,15 +127,13 @@
     "SortOrder": "Sort order",
     "Custom": "Custom",
     "CustomNote": "Tap and drag to arrange your launch screen modules",
-    "SettingGeneralNote": "Configure your preferences from the available options.",
     "PushNotifications": "Push notifications",
     "Stream": "Stream",
     "Help": "Help",
     "About": "About",
     "InvestorRelationsApp": "Investor Relations App",
     "MyIRApp": "myIRapp",
-    "LoggedIn": "Logged in as",
-    "EmailRegistered": "Email is already registered",
+    "LoggedIn": "Logged in as",    
     "LoginFailed": "Email or password is incorrect.",
     "General": "General",
     "Profile": "Profile",
@@ -144,7 +146,14 @@
     "ResetPassword": "Reset Password",
     "NewPassword": "New password",
     "ConfirmNewPassword": "Confirm new password",
-    "EmailNotFound": "Email not found. Please check your email to reset your password."
+    "EmailNotFound": "Email not found. Please check your email to reset your password.",
+    "EmailRegistered": "Your email is already registered.",
+    "InvalidAccessToken": "Invalid access token",
+    "EmailAlreadyTaken": "Email already taken",
+    "EmailAlreadyTakenWithGG": "The email was used to register using Google. Please sign-in with Google.",
+    "EmailAlreadyTakenWithFB": "The email was used to register using Facebook. Please sign-in with Facebook.",
+    "SearchByTickerCode":"Search by index ticker code or full index name",
+    "UseEnglishKeywords":"Use english search keywords"
   },
   "ShareGraph": {
     "ShareData": "MOSTRAR DADOS",

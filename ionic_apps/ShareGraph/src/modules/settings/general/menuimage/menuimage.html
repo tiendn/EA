@@ -1,0 +1,16 @@
+﻿<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="menuimage-content">
+    <ion-list no-border>
+        <ion-list-header>{{menuImageHeader}}</ion-list-header>
+        <button ion-item (click)="changeMenuImage()" ngClass="btn-chooseimage">
+            {{chooseImageText}}
+        </button>
+        <button ion-item detail-none ngClass="image-thumbnail" (click)="changeMenuImage()">
+            <ion-img ngClass="thumbnail-leftmenu-image" [src]="currentMenuImageSrc" (click)="changeMenuImage()"></ion-img>
+        </button>
+    </ion-list>
+</ion-content>

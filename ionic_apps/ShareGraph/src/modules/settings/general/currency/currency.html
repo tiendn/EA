@@ -1,0 +1,26 @@
+﻿<ion-header>
+    <ion-navbar no-border hideBackButton>
+        <ion-buttons start class="btn-cancel" (click)="onCancel()">
+            <button ion-button>{{cancelText}}</button>
+        </ion-buttons>
+        <ion-title>{{headerTitle}}</ion-title>
+        <ion-buttons end class="btn-done" [hidden]="currentValSelected == prevValSelected" (click)="onDone()">
+            <button ion-button>{{doneText}}</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="currency-content">
+    <ion-note ngClass="currency-desc">{{currencyDesc}}</ion-note>
+    <ion-label ngClass="currency-note">{{currencyNote}}</ion-label>
+    <ion-list radio-group no-border [(ngModel)]="currentValSelected" *ngIf="currencies">
+        <ion-item>
+            <ion-label>{{defaultText}}</ion-label>
+            <ion-radio value="default"></ion-radio>
+        </ion-item>
+        <ion-item *ngFor="let currency of currencies">
+            <ion-icon class="irapp-icon flag-icon" name="flag-{{currency.Code.toLowerCase()}}" item-left></ion-icon>
+            <ion-label>{{currency.Code}} - {{currency.Name}}</ion-label>
+            <ion-radio value={{currency.Code}}></ion-radio>
+        </ion-item>
+    </ion-list>
+</ion-content>

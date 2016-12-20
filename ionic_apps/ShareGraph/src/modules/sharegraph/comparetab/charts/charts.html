@@ -1,0 +1,41 @@
+<ion-content no-padding>
+    <div class="chart-page-content">
+        <div id="charts-container">
+            <div class="{{type == 0 ? 'watchlist-period' : 'indices-period'}} ">
+                <button ion-button clear *ngFor="let period of listPeriod"
+                        (click)="changePeriod(period.Value)"
+                        class="button ion-button   btn-period {{currentPeriod === period.Value ? 'btn-period-click' : ''}}">
+                    {{period.Name}}
+                </button >
+            </div> <!-- End class watchlist-period/indices-period -->
+            <div id="charts" style="">
+            </div>
+        </div> <!-- End #charts-container -->
+        <!---->
+        <div class="share-item">
+                <span *ngFor="let share of sharesChart" [style.color]="share.color" class="share-name"> {{share.shareName}} </span>
+            </div>
+        <div class="footer">
+            
+            <p class="tooltip">
+                {{tooltip}}
+            </p>
+            <div class="own-shares" *ngIf="listOwnShares">
+                <p class="own-shares-title"> {{ownShareTitle}}  </p>
+                <button ion-button  clear *ngFor="let ownShare of listOwnShares"
+                        (click)="selectedId(ownShare,true)"
+                        class="button ion-button  btn-share {{getIndexShare(ownShare.instrumentid) >= 0 ? 'btn-click' : ''}}">
+                    {{ownShare.ticker}}
+                </button >
+            </div>
+            <div class="watch-list-shares" *ngIf="watchListShare">
+                <p class="sharegraph-title"> {{watchListSharesTitle}} </p>
+                <button ion-button clear *ngFor="let share of watchListShare"
+                        (click)="selectedId(share,false)"
+                        class="button ion-button  btn-share {{getIndexShare(share.Id) >= 0 ? 'btn-click' : ''}}">
+                    {{share.Ticker}}
+                </button>
+            </div>
+        </div> <!-- End .footer -->
+    </div>
+</ion-content>

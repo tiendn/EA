@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-navbar no-border>
+        <ion-title>Add new stocks</ion-title>
+        <ion-buttons end>
+            <button ion-button (click)="closeModal()" *ngIf="selectedcount > 0">
+                {{done}}
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-searchbar [(ngModel)]="searchInput" [showCancelButton]="true" (ionInput)="instantSearch($event)"></ion-searchbar>
+    <ion-label class="selected-number" *ngIf="items.length > 0">Selected <bdo dir="auto">({{selectedcount}})</bdo></ion-label>
+    <div class="inner-loading" *ngIf="isLoading">
+        <ion-spinner name="ios-small"></ion-spinner>
+    </div>
+    <ion-list>
+        <ion-item *ngFor="let item of items" (click)="itemSelected(item)">
+            <ion-label><span>{{item.Ticker}} </span><br/> <span class="market">{{item.Market}}</span></ion-label><br/>
+            <ion-checkbox item-right checked="false" (ionChange)="selectedShare($event, item)"></ion-checkbox>
+        </ion-item>
+    </ion-list>
+    <div class="search-instruction" *ngIf="items.length == 0">
+        <div class="center">
+            <p>{{searchByTickerCode}}</p>
+            <p>{{useEnglishKeywords}}</p>
+        </div>
+    </div>
+</ion-content>

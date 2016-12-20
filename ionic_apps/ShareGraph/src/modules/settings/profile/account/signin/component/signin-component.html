@@ -1,0 +1,23 @@
+<form [formGroup]="form" (ngSubmit)="onSignIn(form.value)">
+    <ion-list class="signin-info">
+        <ion-item>
+            <ion-input placeholder="{{emailText}}" [formControl]="form.controls['email']" (focus)="onFocus($event,'Email')" (input)="onFocus($event,'Email')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['Email']">
+            <ion-label>{{email.hasError('required') ? emailRequiredMess : email.hasError('invalidEmailAddress') ? emailPatternMess : ''}}</ion-label>
+        </ion-item>
+        <ion-item>
+            <ion-input type="password" placeholder="{{passwordText}}" [formControl]="form.controls['password']" (focus)="onFocus($event,'Password')" (input)="onFocus($event,'Password')"></ion-input>
+        </ion-item>
+        <ion-item ngClass="mess-validate minus" *ngIf="formInvalid['Password']">
+            <ion-label>{{password.hasError('required') ? passwordRequiredMess : password.hasError('invalidPassword') ? passwordPatternMess : ''}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <button ion-button clear full ngClass="btn-signin" type="submit">{{signInText}}</button>
+</form>
+
+<button ion-button clear full ngClass="btn-forgot-password" (click)="forgotPassword()">{{forgotPassText}}</button>
+
+<div class="custom-loading" *ngIf="showLoading">
+    <ion-spinner name="ios"></ion-spinner>
+</div>

@@ -1,0 +1,43 @@
+setting-indices-page{
+    .setting-enable-indices
+    {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+
+    .account-panel {
+        margin-top: 25px;
+    }
+
+    .account-panel .create-account
+    {
+        border-top: 0.55px solid #c8c7cc;
+    }
+
+    label {
+        padding: 0 20px 20px;
+        display: block;
+    }
+
+    .create-account-text
+    {
+        margin-top: 20px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        display: block;
+    }
+
+    .list-ios
+    {
+        margin-top: 32px;
+    }
+
+    ion-note
+    {
+        font-size: 14px;
+        padding-left: 10px;
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}

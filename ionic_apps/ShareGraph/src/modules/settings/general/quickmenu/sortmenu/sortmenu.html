@@ -1,0 +1,23 @@
+﻿<ion-header>
+    <ion-navbar no-border>
+        <ion-title>{{headerTitle}}</ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content no-padding ngClass="sortmenu-content">
+    <ion-list radio-group no-border ngClass="sort-type" (ionChange)="radioChange($event)" [(ngModel)]="currentSelected">
+        <ion-item>
+            <ion-label>{{defaultText}}</ion-label>
+            <ion-radio value="default"></ion-radio>
+        </ion-item>
+        <ion-item>
+            <ion-label>{{customText}}</ion-label>
+            <ion-radio value="custom"></ion-radio>
+        </ion-item>
+    </ion-list>
+    <div class="custom-type" *ngIf="currentSelected == 'custom'">
+        <ion-note ngClass="custom-note">{{sortMenuNote}}</ion-note>
+        <ion-list reorder="true" (ionItemReorder)="reorderItems($event)">
+            <ion-item *ngFor="let module of modules; let i = index;" ngClass="item {{i == (noOfItem - 1) ? 'end-item' : ''}}">{{modulesDisplayName[module.moduleName]}}</ion-item>
+        </ion-list>
+    </div>
+</ion-content>

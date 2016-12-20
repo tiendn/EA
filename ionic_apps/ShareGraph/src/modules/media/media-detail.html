@@ -1,0 +1,173 @@
+<ion-header class="mediaDetailHeader">	
+    <ion-navbar hideBackButton="true">
+        <ion-title>{{TabName}}</ion-title>
+        <button ion-button clear="true" color="dark" style="float:right" (click)="done()">{{donebtn}}</button>
+    </ion-navbar>	
+</ion-header>
+
+
+<ion-content class="mediaDetailContent">	
+	<div id="mediaDetailEventCatcher"></div>
+	<div id="downloadCompletedBox" *ngIf="justDownloaded === true" padding>{{downloadCompletedMsg}}</div>
+	
+	<div [style.display]="isAudio === true ? 'inline' : 'none'">
+		<audio id="test1">	  
+			<source type="audio/mpeg">	
+		</audio>
+		<div class="audioHeader">
+			<ion-icon class="irapp-icon" name="irapp-Audio"></ion-icon>
+			<div class="theSpinner">
+				<ion-spinner *ngIf="isBuffering === true" name="crescent"></ion-spinner>
+			</div>
+		</div>
+
+	    <div class="audioControl">
+	    	<div class="audioBar">
+			    <ion-range id="audioRange" [(ngModel)]="currentRange" (ionChange)="setCurrentTime($event)" max={{durationRange}}>
+				    <ion-icon style="font-size:12px" range-left small>{{currentText}}</ion-icon>
+				    <ion-icon style="font-size:12px" range-right small>{{durationText}}</ion-icon>
+				</ion-range>
+	    	</div>
+	    	<div class="audioBtn">
+	    		<ion-icon *ngIf="isHasPreviousMediaItem === false" name="skip-backward" style="margin-right:20vw;color:lightgrey"></ion-icon>
+	    		<ion-icon *ngIf="isHasPreviousMediaItem === true" name="skip-backward" style="margin-right:20vw" (click)="listenPreviousMediaItem()"></ion-icon>    		
+	    		<ion-icon name="play" *ngIf="isPlaying === false" (click)="play()"></ion-icon>
+	    		<ion-icon name="pause" *ngIf="isPlaying === true" (click)="pause()"></ion-icon>
+	    		<ion-icon *ngIf="isHasNextMediaItem === true" name="skip-forward" style="margin-left:20vw;" (click)="listenNextMediaItem()"></ion-icon>
+	    		<ion-icon *ngIf="isHasNextMediaItem === false" name="skip-forward" style="margin-left:20vw;color:lightgrey"></ion-icon>
+	    	</div>
+	    </div>
+		
+	</div>
+
+	<div [style.display]="isAudio === false ? 'inline' : 'none'">
+		<div id="test2">	        
+	        <video id="videoPlayer" style="background-color:black" (click)="showControl()" playsinline>
+	            <source type="video/mp4">
+	        </video>
+
+	        <ion-spinner *ngIf="isBuffering === true" name="crescent"></ion-spinner>
+
+	        <div id="videoButton" (click)="showControl()" *ngIf="isFullScreen === true">            
+	            <ion-icon *ngIf="isHasPreviousMediaItem === false" name="skip-backward" style="margin-right:20vw;visibility:hidden" (click)="listenPreviousMediaItem()"></ion-icon>
+	            <ion-icon *ngIf="isHasPreviousMediaItem === true" name="skip-backward" style="margin-right:20vw;" (click)="listenPreviousMediaItem()"></ion-icon>            
+
+	            <ion-icon class="irapp-icon" name="irapp-pause-button" *ngIf="isPlaying === true && isBuffering === false" (click)="pause()"></ion-icon>
+	            <ion-icon class="irapp-icon" name="irapp-play-button" *ngIf="isPlaying === false && isBuffering === false" (click)="play()"></ion-icon>
+	            <ion-icon *ngIf="isHasNextMediaItem === true" name="skip-forward" style="margin-left:20vw;" (click)="listenNextMediaItem()"></ion-icon>
+	            <ion-icon *ngIf="isHasNextMediaItem === false" name="skip-forward" style="margin-left:20vw;visibility:hidden" (click)="listenNextMediaItem()"></ion-icon>
+	        </div>        
+	    	
+	        <div id="videoRangeDiv" *ngIf="isFullScreen === true">
+	            <ion-range id="videoRange" [(ngModel)]="currentRange" (ionChange)="setCurrentTime($event)" max={{durationRange}}>
+	                <ion-icon style="font-size:12px;" range-left small>{{currentText}}</ion-icon>
+	                <ion-icon style="font-size:12px;" range-right small>{{durationText}}</ion-icon>               
+	                <ion-icon range-right class="irapp-icon" name="irapp-video-exit-fullscreen" (click)="zoom()"></ion-icon>
+	            </ion-range>
+	        </div>
+	    </div>
+
+	    <div class="videoControl" *ngIf="isFullScreen === false">
+	        <div class="videoBar">
+	            <ion-range id="videoRange" [(ngModel)]="currentRange" (ionChange)="setCurrentTime($event)" max={{durationRange}}>
+	                <ion-icon style="font-size:12px" range-left small>{{currentText}}</ion-icon>
+	                <ion-icon style="font-size:12px" range-right small>{{durationText}}</ion-icon>
+	                <ion-icon range-right class="irapp-icon" name="irapp-video-enter-fullscreen" (click)="zoom()"></ion-icon>
+	            </ion-range>
+	        </div>
+	        <div class="videoBtn" >
+	            <ion-icon *ngIf="isHasPreviousMediaItem === false" name="skip-backward" style="margin-right:20vw;visibility:hidden" (click)="listenPreviousMediaItem()"></ion-icon>
+	            <ion-icon *ngIf="isHasPreviousMediaItem === true" name="skip-backward" style="margin-right:20vw" (click)="listenPreviousMediaItem()"></ion-icon>            
+	            <ion-icon name="play" *ngIf="isPlaying === false" (click)="play()"></ion-icon>
+	            <ion-icon name="pause" *ngIf="isPlaying === true" (click)="pause()"></ion-icon>
+	            <ion-icon *ngIf="isHasNextMediaItem === true" name="skip-forward" style="margin-left:20vw;" (click)="listenNextMediaItem()"></ion-icon>
+	            <ion-icon *ngIf="isHasNextMediaItem === false" name="skip-forward" style="margin-left:20vw;visibility:hidden" (click)="listenNextMediaItem()"></ion-icon>
+	        </div>
+	    </div>
+	</div>
+
+    <div padding *ngIf="isFullScreen === false">
+		<span style="font-size:17px" class="left">{{MediaTitle}}</span>
+		<br/><br/>
+		<span style="font-size:12px">
+			<ion-icon name="ios-time-outline"></ion-icon>
+			&nbsp; {{Time}}
+		</span><br/><br/>
+		<span style="font-size:14px">{{Script}}</span>
+		<br/><br/><br/>
+		<div *ngIf="isDownloading === true">
+			<br/><br/><br/>
+		</div>
+	</div>	
+
+  	<ion-footer style="position:fixed" *ngIf="isFullScreen === false && isAudio === false" class="irapp-footer-tab">
+  		<div padding *ngIf="isDownloading === true" style="border-top:1px solid #ddd;">            		
+            <table style="width:100%">
+                <tr>
+                    <td style="font-size:11px" id="downloadMessage">
+                        {{downloadMessage}}
+                    </td>
+                    <td style="text-align:center;vertical-align:top" rowspan="2">
+                        <!-- <img src="img/Stop.png" alt="videoPoster" width="32" height="32" (click)="stopDownload()"/> -->
+                        <ion-icon class="irapp-icon" name="irapp-cancel-download" (click)="stopDownload()"></ion-icon>
+                    </td>
+                </tr> 
+                <tr>
+                    <td style="text-align:center;width:85%">
+                        <table style="width:100%;height:1vh;">
+                            <tr>
+                                <td class="progressBar1" [style.width]="pb1"></td>
+                                <td class="progressBar2" [style.width]="pb2"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>               
+            </table>  
+        </div>
+
+   		<ion-grid>
+		    <ion-row>
+			    <ion-col width-50>
+                    <button ion-button style="padding:8px" *ngIf="enableDownload === false" disabled clear="true" (click)="showDownloadPopup($event)">{{downloadbtn}}</button>
+                    <button ion-button style="padding:8px" *ngIf="enableDownload === true" clear="true" (click)="showDownloadPopup($event)">{{downloadbtn}}</button>
+                </ion-col>
+			    <ion-col width-50><button ion-button style="padding:8px" clear="true" (click)="showSharePopup($event)">{{sharebtn}}</button></ion-col>
+			</ion-row>
+		</ion-grid>
+  	</ion-footer>
+  	<ion-footer *ngIf="isAudio === true" style="position:fixed" class="irapp-footer-tab">
+  		<div padding *ngIf="isDownloading === true" style="border-top:1px solid #ddd;">
+            
+            <table style="width:100%">
+                <tr>
+                    <td style="font-size:11px" id="downloadMessage">
+                        {{downloadMessage}}
+                    </td>
+                    <td style="text-align:center;vertical-align:top" rowspan="2">
+                        <ion-icon class="irapp-icon" name="irapp-cancel-download" (click)="stopDownload()"></ion-icon>
+                    </td>
+                </tr> 
+                <tr>
+                    <td style="text-align:center;width:85%">
+                        <table style="width:100%;height:1vh;">
+                            <tr>
+                                <td class="progressBar1" [style.width]="pb1"></td>
+                                <td class="progressBar2" [style.width]="pb2"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>               
+            </table>  
+        </div>
+
+   		<ion-grid>
+		    <ion-row>
+			    <ion-col width-50>
+                    <button style="padding:8px" ion-button *ngIf="enableDownload === false" disabled clear="true" (click)="showDownloadPopup($event)">{{downloadbtn}}</button>
+                    <button style="padding:8px" ion-button *ngIf="enableDownload === true" clear="true" (click)="showDownloadPopup($event)">{{downloadbtn}}</button>
+                </ion-col>
+			    <ion-col width-50><button style="padding:8px" ion-button clear="true" (click)="showSharePopup($event)">{{sharebtn}}</button></ion-col>
+			</ion-row>
+		</ion-grid>
+  	</ion-footer>
+</ion-content>

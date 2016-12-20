@@ -60,7 +60,10 @@
     "EmailAlerts": "Email Alerts",
     "OK": "OK",
     "Login": "Log In",
-    "Delete": "Delete"
+    "Delete": "Delete",
+    "ShareVia": "Share \"[name]\" via",
+    "Mail": "Mail",
+    "Twitter": "Twitter"
   },
   "Settings": {
     "Default": "Default",
@@ -126,7 +129,6 @@
     "SortOrder": "Sort order",
     "Custom": "Custom",
     "CustomNote": "Tap and drag to arrange your launch screen modules",
-    "SettingGeneralNote": "Configure your preferences from the available options.",
     "PushNotifications": "Push notifications",
     "Stream": "Stream",
     "Help": "Help",
@@ -134,7 +136,6 @@
     "InvestorRelationsApp": "Investor Relations App",
     "MyIRApp": "myIRapp",
     "LoggedIn": "Logged in as",
-    "EmailRegistered": "Email is already registered",
     "LoginFailed": "Email or password is incorrect.",
     "General": "General",
     "Profile": "Profile",
@@ -148,7 +149,14 @@
     "NewPassword": "New password",
     "ConfirmNewPassword": "Confirm new password",
     "EmailNotFound": "Email not found. Please check your email to reset your password.",
-    "EmailRegistered": "Your email is already registered."
+    "EmailRegistered": "Your email is already registered.",
+    "InvalidAccessToken": "Invalid access token",
+    "EmailAlreadyTaken": "Email already taken",
+    "EmailAlreadyTakenWithGG": "The email was used to register using Google. Please sign-in with Google.",
+    "EmailAlreadyTakenWithFB": "The email was used to register using Facebook. Please sign-in with Facebook.",
+    "SearchByTickerCode":"Search by index ticker code or full index name",
+    "UseEnglishKeywords":"Use english search keywords"
+
   },
   "ShareGraph": {
     "ShareData": "SHARE DATA",
@@ -201,13 +209,13 @@
     "Download": "Download",
     "Share": "Share",
     "DownloadTitle": "Download all Upcoming events",
-    "DownloadDetail": "Downloading will add all upcoming events in your device calendar. You can delete them anytime.",
+    "DownloadDetail": "Downloading will add all upcoming events in your device calendar.<br/> You can delete them anytime.",
     "Yes": "Yes",
     "No": "No",
     "EventDetails": "Event Details",
     "EventType": "Event Type",
     "DownloadOneEventTitle": "Download event",
-    "DownloadOneEventDetail": "Downloading will add the event in your device calendar. You can delete it anytime.",
+    "DownloadOneEventDetail": "Downloading will add the event in your device calendar.<br/> You can delete it anytime.",
     "Follow": "Follow",
     "AddedEventSuccess": "Event added to your device calendar",
     "AddedAllEventSuccess": "Events added to your device calendar",
