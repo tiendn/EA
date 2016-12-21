@@ -49,13 +49,13 @@
     <div class="div-item-content">
         <ion-list class="item-content" *ngIf="data">
             <ion-item *ngFor="let item of data">
-                <span class="item-left"> {{item.Name}} </span>
-                <span item-content class="item-center">
+                <ion-label class="item-left"> {{item.Name}} </ion-label>
+                <ion-note item-content class="item-center">
                     {{item.Change > 0 ? '+' : ''}}{{item.Change | formatNumber:decimalDigits}}
                     <span class="currency">
                         {{item.Currency}}
                     </span>
-                </span>
+                </ion-note>
                 <div item-right class="item-right">
                     <div [class]="item.ChangePro < 0 ? 'down': 'up'">
                         {{item.ChangePro > 0 ? '+' : ''}}{{item.ChangePro | formatNumber:decimalDigits}}%

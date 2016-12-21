@@ -233,8 +233,8 @@ page-hp-watchlist {
         text-align: left;
     }
 
-    ion-item span, h6, ion-icon {
-        color: #ffffff;
+    ion-item span, .footer, ion-icon,ion-note, ion-label {
+        color: #ffffff !important;
     }
 
     .item-header-content {
@@ -271,12 +271,14 @@ page-hp-watchlist {
     ion-item:last-child {
         border-bottom: 1px solid #c8c7cc;
     }
-    .item-mid {
-        width: 30%;
-        text-align: right;
+    ion-note {
+        padding-top: 0 !important;
+        width: auto !important;
+    //     text-align: right;
     }
     .item-right {
         width: 30%;
+        margin-right: 0 !important; 
         text-align: right;
     }
 

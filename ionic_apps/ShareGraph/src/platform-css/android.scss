@@ -933,7 +933,15 @@
                 margin-top: 3%;
                 margin-bottom: 8%;
             }
-
+            ion-list .item {
+                padding: 0 0 0 16px !important;
+                // padding-left: 16px ; 
+                .item-inner{
+                    padding: 0;
+                    padding-right: 16px;
+                    flex-direction: row !important;
+                }
+            }
             .date-content {
                 margin-bottom: 8%;
             }
@@ -941,11 +949,9 @@
             .div-item-content {
                 max-height: calc(100% - 9% - 180px );
             }
-            .item-inner{
-                flex-direction:  row !important ;
-            }
+            
             .item-header-content {
-                border-top: 2px solid #c8c7cc;
+                border-top: 1px solid #c8c7cc;
             }
             .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
                 border-bottom: 0.55px solid #6b6b6c;
@@ -977,11 +983,11 @@
                 font-size: 20px;    
             }
             
-            .item-content .item .item-mid span:first-child, .item-content .item .item-right{
+            .item-content .item ion-note span:first-child, .item-content .item .item-right{
                 font-size: 18px;
             }
             
-            .item-content, .item-header-content span {
+            .item-content, .item-header-content span, ion-note {
                 font-size: 16px;
                 font-family: $light-font;
             }
@@ -991,7 +997,8 @@
             }
 
             .footer {
-                border-top : 2px solid #c8c7cc !important;
+                padding-top: 20px;
+                border-top : 1px solid #c8c7cc !important;
                 font-size: 14px;
             }
         }
@@ -1000,6 +1007,15 @@
         page-ical-compare {
             .list-md{
                 box-shadow: 0 0 0    !important;
+            }
+            ion-list .item {
+                padding: 0 0 0 16px !important;
+                // padding-left: 16px ; 
+                .item-inner{
+                    padding: 0;
+                    padding-right: 16px;
+                    flex-direction: row !important;
+                }
             }
             .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
                 border-bottom: 1px solid #6b6b6c;
@@ -1027,9 +1043,9 @@
             .item-content span, .item-content .item-right {
                 font-size: 17px;
             }
-            .item-inner{
-                flex-direction: row !important; 
-            }
+            // .item-inner{
+            //     flex-direction: row !important; 
+            // }
             /*.item-content .item-center {
                 font-size: 15px;
             }
@@ -1045,19 +1061,20 @@
                 font-size: 15px;
             }
 
-            .item-content, .item-header-content span {
-                font-size: 15px;
-                font-family: $light-font;
-            }
+            // .item-content, .item-header-content span {
+            //     font-size: 15px;
+            //     font-family: $light-font;
+            // }
 
             .item-content .currency {
                 font-size: 12px;
             }
 
             .footer {
-                padding-left: 16px;
+                padding-left: 16px ;
+                padding-top: 20px;
                 font-size: 14px;
-                border-top: 2px solid #c8c7cc !important;
+                border-top: 1px solid #c8c7cc !important;
             }
             .btn-header-watch{
                 font-size: 14px !important;
@@ -1067,7 +1084,7 @@
                 font-size: 14px !important;
             }
             .item-header-content {
-                border-top: 2px solid #c8c7cc !important;
+                border-top: 1px solid #c8c7cc !important;
             }
             .item-inner{
                 color: white !important;
@@ -1075,12 +1092,12 @@
             .div-item-content .item-left{
                 font-size: 20px !important;
             }
-            .div-item-content .item-center{
+            .div-item-content ion-note{
                 font-size: 18px !important;
-                width: 37%;
-                text-align: right;
+                // width: 37%;
+                // text-align: right;
             }
-            .item-header-content span{
+            .item-header-content span,  ion-note{
                 font-size: 16px !important;
             }
             .div-item-content .item-right{
@@ -1566,9 +1583,7 @@
                 .div-item-content {
                     max-height: calc(100% - 9% - 180px );
                 }
-                .item-inner{
-                    flex-direction:  row !important ;
-                }
+                
                 .item-header-content {
                     border-top: 2px solid #c8c7cc;
                 }
@@ -1599,14 +1614,21 @@
                     height: 24px;
                     width:24px;
                 }
-                .item-md{
-                    padding-left: 16px !important;
+                
+                ion-list .item {
+                    padding: 0 0 0 16px !important;
+                    // padding-left: 16px ; 
+                    .item-inner{
+                        padding-top: 0;
+                        padding-bottom: 0;
+                        flex-direction: row !important;
+                    }
                 }
                 .item-content .item .item-left {
                     font-size: 20px;    
                 }
                 
-                .item-content .item .item-mid span:first-child, .item-content .item .item-right{
+                .item-content .item ion-note span:first-child, .item-content .item .item-right{
                     font-size: 18px;
                 }
                 
@@ -1621,7 +1643,7 @@
 
                 .footer {
                     border-top : 2px solid #c8c7cc !important;
-                    font-size: 18px;
+                    font-size: 18px !important;
                 }
             }
              /*End Historical Price*/
@@ -1692,10 +1714,10 @@
                 .div-item-content .item-left{
                     font-size: 20px !important;
                 }
-                .div-item-content .item-center{
+                .div-item-content ion-note{
                     font-size: 18px !important;
-                    width: 37%;
-                    text-align: right;
+                    // width: 37%;
+                    // text-align: right;
                 }
                 .item-header-content span{
                     font-size: 16px !important;

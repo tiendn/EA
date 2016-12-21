@@ -212,7 +212,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         .item-content .item span {
             font-size: 17px;
         }
-        /*.item-content .item-center {
+        /*.item-content ion-note {
             font-size: 15px;
         }
 
@@ -229,7 +229,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         /*.item-content, .item-header-content span {
             font-size: 17px;
         }*/
-        .item-content, .item-header-content span {
+        .item-content, .item-header-content span,ion-note {
             font-size: 15px;
             font-family: $light-font;
         }
@@ -274,7 +274,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
         .item-content span, .item-content .item-right {
             font-size: 17px;
         }
-        /*.item-content .item-center {
+        /*.item-content ion-note {
             font-size: 15px;
         }
 
@@ -289,7 +289,7 @@ ion-card.card-ios ion-card-header, ion-list ion-list-header.item {
             font-size: 15px;
         }
 
-        .item-content, .item-header-content span {
+        .item-content, .item-header-content span, ion-note {
             font-size: 15px;
             font-family: $light-font;
         }
@@ -2686,7 +2686,7 @@ video::-webkit-media-controls {
             top: 0px;
         }
 
-        .item-content .item-mid {
+        .item-content ion-note {
             font-size: 15px;
         }
 
@@ -2702,7 +2702,7 @@ video::-webkit-media-controls {
             font-size: 24px;
         }
 
-        .item-content, .item-header-content span {
+        .item-content, .item-header-content span, ion-note {
             font-size: 20px;
         }
 
@@ -2777,7 +2777,7 @@ video::-webkit-media-controls {
             width: 61px;
         }
 
-        .item-content .item-center {
+        .item-content ion-note {
             font-size: 15px;
         }
 
@@ -2793,7 +2793,7 @@ video::-webkit-media-controls {
             font-size: 24px;
         }
 
-        .item-content, .item-header-content span {
+        .item-content, .item-header-content span, ion-note {
             font-size: 20px;
         }
         .item-header-content  > .item-block:first-child{
