@@ -1471,6 +1471,12 @@
             }
             page-chart {
                 /** CSS Chart */
+                #charts {
+                    height: 260px !important;
+                }
+                #charts .highcharts-container {
+                    height: 275px !important;
+                }
                 .tooltip{
                     margin-bottom: 8% !important;
                 }
@@ -1632,7 +1638,7 @@
                     font-size: 18px;
                 }
                 
-                .item-content, .item-header-content span {
+                .item-content, .item-header-content span, ion-note {
                     font-size: 16px;
                     font-family: $light-font;
                 }
@@ -1681,9 +1687,11 @@
                 .item-inner{
                     flex-direction: row !important; 
                 }
-                
+                .date-info span:first-child{
+                    font-size : 21px !important;
+                }
                 .date-info span {
-                    font-size: 15px;
+                    font-size: 14px;
                 }
 
                 .item-content, .item-header-content span {
@@ -1784,8 +1792,9 @@
                 #charts-container {
                     border-top: 2px solid #848484;
                     border-bottom: 2px solid #848484;
+                    
                 }
-
+                
                 .tooltip, .own-shares-title {
                     font-size: 14px;
                 }
@@ -1817,8 +1826,8 @@
                     padding: 0 0 0 16px !important;
                     // padding-left: 16px ; 
                     .item-inner{
-                        padding-top: 0;
-                        padding-bottom: 0;
+                        padding: 0;
+                        padding-right: 8px;
                         flex-direction: row !important;
                     }
                 }
