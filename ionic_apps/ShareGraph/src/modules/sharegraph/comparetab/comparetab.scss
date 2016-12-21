@@ -10,7 +10,7 @@ compare-tab {
         padding-top: 30px;
         padding-bottom: 30px;
     }*/
-   
+    
     ion-header{
         display: flex;
         text-align: center;
@@ -109,15 +109,19 @@ compare-tab {
     .show-tabbar a {
         height: 23px !important;
         min-height: 20px !important;
+
     }
     /** CSS Tab active and default */
     .tab-button {
         color: #848484;
         background: #484849;
+        max-width: 400px !important;
     }
 
     .tab-button[aria-selected=true] {
         color: white !important;
+                
+        
         background: #848484 !important;
     }
 

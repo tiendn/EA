@@ -18,7 +18,7 @@ page-chart {
     /*.scroll-content {
         margin-top: 65px !important;
     }*/
-
+    
     button {
         border-radius: 3px;
         color: white !important;
@@ -118,11 +118,20 @@ page-chart {
     .own-shares-title, .sharegraph-title {
         text-transform: uppercase;
     }
-
-    .btn-click {
-        border: 1px solid white !important;
-    }
+    
+    
     /**
     Change Font
   */
 }
+.platform-ios{
+        page-chart .btn-click {
+            border: 1px solid white !important;
+        }
+    }
+    .platform-android{
+        page-chart .btn-click {
+            background-color : #696969; 
+            // border-radius: 0 !important;
+        }
+    }

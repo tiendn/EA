@@ -352,7 +352,9 @@ page-ical-compare {
     ion-list > .item:last-child {
         border-bottom: 0px !important;
     }
-
+    ion-list .item-block:first-child{
+        box-shadow: 0 0 0 !important;
+    }
     .item-right {
         width: 37%;
         margin-right: 0 !important;

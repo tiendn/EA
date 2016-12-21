@@ -1591,13 +1591,13 @@
                 }
                 
                 .item-header-content {
-                    border-top: 2px solid #c8c7cc;
+                    border-top: 1px solid #c8c7cc;
                 }
                 .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-                    border-bottom: 2px solid #6b6b6c;
+                    border-bottom: 1px solid #6b6b6c;
                 }       
                 .item-block .item-inner{
-                    border-bottom: 2px solid #6b6b6c !important;
+                    border-bottom: 1px solid #6b6b6c !important;
                 }
                 .div-item-content .item-block:last-child .item-inner{
                     border-bottom: 0 !important;
@@ -1622,11 +1622,11 @@
                 }
                 
                 ion-list .item {
-                    padding: 0 0 0 16px !important;
+                    padding: 0 0 0 32px !important;
                     // padding-left: 16px ; 
                     .item-inner{
-                        padding-top: 0;
-                        padding-bottom: 0;
+                        padding : 0;
+                        padding-right: 32px;
                         flex-direction: row !important;
                     }
                 }
@@ -1648,7 +1648,7 @@
                 }
 
                 .footer {
-                    border-top : 2px solid #c8c7cc !important;
+                    border-top : 1px solid #c8c7cc !important;
                     font-size: 18px !important;
                 }
             }
@@ -1656,11 +1656,11 @@
              /*Investment Calculator */
             page-ical-compare {
                 ion-list .item {
-                    padding: 0 0 0 16px !important;
+                    padding: 0 0 0 32px !important;
                     // padding-left: 16px ; 
                     .item-inner{
-                        padding-top: 0;
-                        padding-bottom: 0;
+                        padding : 0;
+                        padding-right: 32px;
                         flex-direction: row !important;
                     }
                 }
@@ -1668,7 +1668,7 @@
                     box-shadow: 0 0 0 !important;
                 }
                 .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-                    border-bottom: 2px solid #6b6b6c;
+                    border-bottom: 1px solid #6b6b6c;
                 }
                 .btn-header-watch {
                     font-weight: medium;
@@ -1705,7 +1705,7 @@
 
                 .footer {
                     font-size: 18px;
-                    border-top: 2px solid #c8c7cc !important;
+                    border-top: 1px solid #c8c7cc !important;
                 }
                 .btn-header-watch{
                     font-size: 14px !important;
@@ -1714,7 +1714,7 @@
                     font-size: 14px !important;
                 }
                 .item-header-content {
-                    border-top: 2px solid #c8c7cc !important;
+                    border-top: 1px solid #c8c7cc !important;
                 }
                 .item-inner{
                     color: white !important;
@@ -1823,24 +1823,24 @@
                     box-shadow : 0 0 0 !important;
                 }
                 ion-list .item {
-                    padding: 0 0 0 16px !important;
+                    padding: 0 0 0 32px !important;
                     // padding-left: 16px ; 
                     .item-inner{
                         padding: 0;
-                        padding-right: 8px;
+                        padding-right: 24px;
                         flex-direction: row !important;
                     }
                 }
                 
                 
                 .item-header-content > .item-block:first-child{
-                    border-top: 2px solid #c8c7cc !important;
+                    border-top: 1px solid #c8c7cc !important;
                 }
                 .item-header-content > .item:last-child .item-inner, ion-list > .item-wrapper:last-child .item-inner {
-                    border-bottom: 2px solid #6b6b6c;
+                    border-bottom: 1px solid #6b6b6c;
                 }
                 .div-item-content .item-content .item-block:last-child{
-                    border-bottom: 2px solid #c8c7cc !important;
+                    border-bottom: 1px solid #c8c7cc !important;
                 } 
                 .div-item-content .item-content .item-block:last-child .item-inner{
                     border-bottom: 0px !important;
