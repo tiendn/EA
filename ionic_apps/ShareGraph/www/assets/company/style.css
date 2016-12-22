@@ -39,7 +39,7 @@ page-contact .contact-tab .contact-container {
     /*margin-bottom: 115px;*/
     font-family: "HelveticaNeue-Light";
     margin-bottom: 20px;
-    align-self: flex-start
+    align-self: flex-start;
 }
 
 page-contact .contact-tab .contact-box {
@@ -50,7 +50,7 @@ page-contact .contact-tab .contact-box {
     /*background-image: url("/img/headquarter.jpg")*/;
     /*background-size: 100% 100%;*/
     background-size: contain !important;
-    background-repeat: no-repeat !important;
+    /*background-repeat: no-repeat !important;*/
 }
 
 page-contact .contact-tab .contact1 .contact-box {
@@ -77,17 +77,17 @@ page-contact .contact-tab .contact6 .contact-box {
     background: -webkit-image-set(url("contact/img/contact6.jpg") 1x, url("contact/img/contact6@2x.jpg") 2x, url("contact/img/contact6@3x.jpg") 3x);
 }
 
-page-contact .contact-tab .name, page-contact .contact-tab .phone-number, page-contact .contact-tab .email {
+.ios page-contact .contact-tab .name, page-contact .contact-tab .phone-number, page-contact .contact-tab .email {
     font-size: 12px;
     color: #333333;
 }
 
-page-contact .contact-tab .position {
+.ios page-contact .contact-tab .position {
     font-size: 11px;
     color: #868686;
 }
 
-page-contact .contact-tab .email, page-contact .contact-tab .phone-number {
+.ios page-contact .contact-tab .email, page-contact .contact-tab .phone-number {
     text-decoration: none;
 }
 
@@ -406,7 +406,7 @@ page-contact .address-tab .details span{
     }
 
     /*Contact*/
-    page-contact .contact-tab {
+    .ios page-contact .contact-tab {
         padding: 32px;
     }
 
@@ -673,3 +673,241 @@ page-contact .address-tab .details span{
     background-size: contain !important;
     background-repeat: no-repeat;
 }
+.md page-contact .contact-tab .contact-container {
+    background-color: #455A64 !important;
+    opacity: 0.87;
+    
+    height: auto;
+    float: left;
+    font-family: "Roboto-Regular" !important;
+    margin-bottom: 20px;
+    align-self: flex-start;
+}
+.md page-contact .contact-tab .contact-box {
+    box-shadow: 0 0 0 ;
+    /*margin-bottom: 16px;*/
+    /*padding-bottom: 100%;*/
+    /*width: 100%;*/
+    /*background-size: contain !important;*/
+    /*background-repeat: no-repeat !important;*/
+}   
+.md page-contact .contact-tab .name,
+.md page-contact .contact-tab .position,
+.md page-contact .contact-tab .phone-number,
+.md page-contact .contact-tab .email{
+    color : white !important;
+}
+.md page-contact .contact-tab .email, page-contact .contact-tab .phone-number {
+        text-decoration: none;
+}
+ @media screen and (max-width: 599px) {
+     .md page-contact .contact-tab .contact-container{
+         width: 48%;
+     }
+     
+    .md .contact-detail{
+        padding-left : 15px;
+        height: 100px;
+    }
+    .md page-contact .contact-tab .name{
+        font-size: 16px;
+        line-height: 24px
+    }
+    .md page-contact .contact-tab .position,
+    .md page-contact .contact-tab .phone-number,
+    .md page-contact .contact-tab .email {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .md page-contact .address-tab .address-background {
+        margin-top: 16px;
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        background: -webkit-image-set(url("contact/img/phone_address.jpg") 1x, url("contact/img/phone_address@2x.jpg") 2x, url("contact/img/phone_address@3x.jpg") 3x);
+        /*background-size: contain;*/
+        background-repeat: no-repeat;
+    }
+    .md page-contact .address-tab .address-content {
+        padding: 15px 16px;
+        font-size: 11px;
+        font-family: "Roboto-Regular" !important;
+    }
+
+    .md page-contact .address-tab .headquarter {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color :rgb(0,0,0,0.87);
+        /*color: #333333;*/
+        font-family: "Roboto-Regular" !important;
+    }
+    .md page-contact .address-tab .label {
+        /*color: #868686;*/
+        font-size: 14px;
+        color : #000000 !important;
+        font-family: "Roboto-Regular" !important;
+    }
+    .md page-contact .address-tab .detail ,.md page-contact .address-tab  .details{
+        font-family: "Roboto-Regular" !important;
+        font-size: 14px;
+        color: rgba(0,0,0,0.54);
+        line-height: 20px;
+    }
+    .md page-contact .address-tab .phone a {
+        display: inline;
+    }
+    .md page-contact .address-tab .headquarter-info {
+        margin-bottom: 10px;
+    }
+    .md page-contact .address-tab .street {
+        margin-bottom: 0;
+    }
+    
+    .md page-contact .address-tab .headquarter-contact[itemprop="telephone"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="fax"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="email"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="url"]
+    {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .md page-contact .contact-tab .contact-container:nth-of-type(2n) {
+        margin-left: 4%;
+    }
+
+    .md page-contact .address-tab .details span{
+        display: block;
+        margin-top: 20px;
+    }
+ }
+
+ @media screen and (min-width: 600px) {
+    .md .contact-detail{
+        padding-left : 15px;
+        height: 100px;
+    }
+    .md page-contact .contact-tab .name{
+        font-size: 16px;
+        line-height: 24px
+    }
+    .md page-contact .contact-tab .position,
+    .md page-contact .contact-tab .phone-number,
+    .md page-contact .contact-tab .email {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    
+    .md page-contact .address-tab .address-background {
+        margin-top: 16px;
+        height: 200px;
+        width: 100%;
+        background-position: center;
+        /*background: -webkit-image-set(url("contact/img/phone_address.jpg") 1x, url("contact/img/phone_address@2x.jpg") 2x, url("contact/img/phone_address@3x.jpg") 3x);*/
+        /*background-size: contain;*/
+        background-repeat: no-repeat;
+    }
+    .md page-contact .address-tab .address-content {
+        padding: 15px 64px;
+        font-size: 11px;
+        font-family: "Roboto-Regular" !important;
+    }
+
+    .md page-contact .address-tab .headquarter {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color :rgb(0,0,0,0.87);
+        /*color: #333333;*/
+        font-family: "Roboto-Regular" !important;
+    }
+    /*.md page-contact .address-tab .label {
+        font-size: 14px;
+        color : #000000 !important;
+        font-family: "Roboto-Regular" !important;
+    }*/
+    .md page-contact .address-tab .details{
+        font-size: 16px;
+        color: #868686;
+        line-height: 32px;
+        margin-top: 20px;
+        
+    }
+    .md page-contact .address-tab .details span:first-of-type a{
+        display: inline !important;
+    }
+    .md page-contact .address-tab .details span:nth-of-type(2n){
+        margin-top: 0px !important;
+    }
+    .md page-contact .address-tab .phone a {
+        display: inline;
+    }
+    .md page-contact .address-tab .headquarter-info {
+        margin-bottom: 0 !important;
+        font-size: 16px;
+        color: #868686;
+        line-height: 30px;
+    }
+    .md page-contact .address-tab .street {
+        margin-bottom: 0;
+    }
+    
+    .md page-contact .address-tab .headquarter-contact[itemprop="telephone"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="fax"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="email"],
+    .md page-contact .address-tab .headquarter-contact[itemprop="url"]
+    {
+        color: inherit;
+        text-decoration: none;
+    }
+    @media screen and (min-width: 600px)  and (orientation: portrait){
+        .md page-contact .contact-tab .contact-container {
+            margin-left: 0 !important;
+            margin-right: 2.5%;
+        }
+        .md page-contact .contact-tab .contact-container:nth-of-type(4n){
+            margin-right: 0 !important;
+        }
+        
+        .md page-contact .contact-tab .contact-container{
+            width: 23%;
+        }
+        .md page-contact .address-tab .address-background {
+            height: 400px;
+            background: -webkit-image-set(url("contact/img/tablet_portrait_address.jpg") 1x, url("contact/img/tablet_portrait_address@2x.jpg") 2x, url("contact/img/tablet_portrait_address@3x.jpg") 3x);
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+    }
+    @media screen and (min-width: 600px)  and (orientation: landscape){
+        .md page-contact .address-tab .address-background {
+            height: 437.5px;
+            background: -webkit-image-set(url("contact/img/tablet_landscape_address.jpg") 1x, url("contact/img/tablet_landscape_address@2x.jpg") 2x, url("contact/img/tablet_landscape_address@3x.jpg") 3x);
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+        .md page-contact .contact-tab {
+            padding: 0 !important;
+            margin: 3% 0.5% !important;
+        }
+        .md page-contact .contact-tab .contact-container {
+            margin-left: 0 !important;
+            margin-right: 1.2%;
+        }
+        .md page-contact .contact-tab .contact-container:nth-of-type(5n){
+            margin-right: 0 !important;
+        }
+        
+        .md page-contact .contact-tab .contact-container{
+            width: 19%;
+        }
+        .md page-contact .address-tab {
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 70%;
+        }
+    }
+    
+ }
