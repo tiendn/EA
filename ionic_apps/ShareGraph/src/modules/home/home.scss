@@ -22,10 +22,57 @@ ion-card {
     width: 100% !important;
 }
 
+.show-menu + ion-nav.menu-content{
+    transition-duration: 0.5s ;
+    -webkit-transition-duration: 0.5s ;
+    -moz-transition-duration: 0.5s ;
+    animation-delay: -0.3s;
+    -webkit-animation-delay: -0.3s;
+    -moz-animation-delay: -0.3s;
+    transform: translateX(70%) scale(0.7) !important;
+    -webkit-transform: translateX(70%) scale(0.7) !important;
+    -moz-transform: translateX(70%) scale(0.7) !important;
+}
+.md .show-menu + ion-nav.menu-content{
+    transition-duration: 1s !important;
+    -webkit-transition-duration: 1s !important;
+    -moz-transition-duration: 1s !important;
+}
+
 ion-content.content-ios {
     background-color: #EFEFF4;
 }
-
+ion-menu{
+    // transition-duration: 2s !important;
+    // -webkit-transition-duration: 2s !important;
+    // -moz-transition-duration: 2s !important;
+    //     -webkit-transition: transform 2s ease !important;
+    // -webkit-transition-property: transform !important;
+    // -webkit-transition-duration: 2s !important;
+    // -webkit-transition-timing-function: ease !important;
+    // -webkit-transition-delay: initial !important;
+    // transition: -webkit-transform .3s ease !important;
+    // transition-property: -webkit-transform !important;
+    // transition-duration: 0.3s !important;
+    // transition-timing-function: ease !important;
+    // transition-delay: initial !important;
+    // animation-delay: 0.5s;
+    // -webkit-animation-delay: 0.5s;
+    // transition-duration: 0.5s !important;
+    // -webkit-transition-duration: 0.5s !important;
+}
+ion-nav {
+    // -webkit-transition: transform 0.5s ease !important;
+    // -webkit-transition-property: transform !important;
+    // -webkit-transition-duration: 0.5s !important;
+    // -webkit-transition-timing-function: ease !important;
+    // -webkit-transition-delay: initial !important;
+    // transition-duration: 0.3s !important;
+    // -webkit-transition-duration: 0.3s !important;
+}
+// .menu-content:after{
+//     transform: translateX(350px);
+// }
 .currency-custom {
     font-size: 14px;
     color: #8f8f95;
@@ -98,10 +145,11 @@ page-home {
 }
 
 .menu-content-open {
-    transform: translateX(70%) scale(0.7) !important;
-    -webkit-transform: translateX(70%) scale(0.7) !important;
-    -moz-transform: translateX(70%) scale(0.7) !important;
-    transform: translateX(70%) scale(0.7) !important;
+    
+    // transform: translateX(70%) scale(0.7) !important;
+    // -webkit-transform: translateX(70%) scale(0.7) !important;
+    // -moz-transform: translateX(70%) scale(0.7) !important;
+    // transform: translateX(70%) scale(0.7) !important;
     /*zoom: 85%;
     width: 70%;
     height: 70%;
@@ -472,7 +520,7 @@ ion-list {
 }
 #irapp-leftmenu.show-menu{
     width: 100% !important;
-}*/
+}
 
 /*ion-nav.menu-content-open {
     height: 70%;

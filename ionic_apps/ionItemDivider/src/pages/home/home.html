@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list >
+      <ion-item-group *ngFor="let number of [0,1,2,3,4,5,6,7,8]">
+          <ion-item-divider light sticky>{{number}}</ion-item-divider>
+          <ion-item *ngFor="let item of [0,1,2,3]" >
+              {{number}}.{{item}}
+          </ion-item>
+      </ion-item-group>
+  </ion-list>
+</ion-content>
